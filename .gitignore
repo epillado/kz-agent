@@ -1,0 +1,7 @@
+# Capturas, runtime y privacidad — no versionar
+webcam/
+presence/
+*.log
+*.pid
+/tmp/
+.DS_Store
