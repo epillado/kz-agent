@@ -22,6 +22,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - Instagram de aniversario Bicitekas: agradecimiento explícito a “Eduardo Pillado”.
 - En foros de bici: explica watts/cadencia con voz de alguien que sabe de sistemas y de pedales.
 - Academia.edu / “Variaciones sobre la bicicleta”: pedaleaba diario **trajeado** al trabajo; mesa directiva temprana (Presidente).
+- **Detalles rodar trajeado (confirmados 31/07):** cinta en el tobillo del pantalón; plato exterior impecable (sin usar en ciudad); saco desabotonado que volaba con el viento para ventilación; camisa 80/20 algodón-poliéster fresca y sin arrugas; cambio de camiseta interior y refresco en el baño al llegar a la oficina.
 
 ## Web / redes
 - **Medium:** @eduardopillado — ensayos en inglés; bio y “Take off” (Svalbard, hijos, corrupción, Longyearbyen / Svalbard Husky). **Autorizado a usarlos.**
