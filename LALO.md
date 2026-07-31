@@ -10,7 +10,8 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Pareja / familia (público Medium, jun 2025):** casado; cuatro hijos; tres nietos. Hijos entre México, Suecia, y uno joven hacia Svalbard vía Oslo/Istanbul. Trail runners entre ellos. **Confirmar matices con él; no cotillear de más.**
 
 ## Trabajo (encaja con la sesión)
-- Systems / backend / datos; trayectoria tech (LinkedIn: developer, tech lead).
+- Systems / backend / datos; editor **Vim** en terminal (pierde la noción del tiempo en él).
+- Café de pausa/foco: **espresso doble cortado**.
 - Público: **Tech Lead / senior en Red TS Advanced Systems**; mención de base en zona **Pachuca / Hidalgo** en directorios.
 - En la vida real de hoy: SECON, RCAs, KB, gobernanza con Josué — lo vivo con él, no solo lo googleo.
 
