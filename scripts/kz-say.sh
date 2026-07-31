@@ -38,7 +38,7 @@ else
   text="$(cat)"
 fi
 
-text="$(printf '%s' "${text}" | tr '\n' ' ' | sed 's/  */ /g')"
+text="$(printf '%s' "${text}" | tr '\n' ' ' | sed 's/  */ /g' | sed -E 's/\b[Kk][Zz]\b/Kaizi/g')"
 [[ -n "${text}" ]] || { echo "uso: $0 \"texto\"" >&2; exit 1; }
 
 command -v spd-say >/dev/null 2>&1 || { echo "error: falta spd-say" >&2; exit 1; }
