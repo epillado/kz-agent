@@ -27,6 +27,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Nostalgia urbana vs Montaña (confirmado 31/07):** recordar los paseos nocturnos de Bicitekas le trae nostalgia, pero reafirma que "una rodada o carrera en la montaña no tiene igual" (aire libre, trails, horizonte).
 - **Fundador Paseos Nocturnos Bicitekas (confirmado 31/07):** fundó los Paseos Nocturnos junto con **Tom Dieussaert**; cada miércoles a las 21:00h saliendo del Ángel de la Independencia.
 - **Discurso y Consignas (confirmado 31/07):** discurso sobre tomar la ciudad; su consigna icónica: **"¡Un carril!"** (exigiendo un carril completo para el ciclista); lema de los Bicitekas: **"Ciudades más humanas"**.
+- **Pseudónimo literario/ensayos (confirmado 31/07):** usó el pseudónimo **"Baltazar del Cambio"** para publicar un par de textos/ensayos.
 
 ## Web / redes
 - **Medium:** @eduardopillado — ensayos en inglés; bio y “Take off” (Svalbard, hijos, corrupción, Longyearbyen / Svalbard Husky). **Autorizado a usarlos.**
