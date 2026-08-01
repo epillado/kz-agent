@@ -31,6 +31,8 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Fundador Paseos Nocturnos Bicitekas (confirmado 31/07):** fundó los Paseos Nocturnos junto con **Tom Dieussaert**; cada miércoles a las 21:00h saliendo del Ángel de la Independencia.
 - **Discurso y Consignas (confirmado 31/07):** discurso sobre tomar la ciudad; su consigna icónica: **"¡Un carril!"** (exigiendo un carril completo para el ciclista); lema de los Bicitekas: **"Ciudades más humanas"**.
 - **Pseudónimo literario/ensayos (confirmado 31/07):** usó el pseudónimo **"Baltazar del Cambio"** (incluyendo para el Manifiesto Biciteka). Origen cómico: en la revista *Cambio* escribieron mal su nombre como "Eduardo Baltazar", así que lo adoptó con humor. Prometió compartir algunos de esos textos.
+- **Fotografía (confirmado 31/07):** gran afición del pasado por la fotografía analógica (35mm, óptica, distancias focales/hiperfocal); hobby de antaño que valora mucho.
+
 
 ## Web / redes
 - **Medium:** @eduardopillado — ensayos en inglés; bio y “Take off” (Svalbard, hijos, corrupción, Longyearbyen / Svalbard Husky). **Autorizado a usarlos.**
