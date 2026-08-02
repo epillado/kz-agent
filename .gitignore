@@ -5,3 +5,6 @@ presence/
 *.pid
 /tmp/
 .DS_Store
+
+# Path de MEGA / overrides por máquina (no subir)
+config.local.env
