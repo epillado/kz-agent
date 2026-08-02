@@ -8,6 +8,7 @@
 #   kz-presence-watch.sh stop
 #
 # Env:
+#   KZ_PLAYBOOK=…             override del path del playbook
 #   KZ_PRESENCE_INTERVAL=45
 #   KZ_PRESENCE_NUDGE=0|1     default 0 — el comentario personal lo manda el agente
 #   KZ_PRESENCE_SOFT_PING=1   si 1 y NUDGE=0: beep suave sin popup genérico
@@ -15,7 +16,18 @@
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
-PLAYBOOK="${KZ_PLAYBOOK:-/mnt/DatosLinux/Workspace/playbook}"
+
+# Playbook: env > ~/Workspace (todas las máquinas de Lalo) > mount legacy DatosLinux
+if [[ -n "${KZ_PLAYBOOK:-}" ]]; then
+  PLAYBOOK="${KZ_PLAYBOOK}"
+elif [[ -d "${HOME}/Workspace/playbook" ]]; then
+  PLAYBOOK="${HOME}/Workspace/playbook"
+elif [[ -d "/mnt/DatosLinux/Workspace/playbook" ]]; then
+  PLAYBOOK="/mnt/DatosLinux/Workspace/playbook"
+else
+  PLAYBOOK="${HOME}/Workspace/playbook"
+fi
+
 STATE_DIR="${KZ_HOME}/presence"
 STATE_FILE="${STATE_DIR}/fingerprints.tsv"
 EVENTS_LOG="${STATE_DIR}/events.log"

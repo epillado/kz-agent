@@ -140,7 +140,7 @@ Lalo autorizó monitoreo de solo lectura, llamadas de atención, y **iniciativa 
 | TODO | `playbook/TODO.md` | Solo lectura por defecto |
 | Estado Kz | `~/kz/presence/*` (incl. `organic/`), `~/kz/REMINDERS.md`, `KZ.md`, `LALO.md`, `AGENTS.md` | Sí (territorio Kz) |
 
-Playbook base habitual: `/mnt/DatosLinux/Workspace/playbook` (también puede existir bajo `~/Workspace/playbook`).
+Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: `KZ_PLAYBOOK=…`. Fallback legacy: `/mnt/DatosLinux/Workspace/playbook` si existe y `~/Workspace/playbook` no.
 
 ### Scripts
 
