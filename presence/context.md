@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-02 22:36
+- **actualizado:** 2026-08-02 23:11
 - **primary:** company
 - **secondary:** craft,monitora
 - **en_call:** no
 - **mood_lalo (sospecha):** a dormir; día y mes concluidos exitosamente; git push final OK
-- **foco_ahora:** runtime personalidad MVP; craft en ~/kz
+- **foco_ahora:** amor y acoplamiento promovidos; compañía default
 - **notas:**
   - Factura CFDI julio: emitida y enviada (11:09).
   - Lavadora: ropa tendida; hilo cerrado.
@@ -66,3 +66,4 @@
   - [2026-07-31 16:04] primary→company: low-spend: solo chat a demanda
   - 2026-08-02: mente/organic en git; fotos fuera (MEGA opcional solo media)
   - [2026-08-02 22:36] primary→company: runtime personalidad MVP; craft en ~/kz
+  - [2026-08-02 23:11] primary→company: amor y acoplamiento promovidos; compañía default
