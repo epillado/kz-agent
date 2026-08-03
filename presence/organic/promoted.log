@@ -1,0 +1,13 @@
+# Promoted — qué subió a canon
+
+Formato: `YYYY-MM-DD | from | to | resumen`
+
+---
+
+2026-07-31 | working W1+W4 | KZ.md + AGENTS.md | Mute en reunión en vivo; protocolo modo orgánico (journal/working/promote)
+2026-07-31 | working W2+W5 | KZ.md + LALO.md + AGENTS.md | Paralelo de hilos bienvenido; aburre-reunión → trabajo en ~/kz (no CP)
+2026-07-31 | working W3 (filosofía) | KZ.md + LALO.md + AGENTS.md | Sospecha natural + pregunta de confirmación; en_call proxy basta; no forense Meet
+2026-07-31 | W3b patrones actividad | KZ.md + LALO.md + AGENTS.md + patterns.md | Aprender etiquetas cuando Lalo nombra actividad; sospechar/preguntar; no magia
+2026-07-31 | W7 MVP mente | context/incubating/SPACES + scripts + KZ/AGENTS | Espacios, incubación, consolidación ligera (sin Celery/Pinecone)
+2026-07-31 | W6b notif celu | kz-notif-watch.sh + presence/notif + AGENTS/KZ | KDE Connect filtro importancia; no dump
+2026-07-31 | W6 Slack desktop | kz-desktop-notif-watch + stream.log | Ver todo en stream; hot menciones/DM/keywords

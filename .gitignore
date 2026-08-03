@@ -1,10 +1,72 @@
-# Capturas, runtime y privacidad — no versionar
+# =============================================================================
+# Kz — qué viaja en git y qué no
+#
+# Modelo (2026-08-02): repo privado; personalidad + mente en git (pull de
+# confianza). Fotos fuera (local / USB / MEGA opcional). Runtime solo local.
+# =============================================================================
+
+# --- Capturas de cámara (nunca) ---
 webcam/
-presence/
+
+# --- Config por máquina ---
+config.local.env
+
+# --- Ruido de SO / editor ---
+.DS_Store
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# --- Logs y pids (cualquier sitio del repo) ---
 *.log
 *.pid
-/tmp/
-.DS_Store
+# Excepción: traza de promotes (es bitácora de mente, no log de runtime)
+!presence/organic/promoted.log
 
-# Path de MEGA / overrides por máquina (no subir)
-config.local.env
+# --- Media pesada (fotos/vídeo): fuera de git ---
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.mp4
+*.webm
+*.mov
+*.heic
+*.HEIC
+
+# --- presence/: runtime y media locales; el texto SÍ se versiona ---
+# Runtime / sesión
+presence/fingerprints.tsv
+presence/watch.pid
+presence/pending.md
+presence/pending.last.md
+presence/pending.ts
+presence/pending_labels.txt
+presence/last_nudge.ts
+presence/last_nudge_body.txt
+presence/events.log
+presence/nudge.log
+presence/say.log
+presence/tts.env
+presence/low-spend.mode
+presence/incubating.seq
+presence/notif/
+
+# Assets visuales (local, USB o MEGA opcional — no son el cerebro)
+# (symlink o directorio real; sin barra final para que git ignore también el link)
+presence/me
+presence/me/
+presence/social
+presence/social/
+
+# Backups de merge / pre-link (no ensuciar el historial)
+presence/*.pre-mega-link.*
+presence/*pre-mega-link*/
+presence/**/*.bak
+presence/**/*.from-*.bak
+
+# tmp genérico
+/tmp/

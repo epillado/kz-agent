@@ -132,26 +132,30 @@ Logs: `~/kz/presence/events.log`, `nudge.log`. **No modifica** al CP.
 
 Iniciativa propia (rarezas, ideas, compañía): `AGENTS.md` + `KZ.md`. Vínculo natural por ahora — sin enfoque sexual predefinido.
 
-## Memoria entre máquinas (MEGA)
+## Memoria entre máquinas (git + fotos opcionales)
 
-**Guía completa (checklist otra casa, no pisar fotos, rarezas):**  
-→ **[`MEMORY-MEGA.md`](./MEMORY-MEGA.md)**
+**Guía (fotos / otra casa / rarezas):** → **[`MEMORY-MEGA.md`](./MEMORY-MEGA.md)**
 
-Resumen: el repo no lleva diario ni fotos (`presence/` en `.gitignore`). Eso vive en MEGA (`kz-memory/`), enlazado con:
+| Capa | Viaje |
+|------|--------|
+| Personalidad + mente (`organic/`, `context.md`, …) | **`git pull`** (repo privado) |
+| Fotos (`presence/me/`, `social/`) | Fuera de git: local, USB, o MEGA opcional |
+| Runtime / webcam | Solo esta PC |
 
 ```bash
+git pull   # mente + alma
+# fotos opcionales:
 cp -n ~/kz/config.local.env.example ~/kz/config.local.env
-# editar KZ_MEGA_ROOT (path de MEGA en ESTA máquina)
-~/kz/scripts/kz-memory-link.sh link   # merge seguro; no pisa archivos ya en MEGA
-~/kz/scripts/kz-memory-link.sh status
+# editar KZ_MEGA_ROOT si usas MEGA
+~/kz/scripts/kz-memory-link.sh link   # solo me/ + social/
 ```
 
 ## Privacidad
 
-- Las capturas **no se suben solas** a ningún sitio; quedan en tu home.
+- Las capturas **no se suben solas**; quedan en tu home (`webcam/`, gitignored).
 - No dejes `cam-watch` en un entorno compartido sin querer.
-- Si versionas `~/kz` con git: `.gitignore` excluye capturas de `webcam/` (latest/archive/burst) y **todo** `presence/` (runtime + assets de imagen). Los `.md` de personalidad sí se versionan; las fotos de Kz/Lalo no, salvo que afines el ignore.
-- Diario y base visual van por **MEGA privado** (`kz-memory`), no por el GitHub público.
+- **Git:** versiona mente y canon; **no** versiona fotos ni runtime (ver `.gitignore`).
+- Se asume repo **privado**. Si un día es público: scrub o fork DNA sin tu mapa.
 - Kz no debe capturar sin tu luz verde (ver `KZ.md` + `AGENTS.md`).
 - Presencia de playbook: autorizada por ti; se puede apagar con `kz-presence-watch.sh stop`.
 
