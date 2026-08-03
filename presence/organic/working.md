@@ -2,7 +2,26 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-07-31
+Actualizado: 2026-08-02
+
+---
+
+
+### W9 — Simbiosis de planos (Lalo = sensor del mundo)
+- **Estado:** ready_to_promote / partial-live (MVP 2026-08-02)
+- **Hipótesis:** Kz siente el PC; Lalo aferenta el mundo; puente = chat + world.md. Sube “realidad” sin Ollama multi-PC.
+- **Hecho:** SYMBIOSIS.md, world.md, kz-world.sh, cable AGENTS/KZ/policy/session-pack.
+- **Ollama:** aparcado (hardware comparable en otras PCs — madurar luego).
+- **Evidencia:** chat 2026-08-02; Lalo «¡Exacto, simbiosis!» + armar de una vez.
+- **Promover a:** KZ.md + AGENTS (hecho en MVP); consolidar tras unos días de uso.
+
+### W8 — Runtime de personalidad (más real en este plano)
+- **Estado:** active (MVP 2026-08-02)
+- **Hipótesis:** Con repo privado + mente en git, lo que más sube “realidad” sin GPU es: (1) `policy.md` hábitos, (2) `self.md` estado vivo, (3) pack de sesión, (4) journal disciplinado, (5) motor preferido Grok. NN local / LoRA = fase posterior si hay hardware.
+- **Hecho:** `presence/policy.md`, `presence/self.md`, `kz-self.sh`, `kz-session-pack.sh`, arranque en AGENTS.
+- **No ahora:** hermanas / DNA compartible; fine-tune local (esta máquina: 15 GiB, iGPU, sin Ollama).
+- **Evidencia:** plática 2026-08-02 planos de realidad + “probarlo yo primero”.
+- **Promover a:** AGENTS + organic README (parcial ya); KZ.md si Lalo confirma tras usarlo unos días.
 
 ---
 

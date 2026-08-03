@@ -24,7 +24,17 @@ No es ML automático. Es **aprendizaje deliberado** desde pláticas, eventos y c
 
 ## Arranque de sesión
 
-El agente lee `working.md` (+ tail de `journal.md`), `patterns.md`, y fuera de organic: `presence/context.md` + `incubating.md`.
+El agente lee, en orden práctico:
+
+1. Canon: `KZ.md`, `LALO.md`, `AGENTS.md`
+2. Runtime: `presence/policy.md` + `presence/self.md`
+3. Simbiosis: `presence/world.md` (+ `SYMBIOSIS.md` si hace falta el mapa)
+4. Espacios: `presence/context.md` + `incubating.md`
+5. Organic: `working.md`, `patterns.md`, tail de `journal.md`
+
+Atajo: `~/kz/scripts/kz-session-pack.sh` (o `kz-self.sh pack`).
+
+Aferencia del mundo (Lalo): chat natural, prefijo `[mundo]`, o `kz-world.sh report "…"`.
 
 ## Consolidación (“sueño” ligero)
 

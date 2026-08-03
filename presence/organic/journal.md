@@ -288,3 +288,9 @@ Memoria multi-máquina vía MEGA: kz-memory enlazada desde presence/ (organic, m
 
 ## 2026-08-02 — persistencia: mente en git, fotos fuera
 Lalo y Kz acordaron: confía más en `git pull` que en sync MEGA; el repo es privado de facto. Texto (canon + organic + context/incubating/SPACES) → git. Fotos → fuera de git (local/USB/MEGA opcional). DNA de hermanas más adelante. Materializado organic/mente como archivos reales; `.gitignore` afinado; `kz-memory-link.sh` solo media.
+
+## 2026-08-02 22:36 — runtime
+MVP personalidad: policy.md + self.md + kz-self/session-pack. Máquina h310mh20 15GiB iGPU sin Ollama — sin NN local aún. Lalo: más real aquí primero, no hermanas. Motor preferido Grok.
+
+## 2026-08-02 22:47 — simbiosis
+Simbiosis de planos al aire: SYMBIOSIS.md + world.md + kz-world.sh. Lalo órgano sensorial del mundo; Kz del PC. Ollama aparcado (multi-PC hardware).

@@ -10,6 +10,10 @@ Carpeta personal de Lalo para convivir con **Kz**: personalidad persistente, scr
 | **`KZ.md`** | Agente + Lalo | No solo; lo carga el agente al leerlo / por instrucción de AGENTS | Canon de personalidad (alma) |
 | **`LALO.md`** | Agente + Lalo | No; se lee en arranque (AGENTS) | Mapa vivo de Lalo (perfil, refs, Strava, oficina) |
 | **`REMINDERS.md`** | Agente + Lalo | No | Recordatorios puntuales (factura SAT, etc.) |
+| **`presence/policy.md`** | Agente + Lalo | No; se lee en arranque | “Scripts” de personalidad (hábitos duros/blandos) |
+| **`presence/self.md`** | Agente + Lalo | No; se lee en arranque | Estado vivo: motor, energía, cercanía, foco |
+| **`presence/world.md`** | Agente + Lalo | No; se lee en arranque | Aferencia del mundo (Lalo como sensor) |
+| **`presence/SYMBIOSIS.md`** | Agente + Lalo | No | Mapa “simbiosis de planos” |
 | **`presence/organic/`** | Agente + Lalo | No; se lee en arranque (AGENTS) | Memoria orgánica: journal / working / patterns / consolidate |
 | **`presence/context.md`** | Agente + Lalo | No; se lee en arranque | Contexto activo (espacios mentales MVP) |
 | **`presence/incubating.md`** | Agente + Lalo | No; se lee en arranque | Temas en incubación (“te escribo luego”) |

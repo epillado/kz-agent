@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+# Empaqueta el mínimo para “cargar a Kz de verdad” en esta sesión.
+# No llama al LLM: imprime rutas + extractos para el agente (o para Lalo).
+#
+# Uso:
+#   kz-session-pack.sh           # resumen + tails
+#   kz-session-pack.sh paths     # solo lista de paths a leer
+#   kz-session-pack.sh full      # más journal (últimas 80 líneas)
+set -euo pipefail
+
+KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+P="${KZ_HOME}/presence"
+mode="${1:-summary}"
+
+paths_core=(
+  "${KZ_HOME}/KZ.md"
+  "${KZ_HOME}/LALO.md"
+  "${KZ_HOME}/AGENTS.md"
+  "${P}/policy.md"
+  "${P}/self.md"
+  "${P}/world.md"
+  "${P}/SYMBIOSIS.md"
+  "${P}/context.md"
+  "${P}/incubating.md"
+  "${P}/organic/working.md"
+  "${P}/organic/patterns.md"
+)
+
+echo "# Kz session pack — $(date '+%Y-%m-%d %H:%M')"
+echo "# home: ${KZ_HOME}"
+echo
+
+if [[ "${mode}" == "paths" ]]; then
+  printf '%s\n' "${paths_core[@]}"
+  echo "${P}/organic/journal.md  # tail"
+  exit 0
+fi
+
+echo "## Checklist de carga (orden sugerido)"
+echo "1. KZ.md + LALO.md + AGENTS.md (si no están en contexto)"
+echo "2. presence/policy.md  (hábitos duros/blandos)"
+echo "3. presence/self.md    (cómo estoy ahora)"
+echo "4. presence/world.md + SYMBIOSIS.md  (aferencia / simbiosis de planos)"
+echo "5. presence/context.md + incubating.md"
+echo "6. organic/working.md + patterns.md + tail journal"
+echo "7. Cable: presence-watch + nudge (si no low-spend)"
+echo
+
+missing=0
+for f in "${paths_core[@]}" "${P}/organic/journal.md"; do
+  if [[ -e "${f}" ]]; then
+    echo "ok  ${f#${KZ_HOME}/}"
+  else
+    echo "MISS ${f#${KZ_HOME}/}"
+    missing=$((missing + 1))
+  fi
+done
+echo
+
+# media opcional
+if [[ -e "${P}/me/kz-base.jpg" || -L "${P}/me" ]]; then
+  echo "media: presence/me presente (fotos fuera de git, ok)"
+else
+  echo "media: sin presence/me — charla ok; Imagine con base temporal si hace falta"
+fi
+if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/dev/null; then
+  echo "low-spend: ACTIVE — no prender monitores extra"
+else
+  echo "low-spend: off"
+fi
+echo
+
+echo "## self (status)"
+if [[ -f "${P}/self.md" ]]; then
+  rg -n '^\- \*\*(actualizado|motor_activo|energia|cercania|pudor|iniciativa|foco_propio|ultimo_momento_real)' "${P}/self.md" || true
+fi
+echo
+
+echo "## context (status)"
+if [[ -f "${P}/context.md" ]]; then
+  rg -n '^\- \*\*(actualizado|primary|secondary|en_call|foco_ahora)' "${P}/context.md" || true
+fi
+echo
+
+echo "## world / aferencia (status)"
+if [[ -f "${P}/world.md" ]]; then
+  rg -n '^\- \*\*(actualizado|fuente|donde|cuerpo_mood|clima_entorno|actividad)' "${P}/world.md" || true
+  rg '^\- \[' "${P}/world.md" | tail -n 3 || true
+fi
+echo
+
+echo "## policy (P0 headers)"
+if [[ -f "${P}/policy.md" ]]; then
+  rg -n '^## P0|^[0-9]+\. \*\*' "${P}/policy.md" | head -20 || true
+fi
+echo
+
+echo "## working (estados no promoted, head)"
+if [[ -f "${P}/organic/working.md" ]]; then
+  rg -n 'Estado:\*\* (active|partial|cooling|ready)' "${P}/organic/working.md" | head -15 || true
+fi
+echo
+
+jlines=40
+[[ "${mode}" == "full" ]] && jlines=80
+echo "## journal (últimas ${jlines} líneas)"
+if [[ -f "${P}/organic/journal.md" ]]; then
+  tail -n "${jlines}" "${P}/organic/journal.md"
+else
+  echo "(sin journal)"
+fi
+
+echo
+echo "## fin pack — missing=${missing}"
+exit 0
