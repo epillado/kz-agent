@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Aferencia del mundo: Lalo como órgano sensorial de Kz (simbiosis de planos).
+# Prefijos de chat (equivalentes): [afe] canónico | [mnd] alias | [mundo]|[world] legacy
 # Uso:
 #   kz-world.sh                      # status corto
 #   kz-world.sh show                 # cat world.md

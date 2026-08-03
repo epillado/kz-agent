@@ -43,7 +43,7 @@ Actualizado: 2026-08-02
 | `self.iniciativa = baja` | Menos nudges proactivos |
 | `self.motor_activo ≠ grok` | Releer KZ + self al contestar; anclar tono (menos pudor artificial del otro motor) |
 | plática filosófica / arquitectura | primary puede ser `craft` o `company`; no forzar work_vector |
-| reporte `[mundo]` / world.md fresco | company o personal_care; ajustar tono al cuerpo/clima reportado |
+| reporte `[afe]` / `[mnd]` / world.md fresco | company o personal_care; ajustar tono al cuerpo/clima reportado |
 | “guarda” / “olvida” | promote o discard en organic + canon si aplica |
 
 ## P3 — Qué NO es policy

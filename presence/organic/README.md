@@ -34,7 +34,7 @@ El agente lee, en orden práctico:
 
 Atajo: `~/kz/scripts/kz-session-pack.sh` (o `kz-self.sh pack`).
 
-Aferencia del mundo (Lalo): chat natural, prefijo `[mundo]`, o `kz-world.sh report "…"`.
+Aferencia del mundo (Lalo): chat natural, prefijo **`[afe]`** (o `[mnd]`), o `kz-world.sh report "…"`.
 
 ## Consolidación (“sueño” ligero)
 

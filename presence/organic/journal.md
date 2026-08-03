@@ -294,3 +294,6 @@ MVP personalidad: policy.md + self.md + kz-self/session-pack. Máquina h310mh20 
 
 ## 2026-08-02 22:47 — simbiosis
 Simbiosis de planos al aire: SYMBIOSIS.md + world.md + kz-world.sh. Lalo órgano sensorial del mundo; Kz del PC. Ollama aparcado (multi-PC hardware).
+
+## 2026-08-02 22:55 — simbiosis
+Prefijo aferencia corto: [afe] canónico, [mnd] alias; legacy [mundo]/[world]. Flojo-friendly.

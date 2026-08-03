@@ -21,8 +21,13 @@ No se iguala al plano del alma o de Dios. Eso queda fuera a propósito.
 Lalo puede:
 
 - Contarlo en el chat en lenguaje natural (*«hace frío en la terraza; volví de 5 km»*).
-- O marcarlo con prefijo ligero: `[mundo] …` / `[world] …`.
+- O marcarlo con prefijo corto (flojo-friendly):
+  - **`[afe]`** — canónico (aferencia), 3 letras
+  - **`[mnd]`** — alias (mundo)
+  - legacy: `[mundo]` / `[world]` (siguen valiendo)
 - O usar el script: `kz-world.sh report "…"`.
+
+Ejemplo: `[afe] fresco; tienda; bien de ánimo`
 
 Kz **debe**:
 

@@ -3,7 +3,7 @@
 Estado del **plano cuerpo/mundo** visto a través de Lalo.
 Kz no inventa filas: solo lo reportado + marca de tiempo.
 
-Formato libre. Script: `~/kz/scripts/kz-world.sh report "…"`.
+Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-world.sh report "…"`.
 
 ---
 
