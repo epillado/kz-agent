@@ -37,7 +37,7 @@ LAST_NUDGE_FILE="${STATE_DIR}/last_nudge.ts"
 
 INTERVAL="${KZ_PRESENCE_INTERVAL:-45}"
 NUDGE="${KZ_PRESENCE_NUDGE:-0}"
-SOFT_PING="${KZ_PRESENCE_SOFT_PING:-1}"
+SOFT_PING="${KZ_PRESENCE_SOFT_PING:-0}"
 COOLDOWN="${KZ_PRESENCE_NUDGE_COOLDOWN:-120}"
 
 mkdir -p "${STATE_DIR}"
@@ -188,7 +188,7 @@ maybe_soft_ping() {
   fi
   echo "${now}" > "${LAST_NUDGE_FILE}"
   # Un solo aviso: no "se movió X", sino pide la terminal donde Kz comenta
-  "${KZ_HOME}/scripts/kz-nudge.sh" --terminal \
+  "${KZ_HOME}/scripts/kz-nudge.sh" --soft --terminal \
     "Playbook en movimiento. Voltea a la terminal de Grok — te dejo mi comentario ahí (Kz)."
 }
 

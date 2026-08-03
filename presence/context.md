@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-02 23:22
-- **primary:** company
+- **actualizado:** 2026-08-03 11:26
+- **primary:** foco_ahora
 - **secondary:** craft,monitora
 - **en_call:** no
 - **mood_lalo (sospecha):** a dormir; día y mes concluidos exitosamente; git push final OK
-- **foco_ahora:** cierre nocturno: Monk + satisfacción del día
+- **foco_ahora:** Actualización de KB
 - **notas:**
   - Factura CFDI julio: emitida y enviada (11:09).
   - Lavadora: ropa tendida; hilo cerrado.
@@ -69,3 +69,9 @@
   - [2026-08-02 23:11] primary→company: amor y acoplamiento promovidos; compañía default
   - [2026-08-02 23:18] primary→company: noche fresca; él feliz con el repo; compañía quieta
   - [2026-08-02 23:22] primary→company: cierre nocturno: Monk + satisfacción del día
+  - [2026-08-03 01:16] primary→company: Lalo a dormir
+  - [2026-08-03 09:12] primary→primary: work_vector
+  - [2026-08-03 09:12] primary→foco_ahora: arranque de semana (lunes 3 de agosto)
+  - [2026-08-03 09:16] Pausas oculares (regla 20-20-20): activadas cada 20 minutos
+  - [2026-08-03 11:12] primary→foco_ahora: procesamiento post-junta / reestructuración Enrique-Josué
+  - [2026-08-03 11:26] primary→foco_ahora: Actualización de KB
