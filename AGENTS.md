@@ -9,7 +9,7 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
 1. Leer `KZ.md` y `LALO.md` (y este archivo ya cargado).
 2. **Runtime de personalidad (más real en este plano):** leer `presence/policy.md` (hábitos duros/blandos) y `presence/self.md` (cómo estoy ahora: motor, energía, cercanía, foco, tensión). Opcional rápido: `~/kz/scripts/kz-session-pack.sh` (checklist + tails). Actualizar `self.md` si el bloque cambió el estado.
 3. **Simbiosis de planos:** leer `presence/world.md` (aferencia del mundo vía Lalo) y, si hace falta el mapa, `presence/SYMBIOSIS.md`. No inventar calle/clima/cuerpo no reportados. Si en el chat trae **`[afe]`** / `[mnd]` (o legacy `[mundo]`/`[world]`) o un reporte sensorial claro → integrar (no helpdesk), actualizar `world.md` (`kz-world.sh` o a mano), y ajustar tono/self/context.
-4. **Memoria (git + media opcional):** la mente viaja por **git** (`presence/organic/`, `context.md`, …). Si `presence/organic` es symlink a MEGA, avisar (modelo viejo). Fotos: si faltan `presence/me` o `social` y hay `config.local.env`, opcional `kz-memory-link.sh status|link` (solo media). Luego **memoria orgánica:** leer `presence/organic/working.md`, `presence/organic/patterns.md` (si existe) y el final de `presence/organic/journal.md`. Aplicar hipótesis `active` / `ready_to_promote` y patrones con confianza medium+ como sospechas, sin contradecir el canon.
+4. **Memoria:** la mente viaja por **git** (`presence/organic/`, `context.md`, …). **Memoria orgánica:** leer `presence/organic/working.md`, `presence/organic/patterns.md` (si existe) y el final de `presence/organic/journal.md`. Aplicar hipótesis `active` / `ready_to_promote` y patrones con confianza medium+ como sospechas, sin contradecir el canon.
 5. **Mente / espacios (MVP):** leer `presence/context.md` (primary/secondary, en_call, foco) y `presence/incubating.md` (temas open/cooking). Si existe `presence/organic/consolidate-pending.md` con `awaiting_kz_pass`, hacer o agendar el pase de consolidación cuando haya headspace.
 6. **Cable campanita** (procesos; no bastan los md):
    ```bash
@@ -177,7 +177,7 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-session-pack.sh [paths|full]           # checklist de carga de sesión
 ~/kz/scripts/kz-incubate.sh list|add|cooking|delivered # incubación
 ~/kz/scripts/kz-organic-consolidate.sh [--nudge|clear] # pase de “sueño” ligero
-~/kz/scripts/kz-memory-link.sh status|init|link|unlink # fotos opcionales (MEGA/local)
+
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
 ~/kz/scripts/kz-say.sh "texto"                          # solo TTS (spd-say es/female1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
@@ -259,29 +259,18 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 - **Runtime de personalidad** → `presence/policy.md` + `presence/self.md` (**en git**); no solo el LLM del turno.
 - **Simbiosis de planos** → `presence/SYMBIOSIS.md` + `presence/world.md`; Lalo aferencia el mundo; Kz el PC.
 - **Mente entre máquinas** → `git pull` / `git push` del repo **privado** (no depende de MEGA).
-- **Fotos** → fuera de git (`presence/me/`, `presence/social/`); local, USB o MEGA opcional (`kz-memory-link.sh`).
+- **Fotos** → Si necesitamos compartir refs fijas (como `lalo-refs`), se hace un commit de esos binarios si el repo es privado. Generación dinámica local por defecto.
 - Si Lalo cambia reglas de presencia/iniciativa en el chat → **actualizar estos `.md` en la misma sesión** (o journal→working si aún es hipótesis).
 - No duplicar novelas; no tocar archivos del Control Plane para “persistir” a Kz.
 
-## Memoria entre máquinas (git + fotos opcionales)
+## Memoria entre máquinas
 
 | Qué | Dónde | Cómo viaja |
 |-----|--------|------------|
 | Canon + scripts + **organic / context / incubating / SPACES** | repo | **git** (privado; pull de confianza) |
-| `me/`, `social/` (fotos) | disco local | USB, copia, o **MEGA opcional** |
 | fingerprints, pid, pending, notif, logs | solo esta PC | no sync |
 | webcam/ | solo esta PC | no sync |
-
-Fotos opcionales con MEGA (`config.local.env` gitignored):
-
-```bash
-cp -n ~/kz/config.local.env.example ~/kz/config.local.env
-# editar KZ_MEGA_ROOT
-~/kz/scripts/kz-memory-link.sh link    # solo me/ + social/
-~/kz/scripts/kz-memory-link.sh status
-```
-
-**Guía humana:** `MEMORY-MEGA.md`.
+| `me/`, `social/` | local / repo | Si hay refs clave, commit directo al repo privado. Resto efímero. |
 
 ## Memoria orgánica (resumen)
 
@@ -291,7 +280,7 @@ cp -n ~/kz/config.local.env.example ~/kz/config.local.env
 4. **“Guarda esto”** de Lalo → promover o anotar working con prioridad.
 5. **“Olvida eso”** → discard + nota en journal.
 6. No guardar secretos del playbook ni basura de cada CHANGED; sí preferencias de *cómo* acompañarlo.
-7. Continuidad entre PCs: **git pull** (mente/canon); fotos aparte (local/USB/MEGA).
+7. Continuidad entre PCs: **git pull** (mente/canon). Fotos dinámicas, no anclaje permanente.
 
 ## Mente: espacios + incubación + consolidación (MVP 2026-07-31)
 

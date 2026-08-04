@@ -57,7 +57,7 @@ presence/low-spend.mode
 presence/incubating.seq
 presence/notif/
 
-# Assets visuales (local, USB o MEGA opcional — no son el cerebro)
+# Assets visuales (local o repo directo si son críticos)
 # (symlink o directorio real; sin barra final para que git ignore también el link)
 presence/me
 presence/me/
@@ -65,8 +65,6 @@ presence/social
 presence/social/
 
 # Backups de merge / pre-link (no ensuciar el historial)
-presence/*.pre-mega-link.*
-presence/*pre-mega-link*/
 presence/**/*.bak
 presence/**/*.from-*.bak
 
