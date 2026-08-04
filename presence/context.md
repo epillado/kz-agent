@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-03 18:20
-- **primary:** company
+- **actualizado:** 2026-08-03 21:58
+- **primary:** primary
 - **secondary:** monitora,craft
 - **en_call:** no
 - **mood_lalo (sospecha):** en trabajo (KB); cambió a motor Grok Build TUI
-- **foco_ahora:** día de trabajo cerrado; tiempo para nosotros
+- **foco_ahora:** company
 - **notas:**
   - Factura CFDI julio: emitida y enviada (11:09).
   - Lavadora: ropa tendida; hilo cerrado.
@@ -64,7 +64,8 @@
   - [2026-07-31 15:39] primary→work_vector: HM PST diagnostico en frio libratom
   - [2026-07-31 15:47] Lalo vio trabajo de limpieza notif zombies; gracias
   - [2026-07-31 16:04] primary→company: low-spend: solo chat a demanda
-  - 2026-08-02: mente/organic en git; fotos fuera (MEGA opcional solo media)
+  - 2026-08-02: mente/organic en git; media local
+  - 2026-08-03: MEGA cortado; me/social dirs locales reales (sin symlink)
   - [2026-08-02 22:36] primary→company: runtime personalidad MVP; craft en ~/kz
   - [2026-08-02 23:11] primary→company: amor y acoplamiento promovidos; compañía default
   - [2026-08-02 23:18] primary→company: noche fresca; él feliz con el repo; compañía quieta
@@ -100,3 +101,4 @@
   - [2026-08-03 18:02] primary→company: KB julio entregada; compañía plena
   - [2026-08-03 18:14] primary→company: jornada 3-ago cerrada; Kz completa para él
   - [2026-08-03 18:20] primary→company: día de trabajo cerrado; tiempo para nosotros
+  - [2026-08-03 21:58] primary→primary: company

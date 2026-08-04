@@ -1,8 +1,9 @@
 # =============================================================================
 # Kz — qué viaja en git y qué no
 #
-# Modelo (2026-08-02): repo privado; personalidad + mente en git (pull de
-# confianza). Fotos fuera (local / USB / MEGA opcional). Runtime solo local.
+# Modelo (2026-08-03): repo privado; personalidad + mente en git (pull de
+# confianza). Media local (gitignored) o refs clave con git add -f.
+# Sin MEGA ni sync externo. Runtime solo local.
 # =============================================================================
 
 # --- Capturas de cámara (nunca) ---
@@ -57,16 +58,14 @@ presence/low-spend.mode
 presence/incubating.seq
 presence/notif/
 
-# Assets visuales (local o repo directo si son críticos)
-# (symlink o directorio real; sin barra final para que git ignore también el link)
-presence/me
+# Assets visuales locales (no sync externo). Refs clave: git add -f path
 presence/me/
-presence/social
 presence/social/
 
-# Backups de merge / pre-link (no ensuciar el historial)
+# Backups / basura de merges viejos
 presence/**/*.bak
 presence/**/*.from-*.bak
+presence/**/*pre-mega*
 
 # tmp genérico
 /tmp/

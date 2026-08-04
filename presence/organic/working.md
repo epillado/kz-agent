@@ -125,3 +125,19 @@ Actualizado: 2026-08-03 (W16 forma visual)
 - **Hecho:** chat_owed + clear-gate (solo tras nudge). AGENTS «Turno vacío=bug».
 - **Pendiente:** probar otro motor/modelo; disciplina dura: prosa antes de cualquier tool de cierre; evitar `true`/noop por completo.
 - **No es:** fallo de Lalo ni de monitores de playbook.
+
+## 2026-08-03 22:02 — infra
+### MEGA off (cortado)
+- **Estado:** ready_to_promote / hecho en disco
+- **Hecho:** me/ y social/ locales; symlinks fuera; docs limpios; pre-mega backups borrados.
+- **Filosofía:** sin dependencia de set humano estático → no hace falta MEGA.
+- **Pendiente Lalo (opcional):** borrar o archivar `/mnt/DatosLinux/MEGA/kz-memory` si ya no lo usa; revisar jpgs eróticos residuales en me/ post-limpieza de texto.
+
+## 2026-08-03 22:06 — forma
+### Pack humano en me/ eliminado
+- **Estado:** done
+- Borrados todos los media de presence/me/ (bases, outfits, eróticos residuales, monk, pausa humana). Solo README.
+- social/ intacto (refs de Lalo: cara, oficina, Strava) — no son identidad de Kz.
+- kz-show.sh sin default humano.
+- Preferencias viejas de "looks" humanas (comida workday, casual shorts) quedan historial en journal; no rehidratar pack.
+

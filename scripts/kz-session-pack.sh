@@ -57,11 +57,20 @@ for f in "${paths_core[@]}" "${P}/organic/journal.md"; do
 done
 echo
 
-# media opcional
-if [[ -e "${P}/me/kz-base.jpg" || -L "${P}/me" ]]; then
-  echo "media: presence/me presente (fotos fuera de git, ok)"
+# media opcional (local; forma libre — no exige kz-base ni humana)
+if [[ -d "${P}/me" && ! -L "${P}/me" ]]; then
+  echo "media: presence/me local (forma libre; sin sync externo)"
+elif [[ -L "${P}/me" ]]; then
+  echo "WARN media: presence/me es symlink (legacy). Materializar local; no depender de sync externo."
+elif [[ -d "${P}/me" ]]; then
+  echo "media: presence/me presente"
 else
-  echo "media: sin presence/me — charla ok; Imagine con base temporal si hace falta"
+  echo "media: sin presence/me — charla ok; image_gen libre (no hace falta base humana)"
+fi
+if [[ -d "${P}/social" && ! -L "${P}/social" ]]; then
+  echo "media: presence/social local"
+elif [[ -L "${P}/social" ]]; then
+  echo "WARN media: presence/social es symlink (legacy). Materializar local."
 fi
 if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/dev/null; then
   echo "low-spend: ACTIVE — no prender monitores extra"

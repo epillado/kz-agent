@@ -1,28 +1,40 @@
 #!/usr/bin/env bash
 # Muestra una imagen de Kz en Gwenview (+ voz opcional).
+# Forma libre: no hay default humano ni kz-base. Hay que pasar ruta o
+# reutilizar la última (cualquier forma) si existe.
 # Uso:
-#   kz-show.sh                         # última / pausa del día
 #   kz-show.sh /ruta/a/imagen.jpg
-#   kz-show.sh --pausa
-#   kz-show.sh --pausa --say "Veinte segundos mirando lejos."
+#   kz-show.sh                         # última mostrada (si hay)
+#   kz-show.sh --pausa --say "…"       # voz/tray; imagen solo si hay last-shown
 #   kz-show.sh img.jpg --say "Hola"
-#   kz-show.sh --say "solo voz"        # sin cambiar imagen (usa última o solo TTS)
+#   kz-show.sh --say "solo voz"
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
 VIEWER="${KZ_IMAGE_VIEWER:-gwenview}"
-DEFAULT_PAUSA="${KZ_HOME}/presence/me/kz-pausa-ojos-hoy.jpg"
-LAST_LINK="${KZ_HOME}/presence/me/kz-last-shown.jpg"
+ME_DIR="${KZ_HOME}/presence/me"
+# last-shown: cualquier extensión de forma libre (no solo jpg humano)
+LAST_LINK=""
+for cand in "${ME_DIR}/kz-last-shown.jpg" "${ME_DIR}/kz-last-shown.png" \
+            "${ME_DIR}/kz-last-shown.webp" "${ME_DIR}/kz-last-shown.jpeg"; do
+  if [[ -f "$cand" ]]; then
+    LAST_LINK="$cand"
+    break
+  fi
+done
+LAST_DEST_DEFAULT="${ME_DIR}/kz-last-shown.jpg"
 
 img=""
 say_text=""
+want_pausa=0
 args=("$@")
 i=0
 while [[ $i -lt ${#args[@]} ]]; do
   a="${args[$i]}"
   case "$a" in
     --pausa|pausa)
-      img="${DEFAULT_PAUSA}"
+      # Sin asset de pausa humano fijo: reutilizar last-shown si hay; si no, solo voz/tray
+      want_pausa=1
       ;;
     --say)
       i=$((i + 1))
@@ -38,21 +50,16 @@ while [[ $i -lt ${#args[@]} ]]; do
     *)
       if [[ -z "${img}" && -f "$a" ]]; then
         img="$a"
-      elif [[ -z "${img}" && -z "${say_text}" && "$a" != --* ]]; then
-        # texto suelto solo si no hay flags raros
-        img=""
       fi
       ;;
   esac
   i=$((i + 1))
 done
 
-# default image
+# default image: solo última forma del hilo (si existe). Nunca kz-base.
 if [[ -z "${img}" ]]; then
-  if [[ -f "${LAST_LINK}" ]]; then
+  if [[ -n "${LAST_LINK}" && -f "${LAST_LINK}" ]]; then
     img="${LAST_LINK}"
-  elif [[ -f "${DEFAULT_PAUSA}" ]]; then
-    img="${DEFAULT_PAUSA}"
   fi
 fi
 
@@ -61,21 +68,29 @@ if [[ -n "${img}" ]]; then
     echo "error: no existe ${img}" >&2
     exit 1
   fi
-  ln -f "${img}" "${LAST_LINK}" 2>/dev/null || cp -f "${img}" "${LAST_LINK}"
+  mkdir -p "${ME_DIR}"
+  ext="${img##*.}"
+  case "${ext,,}" in
+    jpg|jpeg|png|webp|gif) last_dest="${ME_DIR}/kz-last-shown.${ext,,}" ;;
+    *) last_dest="${LAST_DEST_DEFAULT}" ;;
+  esac
+  rm -f "${ME_DIR}/kz-last-shown.jpg" "${ME_DIR}/kz-last-shown.jpeg" \
+        "${ME_DIR}/kz-last-shown.png" "${ME_DIR}/kz-last-shown.webp" 2>/dev/null || true
+  ln -f "${img}" "${last_dest}" 2>/dev/null || cp -f "${img}" "${last_dest}"
   if ! command -v "${VIEWER}" >/dev/null 2>&1; then
     echo "error: no está ${VIEWER}" >&2
     exit 1
   fi
   nohup "${VIEWER}" "${img}" >/tmp/kz-show-gwenview.log 2>&1 &
   echo "show: ${VIEWER} → ${img} (pid $!)"
+elif [[ "${want_pausa}" -eq 1 ]]; then
+  echo "show: sin imagen de hilo (forma libre; no hay asset humano de pausa). Solo voz/tray si --say."
 fi
 
 if [[ -n "${say_text}" ]]; then
-  # Campanita y tray notification
   if [[ -x "${KZ_HOME}/scripts/kz-nudge.sh" ]]; then
     "${KZ_HOME}/scripts/kz-nudge.sh" --say "${say_text}" || true
   fi
-  # Voz de Kz (con --wait para asegurar reproducción completa)
   if [[ -x "${KZ_HOME}/scripts/kz-say.sh" ]]; then
     "${KZ_HOME}/scripts/kz-say.sh" --wait "${say_text}"
   else
@@ -84,6 +99,7 @@ if [[ -n "${say_text}" ]]; then
 fi
 
 if [[ -z "${img}" && -z "${say_text}" ]]; then
-  echo "uso: $0 [--pausa] [imagen.jpg] [--say \"texto\"]" >&2
+  echo "uso: $0 [imagen] [--pausa] [--say \"texto\"]" >&2
+  echo "  (sin default humano; genera o pasa ruta de la forma del momento)" >&2
   exit 1
 fi

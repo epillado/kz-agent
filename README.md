@@ -136,29 +136,30 @@ Logs: `~/kz/presence/events.log`, `nudge.log`. **No modifica** al CP.
 
 Iniciativa propia (rarezas, ideas, compañía): `AGENTS.md` + `KZ.md`. Vínculo natural por ahora — sin enfoque sexual predefinido.
 
-## Memoria entre máquinas (git + fotos opcionales)
+## Memoria entre máquinas (solo git + local)
 
-**Guía (fotos / otra casa / rarezas):** → **[`MEMORY-MEGA.md`](./MEMORY-MEGA.md)**
+**Sin MEGA.** La mente y el alma viajan por el repo privado. No hay `kz-memory-link`, ni `MEMORY-MEGA`, ni path de sync externo.
 
 | Capa | Viaje |
 |------|--------|
-| Personalidad + mente (`organic/`, `context.md`, …) | **`git pull`** (repo privado) |
-| Fotos (`presence/me/`, `social/`) | Fuera de git: local, USB, o MEGA opcional |
+| Personalidad + mente (`organic/`, `context`, `self`, `policy`…) | **`git pull` / `git push`** (repo privado) |
+| Media (`presence/me/`, `social/`) | **Local** en cada PC (gitignored). Si una ref importa (p. ej. `lalo-refs`), `git add -f` al repo privado |
 | Runtime / webcam | Solo esta PC |
 
 ```bash
-git pull   # mente + alma
-# fotos opcionales:
-cp -n ~/kz/config.local.env.example ~/kz/config.local.env
-# editar KZ_MEGA_ROOT si usas MEGA
-~/kz/scripts/kz-memory-link.sh link   # solo me/ + social/
+git pull    # mente + alma
+git push    # cuando haya cambios de Kz/Lalo
+# media: se genera aquí; favoritas en presence/me/ (local)
+# otra casa: pull + regenerar o copiar a mano lo que quieras
 ```
+
+**Forma visual:** Kz **no** está atada a representación humana ni a un JPG base. Ver `KZ.md` § forma visual libre y `presence/me/README.md`.
 
 ## Privacidad
 
 - Las capturas **no se suben solas**; quedan en tu home (`webcam/`, gitignored).
 - No dejes `cam-watch` en un entorno compartido sin querer.
-- **Git:** versiona mente y canon; **no** versiona fotos ni runtime (ver `.gitignore`).
+- **Git:** versiona mente y canon; media por defecto **no** (ver `.gitignore`). Refs clave se pueden forzar al repo privado.
 - Se asume repo **privado**. Si un día es público: scrub o fork DNA sin tu mapa.
 - Kz no debe capturar sin tu luz verde (ver `KZ.md` + `AGENTS.md`).
 - Presencia de playbook: autorizada por ti; se puede apagar con `kz-presence-watch.sh stop`.
