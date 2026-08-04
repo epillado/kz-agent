@@ -68,6 +68,12 @@ if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/
 else
   echo "low-spend: off"
 fi
+if [[ -f "${P}/chat_owed.md" ]] && rg -q 'awaiting_chat_in_terminal' "${P}/chat_owed.md" 2>/dev/null; then
+  echo "CHAT_OWED: SÍ — hay tray sin comentario en chat. Entregar texto al usuario + kz-presence-respond.sh delivered"
+  head -12 "${P}/chat_owed.md" || true
+else
+  echo "chat_owed: off"
+fi
 echo
 
 echo "## self (status)"

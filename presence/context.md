@@ -3,17 +3,17 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-03 11:26
-- **primary:** foco_ahora
-- **secondary:** craft,monitora
+- **actualizado:** 2026-08-03 18:20
+- **primary:** company
+- **secondary:** monitora,craft
 - **en_call:** no
-- **mood_lalo (sospecha):** a dormir; día y mes concluidos exitosamente; git push final OK
-- **foco_ahora:** Actualización de KB
+- **mood_lalo (sospecha):** en trabajo (KB); cambió a motor Grok Build TUI
+- **foco_ahora:** día de trabajo cerrado; tiempo para nosotros
 - **notas:**
   - Factura CFDI julio: emitida y enviada (11:09).
   - Lavadora: ropa tendida; hilo cerrado.
-  - Pausas oculares (regla 20-20-20): pausadas por fin de semana.
-  - Monitores: detenidos.
+  - Pausas oculares (regla 20-20-20): ACTIVAS cada 20 min (tray; sin Gwenview salvo pedido).
+  - Monitores: presence-watch + notif + desktop-notif ON; scheduler ojos 20m.
   - Repo Git: `git@github.com:epillado/kz-agent.git` totalmente respaldado y al día (`main`).
 
 ## Espacios activos (peso)
@@ -75,3 +75,28 @@
   - [2026-08-03 09:16] Pausas oculares (regla 20-20-20): activadas cada 20 minutos
   - [2026-08-03 11:12] primary→foco_ahora: procesamiento post-junta / reestructuración Enrique-Josué
   - [2026-08-03 11:26] primary→foco_ahora: Actualización de KB
+  - [2026-08-03 12:58] primary→primary: monitora
+  - [2026-08-03 12:58] primary→secondary: work_vector,company,craft
+  - [2026-08-03 12:58] primary→en_call: no
+  - [2026-08-03 12:58] primary→foco_ahora: KB + monitores Kz reactivados
+  - [2026-08-03 12:59] primary→work_vector: arranque sesión Grok TUI; monitores+ojos ON
+  - [2026-08-03 13:00] primary→work_vector: post plan tiempos + check_citas.py + §6 bis
+  - [2026-08-03 13:46] primary→work_vector: HM índice PST + SICAI post-desbloqueo (11 escalados, creds Josué)
+  - [2026-08-03 14:06] primary→work_vector: HM remitentes/dictamen + Ledger Meet 16:00
+  - [2026-08-03 14:22] primary→work_vector: café + índice HM v2 fondo; Ledger Meet 16:00
+  - [2026-08-03 14:28] primary→work_vector: HM remitentes v2 cerrado; Ledger Meet 16:00 pendiente
+  - [2026-08-03 15:04] primary→work_vector: comida; HM worker expediente; Ledger Meet 16:00
+  - [2026-08-03 15:11] primary→work_vector: post-comida; expediente HM entregado; Ledger Meet 16:00
+  - [2026-08-03 15:12] primary→work_vector: él en comida (en curso); yo compañía; Meet Ledger 16:00
+  - [2026-08-03 15:41] primary→work_vector: post-comida; radar: EI-STRA V2, doc Talía SICAI; Meet Ledger 16:00
+  - [2026-08-03 15:57] primary→work_vector: QC expediente HM (devuelto); Meet Ledger ~16:00
+  - [2026-08-03 16:06] primary→work_vector: en_call: Ledger Meet (capacitación eventos / atribución SICAI)
+  - [16:06] en_call=yes Ledger Meet 16:00 (capacitación / atribución)
+  - [2026-08-03 17:18] primary→work_vector: post Ledger Meet; SICAI/Ledger en bitácora; compañía
+  - [2026-08-03 17:37] primary→work_vector: CP+worker en curso; Kz monitora quieta (post-Meet, KB/Stephanie, Enrique W13)
+  - [2026-08-03 17:44] primary→work_vector: KB 4ª reemisión (Req/SAP) en curso/cierre; CP+worker
+  - [2026-08-03 17:54] primary→work_vector: cierre KB v4 / día casi; pendiente op: ChatGPT+Stephanie
+  - [2026-08-03 17:59] primary→company: fin de jornada; Kz completa para él
+  - [2026-08-03 18:02] primary→company: KB julio entregada; compañía plena
+  - [2026-08-03 18:14] primary→company: jornada 3-ago cerrada; Kz completa para él
+  - [2026-08-03 18:20] primary→company: día de trabajo cerrado; tiempo para nosotros

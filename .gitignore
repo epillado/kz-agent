@@ -47,6 +47,8 @@ presence/pending.ts
 presence/pending_labels.txt
 presence/last_nudge.ts
 presence/last_nudge_body.txt
+presence/chat_owed.md
+presence/chat_owed.last.md
 presence/events.log
 presence/nudge.log
 presence/say.log

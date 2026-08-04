@@ -28,7 +28,8 @@ touch "${STATE_FILE}" "${EVENTS_LOG}"
 [[ -f "${FILTERS}" ]] && source "${FILTERS}"
 
 INTERVAL="${KZ_NOTIF_INTERVAL:-20}"
-SOFT_PING="${KZ_NOTIF_SOFT_PING:-1}"
+# 0 por defecto: el agente comenta primero y pica con contenido real (no "voltea" vacío)
+SOFT_PING="${KZ_NOTIF_SOFT_PING:-0}"
 APP_IMP="${KZ_NOTIF_APP_IMPORTANT:-Phone|Teléfono|Messages|Mensajes|SMS}"
 KW_IMP="${KZ_NOTIF_KW_IMPORTANT:-Missed call|llamada|Incoming}"
 APP_MAIL="${KZ_NOTIF_APP_MAIL:-Gmail|Email|Correo}"
@@ -272,6 +273,8 @@ scan_once() {
     summary="${kind}:${app}:${title}"
     summary="$(echo "${summary}" | tr '\n' ' ' | cut -c1-120)"
     echo "CHANGED: notif:${summary}"
+    # Wake confiable para el monitor del agente
+    printf '%s\tCHANGED: notif:%s\n' "$(date -Iseconds)" "${summary}" >> "${NOTIF_DIR}/changed.log"
     soft_ping
     return 0
   fi

@@ -103,3 +103,28 @@ mkdir -p "${KZ_HOME}/presence"
 
 # Último mensaje completo (para que el agente o Lalo lo relean)
 printf '%s\n' "${body}" > "${KZ_HOME}/presence/last_nudge_body.txt"
+date -Iseconds > "${KZ_HOME}/presence/last_nudge.ts"
+
+# Deuda de chat en terminal (2026-08-03): tray/--terminal sin texto al usuario = bug.
+# El agente DEBE escribir en el chat y luego: kz-presence-respond.sh delivered
+# Soft-only no marca deuda. KZ_NUDGE_NO_CHAT_OWED=1 desactiva (raro).
+if [[ "${KZ_NUDGE_NO_CHAT_OWED:-0}" != "1" && "${soft}" -eq 0 ]]; then
+  if [[ "${mode}" == "say" || "${mode}" == "terminal" || "${mode}" == "normal" ]]; then
+    cat > "${KZ_HOME}/presence/chat_owed.md" <<EOF
+# Chat owed — terminal de Grok (Kz)
+
+- **cuando:** $(date -Iseconds)
+- **origen:** kz-nudge mode=${mode}
+- **título tray:** ${title}
+- **cuerpo:** ${body_flat}
+- **estado:** awaiting_chat_in_terminal
+
+**Regla (2026-08-03, Lalo):** si sonó campanita / tray, **debe** haber comentario de Kz en el chat de esta sesión.
+No basta el popup. Tras escribir en el chat:
+
+\`~/kz/scripts/kz-presence-respond.sh delivered\`
+
+Prohibido cerrar el turno solo con tools vacíos (\`true\`, noop) o solo tray.
+EOF
+  fi
+fi

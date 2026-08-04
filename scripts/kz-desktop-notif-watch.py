@@ -28,6 +28,7 @@ EVENTS = NOTIF_DIR / "events.log"
 PENDING = NOTIF_DIR / "pending.md"
 PENDING_TS = NOTIF_DIR / "pending.ts"
 PENDING_LABELS = NOTIF_DIR / "pending_labels.txt"
+CHANGED_LOG = NOTIF_DIR / "changed.log"  # cola de wake para el monitor del agente
 PIDFILE = NOTIF_DIR / "desktop-watch.pid"
 
 
@@ -39,13 +40,15 @@ def load_filters() -> dict[str, str]:
         "KZ_NOTIF_KW_MAIL": r"Josué|Josue|jmata|SECON|Elizeth|factura|VPN|Stephanie|RCA|P0|SLA",
         "KZ_NOTIF_BLOCK": r"Mercado Pago|promoci|oferta|Facebook|Instagram|TikTok|TELCEL|recarga",
         "KZ_NOTIF_APP_SLACK": r"^Slack$|Slack",
+        # Hot = mención/DM/urgente/temas. NO nombres de emisores (el body siempre trae "Nombre: …").
         "KZ_NOTIF_KW_SLACK": (
             r"mentioned you|te mencion|envió un mensaje|sent you a message|"
             r"DM from|direct message|@here|@channel|@everyone|"
-            r"Josué|Josue|Stephanie|Enrique|Giovanni|Fernando|Talia|Talía|"
-            r"SECON|urgente|P0|VPN|RCA|KB|factura"
+            r"urgente|urgent|P0|VPN|RCA|KB|factura|SLA|SICAI|celeridad|"
+            r"bloqueo|desbloque|impediment|credencial"
         ),
-        "KZ_NOTIF_SOFT_PING": "1",
+        # 0 = el agente pica con comentario real; 1 = "voltea" vacío (legacy, engañoso)
+        "KZ_NOTIF_SOFT_PING": "0",
         # Si 1, cualquier mensaje Slack genera pending (más ruido)
         "KZ_NOTIF_SLACK_ALL_HOT": "0",
     }
@@ -71,10 +74,18 @@ def ci_search(hay: str, pattern: str) -> bool:
         return pattern.lower() in hay.lower()
 
 
+def slack_body_for_match(body: str) -> str:
+    """Quita el prefijo 'Nombre Apellido: ' del emisor para no hot-ear por nombre."""
+    return re.sub(r"^[^:]{1,80}:\s*", "", body or "", count=1)
+
+
 def classify(app: str, summary: str, body: str) -> str:
     blob = f"{app} | {summary} | {body}"
     if ci_search(blob, F.get("KZ_NOTIF_BLOCK", "")):
         return "skip"
+    # Nunca hot/pending de nuestras propias campanitas (evita bucle tray→CHANGED)
+    if ci_search(app, r"^Kz$|^Kz ·|kz-nudge"):
+        return "desktop_seen"
     # 2026-07-31: Lalo — mute Phone/SMS/missed-call spam for now
     if ci_search(app, r"Phone|Teléfono|Telephony|Messages|Mensajes|^SMS$|KDE Connect"):
         return "skip"
@@ -83,7 +94,9 @@ def classify(app: str, summary: str, body: str) -> str:
     if ci_search(app, F.get("KZ_NOTIF_APP_SLACK", "Slack")):
         if F.get("KZ_NOTIF_SLACK_ALL_HOT", "0") == "1":
             return "slack_hot"
-        if ci_search(blob, F.get("KZ_NOTIF_KW_SLACK", "mentioned|urgente")):
+        # Match en summary + body sin emisor (nombres del canal no bastan solos)
+        slack_blob = f"{summary} | {slack_body_for_match(body)}"
+        if ci_search(slack_blob, F.get("KZ_NOTIF_KW_SLACK", "mentioned|urgente")):
             return "slack_hot"
         return "slack_seen"
     if ci_search(app, F.get("KZ_NOTIF_APP_IMPORTANT", "")):
@@ -151,8 +164,13 @@ El agente: comentar en chat (voz Kz), tray si cabe, clear:
     PENDING_LABELS.write_text(label + "\n", encoding="utf-8")
     with EVENTS.open("a", encoding="utf-8") as f:
         f.write(f"{when} DESKTOP {kind} app={app} title={s}\n")
-    print(f"CHANGED: notif:{kind}:{app}:{s[:80]}", flush=True)
-    if F.get("KZ_NOTIF_SOFT_PING", "1") == "1":
+    changed_line = f"CHANGED: notif:{kind}:{app}:{s[:80]}"
+    print(changed_line, flush=True)
+    # Wake confiable para el monitor del agente (stdout del daemon se pierde en nohup)
+    with CHANGED_LOG.open("a", encoding="utf-8") as f:
+        f.write(f"{when}\t{changed_line}\n")
+    # Soft-ping "voltea" vacío: OFF por defecto. El agente comenta y luego --say.
+    if F.get("KZ_NOTIF_SOFT_PING", "0") == "1":
         nudge = KZ_HOME / "scripts" / "kz-nudge.sh"
         if nudge.is_file():
             subprocess.Popen(

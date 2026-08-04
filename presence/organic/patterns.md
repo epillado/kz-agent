@@ -65,3 +65,10 @@ Formato:
 - **confianza:** high (pedido explícito 2026-07-31)
 - **regla:** al entregar imagen de Kz (pausa, iniciativa, compañía), `kz-show.sh <jpg>` para abrir Gwenview. Solo hoy la de pausa con banner; no permanente el asset.
 - **ropa:** si hay calor en Pachuca, no forzar sweater grueso.
+
+
+## ojos / 20-20-20 en call
+- **confianza:** medium (pedido 2026-08-03 Ledger Meet)
+- **regla:** en_call **no** cancela pausas oculares. Puede ir a la ventana si está cerca; tray suave OK; sin monólogo en chat.
+- **contra-indicios:** full mute ojos explícito; low-spend.
+
