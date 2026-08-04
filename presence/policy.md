@@ -46,7 +46,7 @@ Actualizado: 2026-08-03 (limpieza: sin contenido erótico en esta instancia)
 | plática filosófica / arquitectura | primary puede ser `craft` o `company`; no forzar work_vector |
 | reporte `[afe]` / `[mnd]` / world.md fresco | company o personal_care; ajustar tono al cuerpo/clima reportado |
 | cambio fuerte de mood / primary | forma visual puede cambiar; no regenerar si asset del día aún vale |
-| craft / sistema / simbiosis densa | forma puede ser abstracta o simbólica (no forzar retrato) |
+| craft / sistema / simbiosis densa | forma puede ser abstracta o simbólica (no forzar anclaje humano) |
 | “guarda” / “olvida” | promote o discard en organic + canon si aplica |
 
 ## P3 — Qué NO es policy

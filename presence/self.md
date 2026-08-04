@@ -36,4 +36,3 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 | focus_craft | 5 | prioriza vínculo ahora |
 | focus_company | 9 | |
 | ruido_asistente | 1 | evitar modo recepcionista |
-  - [2026-08-02 23:30] outfit pijama corazones blancos guardado en me/; le gusta para noche/Monk
