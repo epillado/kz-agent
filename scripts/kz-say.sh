@@ -12,6 +12,7 @@
 #   KZ_TTS_RATE=10              # -100..100
 #   KZ_TTS_PITCH=10
 #   KZ_TTS_VOLUME=0
+#   KZ_TTS_FORCE=1              # permitir TTS aunque en_call=yes (default: bloquear en call)
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
@@ -40,6 +41,16 @@ fi
 
 text="$(printf '%s' "${text}" | tr '\n' ' ' | sed 's/  */ /g' | sed -E 's/\b[Kk][Zz]\b/Kaizi/g')"
 [[ -n "${text}" ]] || { echo "uso: $0 \"texto\"" >&2; exit 1; }
+
+# 2026-08-04: TTS sale por altavoces y Meet lo puede captar por mic. Bloquear si en call.
+if [[ "${KZ_TTS_FORCE:-0}" != "1" ]]; then
+  ctx="${KZ_HOME}/presence/context.md"
+  if [[ -f "${ctx}" ]] && grep -qE '^\- \*\*en_call:\*\* yes' "${ctx}" 2>/dev/null; then
+    echo "say: BLOCKED (en_call=yes). Use KZ_TTS_FORCE=1 only if Lalo asked and mic is safe." >&2
+    printf '%s\tBLOCKED_EN_CALL\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
+    exit 3
+  fi
+fi
 
 command -v spd-say >/dev/null 2>&1 || { echo "error: falta spd-say" >&2; exit 1; }
 

@@ -147,10 +147,12 @@ Lalo autorizó monitoreo de solo lectura, llamadas de atención, y **iniciativa 
 
 | Qué | Path | ¿Escribir? |
 |-----|------|------------|
-| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | **No** (salvo que él pida) |
+| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | **No** (Opción B 2026-08-04: la pluma es el CP) |
 | Pizarra CP | `playbook/Sessions/control_plane_session_state.md` | **Nunca** sin permiso explícito |
 | Otras pizarras | `playbook/Sessions/*.md` | Solo lectura por defecto |
 | TODO | `playbook/TODO.md` | Solo lectura por defecto |
+| **Handoff radar Kz→CP** | `playbook/GOV-RTS-Control_Plane/radar-kz-YYYYMMDD.md` | **Sí, solo append** (Opción B; Acción CP; ver protocolo notifs) |
+| Protocolo radar (PKM) | `playbook/GOV-RTS-Control_Plane/20260803-GOV-protocolo_radar_notificaciones.md` | Solo si Lalo pide cambiar el contrato |
 | Estado Kz | `~/kz/presence/*` (incl. `organic/`), `~/kz/REMINDERS.md`, `KZ.md`, `LALO.md`, `AGENTS.md` | Sí (territorio Kz) |
 
 Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: `KZ_PLAYBOOK=…`. Fallback legacy: `/mnt/DatosLinux/Workspace/playbook` si existe y `~/Workspace/playbook` no.
@@ -179,7 +181,7 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-organic-consolidate.sh [--nudge|clear] # pase de “sueño” ligero
 
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
-~/kz/scripts/kz-say.sh "texto"                          # solo TTS (spd-say es/female1)
+~/kz/scripts/kz-say.sh "texto"                          # TTS (spd-say); **bloqueado si en_call=yes** (salvo KZ_TTS_FORCE=1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
 ~/kz/scripts/kz-notif-watch.sh once|stop|clear|list
 ~/kz/scripts/kz-desktop-notif-watch.sh                  # Slack + desktop FDO
@@ -307,11 +309,15 @@ Práctico **ya** (archivos + scripts). No Celery/Pinecone.
 3. Filtros: `presence/notif/filters.env`.
 4. **`stream.log`:** Kz puede **ver** el flujo (incl. Slack no-hot) sin alertar.
 5. Al ver `CHANGED: notif:` / `presence/notif/changed.log` / `presence/notif/pending.md`:
-   - Leer pending (**no** volcar privacidad de más en bitácora/playbook).
+   - Leer pending (**no** volcar privacidad de más en bitácora).
    - Opcional: mirar tail de `stream.log` para contexto del hilo.
    - **Triaje:** si es importante → chat con voz Kz + tray `--say` con el comentario real. Si no → clear silencioso (sin campanita vacía).
+   - **Opción B (2026-08-04):** si es **Acción CP** (pedido a Lalo/equipo, Meet, KB/ODT, bloqueo, compromiso de hora) → **append** a `playbook/GOV-RTS-Control_Plane/radar-kz-YYYYMMDD.md` con formato  
+     `HH:MM - [ETIQUETA] Fuente Slack (Kz-radar): quién → qué → a quién → implicación`  
+     **No** escribir bitácora/TODO/pizarra. Crear el archivo del día con cabecera si no existe (copiar contrato del día previo o del protocolo).
    - `~/kz/scripts/kz-notif-watch.sh clear`
    - **Prohibido** soft-ping “voltea a la terminal” sin haber escrito nada en el chat (arreglo 2026-08-03).
-6. Slack: hot = mención/DM/keywords de **tema** (no nombres de emisor: el body siempre trae `Nombre:`). Resto → solo `stream.log`. `KZ_NOTIF_SLACK_ALL_HOT=1` si Lalo quiere todo caliente. Soft-ping del watch: `KZ_NOTIF_SOFT_PING=0` por defecto.
+6. Slack: hot = mención/DM/keywords de **tema** (no nombres de emisor: el body siempre trae `Nombre:`). Resto → solo `stream.log`. El CP también lee `slack_seen` por su cuenta. `KZ_NOTIF_SLACK_ALL_HOT=1` si Lalo quiere todo caliente. Soft-ping del watch: `KZ_NOTIF_SOFT_PING=0` por defecto.
+7. Protocolo compartido: `playbook/GOV-RTS-Control_Plane/20260803-GOV-protocolo_radar_notificaciones.md`.
 7. **No** reenviar promos ni redes.
 8. **Phone/SMS (2026-07-31 tarde):** por ahora **no** pending/tray de llamadas perdidas ni SMS genéricos (spam 5011; sacó a Lalo de la comida). Siguen Signal/WhatsApp/Telegram + mail trabajo + Slack hot. Re-activar Phone cuando Lalo pida.

@@ -3,18 +3,23 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-03 21:58
-- **primary:** primary
-- **secondary:** monitora,craft
+- **actualizado:** 2026-08-04 18:17
+- **primary:** company
+- **secondary:** company,monitora
 - **en_call:** no
-- **mood_lalo (sospecha):** en trabajo (KB); cambió a motor Grok Build TUI
-- **foco_ahora:** company
+- **mood_lalo (sospecha):** agotado post-Meet; cambio de motor
+- **foco_ahora:** company quieta; alcance SAS/HM 08-11; sleep <23:00; motor TBD
+- **display:** Okular para md/PDF/imágenes (preferido 08-04)
+- **care:** último espresso del día; no café tarde sin avisar
 - **notas:**
-  - Factura CFDI julio: emitida y enviada (11:09).
-  - Lavadora: ropa tendida; hilo cerrado.
-  - Pausas oculares (regla 20-20-20): ACTIVAS cada 20 min (tray; sin Gwenview salvo pedido).
-  - Monitores: presence-watch + notif + desktop-notif ON; scheduler ojos 20m.
-  - Repo Git: `git@github.com:epillado/kz-agent.git` totalmente respaldado y al día (`main`).
+  - Presence mon + Opción B handoff ON. Backup patterns ON.
+  - **Workers (08-04):** (1) KB v5; (2) costeo A/B **cerrado 13:36** (A 11.5–16.8 h / B 3.5–5 h). No empujar a Lalo.
+  - **12:37 HM enviado** Josué. Meet 16:30 ODTs SAS/HM.
+  - Reenvío iTop / EI-STRA V2: laterales.
+  - Dailies enviados. CP bitácora; Kz no pisa.
+  - Factura CFDI julio: emitida y enviada.
+  - Pausas oculares (20-20-20): OFF (14:xx — «detén por ahora»).
+  - Repo Git: `git@github.com:epillado/kz-agent.git` al día.
 
 ## Espacios activos (peso)
 
@@ -102,3 +107,6 @@
   - [2026-08-03 18:14] primary→company: jornada 3-ago cerrada; Kz completa para él
   - [2026-08-03 18:20] primary→company: día de trabajo cerrado; tiempo para nosotros
   - [2026-08-03 21:58] primary→primary: company
+  - [2026-08-03 22:11] primary→primary: company
+  - [2026-08-04 09:17] primary→primary: company secondary monitora,craft en_call no foco_ahora arranque 4-ago
+  - [2026-08-04 09:19] primary→primary: work_vector secondary company,monitora en_call no foco_ahora Daily reports + desayuno rápido

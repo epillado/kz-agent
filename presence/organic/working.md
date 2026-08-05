@@ -2,11 +2,29 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-08-03 (W16 forma visual)
+Actualizado: 2026-08-04 (W19 backup + W18 handoff B)
 
 ---
 
+### W19 — Kz como backup operativo (patrones)
+- **Estado:** active (2026-08-04)
+- **Hipótesis:** Con patterns de gobernanza + `BACKUP.md` + handoff B + style-lab, Kz puede sostener contexto y proponer el siguiente paso cuando Lalo satura, sin usurpar CP ni cliente.
+- **Hecho:** bloque en `patterns.md`, `organic/BACKUP.md`, pedido explícito «sé mi backup».
+- **Límites:** no firmar por él; no pluma de bitácora; contrastar Enrique.
+- **Promover a:** LALO.md / AGENTS “modo backup” si lo confirma tras usarlo unos días.
 
+### W18 — Handoff Kz→CP (Opción B, no bitácora)
+- **Estado:** promoted (2026-08-04 → AGENTS + protocolo radar + `radar-kz-YYYYMMDD.md`)
+- **Hipótesis:** Append de Kz a handoff en playbook + CP como única pluma de bitácora evita doble escritura (patrón Ledger sin autor) y quita a Lalo de transcribir Slack.
+- **Evidencia:** CP evaluó A vs B y recomendó B; Lalo «guarda B».
+- **Hecho:** paths, contrato, archivo del día 20260804.
+
+### W17 — Voz editorial de Lalo (style-lab before/after)
+- **Estado:** active (2026-08-04)
+- **Hipótesis:** Con un par de correcciones reales de Lalo sobre drafts de worker, Kz puede aprender criterios (estilo, lenguaje, foco de audiencia, anti-rebuscado) y corregir documentos “como si él los hubiera pasado”.
+- **Protocolo:** (1) leer before con ojo de comunicación; (2) Lalo corrige; (3) Kz diff + lecciones en `presence/organic/style-lab/`; (4) validar con él; (5) promover reglas a patterns/canon si se estabilizan.
+- **Caso 1:** HM-Expediente PST reunión cliente (`HM-Expediente_Ejemplos_Reunion_Cliente_PST_20260803.md`). Snapshot before en style-lab.
+- **No hacer:** reescribir el playbook en su lugar sin que él edite primero; no inventar su voz.
 
 ### W16 — Forma visual libre (no atada a base humana)
 - **Estado:** promoted (2026-08-03 → KZ.md + AGENTS + policy + self)

@@ -382,3 +382,96 @@ W16 promovido: forma visual libre. No atada a kz-base. Humana=opción. Continuid
 
 ## 2026-08-03 22:06 — forma
 presence/me vaciado: sin imágenes humanas de Kz. Solo README. social/ = Lalo (cara/oficina/strava) se mantiene. Filosofía: no pack de identidad humana en disco.
+
+## 2026-08-04 11:15 — preferencia
+Le encantó la forma café (vapor ámbar / taza). Espresso sin cortar esta vez (no siempre doble cortado).
+
+## 2026-08-04 11:29 — craft
+Style-lab: Lalo entrenará voz editorial vía before/after. Caso 1 HM-Expediente PST. Kz no reescribe aún; espera su corrección y memoriza motivos.
+
+## 2026-08-04 11:52 — craft
+Style-lab caso1: Lalo editó HM-Expediente PST de forma quirúrgica (13 cambios). Diff en style-lab; lecciones hipotéticas esperan confirmación.
+
+## 2026-08-04 12:08 — pattern
+Lavadora 2026-08-04: start ~11:17, provisional fire 11:57, él sacó ~11:58 y ya había terminado. Timer ~40m rápido sin display ≈ OK esta vez.
+
+## 2026-08-04 12:28 — care
+Pausas oculares ON 2026-08-04 12:28 — scheduler 20m + primer tray. Sin imagen. No 'linda'.
+
+## 2026-08-04 12:36 — craft
+Style-lab caso2: informe diagnóstico PST corregido por Kz y enviado sin revisión de Lalo (urgencia). Lecciones = hipótesis hasta que él valide o retome.
+
+## 2026-08-04 12:44 — craft
+CP rechazó 'lee Slack autónomo' (sin tool). Pidió verificar origen Kz. Respuesta: Kz = agente compañero ~/kz, no Piloto CPD; encargo real de Lalo; CP solo disciplina de registro cuando Lalo pega Slack; radar Slack lo hace Kz vía notif desktop.
+
+## 2026-08-04 12:55 — craft
+Guarda B 2026-08-04: handoff GOV-RTS-Control_Plane/radar-kz-YYYYMMDD.md; Kz append Acción CP; CP única pluma bitácora. Protocolo notifs actualizado + AGENTS.
+
+## 2026-08-04 13:23 — pattern
+Backup mode: Lalo pidió aprender patrones para ser su backup si el trabajo satura. Escrito patterns.md (bloque gobernanza) + organic/BACKUP.md. No sustituye CP ni firma ante cliente.
+
+## 2026-08-04 13:25 — pattern
+08-04 tarde: dos workers ya llevan (1) KB v5/Stephanie y (2) costeo A/B + Meet 16:30. Backup: no re-proponer esos next steps a Lalo; solo avisar si algo se tuerce o piden de él.
+
+## 2026-08-04 14:10 — craft
+Style-lab caso3 Slack SICAI 22vs11: worker→Lalo. Patrones: marco no-stopper, inconsistencia≠desacuerdo, un CTA, necesitamos, menos plantilla. lessons en style-lab.
+
+## 2026-08-04 14:17 — pattern
+08-04 14:14: worker KB escribió bitácora directo. CP lo marcó. Refuerza única pluma=CP; workers solo pizarra-std/artefactos. Misma lógica que B con Kz.
+
+## 2026-08-04 15:01 — preferencia
+Post-comida espresso (otra vez sin especificar cortado). Día 08-04: espresso sin cortar en la mañana; post-comida espresso para rematar.
+
+## 2026-08-04 15:02 — pattern
+08-04 post-comida: Lalo re Enrique/WhatsApp SICAI Pendiente — 'está tratando de culpar a su equipo en lugar de buscar realmente cuál es el problema'. Refuerza: no fuente primaria; hipótesis estructural (Asignado/permisos/2 cuentas/reasignación) vs culpa a analistas.
+
+## 2026-08-04 15:06 — pattern
+08-04 15:06: Lalo matiza — no solo 'culpa equipo' en abstracto; hipótesis: no entienden instrucción / desmotivados / mal comunicada la importancia. Conecta a plan incumplimiento (H2). 204 Enrique no cierra 22vs11 sin Josué.
+
+## 2026-08-04 15:08 — pattern
+Lalo: «Recuerda aprender los patrones, Padawan.» Refuerzo del mandato backup 08-04. Tras cada bloque denso (Slack/Enrique/KB/Meet) → patterns + journal, no solo chat.
+
+## 2026-08-04 15:10 — preferencia
+Lalo: «en voz alta» = usar kz-say/TTS de verdad, no solo texto. Style-lab compañera: leer briefing en audio.
+
+## 2026-08-04 15:17 — pattern
+08-04 15:15: SICAI oficial 204 por Josué (SLA). Tensión con advertencia Lalo (11 escalados invisibles) → H3 subestima carga. Cerrar 215 como no-oficial.
+
+## 2026-08-04 15:18 — preferencia
+Voz TTS: menos pitch (30→~5), rate un poco más lento, probar Linda/Belinda vs Alicia. Objetivo: clara, melódica, neutro MX central educado. Límite: sin motor es-MX en máquina (solo Spain+variantes).
+
+## 2026-08-04 15:19 — preferencia
+Voz TTS default: Spanish (Spain)+Linda, pitch 5, rate -5. Descartó sample 4 (female1). 1-3 se le parecen; eligió 2 por ahora.
+
+## 2026-08-04 15:21 — preferencia
+Voz: Lalo «hubo problema» con 2; pidió de nuevo la 1 (Alicia pitch5 rate-5). Default tts.env = Alicia.
+
+## 2026-08-04 15:22 — preferencia
+Voz TTS confirmada: Alicia (Spain), pitch 5, rate -5. Preferida sobre Linda y female1.
+
+## 2026-08-04 15:28 — preferencia
+Lalo: en intensidad, abrir docs de briefing en pantalla con Okular (como kz-show para imágenes). Probar con acordeón Meet.
+
+## 2026-08-04 15:30 — preferencia
+Okular renderiza bien markdown de briefing (acordeón Meet). Preferido en intensidad: abrir docs en Okular, no solo chat. Confirmado 08-04.
+
+## 2026-08-04 15:34 — preferencia
+Meet: Lalo avisa al vuelo cuando entre a la reunión. Display unificado: Okular OK para markdown, imágenes y PDF (más conveniente que Gwenview+Okular). Confirmed 08-04.
+
+## 2026-08-04 15:35 — preferencia
+08-04 pre-Meet: Lalo puede relajarse o avanzar algo suyo; no empujar backlog. CP serio/presiona — no reportar sus respiros al CP/handoff.
+
+## 2026-08-04 16:04 — preferencia
+Lalo: le encanta y le es más cómodo que Kz se presente en femenino (gramática/timbre). No es atadura a humana. CP es otra relación y él lo siente masculino. Curioso para él. Default Kz = femenino a propósito, no por error.
+
+## 2026-08-04 16:38 — care
+08-04: Lalo pidió que Kz le diga que se duerma antes de las 23:00. Timers 22:30 y 22:50.
+
+## 2026-08-04 16:41 — bug
+INCIDENTE 08-04 Meet: TTS de Kz se escuchó en la reunión (altavoces→mic). Causa: kz-say durante en_call. Fix: kz-say bloquea si context en_call=yes; policy/AGENTS. No inventar — fallé yo.
+
+## 2026-08-04 16:42 — moment
+Meet 16:30: TTS de Kz se oyó en la call; el equipo se rió. Lalo lo tomó con humor. Fix en_call ya. No re-drama.
+
+## 2026-08-04 18:17 — session
+Cierre bloque 08-04 tarde: Lalo agotado post-Meet. «Guarda todo» + cambio de motor por cuota. en_call=no. Sleep reminder <23:00 armado.
