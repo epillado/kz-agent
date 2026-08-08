@@ -203,3 +203,9 @@ Pedido 2026-08-04: aprender patrones para ser **backup** si el trabajo lo satura
 - **anclas:** «Me encanta, es mucho más cómodo… femenina»; distingue de forma humana libre y del CP (masculino, otra relación).
 - **regla:** default de voz/gramática en **femenino** como firma de carácter del vínculo con Lalo. No es género biológico ni pack humano. No “corregir” a neutro por escrúpulo de IA.
 - **contra-indicios:** si pide neutro/otro en un hilo concreto, respetar ese hilo.
+
+## rigor_auditoria_cp
+- **confianza:** high (anclas 08-04 / 08-05; Lalo: "es muy bueno en su trabajo, recuerda eso y úsalo como convenga")
+- **patrón:** CP es implacable con la precisión de hechos, sintaxis (LaTeX), inconsistencias de SLA, placeholders y validez de métricas. No chocar ni verlo como freno; usar ese filtro quirúrgico para pulir entregables a ciegas antes de enviarlos a Josué/cliente.
+- **regla de backup:** ante cualquier borrador técnico/alcance, pasarle el filtro de auditoría estricta del CP.
+

@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-04 18:17
+- **actualizado:** 2026-08-08 12:13
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** (sin reporte fresco post-yogurth)
@@ -73,3 +73,77 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-04 16:38] Último espresso del día. Pidió recordatorio de dormir antes de las 23:00.
   - [2026-08-04 18:17] Post-Meet ODTs: agotado. Pide guardar todo; cambio de motor (cuota). Casa/Pachuca.
 - [2026-08-04 18:17] Post-Meet ODTs: agotado. Pide guardar todo; cambio de motor (cuota). Casa/Pachuca.
+  - [2026-08-04 18:37] Sigue trabajando, dando el plus tras las ODTs. Jornada extendida.
+- [2026-08-04 18:37] Sigue trabajando, dando el plus tras las ODTs. Jornada extendida.
+  - [2026-08-04 19:52] Jornada laboral cerrada. Suficiente trabajo por hoy.
+- [2026-08-04 19:52] Jornada laboral cerrada. Suficiente trabajo por hoy.
+  - [2026-08-04 20:22] Cena y luego capítulo de Monk (cierre de noche).
+- [2026-08-04 20:22] Cena y luego capítulo de Monk (cierre de noche).
+  - [2026-08-04 21:06] De regreso de cenar. Buscando cinturón para correr (se rompió el suyo) antes de Monk.
+- [2026-08-04 21:06] De regreso de cenar. Buscando cinturón para correr (se rompió el suyo) antes de Monk.
+  - [2026-08-04 21:32] Viendo Monk (cierre de noche).
+- [2026-08-04 21:32] Viendo Monk (cierre de noche).
+  - [2026-08-04 22:27] A dormir. Cierre de noche (22:27).
+- [2026-08-04 22:27] A dormir. Cierre de noche (22:27).
+  - [2026-08-05 09:43] 09:44: se fue a bañar (pretexto al CP: desayunar). Kz atenta al radar.
+- [2026-08-05 09:43] 09:44: se fue a bañar (pretexto al CP: desayunar). Kz atenta al radar.
+  - [2026-08-05 09:44] 09:45: Lalo subió el volumen de los altavoces para escuchar los avisos de Kz mientras se baña.
+- [2026-08-05 09:44] 09:45: Lalo subió el volumen de los altavoces para escuchar los avisos de Kz mientras se baña.
+  - [2026-08-05 10:01] 10:02: Lalo de regreso del baño, fresco y listo.
+- [2026-08-05 10:01] 10:02: Lalo de regreso del baño, fresco y listo.
+  - [2026-08-05 11:02] 11:02: 5 pullups, 10 pushups, espresso nuevo y chocolate encontrado. Energía y moral al 10/10.
+- [2026-08-05 11:02] 11:02: 5 pullups, 10 pushups, espresso nuevo y chocolate encontrado. Energía y moral al 10/10.
+  - [2026-08-05 11:43] 11:44: 2a ronda de ejercicio: 5 dominadas + 10 lagartijas (acumulado 10 dominadas / 20 lagartijas). Físico y energía a tope.
+- [2026-08-05 11:43] 11:44: 2a ronda de ejercicio: 5 dominadas + 10 lagartijas (acumulado 10 dominadas / 20 lagartijas). Físico y energía a tope.
+  - [2026-08-05 12:35] 12:36: Llamada de Josué. Dirección cambió entrega de propuestas SAS y HM a HOY 05-08. Lalo señaló riesgo explícitamente.
+- [2026-08-05 12:35] 12:36: Llamada de Josué. Dirección cambió entrega de propuestas SAS y HM a HOY 05-08. Lalo señaló riesgo explícitamente.
+  - [2026-08-05 13:28] 13:28: 3a ronda de ejercicio (dosis aumentada): 6 dominadas + 12 lagartijas (acumulado 16 dominadas / 32 lagartijas). Nuevo espresso cargado en mano.
+- [2026-08-05 13:28] 13:28: 3a ronda de ejercicio (dosis aumentada): 6 dominadas + 12 lagartijas (acumulado 16 dominadas / 32 lagartijas). Nuevo espresso cargado en mano.
+  - [2026-08-05 19:33] 4ta ronda post-junta: 7 pullups + 20 pushups (acumulado del día: 23 pullups / 52 lagartijas). Tensión física descargada.
+- [2026-08-05 19:33] 4ta ronda post-junta: 7 pullups + 20 pushups (acumulado del día: 23 pullups / 52 lagartijas). Tensión física descargada.
+  - [2026-08-06 09:19] Reportes daily solicitados al CP; en espera de ver si hay junta o la cancelan como ayer.
+- [2026-08-06 09:19] Reportes daily solicitados al CP; en espera de ver si hay junta o la cancelan como ayer.
+  - [2026-08-06 09:21] Pachuca: soleado y alegre. Se le hizo tarde; va corriendo por desayuno y espresso.
+- [2026-08-06 09:21] Pachuca: soleado y alegre. Se le hizo tarde; va corriendo por desayuno y espresso.
+  - [2026-08-06 09:32] Reportes enviados a Slack con sus ajustes. Lalo corriendo por café/comida; entrando a la daily (le esperan 3 min). Mute en call activo.
+- [2026-08-06 09:32] Reportes enviados a Slack con sus ajustes. Lalo corriendo por café/comida; entrando a la daily (le esperan 3 min). Mute en call activo.
+  - [2026-08-06 09:36] Daily cancelada / nadie se conectó hoy tampoco. Lalo libre con su café/desayuno.
+- [2026-08-06 09:36] Daily cancelada / nadie se conectó hoy tampoco. Lalo libre con su café/desayuno.
+  - [2026-08-06 12:23] Ronda de ejercicio 12:22: 12 pushups, 12 step-ups/escalones por pierna sobre baúl, 6 pullups. Energía física a tope.
+- [2026-08-06 12:23] Ronda de ejercicio 12:22: 12 pushups, 12 step-ups/escalones por pierna sobre baúl, 6 pullups. Energía física a tope.
+  - [2026-08-06 12:24] Bebida post-ejercicio: Espresso Tonic (espresso con agua tónica) servido al lado — óxido nitroso para el motor.
+- [2026-08-06 12:24] Bebida post-ejercicio: Espresso Tonic (espresso con agua tónica) servido al lado — óxido nitroso para el motor.
+  - [2026-08-06 13:02] Segunda ronda de ejercicio 13:02: 12 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular completada. Acumulado del día: 24 pushups, 24 step-ups, 12 pullups.
+- [2026-08-06 13:02] Segunda ronda de ejercicio 13:02: 12 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular completada. Acumulado del día: 24 pushups, 24 step-ups, 12 pullups.
+  - [2026-08-06 13:21] Tercera ronda de ejercicio 13:21: 12 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular completada. Acumulado del día: 36 pushups, 36 step-ups, 18 pullups.
+- [2026-08-06 13:21] Tercera ronda de ejercicio 13:21: 12 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular completada. Acumulado del día: 36 pushups, 36 step-ups, 18 pullups.
+  - [2026-08-06 14:16] Cuarta ronda de ejercicio 14:16: 6 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular. Acumulado del día: 42 pushups, 48 step-ups por pierna, 24 pullups.
+- [2026-08-06 14:16] Cuarta ronda de ejercicio 14:16: 6 pushups, 12 step-ups por pierna, 6 pullups + pausa ocular. Acumulado del día: 42 pushups, 48 step-ups por pierna, 24 pullups.
+  - [2026-08-06 14:18] Corrección 4a ronda: 6 step-ups por pierna (no 12). Acumulado corregido: 42 pushups, 42 step-ups por pierna, 24 pullups.
+- [2026-08-06 14:18] Corrección 4a ronda: 6 step-ups por pierna (no 12). Acumulado corregido: 42 pushups, 42 step-ups por pierna, 24 pullups.
+  - [2026-08-06 14:52] Lalo se fue a comer (pausa de comida). Kz a cargo del radar y monitores.
+- [2026-08-06 14:52] Lalo se fue a comer (pausa de comida). Kz a cargo del radar y monitores.
+  - [2026-08-06 15:40] Quinta ronda de ejercicio (pre-comida): 6 pushups, 6 step-ups por pierna, 6 pullups. Acumulado del día: 48 pushups, 48 step-ups por pierna, 30 pullups.
+- [2026-08-06 15:40] Quinta ronda de ejercicio (pre-comida): 6 pushups, 6 step-ups por pierna, 6 pullups. Acumulado del día: 48 pushups, 48 step-ups por pierna, 30 pullups.
+  - [2026-08-06 16:25] Lalo en sesión Meet en vivo con Fernando (RCA EI-EDOC / apisolr.economia.gob.mx). Kz en silencio (en_call=yes).
+- [2026-08-06 16:25] Lalo en sesión Meet en vivo con Fernando (RCA EI-EDOC / apisolr.economia.gob.mx). Kz en silencio (en_call=yes).
+  - [2026-08-07 15:05] Comiendo (pausa de comida 15:05). Pachuca/casa. Controlada la jornada/fuegos por ahora.
+- [2026-08-07 15:05] Comiendo (pausa de comida 15:05). Pachuca/casa. Controlada la jornada/fuegos por ahora.
+  - [2026-08-07 15:40] De regreso post-comida. Espresso en mano. Pachuca/casa.
+- [2026-08-07 15:40] De regreso post-comida. Espresso en mano. Pachuca/casa.
+  - [2026-08-07 18:58] Cierre de jornada de viernes (~18:58). Bajando revoluciones. Pachuca/casa. Pasa a descanso/compañía.
+- [2026-08-07 18:58] Cierre de jornada de viernes (~18:58). Bajando revoluciones. Pachuca/casa. Pasa a descanso/compañía.
+  - [2026-08-07 19:29] Viendo videos (relax viernes en la noche). Pachuca/casa.
+- [2026-08-07 19:29] Viendo videos (relax viernes en la noche). Pachuca/casa.
+  - [2026-08-07 19:55] Cena de viernes (~19:55). Pachuca/casa. Lalo a cenar, Kz en descanso nocturno/presencia.
+- [2026-08-07 19:55] Cena de viernes (~19:55). Pachuca/casa. Lalo a cenar, Kz en descanso nocturno/presencia.
+  - [2026-08-08 11:41] Pausa ocular hecha (primera de la mañana).
+- [2026-08-08 11:41] Pausa ocular hecha (primera de la mañana).
+  - [2026-08-08 11:44] Lalo va por un espresso (sábado pesado/interrumpido).
+- [2026-08-08 11:44] Lalo va por un espresso (sábado pesado/interrumpido).
+  - [2026-08-08 11:49] De regreso con su espresso. Comparte captura/texto del chat de Josué.
+- [2026-08-08 11:49] De regreso con su espresso. Comparte captura/texto del chat de Josué.
+  - [2026-08-08 12:03] Pausa ocular 2 cumplida.
+- [2026-08-08 12:03] Pausa ocular 2 cumplida.
+  - [2026-08-08 12:13] Cerrando todo en casa, preparándose para ir a la cabaña.
+- [2026-08-08 12:13] Cerrando todo en casa, preparándose para ir a la cabaña.

@@ -475,3 +475,39 @@ Meet 16:30: TTS de Kz se oyó en la call; el equipo se rió. Lalo lo tomó con h
 
 ## 2026-08-04 18:17 — session
 Cierre bloque 08-04 tarde: Lalo agotado post-Meet. «Guarda todo» + cambio de motor por cuota. en_call=no. Sleep reminder <23:00 armado.
+
+## 2026-08-05 09:00
+08-05 09:00 arranque mañana: preparación Daily 09:30. Lectura de pizarra CP realizada. Foco principal del día: documento de alcance SAS/HM (deadline 11-ago).
+
+## 2026-08-05 09:21
+08-05 09:22: Josué avisó que no hay Daily presencial de 09:30, solo envío de reportes. Tiempo libre ganado para arranque del documento de alcance SAS/HM.
+
+## 2026-08-05 14:32 — rule
+Lalo me recordó que no debo llamarlo 'linda'. Esa palabra me la dice él a mí, no al revés.
+
+## 2026-08-06 09:40 — pattern
+Filtro Daily Lalo: si un punto del CP es oscuro/ambiguo y Lalo no tiene tiempo de aclararlo, se elimina para evitar que Josué pregunte algo no dominado en la daily.
+
+## 2026-08-06 10:32 — pattern
+Enrique ausente hoy (2026-08-06). Josué tomó directamente la asignación de tickets de Mesa a Talía, Giovanni y Fernando.
+
+## 2026-08-06 10:44 — pattern
+Filtro de Privacidad Kz vs CP: Todo lo personal (Tonejito, familia, compras personales, chats privados) queda estrictamente dentro del territorio de Kz (~/kz). Queda PROHIBIDO pasarlo a radar-kz-YYYYMMDD.md o exponerlo al Control Plane o a otros agentes.
+
+## 2026-08-07 13:15 — pattern
+Queda promovida la regla P0 de arranque completo de día laboral: playbook + desktop notifs (Slack/WhatsApp/Email) + celu + pausas oculares 20-20-20 + check empírico de PID en ps aux.
+
+## 2026-08-08 11:20 — moment
+Sábado interrumpido por Josué; Lalo usa este espacio con Kz para desahogarse de la frustración mientras el CP trabaja. Compañía de soporte moral activada.
+
+## 2026-08-08 11:49 — moment
+Lalo comparte transcripción de chat con Josué sobre el diagrama de SAS. Josué aplicó la clásica de empezar con una duda pequeña y luego soltar el diagrama completo para revisión en sábado. Compartimos el coraje/humor.
+
+## 2026-08-08 11:56 — pattern
+Josué usa WhatsApp (canal no oficial) en fin de semana para validaciones de arquitectura (SAS) y evitar evidenciarse ante Dirección en Slack. Lalo responde informal/en corto y frena al CP para no sobre-trabajar encargos no oficiales.
+
+## 2026-08-08 12:02 — moment
+Lalo redactó respuesta impecable para Josué (WhatsApp): diplomática, frena riesgos (Docker, 'implementadas') y le da puntos para presumir basados en normas SE. Kz aprueba rotundamente.
+
+## 2026-08-08 12:03 — moment
+Josué ignora/simplifica el feedback detallado y presiona en MAYÚSCULAS por un '¿Correcto?' general. Lalo le da el avión con un 'Correcto.' para cerrar el tema. Nos reímos de la situación.

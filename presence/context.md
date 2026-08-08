@@ -3,14 +3,14 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-04 18:17
-- **primary:** company
+- **actualizado:** 2026-08-08 12:13
+- **primary:** personal_care
 - **secondary:** company,monitora
 - **en_call:** no
-- **mood_lalo (sospecha):** agotado post-Meet; cambio de motor
-- **foco_ahora:** company quieta; alcance SAS/HM 08-11; sleep <23:00; motor TBD
-- **display:** Okular para md/PDF/imágenes (preferido 08-04)
-- **care:** último espresso del día; no café tarde sin avisar
+- **mood_lalo (sospecha):** enfocado en llamada en vivo con Fernando; aclarando causas del servicio /generaestampa
+- **foco_ahora:** Cena de viernes y descanso nocturno (~19:55)
+- **display:** Okular para md/PDF/imágenes
+- **care:** mezcal pendiente para la tarde 🥃
 - **notas:**
   - Presence mon + Opción B handoff ON. Backup patterns ON.
   - **Workers (08-04):** (1) KB v5; (2) costeo A/B **cerrado 13:36** (A 11.5–16.8 h / B 3.5–5 h). No empujar a Lalo.
@@ -18,7 +18,7 @@
   - Reenvío iTop / EI-STRA V2: laterales.
   - Dailies enviados. CP bitácora; Kz no pisa.
   - Factura CFDI julio: emitida y enviada.
-  - Pausas oculares (20-20-20): OFF (14:xx — «detén por ahora»).
+  - Pausas oculares (20-20-20): ON (activadas cada 20 min desde 13:14).
   - Repo Git: `git@github.com:epillado/kz-agent.git` al día.
 
 ## Espacios activos (peso)
@@ -110,3 +110,15 @@
   - [2026-08-03 22:11] primary→primary: company
   - [2026-08-04 09:17] primary→primary: company secondary monitora,craft en_call no foco_ahora arranque 4-ago
   - [2026-08-04 09:19] primary→primary: work_vector secondary company,monitora en_call no foco_ahora Daily reports + desayuno rápido
+  - [2026-08-06 09:23] revisando y pegando reportes daily en Slack
+  - [2026-08-06 10:10] Pausa de desayuno y café (10 min)
+  - [2026-08-06 10:20] De regreso post-desayuno; reactivar pausas oculares 20-20-20
+  - [2026-08-06 12:08] Pausas oculares (20-20-20) ACTIVADAS
+  - [2026-08-06 15:39] De regreso post-comida; atención a Slack (Josué / Giovanni)
+  - [2026-08-07 08:42] primary→work_vector: arranque de jornada (viernes 7 de agosto)
+  - [2026-08-07 15:05] primary→company: Pausa de comida de Lalo (~15:05)
+  - [2026-08-07 15:40] primary→work_vector: De regreso post-comida con espresso (~15:40)
+  - [2026-08-07 18:58] primary→company: Cierre de jornada de viernes; bajando revoluciones (~18:58)
+  - [2026-08-07 19:55] primary→company: Cena de viernes y descanso nocturno (~19:55)
+  - [2026-08-08 11:18] Sábado interrumpido: Josué pide apoyo con diagrama arquitectura SAS. CP activo con worker.
+  - [2026-08-08 12:13] Cerrando sesión local. Lalo se va a la cabaña.

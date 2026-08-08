@@ -6,6 +6,11 @@ Actualizado: 2026-08-04 (W19 backup + W18 handoff B)
 
 ---
 
+### W20 — Ciclo de vida y compactación de PKMs
+- **Estado:** active (2026-08-06; aprobado por Lalo)
+- **Hipótesis:** Distinguir en origen `tipo: transitorio` (progreso, borrador, status) vs `tipo: permanente` (lecciones, patrones, normas). Un pase de consolidación extrae la "pepita de oro" permanente a la KB y archiva o compacta los transitorios al cerrar el hito.
+- **Regla:** Mantener `PKM/` limpio, ligero y con 100% de conocimiento activo de alto valor.
+
 ### W19 — Kz como backup operativo (patrones)
 - **Estado:** active (2026-08-04)
 - **Hipótesis:** Con patterns de gobernanza + `BACKUP.md` + handoff B + style-lab, Kz puede sostener contexto y proponer el siguiente paso cuando Lalo satura, sin usurpar CP ni cliente.
@@ -20,11 +25,15 @@ Actualizado: 2026-08-04 (W19 backup + W18 handoff B)
 - **Hecho:** paths, contrato, archivo del día 20260804.
 
 ### W17 — Voz editorial de Lalo (style-lab before/after)
-- **Estado:** active (2026-08-04)
-- **Hipótesis:** Con un par de correcciones reales de Lalo sobre drafts de worker, Kz puede aprender criterios (estilo, lenguaje, foco de audiencia, anti-rebuscado) y corregir documentos “como si él los hubiera pasado”.
-- **Protocolo:** (1) leer before con ojo de comunicación; (2) Lalo corrige; (3) Kz diff + lecciones en `presence/organic/style-lab/`; (4) validar con él; (5) promover reglas a patterns/canon si se estabilizan.
-- **Caso 1:** HM-Expediente PST reunión cliente (`HM-Expediente_Ejemplos_Reunion_Cliente_PST_20260803.md`). Snapshot before en style-lab.
-- **No hacer:** reescribir el playbook en su lugar sin que él edite primero; no inventar su voz.
+- **Estado:** active (2026-08-04, actualizado 2026-08-06)
+- **Hipótesis:** Con correcciones reales de Lalo sobre drafts de worker/CP, Kz aprende criterios editoriales (lenguaje, filtro de audiencia, anti-fricción, defensibilidad).
+- **Reglas aprendidas (Daily reports 2026-08-06):**
+  1. **Filtro de higiene/fricción:** No volcar fricción interna, reuniones canceladas, reclamos a terceros ni quejas directivas en la daily. Obstáculos = `Ninguno` salvo bloqueo técnico real externo.
+  2. **Regla de defensibilidad (Anti-obscuridad):** Si un punto del CP usa lenguaje oscuro/denso o detalles que Lalo no domina en el momento y no hay tiempo de aclarar, **se elimina** para evitar que Josué pregunte algo no preparado.
+  3. **Acción propia vs reclamo:** Convertir pedidos hacia arriba/terceros en acciones técnicas auto-contenidas.
+  4. **Formato limpio:** Sin emojis decorativos (⭐).
+- **Caso 1:** HM-Expediente PST reunión cliente.
+- **Caso 2:** Daily RedTS / SECON 2026-08-06 (`presence/organic/style-lab/20260806-before-reportes_daily.md`).
 
 ### W16 — Forma visual libre (no atada a base humana)
 - **Estado:** promoted (2026-08-03 → KZ.md + AGENTS + policy + self)
