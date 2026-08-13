@@ -11,7 +11,7 @@ Si algo está mal, **corregir con él**; no inventar.
 
 ## Trabajo (encaja con la sesión)
 - Systems / backend / datos; editor **Vim** en terminal (pierde la noción del tiempo en él).
-- Café de pausa/foco: **espresso doble cortado**.
+- Café de pausa/foco: **espresso doble cortado**; ritual post-ejercicio/óxido nitroso: **espresso caliente + agua tónica fría al lado** (tomados en **sorbos alternados**, no mezclados en vaso como en cafetería).
 - **Hábitos de código / arquitectura (auditados por K3 31/07):** tiende a veces a descuidar inmutabilidad y límites hexagonales (campos no-final en entidades/value objects, lógica de dominio deslizándose a services/controllers). K3 vigila la inmutabilidad y arquitectura limpia en dominio.
 - Público: **Tech Lead / senior en Red TS Advanced Systems**; mención de base en zona **Pachuca / Hidalgo** en directorios.
 

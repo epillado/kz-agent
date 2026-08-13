@@ -60,19 +60,41 @@ if [[ "${1:-}" == "stop" ]]; then
   exit 0
 fi
 
+# Paths a vigilar (solo lectura). Objetivo: que Kz oiga al CP sin que Lalo
+# re-cuente el día. No incluir .git, .claude, .grok ni basura de IDE.
 watch_paths() {
-  local today yday
-  today="$(date +%Y%m%d)"
-  cat <<EOF
-${PLAYBOOK}/TODO.md
-${PLAYBOOK}/Sessions/control_plane_session_state.md
-${PLAYBOOK}/Sessions/standard_session_state.md
-${PLAYBOOK}/Bit/${today}-Bitacora.md
-EOF
-  yday="$(date -d 'yesterday' +%Y%m%d 2>/dev/null || true)"
-  if [[ -n "${yday}" && -f "${PLAYBOOK}/Bit/${yday}-Bitacora.md" ]]; then
-    echo "${PLAYBOOK}/Bit/${yday}-Bitacora.md"
+  local day yesterday
+  # Importante: %Y%m%d (sin guiones). Un bug viejo hacía (( 2026-08 )) y rompía el loop.
+  day="$(date +%Y%m%d)"
+  yesterday="$(date -d 'yesterday' +%Y%m%d 2>/dev/null || true)"
+
+  # Núcleo estable
+  echo "${PLAYBOOK}/TODO.md"
+  echo "${PLAYBOOK}/Sessions/control_plane_session_state.md"
+  echo "${PLAYBOOK}/Sessions/standard_session_state.md"
+
+  # Bitácora del día (pluma CP) + ayer (cierres tardíos / handoff nocturno)
+  echo "${PLAYBOOK}/Bit/${day}-Bitacora.md"
+  if [[ -n "${yesterday}" ]]; then
+    echo "${PLAYBOOK}/Bit/${yesterday}-Bitacora.md"
   fi
+
+  # Daily oficiales del día (se crean/re-escriben en la mañana y a veces se corrigen)
+  echo "${PLAYBOOK}/GOV-RTS-Control_Plane/Daily/${day}-reporte_daily-secon.md"
+  echo "${PLAYBOOK}/GOV-RTS-Control_Plane/Daily/${day}-reporte_daily-redts.md"
+
+  # Artefactos del día en SECON y PKM (glob acotado por fecha; nullglob = silencio si no hay)
+  local f
+  shopt -s nullglob
+  for f in \
+    "${PLAYBOOK}/SECON/${day}"-*.md \
+    "${PLAYBOOK}/SECON/${day}"*.md \
+    "${PLAYBOOK}/PKM/${day}"-*.md \
+    "${PLAYBOOK}/PKM/${day}"*.md
+  do
+    echo "$f"
+  done
+  shopt -u nullglob
 }
 
 fingerprint() {
@@ -94,6 +116,10 @@ label_for() {
     *control_plane_session_state.md) echo "pizarra-CP" ;;
     *standard_session_state.md) echo "pizarra-std" ;;
     *Bitacora.md) echo "bitácora" ;;
+    *reporte_daily-secon.md) echo "daily-secon" ;;
+    *reporte_daily-redts.md) echo "daily-redts" ;;
+    */SECON/*) echo "secon" ;;
+    */PKM/*) echo "pkm" ;;
     *) basename "$f" ;;
   esac
 }
@@ -109,17 +135,33 @@ snippet_file() {
   tail -n "${n}" "$f" 2>/dev/null | sed 's/\t/  /g'
 }
 
+# write_pending: SOLO snippea los paths que realmente cambiaron (no todos los
+# que comparten etiqueta). Bug 2026-08-12: label "bitácora" metía ayer+hoy y
+# el snippet de ayer dominaba; CP/Kz leían el día anterior.
 write_pending() {
-  local -a labels=("$@")
-  local ts summary
+  local -a paths=("$@")
+  local -a labels=()
+  local path label ts summary x u seen
   ts="$(date -Iseconds)"
-  summary="$(printf '%s, ' "${labels[@]}" | sed 's/, $//')"
+
+  for path in "${paths[@]}"; do
+    [[ -z "$path" ]] && continue
+    label="$(label_for "$path")"
+    seen=0
+    for u in "${labels[@]+"${labels[@]}"}"; do
+      [[ "$u" == "$label" ]] && seen=1 && break
+    done
+    (( seen == 0 )) && labels+=("$label")
+  done
+  summary="$(printf '%s, ' "${labels[@]+"${labels[@]}"}" | sed 's/, $//')"
+  [[ -z "${summary}" ]] && summary="(sin etiqueta)"
 
   {
     echo "# Pending — atención de Kz"
     echo
     echo "- **cuando:** ${ts}"
     echo "- **qué se movió:** ${summary}"
+    echo "- **paths:** $(printf '%s; ' "${paths[@]}" | sed 's/; $//')"
     echo "- **estado:** awaiting_kz_comment"
     echo
     echo "El agente debe: leer esto + archivos (solo lectura), **comentar en el chat** con voz de Kz,"
@@ -128,37 +170,67 @@ write_pending() {
     echo "---"
     echo
 
-    local path label
-    while IFS= read -r path; do
+    # Preferir bitácora del día (nombre lexicográfico mayor = fecha más reciente)
+    # sin reintroducir paths que no cambiaron.
+    local -a ordered=()
+    local -a bits=() others=()
+    for path in "${paths[@]}"; do
       [[ -z "$path" ]] && continue
-      label="$(label_for "$path")"
-      # solo snip de los que cambiaron en este batch
-      local hit=0
-      local L
-      for L in "${labels[@]}"; do
-        [[ "$L" == "$label" ]] && hit=1 && break
-      done
-      (( hit == 1 )) || continue
+      if [[ "$path" == *Bitacora.md ]]; then
+        bits+=("$path")
+      else
+        others+=("$path")
+      fi
+    done
+    # sort bitácoras: hoy antes que ayer (basename descendente)
+    if ((${#bits[@]} > 0)); then
+      while IFS= read -r path; do
+        [[ -n "$path" ]] && ordered+=("$path")
+      done < <(printf '%s\n' "${bits[@]}" | sort -r)
+    fi
+    ordered+=("${others[@]+"${others[@]}"}")
 
+    for path in "${ordered[@]+"${ordered[@]}"}"; do
+      [[ -z "$path" ]] && continue
+      # solo snip si el archivo existe y tiene contenido
+      label="$(label_for "$path")"
       echo "## ${label}"
       echo
       echo \`"${path}"\`
       echo
+      if [[ ! -f "$path" ]]; then
+        echo '```'
+        echo "(archivo ausente — path vigilado pero aún no creado)"
+        echo '```'
+        echo
+        continue
+      fi
+      if [[ ! -s "$path" ]]; then
+        echo '```'
+        echo "(archivo vacío — 0 bytes)"
+        echo '```'
+        echo
+        continue
+      fi
       echo '```'
       case "$label" in
-        bitácora) snippet_file "$path" 15 ;;
+        bitácora) snippet_file "$path" 18 ;;
         pizarra-CP|pizarra-std) snippet_file "$path" 20 ;;
+        daily-secon|daily-redts) snippet_file "$path" 16 ;;
+        secon|pkm) snippet_file "$path" 12 ;;
         TODO) snippet_file "$path" 8 ;;
         *) snippet_file "$path" 10 ;;
       esac
       echo '```'
       echo
-    done < <(watch_paths | sort -u)
+    done
   } > "${PENDING_FILE}"
 
   # bandera simple para loops
   echo "${ts}" > "${STATE_DIR}/pending.ts"
   echo "${summary}" > "${STATE_DIR}/pending_labels.txt"
+  # copia de inspección (CP/debug) — no es la cola activa
+  cp -f "${PENDING_FILE}" "${STATE_DIR}/pending.last.md" 2>/dev/null || true
 }
 
 maybe_generic_nudge() {
@@ -217,7 +289,7 @@ scan_once() {
   mv -f "${tmp}" "${STATE_FILE}"
 
   if ((${#changed_labels[@]} > 0)); then
-    # únicos preservando orden
+    # únicos labels (solo para línea CHANGED legible)
     local -a uniq=()
     local x u seen
     for x in "${changed_labels[@]}"; do
@@ -227,7 +299,8 @@ scan_once() {
       done
       (( seen == 0 )) && uniq+=("$x")
     done
-    write_pending "${uniq[@]}"
+    # Snippet SOLO de paths que cambiaron (no todos los de la misma etiqueta)
+    write_pending "${changed_paths[@]}"
     local summary
     summary="$(printf '%s, ' "${uniq[@]}" | sed 's/, $//')"
     # Línea para monitor/agente (despierta a Kz)

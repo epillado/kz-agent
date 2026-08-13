@@ -16,12 +16,7 @@ Lalo autorizó y pidió explícitamente:
 
 ## Activos
 
-- **[2026-07-31 — mañana]** Factura SAT / cobro RED TS  
-  - Bloqueado el 2026-07-30 por falla/mantenimiento del SAT por la tarde (comportamiento habitual).  
-  - Guía ya generada por Control Plane:  
-    `playbook/PKM/20260730-GOV-guia_rapida_facturacion_sat_40_redts.md`  
-  - Al retomar con Lalo: recordarle con naturalidad, no como nag de project manager. Si el portal sigue caído, no insistir.
-  - Canal: chat + `kz-nudge.sh` si no está mirando el hilo.
+*(Sin recordatorios activos)*
 
 ## Hechos / contexto (solo lectura de CP, 2026-07-30 noche)
 

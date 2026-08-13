@@ -41,6 +41,8 @@ config.local.env
 # --- presence/: runtime y media locales; el texto SÍ se versiona ---
 # Runtime / sesión
 presence/fingerprints.tsv
+presence/fingerprints.tsv.bak*
+presence/cp-cursors/
 presence/watch.pid
 presence/pending.md
 presence/pending.last.md
@@ -69,3 +71,8 @@ presence/**/*pre-mega*
 
 # tmp genérico
 /tmp/
+
+# Python
+scripts/__pycache__/
+**/__pycache__/
+*.pyc

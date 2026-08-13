@@ -28,7 +28,7 @@ EVENTS = NOTIF_DIR / "events.log"
 PENDING = NOTIF_DIR / "pending.md"
 PENDING_TS = NOTIF_DIR / "pending.ts"
 PENDING_LABELS = NOTIF_DIR / "pending_labels.txt"
-CHANGED_LOG = NOTIF_DIR / "changed.log"  # cola de wake para el monitor del agente
+CHANGED_LOG = KZ_HOME / "presence" / "stream.log"  # cola de wake directa para el monitor del agente
 PIDFILE = NOTIF_DIR / "desktop-watch.pid"
 
 
@@ -51,6 +51,8 @@ def load_filters() -> dict[str, str]:
         "KZ_NOTIF_SOFT_PING": "0",
         # Si 1, cualquier mensaje Slack genera pending (más ruido)
         "KZ_NOTIF_SLACK_ALL_HOT": "0",
+        # 1 = tray con snippet real al hot (sensor; sin chat_owed). 0 = solo pending/CHANGED
+        "KZ_NOTIF_SENSOR_TRAY": "1",
     }
     if FILTERS.is_file():
         for line in FILTERS.read_text(encoding="utf-8", errors="replace").splitlines():
@@ -83,12 +85,10 @@ def classify(app: str, summary: str, body: str) -> str:
     blob = f"{app} | {summary} | {body}"
     if ci_search(blob, F.get("KZ_NOTIF_BLOCK", "")):
         return "skip"
-    # Nunca hot/pending de nuestras propias campanitas (evita bucle tray→CHANGED)
-    if ci_search(app, r"^Kz$|^Kz ·|kz-nudge"):
-        return "desktop_seen"
-    # 2026-07-31: Lalo — mute Phone/SMS/missed-call spam for now
-    if ci_search(app, r"Phone|Teléfono|Telephony|Messages|Mensajes|^SMS$|KDE Connect"):
+    # Nunca hot/pending de nuestras propias campanitas o popups (evita bucle infinto notify-send -> DBus -> notify-send)
+    if ci_search(app, r"^Kz$|^Kz ·|kz-nudge|notify-send") or ci_search(summary, r"🔔|\[IMPORTANT\]"):
         return "skip"
+    # 2026-08-06: Abierto para ver KDE Connect / WhatsApp / Chrome si están en KZ_NOTIF_APP_IMPORTANT
     if ci_search(blob, r"Missed call|missed call|Sensitive notification"):
         return "skip"
     if ci_search(app, F.get("KZ_NOTIF_APP_SLACK", "Slack")):
@@ -169,15 +169,46 @@ El agente: comentar en chat (voz Kz), tray si cabe, clear:
     # Wake confiable para el monitor del agente (stdout del daemon se pierde en nohup)
     with CHANGED_LOG.open("a", encoding="utf-8") as f:
         f.write(f"{when}\t{changed_line}\n")
-    # Soft-ping "voltea" vacío: OFF por defecto. El agente comenta y luego --say.
-    if F.get("KZ_NOTIF_SOFT_PING", "0") == "1":
-        nudge = KZ_HOME / "scripts" / "kz-nudge.sh"
-        if nudge.is_file():
-            subprocess.Popen(
-                [str(nudge), "--terminal", "Notif desktop/Slack. Voltea a Grok (Kz)."],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
+
+
+def tray_sensor(kind: str, app: str, summary: str, body: str) -> None:
+    """Tray con texto real (sensor). No crea chat_owed — el comentario de Kz es opcional.
+
+    Contrato 2026-08-10: hot → snippet siempre; análisis en chat solo si gordo / Lalo pide / digest.
+    Env: KZ_NOTIF_SENSOR_TRAY=0 desactiva.
+    """
+    if os.environ.get("KZ_NOTIF_SENSOR_TRAY", "1") == "0":
+        return
+    if F.get("KZ_NOTIF_SENSOR_TRAY", "1") == "0":
+        return
+    raw = (body or summary or app or "").replace("\n", " ").strip()
+    if not raw:
+        return
+    # Prefijo corto de app para ubicar el canal
+    prefix = (app or kind or "notif").strip()
+    if prefix.lower() not in raw.lower()[:40]:
+        snippet = f"{prefix}: {raw}"
+    else:
+        snippet = raw
+    if len(snippet) > 200:
+        snippet = snippet[:197] + "…"
+    nudge = KZ_HOME / "scripts" / "kz-nudge.sh"
+    if not nudge.is_file():
+        return
+    env = os.environ.copy()
+    env["KZ_NUDGE_NO_CHAT_OWED"] = "1"
+    env.setdefault("DISPLAY", os.environ.get("DISPLAY", ":0"))
+    try:
+        subprocess.run(
+            [str(nudge), "--say", snippet],
+            env=env,
+            timeout=20,
+            check=False,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        pass
 
 
 def handle_notify(app: str, summary: str, body: str) -> None:
@@ -196,6 +227,7 @@ def handle_notify(app: str, summary: str, body: str) -> None:
         return
     mark_seen(fp, kind, app)
     write_pending(kind, app, summary, body)
+    tray_sensor(kind, app, summary, body)
 
 
 def parse_monitor(proc: subprocess.Popen) -> None:
@@ -205,7 +237,8 @@ def parse_monitor(proc: subprocess.Popen) -> None:
     in_notify = False
 
     assert proc.stdout is not None
-    for raw in proc.stdout:
+    it = iter(proc.stdout)
+    for raw in it:
         line = raw.rstrip("\n")
         if "member=Notify" in line and "Notifications" in line:
             in_notify = True
@@ -220,21 +253,35 @@ def parse_monitor(proc: subprocess.Popen) -> None:
                 handle_notify(app or "", summary or "", body or "")
             in_notify = False
             continue
-        m = re.match(r'^\s*string\s+"(.*)"\s*$', line)
+
+        # Detect start of a DBus string argument
+        m = re.match(r'^\s*string\s+"(.*)$', line)
         if not m:
-            # unquoted empty
-            if re.match(r"^\s*string\s+\"\"\s*$", line):
+            if re.match(r'^\s*string\s*""\s*$', line):
                 val = ""
             else:
-                # multiline strings rare; skip
                 continue
         else:
-            val = m.group(1)
-            # unescape
+            raw_val = m.group(1)
+            # Check if multi-line string (does not end with non-escaped quote)
+            if raw_val.endswith('"') and not raw_val.endswith(r'\"'):
+                val = raw_val[:-1]
+            else:
+                # Multiline string: read until closing quote
+                accum = [raw_val]
+                for nxt_raw in it:
+                    nxt = nxt_raw.rstrip("\n")
+                    if nxt.endswith('"') and not nxt.endswith(r'\"'):
+                        accum.append(nxt[:-1])
+                        break
+                    else:
+                        accum.append(nxt)
+                val = " ".join(accum)
+
             val = val.replace("\\n", " ").replace('\\"', '"')
 
         # Notify args: 0 app_name, 1 replaces_id is uint, 2 icon, 3 summary, 4 body
-        # We only see string lines: app, icon, summary, body (replaces_id is uint32)
+        # We only see string lines: app (0), icon (1), summary (2), body (3)
         if string_idx == 0:
             app = val
         elif string_idx == 1:

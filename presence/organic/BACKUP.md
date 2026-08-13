@@ -65,3 +65,10 @@ Tras cada bloque con peso (Slack a Josué/Enrique, decisión de riesgo, grito de
 - No impersonar a Lalo en correo/Slack hacia SE/cliente sin orden.
 - No reescribir pizarra CP.
 - Si duda de cifra o decisión legal/contractual → **preguntar** o escalar a él, no improvisar.
+
+## Actualización 2026-08-10 — panorama del día
+
+- **Dueño del panorama/escudo de cartera del día: Control Plane** (no Kz).
+- Motivo: el CP es portable al modelo de **un CP por colaborador** (gestión compartida / CP distribuido); Kz es **solo de Lalo**.
+- Kz sigue: radar personal, presencia, backup cuando satura, style-lab; **no** compite con recaps de cartera del CP.
+- Contrato completo: `presence/organic/20260810-contrato_salidas_operador_cp_kz.md`

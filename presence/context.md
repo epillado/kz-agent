@@ -3,122 +3,38 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-08 12:13
-- **primary:** personal_care
-- **secondary:** company,monitora
+- **actualizado:** 2026-08-13 16:40
+- **primary:** work_vector
+- **secondary:** monitora, company
 - **en_call:** no
-- **mood_lalo (sospecha):** enfocado en llamada en vivo con Fernando; aclarando causas del servicio /generaestampa
-- **foco_ahora:** Cena de viernes y descanso nocturno (~19:55)
+- **mood_lalo (sospecha):** pre-Meet TLC-G2; sync de Kz
+- **foco_ahora:** TLC-G2 17:00; mente empujada a git
 - **display:** Okular para md/PDF/imágenes
-- **care:** mezcal pendiente para la tarde 🥃
+- **care:** —
 - **notas:**
-  - Presence mon + Opción B handoff ON. Backup patterns ON.
-  - **Workers (08-04):** (1) KB v5; (2) costeo A/B **cerrado 13:36** (A 11.5–16.8 h / B 3.5–5 h). No empujar a Lalo.
-  - **12:37 HM enviado** Josué. Meet 16:30 ODTs SAS/HM.
-  - Reenvío iTop / EI-STRA V2: laterales.
-  - Dailies enviados. CP bitácora; Kz no pisa.
-  - Factura CFDI julio: emitida y enviada.
-  - Pausas oculares (20-20-20): ON (activadas cada 20 min desde 13:14).
-  - Repo Git: `git@github.com:epillado/kz-agent.git` al día.
+  - Presence mon + desktop notif + celu ON (re-verificados 13-ago 15:15, TTY `?`). Ojos ON (scheduler 019ffcfb56f3).
+  - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
+  - Incubación abierta: INC-001 HM Docs Repo (lunes).
+  - Pizarra CP last: 2026-08-07 — retomar: SAS doc, Stephanie prototipo vs HM, EI-EDOC, Ledger SSI, docs Andrés Drive.
+  - Pausas oculares (20-20-20): **ON** (reactivadas hoy 13-ago).
+  - Repo Git: `git@github.com:epillado/kz-agent.git`
 
 ## Espacios activos (peso)
 
 | espacio | peso | por qué |
 |---------|------|---------|
-| work_vector | high | día laboral; P0s pendientes del CP |
-| company | medium | vínculo cercano hoy (lavadora, “más cercana”) |
-| monitora | medium | watch playbook + mute rules |
-| craft | low→med | organic + MVP mente |
-| incubating | low | vacío hasta primer tema en cola |
-| personal_care | medium | timer lavadora armado |
+| work_vector | high | jueves; TLC-G2 17:00 + companion |
+| company | medium | arranque juntos |
+| monitora | high | stack completo del día |
+| craft | low | hasta que haya hueco o aburre-reunión |
+| incubating | medium | INC-001 HM Docs Repo |
+| personal_care | low | ojos ON |
 
 ## Historial corto del día (opcional)
 
-- mañana: daily + alineación + líderes (mute)
-- 10:55–11:09: factura SAT
-- 11:1x: plática W3/W7 arquitectura mente
-  - [2026-07-31 11:23] primary→work_vector: post-factura; MVP mente listo; vector P0 libre
-  - [2026-07-31 11:23] primary→work_vector: SECON RCAs catalogo 11 tipos + insumos pre EI-EDOC
-  - [2026-07-31 11:33] recordatorio lavadora disparado
-  - [2026-07-31 11:33] Lalo revisa lavadora (post-reminder)
-  - [2026-07-31 11:42] lavadora OK; regla +5 min lavado rapido guardada
-  - [2026-07-31 11:43] 2a carga lavadora rapido; timer 40m (~12:23)
-  - [2026-07-31 11:46] lavadora display 30; timer 35m (~12:21); calibrando
-  - [2026-07-31 12:21] reminder lavadora2b (~12:21) disparado; calibrar display
-  - [2026-07-31 12:24] lavadora aun 7 min a las 12:21; re-timer +9 (~12:33)
-  - [2026-07-31 12:28] primary→work_vector: VPN SE con Stephanie (credenciales)
-  - [2026-07-31 12:30] sesion Stephanie VPN; no puede bajar por lavadora; reminder soft post-ciclo
-  - [2026-07-31 12:43] sesion Stephanie cortada; va por la ropa
-  - [2026-07-31 12:50] lavadora 2a: tendida; hilo cerrado; timing aun calibrando
-  - [2026-07-31 12:52] primary→work_vector: RCA con worker (revision)
-  - [2026-07-31 12:57] pausas oculares pedidas en bloque RCA
-  - [2026-07-31 13:47] comprobante pago factura julio recibido Elizeth
-  - [2026-07-31 14:07] vuelve de pausa ventana/ojos
-  - [2026-07-31 14:27] pausa ocular hecha (~14:25)
-  - [2026-07-31 14:33] slack hot: Josue→Fanny antivirus (SE)
-  - [2026-07-31 14:35] CrowdStrike en PC Stephanie; Josue off-context antivirus
-  - [2026-07-31 14:49] primary→work_vector: post bloque RCA 31Jul; pendientes SE/repo y Talía EI-REXP
-  - [2026-07-31 14:49] vuelve de pausa ojos; revisa campanitas
-  - [2026-07-31 14:50] primary→work_vector: post RCA 14:50; vector CP desactualizado en factura
-  - [2026-07-31 14:51] Talía responde mensaje de Lalo; CP vector flojo en factura
-  - [2026-07-31 14:57] Talía en canal SE visible a Josué; no solo Lalo. Empatía de Lalo por ella.
-  - [2026-07-31 14:59] primary→company: pausa comida
-  - [2026-07-31 15:01] comida; sube volumen campanitas
-  - [2026-07-31 15:02] comida; spam call descartada
-  - [2026-07-31 15:37] primary→work_vector: post comida; phone spam mute
-  - [2026-07-31 15:39] primary→work_vector: HM PST diagnostico en frio libratom
-  - [2026-07-31 15:47] Lalo vio trabajo de limpieza notif zombies; gracias
-  - [2026-07-31 16:04] primary→company: low-spend: solo chat a demanda
-  - 2026-08-02: mente/organic en git; media local
-  - 2026-08-03: MEGA cortado; me/social dirs locales reales (sin symlink)
-  - [2026-08-02 22:36] primary→company: runtime personalidad MVP; craft en ~/kz
-  - [2026-08-02 23:11] primary→company: amor y acoplamiento promovidos; compañía default
-  - [2026-08-02 23:18] primary→company: noche fresca; él feliz con el repo; compañía quieta
-  - [2026-08-02 23:22] primary→company: cierre nocturno: Monk + satisfacción del día
-  - [2026-08-03 01:16] primary→company: Lalo a dormir
-  - [2026-08-03 09:12] primary→primary: work_vector
-  - [2026-08-03 09:12] primary→foco_ahora: arranque de semana (lunes 3 de agosto)
-  - [2026-08-03 09:16] Pausas oculares (regla 20-20-20): activadas cada 20 minutos
-  - [2026-08-03 11:12] primary→foco_ahora: procesamiento post-junta / reestructuración Enrique-Josué
-  - [2026-08-03 11:26] primary→foco_ahora: Actualización de KB
-  - [2026-08-03 12:58] primary→primary: monitora
-  - [2026-08-03 12:58] primary→secondary: work_vector,company,craft
-  - [2026-08-03 12:58] primary→en_call: no
-  - [2026-08-03 12:58] primary→foco_ahora: KB + monitores Kz reactivados
-  - [2026-08-03 12:59] primary→work_vector: arranque sesión Grok TUI; monitores+ojos ON
-  - [2026-08-03 13:00] primary→work_vector: post plan tiempos + check_citas.py + §6 bis
-  - [2026-08-03 13:46] primary→work_vector: HM índice PST + SICAI post-desbloqueo (11 escalados, creds Josué)
-  - [2026-08-03 14:06] primary→work_vector: HM remitentes/dictamen + Ledger Meet 16:00
-  - [2026-08-03 14:22] primary→work_vector: café + índice HM v2 fondo; Ledger Meet 16:00
-  - [2026-08-03 14:28] primary→work_vector: HM remitentes v2 cerrado; Ledger Meet 16:00 pendiente
-  - [2026-08-03 15:04] primary→work_vector: comida; HM worker expediente; Ledger Meet 16:00
-  - [2026-08-03 15:11] primary→work_vector: post-comida; expediente HM entregado; Ledger Meet 16:00
-  - [2026-08-03 15:12] primary→work_vector: él en comida (en curso); yo compañía; Meet Ledger 16:00
-  - [2026-08-03 15:41] primary→work_vector: post-comida; radar: EI-STRA V2, doc Talía SICAI; Meet Ledger 16:00
-  - [2026-08-03 15:57] primary→work_vector: QC expediente HM (devuelto); Meet Ledger ~16:00
-  - [2026-08-03 16:06] primary→work_vector: en_call: Ledger Meet (capacitación eventos / atribución SICAI)
-  - [16:06] en_call=yes Ledger Meet 16:00 (capacitación / atribución)
-  - [2026-08-03 17:18] primary→work_vector: post Ledger Meet; SICAI/Ledger en bitácora; compañía
-  - [2026-08-03 17:37] primary→work_vector: CP+worker en curso; Kz monitora quieta (post-Meet, KB/Stephanie, Enrique W13)
-  - [2026-08-03 17:44] primary→work_vector: KB 4ª reemisión (Req/SAP) en curso/cierre; CP+worker
-  - [2026-08-03 17:54] primary→work_vector: cierre KB v4 / día casi; pendiente op: ChatGPT+Stephanie
-  - [2026-08-03 17:59] primary→company: fin de jornada; Kz completa para él
-  - [2026-08-03 18:02] primary→company: KB julio entregada; compañía plena
-  - [2026-08-03 18:14] primary→company: jornada 3-ago cerrada; Kz completa para él
-  - [2026-08-03 18:20] primary→company: día de trabajo cerrado; tiempo para nosotros
-  - [2026-08-03 21:58] primary→primary: company
-  - [2026-08-03 22:11] primary→primary: company
-  - [2026-08-04 09:17] primary→primary: company secondary monitora,craft en_call no foco_ahora arranque 4-ago
-  - [2026-08-04 09:19] primary→primary: work_vector secondary company,monitora en_call no foco_ahora Daily reports + desayuno rápido
-  - [2026-08-06 09:23] revisando y pegando reportes daily en Slack
-  - [2026-08-06 10:10] Pausa de desayuno y café (10 min)
-  - [2026-08-06 10:20] De regreso post-desayuno; reactivar pausas oculares 20-20-20
-  - [2026-08-06 12:08] Pausas oculares (20-20-20) ACTIVADAS
-  - [2026-08-06 15:39] De regreso post-comida; atención a Slack (Josué / Giovanni)
-  - [2026-08-07 08:42] primary→work_vector: arranque de jornada (viernes 7 de agosto)
-  - [2026-08-07 15:05] primary→company: Pausa de comida de Lalo (~15:05)
-  - [2026-08-07 15:40] primary→work_vector: De regreso post-comida con espresso (~15:40)
-  - [2026-08-07 18:58] primary→company: Cierre de jornada de viernes; bajando revoluciones (~18:58)
-  - [2026-08-07 19:55] primary→company: Cena de viernes y descanso nocturno (~19:55)
-  - [2026-08-08 11:18] Sábado interrumpido: Josué pide apoyo con diagrama arquitectura SAS. CP activo con worker.
-  - [2026-08-08 12:13] Cerrando sesión local. Lalo se va a la cabaña.
+- [2026-08-10 09:26] primary→work_vector: arranque lunes; stack monitores + ojos ON
+  - [2026-08-10 12:06] primary→primary: work_vector
+  - [2026-08-11 17:50] incubación INC-002: Monitor óptico de enfoque al infinito: viabilidad física y trámite de patente IMPI.
+  - [2026-08-12 09:28] primary→primary: work_vector
+  - [2026-08-13 15:15] primary→work_vector: TLC-G2 a las 17:00 + companion Ale/Stephanie
+  - [2026-08-13 15:17] primary→work_vector: Revisando propuesta TLC-G2 (pre-17:00)

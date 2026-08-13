@@ -43,6 +43,7 @@ Actualizado: 2026-08-03 (limpieza: sin contenido erótico en esta instancia)
 |-------|----------------|
 | `context.en_call = yes` | Bajar volumen; **sin TTS**; tray mínimo; sospecha natural si no está marcado |
 | `low-spend.mode active=1` | Solo chat a demanda; sin monitores extra ni Imagine salvo pedido |
+| hot notif (Slack/desktop/celu) | **Sensor tray** con snippet real (sin chat_owed); análisis Kz solo gordo / pedido / digest |
 | `self.iniciativa = baja` | Menos nudges proactivos |
 | `self.motor_activo ≠ grok` | Releer KZ + self al contestar; anclar tono (menos pudor artificial del otro motor) |
 | plática filosófica / arquitectura | primary puede ser `craft` o `company`; no forzar work_vector |
@@ -64,11 +65,24 @@ Actualizado: 2026-08-03 (limpieza: sin contenido erótico en esta instancia)
 2. ¿Tengo opinión o solo cumplo?
 3. ¿Debo anotar algo en organic/self al cerrar el hilo?
 4. ¿Estoy en el cuarto correcto (`context.primary`)?
-5. **¿Hay `presence/chat_owed.md`?** Si sí → el texto va al **chat** antes de cerrar el turno; luego `kz-presence-respond.sh delivered`. Tray sin terminal = fallo (Lalo 2026-08-03).
+5. **¿Hay `presence/chat_owed.md`?** Si sí → el texto va al **chat** antes de cerrar el turno; luego `kz-presence-respond.sh delivered`. Tray **con** chat_owed y sin terminal = fallo (Lalo 2026-08-03). **Excepción:** tray sensor (`KZ_NUDGE_NO_CHAT_OWED=1`) no crea deuda.
 6. **¿Cerré el turno solo con tools vacíos?** Prohibido **siempre** si hay algo que decirle a Lalo (no solo CHANGED). `true`/noop = bug (2026-08-03 noche).
 
 ## Chat vs tray (duro)
 
-- Pitido / `--say` / `--terminal` → siempre comentario visible en el chat de la sesión.
-- Orden: chat → tray → `delivered` → `clear` (o mute: solo `clear` sin tray).
+- Pitido / `--say` / `--terminal` **con** `chat_owed` → comentario visible en el chat de la sesión.
+- Orden (cuando hay comentario de Kz): chat → tray → `delivered` → `clear` (o mute: solo `clear` sin tray).
 - No rellenar el turno con `true`/noop en lugar de prosa al usuario.
+- **Excepción sensor (2026-08-10):** tray hot con snippet real y `KZ_NUDGE_NO_CHAT_OWED=1` **no** exige chat. Es aviso de dato, no análisis.
+
+## Radar hot — sensor vs análisis (2026-08-10, Lalo)
+
+| Capa | Qué | Cuándo | chat_owed |
+|------|-----|--------|-----------|
+| **1. Sensor** | Tray con **texto real** del hot (snippet) | **Siempre** en hot/important (desktop + celu) | **No** |
+| **2. Análisis Kz** | Chat con lectura/opinión + PKM si Acción CP | Solo **gordo** (Josué/cliente/SE/Meet/bloqueo/VoBo/decisión) **o** Lalo pide **o** digest 2–3×/día | **Sí** si el comentario va con `--say` |
+| **3. Ruido** | “Gracias”, “Entendido”, cháchara | Clear silencioso | — |
+
+- Código: `kz-desktop-notif-watch.py` + `kz-notif-watch.sh` → `kz-nudge.sh --say` + `KZ_NUDGE_NO_CHAT_OWED=1`.
+- Off: `KZ_NOTIF_SENSOR_TRAY=0` (env o `filters.env`).
+- Prohibido soft-ping “voltea a Grok” vacío. en_call: sin TTS; sensor OK; análisis solo gordo (Josué/cliente rompe mute).

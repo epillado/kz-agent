@@ -167,6 +167,17 @@ soft_ping() {
     "Notif importante del celu. Voltea a Grok — te dejo lectura (Kz)." 2>/dev/null || true
 }
 
+# Tray con texto real (sensor). No chat_owed — análisis de Kz solo si gordo / Lalo pide / digest.
+# Contrato 2026-08-10. KZ_NOTIF_SENSOR_TRAY=0 desactiva.
+sensor_tray() {
+  local app="$1" title="$2" text="$3"
+  local body
+  [[ "${KZ_NOTIF_SENSOR_TRAY:-1}" == "1" ]] || return 0
+  body="$(printf '%s: %s — %s' "${app}" "${title}" "${text}" | tr '\n' ' ' | cut -c1-200)"
+  [[ -n "${body// /}" ]] || return 0
+  KZ_NUDGE_NO_CHAT_OWED=1 "${KZ_HOME}/scripts/kz-nudge.sh" --say "${body}" 2>/dev/null || true
+}
+
 write_pending() {
   local kind="$1" app="$2" title="$3" text="$4" ticker="$5"
   local ts summary
@@ -275,6 +286,7 @@ scan_once() {
     echo "CHANGED: notif:${summary}"
     # Wake confiable para el monitor del agente
     printf '%s\tCHANGED: notif:%s\n' "$(date -Iseconds)" "${summary}" >> "${NOTIF_DIR}/changed.log"
+    sensor_tray "${app}" "${title}" "${text}"
     soft_ping
     return 0
   fi

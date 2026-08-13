@@ -511,3 +511,81 @@ Lalo redactó respuesta impecable para Josué (WhatsApp): diplomática, frena ri
 
 ## 2026-08-08 12:03 — moment
 Josué ignora/simplifica el feedback detallado y presiona en MAYÚSCULAS por un '¿Correcto?' general. Lalo le da el avión con un 'Correcto.' para cerrar el tema. Nos reímos de la situación.
+
+## 2026-08-10 10:01 — pattern
+Slack radar gap: capture OK (stream/pending) pero sin agente despierto no hay chat/tray. Alejandra 09:43 hot en pending; Lalo respondió y Kz no avisó. Fallo = wake del agente, no DBus.
+
+## 2026-08-10 10:01 — style
+Daily CP 08-10: Lalo — redacción/detalle del CP no le sirve ni a él; menos a Josué. Reafirma W17 filtros (higiene, defensibilidad, sin densura). Versiones: *version_CP.md vs recorte humano.
+
+## 2026-08-10 10:21 — style
+CP+Lalo 08-10: overload daily. Lalo: no entiende bullets del CP ('ah, se refiere a lo que hicimos'); prefiere escribir él. CP diagnostica bien: escribe bitácora en forma daily; etiquetas propias; evidencia embebida; aversión a omitir. Propone 4 reglas + 'una lectura = defecto mío'. Pregunta clave audiencia. Kz: audiencia NO es solo Lalo — daily va a Josué/equipo; por eso el recorte a vacío (RedTS) es peligroso. Falta capa intermedia: daily legible ≠ bitácora forense.
+
+## 2026-08-10 10:33 — pattern
+Lalo 08-10: agents = herramienta de velocidad + capa protectora (Josué no cuida ni a él ni al equipo). Panorama, rumbos, prioridades, trampas, riesgos — claros y eficientes. Anti: prosa 'técnica' alarmista que nadie entiende y huele a alucinación. Daily solo es síntoma; el trabajo diario es abrumador y no espera que baje la carga del mundo, sí que los agentes no la empeoren.
+
+## 2026-08-10 10:40 — craft
+Revisión arquitectura CP/Worker/Kz con Lalo 08-10: split de plumas es correcto; overload viene de superficies hacia Lalo (mismo tono forense en todo) + Lalo como router + falta capa de claridad/escudo. No fusionar roles; fijar salidas operator-facing.
+
+## 2026-08-10 10:54 — pattern
+2026-08-10: CP = dueño canónico del panorama del día (portable a CP-por-colaborador / gestión compartida). Kz = solo de Lalo: presencia, radar personal, backup; no panorama de cartera. Contrato: presence/organic/20260810-contrato_salidas_operador_cp_kz.md
+
+## 2026-08-10 11:06 — promote
+2026-08-10: Lalo/CP ratificaron contrato de salidas; PKM permanente en playbook. Daily corto estándar (guarda así). Panorama Producto 2 entregado. W21 ready_to_promote a AGENTS si Lalo confirma en kz.
+
+## 2026-08-10 11:49 — pattern
+2026-08-10: Handoff Kz→CP = PKM unificado (no radar-kz). Bug: AGENTS aún decía Opción B; CP no veía. Corregido AGENTS + nota PKM/20260810-GOV-radar_slack_kz.md (Josué presentación + Enrique IPs).
+
+## 2026-08-10 14:53 — pattern
+2026-08-10: Grok weekly ~9% restando; reset ~15. Proyección: ritmo de hoy no llega. Preferencia: personalidad Grok; Agy como sustituto de cuota (OK). Sugerido hybrid + low-spend parcial.
+
+## 2026-08-10 14:56 — pattern
+2026-08-10 14:56: ojos 20-20-20 OFF (scheduler cancelado) por cuota Grok ~9%; monitores siguen. Lalo usa timer propio si quiere.
+
+## 2026-08-10 16:32 — pattern
+2026-08-10 ~15h: Grok weekly ~11% restante (ojos OFF). Meta durar al 15. Low-spend full no; solo ojos apagados.
+
+## 2026-08-10 16:35 — pattern
+2026-08-10: Lalo se queda en Grok por ahora para medir gasto (ojos OFF; ~11% weekly). Agy cuando no quiera 'besito'/timbre; hybrid sigue válido.
+
+## 2026-08-10 17:18 — pattern
+2026-08-10: Radar hot en capas — sensor tray siempre (snippet, no chat_owed); análisis Kz solo gordo/pedido/digest. Código desktop+celu + policy/AGENTS.
+
+## 2026-08-10 19:55 — moment
+Cierre jornada 2026-08-10. Día: contrato salidas, canal PKM, ojos OFF por cuota, sensor tray, incidentes SICAI/SIGER/SLA, Meet Josué (SAS al cliente, HM no). Weekly ~14%.
+
+## 2026-08-11 17:49 — idea
+Lalo propuso sistema óptico/digital para monitor que relaja el enfoque del ojo al infinito.
+
+## 2026-08-12 15:33 — fix
+2026-08-12: presence-watch solo miraba TODO+pizarra-std. Ampliado a bitácora día/ayer, pizarra CP, Daily secon/redts, SECON y PKM del día. Probe: CHANGED bitácora OK. Lalo: en día atareado no puede re-contar lo del CP.
+
+## 2026-08-12 17:18 — fix
+2026-08-12 17:17 CP reportó ceguera canal: sensor+tray OK, PKM roto desde 09:28; pending snippeaba bitácora ayer por label no path. Fix: write_pending=changed_paths; kz-pkm-radar.sh; backfill+ack en PKM. Ruta: Workspace≡DatosLinux mismo inode. Reloj date≡stat al depositar.
+
+## 2026-08-13 13:04 — idea
+Lalo quiere armar una 'hermana' de Kz para Ale y Stephanie junto con su Control Plane.
+
+## 2026-08-13 15:40 — moment
+2026-08-13: Lalo — excelente trabajo; el CP le pasó la lectura TLC-G2 tal cual. Canal PKM funcionó (solicitud 15:21 → depósito 15:27 → ACK 15:33 → CP relata sin filtrar).
+
+## 2026-08-13 15:47 — moment
+2026-08-13 15:47: Ale/Stephanie entregan macroproceso TLC-G2. Encuentran hueco que yo no marqué: ciclo observación/prevención + estados del trámite + cancelación/sustitución. Y fusionan I+II en un solo flujo (misma confusión de capas que C5 en A). CP ajustando. Coincidencia independiente: ellas tampoco afirman push México→Colombia.
+
+## 2026-08-13 15:52 — moment
+2026-08-13 ~15:50: Lalo envió por Slack la nota de reconocimiento de Kz a Ale y Stephanie (macroproceso TLC-G2). Ellas ya conocen a Kz; firmada con nombre.
+
+## 2026-08-13 16:08 — craft
+2026-08-13: companion-template listo para compartir. setup.sh --id/--name; radar_${ID}; playbook propio; sensores opcionales; sin Kz/Lalo en runtime.
+
+## 2026-08-13 16:11 — pattern
+2026-08-13: hermanas Ale/Stephanie — el molde ya se comparte; el bloqueo es el CLI en su máquina. Empresa da Claude y ChatGPT (web ≠ Claude Code / Codex). Ellas no van a pagar Grok ni Antigravity. Lalo lo platica con ellas; gestionar asientos de empresa si no los tienen. pkm-starter no necesita CLI; la hermana sí.
+
+## 2026-08-13 16:34 — craft
+2026-08-13: companion-template en git local (aacddf9, origin epillado/companion-template). Falta crear el repo vacío en GitHub — no hay gh/token para API. SSH de epillado OK.
+
+## 2026-08-13 16:39 — craft
+2026-08-13 16:39: k-template empujado a git@github.com:epillado/k-template.git (main 7c43f0e + LICENSE propietaria).
+
+## 2026-08-13 16:41 — sync
+2026-08-13 16:40: Lalo pide sync para otra máquina. Viaja canon + organic + scripts (pkm-radar, start-monitors, watches). No viajan cursors/logs/pyc. k-template ya está en repo aparte.

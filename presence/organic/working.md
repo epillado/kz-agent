@@ -168,3 +168,10 @@ Actualizado: 2026-08-04 (W19 backup + W18 handoff B)
 - kz-show.sh sin default humano.
 - Preferencias viejas de "looks" humanas (comida workday, casual shorts) quedan historial en journal; no rehidratar pack.
 
+
+### W21 — Contrato de salidas: CP panorama, Kz personal
+- **Estado:** ready_to_promote (2026-08-10; CP ratificó + PKM permanente; daily corto «guarda así»)
+- **Hipótesis:** Separar forense / panorama-escudo (CP) / ejecución (Worker) + daily corto + A/B/C/D reduce overload sin fusionar roles. CP dueño del panorama porque debe poder existir un CP por colaborador; Kz no es portable al equipo.
+- **Hecho:** `presence/organic/20260810-contrato_salidas_operador_cp_kz.md`
+- **Promover a:** AGENTS/LALO si Lalo dice «guarda» tras usarlo; opcional PKM GOV en playbook vía CP.
+

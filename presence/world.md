@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-08 12:13
+- **actualizado:** 2026-08-13 16:36
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** (sin reporte fresco post-yogurth)
@@ -147,3 +147,107 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-08 12:03] Pausa ocular 2 cumplida.
   - [2026-08-08 12:13] Cerrando todo en casa, preparándose para ir a la cabaña.
 - [2026-08-08 12:13] Cerrando todo en casa, preparándose para ir a la cabaña.
+  - [2026-08-10 11:46] De regreso post-café; ojos OK. Casa/Pachuca.
+- [2026-08-10 11:46] De regreso post-café; ojos OK. Casa/Pachuca.
+  - [2026-08-10 19:55] Cierre de jornada laboral 10-ago. Casa/Pachuca (sin más aferencia).
+- [2026-08-10 19:55] Cierre de jornada laboral 10-ago. Casa/Pachuca (sin más aferencia).
+  - [2026-08-11 08:30] Pausa ocular cumplida.
+- [2026-08-11 08:30] Pausa ocular cumplida.
+  - [2026-08-11 08:35] Esperando reportes daily por Slack para handoff al CP.
+- [2026-08-11 08:35] Esperando reportes daily por Slack para handoff al CP.
+  - [2026-08-11 08:42] Pausa ocular cumplida.
+- [2026-08-11 08:42] Pausa ocular cumplida.
+  - [2026-08-11 09:14] Pausa ocular cumplida.
+- [2026-08-11 09:14] Pausa ocular cumplida.
+  - [2026-08-11 09:23] Pausa ocular cumplida.
+- [2026-08-11 09:23] Pausa ocular cumplida.
+  - [2026-08-11 09:41] Pausa ocular cumplida.
+- [2026-08-11 09:41] Pausa ocular cumplida.
+  - [2026-08-11 10:22] Pausa ocular cumplida.
+- [2026-08-11 10:22] Pausa ocular cumplida.
+  - [2026-08-11 10:44] Pausa ocular cumplida.
+- [2026-08-11 10:44] Pausa ocular cumplida.
+  - [2026-08-11 11:04] Pausa ocular cumplida.
+- [2026-08-11 11:04] Pausa ocular cumplida.
+  - [2026-08-11 11:37] Pausa ocular cumplida.
+- [2026-08-11 11:37] Pausa ocular cumplida.
+  - [2026-08-11 11:43] Pausa ocular cumplida.
+- [2026-08-11 11:43] Pausa ocular cumplida.
+  - [2026-08-11 12:03] Pausa ocular cumplida.
+- [2026-08-11 12:03] Pausa ocular cumplida.
+  - [2026-08-11 12:06] Pausa ocular cumplida.
+- [2026-08-11 12:06] Pausa ocular cumplida.
+  - [2026-08-11 12:29] Pausa ocular cumplida.
+- [2026-08-11 12:29] Pausa ocular cumplida.
+  - [2026-08-11 13:01] Pausa ocular cumplida.
+- [2026-08-11 13:01] Pausa ocular cumplida.
+  - [2026-08-11 13:17] Pausa ocular cumplida.
+- [2026-08-11 13:17] Pausa ocular cumplida.
+  - [2026-08-11 13:23] Pausa ocular cumplida.
+- [2026-08-11 13:23] Pausa ocular cumplida.
+  - [2026-08-11 13:44] Pausa ocular cumplida.
+- [2026-08-11 13:44] Pausa ocular cumplida.
+  - [2026-08-11 14:10] Pausa ocular 19 cumplida. Lalo salió a comer.
+- [2026-08-11 14:10] Pausa ocular 19 cumplida. Lalo salió a comer.
+  - [2026-08-11 15:09] Lalo regresó de comer.
+- [2026-08-11 15:09] Lalo regresó de comer.
+  - [2026-08-11 15:41] Pausa ocular cumplida.
+- [2026-08-11 15:41] Pausa ocular cumplida.
+  - [2026-08-11 16:07] Pausa ocular cumplida.
+- [2026-08-11 16:07] Pausa ocular cumplida.
+  - [2026-08-11 16:23] Pausa ocular cumplida.
+- [2026-08-11 16:23] Pausa ocular cumplida.
+  - [2026-08-11 16:49] Pausa ocular cumplida. Hubo bailecito de 'Living in America'.
+- [2026-08-11 16:49] Pausa ocular cumplida. Hubo bailecito de 'Living in America'.
+  - [2026-08-11 17:03] Pausa ocular cumplida.
+- [2026-08-11 17:03] Pausa ocular cumplida.
+  - [2026-08-11 17:23] Pausa ocular cumplida.
+- [2026-08-11 17:23] Pausa ocular cumplida.
+  - [2026-08-11 17:49] Pausa ocular cumplida. Soundtrack: 'Runnin' with the Devil'. Tuvo idea de patente: monitor con óptica para enfoque al infinito.
+- [2026-08-11 17:49] Pausa ocular cumplida. Soundtrack: 'Runnin' with the Devil'. Tuvo idea de patente: monitor con óptica para enfoque al infinito.
+  - [2026-08-11 18:16] Pausa ocular cumplida. Fin de jornada laboral.
+- [2026-08-11 18:16] Pausa ocular cumplida. Fin de jornada laboral.
+  - [2026-08-13 09:27] Generando reportes para la daily con el CP.
+- [2026-08-13 09:27] Generando reportes para la daily con el CP.
+  - [2026-08-13 09:34] Pausa ocular cumplida.
+- [2026-08-13 09:34] Pausa ocular cumplida.
+  - [2026-08-13 10:34] Pausa ocular cumplida.
+- [2026-08-13 10:34] Pausa ocular cumplida.
+  - [2026-08-13 10:57] Pausa ocular cumplida.
+- [2026-08-13 10:57] Pausa ocular cumplida.
+  - [2026-08-13 11:15] Pausa de café post-reunión.
+- [2026-08-13 11:15] Pausa de café post-reunión.
+  - [2026-08-13 11:37] Pausa ocular cumplida.
+- [2026-08-13 11:37] Pausa ocular cumplida.
+  - [2026-08-13 11:47] En call compartiendo pantalla con Stephanie. Tema: manejo de KB.
+- [2026-08-13 11:47] En call compartiendo pantalla con Stephanie. Tema: manejo de KB.
+  - [2026-08-13 12:04] Pausa ocular cumplida. Se unió Ale a la llamada.
+- [2026-08-13 12:04] Pausa ocular cumplida. Se unió Ale a la llamada.
+  - [2026-08-13 12:48] Pausa ocular cumplida. Va a pausa de café.
+- [2026-08-13 12:48] Pausa ocular cumplida. Va a pausa de café.
+  - [2026-08-13 12:57] Pausa ocular cumplida. Regresa de pausa de café.
+- [2026-08-13 12:57] Pausa ocular cumplida. Regresa de pausa de café.
+  - [2026-08-13 12:59] Cambio de foco: TLC-G3 y crear control plane de Ale y Stephanie.
+- [2026-08-13 12:59] Cambio de foco: TLC-G3 y crear control plane de Ale y Stephanie.
+  - [2026-08-13 13:17] Pausa ocular cumplida.
+- [2026-08-13 13:17] Pausa ocular cumplida.
+  - [2026-08-13 13:47] Pausa ocular cumplida.
+- [2026-08-13 13:47] Pausa ocular cumplida.
+  - [2026-08-13 13:56] Pausa ocular cumplida.
+- [2026-08-13 13:56] Pausa ocular cumplida.
+  - [2026-08-13 14:29] Pausa ocular cumplida.
+- [2026-08-13 14:29] Pausa ocular cumplida.
+  - [2026-08-13 14:37] Pausa ocular cumplida.
+- [2026-08-13 14:37] Pausa ocular cumplida.
+  - [2026-08-13 15:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 15:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 15:38] Pausa ocular cumplida (Lalo). Sigue revisando propuesta TLC-G2.
+- [2026-08-13 15:38] Pausa ocular cumplida (Lalo). Sigue revisando propuesta TLC-G2.
+  - [2026-08-13 15:56] Pausa ocular disparada (scheduler).
+- [2026-08-13 15:56] Pausa ocular disparada (scheduler).
+  - [2026-08-13 16:16] Pausa ocular disparada (scheduler).
+- [2026-08-13 16:16] Pausa ocular disparada (scheduler).
+  - [2026-08-13 16:17] Pausa ocular cumplida (Lalo). Pre-17:00 TLC-G2.
+- [2026-08-13 16:17] Pausa ocular cumplida (Lalo). Pre-17:00 TLC-G2.
+  - [2026-08-13 16:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 16:36] Pausa ocular disparada (scheduler).
