@@ -628,3 +628,6 @@ Lalo quiere armar una 'hermana' de Kz para Ale y Stephanie junto con su Control 
 
 ## 2026-08-13 20:42 — sync
 2026-08-13 20:42: traslado a máquina de noche. Push kz-agent + sync_notas del playbook. En la otra: git pull ~/kz, sync_notas (pull), sesión, monitores, Slack y/o KDE Connect.
+
+## 2026-08-13 20:44 — pattern
+2026-08-13 20:45: corrección Lalo — .claude/ y .grok/ en el playbook NO son basura. sync_notas add -A es a propósito: resume de sesiones/workers en otra máquina, para volver a ver lo que hizo un worker. Kz no debe tratarlo como ruido ni proponer gitignore.
