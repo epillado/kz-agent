@@ -7,6 +7,24 @@ echo "Deteniendo monitores previos..."
 echo "Levantando stack..."
 mkdir -p ~/kz/presence
 touch ~/kz/presence/stream.log
+
+# AntiX/IceWM (y cualquier caja sin Plasma): el sensor de Slack vive del bus FDO.
+# Si nadie reclama org.freedesktop.Notifications, Slack no emite y notify-send falla.
+if ! dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply \
+     /org/freedesktop/DBus org.freedesktop.DBus.NameHasOwner \
+     string:org.freedesktop.Notifications 2>/dev/null | grep -q 'boolean true'; then
+  if [ -x /usr/libexec/notify-osd ]; then
+    echo "Arrancando notify-osd (servidor de notificaciones)..."
+    /usr/libexec/notify-osd >/dev/null 2>&1 &
+    sleep 0.4
+  elif command -v dunst >/dev/null 2>&1; then
+    echo "Arrancando dunst (servidor de notificaciones)..."
+    dunst >/dev/null 2>&1 &
+    sleep 0.4
+  else
+    echo "AVISO: no hay servidor FDO Notifications (notify-osd/dunst). Slack quedará sordo."
+  fi
+fi
 # Redirigir todos los monitores al log unificado para que el agente lo atrape con tail -f
 KZ_PRESENCE_NUDGE=0 KZ_PRESENCE_SOFT_PING=1 nohup ~/kz/scripts/kz-presence-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-desktop-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &

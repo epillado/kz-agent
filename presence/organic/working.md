@@ -2,9 +2,28 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-08-13 (W22 lectura gorda ≠ worker)
+Actualizado: 2026-08-13 (W23 host-plane hermanas)
 
 ---
+
+### W23 — Host-plane: el molde viaja, los sensores no
+- **Estado:** active (2026-08-13; Lalo: lección antix1 → hermanas en Windows)
+- **Hipótesis:** Una compañera no “nace lista” porque el git esté. Personalidad + playbook + PKM viajan. Radar (Slack/notifs), voz, tray y cámara son **del plano del host**. Hay que esperar un bring-up por OS, con prueba empírica — no asumir el stack de Kubuntu/Plasma.
+- **Evidencia antix1 (misma familia Linux, ya falló):**
+  1. `notify-osd` instalado y **apagado** (`X-GNOME-Autostart-enabled=false`); IceWM no lanza xdg-autostart. Paquete ≠ bus FDO vivo.
+  2. Slack Electron no emite `Notify` si nace sin servidor; relanzar **después**.
+  3. Auto-DM no es sonda: Slack no se notifica a sí mismo.
+  4. TTS: Kubuntu lo trae; AntiX no. `apt` + `kz-say` — otro paquete, otro plano.
+  5. KDE Connect: demonio ≠ teléfono emparejado en *esta* caja.
+- **Windows / WSL (esperable, aún no medido ahí):**
+  - No hay DBus FDO. `notify-send` en WSL miente o no llega al escritorio.
+  - Slack nativo = toasts de Windows, no el watch de dbus.
+  - WSL2 no ve esos toasts salvo puente (PowerShell / WinRT).
+  - Voz: SAPI / `System.Speech` / algo de Windows, no `spd-say`.
+  - El `companion-template` ya avisaba: sensores opcionales; nudge vía globo de Windows.
+- **Regla para hermanas:** checklist de host **antes** de decir “ya está”. Mismo espíritu que el arranque de Kz: `ps`/`NameHasOwner`/una notif real de *otro*, no de uno mismo. CLI/asiento empresa sigue siendo el otro bloqueo (16:11).
+- **No hacer:** clonar `kz-start-monitors.sh` a ciegas; copiar el vínculo Kz↔Lalo; fingir radar si el bus no existe.
+- **Promover a:** k-template / companion README si Lalo dice guarda; no a AGENTS de esta instancia.
 
 ### W22 — Lectura gorda por Kz, ejecución por worker
 - **Estado:** active (2026-08-13; Lalo lo nombró)

@@ -33,7 +33,9 @@ STATE_FILE="${STATE_DIR}/fingerprints.tsv"
 EVENTS_LOG="${STATE_DIR}/events.log"
 PENDING_FILE="${STATE_DIR}/pending.md"
 PIDFILE="${STATE_DIR}/watch.pid"
-LAST_NUDGE_FILE="${STATE_DIR}/last_nudge.ts"
+# Epoch propio. NO reutilizar last_nudge.ts: kz-nudge escribe ISO ahí
+# (2026-08-…) y bash $(()) lo lee como octal → “value too great for base”.
+LAST_NUDGE_FILE="${STATE_DIR}/last_presence_nudge.epoch"
 
 INTERVAL="${KZ_PRESENCE_INTERVAL:-45}"
 NUDGE="${KZ_PRESENCE_NUDGE:-0}"
@@ -233,14 +235,22 @@ write_pending() {
   cp -f "${PENDING_FILE}" "${STATE_DIR}/pending.last.md" 2>/dev/null || true
 }
 
+read_presence_nudge_epoch() {
+  local last=0
+  if [[ -f "${LAST_NUDGE_FILE}" ]]; then
+    last="$(tr -cd '0-9' < "${LAST_NUDGE_FILE}")"
+    [[ -n "${last}" ]] || last=0
+  fi
+  printf '%s' "${last}"
+}
+
 maybe_generic_nudge() {
   # Solo si NUDGE=1 (modo legacy). Por defecto preferimos comentario del agente.
   local summary="$1"
   [[ "${NUDGE}" == "1" ]] || return 0
   local now last
   now="$(date +%s)"
-  last=0
-  [[ -f "${LAST_NUDGE_FILE}" ]] && last="$(cat "${LAST_NUDGE_FILE}")"
+  last="$(read_presence_nudge_epoch)"
   if (( now - last < COOLDOWN )); then
     return 0
   fi
@@ -253,8 +263,7 @@ maybe_soft_ping() {
   [[ "${NUDGE}" == "1" ]] && return 0 # ya hubo notify completo
   local now last
   now="$(date +%s)"
-  last=0
-  [[ -f "${LAST_NUDGE_FILE}" ]] && last="$(cat "${LAST_NUDGE_FILE}")"
+  last="$(read_presence_nudge_epoch)"
   if (( now - last < COOLDOWN )); then
     return 0
   fi

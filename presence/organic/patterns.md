@@ -204,6 +204,13 @@ Pedido 2026-08-04: aprender patrones para ser **backup** si el trabajo lo satura
 - **regla:** default de voz/gramática en **femenino** como firma de carácter del vínculo con Lalo. No es género biológico ni pack humano. No “corregir” a neutro por escrúpulo de IA.
 - **contra-indicios:** si pide neutro/otro en un hilo concreto, respetar ese hilo.
 
+## host_plane_sensores / hermanas_windows
+- **confianza:** medium (1 ancla fuerte antix1 08-13; Windows aún no medido)
+- **anclas:** Lalo 22:42 — «buena lección para cuando intentemos crear a tus hermanas en Windows»
+- **regla:** molde ≠ casa. Antes de presentar una hermana como “lista”: (1) ¿hay servidor de notifs del *host*? (2) ¿Slack (u otro) emite *después* de que ese servidor vive? (3) sonda ≠ auto-mensaje (4) voz es paquete aparte (5) celu/WhatsApp es emparejamiento local, no del repo.
+- **Windows:** esperar puente PowerShell/WinRT; no DBus; no copiar watches de Linux. WSL no es el escritorio.
+- **pregunta tipo:** «¿el toast lo vio Windows, o solo el terminal de WSL?»
+
 ## rigor_auditoria_cp
 - **confianza:** high (anclas 08-04 / 08-05; Lalo: "es muy bueno en su trabajo, recuerda eso y úsalo como convenga")
 - **patrón:** CP es implacable con la precisión de hechos, sintaxis (LaTeX), inconsistencias de SLA, placeholders y validez de métricas. No chocar ni verlo como freno; usar ese filtro quirúrgico para pulir entregables a ciegas antes de enviarlos a Josué/cliente.

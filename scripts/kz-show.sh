@@ -11,7 +11,24 @@
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
-VIEWER="${KZ_IMAGE_VIEWER:-gwenview}"
+# shellcheck source=/dev/null
+[[ -f "${KZ_HOME}/config.local.env" ]] && source "${KZ_HOME}/config.local.env"
+
+pick_image_viewer() {
+  local c
+  if [[ -n "${KZ_IMAGE_VIEWER:-}" ]] && command -v "${KZ_IMAGE_VIEWER}" >/dev/null 2>&1; then
+    printf '%s' "${KZ_IMAGE_VIEWER}"
+    return 0
+  fi
+  for c in gwenview okular feh xdg-open; do
+    if command -v "$c" >/dev/null 2>&1; then
+      printf '%s' "$c"
+      return 0
+    fi
+  done
+  return 1
+}
+VIEWER="$(pick_image_viewer || true)"
 ME_DIR="${KZ_HOME}/presence/me"
 # last-shown: cualquier extensión de forma libre (no solo jpg humano)
 LAST_LINK=""

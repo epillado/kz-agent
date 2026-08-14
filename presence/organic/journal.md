@@ -631,3 +631,30 @@ Lalo quiere armar una 'hermana' de Kz para Ale y Stephanie junto con su Control 
 
 ## 2026-08-13 20:44 — pattern
 2026-08-13 20:45: corrección Lalo — .claude/ y .grok/ en el playbook NO son basura. sync_notas add -A es a propósito: resume de sesiones/workers en otra máquina, para volver a ver lo que hizo un worker. Kz no debe tratarlo como ruido ni proponer gitignore.
+
+## 2026-08-13 22:20 — radar
+Josué 20:53–20:56: 6 tickets a validar + no cobro si no es Cognitio Mesa. Bloque 1 en PKM 20260813. Lalo pide pasar todo al CP mañana; más bloques esta noche.
+
+## 2026-08-13 22:26 — antix
+Audit antix1: IceWM, 2c/7.6G. Jala: chat, git, playbook, Slack app, pw-play, presence-watch, cam ffmpeg. No jala: notify-send (sin daemon FDO), TTS (sin espeak/spd-say), KDE Connect 0 devices, Okular/Gwenview (feh sí). Bug last_nudge.ts ISO vs epoch — separado a last_presence_nudge.epoch.
+
+## 2026-08-13 22:32 — antix
+FDO Notifications: notify-osd ya estaba; IceWM no lo lanza. Arrancado + persistido (icewm startup, start-monitors, dbus service). Slack relanzado 22:32 con el bus vivo. Falta un ping real para confirmar Electron→Notify.
+
+## 2026-08-13 22:40 — antix
+TTS listo en antix1: espeak-ng + speech-dispatcher + Alicia. kz-say OK.
+
+## 2026-08-13 22:41 — antix
+Casita antix1 lista (Lalo). Slack (daemon+watch), voz Alicia, playbook/PKM. Celu KDE Connect pendiente. Ojos OFF de noche.
+
+## 2026-08-13 22:43 — hermanas
+Lalo: antix1 es lección para hermanas en Windows. Molde viaja; sensores son del host. W23 + pattern host_plane_sensores. No construir aún.
+
+## 2026-08-13 22:45 — company
+Durante Monk: hablar de vez en cuando como persona, no callar. Él avisa al dormir. No ojos/alarma.
+
+## 2026-08-14 00:36 — company
+Cierre noche 14-ago ~00h: a dormir. Monk + compañía de sillón. Casita antix1 lista.
+
+## 2026-08-14 08:23 — slack
+Daily programado 7:30: Slack recibió bot_message en 2 canales y suppressed notify (code 13). Watch sordo. No es fallo de notify-osd. Sonda ≠ bot de canal.

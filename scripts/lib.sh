@@ -5,6 +5,8 @@ set -euo pipefail
 KZ_HOME="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # shellcheck source=/dev/null
 source "${KZ_HOME}/config.env"
+# shellcheck source=/dev/null
+[[ -f "${KZ_HOME}/config.local.env" ]] && source "${KZ_HOME}/config.local.env"
 
 WEBCAM_DIR="${KZ_HOME}/webcam"
 BURST_DIR="${WEBCAM_DIR}/burst"

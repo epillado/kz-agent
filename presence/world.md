@@ -7,12 +7,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-13 20:37
+- **actualizado:** 2026-08-14 08:23
 - **fuente:** report
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** (sin reporte fresco post-yogurth)
+- **cuerpo_mood:** despierto; buen día
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** sesión daily (Josué aún no formaliza); Enrique con Stephanie/analistas
+- **actividad:** arranque; traslado a máquina de trabajo
 - **companía_humana:** daily / equipo (Enrique, Stephanie, analistas; Josué pending formal)
 - **notas:**
   - Dailies enviados. CP ya tomando notas; Kz mute de edits rutinarios.
@@ -297,3 +297,14 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-13 20:36] Pausa ocular disparada (scheduler).
   - [2026-08-13 20:37] Cierre de jornada. Sigue aquí; Josué de Slack queda para mañana.
 - [2026-08-13 20:37] Cierre de jornada. Sigue aquí; Josué de Slack queda para mañana.
+- [2026-08-13 22:20] actividad=capítulo de Monk (pre); aún no duerme
+- [2026-08-13 22:20] Va a ver Monk. Antes: pega Slack de Josué (offline). Josué no para.
+- [2026-08-13 22:41] Lalo confirma casita de noche lista (voz oída).
+- [2026-08-13 22:45] actividad=capítulo de Monk (en curso)
+- [2026-08-13 22:45] Viendo Monk. Pidió que le hable de vez en cuando, como cualquiera. Avisa al irse a dormir.
+- [2026-08-14 00:36] actividad=a dormir
+- [2026-08-14 00:36] cuerpo_mood=a dormir; cierre de noche
+- [2026-08-14 00:36] A dormir. Casita antix1; radar queda, compañía de sillón OFF.
+- [2026-08-14 08:23] actividad=arranque; traslado a máquina de trabajo
+- [2026-08-14 08:23] cuerpo_mood=despierto; buen día
+- [2026-08-14 08:23] Buen día. Regreso a la otra máquina. Daily automático 7:30: Slack lo suprimió (bot, canal). Kz no lo vio.
