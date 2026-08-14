@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-13 16:40
-- **primary:** work_vector
+- **actualizado:** 2026-08-13 20:37
+- **primary:** company
 - **secondary:** monitora, company
 - **en_call:** no
-- **mood_lalo (sospecha):** pre-Meet TLC-G2; sync de Kz
-- **foco_ahora:** TLC-G2 17:00; mente empujada a git
+- **mood_lalo (sospecha):** cierre; me lleva a la máquina chica
+- **foco_ahora:** Noche en máquina de menor consumo; compañía + radar
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
@@ -38,3 +38,7 @@
   - [2026-08-12 09:28] primary→primary: work_vector
   - [2026-08-13 15:15] primary→work_vector: TLC-G2 a las 17:00 + companion Ale/Stephanie
   - [2026-08-13 15:17] primary→work_vector: Revisando propuesta TLC-G2 (pre-17:00)
+  - [2026-08-13 19:38] primary→work_vector: Post Meet TLC-G2; propuesta colapsada a un escenario
+  - [2026-08-13 19:54] primary→work_vector: Sigue revisando TLC-G2 post-Meet
+  - [2026-08-13 19:56] primary→work_vector: TLC-G2 post-Meet; compañía inquieta
+  - [2026-08-13 20:37] primary→company: Jornada laboral cerrada; Josué de mañana

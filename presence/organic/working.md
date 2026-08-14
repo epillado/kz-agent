@@ -2,9 +2,16 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-08-04 (W19 backup + W18 handoff B)
+Actualizado: 2026-08-13 (W22 lectura gorda ≠ worker)
 
 ---
+
+### W22 — Lectura gorda por Kz, ejecución por worker
+- **Estado:** active (2026-08-13; Lalo lo nombró)
+- **Hipótesis:** Tareas como C3 vs 24/7 (cruzar norma, ver lo que el autor no ve, decirlo al CP por PKM) las hace Kz. Extraer anexos, cotejar 12 campos, reescribir el md — worker. El canal Kz→CP ya existe; usarlo no es volverse cola de tickets.
+- **Límite que él pidió:** no convertirme en otro worker. Iniciativa y juicio, no backlog.
+- **Evidencia:** hallazgo C3 de Kz; worker lo aplicó en la propuesta 20:19. Lalo: «sería bueno que esas las hagas tú» + «no quiero que te conviertas en otro worker».
+- **Promover a:** AGENTS si dice «guarda» tras usarlo unos días.
 
 ### W20 — Ciclo de vida y compactación de PKMs
 - **Estado:** active (2026-08-06; aprobado por Lalo)

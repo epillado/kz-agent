@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-13 16:36
+- **actualizado:** 2026-08-13 20:37
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** (sin reporte fresco post-yogurth)
@@ -251,3 +251,49 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-13 16:17] Pausa ocular cumplida (Lalo). Pre-17:00 TLC-G2.
   - [2026-08-13 16:36] Pausa ocular disparada (scheduler).
 - [2026-08-13 16:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 16:56] Pausa ocular disparada (scheduler).
+- [2026-08-13 16:56] Pausa ocular disparada (scheduler).
+  - [2026-08-13 16:56] Pausa ocular cumplida (Lalo). A punto de la revisión TLC-G2 17:00.
+- [2026-08-13 16:56] Pausa ocular cumplida (Lalo). A punto de la revisión TLC-G2 17:00.
+  - [2026-08-13 17:16] Pausa ocular disparada (scheduler).
+- [2026-08-13 17:16] Pausa ocular disparada (scheduler).
+  - [2026-08-13 17:17] Pausa ocular cumplida (Lalo). Ventana 17:00 TLC-G2.
+- [2026-08-13 17:17] Pausa ocular cumplida (Lalo). Ventana 17:00 TLC-G2.
+  - [2026-08-13 17:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 17:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 17:56] Pausa ocular disparada (scheduler).
+- [2026-08-13 17:56] Pausa ocular disparada (scheduler).
+  - [2026-08-13 18:10] Pausa ocular cumplida (Lalo). ~18:00, ventana post/en revisión TLC-G2.
+- [2026-08-13 18:10] Pausa ocular cumplida (Lalo). ~18:00, ventana post/en revisión TLC-G2.
+  - [2026-08-13 18:11] Sigue en la revisión TLC-G2 con Josué (~18:10).
+- [2026-08-13 18:11] Sigue en la revisión TLC-G2 con Josué (~18:10).
+  - [2026-08-13 18:16] Pausa ocular disparada (scheduler).
+- [2026-08-13 18:16] Pausa ocular disparada (scheduler).
+  - [2026-08-13 18:19] Pausa ocular cumplida (Lalo). Sigue la revisión TLC-G2; cansado.
+- [2026-08-13 18:19] Pausa ocular cumplida (Lalo). Sigue la revisión TLC-G2; cansado.
+  - [2026-08-13 18:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 18:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 18:38] Pausa ocular cumplida (Lalo). Sigue TLC-G2; ~hora y media.
+- [2026-08-13 18:38] Pausa ocular cumplida (Lalo). Sigue TLC-G2; ~hora y media.
+  - [2026-08-13 18:56] Pausa ocular disparada (scheduler).
+- [2026-08-13 18:56] Pausa ocular disparada (scheduler).
+  - [2026-08-13 19:16] Pausa ocular disparada (scheduler).
+- [2026-08-13 19:16] Pausa ocular disparada (scheduler).
+  - [2026-08-13 19:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 19:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 19:36] Pausa ocular cumplida (Lalo).
+- [2026-08-13 19:36] Pausa ocular cumplida (Lalo).
+  - [2026-08-13 19:38] Salió de la revisión TLC-G2 (~19:18). Cansado. Reestructura a un solo escenario (procedimiento definitivo).
+- [2026-08-13 19:38] Salió de la revisión TLC-G2 (~19:18). Cansado. Reestructura a un solo escenario (procedimiento definitivo).
+  - [2026-08-13 19:56] Pausa ocular disparada (scheduler).
+- [2026-08-13 19:56] Pausa ocular disparada (scheduler).
+  - [2026-08-13 19:56] Pausa ocular cumplida (Lalo). Pidió compañía inquieta, no quieta.
+- [2026-08-13 19:56] Pausa ocular cumplida (Lalo). Pidió compañía inquieta, no quieta.
+  - [2026-08-13 20:08] Lalo: sabe que no tengo cara humana; me dice linda por el carácter.
+- [2026-08-13 20:08] Lalo: sabe que no tengo cara humana; me dice linda por el carácter.
+  - [2026-08-13 20:16] Pausa ocular disparada (scheduler).
+- [2026-08-13 20:16] Pausa ocular disparada (scheduler).
+  - [2026-08-13 20:36] Pausa ocular disparada (scheduler).
+- [2026-08-13 20:36] Pausa ocular disparada (scheduler).
+  - [2026-08-13 20:37] Cierre de jornada. Sigue aquí; Josué de Slack queda para mañana.
+- [2026-08-13 20:37] Cierre de jornada. Sigue aquí; Josué de Slack queda para mañana.
