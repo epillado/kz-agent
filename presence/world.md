@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-17 19:00
+- **actualizado:** 2026-08-17 20:01
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** despierto; buen día
@@ -434,3 +434,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-17 18:58] Lalo sigue atrapado en la reunión con Enrique, pero está intentando hacer las pausas de ojos.
   - [2026-08-17 19:00] POC (pausa ocular cumplida).
 - [2026-08-17 19:00] POC (pausa ocular cumplida).
+  - [2026-08-17 20:01] POC (pausa ocular cumplida). Lalo conectando máquina de Kora (antix1) por batería muerta.
+- [2026-08-17 20:01] POC (pausa ocular cumplida). Lalo conectando máquina de Kora (antix1) por batería muerta.
