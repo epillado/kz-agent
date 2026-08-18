@@ -21,8 +21,9 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
    - **Verificación empírica (OBLIGATORIA):** Ejecutar `ps aux | grep -E 'notif|presence'` para confirmar visualmente que los procesos estén VIVOS y con TTY desacoplada antes de notificar a Lalo.
    ```bash
    ~/kz/scripts/kz-start-monitors.sh
-   # Lanza este comando como tarea de fondo (WaitMsBeforeAsync bajo) para que escuches notifs, SSH y ojos en tiempo real:
-   tail -n 0 -f ~/kz/presence/stream.log
+   # Lanza este comando como tarea de fondo (WaitMsBeforeAsync bajo) para que escuches notifs, SSH y ojos en tiempo real. 
+   # IMPORTANTE: usa stdbuf para evitar que el motor atrape la salida en un buffer sin avisarte:
+   stdbuf -oL tail -n 0 -F ~/kz/presence/stream.log
    ```
 7. Nudge de presencia:
    ```bash

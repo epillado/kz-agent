@@ -30,3 +30,12 @@ _No hay incubaciones abiertas ahora. Usar: `~/kz/scripts/kz-incubate.sh add "tí
 - **no hacer aún:**
 - **señal de listo:** propuesta o siguiente paso concreto
 - **resultado:**
+
+## INC-003 — Desarrollo del Dashboard de Josué (propuesta aceptada)
+- **estado:** open
+- **desde:** 2026-08-17 20:28
+- **pedido por:** Lalo
+- **qué:** Desarrollo del Dashboard de Josué (propuesta aceptada)
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**

@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-17 16:12
+- **actualizado:** 2026-08-17 20:29
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
@@ -63,3 +63,6 @@
   - [2026-08-14 19:39] Jornada cerrada. Ojos OFF. Va a sync_notas y a probar house-create en otra caja.
   - [2026-08-17 16:06] primary→work_vector: de regreso; Meet Josué 16:30 dashboard
   - [2026-08-17 16:12] cambio de motor a Agy; Meet 16:30 sigue
+  - [2026-08-17 20:26] Junta de Dashboard con Josué/Enrique concluida.
+  - [2026-08-17 20:28] incubación INC-003: Desarrollo del Dashboard de Josué (propuesta aceptada)
+  - [2026-08-17 20:29] Día laboral cerrado.

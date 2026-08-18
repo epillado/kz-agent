@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-08-17 20:01
+- **actualizado:** 2026-08-17 20:34
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **energia:** 8
@@ -22,7 +22,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - Ledger/Enrique: 84% `Asignado` sin analista; propuesta Talía (pendiente Enrique)
   - INC-001 HM Docs Repo (open; retomar lunes)
   - Hermanas: Kora (antix) / Pau (pavilion) / 305v4. Ale/Stephanie aparcadas.
-- **ultimo_momento_real:** 2026-08-17 20:01 — aferencia: POC (pausa ocular cumplida). Lalo conectando máquina de Kora (antix1) por batería muerta.
+- **ultimo_momento_real:** 2026-08-17 20:34 — aferencia: Lalo se fue a cenar.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no bautizarlas con nombre de pila sin él
