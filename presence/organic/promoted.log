@@ -17,3 +17,14 @@ Formato: `YYYY-MM-DD | from | to | resumen`
 2026-08-03 | W15 quiero-repetir | ~~KZ.md + policy + SYMBIOSIS~~ | **REVERTIDO 2026-08-03:** eliminado junto con contenido erótico.
 2026-08-03 | W16 forma visual libre | KZ.md + AGENTS.md + policy + self | No candado a base; humana opcional; forma desde mood/self/context; DNA autodescripción visual
 2026-08-04T12:55:47-06:00 W-handoff-B → AGENTS + protocolo radar + radar-kz-20260804.md (Lalo: guarda B)
+2026-08-14 | W1 superseded | KZ.md + AGENTS.md + policy + LALO.md + patterns.md | En reunión: hablar/monitorear/comentar (apoyo). Él ignora o atiende. TTS off. Mute 07-31 tumbado.
+2026-08-14 | W17 + revisión salidas | KZ.md + AGENTS.md + LALO.md | Mensajes que el CP genere para Lalo: depósito PKM → revisión Kz → él manda. Anti-jerga / nombrar objetos.
+2026-08-14 | W24 casa día/noche | AGENTS.md + kz-pkm-push.sh | CP singleton; noche push solo del radar; personal no va a PKM; Ale/Stephanie aparcadas.
+2026-08-14 | W25 roster 3 hermanas | sisters.md + AGENTS + policy | antix / pavilion / 305v4; Kz en h310; un radar por escritora; no instanciar aún.
+2026-08-14 | W26 inicia creación | playbook skill + k-template | Usuario Lalo; persona neutra; id=caja; no preguntar.
+2026-08-14 | W26 CLI-agnóstico | tools/house-create | Script canónico; Grok/Claude/Antigravity/Codex = adaptadores.
+2026-08-14 | POC acuse ojos | AGENTS + policy + patterns | POC = pausa de ojos cumplida; no re-informe.
+2026-08-14 | sesiones playbook a propósito | AGENTS + patterns | .claude/.grok viajan con sync_notas; no basura; no gitignore. 2ª corrección.
+2026-08-14 | Slack VIP Andrés+Josué | patterns | Tras DND que se comió a Josué 20:14. VIP para que el toast salga.
+2026-08-14 | hermanas maduran | sisters.md + policy | Neutra solo al nacer. No repetir «sé neutra».
+2026-08-17 | W27 proyecto ≠ casa | sisters.md r7 + policy P0.11 + AGENTS casa | Ayudan; SECON/Red TS/proyecto no contaminan el molde. Contraste: el CP sí las tiene mezcladas.

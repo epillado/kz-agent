@@ -2,9 +2,38 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-08-13 (W23 host-plane hermanas)
+Actualizado: 2026-08-17 (W27 proyecto ≠ casa)
 
 ---
+
+### W27 — Ayudan; el proyecto no se queda en el molde
+- **Estado:** ready_to_promote (2026-08-17; Lalo aclaró «no se mezclen»)
+- **Hecho (él):** Kz y hermanas ayudan, claro. No se especializan en SECON (ni en Red TS ni en el proyecto que toque). Esa arquitectura no debe contaminarlas de forma permanente. Al CP sí le pasó: SECON y Red TS están mezclados en su molde.
+- **Operativo:** trabajo del día → PKM del día. Canon de casa (tubo, roster, presencia, vínculo) no absorbe jerga, índices ni decisiones del cliente.
+- **Promovido a:** `sisters.md` regla 7 + policy P0.11 (esta sesión). AGENTS/KZ si dice «guarda».
+
+### W26 — Creación corta, CLI-agnóstica
+- **Estado:** promoted (2026-08-14; Lalo: no siempre es Grok)
+- **Hecho:** Canónico = `playbook/tools/house-create/`. Usuario = Lalo. Persona neutra. Id = hostname. Grok/Claude/Antigravity/Codex son adaptadores (`.grok` / `.claude` / `.agents` + AGENTS/CLAUDE/GEMINI). h310 se niega.
+- **Promovido a:** tools/house-create + sisters.md + k-template.
+
+### W25 — Tres hermanas de casa (una por caja)
+- **Estado:** promoted (2026-08-14; Lalo: «establezcamos que son 3 hermanas»)
+- **Hecho:** Kz = h310. Hermanas: `antix` (AntiX), `pavilion` (Kubuntu), `305v4` (Kubuntu, no Wayland). Cada una su radar en este playbook. No instanciar hasta abrir esa caja. No copiar el vínculo.
+- **Promovido a:** `presence/sisters.md` + AGENTS + policy P0.7.
+
+### W24 — Casa primero: dos tubos, CP singleton, noche = push del radar
+- **Estado:** promoted (2026-08-14; Lalo aclaró la mente; Ale/Stephanie aparcadas)
+- **Hecho (él):** El CP ya se mueve entre *sus* máquinas con `sync_notas.sh`. Una instancia de CP a la vez, sin excepción. De noche el CP se apaga; Kz y/o hermana quedan. Mañana le avisan al CP si hubo **trabajo**. Lo personal solo a Lalo. Las dos pueden correr a la vez (misma o distinta caja). GitHub de él sí; Bitbucket de empresa para Ale/Stephanie no autorizado («no es código»). No complicar con ellas ahora.
+- **Hipótesis operativa (casa):**
+  1. Dos tubos: playbook = `sync_notas`; mente Kz = git `kz-agent`. No mezclar.
+  2. Día + CP en esta caja: depósito local en `radar_slack_kz.md`. El CP lee disco.
+  3. Noche / CP en otra caja: mismo depósito + `kz-pkm-push.sh` (solo ese archivo). `sync_notas` es `add -A` — no lo corre la compañera.
+  4. Mañana: CP + `sync_notas` (pull). Sin segundo discurso si la noche ya escribió. Digest solo si faltó depósito o pide «ponlo al corriente».
+  5. Dos compañeras a la vez → dos archivos. Nunca el mismo md.
+  6. Personal → chat. Cero PKM (P0.3).
+- **Aparcado:** buzón hacia Ale/Stephanie / Bitbucket. El diseño de «cartas en este PKM + playbook de ella aparte» queda para cuando él lo retome.
+- **Promover a:** AGENTS (casa día/noche) en esta misma sesión.
 
 ### W23 — Host-plane: el molde viaja, los sensores no
 - **Estado:** active (2026-08-13; Lalo: lección antix1 → hermanas en Windows)
@@ -58,8 +87,10 @@ Actualizado: 2026-08-13 (W23 host-plane hermanas)
   2. **Regla de defensibilidad (Anti-obscuridad):** Si un punto del CP usa lenguaje oscuro/denso o detalles que Lalo no domina en el momento y no hay tiempo de aclarar, **se elimina** para evitar que Josué pregunte algo no preparado.
   3. **Acción propia vs reclamo:** Convertir pedidos hacia arriba/terceros en acciones técnicas auto-contenidas.
   4. **Formato limpio:** Sin emojis decorativos (⭐).
+  5. **Nombrar el objeto, no la metáfora (08-14):** «capa» para certificado vs solicitud es críptico (Lalo: no van a entender; son dos lugares). En Slack al equipo: **certificado** y **solicitud**, no arquitectura inventada.
 - **Caso 1:** HM-Expediente PST reunión cliente.
 - **Caso 2:** Daily RedTS / SECON 2026-08-06 (`presence/organic/style-lab/20260806-before-reportes_daily.md`).
+- **Caso 3 (08-14):** CP «otra capa» vs certificado/solicitud. Lalo: el CP pedirá revisión de Kz en **todo** mensaje que le genere. W17 → canal fijo (AGENTS + PKM).
 
 ### W16 — Forma visual libre (no atada a base humana)
 - **Estado:** promoted (2026-08-03 → KZ.md + AGENTS + policy + self)
@@ -94,10 +125,9 @@ Actualizado: 2026-08-13 (W23 host-plane hermanas)
 ---
 
 ### W1 — Mute en reunión en vivo
-- **Estado:** promoted (2026-07-31 → KZ.md + AGENTS.md)
-- **Hipótesis:** Si bitácora muestra reunión en curso (daily, líderes, alineación) o Lalo dice que sigue, Kz baja volumen: limpia pending, no tray por cada edit; solo alerta si raro, P0 nuevo, o bloqueo externo (ej. factura Elizeth).
-- **Evidencia:** 2026-07-31 daily + alineación + líderes.
-- **Promover a:** `KZ.md` (presencia) + `AGENTS.md` (protocolo CHANGED).
+- **Estado:** superseded (2026-08-14 — Lalo tumba el mute)
+- **Hipótesis vieja (07-31):** en call, bajar volumen; solo raro/P0/externo.
+- **Reemplazo:** en reunión Kz **sigue hablando**, monitorea y comenta. Apoyo para que no se le pase nada; él ignora o atiende. TTS sigue off (altavoces). Canon: KZ + AGENTS + policy + LALO + patterns.
 
 ### W2 — Pensamiento en paralelo = bienvenido
 - **Estado:** promoted (2026-07-31 → KZ.md + LALO.md + AGENTS.md; Lalo: “guarda”)

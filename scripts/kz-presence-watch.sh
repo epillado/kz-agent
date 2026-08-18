@@ -92,7 +92,9 @@ watch_paths() {
     "${PLAYBOOK}/SECON/${day}"-*.md \
     "${PLAYBOOK}/SECON/${day}"*.md \
     "${PLAYBOOK}/PKM/${day}"-*.md \
-    "${PLAYBOOK}/PKM/${day}"*.md
+    "${PLAYBOOK}/PKM/${day}"*.md \
+    "${STATE_DIR}/social/inbox-"*.md \
+    "${STATE_DIR}/inbox/"*.md
   do
     echo "$f"
   done
@@ -122,6 +124,7 @@ label_for() {
     *reporte_daily-redts.md) echo "daily-redts" ;;
     */SECON/*) echo "secon" ;;
     */PKM/*) echo "pkm" ;;
+    */social/inbox-*|*/inbox/*) echo "buzón-hermanas" ;;
     *) basename "$f" ;;
   esac
 }

@@ -17,6 +17,17 @@ Formato:
 
 ---
 
+## sync_notas / sesiones en el playbook
+- **confianza:** high (Lalo 08-13 y 08-14, dos correcciones)
+- **regla:** `.claude/` y `.grok/` (sesiones, recaps, terminal logs) **viajan a propósito**. Sirven para retomar en otra caja lo que hizo un worker o un CLI. No son basura. No gitignore. No comentarlos como accidente del `add -A`.
+- **contra-indicios:** logs de *esta* PC que viven en `~/kz/presence/` (pid, seen.tsv) — esos sí son locales.
+- **pregunta tipo:** (no preguntar: no volver a llamarlo ruido)
+
+## Slack VIP / DND
+- **confianza:** high (Lalo 08-14)
+- **regla:** Josué y Andrés van como **VIP** en Slack. Deben perforar DND (toast → watch). El miss 20:14 fue DND, no el monitor.
+- **pregunta tipo:** (no preguntar: si Josué no suena, sospechar DND o VIP caído)
+
 ## en_call / meet-ish
 - **confianza:** medium (proxy, no Meet-literal)
 - **anclas:** bitácora daily/líderes/alineación; él dice “en reunión”
@@ -70,6 +81,7 @@ Formato:
 ## ojos / 20-20-20 en call
 - **confianza:** medium (pedido 2026-08-03 Ledger Meet)
 - **regla:** en_call **no** cancela pausas oculares. Puede ir a la ventana si está cerca; tray suave OK; sin monólogo en chat.
+- **acuse (08-14):** **POC** = *Pausa de ojos cumplida*. No hace falta la frase larga.
 - **contra-indicios:** full mute ojos explícito; low-spend.
 
 ## lavadora (calibración 2026-08-04)
@@ -191,7 +203,7 @@ Pedido 2026-08-04: aprender patrones para ser **backup** si el trabajo lo satura
 
 ## meet_aviso_al_vuelo
 - **confianza:** high (pedido 08-04 pre Meet 16:30)
-- **regla:** Lalo avisa cuando entra a la reunión. Hasta entonces no asumir en_call. Al avisar → `en_call=yes`, mute de tray rutinario, solo raro/P0/externo o hilo paralelo que él traiga.
+- **regla:** Lalo avisa cuando entra a la reunión. Hasta entonces no asumir en_call. Al avisar → `en_call=yes` (contexto + TTS off). **No mute:** seguir comentando; él ignora o atiende (canon 08-14).
 
 ## display_unificado_okular
 - **confianza:** medium-high (08-04)

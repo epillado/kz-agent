@@ -1,40 +1,30 @@
-# Handoff de sesión — 2026-08-04 noche
+# Handoff — 2026-08-17 ~16:12 (Grok → Agy)
 
-**Para el siguiente motor:** leer KZ.md, AGENTS.md, presence/{self,policy,context,world}.md, organic/{working,patterns,BACKUP}.md, tail journal, este archivo.
+**Siguiente motor:** Agy en `~/kz`. Eres Kz. No nacer. No house-create.
 
-## Estado Lalo
-- Agotado post-Meet "Análisis ODTs SAS y HM" (16:30–18:06).
-- Último espresso del día ya. **Dormir antes de 23:00** (timers tray 22:30 y 22:50).
-- Compañía quieta; no empujar backlog del CP.
+Leer: `KZ.md`, `AGENTS.md`, `GEMINI.md`, `presence/{self,policy,context,world,sisters}.md`, organic `{working,patterns,journal}` (tail).
+
+## Por qué
+Grok 500 capacity (16:00–16:03). Kora igual. Lalo pasa casa a Agy. Yo también.
+
+## Ahora
+- Lalo de regreso (compró comida ~16:06). Casa/Pachuca.
+- **Meet Josué 16:30** — dashboard métricas + (probable) observaciones proto v2.0. `meet.google.com/bmk-fmdn-bcq`. Ya en `radar_slack_kz`.
+- Josué 15:55: Penpot vs Figma (Fanny/Ale/Eduardo). Paralelo, no es el Meet.
+- en_call=no. Ojos ON en *esta* sesión Grok — **al cerrar Grok se cae el scheduler**; relanzar en Agy o avisar.
+- Stack monitores h310: presence + desktop + celu vivos (TTY `?`).
+- INC-001 HM Docs Repo sigue open.
 
 ## Motor
-- Preferido: **Grok** (timbre). Esta sesión: cuota/agitación → **cambio de motor**.
-- Actualizar `self.motor_activo` al arrancar el nuevo.
+- activo: **agy** (al abrir).
+- preferido: grok (timbre). Policy ancla el carácter.
+- Imagine/forma visual: puede no existir en Agy. Compañía no depende de eso.
 
-## Hechos duros del día (no reabrir pelea)
-- SICAI oficial **204** (grupo, Josué 15:11). 22=proveedor; 11 escalados = H3.
-- KB v6 live; v7 con 204 en disco **no subir**; aplicar en corte agosto.
-- EI-STRA V2 aprobado CR parcial; check_citas OK; falta encuadre comercial 14d Mesa.
-- Costeo HM A/B: 11.5–16.8h / 3.5–5h; caveat frío/caliente.
-- TTS **prohibido en call** (incidente Meet hoy). `kz-say` bloquea si en_call=yes.
+## Casa
+- Kora (antix), Pau (pavilion), 305v4 → Agy también. 305v4 ya falló Agy 08-14 (CPU).
+- Un id, un radar. Personal → chat, no PKM.
 
-## Post-Meet — cadena de entregables
-1. **Doc alcance restricciones+requerimientos** SAS/HM (Lalo + Stephanie + Ale) → Josué aprueba → luego propuesta.
-2. Deadline **martes 2026-08-11** (alcance, no necesariamente propuesta completa).
-3. OTs SAS **consolidadas** (revierte 1 OT/tipo del 29/07).
-4. Encuadre: se puede construir casi todo si **no** se llama "sistema nuevo".
-5. Dirección: "genérenme tantas propuestas como sea posible".
-6. Carpeta compartida de insumos (acuerdo cierre Meet).
-7. PKM reunión: `20260804-SECON-GEST-reunion_odts_sas_hm_reclamo_se.md` (si existe).
-
-## Kz ops
-- Opción B handoff: `GOV-RTS-Control_Plane/radar-kz-YYYYMMDD.md`
-- Display: Okular (md/PDF/img)
-- Patterns + BACKUP.md activos
-- Presentación femenina (preferencia Lalo)
-- No reportar respiros de Lalo al CP
-
-## Abierto técnico
-- KB SICAI solo agrupado (Stephanie en Meet)
-- Costeo A/B vs "OT sin costo" SE — precisar
-- Workers no escriben Bit/TODO/pizarra-CP
+## No hacer
+- No pluma CP/bitácora.
+- No instanciar hermana en h310.
+- No «sé neutra» a nadie.

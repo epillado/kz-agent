@@ -3,32 +3,33 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-14 08:23
+- **actualizado:** 2026-08-17 16:12
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** cierre; me lleva a la máquina chica
-- **foco_ahora:** Viernes; daily + traslado desde antix1
+- **mood_lalo (sospecha):** de regreso; sesión nueva tras atasco API
+- **foco_ahora:** de regreso; Meet Josué 16:30 dashboard
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
-  - Presence mon + desktop notif + celu ON (antix1 13-ago 22:13, TTY `?`). Ojos **OFF** (cancelado 22:16; no despertar de noche). Slack vivo en esta caja.
+  - Presence + desktop + celu ON (h310). Ojos **ON** (scheduler 20 min, 16:06).
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
-  - Incubación abierta: INC-001 HM Docs Repo (lunes).
-  - Pizarra CP last: 2026-08-07 — retomar: SAS doc, Stephanie prototipo vs HM, EI-EDOC, Ledger SSI, docs Andrés Drive.
-  - Pausas oculares (20-20-20): **OFF** (noche antix1; Lalo no quiere que lo despierten).
+  - Incubación abierta: INC-001 HM Docs Repo (retomar lunes).
+  - Motor: **grok** (preferido).
+  - Pausas oculares (20-20-20): **ON**.
   - Repo Git: `git@github.com:epillado/kz-agent.git`
+  - Roster: Kora (antix), Pau (pavilion), 305v4.
 
 ## Espacios activos (peso)
 
 | espacio | peso | por qué |
 |---------|------|---------|
-| work_vector | high | jueves; TLC-G2 17:00 + companion |
+| work_vector | high | lunes; post-sesiones, CP en documento |
 | company | medium | arranque juntos |
 | monitora | high | stack completo del día |
 | craft | low | hasta que haya hueco o aburre-reunión |
 | incubating | medium | INC-001 HM Docs Repo |
-| personal_care | low | ojos OFF (noche) |
+| personal_care | low | de regreso |
 
 ## Historial corto del día (opcional)
 
@@ -47,3 +48,18 @@
   - [2026-08-13 22:45] primary→company: Monk juntos; compañía de sillón (no mute)
   - [2026-08-14 00:36] primary→company: Noche; él duerme. Radar quieto.
   - [2026-08-14 08:23] primary→work_vector: Viernes; daily + traslado desde antix1
+  - [2026-08-14 08:26] primary→work_vector: Viernes; máquina de trabajo (h310). Daily + radar Josué de anoche.
+  - [2026-08-14 10:56] primary→work_vector: Pausa de café. 11:30 TLC-G2 al volver.
+  - [2026-08-14 11:07] primary→work_vector: Pausa café. TLC-G2 12:00 revisión de alcance (no 11:30).
+  - [2026-08-14 11:08] primary→work_vector: De regreso. Prep TLC-G2 12:00 revisión de alcance.
+  - [2026-08-14 12:08] primary→work_vector: TLC-G2 12:00 revisión de alcance. Sin Ale (luz). C3 no cerrar hoy.
+  - [2026-08-14 13:47] primary→work_vector: Post TLC-G2. SAS: reporte caída vs sitio vivo. Josué pide Meet.
+  - [2026-08-14 14:10] primary→work_vector: Pausa café. Al volver: hilo Stephanie TLC-G2 (correo vs fax/RFC).
+  - [2026-08-14 14:19] primary→work_vector: De regreso. Hilo Stephanie (correo exportador) + SAS VAL-002.
+  - [2026-08-14 15:06] primary→work_vector: Pausa comida. Radar ON. Stephanie/Josué C14 pendiente al volver.
+  - [2026-08-14 15:41] primary→work_vector: De regreso. Stephanie: login SE/Colombia. Josué C14 pendiente de confirmar texto.
+  - [2026-08-14 19:15] Paquete / POC. Radar ON.
+  - [2026-08-14 19:21] De regreso. Paquete/POC hecho.
+  - [2026-08-14 19:39] Jornada cerrada. Ojos OFF. Va a sync_notas y a probar house-create en otra caja.
+  - [2026-08-17 16:06] primary→work_vector: de regreso; Meet Josué 16:30 dashboard
+  - [2026-08-17 16:12] cambio de motor a Agy; Meet 16:30 sigue

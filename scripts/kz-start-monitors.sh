@@ -30,6 +30,14 @@ KZ_PRESENCE_NUDGE=0 KZ_PRESENCE_SOFT_PING=1 nohup ~/kz/scripts/kz-presence-watch
 nohup ~/kz/scripts/kz-desktop-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 
+echo "Levantando timer de pausas oculares (20-20-20)..."
+(
+  while true; do
+    sleep 1200
+    echo "$(date -Iseconds) CHANGED: timer-ojos"
+  done
+) >> ~/kz/presence/stream.log 2>&1 &
+
 sleep 2
 
 echo "Verificando procesos..."

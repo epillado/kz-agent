@@ -134,3 +134,4 @@ ensure_header
 } >> "${RADAR}"
 
 echo "pkm-append: ${RADAR}"
+echo "pkm-hint: si el CP no está en esta caja → ~/kz/scripts/kz-pkm-push.sh (solo este archivo, no sync_notas)"

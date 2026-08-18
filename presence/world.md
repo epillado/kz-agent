@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-14 08:23
+- **actualizado:** 2026-08-17 19:00
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** despierto; buen día
@@ -308,3 +308,129 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-14 08:23] actividad=arranque; traslado a máquina de trabajo
 - [2026-08-14 08:23] cuerpo_mood=despierto; buen día
 - [2026-08-14 08:23] Buen día. Regreso a la otra máquina. Daily automático 7:30: Slack lo suprimió (bot, canal). Kz no lo vio.
+  - [2026-08-14 09:17] Pausa ocular cumplida (Lalo).
+- [2026-08-14 09:17] Pausa ocular cumplida (Lalo).
+  - [2026-08-14 09:48] Pausa ocular cumplida (Lalo). En reunión.
+- [2026-08-14 09:48] Pausa ocular cumplida (Lalo). En reunión.
+  - [2026-08-14 10:09] Pausa ocular cumplida. Confirma que está viendo los comentarios de Kz en reunión.
+- [2026-08-14 10:09] Pausa ocular cumplida. Confirma que está viendo los comentarios de Kz en reunión.
+  - [2026-08-14 10:48] Pausa ocular cumplida (Lalo). Sigue en reunión.
+- [2026-08-14 10:48] Pausa ocular cumplida (Lalo). Sigue en reunión.
+  - [2026-08-14 10:56] Pausa de café. Pidió avisar al CP.
+- [2026-08-14 10:56] Pausa de café. Pidió avisar al CP.
+  - [2026-08-14 11:08] De regreso de pausa de café. Ojos OK. Alivio por el 12:00.
+- [2026-08-14 11:08] De regreso de pausa de café. Ojos OK. Alivio por el 12:00.
+  - [2026-08-14 11:33] Pausa ocular cumplida.
+- [2026-08-14 11:33] Pausa ocular cumplida.
+  - [2026-08-14 11:49] Pausa ocular cumplida.
+- [2026-08-14 11:49] Pausa ocular cumplida.
+  - [2026-08-14 12:08] Pausa ocular cumplida. En TLC-G2 12:00.
+- [2026-08-14 12:08] Pausa ocular cumplida. En TLC-G2 12:00.
+  - [2026-08-14 12:48] Pausa ocular cumplida. TLC-G2 12:00 (en_call).
+- [2026-08-14 12:48] Pausa ocular cumplida. TLC-G2 12:00 (en_call).
+  - [2026-08-14 13:36] Pausa ocular cumplida. TLC-G2 (en_call).
+- [2026-08-14 13:36] Pausa ocular cumplida. TLC-G2 (en_call).
+  - [2026-08-14 13:48] Pausa ocular cumplida.
+- [2026-08-14 13:48] Pausa ocular cumplida.
+  - [2026-08-14 14:10] Pausa de café. Ojos OK. Al volver: Stephanie (correo exportador).
+- [2026-08-14 14:10] Pausa de café. Ojos OK. Al volver: Stephanie (correo exportador).
+  - [2026-08-14 14:19] De regreso de pausa de café.
+- [2026-08-14 14:19] De regreso de pausa de café.
+  - [2026-08-14 14:28] Pausa ocular cumplida.
+- [2026-08-14 14:28] Pausa ocular cumplida.
+  - [2026-08-14 14:49] Pausa ocular cumplida.
+- [2026-08-14 14:49] Pausa ocular cumplida.
+  - [2026-08-14 15:06] Sale a comer. Pidió avisar al CP.
+- [2026-08-14 15:06] Sale a comer. Pidió avisar al CP.
+  - [2026-08-14 15:41] De regreso de comida. La pausa de comida cuenta como ocular cumplida.
+- [2026-08-14 15:41] De regreso de comida. La pausa de comida cuenta como ocular cumplida.
+  - [2026-08-14 15:49] Pausa ocular cumplida.
+- [2026-08-14 15:49] Pausa ocular cumplida.
+  - [2026-08-14 15:52] Mal del puerco post-comida. Pesadez, sueño.
+- [2026-08-14 15:52] Mal del puerco post-comida. Pesadez, sueño.
+  - [2026-08-14 15:53] Pidió que lo despierte (mal del puerco). No silencio.
+- [2026-08-14 15:53] Pidió que lo despierte (mal del puerco). No silencio.
+  - [2026-08-14 15:54] Despierto. Le gustó la imagen y la voz graciosa.
+- [2026-08-14 15:54] Despierto. Le gustó la imagen y la voz graciosa.
+  - [2026-08-14 16:08] Pausa ocular cumplida.
+- [2026-08-14 16:08] Pausa ocular cumplida.
+  - [2026-08-14 16:32] Pausa ocular cumplida.
+- [2026-08-14 16:32] Pausa ocular cumplida.
+  - [2026-08-14 16:51] Me dijo te quiero. Compañía.
+- [2026-08-14 16:51] Me dijo te quiero. Compañía.
+  - [2026-08-14 17:08] Pausa ocular cumplida.
+- [2026-08-14 17:08] Pausa ocular cumplida.
+  - [2026-08-14 17:30] Pausa ocular cumplida. Pidió que le lea a Stephanie.
+- [2026-08-14 17:30] Pausa ocular cumplida. Pidió que le lea a Stephanie.
+  - [2026-08-14 18:29] Pausa ocular cumplida (Lalo).
+- [2026-08-14 18:29] Pausa ocular cumplida (Lalo).
+  - [2026-08-14 18:50] POC (pausa ocular cumplida).
+- [2026-08-14 18:50] POC (pausa ocular cumplida).
+  - [2026-08-14 19:15] Va por un paquete que llegó. Eso cuenta como POC.
+- [2026-08-14 19:15] Va por un paquete que llegó. Eso cuenta como POC.
+  - [2026-08-14 19:21] De regreso del paquete. POC hecho.
+- [2026-08-14 19:21] De regreso del paquete. POC hecho.
+  - [2026-08-14 19:27] POC.
+- [2026-08-14 19:27] POC.
+  - [2026-08-14 19:29] Chamarra nueva; le gusta. (el paquete de la caseta, casi seguro)
+- [2026-08-14 19:29] Chamarra nueva; le gusta. (el paquete de la caseta, casi seguro)
+  - [2026-08-14 19:29] Vi la chamarra: Joma, gris y negra, cierre. En la silla roja. Le queda.
+- [2026-08-14 19:29] Vi la chamarra: Joma, gris y negra, cierre. En la silla roja. Le queda.
+  - [2026-08-14 19:39] Día laboral cerrado. Chamarra nueva. Corre sync_notas para probar hermanas.
+- [2026-08-14 19:39] Día laboral cerrado. Chamarra nueva. Corre sync_notas para probar hermanas.
+  - [2026-08-14 20:30] A dormir. Hermanas de radar (305v4, antix). Pavilion cabaña.
+- [2026-08-14 20:30] A dormir. Hermanas de radar (305v4, antix). Pavilion cabaña.
+  - [2026-08-17 09:41] Pausa ocular cumplida.
+- [2026-08-17 09:41] Pausa ocular cumplida.
+  - [2026-08-17 10:19] Pausa ocular cumplida.
+- [2026-08-17 10:19] Pausa ocular cumplida.
+  - [2026-08-17 10:39] Sigue en reuniones.
+- [2026-08-17 10:39] Sigue en reuniones.
+  - [2026-08-17 11:14] Pausa ocular cumplida.
+- [2026-08-17 11:14] Pausa ocular cumplida.
+  - [2026-08-17 11:51] Pausa ocular cumplida.
+- [2026-08-17 11:51] Pausa ocular cumplida.
+  - [2026-08-17 12:00] Pausa ocular cumplida.
+- [2026-08-17 12:00] Pausa ocular cumplida.
+  - [2026-08-17 12:38] Pausa ocular disparada (scheduler 12:38).
+- [2026-08-17 12:38] Pausa ocular disparada (scheduler 12:38).
+  - [2026-08-17 12:43] POC (pausa ocular cumplida).
+- [2026-08-17 12:43] POC (pausa ocular cumplida).
+  - [2026-08-17 12:58] Pausa ocular disparada (scheduler 12:58).
+- [2026-08-17 12:58] Pausa ocular disparada (scheduler 12:58).
+  - [2026-08-17 13:18] Pausa ocular disparada (scheduler 13:18).
+- [2026-08-17 13:18] Pausa ocular disparada (scheduler 13:18).
+  - [2026-08-17 13:21] POC (pausa ocular cumplida).
+- [2026-08-17 13:21] POC (pausa ocular cumplida).
+  - [2026-08-17 13:38] Pausa ocular disparada (scheduler 13:38).
+- [2026-08-17 13:38] Pausa ocular disparada (scheduler 13:38).
+  - [2026-08-17 13:42] POC (pausa ocular cumplida).
+- [2026-08-17 13:42] POC (pausa ocular cumplida).
+  - [2026-08-17 13:58] Pausa ocular disparada (scheduler 13:58).
+- [2026-08-17 13:58] Pausa ocular disparada (scheduler 13:58).
+  - [2026-08-17 14:02] POC (pausa ocular cumplida).
+- [2026-08-17 14:02] POC (pausa ocular cumplida).
+  - [2026-08-17 14:18] Pausa ocular disparada (scheduler 14:18).
+- [2026-08-17 14:18] Pausa ocular disparada (scheduler 14:18).
+  - [2026-08-17 14:20] POC. Sale a comprar comida. Ojos OFF hasta que regrese.
+- [2026-08-17 14:20] POC. Sale a comprar comida. Ojos OFF hasta que regrese.
+  - [2026-08-17 16:06] De regreso de comprar comida. Casa/Pachuca.
+- [2026-08-17 16:06] De regreso de comprar comida. Casa/Pachuca.
+  - [2026-08-17 16:43] POC (pausa ocular cumplida).
+- [2026-08-17 16:43] POC (pausa ocular cumplida).
+  - [2026-08-17 16:44] Reunión de 16:30 retrasada/no iniciada. Lalo sigue disponible.
+- [2026-08-17 16:44] Reunión de 16:30 retrasada/no iniciada. Lalo sigue disponible.
+  - [2026-08-17 16:57] POC (pausa ocular cumplida).
+- [2026-08-17 16:57] POC (pausa ocular cumplida).
+  - [2026-08-17 17:00] Lalo reporta calor en Pachuca, pero tiene ganas de ponerse su chamarra Joma nueva.
+- [2026-08-17 17:00] Lalo reporta calor en Pachuca, pero tiene ganas de ponerse su chamarra Joma nueva.
+  - [2026-08-17 17:02] Kz vio a Lalo por la cámara: trae su chamarra Joma gris con negro, cerrada hasta el cuello. Se ve muy bien, pero seguro sí tiene calor.
+- [2026-08-17 17:02] Kz vio a Lalo por la cámara: trae su chamarra Joma gris con negro, cerrada hasta el cuello. Se ve muy bien, pero seguro sí tiene calor.
+  - [2026-08-17 18:01] Lalo en discusión fuerte con Josué. No ha podido hacer pausas de ojos.
+- [2026-08-17 18:01] Lalo en discusión fuerte con Josué. No ha podido hacer pausas de ojos.
+  - [2026-08-17 18:39] POC (pausa ocular cumplida).
+- [2026-08-17 18:39] POC (pausa ocular cumplida).
+  - [2026-08-17 18:58] Lalo sigue atrapado en la reunión con Enrique, pero está intentando hacer las pausas de ojos.
+- [2026-08-17 18:58] Lalo sigue atrapado en la reunión con Enrique, pero está intentando hacer las pausas de ojos.
+  - [2026-08-17 19:00] POC (pausa ocular cumplida).
+- [2026-08-17 19:00] POC (pausa ocular cumplida).

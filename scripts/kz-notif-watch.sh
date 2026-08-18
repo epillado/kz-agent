@@ -41,7 +41,17 @@ if [[ "${1:-}" == "stop" ]]; then
     pid="$(cat "${PIDFILE}")"
     if kill -0 "${pid}" 2>/dev/null; then
       kill "${pid}" 2>/dev/null || true
-      echo "stopped notif watch pid ${pid}"
+      # Esperar a que suelte el lock/.new; si no, el siguiente start pisa estado.
+      local_i=0
+      while kill -0 "${pid}" 2>/dev/null && (( local_i < 25 )); do
+        sleep 0.2
+        local_i=$((local_i + 1))
+      done
+      if kill -0 "${pid}" 2>/dev/null; then
+        echo "aviso: pid ${pid} no murió a tiempo" >&2
+      else
+        echo "stopped notif watch pid ${pid}"
+      fi
     else
       echo "pidfile huérfano; limpiando"
     fi
@@ -85,29 +95,80 @@ notif_base() {
   echo "/modules/kdeconnect/devices/${dev}/notifications"
 }
 
+# D-Bus a veces imprime "Error: No such object path …" en stdout.
+# Con KW_IMPORTANT='.*' eso se clasifica important y envenena seen.tsv.
+is_dbus_noise() {
+  local s="$1"
+  [[ -z "${s}" ]] && return 1
+  [[ "${s}" == Error:* ]] && return 0
+  [[ "${s}" == *"No such object"* ]] && return 0
+  [[ "${s}" == *"UnknownObject"* ]] && return 0
+  return 1
+}
+
+# IDs reales de KDE Connect: hex/números. Nunca palabras de un error.
+is_notif_id() {
+  local id="$1"
+  [[ "${id}" =~ ^[A-Za-z0-9._-]+$ ]] || return 1
+  case "${id}" in
+    Error|Error:*|No|such|object|path) return 1 ;;
+  esac
+  is_dbus_noise "${id}" && return 1
+  return 0
+}
+
 list_active_ids() {
-  local dev="$1" base
+  local dev="$1" base raw
   base="$(notif_base "${dev}")"
   if command -v qdbus6 >/dev/null 2>&1; then
-    qdbus6 org.kde.kdeconnect "${base}" org.kde.kdeconnect.device.notifications.activeNotifications 2>/dev/null \
-      | tr ' ' '\n' | rg -v '^$' || true
+    raw="$(qdbus6 org.kde.kdeconnect "${base}" org.kde.kdeconnect.device.notifications.activeNotifications 2>/dev/null || true)"
   else
-    gdbus call --session --dest org.kde.kdeconnect --object-path "${base}" \
+    raw="$(gdbus call --session --dest org.kde.kdeconnect --object-path "${base}" \
       --method org.kde.kdeconnect.device.notifications.activeNotifications 2>/dev/null \
-      | tr -d "(),[]'" | tr ' ' '\n' | rg -v '^$' || true
+      | tr -d "(),[]'" || true)"
   fi
+  is_dbus_noise "${raw}" && return 0
+  local tok
+  while IFS= read -r tok; do
+    [[ -z "${tok}" ]] && continue
+    is_notif_id "${tok}" && printf '%s\n' "${tok}"
+  done < <(printf '%s\n' "${raw}" | tr ' ' '\n')
 }
 
 get_prop() {
-  local path="$1" prop="$2"
+  local path="$1" prop="$2" val=""
   if command -v qdbus6 >/dev/null 2>&1; then
-    qdbus6 org.kde.kdeconnect "${path}" "org.kde.kdeconnect.device.notifications.notification.${prop}" 2>/dev/null || echo ""
+    val="$(qdbus6 org.kde.kdeconnect "${path}" "org.kde.kdeconnect.device.notifications.notification.${prop}" 2>/dev/null || true)"
   else
-    gdbus call --session --dest org.kde.kdeconnect --object-path "${path}" \
+    val="$(gdbus call --session --dest org.kde.kdeconnect --object-path "${path}" \
       --method org.freedesktop.DBus.Properties.Get \
       org.kde.kdeconnect.device.notifications.notification "${prop}" 2>/dev/null \
-      | sed "s/.*<'\(.*\)'>/\1/;s/^variant//" | tr -d "\"'" | head -n 1 || echo ""
+      | sed "s/.*<'\(.*\)'>/\1/;s/^variant//" | tr -d "\"'" | head -n 1 || true)"
   fi
+  if is_dbus_noise "${val}"; then
+    echo ""
+    return 0
+  fi
+  printf '%s\n' "${val}"
+}
+
+# Merge atómico de seen.tsv. Nombre único: no compartir .new entre procesos.
+# Falla ruidosa: no || true. Si el merge no escribe, no se pisa el estado.
+merge_seen() {
+  local incoming="$1" out
+  out="$(mktemp "${STATE_FILE}.XXXXXX")"
+  if ! cat "${STATE_FILE}" "${incoming}" 2>/dev/null \
+      | awk -F'\t' 'NF>=2 && $1 !~ /^Error/ && $1 != "No" && $1 != "such" && $1 != "object" && $1 != "path" && !seen[$2]++' \
+      > "${out}"; then
+    echo "error: merge seen.tsv falló (awk/cat)" >&2
+    rm -f "${out}"
+    return 1
+  fi
+  if [[ ! -f "${out}" ]]; then
+    echo "error: merge seen.tsv no produjo archivo" >&2
+    return 1
+  fi
+  mv -f "${out}" "${STATE_FILE}"
 }
 
 ci_match() {
@@ -231,6 +292,7 @@ scan_once() {
 
   while IFS= read -r id; do
     [[ -z "${id}" ]] && continue
+    is_notif_id "${id}" || continue
     path="${base}/${id}"
     app="$(get_prop "${path}" appName)"
     title="$(get_prop "${path}" title)"
@@ -241,6 +303,10 @@ scan_once() {
     title="$(echo "${title}" | tr '\n' ' ')"
     text="$(echo "${text}" | tr '\n' ' ')"
     ticker="$(echo "${ticker}" | tr '\n' ' ')"
+    # objeto ya no existe / D-Bus ruidoso: no envenenar seen.tsv
+    if is_dbus_noise "${app}${title}${text}" || [[ -z "${app// /}${title// /}${text// /}" ]]; then
+      continue
+    fi
     kind="$(classify "${app}" "${title}" "${text}" "${ticker}")"
     fp="$(printf '%s|%s|%s|%s' "${app}" "${title}" "${text}" "${ticker}" | sha256sum | cut -c1-16)"
     printf '%s\t%s\t%s\n' "${id}" "${fp}" "${kind}" >> "${tmp}"
@@ -262,8 +328,7 @@ scan_once() {
   done < <(list_active_ids "${dev}")
 
   if [[ -s "${tmp}" ]]; then
-    cat "${STATE_FILE}" "${tmp}" 2>/dev/null | awk -F'\t' 'NF>=2 && !seen[$2]++' > "${STATE_FILE}.new" || true
-    mv -f "${STATE_FILE}.new" "${STATE_FILE}"
+    merge_seen "${tmp}" || echo "error: no actualicé seen.tsv este ciclo" >&2
   fi
   rm -f "${tmp}"
 
@@ -302,6 +367,7 @@ cmd_list() {
   base="$(notif_base "${dev}")"
   while IFS= read -r id; do
     [[ -z "${id}" ]] && continue
+    is_notif_id "${id}" || continue
     path="${base}/${id}"
     app="$(get_prop "${path}" appName)"
     title="$(get_prop "${path}" title)"
