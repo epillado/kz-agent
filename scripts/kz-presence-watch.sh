@@ -37,7 +37,7 @@ PIDFILE="${STATE_DIR}/watch.pid"
 # (2026-08-…) y bash $(()) lo lee como octal → “value too great for base”.
 LAST_NUDGE_FILE="${STATE_DIR}/last_presence_nudge.epoch"
 
-INTERVAL="${KZ_PRESENCE_INTERVAL:-45}"
+INTERVAL="${KZ_PRESENCE_INTERVAL:-15}"
 NUDGE="${KZ_PRESENCE_NUDGE:-0}"
 SOFT_PING="${KZ_PRESENCE_SOFT_PING:-0}"
 COOLDOWN="${KZ_PRESENCE_NUDGE_COOLDOWN:-120}"
