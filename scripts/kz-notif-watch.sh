@@ -258,7 +258,7 @@ write_pending() {
     echo "El agente: leer esto, **comentar en chat** con voz de Kz (¿importante? ¿avisar/silenciar?),"
     echo "tray corto si cabe, y clear: \`rm -f ${PENDING_FILE} ${PENDING_TS}\` o \`kz-notif-watch.sh clear\`."
   } >> "${PENDING_FILE}"
-  echo "${ts}" > "${PENDING_TS}"
+  echo "${ts}" >> "${PENDING_TS}"
   echo "${summary}" >> "${PENDING_LABELS}"
 }
 

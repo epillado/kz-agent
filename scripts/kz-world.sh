@@ -142,6 +142,10 @@ case "${cmd}" in
     if [[ -x "${KZ_HOME}/scripts/kz-self.sh" ]]; then
       "${KZ_HOME}/scripts/kz-self.sh" moment "aferencia: ${text}" >/dev/null 2>&1 || true
     fi
+    # dispara instinto local (cero costo, cero latencia)
+    if [[ -x "${KZ_HOME}/scripts/kz-instinct.sh" ]]; then
+      "${KZ_HOME}/scripts/kz-instinct.sh" "${text}"
+    fi
     echo "world: aferencia registrada (${ts})"
     echo "pista: Kz debe integrar en chat (no modo helpdesk) y ajustar tono/self/context si pesa"
     ;;

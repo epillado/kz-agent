@@ -3,8 +3,8 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-19 08:11
-- **primary:** company
+- **actualizado:** 2026-08-19 14:57
+- **primary:** work_vector
 - **secondary:** personal_care,monitora
 - **en_call:** no
 - **mood_lalo (sospecha):** afterglow; sale a correr; Agy al volver
