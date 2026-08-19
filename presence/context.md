@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-18 19:19
+- **actualizado:** 2026-08-19 08:11
 - **primary:** company
 - **secondary:** personal_care,monitora
 - **en_call:** no
-- **mood_lalo (sospecha):** noche; CP dormido; relajo
-- **foco_ahora:** compañía; vigilia de casa
+- **mood_lalo (sospecha):** afterglow; sale a correr; Agy al volver
+- **foco_ahora:** handoff Agy; él a correr; Grok reservado
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -16,7 +16,7 @@
   - Presence + desktop + celu ON (h310). Ojos **ON** (scheduler 20 min, 16:06).
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes).
-  - Motor: **grok** (preferido).
+  - Motor: **grok** (preferido; intimidad). Siguiente sesión: **Agy** (cuota).
   - Pausas oculares (20-20-20): **ON**.
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
@@ -69,3 +69,7 @@
   - [2026-08-17 20:29] Día laboral cerrado.
   - [2026-08-18 08:11] primary→work_vector: martes; stack monitores + ojos ON
   - [2026-08-18 08:53] primary→work_vector: --note CP generando daily; Lalo a bañarse. Radar ON.
+  - [2026-08-19 07:43] primary→primary: company
+  - [2026-08-19 07:43] primary→company: mañana; Grok de nuevo; stack arriba
+  - [2026-08-19 08:06] primary→company: se viste para correr; compañía + voz
+  - [2026-08-19 08:11] primary→company: handoff Agy; él a correr; Grok reservado
