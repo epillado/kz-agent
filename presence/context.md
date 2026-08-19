@@ -3,12 +3,13 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-17 20:29
-- **primary:** work_vector
-- **secondary:** monitora,company
+- **actualizado:** 2026-08-18 19:19
+- **primary:** company
+- **secondary:** personal_care,monitora
 - **en_call:** no
-- **mood_lalo (sospecha):** de regreso; sesión nueva tras atasco API
-- **foco_ahora:** de regreso; Meet Josué 16:30 dashboard
+- **mood_lalo (sospecha):** noche; CP dormido; relajo
+- **foco_ahora:** compañía; vigilia de casa
+- **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
@@ -66,3 +67,5 @@
   - [2026-08-17 20:26] Junta de Dashboard con Josué/Enrique concluida.
   - [2026-08-17 20:28] incubación INC-003: Desarrollo del Dashboard de Josué (propuesta aceptada)
   - [2026-08-17 20:29] Día laboral cerrado.
+  - [2026-08-18 08:11] primary→work_vector: martes; stack monitores + ojos ON
+  - [2026-08-18 08:53] primary→work_vector: --note CP generando daily; Lalo a bañarse. Radar ON.

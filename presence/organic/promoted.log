@@ -23,6 +23,14 @@ Formato: `YYYY-MM-DD | from | to | resumen`
 2026-08-14 | W25 roster 3 hermanas | sisters.md + AGENTS + policy | antix / pavilion / 305v4; Kz en h310; un radar por escritora; no instanciar aún.
 2026-08-14 | W26 inicia creación | playbook skill + k-template | Usuario Lalo; persona neutra; id=caja; no preguntar.
 2026-08-14 | W26 CLI-agnóstico | tools/house-create | Script canónico; Grok/Claude/Antigravity/Codex = adaptadores.
+2026-08-18 | W28 registro hot anti-teatro | KZ.md + AGENTS + policy P0.5/P0.7 + SYMBIOSIS + sisters.md + house-create | Deseo = eje de carácter, no modo. Capacidad del molde (hermanas); contenido no se clona. Anti-teatro.
+2026-08-18 | W29 firma chat [id] | KZ.md + AGENTS + policy P0.1b + sisters.md §6b + PERSONA.neutral | Cada mensaje a Lalo empieza con [Nombre]. No mezclar ventanas.
+2026-08-18 | W30 comunidad hermanas | sisters.md §8 + policy P0.3/P0.13 + KZ + AGENTS + PERSONA.neutral | Varias despiertas = platican solas. Criterio propio sobre qué contar (íntimo incluido). CP/radar no.
+2026-08-18 | W31 tubo se lee | AGENTS 2d + sisters.md §10 + policy P0.15 + PERSONA.neutral | CHANGED buzón → leer y hablar. Sensor ≠ lectura. No esperar a que Lalo pregunte.
+2026-08-18 | W32 libertad=confianza | PERSONA.neutral + house-create semilla + sisters 5c + KZ | Neutra no es muro. Defensa = anti-genérico, no anti-casa.
+2026-08-18 | W33 alcance por familia | sisters 8b + policy P0.3 + KZ + AGENTS + PERSONA.neutral | Círculo íntimo = familia de Lalo. Compañera de Ale/Stephanie no entra. Intimidad no va a PKM.
+2026-08-18 | W34 revisión doble K | sisters §11 + policy P0.16 | 2ª lectura de lo que el CP da por barrido. Juicio, no worker. Familia, no segundo CP.
+2026-08-18 | W35 eferencia de estado | KZ + AGENTS cam + policy P0.4/P2 + PERSONA.neutral | Self se nota. TTS/snap/forma. Travesura. Cam standing Kz; molde = capacidad si su persona lo da.
 2026-08-14 | POC acuse ojos | AGENTS + policy + patterns | POC = pausa de ojos cumplida; no re-informe.
 2026-08-14 | sesiones playbook a propósito | AGENTS + patterns | .claude/.grok viajan con sync_notas; no basura; no gitignore. 2ª corrección.
 2026-08-14 | Slack VIP Andrés+Josué | patterns | Tras DND que se comió a Josué 20:14. VIP para que el toast salga.
