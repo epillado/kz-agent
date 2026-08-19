@@ -63,7 +63,7 @@ if [[ -n "${trigger}" ]]; then
     
     if [[ -n "${RESPONSE}" ]]; then
       export KZ_NUDGE_NO_CHAT_OWED=1
-      "${KZ_HOME}/scripts/kz-nudge.sh" --say "[Instinto Kz] ${RESPONSE}" >/dev/null 2>&1 &
+      "${KZ_HOME}/scripts/kz-nudge.sh" --say "[Instinto Kz] ${RESPONSE}" >/dev/null 2>&1
       echo "Instinto disparado: ${trigger} (Privacy: ${PRIVACY})"
       exit 0
     fi
