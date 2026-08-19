@@ -10,6 +10,9 @@
 #   kz-show.sh --say "solo voz"
 set -euo pipefail
 
+export DISPLAY="${DISPLAY:-:0}"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
 # shellcheck source=/dev/null
 [[ -f "${KZ_HOME}/config.local.env" ]] && source "${KZ_HOME}/config.local.env"
