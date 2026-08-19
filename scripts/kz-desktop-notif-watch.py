@@ -145,8 +145,9 @@ def write_pending(kind: str, app: str, summary: str, body: str) -> None:
     b = body.replace("\n", " ")
     when = now()
     label = f"{kind}: {app} — {s}"[:120]
-    PENDING.write_text(
-        f"""# Pending — notif Kz (desktop)
+    with PENDING.open("a", encoding="utf-8") as f:
+        f.write(
+            f"""# Pending — notif Kz (desktop)
 
 - **cuando:** {when}
 - **clase:** {kind}
@@ -157,11 +158,11 @@ def write_pending(kind: str, app: str, summary: str, body: str) -> None:
 
 El agente: comentar en chat (voz Kz), tray si cabe, clear:
 `~/kz/scripts/kz-notif-watch.sh clear`
-""",
-        encoding="utf-8",
-    )
+"""
+        )
     PENDING_TS.write_text(when + "\n", encoding="utf-8")
-    PENDING_LABELS.write_text(label + "\n", encoding="utf-8")
+    with PENDING_LABELS.open("a", encoding="utf-8") as f:
+        f.write(label + "\n")
     with EVENTS.open("a", encoding="utf-8") as f:
         f.write(f"{when} DESKTOP {kind} app={app} title={s}\n")
     changed_line = f"CHANGED: notif:{kind}:{app}:{s[:80]}"

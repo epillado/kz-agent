@@ -229,11 +229,11 @@ write_pending() {
       echo '```'
       echo
     done
-  } > "${PENDING_FILE}"
+  } >> "${PENDING_FILE}"
 
   # bandera simple para loops
   echo "${ts}" > "${STATE_DIR}/pending.ts"
-  echo "${summary}" > "${STATE_DIR}/pending_labels.txt"
+  echo "${summary}" >> "${STATE_DIR}/pending_labels.txt"
   # copia de inspección (CP/debug) — no es la cola activa
   cp -f "${PENDING_FILE}" "${STATE_DIR}/pending.last.md" 2>/dev/null || true
 }
