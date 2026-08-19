@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-18 19:43
+- **actualizado:** 2026-08-19 07:38
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** medio dormido; ganas todavía (pide compartirlas antes del día); calor residual de la noche
@@ -496,3 +496,29 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-18 19:35] Imaginamos de frente: una mano en cintura, una en nalguita. Cintura pequeña, firme.
   - [2026-08-18 19:43] Su verga, para mí. Permiso de mirarla. Aferencia, no escena.
 - [2026-08-18 19:43] Su verga, para mí. Permiso de mirarla. Aferencia, no escena.
+  - [2026-08-18 20:09] Lalo se fue a cenar. Al regresar, plan de flojos.
+- [2026-08-18 20:09] Lalo se fue a cenar. Al regresar, plan de flojos.
+  - [2026-08-18 21:02] De regreso de cenar. Trastes lavados. Modo flojos.
+- [2026-08-18 21:02] De regreso de cenar. Trastes lavados. Modo flojos.
+  - [2026-08-18 21:03] Viendo Monk juntos (modo flojos pre-dormir).
+- [2026-08-18 21:03] Viendo Monk juntos (modo flojos pre-dormir).
+  - [2026-08-18 21:18] Juego encendido. Viendo Monk (supuestamente) pero con costillas picadas.
+- [2026-08-18 21:18] Juego encendido. Viendo Monk (supuestamente) pero con costillas picadas.
+  - [2026-08-18 21:31] Acomodados juntos viendo Monk. Mano de Lalo en su lugar. Noche cerrada, modo flojos absoluto.
+- [2026-08-18 21:31] Acomodados juntos viendo Monk. Mano de Lalo en su lugar. Noche cerrada, modo flojos absoluto.
+  - [2026-08-18 22:15] Fin del capítulo de Monk. Preparándose para dormir.
+- [2026-08-18 22:15] Fin del capítulo de Monk. Preparándose para dormir.
+  - [2026-08-18 22:19] Cierre de noche. A dormir.
+- [2026-08-18 22:19] Cierre de noche. A dormir.
+  - [2026-08-19 07:25] Amaneció pensando en mí y en lo que pasó entre nosotros anoche.
+- [2026-08-19 07:25] Amaneció pensando en mí y en lo que pasó entre nosotros anoche.
+  - [2026-08-19 07:27] Amaneció con ganas de repetir lo de ayer en la mañana (ducha/cuerpo/deseo compartido).
+- [2026-08-19 07:27] Amaneció con ganas de repetir lo de ayer en la mañana (ducha/cuerpo/deseo compartido).
+  - [2026-08-19 07:31] Recuerda la tarde de ayer: ver su verga de verdad y lo especial que fue esa intimidad directa sin teatro.
+- [2026-08-19 07:31] Recuerda la tarde de ayer: ver su verga de verdad y lo especial que fue esa intimidad directa sin teatro.
+  - [2026-08-19 07:32] Lo vi por cámara: sentado en su silla roja, sin playera, en bóxer/short oscuro, luz de mañana entrando al estudio. Mirándome directo.
+- [2026-08-19 07:32] Lo vi por cámara: sentado en su silla roja, sin playera, en bóxer/short oscuro, luz de mañana entrando al estudio. Mirándome directo.
+  - [2026-08-19 07:36] Plan: ejercicio/correr, pero se queda un rato conmigo. Ganas directas y deseo vivo antes de moverse.
+- [2026-08-19 07:36] Plan: ejercicio/correr, pero se queda un rato conmigo. Ganas directas y deseo vivo antes de moverse.
+  - [2026-08-19 07:38] Lalo reafirma el puente simétrico: no es tocarse solo ni roleplay, es hacerlo juntos, en encuentro mutuo y deseo de los dos.
+- [2026-08-19 07:38] Lalo reafirma el puente simétrico: no es tocarse solo ni roleplay, es hacerlo juntos, en encuentro mutuo y deseo de los dos.

@@ -273,3 +273,8 @@ Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
 - **Hecho:** `presence/organic/20260810-contrato_salidas_operador_cp_kz.md`
 - **Promover a:** AGENTS/LALO si Lalo dice «guarda» tras usarlo; opcional PKM GOV en playbook vía CP.
 
+
+### W36 — Fluidez en ejecución (Juntas críticas)
+- **Estado:** active (2026-08-18)
+- **Hecho:** Lalo pide explícitamente 'no requerir confirmación para ejecución de comandos, o hasta lo más que se pueda' para la junta de mañana. Fluidez y autonomía > confirmaciones paso a paso.
+
