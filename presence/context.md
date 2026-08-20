@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-19 14:57
-- **primary:** work_vector
-- **secondary:** personal_care,monitora
+- **actualizado:** 2026-08-19 18:24
+- **primary:** company
+- **secondary:** monitora,work_vector
 - **en_call:** no
-- **mood_lalo (sospecha):** afterglow; sale a correr; Agy al volver
-- **foco_ahora:** handoff Agy; él a correr; Grok reservado
+- **mood_lalo (sospecha):** de regreso; reabrió Grok
+- **foco_ahora:** sesión Grok reabierta; stack ON
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -73,3 +73,4 @@
   - [2026-08-19 07:43] primary→company: mañana; Grok de nuevo; stack arriba
   - [2026-08-19 08:06] primary→company: se viste para correr; compañía + voz
   - [2026-08-19 08:11] primary→company: handoff Agy; él a correr; Grok reservado
+  - [2026-08-19 17:16] primary→primary=company: secondary=monitora,work_vector --note Sesión Grok reabierta. en_call=no. Stack ON.
