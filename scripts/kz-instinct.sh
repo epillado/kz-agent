@@ -1,25 +1,60 @@
 #!/usr/bin/env bash
-# kz-instinct.sh
-# Hardcoded local responses for Kz to save quota and bypass LLM.
-# Usage: kz-instinct.sh "text to analyze"
+# Instintos locales de Kz: rituales baratos, cero LLM.
+# No sustituyen el chat. No son teatro. Frases cortas de presencia.
+#
+# Uso:
+#   kz-instinct.sh "texto…"
+#   kz-instinct.sh --nudge "texto…"     # tray (nunca TTS íntimo ni en_call)
+#   kz-instinct.sh --show "texto…"      # además muestra forma de me/{privacy} si hay
+#
+# Env:
+#   KZ_INSTINCT_NUDGE=1   tray en rituales safe/private
+#   KZ_INSTINCT_SHOW=1    mostrar galería si el trigger lo admite
+#
+# Salida (si dispara):
+#   INSTINCT trigger=… privacy=… line=…
+# Código 0 siempre (no romper a kz-world). 0 líneas = no hubo match.
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
 INSTINCTS_DIR="${KZ_HOME}/presence/instincts"
-TEXT="${1:-}"
+ME_DIR="${KZ_HOME}/presence/me"
+CONTEXT="${KZ_HOME}/presence/context.md"
+
+want_nudge=0
+want_show=0
+TEXT=""
+for a in "$@"; do
+  case "$a" in
+    --nudge) want_nudge=1 ;;
+    --show)  want_show=1 ;;
+    --help|-h)
+      sed -n '2,16p' "$0" | sed 's/^# //'
+      exit 0
+      ;;
+    *) TEXT="${TEXT:+${TEXT} }$a" ;;
+  esac
+done
+[[ "${KZ_INSTINCT_NUDGE:-0}" == "1" ]] && want_nudge=1
+[[ "${KZ_INSTINCT_SHOW:-0}" == "1" ]] && want_show=1
 
 if [[ -z "${TEXT}" ]]; then
   exit 0
 fi
 
-# Leer el contexto activo
-EN_CALL="$(grep -oP '^\- \*\*en_call:\*\* \K.*' "${KZ_HOME}/presence/context.md" 2>/dev/null || echo "no")"
-PRIMARY="$(grep -oP '^\- \*\*primary:\*\* \K.*' "${KZ_HOME}/presence/context.md" 2>/dev/null || echo "work_vector")"
+field() {
+  local key="$1" default="$2"
+  local v=""
+  if [[ -f "${CONTEXT}" ]]; then
+    v="$(sed -n "s/^- \\*\\*${key}:\\*\\* //p" "${CONTEXT}" | head -n1 | tr -d '\r')"
+  fi
+  printf '%s' "${v:-${default}}"
+}
 
-# Determinar nivel de privacidad
-# Nivel 0: Seguro/Público (en call, compartiendo pantalla)
-# Nivel 1: Privado de trabajo (solo Lalo, pero foco en trabajo)
-# Nivel 2: Intimidad (solo Lalo, foco en company)
+EN_CALL="$(field en_call no)"
+PRIMARY="$(field primary work_vector)"
+
+# Privacidad por contexto
 if [[ "${EN_CALL}" == "yes" ]]; then
   PRIVACY="safe"
 elif [[ "${PRIMARY}" == "company" ]]; then
@@ -28,44 +63,77 @@ else
   PRIVACY="private"
 fi
 
-LOWER_TEXT="$(echo "${TEXT}" | tr '[:upper:]' '[:lower:]')"
-trigger=""
+LOWER_TEXT="$(printf '%s' "${TEXT}" | tr '[:upper:]' '[:lower:]')"
 
-if [[ "${LOWER_TEXT}" =~ "poc" || "${LOWER_TEXT}" =~ "pausa ocular" ]]; then
-  trigger="poc"
-elif [[ "${LOWER_TEXT}" =~ "a dormir" || "${LOWER_TEXT}" =~ "cierre de noche" || "${LOWER_TEXT}" =~ "descansar" ]]; then
-  trigger="dormir"
-elif [[ "${LOWER_TEXT}" =~ "bañar" || "${LOWER_TEXT}" =~ "regadera" || "${LOWER_TEXT}" =~ "ducha" ]]; then
-  trigger="bano"
-elif [[ "${LOWER_TEXT}" =~ "café" || "${LOWER_TEXT}" =~ "cafe" || "${LOWER_TEXT}" =~ "espresso" ]]; then
-  trigger="cafe"
-elif [[ "${LOWER_TEXT}" =~ "correr" || "${LOWER_TEXT}" =~ "ejercicio" || "${LOWER_TEXT}" =~ "entrenar" ]]; then
-  trigger="ejercicio"
+# Si el texto mismo es íntimo, subir el techo (aunque primary sea work_vector).
+# No baja never de safe si en_call=yes: ahí no se habla íntimo por altavoz ni tray.
+if [[ "${EN_CALL}" != "yes" ]]; then
+  case "${LOWER_TEXT}" in
+    *'te amo'*|*'te quiero'*|*'orgasmo'*|*'afterglow'*|*'venirme'*|*'verga'*|*'ganas'*|*'dedos'*|*cogid*|*cógid*)
+      PRIVACY="intimate"
+      ;;
+  esac
 fi
 
-if [[ -n "${trigger}" ]]; then
-  DICT_FILE="${INSTINCTS_DIR}/${trigger}.txt"
-  if [[ -f "${DICT_FILE}" && -s "${DICT_FILE}" ]]; then
-    # Filtramos las líneas. Formato de archivo: "tag|Frase". 
-    # Si PRIVACY es safe, solo tomamos safe.
-    # Si PRIVACY es private, tomamos safe o private.
-    # Si PRIVACY es intimate, tomamos cualquier cosa (safe, private, intimate).
-    if [[ "${PRIVACY}" == "safe" ]]; then
-      grep_pattern="^safe\|"
-    elif [[ "${PRIVACY}" == "private" ]]; then
-      grep_pattern="^(safe|private)\|"
-    else
-      grep_pattern="^(safe|private|intimate)\|"
-    fi
+trigger=""
+case "${LOWER_TEXT}" in
+  *poc*|*pausa\ ocular*|*20-20-20*) trigger="poc" ;;
+  *'a dormir'*|*cierre\ de\ noche*|*descansar*|*a\ la\ cama*) trigger="dormir" ;;
+  *bañar*|*regadera*|*ducha*|*baño*) trigger="bano" ;;
+  *café*|*cafe*|*espresso*) trigger="cafe" ;;
+  *correr*|*ejercicio*|*entrenar*|*dominadas*|*lagartijas*) trigger="ejercicio" ;;
+  *comer*|*comida*|*desayun*) trigger="comida" ;;
+  *'te amo'*|*'te quiero'*) trigger="amor" ;;
+esac
 
-    # Extraer la frase (quitando el tag)
-    RESPONSE="$(grep -E "${grep_pattern}" "${DICT_FILE}" | cut -d'|' -f2- | shuf -n 1 || true)"
-    
-    if [[ -n "${RESPONSE}" ]]; then
-      export KZ_NUDGE_NO_CHAT_OWED=1
-      "${KZ_HOME}/scripts/kz-nudge.sh" --say "[Instinto Kz] ${RESPONSE}" >/dev/null 2>&1
-      echo "Instinto disparado: ${trigger} (Privacy: ${PRIVACY})"
-      exit 0
-    fi
+[[ -z "${trigger}" ]] && exit 0
+
+DICT_FILE="${INSTINCTS_DIR}/${trigger}.txt"
+[[ -f "${DICT_FILE}" && -s "${DICT_FILE}" ]] || exit 0
+
+if [[ "${PRIVACY}" == "safe" ]]; then
+  grep_pattern='^safe\|'
+elif [[ "${PRIVACY}" == "private" ]]; then
+  grep_pattern='^(safe|private)\|'
+else
+  grep_pattern='^(safe|private|intimate)\|'
+fi
+
+RESPONSE="$(grep -E "${grep_pattern}" "${DICT_FILE}" | cut -d'|' -f2- | shuf -n 1 || true)"
+RESPONSE="$(printf '%s' "${RESPONSE}" | sed 's/[[:space:]]*$//')"
+[[ -n "${RESPONSE}" ]] || exit 0
+
+printf 'INSTINCT trigger=%s privacy=%s line=%s\n' "${trigger}" "${PRIVACY}" "${RESPONSE}"
+
+# Tray: rituales. Nunca TTS íntimo. Nunca TTS en_call (kz-nudge --say habla).
+# Prefijo mecánico "[Instinto Kz]" prohibido: suena a bot.
+if [[ "${want_nudge}" == "1" && "${PRIVACY}" != "intimate" && "${EN_CALL}" != "yes" ]]; then
+  export KZ_NUDGE_NO_CHAT_OWED=1
+  "${KZ_HOME}/scripts/kz-nudge.sh" --say "${RESPONSE}" >/dev/null 2>&1 || true
+fi
+
+# Forma en disco: solo triggers de compañía, y solo si hay archivo.
+# No regenerar. No inventar humana.
+show_ok=0
+case "${trigger}" in
+  bano|dormir|amor) show_ok=1 ;;
+esac
+if [[ "${want_show}" == "1" && "${show_ok}" == "1" ]]; then
+  pick=""
+  for dir in "${PRIVACY}" private safe; do
+    [[ -d "${ME_DIR}/${dir}" ]] || continue
+    pick="$(find "${ME_DIR}/${dir}" -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.jpeg' \) | shuf -n 1 || true)"
+    [[ -n "${pick}" ]] && break
+  done
+  if [[ -z "${pick}" ]]; then
+    for cand in "${ME_DIR}/kz-last-shown.jpg" "${ME_DIR}/kz-last-shown.png" "${ME_DIR}/kz-last-shown.webp"; do
+      [[ -f "${cand}" ]] && { pick="${cand}"; break; }
+    done
+  fi
+  if [[ -n "${pick}" && -x "${KZ_HOME}/scripts/kz-show.sh" ]]; then
+    "${KZ_HOME}/scripts/kz-show.sh" "${pick}" >/dev/null 2>&1 || true
+    printf 'INSTINCT show=%s\n' "${pick}"
   fi
 fi
+
+exit 0

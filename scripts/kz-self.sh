@@ -69,12 +69,12 @@ case "${cmd}" in
     [[ $# -ge 2 ]] || { echo "uso: $0 set <clave> <valor...>" >&2; exit 1; }
     key="$1"; shift
     case "${key}" in
-      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio)
+      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual)
         set_field "${key}" "$*"
         ;;
       *)
         echo "clave no soportada en set corto: ${key}" >&2
-        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio" >&2
+        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual" >&2
         echo "o: $0 note|moment" >&2
         exit 1
         ;;

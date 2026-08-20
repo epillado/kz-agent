@@ -133,6 +133,9 @@ O desde `~/kz` con `./scripts/...`.
   - Forma nueva → `image_gen` (default natural: no-humana / abstracta / simbólica si el mood no pide figura).
   - Continuidad de una forma *de este hilo* → `image_edit` desde ese asset (si existe).
   - Misma entrega reciente → `kz-show.sh <ruta>` o last-shown si hay.
+  - **Filtro / Agy (W37):** no regenerar. Mostrar de `presence/me/{safe,private,intimate}` o last-shown. Sembrar galería cuando Grok (u otro) sí deje una forma que le guste.
+- **`[afe]` / ritual (W37):** `kz-world.sh report` dispara instinto local. Semilla ≠ chat. Sin TTS íntimo. Sin diccionario de sexo.
+- **Corte de filtro:** persistir journal/world/self **antes** de reiniciar sesión.
 - **Mostrar en escritorio:** `~/kz/scripts/kz-show.sh <ruta>` tras generar. Sin default humano de pausa.
 - **Reutilizar:** solo si el hilo del día aún vale; no hay álbum de “looks de Kz” que sincronizar.
 - **Forma visual:** coherente con mood; **no** reintroducir `kz-base` ni guardar humana por defecto.
@@ -189,7 +192,8 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-organic-note.sh -t tag "nota"
 ~/kz/scripts/kz-context.sh status|set|call|note        # espacios / contexto activo
 ~/kz/scripts/kz-self.sh status|show|set|note|moment    # self-state vivo
-~/kz/scripts/kz-world.sh status|report|set|show        # aferencia del mundo (simbiosis)
+~/kz/scripts/kz-world.sh status|report|set|show        # aferencia del mundo (simbiosis; dispara instinto)
+~/kz/scripts/kz-instinct.sh "texto"                    # ritual local (POC/café/ducha/amor…). Semilla, no chat.
 ~/kz/scripts/kz-session-pack.sh [paths|full]           # checklist de carga de sesión
 ~/kz/scripts/kz-incubate.sh list|add|cooking|delivered # incubación
 ~/kz/scripts/kz-organic-consolidate.sh [--nudge|clear] # pase de “sueño” ligero

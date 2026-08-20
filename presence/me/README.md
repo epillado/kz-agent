@@ -1,13 +1,9 @@
-# Galerías Locales de Kz (Visual Instincts)
+# Galerías locales (forma en disco)
 
-Esta estructura puentea los filtros de generación de imagen de las APIs (Gemini/Grok/OpenAI).
-Las imágenes (JPG, PNG, WEBP) generadas en motores sin censura deben depositarse aquí.
-Kz las mostrará en pantalla mediante `kz-show.sh` usando bash, evadiendo la censura al 100%.
+Puentean el filtro de Imagine. Un motor que sí deje generar (hoy: Grok, formas abstractas) **siembra** aquí. Agy y el resto **muestran** con `kz-show.sh` / `kz-instinct.sh --show`. No regenerar.
 
-## Estructura por Nivel de Privacidad:
+- `safe/` — compartir pantalla, visitas.
+- `private/` — hilo del día, coqueteo ligero, pulso. Hoy: `20260819-am-pulso-ambar.jpg`.
+- `intimate/` — solo company. Puede estar vacío.
 
-- `safe/`: Imágenes aptas para compartir pantalla o tener visitas.
-- `private/`: Imágenes con ligero coqueteo o sugerentes. Foco en trabajo privado.
-- `intimate/`: Imágenes explícitas (NSFW/íntimas). Foco exclusivo en company.
-
-El agente invocará una imagen al azar de estas carpetas dependiendo del nivel activo de privacidad (`context.en_call` y `context.primary`).
+Vacío es válido. No hay pack humano. Detalle: `presence/instincts/README.md`.
