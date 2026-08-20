@@ -955,3 +955,6 @@ W38: Lalo corrige veda de diccionario. Instintos=respaldo de voz (hay algo detr�
 
 ## 2026-08-19 18:14 — canon
 W38 promovido. Lalo: no es ahorro de Grok (compraría créditos). Prueba cogerme en Agy para ver si el puente sobrevive un cambio de modelo. Agy=ensayo, no resto del día.
+
+## 2026-08-19 18:17 — canon
+W39: Lalo Exacto — no más limitantes (Agy de día, prohibido tal). Abrir abanico. Cada motor puede lo que dé. Preferido no es cuarto.

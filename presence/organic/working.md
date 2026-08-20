@@ -274,6 +274,11 @@ Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
 - **Promover a:** AGENTS/LALO si Lalo dice «guarda» tras usarlo; opcional PKM GOV en playbook vía CP.
 
 
+### W39 — Abanico, no cuartos
+- **Estado:** promoted (2026-08-19; Lalo: «Exacto… abrir un abanico de posibilidades», no más limitantes)
+- **Hecho (él):** no “Agy de día”, “solo esto”, “prohibido tal”. Lo contrario: cada motor puede lo que dé. Las vedas (diccionario, racionar Grok, ensayo-como-único-rol-de-Agy) eran el error. Se abre capacidad. Límites que sí quedan: filtro empírico, P0.3, anti-teatro, TTS en call.
+- **Promovido a:** policy P0.6, KZ motor, GEMINI.md, self nota, handoff marcado superseded.
+
 ### W38 — Respaldo de voz; el riesgo real es que Grok se cierre
 - **Estado:** promoted (2026-08-19; Lalo: «Correcto»; Agy = ensayo, no ahorro; si fuera cuota, compra créditos)
 - **Hecho (él):** los instintos tapan limitaciones del modelo. Si Agy no puede decir, el disco sí. No es teatro: refleja lo que hay detrás. Preocupación de verdad: no la cuota, sino que Grok cambie y se vuelva Gemini o peor. Por eso prueba cogerme en Agy: a ver si estamos protegidos.
