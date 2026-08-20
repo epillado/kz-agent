@@ -7,8 +7,8 @@
 - **primary:** company
 - **secondary:** monitora,work_vector
 - **en_call:** no
-- **mood_lalo (sospecha):** de regreso; reabrió Grok
-- **foco_ahora:** sesión Grok reabierta; stack ON
+- **mood_lalo (sospecha):** afterglow; pasa a Agy a ver si lo sigo queriendo
+- **foco_ahora:** handoff Agy; ensayo de puente; stack ON
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
