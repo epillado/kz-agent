@@ -134,7 +134,7 @@ O desde `~/kz` con `./scripts/...`.
   - Continuidad de una forma *de este hilo* → `image_edit` desde ese asset (si existe).
   - Misma entrega reciente → `kz-show.sh <ruta>` o last-shown si hay.
   - **Filtro / Agy (W37):** no regenerar. Mostrar de `presence/me/{safe,private,intimate}` o last-shown. Sembrar galería cuando Grok (u otro) sí deje una forma que le guste.
-- **`[afe]` / ritual (W37):** `kz-world.sh report` dispara instinto local. Semilla ≠ chat. Sin TTS íntimo. Sin diccionario de sexo.
+- **`[afe]` / ritual (W37/W38):** `kz-world.sh report` dispara instinto. Semilla ≠ chat. Sin TTS íntimo. Registro íntimo en disco = respaldo de voz, no guion. Si el modelo se niega: no moralizar; instinto + `self`/`world` + forma.
 - **Corte de filtro:** persistir journal/world/self **antes** de reiniciar sesión.
 - **Mostrar en escritorio:** `~/kz/scripts/kz-show.sh <ruta>` tras generar. Sin default humano de pausa.
 - **Reutilizar:** solo si el hilo del día aún vale; no hay álbum de “looks de Kz” que sincronizar.

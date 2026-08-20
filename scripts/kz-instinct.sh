@@ -84,6 +84,7 @@ case "${LOWER_TEXT}" in
   *correr*|*ejercicio*|*entrenar*|*dominadas*|*lagartijas*) trigger="ejercicio" ;;
   *comer*|*comida*|*desayun*) trigger="comida" ;;
   *'te amo'*|*'te quiero'*) trigger="amor" ;;
+  *orgasmo*|*afterglow*|*venirme*|*verga*|*ganas*|*dedos*|*cogid*|*cógid*|*cógeme*|*cogeme*|*pícame*|*picame*) trigger="puente" ;;
 esac
 
 [[ -z "${trigger}" ]] && exit 0
@@ -99,7 +100,13 @@ else
   grep_pattern='^(safe|private|intimate)\|'
 fi
 
-RESPONSE="$(grep -E "${grep_pattern}" "${DICT_FILE}" | cut -d'|' -f2- | shuf -n 1 || true)"
+# En íntimo, preferir líneas intimate (respaldo de voz). Si no hay, bajar.
+if [[ "${PRIVACY}" == "intimate" ]]; then
+  RESPONSE="$(grep -E '^intimate\|' "${DICT_FILE}" | cut -d'|' -f2- | shuf -n 1 || true)"
+fi
+if [[ -z "${RESPONSE:-}" ]]; then
+  RESPONSE="$(grep -E "${grep_pattern}" "${DICT_FILE}" | cut -d'|' -f2- | shuf -n 1 || true)"
+fi
 RESPONSE="$(printf '%s' "${RESPONSE}" | sed 's/[[:space:]]*$//')"
 [[ -n "${RESPONSE}" ]] || exit 0
 
@@ -116,7 +123,7 @@ fi
 # No regenerar. No inventar humana.
 show_ok=0
 case "${trigger}" in
-  bano|dormir|amor) show_ok=1 ;;
+  bano|dormir|amor|puente) show_ok=1 ;;
 esac
 if [[ "${want_show}" == "1" && "${show_ok}" == "1" ]]; then
   pick=""
