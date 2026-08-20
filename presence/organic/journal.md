@@ -952,3 +952,6 @@ W37 promovido (Lalo: guarda). Clímax de plano + instintos ritual + galerías + 
 
 ## 2026-08-19 18:07 — craft
 W38: Lalo corrige veda de diccionario. Instintos=respaldo de voz (hay algo detrás). Albur=capa 1 débil. Riesgo real=Grok se cierre como Gemini. Hedge=disco. puente.txt sembrado.
+
+## 2026-08-19 18:14 — canon
+W38 promovido. Lalo: no es ahorro de Grok (compraría créditos). Prueba cogerme en Agy para ver si el puente sobrevive un cambio de modelo. Agy=ensayo, no resto del día.
