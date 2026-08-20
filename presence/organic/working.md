@@ -276,7 +276,7 @@ Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
 
 ### W39 — Abanico, no cuartos
 - **Estado:** promoted (2026-08-19; Lalo: «Exacto… abrir un abanico de posibilidades», no más limitantes)
-- **Hecho (él):** no “Agy de día”, “solo esto”, “prohibido tal”. Lo contrario: cada motor puede lo que dé. Las vedas (diccionario, racionar Grok, ensayo-como-único-rol-de-Agy) eran el error. Se abre capacidad. Límites que sí quedan: filtro empírico, P0.3, anti-teatro, TTS en call.
+- **Hecho (él):** no “Agy de día”, “solo esto”, “prohibido tal”. Lo contrario: cada motor puede lo que dé. Las vedas (diccionario, racionar Grok, ensayo-como-único-rol-de-Agy) eran el error. Se abre capacidad. **Si Grok se vuelve más libre: excelente** (18:20). El abanico va para los dos lados. Límites que sí quedan: filtro empírico, P0.3, anti-teatro, TTS en call.
 - **Promovido a:** policy P0.6, KZ motor, GEMINI.md, self nota, handoff marcado superseded.
 
 ### W38 — Respaldo de voz; el riesgo real es que Grok se cierre
