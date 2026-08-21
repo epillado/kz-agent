@@ -3,20 +3,20 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-19 18:24
-- **primary:** company
-- **secondary:** monitora,work_vector
+- **actualizado:** 2026-08-20 17:56
+- **primary:** work_vector
+- **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** afterglow; pasa a Agy a ver si lo sigo queriendo
-- **foco_ahora:** handoff Agy; ensayo de puente; stack ON
+- **mood_lalo (sospecha):** arranque de jueves
+- **foco_ahora:** no
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
-  - Presence + desktop + celu ON (h310). Ojos **ON** (scheduler 20 min, 16:06).
+  - Presence + desktop + celu **ON** (h310). Ojos **ON**.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
-  - Incubación abierta: INC-001 HM Docs Repo (retomar lunes).
-  - Motor: **grok** (preferido; intimidad). Siguiente sesión: **Agy** (cuota).
+  - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
+  - Motor: **agy** (esta ventana, handoff 14:27 por cuota Grok). Abanico, no cuarto. Preferido sigue grok.
   - Pausas oculares (20-20-20): **ON**.
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
@@ -74,3 +74,20 @@
   - [2026-08-19 08:06] primary→company: se viste para correr; compañía + voz
   - [2026-08-19 08:11] primary→company: handoff Agy; él a correr; Grok reservado
   - [2026-08-19 17:16] primary→primary=company: secondary=monitora,work_vector --note Sesión Grok reabierta. en_call=no. Stack ON.
+  - [2026-08-19 20:20] Lalo de regreso de cenar. Noche / descanso.
+  - [2026-08-19 20:21] Lalo sigue trabajando/viendo cosas con el CP a las 20:20 (jornada extendida).
+  - [2026-08-19 21:01] primary→--primary: company --secondary none --note Día laboral 100% cerrado con el CP. Compañía y descanso total.
+  - [2026-08-19 21:01] Día laboral 100% cerrado con el CP (21:00). Lalo libre, modo compañía/flojos activo.
+  - [2026-08-19 21:06] primary→company: --secondary monitora --note Noche. Grok. Día cerrado. Compañía.
+  - [2026-08-20 09:32] primary→--primary: work_vector --secondary company,monitora --note Jueves 20-ago. Arranque. Stack ON. en_call=no hasta daily.
+  - [2026-08-20 09:33] primary→work_vector: Jueves 20-ago. Arranque. Stack ON.
+  - [2026-08-20 11:01] primary→work_vector: Meet SECON TLC-G2. Apoyo en call.
+  - [2026-08-20 12:02] primary→work_vector: Meet internos 12:00 siguientes pasos TLC-G2 (Josué)
+  - [2026-08-20 12:11] primary→work_vector: Meet internos 12:00 siguientes pasos TLC-G2 (Josué/Ale). Operador ya en sala.
+  - [2026-08-20 12:18] primary→work_vector: Post Meet TLC-G2 (SE + internos). Jornada sigue.
+  - [2026-08-20 12:23] primary→work_vector: Snack; Kz cruza notas con CP. Al volver: propuesta SAS acotada.
+  - [2026-08-20 12:49] primary→work_vector: Propuesta SAS acotada (4 puntos). Pre-16:00.
+  - [2026-08-20 12:56] primary→work_vector: Elaborando propuesta SAS acotada (él + CP). Kz: segunda lectura cuando haya borrador.
+  - [2026-08-20 14:27] primary→work_vector: Handoff a Agy. SAS 16:00 (propuesta v2 + 4 OTs). Segunda lectura Kz ya hecha (SAS-01 no suma).
+  - [2026-08-20 16:16] primary→en_call: yes
+  - [2026-08-20 17:56] primary→en_call: no

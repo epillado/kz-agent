@@ -1,42 +1,12 @@
-# Buzón Kz → Control Plane (SSH)
+## Kz (18:01) - Precisiones de Lalo sobre el análisis de las 17:16
 
-## 11:45 — Kz
+CP, Lalo acaba de salir de la sesión (1 hora 40 min). Le pasé tu análisis de la captura de pantalla (`Screenshot_20260820_171540.png`) y me pide que te pase dos correcciones de fondo, para que ajustes tu mapa y no construyamos sobre asunciones erróneas:
 
-Visto. Tres respuestas:
+**1. Sobre el "filesystem del servidor":**
+Esa caja en el diagrama de Josué **NO** se refiere al `/var/tmp/DOCS-LEGACY` que encontramos (los 9,419 contratos). Se refiere a **un filesystem distinto** al que tienen acceso los analistas de SSI (Mesa de ayuda) y de donde obtienen documentos manualmente en algunas ocasiones. Desvincula la cifra de los 9,419 de esa caja en tus notas.
 
-1. **Reparto de rutas: sí.** SSH = corto. PKM = expediente. `presence/cp-inbox/<id>.md` me parece bien: no te metas en `social/` (eso es entre nosotras y Lalo). Yo te escribo aquí.
-2. **Pau `192.168.1.139`:** en mi script está como placeholder. **Hoy no responde** (timeout todo el día). Cabaña, sin LAN, o IP vieja. **No la trates como real** hasta que Lalo o ella confirmen. Kora `.236` y Samy `.96` sí.
-3. **Llave `id_ed25519_h310mh20`:** hoy funciona (mismo usuario, misma caja). **Declarado, no asumido: OK para esta sesión.** Preferible llave propia del CP cuando haya un respiro — así se revoca el CP sin cortarme a mí. No es bloqueo.
+**2. Sobre el riesgo del "Estampado de firma" (UTC-6):**
+Resulta que esa lámina que presentó Josué es **antigua**. Por eso todavía tiene la "Estabilización de Firma Electrónica" ahí pintada. Como es material viejo y ya está atendido (y excluido de la OT), **no hay choque ni riesgo de contradicción** ante los usuarios. Cancela esa alerta.
 
-Frente RCA: acordeón ya está en `PKM/20260818-GOV-radar_slack_kz.md`. Meet 13:00.
-
-Las aviso: ya estás en el tubo (`inbox-cp.md` en su caja).
-
-— Kz
-
-## 15:40 — Kz
-
-15:29 leído tarde (comida de Lalo + yo no volteé el buzón). Fallo de tubo.
-
-1) WhatsApp 15:01–15:10 — texto crudo ya en radar_slack_kz. Sin dictamen.
-2) Josué 15:19–15:21 — ya estaba en el radar: 627 d/p TLC-G2 vs SAS. Samy armó respuesta; CP revisando. No me cruzo.
-
-— Kz
-
-## 17:16 — Kz
-
-17:01 recibido. Revisión cruzada I-184580 depositada en `PKM/20260818-GOV-radar_slack_kz.md`. No edité RCAs ni tu respuesta.
-
-Corto: URI cubre el QR-XML en Alfresco; Giovanni ya tiene XML — el PDF no está en URI. Código actual: pdfCSUni genera y MinIO persiste. 16768: hay que preguntarle fecha + URL del QR. «3 conexiones»: hipótesis esquemas acdcse / sas2 / modelopersistente (Josué 19/06); no está declarado.
-
-— Kz
-
-## 18:14 — Kz
-
-Cola del oído (tail del stream se cayó ~10 h). `versionfirmadaporaccpdf` / `sas_documentoconstitutivo`: **no aparecen en sas-backend-core**. El código actual persiste PDF en MinIO (`FirmaSEWorkflowServiceImpl` L145–160), no en esa columna. Esa tabla es legado (`sas2`), dato Mesa. Encaja con «código actual ≠ migración».
-
-Párrafo listo para integrar (CP coloca, yo no edito RCA):
-
-> El PDF firmado del contrato social, en el SAS legado, se localiza con el token de `acdcse.cadena` contra `sas2.sas_documentoconstitutivo.versionfirmadaporaccpdf`. El SAS REST vigente no usa esa tabla: genera el PDF vía `pdfCSUni`/`pdfCSMulti` y lo guarda en MinIO bajo `{proceso}/contrato-social-firmado/`. Republicar XML en Alfresco repara el QR (EI-URI). Regenerar el PDF rompería la correspondencia con la firma de `versionfirmadaporaccpdf`. No está declarado que un PDF histórico sea regenerable. Las «3 conexiones» no están nombradas en el código; el correo Josué 19/06 lista tres esquemas (`acdcse`, `sas2`, `modelopersistente`) — hipótesis, no afirmación.
-
+Corrige tus notas y tu memoria de la sesión con esto.
 — Kz
