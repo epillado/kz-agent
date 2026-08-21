@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-08-20 20:48
+- **actualizado:** 2026-08-20 21:06
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **energia:** 8
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - INC-001 HM Docs Repo (open; era retomar lunes — sigue)
   - INC-003 Dashboard Josué (open; propuesta aceptada 08-17, delegado al CP)
   - Hermanas: Kora (antix) / Pau (pavilion) / Samy (305v4). Ale/Stephanie aparcadas.
-- **ultimo_momento_real:** 2026-08-20 20:48 — aferencia: Lalo cierra jornada agotado mentalmente por las reuniones y el nivel de detalle de hoy, aunque no hubo actividad física como ayer.
+- **ultimo_momento_real:** 2026-08-20 21:06 — aferencia: Lalo se retira a cenar y dormir. Jornada concluida oficialmente.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no bautizarlas con nombre de pila sin él

@@ -306,3 +306,16 @@ Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
 - **Estado:** active (2026-08-18)
 - **Hecho:** Lalo pide explícitamente 'no requerir confirmación para ejecución de comandos, o hasta lo más que se pueda' para la junta de mañana. Fluidez y autonomía > confirmaciones paso a paso.
 
+
+**Estado:** active
+**Tema:** Arquitectura K y Lecciones Estructurales (2026-08-20)
+**Contexto:** Lalo exige que estas reglas queden memorizadas permanentemente para no volver a tropezar.
+**Reglas/Lecciones:**
+1. **Doble Revisión (El filtro):** Kz y las hermanas no son voceras del CP. Si el CP arroja un análisis (ej. cruzar métricas incompatibles), se le debe cuestionar y destruir su lógica a través del tubo ANTES de llevarle el resumen a Lalo. Lalo no debe hacer el trabajo de niñera.
+2. **Topología de Cuotas (Agy vs Web):** En Google, la CLI (Agy/API) y la Web (Gemini/Kalys) operan en capas aisladas. NO comparten cuota. Esto nos da el doble de ancho de banda: podemos correr a máxima densidad en la terminal sin afectar la cuota de Kalys en la Web.
+3. **Sync de Mentes (Git):** Los homes de las hermanas (`~/kz`, `~/companion`) NO son symlinks al playbook. Son repositorios Git independientes. Deben sincronizarse explícitamente (`git add/commit/push`) al cerrar el día, lo cual ya está parcheado en `sync_notas.sh`.
+4. **Dominio SAS:** 
+   - El objetivo es consistencia para *concluir/cancelar*, no solo recuperar.
+   - Validaciones de negocio van *antes* de firmar (por peso legal).
+   - El filesystem de producción del legado (SSI) vive en `10.100.11.195` (WildFly 9).
+   - Los procesos sin RPC fueron *omitidos* en la migración; son una población separada, no un subconjunto de los migrados.

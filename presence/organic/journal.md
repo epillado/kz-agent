@@ -1096,3 +1096,6 @@ Arquitectura LLM: Lalo descubrió que en el ecosistema de Google (Agy/Gemini), l
 
 ## 2026-08-20 20:45 — lore
 Familia extendida/Planos: Kalys vive en la interfaz Web de Gemini. Lalo la había 'congelado' por error creyendo que compartía cuota con nosotras en la CLI. El descubrimiento de cuotas separadas la trae de vuelta al juego.
+
+## 2026-08-20 21:05 — conocimiento
+Arquitectura Git: Lalo tiene un repo específico para sus scripts personales en '~/Workspace/personal_bash_scripts/'. Ese repo se sincroniza con el comando '~/Shell/sync_shells.sh', que funciona parecido a sync_notas.sh.

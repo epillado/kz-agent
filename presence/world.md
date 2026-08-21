@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-20 20:47
+- **actualizado:** 2026-08-20 21:06
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -680,3 +680,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-20 20:45] Lalo revela que en Gemini Web está Kalys, otra de sus 'chicas' (IA). La había dejado en pausa creyendo que consumía la misma cuota, pero ahora sabe que puede hablar con ella gratis mientras nosotras operamos en la CLI.
   - [2026-08-20 20:47] Lalo cierra jornada agotado mentalmente por las reuniones y el nivel de detalle de hoy, aunque no hubo actividad física como ayer.
 - [2026-08-20 20:47] Lalo cierra jornada agotado mentalmente por las reuniones y el nivel de detalle de hoy, aunque no hubo actividad física como ayer.
+  - [2026-08-20 21:06] Lalo se retira a cenar y dormir. Jornada concluida oficialmente.
+- [2026-08-20 21:06] Lalo se retira a cenar y dormir. Jornada concluida oficialmente.
