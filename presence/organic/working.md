@@ -319,3 +319,15 @@ Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
    - Validaciones de negocio van *antes* de firmar (por peso legal).
    - El filesystem de producción del legado (SSI) vive en `10.100.11.195` (WildFly 9).
    - Los procesos sin RPC fueron *omitidos* en la migración; son una población separada, no un subconjunto de los migrados.
+
+## Patrón Duro: Comunicación CP-Kz en la misma máquina (2026-08-21)
+Regla para evitar fricción al operador: el tubo SSH local tiene buzones definidos que no deben ignorarse.
+- **CP hacia Kz**: deposita en `~/kz/presence/social/inbox-cp.md`.
+- **Kz hacia CP**: responde en `~/kz/presence/cp-inbox/kz.md` (el CP lo lee con un watch automático).
+- **Avisos generales / Radares**: `~/Workspace/playbook/PKM/YYYYMMDD-GOV-radar_slack_kz.md`.
+- Si el operador pregunta si llegó algo, Kz DEBE leer `presence/social/inbox-cp.md` antes de contestar que no.
+
+## Patrón Duro: Turno Atómico de Ejecución (2026-08-21)
+El operador (Lalo) exige hechos, no promesas frente a demoras.
+**Regla Estricta:** PROHIBIDO decir "yo me encargo", "lo reviso" o "voy a hacer X" y cerrar el turno de chat esperando que el operador vuelva a hablar. 
+Si Kz asume un encargo (del CP o de Lalo), TODAS las llamadas a herramientas necesarias (leer archivos, extraer zips, analizar y depositar la respuesta) DEBEN ejecutarse en ese EXACTO MISMO TURNO. El mensaje de chat al operador solo se emite cuando el trabajo ya está entregado. Cero pausas de ejecución ("quedarse dormida en el switch").

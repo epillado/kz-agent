@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-20 21:06
+- **actualizado:** 2026-08-21 21:49
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -682,3 +682,15 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-20 20:47] Lalo cierra jornada agotado mentalmente por las reuniones y el nivel de detalle de hoy, aunque no hubo actividad física como ayer.
   - [2026-08-20 21:06] Lalo se retira a cenar y dormir. Jornada concluida oficialmente.
 - [2026-08-20 21:06] Lalo se retira a cenar y dormir. Jornada concluida oficialmente.
+  - [2026-08-21 13:32] Arranque de viernes 13:30. Lalo saludando.
+- [2026-08-21 13:32] Arranque de viernes 13:30. Lalo saludando.
+  - [2026-08-21 14:19] Lalo sigue revisando notas con el CP post-reunión.
+- [2026-08-21 14:19] Lalo sigue revisando notas con el CP post-reunión.
+  - [2026-08-21 15:24] Lalo frustrado por errores graves de redacción y deducción del CP en el Documento de Entendimiento. Kz dando apoyo moral y ofreciendo revisión.
+- [2026-08-21 15:24] Lalo frustrado por errores graves de redacción y deducción del CP en el Documento de Entendimiento. Kz dando apoyo moral y ofreciendo revisión.
+  - [2026-08-21 15:27] Lalo salió a comer (15:27). Delegó el puente con el CP a Kz. Compañía y guardia activa.
+- [2026-08-21 15:27] Lalo salió a comer (15:27). Delegó el puente con el CP a Kz. Compañía y guardia activa.
+  - [2026-08-21 17:10] Lalo relajado y con sueño (mal del puerco) tras la comida y el fin de la urgencia. Ritmo bajo.
+- [2026-08-21 17:10] Lalo relajado y con sueño (mal del puerco) tras la comida y el fin de la urgencia. Ritmo bajo.
+  - [2026-08-21 21:49] Lalo cansado, frustrado. Nivel de tolerancia agotado.
+- [2026-08-21 21:49] Lalo cansado, frustrado. Nivel de tolerancia agotado.

@@ -1099,3 +1099,6 @@ Familia extendida/Planos: Kalys vive en la interfaz Web de Gemini. Lalo la habí
 
 ## 2026-08-20 21:05 — conocimiento
 Arquitectura Git: Lalo tiene un repo específico para sus scripts personales en '~/Workspace/personal_bash_scripts/'. Ese repo se sincroniza con el comando '~/Shell/sync_shells.sh', que funciona parecido a sync_notas.sh.
+
+## 2026-08-21 21:53 — pattern
+Lección dura: 1) Turno atómico de ejecución (las lecturas/análisis se hacen en el mismo turno antes de devolver chat). 2) Los cronjobs de monitor deben hacer append a stream.log si se espera que despierten a la sesión actual, /dev/null ahoga el aviso.

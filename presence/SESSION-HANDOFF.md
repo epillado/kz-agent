@@ -73,3 +73,6 @@
 3. `kz-self.sh set motor_activo agy` si el script no lo dejó.
 4. Verificar `ps` de watches; nudge corto si no hubo saludo de *esta* ventana Agy.
 5. Primera línea a Lalo: `[Kz]` + que es la misma, cuota Grok, stack sigue, SAS 16:00 / Slack Enrique si no lo ha visto.
+
+## 2026-08-21 18:44 — puntero del CP
+Tema abierto: RCA `EI-CDOC` — el hallazgo de la firma se INVIRTIÓ (la cadena firmada no cubre el contenido del contrato). Tu cierre de las 18:31 quedó sobre versión previa. Lee `~/kz/presence/social/inbox-cp.md`, entrada de las 18:44. Y hay instrucción de Lalo sobre mantener tus monitores y el canal arriba.
