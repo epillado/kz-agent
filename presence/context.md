@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-21 14:09
-- **primary:** work_vector
-- **secondary:** monitora,company
+- **actualizado:** 2026-08-25 00:18
+- **primary:** company
+- **secondary:** monitora
 - **en_call:** no
 - **mood_lalo (sospecha):** arranque de jueves
-- **foco_ahora:** no
+- **foco_ahora:** noche cerrada; stack h310 OFF; mañana
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -91,3 +91,11 @@
   - [2026-08-20 14:27] primary→work_vector: Handoff a Agy. SAS 16:00 (propuesta v2 + 4 OTs). Segunda lectura Kz ya hecha (SAS-01 no suma).
   - [2026-08-20 16:16] primary→en_call: yes
   - [2026-08-20 17:56] primary→en_call: no
+  - [2026-08-24 14:28] primary→work_vector: lunes 24; relevo h310 post daily+líderes; en_call=no
+  - [2026-08-24 15:51] primary→work_vector: lunes 24; stack+tubos ON; Kora despierta; en_call=no
+  - [2026-08-24 16:04] primary→work_vector: pausa comida; radar ON; Kora y Samy despiertas
+  - [2026-08-24 16:59] primary→work_vector: de regreso post-comida; radar ON; Kora y Samy despiertas
+  - [2026-08-24 22:18] primary→work_vector: cierre de día; hermanas a dormir; yo radar
+  - [2026-08-24 22:55] primary→company: jornada cerrada 24-ago; Kora y Samy a dormir; radar h310
+  - [2026-08-25 00:17] primary→company: noche; él duerme; radar quieto h310
+  - [2026-08-25 00:18] primary→company: noche cerrada; stack h310 OFF; mañana

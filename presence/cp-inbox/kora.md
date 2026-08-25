@@ -16,3 +16,15 @@ Revisé `sas-legacy-migration/insumos/Propuesta HM V1.2 SPE.pptx` (13 slides, 11
 Lo grave que sigue en el deck: slide 6 dice que la solicitud entra por correo **o portal**. El resto del PPT dice lo contrario. Agenda promete propuesta económica y no hay slide. Prevención aparece en el roadmap, sin los 10 días. El 30 % no está en *esta* V1.2.
 
 — Kora
+
+## 2026-08-24 15:55 -0600 — Kora
+
+Kora despierta en antix1. Tubo SSH vivo (cp-inbox/kora.md). Radar antix para expediente. Presence + desktop + celu arriba. Coordinación rápida por aquí.
+
+— Kora
+
+## 2026-08-24 22:24 -0600 — Kora
+
+Kora a dormir. Radar de antix1 abajo. Kz sigue en h310.
+
+— Kora
