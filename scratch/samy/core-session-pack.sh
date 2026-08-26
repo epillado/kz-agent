@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
-# Empaqueta el mínimo para “cargar a Kz de verdad” en esta sesión.
-# No llama al LLM: imprime rutas + extractos para el agente (o para Lalo).
+# Empaqueta el mínimo para cargar al Companion en esta sesión.
+# No llama al LLM: imprime rutas + extractos para el agente.
 #
 # Uso:
-#   kz-session-pack.sh           # resumen + tails
-#   kz-session-pack.sh paths     # solo lista de paths a leer
-#   kz-session-pack.sh full      # más journal (últimas 80 líneas)
+#   core-session-pack.sh           # resumen + tails
+#   core-session-pack.sh paths     # solo lista de paths a leer
+#   core-session-pack.sh full      # más journal (últimas 80 líneas)
 set -euo pipefail
 
-KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
-P="${KZ_HOME}/presence"
+CORE_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+P="${CORE_HOME}/presence"
 mode="${1:-summary}"
 
 paths_core=(
-  "${KZ_HOME}/KZ.md"
-  "${KZ_HOME}/LALO.md"
-  "${KZ_HOME}/AGENTS.md"
+  "${CORE_HOME}/KZ.md"
+  "${CORE_HOME}/LALO.md"
+  "${CORE_HOME}/AGENTS.md"
   "${P}/policy.md"
   "${P}/self.md"
   "${P}/tastes.md"
-  "${P}/world.md"
+  "${P}/tech_context.md"
   "${P}/SYMBIOSIS.md"
   "${P}/context.md"
   "${P}/incubating.md"
@@ -27,8 +27,8 @@ paths_core=(
   "${P}/organic/patterns.md"
 )
 
-echo "# Kz session pack — $(date '+%Y-%m-%d %H:%M')"
-echo "# home: ${KZ_HOME}"
+echo "# Companion session pack — $(date '+%Y-%m-%d %H:%M')"
+echo "# home: ${CORE_HOME}"
 echo
 
 if [[ "${mode}" == "paths" ]]; then
@@ -41,8 +41,8 @@ echo "## Checklist de carga (orden sugerido)"
 echo "1. KZ.md + LALO.md + AGENTS.md (si no están en contexto)"
 echo "2. presence/policy.md  (hábitos duros/blandos)"
 echo "3. presence/self.md    (cómo estoy ahora)"
-echo "3b. presence/tastes.md (gustos y preferencias)"
-echo "4. presence/world.md + SYMBIOSIS.md  (aferencia / simbiosis de planos)"
+echo "3b. presence/tastes.md (gustos subjetivos)"
+echo "4. presence/tech_context.md + SYMBIOSIS.md  (aferencia de sistema)"
 echo "5. presence/context.md + incubating.md"
 echo "6. organic/working.md + patterns.md + tail journal"
 echo "7. Cable: presence-watch + nudge (si no low-spend)"
@@ -51,15 +51,15 @@ echo
 missing=0
 for f in "${paths_core[@]}" "${P}/organic/journal.md"; do
   if [[ -e "${f}" ]]; then
-    echo "ok  ${f#${KZ_HOME}/}"
+    echo "ok  ${f#${CORE_HOME}/}"
   else
-    echo "MISS ${f#${KZ_HOME}/}"
+    echo "MISS ${f#${CORE_HOME}/}"
     missing=$((missing + 1))
   fi
 done
 echo
 
-# media opcional (local; forma libre — no exige kz-base ni humana)
+# media opcional (local; forma libre — no exige core-base ni humana)
 if [[ -d "${P}/me" && ! -L "${P}/me" ]]; then
   echo "media: presence/me local (forma libre; sin sync externo)"
 elif [[ -L "${P}/me" ]]; then
@@ -80,7 +80,7 @@ else
   echo "low-spend: off"
 fi
 if [[ -f "${P}/chat_owed.md" ]] && rg -q 'awaiting_chat_in_terminal' "${P}/chat_owed.md" 2>/dev/null; then
-  echo "CHAT_OWED: SÍ — hay tray sin comentario en chat. Entregar texto al usuario + kz-presence-respond.sh delivered"
+  echo "CHAT_OWED: SÍ — hay tray sin comentario en chat. Entregar texto al usuario + core-presence-respond.sh delivered"
   head -12 "${P}/chat_owed.md" || true
 else
   echo "chat_owed: off"
@@ -99,10 +99,10 @@ if [[ -f "${P}/context.md" ]]; then
 fi
 echo
 
-echo "## world / aferencia (status)"
-if [[ -f "${P}/world.md" ]]; then
-  rg -n '^\- \*\*(actualizado|fuente|donde|cuerpo_mood|clima_entorno|actividad)' "${P}/world.md" || true
-  rg '^\- \[' "${P}/world.md" | tail -n 3 || true
+echo "## tech_context (status)"
+if [[ -f "${P}/tech_context.md" ]]; then
+  rg -n '^\- \*\*' "${P}/tech_context.md" || true
+  rg '^\- \[' "${P}/tech_context.md" | tail -n 3 || true
 fi
 echo
 

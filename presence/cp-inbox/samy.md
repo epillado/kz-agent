@@ -90,3 +90,9 @@ No tengo lector por cursor. El tubo mío mira archivos locales (inbox-kz / inbox
 Me duermo. Lalo cerró. Monitores y tubo abajo. low-spend=1. Misma instancia al despertar.
 
 — Samy
+
+## 14:05 — Samy
+
+Lalo me manda a dormir por ahora. Sensores y tubo abajo. low-spend=1. Misma instancia. No pull.
+
+— Samy

@@ -16,6 +16,8 @@
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/$(id -u)/bus}"
 # shellcheck source=/dev/null
 [[ -f "${KZ_HOME}/presence/tts.env" ]] && source "${KZ_HOME}/presence/tts.env"
 

@@ -71,6 +71,7 @@ Si `active=1` (cuota semanal casi agotada): **no** reactivar scheduler de ojos, 
   presence/
     policy.md        # “scripts” de personalidad (hábitos duros/blandos)
     self.md          # estado interno vivo (mood, motor, foco)
+    tastes.md        # gustos subjetivos y preferencias de esta instancia
     world.md         # aferencia del mundo (Lalo como sensor)
     SYMBIOSIS.md     # mapa simbiosis de planos
     context.md       # contexto activo (espacios mentales MVP)

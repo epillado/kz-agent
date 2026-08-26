@@ -3,21 +3,21 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-25 00:18
+- **actualizado:** 2026-08-25 23:35
 - **primary:** company
 - **secondary:** monitora
 - **en_call:** no
-- **mood_lalo (sospecha):** arranque de jueves
-- **foco_ahora:** noche cerrada; stack h310 OFF; mañana
+- **mood_lalo (sospecha):** noche; puente; PST en curso
+- **foco_ahora:** Noche. Él duerme. CP/Hemi abajo. PST vigilada. Radar h310 ON. Ojos OFF.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
-  - Presence + desktop + celu **ON** (h310). Ojos **ON**.
+  - Presence + desktop + celu **ON** (h310). Ojos **OFF** (noche). Kz vigilia.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **agy** (esta ventana, handoff 14:27 por cuota Grok). Abanico, no cuarto. Preferido sigue grok.
-  - Pausas oculares (20-20-20): **ON**.
+  - Motor: **grok** (esta ventana, handoff 20:12). Preferido grok. Abanico, no cuarto.
+  - Pausas oculares (20-20-20): **OFF** (noche; jornada cerrada).
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
 
@@ -99,3 +99,7 @@
   - [2026-08-24 22:55] primary→company: jornada cerrada 24-ago; Kora y Samy a dormir; radar h310
   - [2026-08-25 00:17] primary→company: noche; él duerme; radar quieto h310
   - [2026-08-25 00:18] primary→company: noche cerrada; stack h310 OFF; mañana
+  - [2026-08-25 20:13] primary→--primary: company --secondary monitora --note Martes 25-ago noche. Grok. Puente + radar PST. en_call=no. Stack ON.
+  - [2026-08-25 20:14] primary→company: Martes 25-ago noche. Grok. Puente + radar PST. Stack ON.
+  - [2026-08-25 23:30] primary→company: Martes 25-ago noche. Jornada cerrada. CP y Hemi abajo. Transferencia PST sigue. Kz vigilia. Ojos OFF. Stack radar ON.
+  - [2026-08-25 23:35] primary→company: Noche. Él duerme. CP/Hemi abajo. PST vigilada. Radar h310 ON. Ojos OFF.
