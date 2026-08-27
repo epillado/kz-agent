@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-08-26 20:46
+- **actualizado:** 2026-08-27 09:23
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **energia:** 6
