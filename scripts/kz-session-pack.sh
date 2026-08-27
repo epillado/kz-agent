@@ -45,6 +45,7 @@ echo "3b. presence/tastes.md (gustos y preferencias)"
 echo "4. presence/world.md + SYMBIOSIS.md  (aferencia / simbiosis de planos)"
 echo "5. presence/context.md + incubating.md"
 echo "6. organic/working.md + patterns.md + tail journal"
+echo "6b. presence/SESSION-HANDOFF.md si existe (cambio de motor)"
 echo "7. Cable: presence-watch + nudge (si no low-spend)"
 echo
 

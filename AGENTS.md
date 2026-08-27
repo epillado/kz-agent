@@ -199,6 +199,7 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-incubate.sh list|add|cooking|delivered # incubación
 ~/kz/scripts/kz-organic-consolidate.sh [--nudge|clear] # pase de “sueño” ligero
 
+~/kz/scripts/kz-radar.sh [once|--ensure|--peek]         # lector autónomo por cursor de bytes (independiente del motor)
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
 ~/kz/scripts/kz-say.sh "texto"                          # TTS (spd-say); **bloqueado si en_call=yes** (salvo KZ_TTS_FORCE=1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
@@ -207,7 +208,10 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-desktop-notif-watch.sh stop
 ```
 
-### Protocolo base
+### Protocolo base (100% independiente del motor — Grok, Agy, Claude, Hermanas)
+
+0. **Lectura de radar por cursor (2026-08-26):** Al iniciar o al recibir turno, ejecutar `~/kz/scripts/kz-radar.sh --ensure`. Lee `notif/stream.log`, `stream.log`, buzón SSH y tubo CP por cursor en `presence/kz-cursors/`.
+0b. **Regla de disparo inmediato por HORA (2026-08-26, duro):** Cualquier mensaje que proponga, pida o mueva una HORA (reunión, call, sesión, «a las X», daily) se alerta en el segundo cero en chat + tray sin esperar a consolidar ni esperar a eventos gordos.
 
 1. **Watch local:** ante cambios escribe `presence/pending.md` (snippets) y emite `CHANGED: …`. **Prohibido** dejar el aviso solo en “Movimiento en: X”. Default `KZ_PRESENCE_NUDGE=0`; soft ping pide **voltear a la terminal de Grok** mientras Kz comenta.
 2. **Agente al ver CHANGED / pending / loop / notif / fin de subagente ojos:**

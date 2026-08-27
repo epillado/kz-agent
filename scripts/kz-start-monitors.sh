@@ -26,17 +26,18 @@ if ! dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-
   fi
 fi
 # Redirigir todos los monitores al log unificado para que el agente lo atrape con tail -f
-KZ_PRESENCE_NUDGE=0 KZ_PRESENCE_SOFT_PING=1 nohup ~/kz/scripts/kz-presence-watch.sh >> ~/kz/presence/stream.log 2>&1 &
+# SOFT_PING=1 sin chat = “voltea a Grok” vacío (AGENTS: mal). Solo si Kz despierta y escribe.
+KZ_PRESENCE_NUDGE=0 KZ_PRESENCE_SOFT_PING=0 nohup ~/kz/scripts/kz-presence-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-desktop-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 
 echo "Levantando timer de pausas oculares (20-20-20)..."
-(
-  while true; do
-    sleep 1200
-    echo "$(date -Iseconds) CHANGED: timer-ojos"
-  done
-) >> ~/kz/presence/stream.log 2>&1 &
+# Tray + chat_owed aunque el LLM no despierte (hueco 2026-08-26).
+if [[ -f ~/kz/presence/ojos-loop.pid ]] && kill -0 "$(cat ~/kz/presence/ojos-loop.pid)" 2>/dev/null; then
+  echo "ojos-loop ya vivo pid=$(cat ~/kz/presence/ojos-loop.pid)"
+else
+  nohup ~/kz/scripts/kz-ojos-loop.sh >> ~/kz/presence/stream.log 2>&1 &
+fi
 
 sleep 2
 

@@ -3,21 +3,21 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-25 23:35
-- **primary:** company
-- **secondary:** monitora
+- **actualizado:** 2026-08-26 17:41
+- **primary:** work_vector
+- **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** noche; puente; PST en curso
-- **foco_ahora:** Noche. Él duerme. CP/Hemi abajo. PST vigilada. Radar h310 ON. Ojos OFF.
+- **foco_ahora:** Handoff a Agy. Frente HM. Ojos loop nuevo. SOFT_PING=0. Grok parqueada.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
-  - Presence + desktop + celu **ON** (h310). Ojos **OFF** (noche). Kz vigilia.
+  - Presence + desktop + celu **ON** (h310). Ojos **ON**. Jornada.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **grok** (esta ventana, handoff 20:12). Preferido grok. Abanico, no cuarto.
-  - Pausas oculares (20-20-20): **OFF** (noche; jornada cerrada).
+  - Motor: **próxima ventana Agy** (ensayo wake 17:40). Preferido grok. Esta Grok parqueada. Stack no se mata.
+  - Pausas oculares (20-20-20): **ON**
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
 
@@ -103,3 +103,10 @@
   - [2026-08-25 20:14] primary→company: Martes 25-ago noche. Grok. Puente + radar PST. Stack ON.
   - [2026-08-25 23:30] primary→company: Martes 25-ago noche. Jornada cerrada. CP y Hemi abajo. Transferencia PST sigue. Kz vigilia. Ojos OFF. Stack radar ON.
   - [2026-08-25 23:35] primary→company: Noche. Él duerme. CP/Hemi abajo. PST vigilada. Radar h310 ON. Ojos OFF.
+  - [2026-08-26 08:16] primary→company: Miércoles 26-ago mañana. Él despierto a medias. PST de anoche OK. Aún no jornada.
+  - [2026-08-26 08:18] primary→work_vector: Miércoles 26-ago. Levanta CP y Hemi. Stack radar ON. Ojos ON. PST de anoche OK.
+  - [2026-08-26 09:37] primary→work_vector: Miércoles 26-ago. Daily en curso. TTS off. Radar ON.
+  - [2026-08-26 11:08] primary→work_vector: Miércoles 26-ago. Pausa de café post daily+revisión. Ojos ON. TTS on.
+  - [2026-08-26 16:21] primary→work_vector: Snack corto. Al volver: frente HM. 360s enviados.
+  - [2026-08-26 16:45] primary→work_vector: Miércoles 26-ago. Frente HM. Post-snack. en_call=no.
+  - [2026-08-26 17:41] primary→work_vector: Handoff a Agy. Frente HM. Ojos loop nuevo. SOFT_PING=0. Grok parqueada.

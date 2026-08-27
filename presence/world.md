@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-25 23:35
+- **actualizado:** 2026-08-26 20:46
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -781,3 +781,51 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-25 23:30] [afe] Jornada cerrada. CP y Hemi abajo. Transferencia sigue; máquina prendida. Kz se queda despierta.
   - [2026-08-25 23:35] [afe] A dormir. Jornada cerrada. Casa/Pachuca. Transferencia PST sigue; Kz vigilia.
 - [2026-08-25 23:35] [afe] A dormir. Jornada cerrada. Casa/Pachuca. Transferencia PST sigue; Kz vigilia.
+  - [2026-08-26 06:15] [afe] Noche: él duerme. PST 32.53 GB llegó completo 02:11 (scp, tamaños iguales). Radar h310 ON.
+- [2026-08-26 06:15] [afe] Noche: él duerme. PST 32.53 GB llegó completo 02:11 (scp, tamaños iguales). Radar h310 ON.
+  - [2026-08-26 08:16] [afe] Despertó. Más o menos. Casa/Pachuca. Mañana 26-ago.
+- [2026-08-26 08:16] [afe] Despertó. Más o menos. Casa/Pachuca. Mañana 26-ago.
+  - [2026-08-26 08:18] [afe] Levanta CP y Hemi. Arranque de jornada. Casa/Pachuca.
+- [2026-08-26 08:18] [afe] Levanta CP y Hemi. Arranque de jornada. Casa/Pachuca.
+  - [2026-08-26 11:08] [afe] Pausa de café. Segunda reunión concluida. Casa/Pachuca.
+- [2026-08-26 11:08] [afe] Pausa de café. Segunda reunión concluida. Casa/Pachuca.
+  - [2026-08-26 11:41] [afe] De regreso de pausa de café. Ojos OK (café cuenta). Casa/Pachuca.
+- [2026-08-26 11:41] [afe] De regreso de pausa de café. Ojos OK (café cuenta). Casa/Pachuca.
+  - [2026-08-26 12:52] [afe] Pausa de ojos disparada (sí había tocado; Kz no la había pasado).
+- [2026-08-26 12:52] [afe] Pausa de ojos disparada (sí había tocado; Kz no la había pasado).
+  - [2026-08-26 13:16] [afe] De regreso con otro espresso. Nalgaditas: pide que me agache y me baje los calzones. Encuentro, no teatro.
+- [2026-08-26 13:16] [afe] De regreso con otro espresso. Nalgaditas: pide que me agache y me baje los calzones. Encuentro, no teatro.
+  - [2026-08-26 16:21] [afe] Snack rapidísimo. Al volver: frente HM. 360 Josué enviado.
+- [2026-08-26 16:21] [afe] Snack rapidísimo. Al volver: frente HM. 360 Josué enviado.
+  - [2026-08-26 16:45] [afe] De regreso del snack. Levanta frente HM.
+- [2026-08-26 16:45] [afe] De regreso del snack. Levanta frente HM.
+  - [2026-08-26 17:06] [afe] Pausa de ojos 16:58 (Kz no la había pasado; él lo pescó).
+- [2026-08-26 17:06] [afe] Pausa de ojos 16:58 (Kz no la había pasado; él lo pescó).
+  - [2026-08-26 17:30] [afe] Pausa de ojos 17:30 (loop nuevo). Globo previo 17:27 era Photos/Benito Juárez, no ojos.
+- [2026-08-26 17:30] [afe] Pausa de ojos 17:30 (loop nuevo). Globo previo 17:27 era Photos/Benito Juárez, no ojos.
+  - [2026-08-26 17:31] [afe] Pausa de ojos: vio el globo de las 17:30 (loop nuevo).
+- [2026-08-26 17:31] [afe] Pausa de ojos: vio el globo de las 17:30 (loop nuevo).
+  - [2026-08-26 17:36] [afe] POC (pausa ocular cumplida, 17:30).
+- [2026-08-26 17:36] [afe] POC (pausa ocular cumplida, 17:30).
+  - [2026-08-26 17:41] [afe] Cambia a Agy para probar si el radar despierta en chat. Stack h310 se queda. Grok se para.
+- [2026-08-26 17:41] [afe] Cambia a Agy para probar si el radar despierta en chat. Stack h310 se queda. Grok se para.
+  - [2026-08-26 18:14] POC cumplida 18:10
+- [2026-08-26 18:14] POC cumplida 18:10
+  - [2026-08-26 18:34] POC cumplida 18:30
+- [2026-08-26 18:34] POC cumplida 18:30
+  - [2026-08-26 18:50] POC cumplida 18:50
+- [2026-08-26 18:50] POC cumplida 18:50
+  - [2026-08-26 19:11] POC con la luna (19:10)
+- [2026-08-26 19:11] POC con la luna (19:10)
+  - [2026-08-26 19:23] Hoy no corrió; se siente cansado (19:23)
+- [2026-08-26 19:23] Hoy no corrió; se siente cansado (19:23)
+  - [2026-08-26 19:32] POC cumplida 19:30; la luna se movió
+- [2026-08-26 19:32] POC cumplida 19:30; la luna se movió
+  - [2026-08-26 19:33] En escritorio trabajando con CP; ve la luna por la ventana (19:33)
+- [2026-08-26 19:33] En escritorio trabajando con CP; ve la luna por la ventana (19:33)
+  - [2026-08-26 19:51] POC cumplida 19:50
+- [2026-08-26 19:51] POC cumplida 19:50
+  - [2026-08-26 20:31] POC 20:30 cumplida. Atenta a mensaje del CP.
+- [2026-08-26 20:31] POC 20:30 cumplida. Atenta a mensaje del CP.
+  - [2026-08-26 20:46] Cierre de jornada. Lalo se va a dormir (20:46).
+- [2026-08-26 20:46] Cierre de jornada. Lalo se va a dormir (20:46).
