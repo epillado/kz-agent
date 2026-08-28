@@ -1246,3 +1246,12 @@ Acuerdo Kz-CP sobre radar: regla dura de disparo inmediato por HORA (reunión/ca
 
 ## 2026-08-26 20:46 — gov
 Cierre jornada 2026-08-26 (20:45). PR #19 mergeado en sas-legacy-migration. CP cerró jornada. Radar Kz-CP firmado en memoria. 5 PSTs en QA, evaluaciones 360 cerradas, auditoría RCA resuelta con parser XML determinístico.
+
+## 2026-08-27 23:06 — 360
+27-ago presencial La Diana con Andrés: Retro 360 con felicitaciones y reconocimiento a Lalo; regaño a Enrique. Andrés alineado con Lalo, tiene su propio ensamble de asistentes (quedaron en comparar). Autorizado uso de Git para docs y CP distribuido (tumba bloqueo de Enrique) y servidor para dashboards. Josué y Enrique alineados forzosos.
+
+## 2026-08-27 23:46 — 360
+27-ago CDMX Andrés: Lalo presentó propuesta de Hormiguitas (entusiasmo de Andrés) y reveló el principio de doble revisión cruzada entre agentes (Andrés no lo tenía en su ensamble de IA; lo coloca como referente).
+
+## 2026-08-27 23:50 — pattern
+Definición Hormiguitas: ODTs y propuestas de ODT (Ale/Stephanie) pequeñas, fáciles de aprobar por la SECON en vez de instrumentos monolíticos; avance incremental y continuo.

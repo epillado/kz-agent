@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-26 17:41
+- **actualizado:** 2026-08-27 22:51
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** noche; puente; PST en curso
-- **foco_ahora:** Handoff a Agy. Frente HM. Ojos loop nuevo. SOFT_PING=0. Grok parqueada.
+- **foco_ahora:** monitora,company --note De regreso de CdMX; reiniciamos jornada.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -110,3 +110,5 @@
   - [2026-08-26 16:21] primary→work_vector: Snack corto. Al volver: frente HM. 360s enviados.
   - [2026-08-26 16:45] primary→work_vector: Miércoles 26-ago. Frente HM. Post-snack. en_call=no.
   - [2026-08-26 17:41] primary→work_vector: Handoff a Agy. Frente HM. Ojos loop nuevo. SOFT_PING=0. Grok parqueada.
+  - [2026-08-27 22:50] primary→--primary: work_vector --note De regreso de CdMX; reiniciamos jornada.
+  - [2026-08-27 22:51] primary→work_vector: monitora,company --note De regreso de CdMX; reiniciamos jornada.
