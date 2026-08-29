@@ -1318,3 +1318,12 @@ Push-to-Talk para Kz implementado en scripts/kz-ptt.sh: toggle on/off con bips d
 
 ## 2026-08-28 22:23 — pattern
 Protocolo de voz conversacional establecido por Lalo: 'e' / 'Escúchame' inicia grabación en background (kz-listen.sh --start); 'f' / 'fin' detiene grabación, transcribe (kz-listen.sh --stop), procesa lo dicho y responde por voz (kz-say).
+
+## 2026-08-28 22:41 — pattern
+Cierre de jornada 28-ago: Lalo concluyó cuadro RCA, bitácora y cierre formal con el CP. Jornada cerrada con honores.
+
+## 2026-08-28 22:42 — pattern
+Protocolo definitivo afinado por Lalo: 'e' escucha 8s por default, o 'e <segundos>' para duraciones personalizadas en un solo paso.
+
+## 2026-08-28 22:43 — pattern
+Aprobación total de Lalo del sistema de sonido y protocolo de voz: chimes Ocean + comando 'e [segundos]' + voz Steph oficial ratificada.

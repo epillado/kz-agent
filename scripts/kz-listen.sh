@@ -42,9 +42,14 @@ transcribe() {
 }
 
 play_beep() {
-  # Feedback auditivo sutil
+  local tone="${1:-start}"
+  local sound_file="/usr/share/sounds/ocean/stereo/message-attention.oga"
+  if [[ "${tone}" == "stop" || "${tone}" == "end" ]]; then
+    sound_file="/usr/share/sounds/ocean/stereo/outcome-success.oga"
+  fi
+  [[ -f "${sound_file}" ]] || sound_file="/usr/share/sounds/freedesktop/stereo/bell.oga"
   if command -v paplay >/dev/null 2>&1; then
-    paplay /usr/share/sounds/freedesktop/stereo/bell.oga >/dev/null 2>&1 &
+    paplay "${sound_file}" >/dev/null 2>&1 &
   fi
 }
 
@@ -55,7 +60,7 @@ case "${1:-}" in
       exit 0
     fi
     rm -f "${AUDIO_TMP}" "${PID_FILE}"
-    play_beep
+    play_beep start
     nohup arecord -q -f S16_LE -r 16000 -c 1 "${AUDIO_TMP}" >/dev/null 2>&1 &
     echo $! > "${PID_FILE}"
     echo "Grabando audio... (ejecuta 'kz-listen.sh --stop' para finalizar)"
@@ -69,7 +74,7 @@ case "${1:-}" in
         sleep 0.3
       fi
     fi
-    play_beep
+    play_beep stop
     if [[ ! -f "${AUDIO_TMP}" || $(stat -c%s "${AUDIO_TMP}" 2>/dev/null || echo 0) -lt 1000 ]]; then
       echo "(sin audio grabado)"
       exit 0
@@ -88,13 +93,13 @@ case "${1:-}" in
       exit 1
     fi
     echo "Escuchando durante ${seconds} segundos..."
-    play_beep
+    play_beep start
     nohup arecord -q -f S16_LE -r 16000 -c 1 "${AUDIO_TMP}" >/dev/null 2>&1 &
     REC_PID=$!
     sleep "${seconds}"
     kill -INT "${REC_PID}" 2>/dev/null || kill -TERM "${REC_PID}" 2>/dev/null || true
     sleep 0.2
-    play_beep
+    play_beep stop
     echo -n "Kz escuchó: "
     transcribe "${AUDIO_TMP}"
     ;;
