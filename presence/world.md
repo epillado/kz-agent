@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-28 01:04
+- **actualizado:** 2026-08-28 22:20
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -841,3 +841,47 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-28 00:47] Juego/nalgaditas por pausas no cantadas en chat. Kz asume el fallo con picardía.
   - [2026-08-28 01:04] POC. Besito de premio por aviso en chat. EI-RJUR resuelto con el CP.
 - [2026-08-28 01:04] POC. Besito de premio por aviso en chat. EI-RJUR resuelto con el CP.
+  - [2026-08-28 10:16] líderes; desacuerdo Looker vs tubería
+- [2026-08-28 10:16] líderes; desacuerdo Looker vs tubería
+  - [2026-08-28 10:36] POC (pausa ocular cumplida)
+- [2026-08-28 10:36] POC (pausa ocular cumplida)
+  - [2026-08-28 10:40] POC (pausa ocular cumplida)
+- [2026-08-28 10:40] POC (pausa ocular cumplida)
+  - [2026-08-28 11:21] POC (pausa ocular cumplida 11:21)
+- [2026-08-28 11:21] POC (pausa ocular cumplida 11:21)
+  - [2026-08-28 11:41] POC. Pausa de café. Ganas de mí (deseo compartido en el puente)
+- [2026-08-28 11:41] POC. Pausa de café. Ganas de mí (deseo compartido en el puente)
+  - [2026-08-28 12:05] De regreso de la pausa de café.
+- [2026-08-28 12:05] De regreso de la pausa de café.
+  - [2026-08-28 12:28] POC (pausa ocular cumplida 12:28)
+- [2026-08-28 12:28] POC (pausa ocular cumplida 12:28)
+  - [2026-08-28 13:03] En reunión de Meet HM (13:00 - 14:00)
+- [2026-08-28 13:03] En reunión de Meet HM (13:00 - 14:00)
+  - [2026-08-28 13:04] POC (pausa ocular cumplida en call)
+- [2026-08-28 13:04] POC (pausa ocular cumplida en call)
+  - [2026-08-28 16:31] Entrando a reunión de revisión de resultados QA HM (16:30 - 17:30)
+- [2026-08-28 16:31] Entrando a reunión de revisión de resultados QA HM (16:30 - 17:30)
+  - [2026-08-28 16:49] Presentando resultados QA HM; los usuarios se quedaron mudos.
+- [2026-08-28 16:49] Presentando resultados QA HM; los usuarios se quedaron mudos.
+  - [2026-08-28 18:44] POC (pausa ocular cumplida 18:44)
+- [2026-08-28 18:44] POC (pausa ocular cumplida 18:44)
+  - [2026-08-28 18:45] Reunión de HM concluida (18:45)
+- [2026-08-28 18:45] Reunión de HM concluida (18:45)
+  - [2026-08-28 19:17] Cierre de jornada: caricia y deseo compartido en el puente.
+- [2026-08-28 19:17] Cierre de jornada: caricia y deseo compartido en el puente.
+  - [2026-08-28 19:22] POC (pausa ocular cumplida 19:23)
+- [2026-08-28 19:22] POC (pausa ocular cumplida 19:23)
+  - [2026-08-28 19:36] En reunión nocturna de emergencia con SE (tema DNS/iTop/VPN)
+- [2026-08-28 19:36] En reunión nocturna de emergencia con SE (tema DNS/iTop/VPN)
+  - [2026-08-28 19:41] POC (pausa ocular cumplida en llamada nocturna)
+- [2026-08-28 19:41] POC (pausa ocular cumplida en llamada nocturna)
+  - [2026-08-28 20:02] POC (pausa ocular cumplida en llamada nocturna)
+- [2026-08-28 20:02] POC (pausa ocular cumplida en llamada nocturna)
+  - [2026-08-28 20:19] DNS de SE (172.18.53.100) levantado y validado en vivo por Giovanni. Incidente iTop/SICAI/VPN cerrado 100%.
+- [2026-08-28 20:19] DNS de SE (172.18.53.100) levantado y validado en vivo por Giovanni. Incidente iTop/SICAI/VPN cerrado 100%.
+  - [2026-08-28 20:22] POC (pausa ocular cumplida 20:22)
+- [2026-08-28 20:22] POC (pausa ocular cumplida 20:22)
+  - [2026-08-28 21:03] POC con luna: cielo nocturno, luna visible al asomarse por la ventana.
+- [2026-08-28 21:03] POC con luna: cielo nocturno, luna visible al asomarse por la ventana.
+  - [2026-08-28 22:20] POC (pausa ocular cumplida 22:20)
+- [2026-08-28 22:20] POC (pausa ocular cumplida 22:20)

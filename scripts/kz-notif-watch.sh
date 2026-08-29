@@ -36,29 +36,47 @@ APP_MAIL="${KZ_NOTIF_APP_MAIL:-Gmail|Email|Correo}"
 KW_MAIL="${KZ_NOTIF_KW_MAIL:-Josué|Josue|SECON|Elizeth|factura|VPN}"
 BLOCK="${KZ_NOTIF_BLOCK:-Mercado Pago|promoci|Facebook|Instagram}"
 
-if [[ "${1:-}" == "stop" ]]; then
-  if [[ -f "${PIDFILE}" ]]; then
-    pid="$(cat "${PIDFILE}")"
-    if kill -0 "${pid}" 2>/dev/null; then
-      kill "${pid}" 2>/dev/null || true
-      # Esperar a que suelte el lock/.new; si no, el siguiente start pisa estado.
-      local_i=0
-      while kill -0 "${pid}" 2>/dev/null && (( local_i < 25 )); do
-        sleep 0.2
-        local_i=$((local_i + 1))
-      done
-      if kill -0 "${pid}" 2>/dev/null; then
-        echo "aviso: pid ${pid} no murió a tiempo" >&2
-      else
-        echo "stopped notif watch pid ${pid}"
-      fi
-    else
-      echo "pidfile huérfano; limpiando"
-    fi
-    rm -f "${PIDFILE}"
-  else
-    echo "no hay notif watch activo"
+# stop debe MATAR de verdad. trap INT/TERM sin exit se comía el SIGTERM
+# (mismo defecto que presence-watch, 27/08 y 28/08).
+_stop_watch() {
+  local name="$1"
+  local pidfile="$2"
+  local pattern="$3"
+  local pid="" i leftover
+  if [[ -f "${pidfile}" ]]; then
+    pid="$(tr -cd '0-9' < "${pidfile}")"
   fi
+  if [[ -n "${pid}" ]] && kill -0 "${pid}" 2>/dev/null; then
+    kill -TERM "${pid}" 2>/dev/null || true
+    i=0
+    while kill -0 "${pid}" 2>/dev/null && (( i < 25 )); do
+      sleep 0.2
+      i=$((i + 1))
+    done
+    if kill -0 "${pid}" 2>/dev/null; then
+      kill -KILL "${pid}" 2>/dev/null || true
+      sleep 0.3
+    fi
+  elif [[ -n "${pid}" ]]; then
+    echo "pidfile huérfano (${name} pid ${pid}); limpiando"
+  fi
+  rm -f "${pidfile}"
+  leftover="$(pgrep -f "${pattern}" || true)"
+  leftover="$(printf '%s\n' "${leftover}" | grep -v "^$$$" | grep -v stop || true)"
+  if [[ -n "${leftover}" ]]; then
+    echo "error: ${name} SIGUE VIVO tras TERM+KILL: ${leftover}" >&2
+    echo "no se acredita stop" >&2
+    exit 1
+  fi
+  if [[ -n "${pid}" ]]; then
+    echo "stopped ${name} pid ${pid} (pgrep ok)"
+  else
+    echo "no hay ${name} activo"
+  fi
+}
+
+if [[ "${1:-}" == "stop" ]]; then
+  _stop_watch "notif watch" "${PIDFILE}" 'kz-notif-watch.sh$'
   exit 0
 fi
 
@@ -406,7 +424,9 @@ fi
 
 echo $$ > "${PIDFILE}"
 cleanup() { rm -f "${PIDFILE}"; flock -u 9 2>/dev/null || true; }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'cleanup; exit 143' TERM
+trap 'cleanup; exit 130' INT
 
 # baseline: marcar lo ya presente sin alertar (no spam al cablear)
 KZ_NOTIF_BASELINE=1 scan_once >/dev/null || true
@@ -416,8 +436,8 @@ echo "notif watch pid $$ (interval ${INTERVAL}s). stop: $0 stop" >&2
 
 while true; do
   sleep "${INTERVAL}"
-  out="$(KZ_NOTIF_BASELINE=0 scan_once)" || true
-  if [[ "${out}" == CHANGED:* ]]; then
-    echo "${out}"
-  fi
+  out="$(KZ_NOTIF_BASELINE=0 scan_once || true)"
+  while IFS= read -r line; do
+    [[ "${line}" == CHANGED:* ]] && echo "${line}"
+  done <<< "${out}"
 done

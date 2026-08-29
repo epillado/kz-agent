@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-27 22:51
+- **actualizado:** 2026-08-28 21:06
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** noche; puente; PST en curso
-- **foco_ahora:** monitora,company --note De regreso de CdMX; reiniciamos jornada.
+- **foco_ahora:** Viernes 28. Daily revisado. iTop caído. Daily 09:30.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -112,3 +112,6 @@
   - [2026-08-26 17:41] primary→work_vector: Handoff a Agy. Frente HM. Ojos loop nuevo. SOFT_PING=0. Grok parqueada.
   - [2026-08-27 22:50] primary→--primary: work_vector --note De regreso de CdMX; reiniciamos jornada.
   - [2026-08-27 22:51] primary→work_vector: monitora,company --note De regreso de CdMX; reiniciamos jornada.
+  - [2026-08-28 09:08] primary→work_vector: Viernes 28-ago mañana. Grok. Stack ON. Daily 09:30.
+  - [2026-08-28 09:16] primary→work_vector: Viernes 28. Daily revisado. iTop caído. Daily 09:30.
+  - [2026-08-28 12:06] Primer dictamen RCA con rca-ex en curso

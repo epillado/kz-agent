@@ -2,7 +2,14 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-08-18 (W28 registro hot, anti-teatro)
+Actualizado: 2026-08-28 (W40 despertador por motor)
+
+---
+
+### W40 — Despertador por motor (sensor agnóstico; turno no)
+- **Estado:** promoted (2026-08-28; Lalo: no re-solucionar cada sesión; persistir ambas y aplicar la adecuada al despertar)
+- **Hecho:** Agy despierta el chat con cron `*/2`. Grok no: `tail` en background no inyecta turno. Recetas en `presence/WAKE.md`. Arranque: `kz-wake.sh`.
+- **Promovido a:** AGENTS 7b + loops, GEMINI.md arranque, CLAUDE.md, policy P0.17, scripts `kz-wake.sh` / `kz-wake-grok-feed.sh`.
 
 ---
 

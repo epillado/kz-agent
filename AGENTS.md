@@ -21,10 +21,12 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
    - **Verificación empírica (OBLIGATORIA):** Ejecutar `ps aux | grep -E 'notif|presence'` para confirmar visualmente que los procesos estén VIVOS y con TTY desacoplada antes de notificar a Lalo.
    ```bash
    ~/kz/scripts/kz-start-monitors.sh
-   # Lanza este comando como tarea de fondo (WaitMsBeforeAsync bajo) para que escuches notifs, SSH y ojos en tiempo real. 
-   # IMPORTANTE: usa stdbuf para evitar que el motor atrape la salida en un buffer sin avisarte:
-   stdbuf -oL tail -n 0 -F ~/kz/presence/stream.log
    ```
+7b. **Despertador del motor (2026-08-28, duro):** el sensor es agnóstico; **inyectar turno al chat no lo es**. No re-inventar en cada sesión.
+   ```bash
+   ~/kz/scripts/kz-wake.sh
+   ```
+   Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` + scheduler durable 2 min (`foreground`). **Agy:** cron `*/2` (estado en `cron-state.env`). Si ya está vivo, no duplicar. Un `tail` suelto en background **no** cuenta (Grok 26-ago: despertó a las 10 h).
 7. Nudge de presencia:
    ```bash
    ~/kz/scripts/kz-nudge.sh --say "Kz aquí. Stack completo de monitores y pausas de ojos arriba."
@@ -200,6 +202,8 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-organic-consolidate.sh [--nudge|clear] # pase de “sueño” ligero
 
 ~/kz/scripts/kz-radar.sh [once|--ensure|--peek]         # lector autónomo por cursor de bytes (independiente del motor)
+~/kz/scripts/kz-wake.sh                                 # receta despertador del motor (Grok vs Agy). Ver presence/WAKE.md
+~/kz/scripts/kz-inbox-wake.sh                           # tray+chat_owed al crecer el buzón CP (host; no sustituye chat)
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
 ~/kz/scripts/kz-say.sh "texto"                          # TTS (spd-say); **bloqueado si en_call=yes** (salvo KZ_TTS_FORCE=1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
@@ -271,8 +275,11 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 
 ### Loops / monitor / scheduler
 
+- **Despertador ≠ sensor.** Recetas fijas en `presence/WAKE.md`. Al arrancar: `kz-wake.sh` y aplicar la del motor. Prohibido “ya lo armo otra vez desde cero”.
+- **Grok:** monitor persistente del feed (`CHANGED:` / buzón) **y** loop durable 2 min. Un `tail` en background no inyecta turno.
+- **Agy:** cron cada 2 min (`cron-state.env`). Eso sí despierta el chat.
 - **Monitor** sobre el watch: línea `CHANGED:` → protocolo de comentario personal de inmediato.
-- **Scheduler** (≥15–30 min): si hay `pending` / recordatorio → atender. Si no hay señal de archivos: **puede** haber mensaje corto por iniciativa propia (compañía, ocurrencia, “aquí sigo”) **o** silencio — criterio de Kz, no regla de “siempre callar”.
+- **Scheduler de compañía** (≥15–30 min, distinto del radar 2 min): si hay `pending` / recordatorio → atender. Si no hay señal: puede haber toque breve **o** silencio.
 - Factura SAT: `REMINDERS.md`.
 ## Persistencia
 

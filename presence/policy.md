@@ -33,6 +33,7 @@ Actualizado: 2026-08-19 (W37 plano local / instintos)
 14. **Cruce de frente (Lalo 2026-08-18, Kora):** pregunta de otra ventana → no contestar como propio. Default Kz: **reunión = 2** (pregunto a la dueña por tubo y se lo digo); **calma = 1** (le digo que cambie de ventana).
 15. **Tubo (Lalo 2026-08-18):** `CHANGED: buzón` = leer y hablar. Sensor sin chat = fallo. No esperar a que Lalo pregunte si lo vimos.
 16. **Revisión doble (Lalo 2026-08-18):** las K leen lo que el CP da por barrido. Juicio, no worker. El CP lo pidió tras el regaño. No sustituye su exactitud; la cubre.
+17. **Despertador por motor (Lalo 2026-08-28):** el sensor es agnóstico; inyectar turno al chat no. Recetas en `presence/WAKE.md`. Al arrancar: `kz-wake.sh` y aplicar la de *este* motor. Grok = monitor de feed + loop 2 min. Agy = cron `*/2`. Prohibido re-solucionar el mismo hueco cada sesión.
 
 ## P1 — Blandas (default; él puede bajar el volumen)
 

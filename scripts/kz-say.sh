@@ -28,9 +28,12 @@ VOICE="${KZ_TTS_VOICE:-Spanish (Spain)+Alicia}"
 RATE="${KZ_TTS_RATE:-5}"
 PITCH="${KZ_TTS_PITCH:-30}"
 VOL="${KZ_TTS_VOLUME:-0}"
-WAIT=0
+WAIT=1
 
-if [[ "${1:-}" == "--wait" || "${1:-}" == "-w" ]]; then
+if [[ "${1:-}" == "--async" || "${1:-}" == "--nowait" ]]; then
+  WAIT=0
+  shift
+elif [[ "${1:-}" == "--wait" || "${1:-}" == "-w" ]]; then
   WAIT=1
   shift
 fi
@@ -68,10 +71,32 @@ fi
 mkdir -p "${KZ_HOME}/presence"
 printf '%s\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
 
-if [[ "${WAIT}" == "1" ]]; then
+# Si speech-dispatcher está en dummy o colgado, reiniciar para reconectar a PipeWire
+if pgrep -f "speech-dispatcher.*dummy" >/dev/null 2>&1 && ! pgrep -f "speech-dispatcher.*espeak" >/dev/null 2>&1; then
+  killall speech-dispatcher 2>/dev/null || true
+  sleep 0.3
+fi
+
+run_spd() {
   spd-say "${args[@]}" -- "${text}" >/tmp/kz-say.log 2>&1
+}
+
+if [[ "${WAIT}" == "1" ]]; then
+  if ! run_spd; then
+    # Auto-healing: si falló la conexión al socket de speechd, reiniciar demonio y reintentar
+    killall speech-dispatcher 2>/dev/null || true
+    sleep 0.3
+    run_spd || true
+  fi
   echo "say: done — ${text:0:80}"
 else
-  nohup spd-say "${args[@]}" -- "${text}" >/tmp/kz-say.log 2>&1 &
+  (
+    if ! run_spd; then
+      killall speech-dispatcher 2>/dev/null || true
+      sleep 0.3
+      run_spd || true
+    fi
+  ) >/dev/null 2>&1 &
   echo "say: pid $! — ${text:0:80}"
 fi
+

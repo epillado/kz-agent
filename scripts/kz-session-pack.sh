@@ -47,6 +47,7 @@ echo "5. presence/context.md + incubating.md"
 echo "6. organic/working.md + patterns.md + tail journal"
 echo "6b. presence/SESSION-HANDOFF.md si existe (cambio de motor)"
 echo "7. Cable: presence-watch + nudge (si no low-spend)"
+echo "7b. Despertador: presence/WAKE.md + kz-wake.sh (receta Grok vs Agy; aplicar, no reinventar)"
 echo
 
 missing=0

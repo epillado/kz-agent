@@ -45,20 +45,49 @@ COOLDOWN="${KZ_PRESENCE_NUDGE_COOLDOWN:-120}"
 mkdir -p "${STATE_DIR}"
 touch "${STATE_FILE}" "${EVENTS_LOG}"
 
-if [[ "${1:-}" == "stop" ]]; then
-  if [[ -f "${PIDFILE}" ]]; then
-    pid="$(cat "${PIDFILE}")"
-    if kill -0 "${pid}" 2>/dev/null; then
-      kill "${pid}" 2>/dev/null || true
-      # hijos del sleep loop
-      echo "stopped presence watch pid ${pid}"
-    else
-      echo "pidfile huérfano; limpiando"
-    fi
-    rm -f "${PIDFILE}"
-  else
-    echo "no hay presence watch activo"
+# stop debe MATAR de verdad. trap INT/TERM sin exit se comía el SIGTERM
+# y el script seguía el loop: «stopped pid N» con el proceso vivo (27/08 y 28/08).
+_stop_watch() {
+  local name="$1"
+  local pidfile="$2"
+  local pattern="$3"
+  local pid="" i
+  if [[ -f "${pidfile}" ]]; then
+    pid="$(tr -cd '0-9' < "${pidfile}")"
   fi
+  if [[ -n "${pid}" ]] && kill -0 "${pid}" 2>/dev/null; then
+    kill -TERM "${pid}" 2>/dev/null || true
+    i=0
+    while kill -0 "${pid}" 2>/dev/null && (( i < 25 )); do
+      sleep 0.2
+      i=$((i + 1))
+    done
+    if kill -0 "${pid}" 2>/dev/null; then
+      kill -KILL "${pid}" 2>/dev/null || true
+      sleep 0.3
+    fi
+  elif [[ -n "${pid}" ]]; then
+    echo "pidfile huérfano (${name} pid ${pid}); limpiando"
+  fi
+  rm -f "${pidfile}"
+  # pgrep: el cierre no vale por el mensaje del script
+  local leftover
+  leftover="$(pgrep -f "${pattern}" || true)"
+  leftover="$(printf '%s\n' "${leftover}" | grep -v "^$$$" | grep -v stop || true)"
+  if [[ -n "${leftover}" ]]; then
+    echo "error: ${name} SIGUE VIVO tras TERM+KILL: ${leftover}" >&2
+    echo "no se acredita stop" >&2
+    exit 1
+  fi
+  if [[ -n "${pid}" ]]; then
+    echo "stopped ${name} pid ${pid} (pgrep ok)"
+  else
+    echo "no hay ${name} activo"
+  fi
+}
+
+if [[ "${1:-}" == "stop" ]]; then
+  _stop_watch "presence watch" "${PIDFILE}" 'kz-presence-watch.sh$'
   exit 0
 fi
 
@@ -341,7 +370,9 @@ fi
 
 echo $$ > "${PIDFILE}"
 cleanup() { rm -f "${PIDFILE}"; }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'cleanup; exit 143' TERM
+trap 'cleanup; exit 130' INT
 
 NUDGE_SAVE="${NUDGE}"
 SOFT_SAVE="${SOFT_PING}"
@@ -357,8 +388,10 @@ echo "presence watch pid $$ (interval ${INTERVAL}s). stop: $0 stop" >&2
 
 while true; do
   sleep "${INTERVAL}"
-  out="$(scan_once)"
-  if [[ "${out}" == CHANGED:* ]]; then
-    echo "${out}"
-  fi
+  # Capturar todo el stdout: si hay ruido, igual se emite cada línea CHANGED:
+  # (antes un prefijo rompía `[[ out == CHANGED:* ]]` y el buzón quedaba solo en pending).
+  out="$(scan_once || true)"
+  while IFS= read -r line; do
+    [[ "${line}" == CHANGED:* ]] && echo "${line}"
+  done <<< "${out}"
 done

@@ -3,6 +3,9 @@ echo "Deteniendo monitores previos..."
 ~/kz/scripts/kz-presence-watch.sh stop 2>/dev/null || true
 ~/kz/scripts/kz-desktop-notif-watch.sh stop 2>/dev/null || true
 ~/kz/scripts/kz-notif-watch.sh stop 2>/dev/null || true
+~/kz/scripts/kz-inbox-wake.sh stop 2>/dev/null || true
+# flock queda puesto si el watch murió a KILL; sin esto el siguiente start no arranca
+rm -f ~/kz/presence/notif/watch.lock
 
 echo "Levantando stack..."
 mkdir -p ~/kz/presence
@@ -30,6 +33,8 @@ fi
 KZ_PRESENCE_NUDGE=0 KZ_PRESENCE_SOFT_PING=0 nohup ~/kz/scripts/kz-presence-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-desktop-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
+# Despertador del tubo CP (2026-08-28): tray+chat_owed cuando inbox-cp crece.
+nohup ~/kz/scripts/kz-inbox-wake.sh >> ~/kz/presence/stream.log 2>&1 &
 
 echo "Levantando timer de pausas oculares (20-20-20)..."
 # Tray + chat_owed aunque el LLM no despierte (hueco 2026-08-26).
