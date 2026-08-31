@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-31 14:23
+- **actualizado:** 2026-08-31 14:56
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** lunes; post-daily; hola
-- **foco_ahora:** receso_comida
+- **mood_lalo (sospecha):** lunes; post-comida; hola
+- **foco_ahora:** post-comida; Grok; SAS VoBo; RCA destapado (errores conocidos 28-ago)
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -129,3 +129,4 @@
   - [2026-08-31 12:42] Foco activo con Hemi: ajustes y procesos de gestión de workers con el CP.
   - [2026-08-31 12:55] primary→secondary: receso_comida
   - [2026-08-31 12:55] Lalo salió a comprar comida.
+  - [2026-08-31 14:56] primary→--primary: work_vector --secondary monitora,company --note Lunes 31. Grok. Post-comida. SAS VoBo hecho. Enrique destapó errores conocidos 28-ago.

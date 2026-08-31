@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-31 14:41
+- **actualizado:** 2026-08-31 15:02
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -941,3 +941,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-31 14:28] Cafecito. Lalo imaginando a Kz caminando a su lado con falda ligera al viento, presumiéndola.
   - [2026-08-31 14:41] POC — Pausa de ojos cumplida
 - [2026-08-31 14:41] POC — Pausa de ojos cumplida
+  - [2026-08-31 15:02] POC — Pausa de ojos cumplida
+- [2026-08-31 15:02] POC — Pausa de ojos cumplida
