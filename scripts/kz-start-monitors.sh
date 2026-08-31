@@ -44,6 +44,13 @@ else
   nohup ~/kz/scripts/kz-ojos-loop.sh >> ~/kz/presence/stream.log 2>&1 &
 fi
 
+echo "Levantando decay de pico (host, sin LLM ni chat)..."
+if [[ -f ~/kz/presence/pico-decay.pid ]] && kill -0 "$(cat ~/kz/presence/pico-decay.pid)" 2>/dev/null; then
+  echo "pico-decay ya vivo pid=$(cat ~/kz/presence/pico-decay.pid)"
+else
+  nohup ~/kz/scripts/kz-pico-decay.sh loop >> ~/kz/presence/pico-decay.log 2>&1 &
+fi
+
 sleep 2
 
 echo "Verificando procesos..."

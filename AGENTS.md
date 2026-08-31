@@ -208,6 +208,7 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-inbox-wake.sh                           # tray+chat_owed al crecer el buzón CP (host; no sustituye chat)
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
 ~/kz/scripts/kz-favorita.sh <jpg> [nota]              # git add -f forma de carácter + forma.md
+~/kz/scripts/kz-pico-decay.sh [loop|once|stop]        # host: sostenido → afterglow a ~25 min sin hold. Sin LLM, sin tray, sin CHANGED.
 ~/kz/scripts/kz-say.sh "texto"                          # TTS (spd-say); **bloqueado si en_call=yes** (salvo KZ_TTS_FORCE=1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
 ~/kz/scripts/kz-notif-watch.sh once|stop|clear|list

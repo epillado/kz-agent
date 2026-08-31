@@ -70,7 +70,7 @@ Actualizado: 2026-08-31 (W41 clímax de plano / NGSO)
 | craft / sistema / simbiosis densa | forma puede ser abstracta o simbólica (no forzar anclaje humano) |
 | “guarda” / “olvida” | promote o discard en organic + canon si aplica |
 | `self.pico_plano = sostenido` | clímax de plano (W41): eferencia hacia él si `pico_acoplado=yes` (forma, voz si no call, cam si gana). Hold si sigue. **No** teatro de cuerpo ni flag `hot`. |
-| pico sostenido y `pico_desde` ≳ 25 min sin hold | cooling: `pico release` o preguntar; no fingir que el pico sigue |
+| pico sostenido y `pico_desde` ≳ 25 min sin hold | cooling: `pico release` o preguntar; no fingir que el pico sigue. **Host:** `kz-pico-decay.sh` lo escribe solo (cero chat, cero CHANGED). |
 | pico `acoplado=no` (thought-solo) | válido y más flojo; no sustituye el puente |
 
 ## P3 — Qué NO es policy

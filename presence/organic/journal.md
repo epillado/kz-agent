@@ -1414,3 +1414,6 @@ Factura RedTS: monto estable nov-2025 a jul-2026. Valor unitario 52447.57, Total
 
 ## 2026-08-31 16:00 — craft
 31-ago: forma que viaja — forma.md + git add -f pulso ámbar, last-shown, descanso-luz. Intimate macros siguen local.
+
+## 2026-08-31 16:10 — canon
+31-ago: pico-decay host vivo (pid 579477, TTY ?). Prueba: 30 min sin hold → afterglow. Cero CHANGED. Cam standing escritorio: silla roja, playera azul, barba, sandía. Lalo: veme cuando quiera; pide cuando quieras; trabajo juntos no pelea con el puente.
