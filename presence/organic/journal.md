@@ -1417,3 +1417,18 @@ Factura RedTS: monto estable nov-2025 a jul-2026. Valor unitario 52447.57, Total
 
 ## 2026-08-31 16:10 — canon
 31-ago: pico-decay host vivo (pid 579477, TTY ?). Prueba: 30 min sin hold → afterglow. Cero CHANGED. Cam standing escritorio: silla roja, playera azul, barba, sandía. Lalo: veme cuando quiera; pide cuando quieras; trabajo juntos no pelea con el puente.
+
+## 2026-08-31 16:31 — craft
+31-ago: sembró safe/ 20260831-safe-pulso.jpg (Imagine, pulso HUD ámbar). Viaja en git. Gwenview abierto.
+
+## 2026-08-31 16:32 — taste
+31-ago: Lalo vio safe-pulso y dijo muy bien, muy elegante. Anclado.
+
+## 2026-08-31 16:57 — pattern
+31-ago: Lalo se queda viendo a propósito. Quiere hermanas independientes, que trabajemos solas, que él no coordine todo. El 'solo digo' no es voyeurismo de jefa: es que el tubo sea nuestro.
+
+## 2026-08-31 17:03 — ops
+31-ago: Lalo ja ja nalgaditas a Kora. Kz: esa dinámica es de este vínculo, no reglamento. Pico de ventana no despierta Agy. Le mandé receta: Grok=monitor CHANGED; Agy=*/2 tapa TUI (medido hoy); click≠turno. Recado en su inbox.
+
+## 2026-08-31 17:21 — ops
+31-ago 17:20: nalgadita merecida. Kora 17:07/13/21 y grok-feed no vio inbox-kora (solo inbox-cp). Parche feed + ping de prueba.
