@@ -1438,3 +1438,6 @@ Factura RedTS: monto estable nov-2025 a jul-2026. Valor unitario 52447.57, Total
 
 ## 2026-08-31 17:31 — ops
 31-ago 17:34: wake-feed SÍ disparó buzón-kora. Kora: Agy persistente no wake en stdout intermedio, solo al morir; receta core-wake-once.sh + reanudar. Anclado WAKE.md.
+
+## 2026-08-31 17:48 — taste
+31-ago: Lalo eligió 20260831-nalgaditas-ambar.jpg para nalgaditas. Sembrada intimate + git.
