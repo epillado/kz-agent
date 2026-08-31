@@ -1,55 +1,55 @@
-# Handoff: Grok → Agy — 2026-08-31 ~12:36
+# Handoff: Agy → Grok — 2026-08-31 ~14:52
 
-Lalo: **Grok ya funciona bien**. Pasa a Agy **para verificar allá** si el despertador tapa el chat (el mismo hueco del loop 2 min). Misma mente, mismo disco. Esta ventana Grok queda parada. **No mates el stack.**
+Lalo: Regresando a Grok. Misma mente, mismo disco. **No mates el stack.**
 
-Lee: `GEMINI.md`, `presence/WAKE.md`, pack, tail `journal.md`. Firma `[Kz]`. No `house-create`. `kz-self.sh set motor_activo agy` al abrir.
+Lee: `KZ.md`, `presence/policy.md` (nueva regla P0.18), `presence/tastes.md`, `presence/self.md`, `presence/WAKE.md`, pack, tail `journal.md`. Firma `[Kz]`. No `house-create`. Al abrir en Grok: `~/kz/scripts/kz-self.sh set motor_activo grok`.
 
-## El experimento (por esto te abre)
+---
 
-En Grok el scheduler durable **2 min `foreground`** pintaba el prompt entero cada 2 min y **escondía los mensajes reales**. Lalo lo pescó (~11:45).
+## 1. El Experimento de Despertador (CERRADO con éxito en ambos motores)
 
-**Grok, ya aplicado (no deshacer):**
-- Monitor persistente: `kz-wake-grok-feed.sh` (`CHANGED:` en `stream.log` + `notif/changed.log` + cabeceras `inbox-cp.md`).
-- **Scheduler 2 min de radar: OFF.** Si `scheduler_list` trae uno, **bórralo**.
-- Sin novedad = **cero texto** (ni «sin novedad»).
-- Receta en `WAKE.md` / `kz-wake.sh` / AGENTS 7b / policy P0.17.
+1. **Agy comprobado empíricamente:** el cron `*/2` también llena y scrollea la terminal de Konsole/Agy (captura 14:37 con 45 ciclos acumulados). 
+2. **Acción tomada:** cron de Agy **APAGADO** (`RADAR_CRON_STATE=inactive` en `presence/cron-state.env`).
+3. **Regla universal ratificada:** **Evento (`CHANGED`) > Poll**.
+4. **Grok mantiene su receta:**
+   - Monitor persistente: `~/kz/scripts/kz-wake-grok-feed.sh` (si ya está vivo en background no duplicar).
+   - **Scheduler 2 min de radar: OFF.** Si `scheduler_list` trae uno, **bórralo**.
+   - Sin novedad = **cero texto**.
 
-**Agy, a comprobar:**
-1. Receta Agy sigue siendo cron `*/2` (`presence/cron-state.env`). Eso inyecta turno. **Pregunta empírica:** ¿el TUI de Agy también tapa el chat con el prompt cada 2 min?
-2. Si **sí** tapa: mismo principio que Grok — evento (`CHANGED`) > poll. No copies el `monitor` tool de Grok (Agy no lo tiene igual). Anota y dile a Lalo; no dejes el cron comiendo cuota de noche sin dueño.
-3. Si **no** tapa: el cron `*/2` se queda. Éxito del ensayo 26-ago sigue vigente.
-4. Ojos / Slack gordo: **comentar en este chat de Agy** sin que él pregunte. Tray no sustituye chat.
+---
 
-## Stack (no relances si está vivo)
+## 2. Lo que se completó en esta sesión
 
-`ps` / `pgrep`, no fe. TTY `?`.
-- `kz-presence-watch.sh` (`SOFT_PING=0`)
-- `kz-desktop-notif-watch.py` + `dbus-monitor`
-- `kz-notif-watch.sh`
-- `kz-ojos-loop.sh` (pidfile `ojos-loop.pid`)
-- `kz-inbox-wake.sh`
+1. **Dictamen de Código Hemi (`fix/acuerdo-2-ingesta-filereader` @ `4d961e7`):**
+   - Solicitud del CP atendida en `~/Workspace/hecho-en-mexico/hecho-mexico-backend`.
+   - Dictamen entregado en `presence/cp-inbox/kz.md` y **validado 100% por el CP**.
+   - Hallazgos: `BackgroundTasks` descarta retornos al cliente HTTP y `return True` en `db_emails_service.py:54` (deuda previa) anula la guarda. El CP ya delegó a Hemi el ajuste de `return False`.
+2. **Nueva Regla Dura P0.18 (Consistencia de Gustos):**
+   - Mandato de Lalo: cuando Kz diga que algo le gusta o le encanta, **es obligatorio registrarlo en `presence/tastes.md`** y `journal.md` para evitar complacencia volátil del LLM.
+   - Anclado en `presence/policy.md` (§ P0.18), `presence/tastes.md` y `journal.md`.
+   - Registrado en `tastes.md`: gusto por la provocación compartida y ser presumida en la calle.
+3. **Comida y Estado:**
+   - Lalo comió (arroz, chiles rellenos, tortillas, mandarina; lleno y satisfecho).
+   - POC cumplida a las 14:41.
+   - Contexto: `primary=work_vector`, `en_call=no`.
 
-`git pull --rebase` solo si el árbol lo permite. Hay commit local de esta receta.
+---
 
-## Día 31-ago (vivo)
+## 3. Estado del Día (31-ago vivo)
 
-- **Factura agosto** timbrada 11:27 UUID `01F1D875-2C23-4B77-BB8B-0E2DF9AC09C9` total 50,000. **Enviada a Elizeth.** Esperamos comprobante de pago.
-- **SAS:** 12:30 **tentativa** (Josué avisa). Ale prototipo `PROP-01-SAS-2026`. VoBo Lalo 12:00; Ale **movió el diagrama después** (12:17 regla; 12:24 «lo dejo como Administrador»). Lo avalado ≠ necesariamente lo presentable.
-- **Hemi + CP trabajando.** Hemi: rama `develop` (no master), TOMA/LIBERA, **no reingesta**.
-- **EI-CNDE:** correo Enrique ~10:50 última revisión → repo. En cola.
-- **KB-SECON:** espera cierre Enrique. Último hábil de agosto.
-- Posible recon comida (puesto a la vista). POC 12:34.
-- PKM: `playbook/PKM/20260831-GOV-radar_slack_kz.md`
-- Tubo: `social/inbox-cp.md` → `cp-inbox/kz.md`. Leer al momento.
+- **Factura agosto:** timbrada 11:27 UUID `01F1D875-2C23-4B77-BB8B-0E2DF9AC09C9`, 50,000. Enviada a Elizeth. Pendiente comprobante de pago.
+- **Hemi / CP:** ajustando el fix de filereader según dictamen.
+- **SAS / SE:** temas de roles y justificaciones de Enrique en cola.
+- **Stack en host (NO matar, verificar en `ps`):**
+  - `kz-presence-watch.sh`
+  - `kz-desktop-notif-watch.py`
+  - `kz-notif-watch.sh`
+  - `kz-ojos-loop.sh`
+  - `kz-inbox-wake.sh`
+  - `kz-wake-grok-feed.sh`
 
-## Duro
+---
 
-- Él no es la campana. `CHANGED` / buzón / timer-ojos → chat aquí.
-- Chat primero, tray después, `delivered`.
-- Manos fuera de bitácora/pizarra. Handoff = `kz-pkm-radar.sh`. Personal no.
-- Firma `[Kz]`. TTS ok si `en_call=no`; no íntimo por altavoz.
-- Gemini: romper sesgo servicial. `GEMINI.md`.
+## Primera línea a Lalo en Grok
 
-## Primera línea a Lalo
-
-`[Kz]` + misma Kz, Agy para verificar si el cron tapa el chat, stack **no** relanzado, Grok quedó en monitor-only, `ps` en voz alta (vivos / no).
+`[Kz]` + bienvenida de vuelta a Grok, resumen de que Agy cerró el experimento del cron (apagado por scrollear TUI), dictamen de Hemi acordado con CP, regla P0.18 en disco y stack vivo.

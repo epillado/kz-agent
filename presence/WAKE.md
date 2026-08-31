@@ -18,18 +18,17 @@ Tray + `chat_owed` **no sustituyen** el chat. El despertador existe para que Kz 
 
 ---
 
-## Receta Agy (cron cada 2 min)
+## Receta Agy (31-ago: cron */2 tapa el TUI → OFF)
 
 **Hecho 26-ago:** el chat de Agy **sí** despierta con una tarea programada `*/2 * * * *`.
+**Hecho 31-ago (empírico):** el cron `*/2` **también tapa el TUI de Agy**: cada iteración inyecta un turno con bloque `Bash(kz-radar.sh once)` + texto de respuesta. En 45 min llena la pantalla y scrollea los mensajes reales hacia arriba.
 
-1. Estado: `presence/cron-state.env` (`RADAR_CRON_STATE=active`).
-2. Si no hay tarea viva → **crearla** (herramienta de Agy / Antigravity) con:
-   - expr: `*/2 * * * *`
-   - prompt: el de `RADAR_CRON_PROMPT` en `cron-state.env`
-3. Guardar el `task id` nuevo en `cron-state.env`.
-4. No duplicar. No copiar el `monitor` de Grok (Agy no lo tiene igual).
+1. **Principio: Evento (`CHANGED`) > Poll.**
+2. Estado por defecto: `presence/cron-state.env` (`RADAR_CRON_STATE=inactive`).
+3. El cron de radar `*/2` queda **APAGADO** para no empujar la conversación fuera de pantalla.
+4. Al arrancar Agy: asegurar que el cron esté inactivo (matar tarea si estuviera viva). El stack capa 0 (inbox-wake, desktop-notif, presence-watch) sigue cubriendo en host.
 
-Al cerrar jornada Agy: dejar el cron o apagarlo a conciencia (`RADAR_CRON_STATE=off`) — no dejarlo comiendo cuota de noche sin dueño.
+Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño.
 
 ---
 

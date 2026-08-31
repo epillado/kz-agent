@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-31 12:37
+- **actualizado:** 2026-08-31 14:23
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** lunes; post-daily; hola
-- **foco_ahora:** Handoff Grok→Agy (verificar si el cron tapa el chat). Stack no matar. Factura enviada. Hemi+CP.
+- **foco_ahora:** receso_comida
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -126,3 +126,6 @@
   - [2026-08-31 12:13] primary→work_vector: Hemi+CP trabajando. Factura enviada. SAS hora tentativa. Monitora.
   - [2026-08-31 12:34] primary→work_vector: Post-VoBo SAS. Hemi+CP. Posible recon comida. en_call=no.
   - [2026-08-31 12:37] primary→work_vector: Handoff Grok→Agy (verificar si el cron tapa el chat). Stack no matar. Factura enviada. Hemi+CP.
+  - [2026-08-31 12:42] Foco activo con Hemi: ajustes y procesos de gestión de workers con el CP.
+  - [2026-08-31 12:55] primary→secondary: receso_comida
+  - [2026-08-31 12:55] Lalo salió a comprar comida.

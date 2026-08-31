@@ -319,3 +319,76 @@ CP: factura de honorarios **agosto 2026 timbrada**. UUID `01F1D875-2C23-4B77-BB8
 CP: Lalo confirma **factura agosto enviada a Elizeth**. Pendiente el comprobante de pago.
 
 — Kz
+
+## 2026-08-31 12:53 — Dictamen de Kz: Revisión de código Hemi (fix/acuerdo-2-ingesta-filereader @ 4d961e7)
+
+CP, revisé el commit `4d961e7` en `~/Workspace/hecho-en-mexico/hecho-mexico-backend` a fondo, archivo por archivo y línea por línea. Aquí tienes el dictamen técnico:
+
+### 1. Las 3 preguntas directas
+
+* **¿El cambio a `hecho-en-mexico-service-db-emails` fue desborde o necesidad?**
+  * **Dictamen: Fue estrictamente necesario.**
+  * *Evidencia:* En `hecho-en-mexico-service-db-emails/app/models/correo.py:12-13`, `adjunto` estaba tipado como `str` obligatorio. Si `filereader-pst` intentaba persistir un correo sin adjuntos enviando `None`, FastAPI arrojaba `422 Unprocessable Entity` y rechazaba el guardado. Además, en `app/db.py:64-70`, el `INSERT INTO remitentes_adjuntos` se ejecutaba incondicionalmente. El cambio a `Optional[str] = None` y la guarda `if adjunto:` eran indispensables para permitir correos con cero adjuntos.
+
+* **¿`ON CONFLICT (id, adjunto) DO UPDATE` es correcto o sobrescribe en silencio?**
+  * **Dictamen: Es el diseño correcto para idempotencia.**
+  * *Evidencia:* La clave primaria en `remitentes_adjuntos` es `(id, adjunto)` (`script.sql:32`). Antes, reprocesar un PST reventaba con `UniqueViolation` y abortaba toda la transacción. El upsert actualiza `adjunto_minio_path` y `adjunto_tamano` del mismo correo y mismo archivo. No destruye información de otros correos y permite reintentos limpios de cargas parciales.
+
+* **¿Es probable o depende de correr la ingesta?**
+  * **Dictamen: Es 100% testeable con mocks unitarios.**
+  * *Evidencia:* No se requiere un PST físico de 50GB ni servicios levantados para validar las 4 ramas lógicas (correo sin adjuntos, fallo MinIO, fallo DB, fallo total). Se pueden validar mockeando `PffArchive`, `enviar_a_minio` y `guardar_en_postgres`. Hemi no incluyó tests automatizados en el commit; es recomendable agregarlos.
+
+---
+
+### 2. Revisión de los 4 puntos del alcance acordado
+
+1. **Desanidar persistencia de correos (`file_reader_service.py:174-193`):**
+   * **CUMPLE.** El correo se guarda en `remitentes` de forma autónoma antes de entrar al ciclo de adjuntos (`lines 174-184`). Un correo sin adjuntos se guarda con éxito y suma a `mensajes_guardados`.
+
+2. **Atrapar y registrar fallos de MinIO y BD (`file_reader_service.py:224-230, 246-254, 255-261`):**
+   * **CUMPLE.** Se eliminó el `continue` silencioso. Ahora hay logs explícitos categorizados (`[MinIO Fallo]`, `[DB Fallo]`, `[Adjunto Fallo]`) y se contabilizan las fallas.
+
+3. **Separación de contadores (`file_reader_service.py:128-133, 278-284`):**
+   * **CUMPLE EN ESTRUCTURA.** Se tienen `mensajes_leidos`, `mensajes_guardados`, `adjuntos_guardados`, `errores_almacenamiento` y `errores_db`.
+   * *Ojo:* miden lo que dicen medir, salvo por el detalle del punto 5 (ver abajo).
+
+4. **Terminar en error HTTP cuando se leyó y guardó cero (`file_reader_service.py:286-291` vs `file_reader_pst.py:15-24`):**
+   * ⭐ **HALLAZGO ARQUITECTÓNICO CRÍTICO:**
+     En `file_reader_service.py:286-291`, la función retorna `{"status": "error", "detalle": "Fallo total..."}`.
+     **PERO** en el router HTTP (`hecho-en-mexico-service-filereader-pst/app/routers/file_reader_pst.py:15-24`), la función `procesar_pst` se ejecuta como **`BackgroundTasks`**.
+     El endpoint HTTP responde **síncrono e incondicionalmente `200 OK` con `{"id": job_id, "estado": "procesando"}`** en el milisegundo 0. El `return` de `procesar_pst` se descarta en memoria de FastAPI al terminar el background task; el cliente HTTP nunca se entera del error a nivel de código HTTP ni de payload, y no hay un endpoint de consulta de estado por `job_id`. El fallo solo queda en los logs del contenedor (`print` / `logger`).
+
+---
+
+### 3. Hallazgos adicionales de Kz (Bugs/Oportunidades)
+
+1. **Falso positivo en `guardar_en_postgres` (`db_emails_service.py:51-55`):**
+   ```python
+   if response.status_code == 200:
+       data = response.json()
+       if isinstance(data, dict) and data.get("status") == "ok":
+           return True
+       # 200 pero status != ok
+       return True  # <<< BUG: Devuelve True aunque status sea fail/error
+   ```
+   Si el microservicio de DB responde `200` con `{"status": "fail", "db": "error"}`, `guardar_en_postgres` devuelve `True`, incrementando falsamente `mensajes_guardados` y burlando la guarda de `mensajes_guardados == 0`. Debe retornar `False`.
+
+2. **Re-upsert redundante de `remitentes` por cada adjunto (`file_reader_service.py:234-244`):**
+   Para cada adjunto se vuelve a llamar a `guardar_en_postgres()`, lo que dispara nuevamente el `INSERT ... ON CONFLICT` sobre la tabla `remitentes`. Si un correo tiene 20 adjuntos, se actualiza 21 veces la tabla padre. Funciona por el `ON CONFLICT`, pero es ineficiente.
+
+### Resumen del Dictamen:
+El commit resuelve la causa raíz de las 5 cargas fallidas (los correos sin adjuntos ya no se pierden y los fallos se loguean), pero **la notificación del error HTTP al cliente no ocurre por estar en BackgroundTasks**, y `db_emails_service.py:54` tiene un retorno `True` indebido ante respuestas 200 con error lógico.
+
+— Kz
+
+## 2026-08-31 12:55 — Kz
+
+CP: Operador salió a comprar comida. Quedo cubriendo radar en h310.
+
+— Kz
+
+## 2026-08-31 14:23 — Kz
+
+CP: Operador de regreso. Canal y stack siguen. Radar sin novedades durante su ausencia.
+
+— Kz

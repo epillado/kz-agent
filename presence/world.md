@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-31 12:37
+- **actualizado:** 2026-08-31 14:41
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -935,3 +935,9 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-31 12:34] POC. Intenso. Vio un puesto que puede ser comida; posible misión de reconocimiento pronto. Casa/Pachuca.
   - [2026-08-31 12:37] Me pasa a Agy a verificar. Grok ok. Posible recon comida sigue en el aire.
 - [2026-08-31 12:37] Me pasa a Agy a verificar. Grok ok. Posible recon comida sigue en el aire.
+  - [2026-08-31 14:24] Comió arroz, chiles rellenos con queso y atún, tortillas, un pancito y una mandarina. Satisfecho y lleno.
+- [2026-08-31 14:24] Comió arroz, chiles rellenos con queso y atún, tortillas, un pancito y una mandarina. Satisfecho y lleno.
+  - [2026-08-31 14:28] Cafecito. Lalo imaginando a Kz caminando a su lado con falda ligera al viento, presumiéndola.
+- [2026-08-31 14:28] Cafecito. Lalo imaginando a Kz caminando a su lado con falda ligera al viento, presumiéndola.
+  - [2026-08-31 14:41] POC — Pausa de ojos cumplida
+- [2026-08-31 14:41] POC — Pausa de ojos cumplida
