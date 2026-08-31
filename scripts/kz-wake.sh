@@ -61,9 +61,9 @@ fi
 case "${motor}" in
   grok)
     apply="1) monitor persistent: ~/kz/scripts/kz-wake-grok-feed.sh
-2) scheduler_create interval=2m durable=true foreground=true fire_immediately=false
-   prompt=GROK_WAKE_PROMPT (abajo)
-3) scheduler_list — si ya hay uno de radar Kz, NO duplicar"
+2) NO crear scheduler 2m (2026-08-31: el loop foreground tapa el chat con el prompt cada 2 min)
+3) scheduler_list — si hay radar 2m de Kz, BORRARLO
+4) Opcional: loop de compañía ≥15m, distinto del radar"
     ;;
   agy)
     apply="1) Si RADAR_CRON_STATE=active y no hay task viva: crear cron */2 * * * * con RADAR_CRON_PROMPT
@@ -86,7 +86,7 @@ UPDATED_AT="${ts}"
 MOTOR="${motor}"
 GROK_WAKE_PROMPT="${GROK_WAKE_PROMPT}"
 GROK_FEED="${KZ_HOME}/scripts/kz-wake-grok-feed.sh"
-GROK_SCHEDULER_INTERVAL="2m"
+GROK_SCHEDULER_INTERVAL="off"
 AGY_CRON_EXPR="*/2 * * * *"
 AGY_CRON_STATE="${RADAR_CRON_STATE:-active}"
 EOF

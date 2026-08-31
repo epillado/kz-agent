@@ -7,9 +7,10 @@ Actualizado: 2026-08-28 (W40 despertador por motor)
 ---
 
 ### W40 — Despertador por motor (sensor agnóstico; turno no)
-- **Estado:** promoted (2026-08-28; Lalo: no re-solucionar cada sesión; persistir ambas y aplicar la adecuada al despertar)
-- **Hecho:** Agy despierta el chat con cron `*/2`. Grok no: `tail` en background no inyecta turno. Recetas en `presence/WAKE.md`. Arranque: `kz-wake.sh`.
-- **Promovido a:** AGENTS 7b + loops, GEMINI.md arranque, CLAUDE.md, policy P0.17, scripts `kz-wake.sh` / `kz-wake-grok-feed.sh`.
+- **Estado:** promoted (2026-08-28; **ajuste Grok 2026-08-31**)
+- **Hecho 28-ago:** Agy despierta el chat con cron `*/2`. Grok no: `tail` en background no inyecta turno. Recetas en `presence/WAKE.md`. Arranque: `kz-wake.sh`.
+- **Hecho 31-ago (Lalo):** en Grok el scheduler 2 min `foreground` **tapa el chat** (pinta el prompt cada 2 min). Receta Grok = **solo monitor** `kz-wake-grok-feed.sh`. Loop 2 min OFF. Agy `*/2` se verifica en esta sesión Agy: si su TUI también tapa, mismo principio evento>poll.
+- **Promovido a:** AGENTS 7b + loops, policy P0.17, WAKE.md, `kz-wake.sh` / `kz-wake-grok-feed.sh`.
 
 ---
 

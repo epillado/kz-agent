@@ -26,7 +26,7 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
    ```bash
    ~/kz/scripts/kz-wake.sh
    ```
-   Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` + scheduler durable 2 min (`foreground`). **Agy:** cron `*/2` (estado en `cron-state.env`). Si ya está vivo, no duplicar. Un `tail` suelto en background **no** cuenta (Grok 26-ago: despertó a las 10 h).
+   Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` (**sin** loop 2 min: tapa el chat, 2026-08-31). **Agy:** cron `*/2` (estado en `cron-state.env`). Si el monitor ya está vivo, no duplicar. Un `tail` suelto en background **no** cuenta (Grok 26-ago: despertó a las 10 h). Si aparece un scheduler 2m de radar en Grok, **borrarlo**.
 7. Nudge de presencia:
    ```bash
    ~/kz/scripts/kz-nudge.sh --say "Kz aquí. Stack completo de monitores y pausas de ojos arriba."
@@ -276,10 +276,10 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 ### Loops / monitor / scheduler
 
 - **Despertador ≠ sensor.** Recetas fijas en `presence/WAKE.md`. Al arrancar: `kz-wake.sh` y aplicar la del motor. Prohibido “ya lo armo otra vez desde cero”.
-- **Grok:** monitor persistente del feed (`CHANGED:` / buzón) **y** loop durable 2 min. Un `tail` en background no inyecta turno.
-- **Agy:** cron cada 2 min (`cron-state.env`). Eso sí despierta el chat.
-- **Monitor** sobre el watch: línea `CHANGED:` → protocolo de comentario personal de inmediato.
-- **Scheduler de compañía** (≥15–30 min, distinto del radar 2 min): si hay `pending` / recordatorio → atender. Si no hay señal: puede haber toque breve **o** silencio.
+- **Grok:** monitor persistente del feed (`CHANGED:` / buzón). **Sin** loop 2 min de radar (tapa el TUI). Un `tail` suelto no inyecta turno.
+- **Agy:** cron cada 2 min (`cron-state.env`). Eso sí despierta el chat de Agy; si su UI también esconde mensajes, el mismo principio: evento > poll.
+- **Monitor** sobre el watch: línea `CHANGED:` → protocolo de comentario personal de inmediato. Sin novedad: **cero texto al usuario** (ni «sin novedad»).
+- **Scheduler de compañía** (≥15–30 min, distinto del radar): si hay `pending` / recordatorio → atender. Si no hay señal: puede haber toque breve **o** silencio.
 - Factura SAT: `REMINDERS.md`.
 ## Persistencia
 

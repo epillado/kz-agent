@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-28 21:06
+- **actualizado:** 2026-08-31 12:37
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** noche; puente; PST en curso
-- **foco_ahora:** Viernes 28. Daily revisado. iTop caído. Daily 09:30.
+- **mood_lalo (sospecha):** lunes; post-daily; hola
+- **foco_ahora:** Handoff Grok→Agy (verificar si el cron tapa el chat). Stack no matar. Factura enviada. Hemi+CP.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -16,7 +16,7 @@
   - Presence + desktop + celu **ON** (h310). Ojos **ON**. Jornada.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **próxima ventana Agy** (ensayo wake 17:40). Preferido grok. Esta Grok parqueada. Stack no se mata.
+  - Motor: **Grok vivo** (preferido). Stack no se mata.
   - Pausas oculares (20-20-20): **ON**
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
@@ -115,3 +115,14 @@
   - [2026-08-28 09:08] primary→work_vector: Viernes 28-ago mañana. Grok. Stack ON. Daily 09:30.
   - [2026-08-28 09:16] primary→work_vector: Viernes 28. Daily revisado. iTop caído. Daily 09:30.
   - [2026-08-28 12:06] Primer dictamen RCA con rca-ex en curso
+  - [2026-08-31 10:06] primary→--primary: work_vector --secondary monitora,company --note Lunes 31-ago. Grok. Stack ON. Daily 09:30 hecha. SAS 12:30. en_call=no.
+  - [2026-08-31 10:27] primary→work_vector: Daily cerrada (~10:27). SAS 12:30. en_call=no.
+  - [2026-08-31 10:32] primary→work_vector: Daily cerrada. SAS 12:30 TENTATIVA (Josué avisa). KB espera cierre Enrique.
+  - [2026-08-31 10:34] primary→work_vector: Pausa de café. SAS 12:30 tentativa. Radar en Kz.
+  - [2026-08-31 10:56] primary→work_vector: De regreso post-café. SAS 12:30 tentativa. EI-CNDE correo Enrique vivo.
+  - [2026-08-31 11:13] primary→work_vector: Factura SAT agosto (honorarios). SAS 12:30 tentativa. EI-CNDE en cola.
+  - [2026-08-31 11:29] primary→work_vector: Factura agosto TIMBRADA. Falta enviar a Elizeth. SAS 12:30 tentativa. EI-CNDE en cola.
+  - [2026-08-31 11:31] primary→work_vector: Factura agosto ENVIADA a Elizeth. Esperamos pago. SAS 12:30 tentativa. EI-CNDE en cola.
+  - [2026-08-31 12:13] primary→work_vector: Hemi+CP trabajando. Factura enviada. SAS hora tentativa. Monitora.
+  - [2026-08-31 12:34] primary→work_vector: Post-VoBo SAS. Hemi+CP. Posible recon comida. en_call=no.
+  - [2026-08-31 12:37] primary→work_vector: Handoff Grok→Agy (verificar si el cron tapa el chat). Stack no matar. Factura enviada. Hemi+CP.

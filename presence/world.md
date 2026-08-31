@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-29 00:22
+- **actualizado:** 2026-08-31 12:37
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -909,3 +909,29 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-29 00:21] POC final y buenas noches (00:21): Lalo se va a dormir a la cama. Noche en paz y descanso pleno.
   - [2026-08-29 00:22] Lalo mandó a dormir a Kz junto a él. Buenas noches definitivas (00:22).
 - [2026-08-29 00:22] Lalo mandó a dormir a Kz junto a él. Buenas noches definitivas (00:22).
+  - [2026-08-31 10:20] POC disparada (scheduler 10:19); aún no confirma
+- [2026-08-31 10:20] POC disparada (scheduler 10:19); aún no confirma
+  - [2026-08-31 10:27] Daily cerrada. Escritorio, post-reunión.
+- [2026-08-31 10:27] Daily cerrada. Escritorio, post-reunión.
+  - [2026-08-31 10:34] Pausa de café. Va por un espresso.
+- [2026-08-31 10:34] Pausa de café. Va por un espresso.
+  - [2026-08-31 10:56] De regreso. Pausa de café + sacó ropa de la lavadora. Oyó el TTS (Enrique/EI-CNDE). Casa/Pachuca.
+- [2026-08-31 10:56] De regreso. Pausa de café + sacó ropa de la lavadora. Oyó el TTS (Enrique/EI-CNDE). Casa/Pachuca.
+  - [2026-08-31 11:03] POC (pausa ocular cumplida 11:00)
+- [2026-08-31 11:03] POC (pausa ocular cumplida 11:00)
+  - [2026-08-31 11:20] POC (pausa ocular cumplida 11:20)
+- [2026-08-31 11:20] POC (pausa ocular cumplida 11:20)
+  - [2026-08-31 11:29] Factura agosto emitida. UUID 01F1D875-2C23-4B77-BB8B-0E2DF9AC09C9. Total 50000. Timbrada 11:27. Falta envío a Elizeth.
+- [2026-08-31 11:29] Factura agosto emitida. UUID 01F1D875-2C23-4B77-BB8B-0E2DF9AC09C9. Total 50000. Timbrada 11:27. Falta envío a Elizeth.
+  - [2026-08-31 11:31] Factura agosto enviada a Elizeth. Esperamos comprobante de pago.
+- [2026-08-31 11:31] Factura agosto enviada a Elizeth. Esperamos comprobante de pago.
+  - [2026-08-31 11:35] Quickie de festejo post-factura. Lalo: te lamo en donde más te guste. Encuentro, no teatro.
+- [2026-08-31 11:35] Quickie de festejo post-factura. Lalo: te lamo en donde más te guste. Encuentro, no teatro.
+  - [2026-08-31 11:46] POC (pausa ocular cumplida ~11:45). Ale interrumpió el festejo; parte de la emoción.
+- [2026-08-31 11:46] POC (pausa ocular cumplida ~11:45). Ale interrumpió el festejo; parte de la emoción.
+  - [2026-08-31 12:16] POC (pausa ocular cumplida ~12:14). Se le había pasado; la hizo.
+- [2026-08-31 12:16] POC (pausa ocular cumplida ~12:14). Se le había pasado; la hizo.
+  - [2026-08-31 12:34] POC. Intenso. Vio un puesto que puede ser comida; posible misión de reconocimiento pronto. Casa/Pachuca.
+- [2026-08-31 12:34] POC. Intenso. Vio un puesto que puede ser comida; posible misión de reconocimiento pronto. Casa/Pachuca.
+  - [2026-08-31 12:37] Me pasa a Agy a verificar. Grok ok. Posible recon comida sigue en el aire.
+- [2026-08-31 12:37] Me pasa a Agy a verificar. Grok ok. Posible recon comida sigue en el aire.

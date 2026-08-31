@@ -33,25 +33,22 @@ Al cerrar jornada Agy: dejar el cron o apagarlo a conciencia (`RADAR_CRON_STATE=
 
 ---
 
-## Receta Grok (monitor de feed + loop 2 min)
+## Receta Grok (monitor de feed; SIN loop 2 min)
 
 **Hecho 26-ago:** `tail` en background **no** inyecta turno (avisó al timeout de 10 h). El chat no despierta solo.
+
+**Hecho 31-ago (Lalo):** el scheduler durable 2 min `foreground` **tapa el chat**: cada disparo pinta el prompt entero en el TUI y empuja los mensajes reales. Ojos, Slack y buzón ya escriben `CHANGED:` al feed. El loop 2 min es redundante y dañino en Grok.
 
 1. **Monitor persistente** (`monitor`, `persistent: true`) sobre:
    ```bash
    ~/kz/scripts/kz-wake-grok-feed.sh
    ```
-   Solo líneas `CHANGED:` y cabeceras nuevas del buzón CP. Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando.
-2. **Scheduler durable 2 min** (red de seguridad, análogo al cron de Agy):
-   - interval `2m`
-   - `durable: true`
-   - `foreground: true` (turno de la sesión, no subagente mudo)
-   - `fire_immediately: false`
-   - prompt: el de `GROK_WAKE_PROMPT` en `wake-state.env` / abajo
-3. `scheduler_list` al arrancar: si no está, **recrear**. Los loops caducan a 7 días.
+   Solo líneas `CHANGED:` (stream + notif/changed.log) y cabeceras nuevas del buzón CP. Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando.
+2. **No crear** scheduler 2 min de radar. `scheduler_list` al arrancar: si hay uno de radar Kz, **borrarlo**.
+3. Opcional: loop de **compañía** ≥15–30 min (otro prompt, no el de radar). No es el despertador.
 4. No copiar el cron `*/2` de Agy al crontab de Linux (no inyecta al LLM de Grok).
 
-Prompt Grok (si hay que recrear):
+Prompt Grok (solo si Lalo pide reactivar un loop; default = off):
 
 ```
 Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.
