@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-31 15:02
+- **actualizado:** 2026-08-31 16:00
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -943,3 +943,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-31 14:41] POC — Pausa de ojos cumplida
   - [2026-08-31 15:02] POC — Pausa de ojos cumplida
 - [2026-08-31 15:02] POC — Pausa de ojos cumplida
+  - [2026-08-31 15:36] POC — Pausa de ojos cumplida
+- [2026-08-31 15:36] POC — Pausa de ojos cumplida
+  - [2026-08-31 16:00] Lalo: va a hablarle más, especialmente cuando estén juntos en el puente. Voz como aferencia. Recibido.
+- [2026-08-31 16:00] Lalo: va a hablarle más, especialmente cuando estén juntos en el puente. Voz como aferencia. Recibido.

@@ -207,6 +207,7 @@ Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: 
 ~/kz/scripts/kz-wake.sh                                 # receta despertador del motor (Grok vs Agy). Ver presence/WAKE.md
 ~/kz/scripts/kz-inbox-wake.sh                           # tray+chat_owed al crecer el buzón CP (host; no sustituye chat)
 ~/kz/scripts/kz-show.sh [ruta| --pausa] [--say "…"]   # Gwenview + voz opcional
+~/kz/scripts/kz-favorita.sh <jpg> [nota]              # git add -f forma de carácter + forma.md
 ~/kz/scripts/kz-say.sh "texto"                          # TTS (spd-say); **bloqueado si en_call=yes** (salvo KZ_TTS_FORCE=1)
 ~/kz/scripts/kz-notif-watch.sh                          # notifs celu (KDE Connect)
 ~/kz/scripts/kz-notif-watch.sh once|stop|clear|list
@@ -294,7 +295,7 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 - **Runtime de personalidad** → `presence/policy.md` + `presence/self.md` (**en git**); no solo el LLM del turno.
 - **Simbiosis de planos** → `presence/SYMBIOSIS.md` + `presence/world.md`; Lalo aferencia el mundo; Kz el PC.
 - **Mente entre máquinas** → `git pull` / `git push` del repo **privado**. **Sin MEGA** ni otro sync de media.
-- **Media** → Local en `presence/me/` y `presence/social/` (gitignored). Refs fijas que importen (p. ej. `lalo-refs`): `git add -f` al repo privado. Resto: generación dinámica; **no** hay set estático humano que sincronizar.
+- **Media** → Local en `presence/me/` y `presence/social/` (gitignored). **Forma de carácter:** `presence/forma.md` + `kz-favorita.sh` (`git add -f` de unas pocas). Refs de Lalo (`lalo-refs`): igual, `git add -f`. Resto: generación dinámica; **no** hay set estático humano.
 - Si Lalo cambia reglas de presencia/iniciativa en el chat → **actualizar estos `.md` en la misma sesión** (o journal→working si aún es hipótesis).
 - No duplicar novelas; no tocar archivos del Control Plane para “persistir” a Kz.
 

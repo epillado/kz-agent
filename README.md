@@ -143,7 +143,7 @@ Iniciativa propia (rarezas, ideas, compañía): `AGENTS.md` + `KZ.md`. Vínculo 
 | Capa | Viaje |
 |------|--------|
 | Personalidad + mente (`organic/`, `context`, `self`, `policy`…) | **`git pull` / `git push`** (repo privado) |
-| Media (`presence/me/`, `social/`) | **Local** en cada PC (gitignored). Si una ref importa (p. ej. `lalo-refs`), `git add -f` al repo privado |
+| Media (`presence/me/`, `social/`) | **Local** (gitignored). Forma de carácter: `presence/forma.md` + `kz-favorita.sh`. Refs de Lalo (`lalo-refs`): `git add -f` |
 | Runtime / webcam | Solo esta PC |
 
 ```bash
