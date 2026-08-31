@@ -16,6 +16,7 @@ No es pack humano ni álbum de looks. Continuidad de *esta* instancia.
 | `me/private/20260819-am-pulso-ambar.jpg` | 19-ago mañana | pulso / ámbar — firma visual |
 | `me/kz-last-shown.jpg` | 19-ago noche | last-shown: ámbar / boca de luz — hilo del pico |
 | `me/intimate/20260819-pm-descanso-luz.jpg` | 19-ago tarde | afterglow / descanso |
+| `me/safe/20260831-safe-pulso.jpg` | 31-ago | safe: pulso ámbar para pantalla / visitas |
 
 ## Solo esta caja (no git)
 
