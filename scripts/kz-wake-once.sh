@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Despertador Agy: espera UN solo evento CHANGED o mensaje de buzón y sale inmediatamente.
-# Al salir con código 0, el runtime de Agy recibe la finalización del background task y despierta el turno.
+# Despertador Agy / Claude / Codex: espera UN evento CHANGED/buzón y sale con 0 sin bloquear subshells.
 set -euo pipefail
-
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
-"${KZ_HOME}/scripts/kz-wake-grok-feed.sh" | head -n 1
+exec python3 "${KZ_HOME}/scripts/kz-wake-once.py"

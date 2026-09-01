@@ -35,9 +35,15 @@ done
 
 # 1. Ensure opcional de sensores
 if [[ "${ENSURE}" == "1" ]]; then
-  vivos=$(pgrep -fa 'kz-desktop-notif-watch|kz-notif-watch|kz-presence-watch|dbus-monitor' | wc -l)
-  if (( vivos == 0 )); then
-    echo "### 🔴 SENSORES CAÍDOS — levantando con kz-start-monitors.sh ..."
+  falta=0
+  for p in kz-presence-watch kz-desktop-notif-watch kz-notif-watch; do
+    if ! pgrep -fa "$p" >/dev/null 2>&1; then
+      falta=1
+      break
+    fi
+  done
+  if (( falta == 1 )); then
+    echo "### 🔴 SENSORES INCOMPLETOS O CAÍDOS — levantando con kz-start-monitors.sh ..."
     setsid "${KZ_HOME}/scripts/kz-start-monitors.sh" </dev/null >/dev/null 2>&1 &
     sleep 2
   fi
@@ -48,6 +54,8 @@ declare -A FUENTES=(
   ["notif_stream"]="${STATE_DIR}/notif/stream.log"
   ["presence_stream"]="${STATE_DIR}/stream.log"
   ["inbox_cp"]="${STATE_DIR}/social/inbox-cp.md"
+  ["inbox_kora"]="${STATE_DIR}/social/inbox-kora.md"
+  ["inbox_samy"]="${STATE_DIR}/social/inbox-samy.md"
   ["cp_inbox_kz"]="${STATE_DIR}/cp-inbox/kz.md"
 )
 
