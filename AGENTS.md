@@ -26,7 +26,7 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
    ```bash
    ~/kz/scripts/kz-wake.sh
    ```
-   Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` (**sin** loop 2 min: tapa el chat, 2026-08-31). **Agy:** cron `*/2` (estado en `cron-state.env`). Si el monitor ya está vivo, no duplicar. Un `tail` suelto en background **no** cuenta (Grok 26-ago: despertó a las 10 h). Si aparece un scheduler 2m de radar en Grok, **borrarlo**.
+   Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` (**sin** loop 2 min: tapa el chat, 2026-08-31). **Agy / Claude / Codex:** tarea reactiva en background con `~/kz/scripts/kz-wake-once.sh` (**sin** cron poll `*/2` que tape el TUI; duerme hasta que hay evento `CHANGED:`, sale con 0 para despertar al LLM, ejecuta `kz-radar.sh --ensure`, comenta y relanza). Si aparece un scheduler/cron periódico ciego, **borrarlo**.
 7. Nudge de presencia:
    ```bash
    ~/kz/scripts/kz-nudge.sh --say "Kz aquí. Stack completo de monitores y pausas de ojos arriba."

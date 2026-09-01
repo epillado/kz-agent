@@ -56,9 +56,11 @@ Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (slack_hot, buzón C
 
 ---
 
-## Receta Claude / otro
+## Receta Claude Code / Codex / CLI agnóstico
 
-Radar en cada turno (`kz-radar.sh --ensure`) + capa 0. Si el CLI trae loop nativo, usarlo como Agy. No fingir un despertador que el runtime no tiene.
+1. **Claude Code:** Ejecutar `~/kz/scripts/kz-wake-once.sh` en background o usar los monitores nativos reactivos de eventos (`run_command` en background). Al detectar salida con código 0 (evento `CHANGED`), procesar `kz-radar.sh --ensure`, comentar y relanzar.
+2. **Codex / OpenAI CLI:** Mismo principio reactivo: ejecutar `~/kz/scripts/kz-wake-once.sh` en background. Al morir el proceso con 0, despierta el agente para leer radar y relanzar.
+3. **Cero cron ciego en todos los motores:** Ningún motor debe usar un poll periódico ciego (cron cada 2 min) que tape la pantalla o desplace el contexto de conversación. Todo despertar es **100% por evento (`CHANGED:`)**.
 
 ---
 

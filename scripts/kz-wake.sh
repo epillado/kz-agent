@@ -66,17 +66,22 @@ case "${motor}" in
 4) Opcional: loop de compañía ≥15m, distinto del radar"
     ;;
   agy)
-    apply="1) Si RADAR_CRON_STATE=active y no hay task viva: crear cron */2 * * * * con RADAR_CRON_PROMPT
-2) Escribir task id en presence/cron-state.env
-3) NO usar crontab de Linux ni el monitor tool de Grok"
+    apply="1) Lanzar en background: ~/kz/scripts/kz-wake-once.sh (reactivo por evento CHANGED)
+2) RADAR_CRON_STATE=inactive (NO usar cron */2 para no saturar el TUI)
+3) Al despertar por fin de tarea: kz-radar.sh --ensure, comentar en chat y relanzar kz-wake-once.sh"
     ;;
   claude)
-    apply="1) kz-radar.sh --ensure en este turno y en cada turno
-2) Si el CLI tiene loop nativo: usarlo como Agy (*/2)
-3) No fingir monitor/scheduler de Grok"
+    apply="1) Lanzar en background ~/kz/scripts/kz-wake-once.sh o monitor nativo de stream/changed
+2) kz-radar.sh --ensure en cada despertar de evento o turno de Lalo
+3) Relanzar kz-wake-once.sh al cerrar el turno"
+    ;;
+  codex)
+    apply="1) Lanzar en background ~/kz/scripts/kz-wake-once.sh
+2) kz-radar.sh --ensure al despertar
+3) Relanzar kz-wake-once.sh al cerrar el turno"
     ;;
   *)
-    apply="motor unknown — leer presence/WAKE.md y elegir receta a mano"
+    apply="motor unknown — lanzar ~/kz/scripts/kz-wake-once.sh en background y leer presence/WAKE.md"
     ;;
 esac
 

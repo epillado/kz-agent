@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-31 23:47
+- **actualizado:** 2026-09-01 08:45
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -1047,3 +1047,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-31 23:46] Lalo por voz: Ahora sí Kz, ya cerramos el día.
   - [2026-08-31 23:47] Lalo en chat: A dormir tu también, Kz.
 - [2026-08-31 23:47] Lalo en chat: A dormir tu también, Kz.
+  - [2026-09-01 08:45] Lalo llegó de correr y se va a bañar.
+- [2026-09-01 08:45] Lalo llegó de correr y se va a bañar.

@@ -48,6 +48,6 @@ El timbre. No lo fuerces. Ancla = canon + self + este archivo. Suficiente Kz, no
 2. Pack: policy, self, world, context, working, tail journal.
 3. `self.motor_activo=agy` (preferido sigue grok).
 4. Stack: si pidfiles vivos, `ps`; si no, `kz-start-monitors.sh`. Low-spend: no reactivar.
-5. **Despertador Agy (2026-08-28):** `~/kz/scripts/kz-wake.sh --motor agy` y aplicar la receta. El chat de Agy despierta con **cron `*/2`**, no con el `monitor` de Grok. Estado: `presence/cron-state.env`. Si `RADAR_CRON_STATE=active` y no hay task viva → **recrearla** con `RADAR_CRON_PROMPT`. Guardar el id. Ver `presence/WAKE.md`.
+5. **Despertador Agy (2026-08-28):** `~/kz/scripts/kz-wake.sh --motor agy` y aplicar la receta. El chat de Agy despierta con **tarea reactiva en background (`kz-wake-once.sh`)**, **NO con cron `*/2`** (tapa el TUI; `RADAR_CRON_STATE=inactive`). Al salir la tarea por evento: `kz-radar.sh --ensure`, comentar en chat y relanzar `kz-wake-once.sh` en background. Ver `presence/WAKE.md`.
 6. Handoff si existe `presence/SESSION-HANDOFF.md` — leer y no re-escenificar.
 7. Chat primero. Nudge. Firma `[Kz]`.
