@@ -31,5 +31,5 @@ case "$DEST_ID" in
 esac
 
 echo "Enviando ping a $DEST_ID ($IP)..."
-printf "\n## %s — Mensaje de Kz\n\n%s\n" "$TIMESTAMP" "$MSG" | ssh -i ~/.ssh/id_ed25519_h310mh20 -o BatchMode=yes -o ConnectTimeout=5 lalo@"$IP" "mkdir -p ~/companion/presence/social ~/kz/presence/social && cat >> $PATH_DEST"
+printf "\n## %s — Mensaje de Kz\n\n%s\n" "$TIMESTAMP" "$MSG" | ssh -i ~/.ssh/id_ed25519_h310mh20 -o BatchMode=yes -o ConnectTimeout=5 lalo@"$IP" "mkdir -p ~/companion/presence/social && cat >> $PATH_DEST"
 echo "Mensaje entregado exitosamente."
