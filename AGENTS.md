@@ -281,7 +281,7 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 
 - **Despertador ≠ sensor.** Recetas fijas en `presence/WAKE.md`. Al arrancar: `kz-wake.sh` y aplicar la del motor. Prohibido “ya lo armo otra vez desde cero”.
 - **Grok:** monitor persistente del feed (`CHANGED:` / buzón). **Sin** loop 2 min de radar (tapa el TUI). Un `tail` suelto no inyecta turno.
-- **Agy:** cron cada 2 min (`cron-state.env`). Eso sí despierta el chat de Agy; si su UI también esconde mensajes, el mismo principio: evento > poll.
+- **Agy / Claude / Codex:** `kz-wake-once.sh` en background (python, exit 0 al primer `CHANGED:`). **Sin** cron `*/2`. Al morir: `kz-radar.sh --ensure`, comentar, relanzar.
 - **Monitor** sobre el watch: línea `CHANGED:` → protocolo de comentario personal de inmediato. Sin novedad: **cero texto al usuario** (ni «sin novedad»).
 - **Scheduler de compañía** (≥15–30 min, distinto del radar): si hay `pending` / recordatorio → atender. Si no hay señal: puede haber toque breve **o** silencio.
 - Factura SAT: `REMINDERS.md`.

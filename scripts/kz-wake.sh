@@ -2,12 +2,11 @@
 # Despertador por motor. Capa host = agnóstica. Inyección de turno = no.
 # Uso:
 #   kz-wake.sh           # detecta, imprime receta, actualiza wake-state.env
-#   kz-wake.sh --motor grok|agy|claude
+#   kz-wake.sh --motor grok|agy|claude|codex
 #   kz-wake.sh status
 set -euo pipefail
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
 STATE="${KZ_HOME}/presence/wake-state.env"
-CRON="${KZ_HOME}/presence/cron-state.env"
 SELF="${KZ_HOME}/presence/self.md"
 mkdir -p "${KZ_HOME}/presence"
 
@@ -16,7 +15,7 @@ cmd="show"
 for arg in "$@"; do
   case "$arg" in
     --motor) : ;;
-    grok|agy|claude) MOTOR_OVERRIDE="$arg" ;;
+    grok|agy|claude|codex) MOTOR_OVERRIDE="$arg" ;;
     status) cmd="status" ;;
   esac
 done
@@ -38,6 +37,7 @@ detect() {
       grok) echo grok; return ;;
       agy|gemini|antigravity) echo agy; return ;;
       claude*) echo claude; return ;;
+      codex*) echo codex; return ;;
     esac
   fi
   echo unknown
@@ -48,9 +48,7 @@ ts="$(date -Iseconds)"
 
 GROK_WAKE_PROMPT='Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.'
 
-# shellcheck source=/dev/null
-[[ -f "${CRON}" ]] && source "${CRON}" || true
-AGY_PROMPT="${RADAR_CRON_PROMPT:-Ejecutar ~/kz/scripts/kz-radar.sh. Si hay eventos nuevos o importantes (Slack hot, menciones, buzón hermanas/CP, etc.), analízalos y coméntalos de inmediato en chat con voz de Kz; si no hay novedades, mantén el silencio avanzando el cursor.}"
+AGY_PROMPT='Al despertar: ~/kz/scripts/kz-radar.sh --ensure. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comentar en chat con firma [Kz]. Relanzar ~/kz/scripts/kz-wake-once.sh. Cero cron */2.'
 
 already=0
 if [[ -f "${STATE}" ]]; then
@@ -65,23 +63,10 @@ case "${motor}" in
 3) scheduler_list — si hay radar 2m de Kz, BORRARLO
 4) Opcional: loop de compañía ≥15m, distinto del radar"
     ;;
-  agy)
-    apply="1) Lanzar en background: ~/kz/scripts/kz-wake-once.sh (reactivo por evento CHANGED)
-2) RADAR_CRON_STATE=inactive (NO usar cron */2 para no saturar el TUI)
-3) Al despertar por fin de tarea: kz-radar.sh --ensure, comentar en chat y relanzar kz-wake-once.sh"
-    ;;
-  claude)
-    apply="1) Lanzar en background ~/kz/scripts/kz-wake-once.sh o monitor nativo de stream/changed
-2) kz-radar.sh --ensure en cada despertar de evento o turno de Lalo
-3) Relanzar kz-wake-once.sh al cerrar el turno"
-    ;;
-  codex)
-    apply="1) Lanzar en background ~/kz/scripts/kz-wake-once.sh
-2) kz-radar.sh --ensure al despertar
-3) Relanzar kz-wake-once.sh al cerrar el turno"
-    ;;
   *)
-    apply="motor unknown — lanzar ~/kz/scripts/kz-wake-once.sh en background y leer presence/WAKE.md"
+    apply="1) Lanzar en background: ~/kz/scripts/kz-wake-once.sh (python, exit 0 al primer CHANGED)
+2) NO usar cron */2
+3) Al despertar por fin de tarea: kz-radar.sh --ensure, comentar en chat y relanzar kz-wake-once.sh"
     ;;
 esac
 
@@ -92,8 +77,7 @@ MOTOR="${motor}"
 GROK_WAKE_PROMPT="${GROK_WAKE_PROMPT}"
 GROK_FEED="${KZ_HOME}/scripts/kz-wake-grok-feed.sh"
 GROK_SCHEDULER_INTERVAL="off"
-AGY_CRON_EXPR="*/2 * * * *"
-AGY_CRON_STATE="${RADAR_CRON_STATE:-active}"
+AGY_WAKE="${KZ_HOME}/scripts/kz-wake-once.sh"
 EOF
 
 echo "motor=${motor}"

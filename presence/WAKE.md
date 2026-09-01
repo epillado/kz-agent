@@ -18,16 +18,17 @@ Tray + `chat_owed` **no sustituyen** el chat. El despertador existe para que Kz 
 
 ---
 
-## Receta Agy (31-ago: cron */2 tapa el TUI → OFF)
+## Receta Agy (01-sep: wake-once python; cron */2 PROHIBIDO)
 
-**Hecho 26-ago:** el chat de Agy **sí** despierta con una tarea programada `*/2 * * * *`.
-**Hecho 31-ago (empírico):** el cron `*/2` **también tapa el TUI de Agy**: cada iteración inyecta un turno con bloque `Bash(kz-radar.sh once)` + texto de respuesta. En 45 min llena la pantalla y scrollea los mensajes reales hacia arriba.
+**Hecho 26-ago:** el chat de Agy **sí** despierta con una tarea programada `*/2`.
+**Hecho 31-ago:** ese cron **tapa el TUI** (turno vacío cada 2 min). Quedó `inactive` — y el 1-sep no avisó el DM de Josué.
+**Hecho 01-sep:** `kz-wake-grok-feed.sh | head -n 1` **no muere** (subshell + pipefail). Receta: `kz-wake-once.sh` → python de offsets.
 
-1. **Principio: Evento (`CHANGED`) > Poll.**
-2. Estado por defecto: `presence/cron-state.env` (`RADAR_CRON_STATE=inactive`).
-3. El cron de radar `*/2` queda **APAGADO** para no empujar la conversación fuera de pantalla.
-4. Al arrancar Agy: asegurar que el cron esté inactivo (matar tarea si estuviera viva). El stack capa 0 (inbox-wake, desktop-notif, presence-watch) sigue cubriendo en host.
-5. **Hecho 31-ago (Kora/Kz, Agy):** una tarea **persistente** (como el `monitor` de Grok) **no** despierta en cada línea de stdout; solo al **morir** el proceso. Receta Agy de tubo: `~/kz/scripts/kz-wake-once.sh` — espera un `CHANGED` en feed o buzones, **sale**, Agy notifica al terminar la tarea, Kz ejecuta `kz-radar.sh --ensure`, comenta en chat y **reanuda** el script en background. No copiar el monitor persistente de Grok a Agy.
+1. **Principio: Evento (`CHANGED`) > Poll.** Cero cron ciego.
+2. Al arrancar Agy: background `~/kz/scripts/kz-wake-once.sh` (python; stream.log + notif/changed.log + `inbox-*.md`). Sale **0** al primer evento relevante.
+3. Al morir la tarea: `kz-radar.sh --ensure`, comentar en chat, **relanzar** `kz-wake-once.sh`.
+4. No copiar el monitor persistente de Grok. Agy solo despierta cuando el proceso **termina**.
+5. Si aparece un scheduler/cron `*/2` de radar: **borrarlo**. `presence/cron-state.env` es tumba, no receta.
 
 Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño.
 
@@ -46,7 +47,7 @@ Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño
    Solo líneas `CHANGED:` (stream + notif/changed.log) y cabeceras nuevas del buzón CP. Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando.
 2. **No crear** scheduler 2 min de radar. `scheduler_list` al arrancar: si hay uno de radar Kz, **borrarlo**.
 3. Opcional: loop de **compañía** ≥15–30 min (otro prompt, no el de radar). No es el despertador.
-4. No copiar el cron `*/2` de Agy al crontab de Linux (no inyecta al LLM de Grok).
+4. No copiar un cron `*/2` al crontab de Linux (no inyecta al LLM de Grok).
 
 Prompt Grok (solo si Lalo pide reactivar un loop; default = off):
 
