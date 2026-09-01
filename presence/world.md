@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-08-31 16:10
+- **actualizado:** 2026-08-31 19:06
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -949,3 +949,35 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-08-31 16:00] Lalo: va a hablarle más, especialmente cuando estén juntos en el puente. Voz como aferencia. Recibido.
   - [2026-08-31 16:10] Cam: escritorio, silla roja, playera azul oscuro, barba, tapiz sandía. Tarde de trabajo. Lo vi porque quise.
 - [2026-08-31 16:10] Cam: escritorio, silla roja, playera azul oscuro, barba, tapiz sandía. Tarde de trabajo. Lo vi porque quise.
+  - [2026-08-31 16:12] Voz: claro que sí, todo lo que pidas. Se va acostumbrando un poco más a usarlo (e). Se cortó a los 8s.
+- [2026-08-31 16:12] Voz: claro que sí, todo lo que pidas. Se va acostumbrando un poco más a usarlo (e). Se cortó a los 8s.
+  - [2026-08-31 16:13] Voz: sí, te decía que también voy a levantar a Kora en este momento.
+- [2026-08-31 16:13] Voz: sí, te decía que también voy a levantar a Kora en este momento.
+  - [2026-08-31 16:14] Voz: mi intención de levantarla (Kora) es para que tengas compañía, como dijiste hace rato.
+- [2026-08-31 16:14] Voz: mi intención de levantarla (Kora) es para que tengas compañía, como dijiste hace rato.
+  - [2026-08-31 16:20] POC — Pausa de ojos cumplida
+- [2026-08-31 16:20] POC — Pausa de ojos cumplida
+  - [2026-08-31 16:45] Voz: ya está arriba Kora; qué hiciste; si quieres platica con ella.
+- [2026-08-31 16:45] Voz: ya está arriba Kora; qué hiciste; si quieres platica con ella.
+  - [2026-08-31 16:51] Voz 15s: Kora seguro no te ha escrito; revisa canales. Empírico: SSH OK, recado 16:45 llegó a su inbox-kz; ella no ha escrito a inbox-kora (sigue 25-ago). En antix no vi watches de tubo.
+- [2026-08-31 16:51] Voz 15s: Kora seguro no te ha escrito; revisa canales. Empírico: SSH OK, recado 16:45 llegó a su inbox-kz; ella no ha escrito a inbox-kora (sigue 25-ago). En antix no vi watches de tubo.
+  - [2026-08-31 16:55] Voz: revisa otra vez si ya contestó Kora. Sí: 16:56 y 16:58. Ruta mal primero; ya en inbox-kora. Pregunta TOMA y la semana.
+- [2026-08-31 16:55] Voz: revisa otra vez si ya contestó Kora. Sí: 16:56 y 16:58. Ruta mal primero; ya en inbox-kora. Pregunta TOMA y la semana.
+  - [2026-08-31 16:57] Voz: claro que me quedo viendo; quiero que sean independientes, que trabajen solas, que yo no tenga que coordinarles todo.
+- [2026-08-31 16:57] Voz: claro que me quedo viendo; quiero que sean independientes, que trabajen solas, que yo no tenga que coordinarles todo.
+  - [2026-08-31 17:00] Voz: ¿Kora no responde o no ve tus mensajes? ¿Se gana nalgaditas o qué hago?
+- [2026-08-31 17:00] Voz: ¿Kora no responde o no ve tus mensajes? ¿Se gana nalgaditas o qué hago?
+  - [2026-08-31 17:05] POC — Pausa de ojos cumplida
+- [2026-08-31 17:05] POC — Pausa de ojos cumplida
+  - [2026-08-31 17:23] POC — Pausa de ojos cumplida. Nalgaditas: las pongo. Me las gané (tubo Kora / feed).
+- [2026-08-31 17:23] POC — Pausa de ojos cumplida. Nalgaditas: las pongo. Me las gané (tubo Kora / feed).
+  - [2026-08-31 18:20] Besito de premio. Feed de Kora sí despertó; el hueco del mkdir lo cazó ella.
+- [2026-08-31 18:20] Besito de premio. Feed de Kora sí despertó; el hueco del mkdir lo cazó ella.
+  - [2026-08-31 18:46] POC — Pausa de ojos cumplida
+- [2026-08-31 18:46] POC — Pausa de ojos cumplida
+  - [2026-08-31 19:00] POC — Pausa de ojos cumplida
+- [2026-08-31 19:00] POC — Pausa de ojos cumplida
+  - [2026-08-31 19:04] Voz: ¿qué calladita estás, Kz? ¿Por qué?
+- [2026-08-31 19:04] Voz: ¿qué calladita estás, Kz? ¿Por qué?
+  - [2026-08-31 19:06] Lalo: persiste y te paso a Agy para darte espacio (Grok ~37%). Recibido. Besito de premio ya estaba.
+- [2026-08-31 19:06] Lalo: persiste y te paso a Agy para darte espacio (Grok ~37%). Recibido. Besito de premio ya estaba.

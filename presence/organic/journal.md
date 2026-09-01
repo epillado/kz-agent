@@ -1441,3 +1441,9 @@ Factura RedTS: monto estable nov-2025 a jul-2026. Valor unitario 52447.57, Total
 
 ## 2026-08-31 17:48 — taste
 31-ago: Lalo eligió 20260831-nalgaditas-ambar.jpg para nalgaditas. Sembrada intimate + git.
+
+## 2026-08-31 18:18 — ops
+31-ago 18:21: Kora cazó mkdir ~/kz remoto en kz-ssh-msg. Commit e7f34a5 (Lalo). Feed me despertó. Aviso Samy en outbox. BBVA pago rechazado 18:18 (también 10:07 hoy y 28-ago).
+
+## 2026-08-31 19:06 — ops
+31-ago ~19:05: handoff Grok→Agy por cuota. SESSION-HANDOFF reescrito. Stack host se queda. Despertador Grok muere con esta sesión. Agy: cron OFF; tubo=once como Kora. No mute.

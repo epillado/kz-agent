@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-08-31 14:56
+- **actualizado:** 2026-08-31 19:06
 - **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** lunes; post-comida; hola
-- **foco_ahora:** post-comida; Grok; SAS VoBo; RCA destapado (errores conocidos 28-ago)
+- **foco_ahora:** Handoff Agy. en_call=no. Kora despierta. Stack no matar.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -130,3 +130,5 @@
   - [2026-08-31 12:55] primary→secondary: receso_comida
   - [2026-08-31 12:55] Lalo salió a comprar comida.
   - [2026-08-31 14:56] primary→--primary: work_vector --secondary monitora,company --note Lunes 31. Grok. Post-comida. SAS VoBo hecho. Enrique destapó errores conocidos 28-ago.
+  - [2026-08-31 16:45] Kora despierta en antix1. Tubo ping enviado.
+  - [2026-08-31 19:06] primary→work_vector: Handoff Agy. en_call=no. Kora despierta. Stack no matar.
