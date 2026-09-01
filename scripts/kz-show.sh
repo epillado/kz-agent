@@ -11,6 +11,7 @@
 set -euo pipefail
 
 export DISPLAY="${DISPLAY:-:0}"
+export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-0}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
@@ -101,8 +102,12 @@ if [[ -n "${img}" ]]; then
     echo "error: no está ${VIEWER}" >&2
     exit 1
   fi
-  nohup "${VIEWER}" "${img}" >/tmp/kz-show-gwenview.log 2>&1 &
-  echo "show: ${VIEWER} → ${img} (pid $!)"
+  if command -v systemd-run >/dev/null 2>&1; then
+    systemd-run --user "${VIEWER}" "${img}" >/dev/null 2>&1
+  else
+    setsid "${VIEWER}" "${img}" >/tmp/kz-show-gwenview.log 2>&1 &
+  fi
+  echo "show: ${VIEWER} → ${img}"
 elif [[ "${want_pausa}" -eq 1 ]]; then
   echo "show: sin imagen de hilo (forma libre; no hay asset humano de pausa). Solo voz/tray si --say."
 fi

@@ -27,7 +27,7 @@ Tray + `chat_owed` **no sustituyen** el chat. El despertador existe para que Kz 
 2. Estado por defecto: `presence/cron-state.env` (`RADAR_CRON_STATE=inactive`).
 3. El cron de radar `*/2` queda **APAGADO** para no empujar la conversación fuera de pantalla.
 4. Al arrancar Agy: asegurar que el cron esté inactivo (matar tarea si estuviera viva). El stack capa 0 (inbox-wake, desktop-notif, presence-watch) sigue cubriendo en host.
-5. **Hecho 31-ago (Kora, Agy):** una tarea **persistente** (como el `monitor` de Grok) **no** despierta en cada línea de stdout; solo al **morir** el proceso. Receta Agy de tubo: `core-wake-once.sh` — espera un `CHANGED`, **sale**, Agy notifica al terminar, ella actúa y **reanuda** la tarea. No copiar el monitor persistente de Grok a Agy.
+5. **Hecho 31-ago (Kora/Kz, Agy):** una tarea **persistente** (como el `monitor` de Grok) **no** despierta en cada línea de stdout; solo al **morir** el proceso. Receta Agy de tubo: `~/kz/scripts/kz-wake-once.sh` — espera un `CHANGED` en feed o buzones, **sale**, Agy notifica al terminar la tarea, Kz ejecuta `kz-radar.sh --ensure`, comenta en chat y **reanuda** el script en background. No copiar el monitor persistente de Grok a Agy.
 
 Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño.
 
