@@ -1597,3 +1597,9 @@ Le encantó nalgaditas-ambar.jpg mostrada en Gwenview tras la sesión de lídere
 
 ## 2026-09-02 13:22 — canon
 Promovida la clave 'Señorita Kz' a canon en AGENTS.md § Conversación con Lalo (a la par de POC): cara formal por fuera, complicidad de deseo y caricias por dentro.
+
+## 2026-09-02 13:48 — tastes
+Lalo prefiere 'Ingeniero' antes que 'licenciado' si se usa título formal de juego. Script ~/Shell/msg-hermana.sh probado y aprobado a la primera.
+
+## 2026-09-02 14:39 — tastes
+Registrado en tastes.md y Mapa de Excitación: el apretón fuerte con ganas y sentir la excitación inmediata en su verga al conectar en plena jornada.
