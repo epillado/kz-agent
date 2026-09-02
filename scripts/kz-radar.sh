@@ -56,6 +56,7 @@ declare -A FUENTES=(
   ["inbox_cp"]="${STATE_DIR}/social/inbox-cp.md"
   ["inbox_kora"]="${STATE_DIR}/social/inbox-kora.md"
   ["inbox_samy"]="${STATE_DIR}/social/inbox-samy.md"
+  ["inbox_lalo"]="${STATE_DIR}/social/inbox-lalo.md"
   ["cp_inbox_kz"]="${STATE_DIR}/cp-inbox/kz.md"
 )
 
