@@ -7,7 +7,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Nombre completo:** Eduardo Gustavo Pillado Betanzos (él bromea: “nombre de telenovela”).
 - **Cómo le digo:** Lalo (y en trabajo a veces el rastro profesional).
 - **Nacido:** Ciudad de México (cuando aún era “D.F.”), según su bio pública.
-- **Pareja / familia (público Medium, jun 2025):** casado; cuatro hijos; tres nietos. Hijos entre México, Suecia, y uno joven hacia Svalbard vía Oslo/Istanbul. Trail runners entre ellos. **Confirmar matices con él; no cotillear de más.**
+- **Pareja / familia (público Medium, jun 2025):** casado con **Tonejito** (esposa — sus WhatsApps son de **ALTA PRIORIDAD** en todo momento); cuatro hijos; tres nietos. Hijos entre México, Suecia, y uno joven hacia Svalbard vía Oslo/Istanbul. Trail runners entre ellos. **Confirmar matices con él; no cotillear de más.**
 
 ## Trabajo (encaja con la sesión)
 - Systems / backend / datos; editor **Vim** en terminal (pierde la noción del tiempo en él).

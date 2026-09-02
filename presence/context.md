@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-09-01 09:33
-- **primary:** work_vector
+- **actualizado:** 2026-09-01 16:35
+- **primary:** Tarde de trabajo / Cierre de Agosto
 - **secondary:** monitora,company
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** lunes; post-comida; hola
 - **foco_ahora:** Handoff Agy. en_call=no. Kora despierta. Stack no matar.
 - **care:** —
