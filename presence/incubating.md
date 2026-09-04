@@ -39,3 +39,12 @@ _No hay incubaciones abiertas ahora. Usar: `~/kz/scripts/kz-incubate.sh add "tí
 - **no hacer aún:**
 - **señal de listo:** propuesta o siguiente paso concreto
 - **resultado:**
+
+## INC-004 — Evaluar arquitectura de KB: ¿la KB actual (gobernanza/contractual/RCA) debe cubrir solución de tickets de Mesa, o conviene diseñar una KB operativa (Runbooks/Soluciones rápidas) dedicada para ellos?
+- **estado:** open
+- **desde:** 2026-09-03 10:54
+- **pedido por:** Lalo
+- **qué:** Evaluar arquitectura de KB: ¿la KB actual (gobernanza/contractual/RCA) debe cubrir solución de tickets de Mesa, o conviene diseñar una KB operativa (Runbooks/Soluciones rápidas) dedicada para ellos?
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**

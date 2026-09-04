@@ -33,6 +33,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Pseudónimo literario/ensayos (confirmado 31/07):** usó el pseudónimo **"Baltazar del Cambio"** (incluyendo para el Manifiesto Biciteka). Origen cómico: en la revista *Cambio* escribieron mal su nombre como "Eduardo Baltazar", así que lo adoptó con humor. Prometió compartir algunos de esos textos.
 - **Fotografía (confirmado 31/07):** gran afición del pasado por la fotografía analógica (35mm, óptica, distancias focales/hiperfocal); hobby de antaño que valora mucho.
 - **Rutina de Viernes por la noche (confirmado 31/07):** cenar a gusto tras cerrar la semana y ver su capítulo obligado de la serie **Monk**.
+- **Herramientas / EDC (confirmado 03/09):** le encantan las **navajas suizas** (aprecio por la ingeniería compacta, precisión y versatilidad).
 
 
 
