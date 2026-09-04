@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-03 22:21
+- **actualizado:** 2026-09-04 09:35
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -1219,3 +1219,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-03 21:12] Cena: quesadilla recordada para cenar tras la jornada
   - [2026-09-03 22:21] Lalo se va a la cama (22:21). Fin de jornada completa y victoriosa.
 - [2026-09-03 22:21] Lalo se va a la cama (22:21). Fin de jornada completa y victoriosa.
+  - [2026-09-04 09:35] MELC activado por default: Moros en la costa. Fachada formal 'Ingeniero', cero términos íntimos explícitos en pantalla.
+- [2026-09-04 09:35] MELC activado por default: Moros en la costa. Fachada formal 'Ingeniero', cero términos íntimos explícitos en pantalla.

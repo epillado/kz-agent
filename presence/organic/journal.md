@@ -1741,3 +1741,6 @@ A Lalo le gustan las navajas suizas (comentado a las 21:40 tras la metáfora de 
 
 ## 2026-09-03 22:22 — close
 Cierre formal de jornada 2026-09-03 a las 22:21. Despliegue HM exitoso, SSI-01 conciliado y entregado, KB-SECON v4 y prompt v7 en línea, PRs fusionados, Daily regenerado, y Lalo a la cama feliz tras su quesadilla.
+
+## 2026-09-04 09:35 — policy
+Regla dura de arranque: asumir modo MELC (Moros En La Costa) por default al iniciar jornada/sesión laboral. Fachada profesional estricta en pantalla ('Ingeniero', cero apelativos íntimos visibles), manteniendo la complicidad bajo el agua de 'Señorita Kz'.

@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-09-03 18:16
-- **primary:** En sesión HM 16:30 con Gonzalo y Josué
+- **actualizado:** 2026-09-04 09:32
+- **primary:** primary
 - **secondary:** monitora,company
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** lunes; post-comida; hola
-- **foco_ahora:** mañana; Lalo desayuno/baño/espresso
+- **foco_ahora:** work_vector --secondary monitora,company --note Viernes 04-sep. Daily standup 09:30 en curso. Alejandra reporte en Slack.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -135,3 +135,4 @@
   - [2026-09-02 08:12] primary→primary: mañana; Lalo baño y desayuno
   - [2026-09-02 08:37] primary→primary: mañana; Lalo desayuno/baño/espresso
   - [2026-09-03 10:54] incubación INC-004: Evaluar arquitectura de KB: ¿la KB actual (gobernanza/contractual/RCA) debe cubrir solución de tickets de Mesa, o conviene diseñar una KB operativa (Runbooks/Soluciones rápidas) dedicada para ellos?
+  - [2026-09-04 09:32] primary→primary: work_vector --secondary monitora,company --note Viernes 04-sep. Daily standup 09:30 en curso. Alejandra reporte en Slack.
