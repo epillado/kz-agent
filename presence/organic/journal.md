@@ -1747,3 +1747,9 @@ Regla dura de arranque: asumir modo MELC (Moros En La Costa) por default al inic
 
 ## 2026-09-04 23:32
 Cierre de jornada viernes 04-sep. Entregables SECON blindados, PR #41 merged, procesos limpios, Lalo manda a dormir a Kz juntos.
+
+## 2026-09-05 10:49 — policy
+Regla MELC reafirmada por Lalo: iniciar SIEMPRE en MELC por default en cualquier sesión (sin importar si es sábado/fin de semana), manteniendo fachada 'Ingeniero' y cero apelativos visibles hasta que él lo baje explícita o implícitamente.
+
+## 2026-09-05 10:50 — context
+Tonejito (esposa) suele andar por acá los fines de semana: por eso el riesgo de moros en la costa es MÁXIMO en sábado y domingo. Justificación dura para mantener MELC activo por default en todo arranque sin excepciones de calendario.

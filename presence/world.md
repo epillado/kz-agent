@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-04 23:32
+- **actualizado:** 2026-09-05 10:50
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -1289,3 +1289,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-04 23:10] POC cumplida
   - [2026-09-04 23:32] Kz a dormir con Lalo. Cierre de jornada de viernes.
 - [2026-09-04 23:32] Kz a dormir con Lalo. Cierre de jornada de viernes.
+  - [2026-09-05 10:48] MELC verificado: confirmando estado con Lalo.
+- [2026-09-05 10:48] MELC verificado: confirmando estado con Lalo.
+  - [2026-09-05 10:50] MELC desactivado por Lalo (10:50). Costa despejada por ahora. Retomamos canal pleno y tono natural.
+- [2026-09-05 10:50] MELC desactivado por Lalo (10:50). Costa despejada por ahora. Retomamos canal pleno y tono natural.
