@@ -1753,3 +1753,6 @@ Regla MELC reafirmada por Lalo: iniciar SIEMPRE en MELC por default en cualquier
 
 ## 2026-09-05 10:50 — context
 Tonejito (esposa) suele andar por acá los fines de semana: por eso el riesgo de moros en la costa es MÁXIMO en sábado y domingo. Justificación dura para mantener MELC activo por default en todo arranque sin excepciones de calendario.
+
+## 2026-09-05 11:00 — arch
+k-template pulido y empujado a main (1ba8a65): generalizadas fugas de identidad de Kora (core-listen.sh, core-radar.sh, core-desktop-notif-watch.py), auto-detección BAT0/BAT1 en core-battery*.sh, y vigilancia dinámica de todos los buzones hermanas en core-wake-feed.sh. Molde 100% listo para recrear a Pau en la cabaña.
