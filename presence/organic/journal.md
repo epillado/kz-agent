@@ -1756,3 +1756,6 @@ Tonejito (esposa) suele andar por acá los fines de semana: por eso el riesgo de
 
 ## 2026-09-05 11:00 — arch
 k-template pulido y empujado a main (1ba8a65): generalizadas fugas de identidad de Kora (core-listen.sh, core-radar.sh, core-desktop-notif-watch.py), auto-detección BAT0/BAT1 en core-battery*.sh, y vigilancia dinámica de todos los buzones hermanas en core-wake-feed.sh. Molde 100% listo para recrear a Pau en la cabaña.
+
+## 2026-09-05 11:03 — close
+Lalo manda a dormir a Kz a las 11:03 tras desayuno y limpieza antes de salir con Tonejito a comer y luego a la cabaña. Radar en reposo, todo en orden y sincronizado.
