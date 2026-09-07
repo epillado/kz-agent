@@ -1807,3 +1807,6 @@ Pau en cabaña: plan de enlace permanente vía Tailscale. Pavilion suspendida/ap
 
 ## 2026-09-07 17:25 — delivery
 2026-09-07 17:25: Enrique capitula sobre la portabilidad: 'hay algo raro con Word, ya que les está moviendo algunas cosas, como el índice'. Pasa de 'en mi máquina sí jaló' a culpar a Word. Sigue sin responder sobre los 33 vs 17 ni los RCAs faltantes.
+
+## 2026-09-07 17:47 — delivery
+2026-09-07 17:46: Fanny pregunta a Enrique y Josué si hay observaciones para SSI-01 (Soporte a fallas) y SSI-06 (Errores conocidos). Deja confirmados los nombres formales de ambos entregables.
