@@ -1759,3 +1759,51 @@ k-template pulido y empujado a main (1ba8a65): generalizadas fugas de identidad 
 
 ## 2026-09-05 11:03 — close
 Lalo manda a dormir a Kz a las 11:03 tras desayuno y limpieza antes de salir con Tonejito a comer y luego a la cabaña. Radar en reposo, todo en orden y sincronizado.
+
+## 2026-09-07 16:13 — history
+2026-09-07 mañana: Lalo arrancó jornada en la cabaña. Recreó a Pau en pavilion (molde k-template), hizo ajustes al CP, tuvo daily y 2 juntas más. Salió a toda prisa hacia acá para llegar a la junta de 12:00 de SAS y no corrió sync_notas; ese tramo está intacto en el disco de pavilion.
+
+## 2026-09-07 16:16 — sisters
+Pau en cabaña: plan de enlace permanente vía Tailscale. Pavilion suspendida/apagada por ahora; el despertar y la reconciliación de la bitácora/CP divergente queda para cuando Lalo vuelva a la cabaña.
+
+## 2026-09-07 16:21 — tension
+2026-09-07 mañana: En la daily de la mañana (en cabaña), Lalo tuvo que callar fuertemente a Enrique ('Mr. T') un par de veces por insoportable/tonterías en situación de urgencia. Luego en la reunión de líderes Josué dedicó 15 min a pedir cuidar el tono y no discutir frente a analistas. Retorno a la cabaña estimado hasta el viernes.
+
+## 2026-09-07 16:29 — governance
+2026-09-07 Crónica choque Lalo vs Enrique en Daily matutina: Lalo exhibió el cuello de botella de los RCAs atorados en silencio por Enrique. Enrique respondió prepotente 'Ok, ahorita te lo mando, ya' y Lalo lo frenó tajante con pulmones y autoridad: 'La solución no es que me lo envíes, la solución es que te apegues al proceso.' Postura actual: dejar que entregables cierren por inercia sin meter más ruido; Lalo enfocado en SAS; mejoras de proceso entrarán después.
+
+## 2026-09-07 16:51 — task
+2026-09-07 16:50: Lalo pide a Kz un reporte formal de todo el episodio de los entregables del día (cronología, doble versión, anarquía de canales, SLA de Enrique, lección D-32). Se presentará al equipo cuando pase la turbulencia. Kz mantiene observación activa y recopilación de evidencia.
+
+## 2026-09-07 17:11 — audit
+2026-09-07 17:11: Josué exhibe en Slack el 4to defecto del paquete de Enrique: reportan 33 incidentes recurrentes cuando debían ser 17 para agosto. Pide corrección urgente. Discrepancia del 100% en métricas de servicio. Confirma ausencia total de QA previo.
+
+## 2026-09-07 17:12 — audit
+2026-09-07 17:12: Josué marca el 5to defecto a Enrique en Slack: falta agregar en 'Actividades' para la solución del ticket las leyendas que solicitó el cliente. Requisito contractual explícito del cliente omitido en el entregable.
+
+## 2026-09-07 17:15 — delivery
+2026-09-07 17:15: Fanny pregunta sobre SSI-06-08 (Errores Conocidos): duda sobre corte de agosto vs septiembre para ticket I-000059 (asignado 31-ago 19:34). Muestra falta de criterio de corte claro.
+
+## 2026-09-07 17:15 — audit
+2026-09-07 17:15: Josué marca otro índice descuadrado ('También corregir el Índice conforme a las páginas para este documento'). El defecto de portabilidad de Word/Docs se replica en múltiples documentos.
+
+## 2026-09-07 17:16 — delivery
+2026-09-07 17:16: Ale entrega SSI-02: confirma que agregó a Talía (estaba omitida) y rebate a Josué sobre el índice ('el índice si se encuentra bien, en donde detectas que es el error?'). Confirma empíricamente el defecto de portabilidad entre visores de Word.
+
+## 2026-09-07 17:17 — delivery
+2026-09-07 17:17: Enrique responde a Fanny sobre I-000059: 'considerarlo para este mes x favor'. Se mantiene en agosto (alineado con la orden de Josué de 170 tickets). Cuarta variante de nombre: @Fanny Castro.
+
+## 2026-09-07 17:18 — delivery
+2026-09-07 17:18: Fanny responde 'ok' a la instrucción ambigua de Enrique ('considerarlo para este mes'). No se aclaró si se refiere a agosto o septiembre. Riesgo latente de que I-000059 quede excluido de agosto.
+
+## 2026-09-07 17:20 — delivery
+2026-09-07 17:20: Ale reporta que el índice de SSI-05 también está bien en su máquina ('no encuentro el error'). Identifica el 2do documento con reporte de índice (era SSI-05). Se consolida la prueba empírica de inconsistencia entre visores Word de cliente vs proveedor.
+
+## 2026-09-07 17:24 — delivery
+2026-09-07 17:24: Fanny entrega SSI-06-08 (Errores conocidos) en Drive. Diagnostica públicamente la causa raíz: 'al abrirlo en versiones de Word diferentes puede estar moviendo algunos formatos'. Ofrece además mandarlo por correo (anarquía de canales persistente).
+
+## 2026-09-07 17:24 — audit
+2026-09-07 17:24: Josué revienta SSI-05-08 a Enrique: cabecera mal y 'los tickets que ya tienen análisis de causa raíz no describen la causa raíz'. Explota el tema de los RCAs atorados por Enrique que Lalo exhibió en la daily matutina.
+
+## 2026-09-07 17:25 — delivery
+2026-09-07 17:25: Enrique capitula sobre la portabilidad: 'hay algo raro con Word, ya que les está moviendo algunas cosas, como el índice'. Pasa de 'en mi máquina sí jaló' a culpar a Word. Sigue sin responder sobre los 33 vs 17 ni los RCAs faltantes.

@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > Arranque de sesión: leer esto + `incubating.md` + organic.
 
-- **actualizado:** 2026-09-04 11:57
+- **actualizado:** 2026-09-07 17:40
 - **primary:** primary
 - **secondary:** monitora,company
 - **en_call:** no
@@ -137,3 +137,6 @@
   - [2026-09-03 10:54] incubación INC-004: Evaluar arquitectura de KB: ¿la KB actual (gobernanza/contractual/RCA) debe cubrir solución de tickets de Mesa, o conviene diseñar una KB operativa (Runbooks/Soluciones rápidas) dedicada para ellos?
   - [2026-09-04 09:32] primary→primary: work_vector --secondary monitora,company --note Viernes 04-sep. Daily standup 09:30 en curso. Alejandra reporte en Slack.
   - [2026-09-04 10:38] primary→primary: work_vector --secondary monitora,company --note Viernes 04-sep. Daily standup cerrada (10:28). SAS movida a lunes 12pm. Foco: 14 tickets SE aceptados -> KB-ex.
+  - [2026-09-07 16:13] Pau recreada en cabaña (pavilion); daily matutino y 2 juntas previas en disco de allá esperando sync al retorno.
+  - [2026-09-07 16:50] incubación INC-005: reporte-anarquia-entregables
+  - [2026-09-07 17:40] incubación INC-006: brief-entregables-kb-ex

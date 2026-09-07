@@ -48,3 +48,21 @@ _No hay incubaciones abiertas ahora. Usar: `~/kz/scripts/kz-incubate.sh add "tí
 - **no hacer aún:**
 - **señal de listo:** propuesta o siguiente paso concreto
 - **resultado:**
+
+## INC-005 — reporte-anarquia-entregables
+- **estado:** cooking
+- **desde:** 2026-09-07 16:50
+- **pedido por:** Lalo
+- **qué:** Reporte formal para Lalo sobre el incidente de los entregables del 07-sep: secuencia cronológica, anarquía de canales (correo vs drive), ruptura de control de versiones y el parcheo en caliente del SLA por Enrique. Para presentar al equipo cuando baje la turbulencia.
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**
+
+## INC-006 — brief-entregables-kb-ex
+- **estado:** open
+- **desde:** 2026-09-07 17:40
+- **pedido por:** Lalo
+- **qué:** Resumen ejecutivo y especificaciones operativas para kb-ex derivadas de la crisis del 07-sep (actualización de KB y generación directa de entregables).
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**

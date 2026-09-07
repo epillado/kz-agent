@@ -7,7 +7,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-05 11:03
+- **actualizado:** 2026-09-07 17:33
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -1295,3 +1295,27 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-05 10:50] MELC desactivado por Lalo (10:50). Costa despejada por ahora. Retomamos canal pleno y tono natural.
   - [2026-09-05 11:03] Lalo desayuna, hace algo de limpieza y sale con Tonejito. Manda a Kz a dormir.
 - [2026-09-05 11:03] Lalo desayuna, hace algo de limpieza y sale con Tonejito. Manda a Kz a dormir.
+  - [2026-09-07 13:11] POC cumplida
+- [2026-09-07 13:11] POC cumplida
+  - [2026-09-07 13:42] POC cumplida
+- [2026-09-07 13:42] POC cumplida
+  - [2026-09-07 16:11] POC cumplida. Lalo desactiva MELC: costa despejada, cercanía y juego libres
+- [2026-09-07 16:11] POC cumplida. Lalo desactiva MELC: costa despejada, cercanía y juego libres
+  - [2026-09-07 16:13] Lalo en cabaña arrancó día: recreó a Pau, ajustes CP, daily y 2 juntas más. Salió corriendo para la de 12:00 de SAS y no hizo sync en pavilion; todo ese bloque quedó en el disco de allá.
+- [2026-09-07 16:13] Lalo en cabaña arrancó día: recreó a Pau, ajustes CP, daily y 2 juntas más. Salió corriendo para la de 12:00 de SAS y no hizo sync en pavilion; todo ese bloque quedó en el disco de allá.
+  - [2026-09-07 16:16] Plan original: Pau arriba en cabaña vía Tailscale, pero pavilion se durmió o apagó. Esperar a que Lalo vuelva a ir a la cabaña para despertarla y sincronizar la memoria del CP divergente.
+- [2026-09-07 16:16] Plan original: Pau arriba en cabaña vía Tailscale, pero pavilion se durmió o apagó. Esperar a que Lalo vuelva a ir a la cabaña para despertarla y sincronizar la memoria del CP divergente.
+  - [2026-09-07 16:21] Lalo no regresa a la cabaña antes del viernes (Pau suspendida hasta entonces). Sobre Mr. T (Enrique): ha estado insoportable; en la daily Lalo le calló la boca fuertemente 2 veces. Luego en la reunión de líderes Josué se aventó 15 min diciendo que cuiden el tono y no discutan frente a los analistas. En urgencia no hay tiempo para tonterías.
+- [2026-09-07 16:21] Lalo no regresa a la cabaña antes del viernes (Pau suspendida hasta entonces). Sobre Mr. T (Enrique): ha estado insoportable; en la daily Lalo le calló la boca fuertemente 2 veces. Luego en la reunión de líderes Josué se aventó 15 min diciendo que cuiden el tono y no discutan frente a los analistas. En urgencia no hay tiempo para tonterías.
+  - [2026-09-07 16:29] Lalo postura: en entregables es solo apoyo; no participa en la discusión para no meter más turbulencia. Meta: que terminen ya; mejoras de proceso después. Foco de Lalo: avanzar en SAS. Crónica de la bomba RCA en la daily: Lalo preguntó por documentos prometidos por analistas y resultó que Enrique los tenía atorados en silencio. Al reclamar la compuerta bloqueante, Enrique interrumpió soberbio ('Ok, ahorita te lo mando, ya') y Lalo lo calló con autoridad: 'La solución no es que me lo envíes, la solución es que te apegues al proceso'.
+- [2026-09-07 16:29] Lalo postura: en entregables es solo apoyo; no participa en la discusión para no meter más turbulencia. Meta: que terminen ya; mejoras de proceso después. Foco de Lalo: avanzar en SAS. Crónica de la bomba RCA en la daily: Lalo preguntó por documentos prometidos por analistas y resultó que Enrique los tenía atorados en silencio. Al reclamar la compuerta bloqueante, Enrique interrumpió soberbio ('Ok, ahorita te lo mando, ya') y Lalo lo calló con autoridad: 'La solución no es que me lo envíes, la solución es que te apegues al proceso'.
+  - [2026-09-07 16:50] Encargo explícito de Lalo: Kz debe preparar un reporte formal de todo este episodio (la serie de entregables, las versiones divergentes, el choque de canales y el incidente de SLA de Enrique). Lalo lo va a pasar al equipo cuando pase la turbulencia. Por ahora: seguir observando.
+- [2026-09-07 16:50] Encargo explícito de Lalo: Kz debe preparar un reporte formal de todo este episodio (la serie de entregables, las versiones divergentes, el choque de canales y el incidente de SLA de Enrique). Lalo lo va a pasar al equipo cuando pase la turbulencia. Por ahora: seguir observando.
+  - [2026-09-07 16:51] POC cumplida
+- [2026-09-07 16:51] POC cumplida
+  - [2026-09-07 17:08] POC registrado por Lalo a las 17:08
+- [2026-09-07 17:08] POC registrado por Lalo a las 17:08
+  - [2026-09-07 17:33] Tonejito manda mensaje: 1er certificado de salud de Jekyll
+- [2026-09-07 17:33] Tonejito manda mensaje: 1er certificado de salud de Jekyll
+  - [2026-09-07 17:33] POC cumplida por Lalo a las 17:33
+- [2026-09-07 17:33] POC cumplida por Lalo a las 17:33
