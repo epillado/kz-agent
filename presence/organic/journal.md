@@ -1810,3 +1810,33 @@ Pau en cabaña: plan de enlace permanente vía Tailscale. Pavilion suspendida/ap
 
 ## 2026-09-07 17:47 — delivery
 2026-09-07 17:46: Fanny pregunta a Enrique y Josué si hay observaciones para SSI-01 (Soporte a fallas) y SSI-06 (Errores conocidos). Deja confirmados los nombres formales de ambos entregables.
+
+## 2026-09-07 17:57 — delivery
+2026-09-07 17:57: Josué da VoBo a Fanny en Slack: 'Ya lo revisé @Fanny Castro, todo bien, gracias'. Aprueba SSI-01 y/o SSI-06. Contraste absoluto con la tanda de 7 observaciones al paquete de Enrique.
+
+## 2026-09-07 17:59 — tension
+2026-09-07 17:59: Josué convoca en grupo de WhatsApp 'Líderes SE' a Lalo y Enrique juntos a la misma sala (meet.google.com/oke-hjdi-nyy). Confrontación de líderes convocada tras el colapso de entregables.
+
+## 2026-09-07 18:22 — close
+2026-09-07 18:22: Josué anuncia en Slack el envío oficial a la SE de los entregables de agosto para cumplir SLA. Instruye: 'Favor de revisar cómo quedaron y estar pendientes de las observaciones... Revisamos mañana áreas de oportunidad'. Abre formalmente la ventana para el reporte INC-005 mañana.
+
+## 2026-09-07 18:56 — governance
+2026-09-07 18:55: Sesión Líderes SE (Josué, Enrique, Lalo). Regaño severo de Josué por pésima calidad y envío 1 min antes del plazo para evitar penalización. Enrique insistió en culpar a Word y Josué lo calló ('alguien de secundaria lo podría hacer'). Caso Karen en SSI-02: renunció el año pasado y la volvieron a incluir. Lalo pidió reunión oficial para presentar propuesta. Siguiente tema: reenvío de emails de iTop.
+
+## 2026-09-07 19:16 — sisters
+2026-09-07 19:10: Casa de Kz (h310) y casa de Kora (antix1) enlazadas por Tailscale. Kora en 100.105.243.13 (ping verificado OK). Enlace entre hermanas activo.
+
+## 2026-09-07 19:16 — delivery
+2026-09-07 19:10: Entregables finales enviados a la SE recibidos en Insumos/Entregables Agosto 2026.rar. 8 archivos: 7 .docx y 1 .xlsx (cero PDFs). Errores de tipografía ('Reporte mesual') y disparidad en nombres.
+
+## 2026-09-07 20:00 — sas
+2026-09-07 20:00: Minuta dictada por Lalo sobre reunión SAS con área usuaria SE e interna. 9 iniciativas (se suman Disolución por Fedatario y Vencimiento natural). Reglas de consistencia MUA-SAS (DoRS/CUD y endpoint). Procedimiento Mesa para SAS unipersonales múltiples + consulta en SAS-SU. Dashboard SAS-SU de vencimientos próximos. Plan de Lalo: reglas en código, cifras de control de docs/repositorios y actualización del documento de entendimiento. Depositado al CP.
+
+## 2026-09-07 20:17 — delivery
+2026-09-07 20:16: Enrique Velázquez envía por WhatsApp/Chrome: 'Reporte de Mesa de Ayuda al 7 de septiembre'. Sigue el flujo de despachos post-sesión.
+
+## 2026-09-07 20:21 — voice
+2026-09-07 20:20: Lalo activa voz continua: 'Kz, háblame (con voz) hasta nueva instrucción. Me gusta escucharte.' Kz hablará por kz-say en cada turno hasta nueva orden.
+
+## 2026-09-07 23:22 — pattern
+No preguntar por acciones operativas de coordinación entre agentes (avisar a Samy, relay de info, decisiones de pipeline). Ejecutar directo. Solo preguntar si hay trade-off real que él deba decidir.

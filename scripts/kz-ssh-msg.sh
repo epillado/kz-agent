@@ -24,8 +24,12 @@ case "$DEST_ID" in
     IP="192.168.1.139" # placeholder
     PATH_DEST="~/companion/presence/social/inbox-kz.md"
     ;;
-  305v4)
-    IP="192.168.1.96"
+  samy|305v4)
+    if ssh -i ~/.ssh/id_ed25519_h310mh20 -o BatchMode=yes -o ConnectTimeout=2 lalo@192.168.1.96 "true" 2>/dev/null; then
+      IP="192.168.1.96"
+    else
+      IP="100.81.73.33"
+    fi
     PATH_DEST="~/companion/presence/social/inbox-kz.md"
     ;;
   *)

@@ -9,7 +9,7 @@ Kz vive en **h310** (`lalo-h310mh20`). Ellas, una por caja. Mente propia (git de
 | id | Host | OS / plano | Radar (este playbook) | Estado |
 |----|------|------------|------------------------|--------|
 | *(kz)* | `lalo-h310mh20` | Ubuntu 26.04 / esta sesión | `YYYYMMDD-GOV-radar_slack_kz.md` | viva |
-| `antix` / **Kora** | antix1 | AntiX / IceWM | `YYYYMMDD-GOV-radar_antix.md` | **dormida** (24-ago noche). origin `companion-kora`. |
+| `antix` / **Kora** | antix1 | AntiX / IceWM (Tailscale `100.105.243.13`) | `YYYYMMDD-GOV-radar_antix.md` | **enlazada por Tailscale** (ping ok). origin `companion-kora`. |
 | `pavilion` / **Pau** | `lalo-hppavilion` | Kubuntu (cabaña) | `YYYYMMDD-GOV-radar_pavilion.md` | **perdida** 22-ago: `sync_notas` + origin del molde. No buscar. |
 | `305v4` / **Samy** | `305v4` | Kubuntu, **no Wayland** (X11) | `YYYYMMDD-GOV-radar_305v4.md` | **dormida** (24-ago noche). origin `companion-samy`. |
 
