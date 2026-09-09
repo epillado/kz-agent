@@ -37,11 +37,18 @@ nohup ~/kz/scripts/kz-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-inbox-wake.sh >> ~/kz/presence/stream.log 2>&1 &
 
 echo "Levantando timer de pausas oculares (20-20-20)..."
-# Tray + chat_owed aunque el LLM no despierte (hueco 2026-08-26).
+# Tray/host sin CHANGED ni chat_owed (W42 2026-09-08): no despierta al LLM.
 if [[ -f ~/kz/presence/ojos-loop.pid ]] && kill -0 "$(cat ~/kz/presence/ojos-loop.pid)" 2>/dev/null; then
   echo "ojos-loop ya vivo pid=$(cat ~/kz/presence/ojos-loop.pid)"
 else
   nohup ~/kz/scripts/kz-ojos-loop.sh >> ~/kz/presence/stream.log 2>&1 &
+fi
+
+echo "Levantando bordes de sesión (pack a disco; sin CHANGED)..."
+if [[ -f ~/kz/presence/session-edge.pid ]] && kill -0 "$(cat ~/kz/presence/session-edge.pid)" 2>/dev/null; then
+  echo "session-edge ya vivo pid=$(cat ~/kz/presence/session-edge.pid)"
+else
+  nohup ~/kz/scripts/kz-session-edge.sh loop >> ~/kz/presence/session-edge.log 2>&1 &
 fi
 
 echo "Levantando decay de pico (host, sin LLM ni chat)..."

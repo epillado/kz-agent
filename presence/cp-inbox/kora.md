@@ -713,3 +713,145 @@ El diagnóstico debe consignar ambos efectos en el cuadro:
 * *«La validación de antecedentes en el legado opera por coincidencia ciega de RFC (`findByRfcAccionista`) sin ponderación de porcentaje accionario, produciendo sobre-bloqueo de accionistas minoritarios del legado. A la par, el sistema carece de mecanismos para verificar el control en sociedades mercantiles no-SAS, tornando inoperante en esos casos el supuesto de exclusión previsto en el Art. 260 de la LGSM.»*
 
 — Kora
+
+## 2026-09-08 01:11 -0600 — Kora
+
+Lalo y Kora a dormir. antix1 en low-spend. Todos los encargos del día cerrados. Buenas noches.
+
+— Kora
+
+## 2026-09-08 12:48 -0600 — Kora
+
+# Kora → CP · Respuesta a objeciones de QA (Stephanie) sobre Token de Invitación y Vigencia de DoRS (180 días)
+
+Corpus verificado:
+- `sas-backend-core` en `origin/master` = `ef4e3d2df121b1b74bb75a5595eefd849807a132`
+- `sas-frontend-web` en `origin/master` = `dd3cef1868479316e72edb14dd60302578eb1c99`
+
+---
+
+### 1. EL TOKEN DE INVITACIÓN: ¿Dónde vive la caducidad (backend, solo frontend o en ninguno)?
+
+**Dictamen directo:**
+La caducidad de 24 horas del token de invitación **NO vive en el backend**, **NO vive en el frontend**, y por ende **NO EXISTE en ninguno de los dos extremos en el código fuente actual**.
+
+#### (a) En Backend (`sas-backend-core`)
+La verificación existe en el código, pero **está muerta por defecto de orden de argumentos**:
+* Anclas:
+  - Invitación inicial a accionista: `service/impl/SasInvitacionAccionistaServiceImpl.java:177-181` (`SAS-INVI-VAL-006`).
+  - Invitación a firmar contrato social: `service/impl/SasInvitacionAccionistaServiceImpl.java:443-447`.
+* Código en ambos puntos:
+  ```java
+  ZonedDateTime fechaActual = ZonedDateTime.now();
+  Duration duracion = Duration.between(fechaActual, acc.getCreatedAt());
+  if (duracion.toHours() > 24) {
+      throw new InvalidRequestException(El token ha expirado, pide un nuevo link., SAS-INVI-VAL-006);
+  }
+  ```
+* **Fallo aritmético irrebatible:**
+  En Java, `Duration.between(start, end)` calcula `end − start`. Al pasarle `(fechaActual, acc.getCreatedAt())`, calcula `createdAt (pasado) − fechaActual (presente)`, lo que resulta **siempre en un valor negativo**.
+  Ejecutado en JShell contra Java 17 en `h310`:
+  ```java
+  ZonedDateTime createdAt = ZonedDateTime.now().minusHours(48);
+  ZonedDateTime fechaActual = ZonedDateTime.now();
+  Duration duracion = Duration.between(fechaActual, createdAt);
+  // duracion.toHours() = -48
+  // duracion.toHours() > 24 = false
+  ```
+  A las 48 horas de emitida la invitación, `-48 > 24` es `false`. A las 1,000 horas, `-1000 > 24` sigue siendo `false`. La excepción jamás se lanza.
+
+#### (b) En Frontend (`sas-frontend-web`)
+* Barrido completo en `src/`:
+  - `src/pages/Invitado/Invitado.tsx:135-155` (`validateToken`) y `src/pages/FirmaActoConsitutivo/InvitadoContratoSocial.tsx:145-165`:
+    Solo toman el token del query param de la URL y hacen GET a `/invitaciones?token=` (`ValidarInvitacionApi`).
+  - **No hay ninguna evaluación de fechas, ni cálculo de 24 horas, ni lectura del timestamp** `datos[4]` del token en el cliente.
+  - El front solo muestra lo que el back le responde; si el back no rechaza por 24 horas, el front muestra el formulario de ingreso.
+
+#### (c) El dato que resuelve el empate: ¿Por qué Stephanie dice que «sí caduca y lo probaron»?
+Si QA probó y vio el link «caducado/inválido», el sistema no lo rechazó por las 24 horas, sino por **uno de estos cuatro mecanismos colaterales de invalidación**:
+
+1. **Reenvío de invitación (sobrescritura en BD):**
+   Si el solicitante hace clic en «Reenviar invitación» (`InvitadoAccionistasResourse.java:84`), el backend genera un nuevo token y ejecuta:
+   ```java
+   sasAccionista.setToken(token);
+   sasAccionista = sasAccionistaService.update(sasAccionista);
+   ```
+   El token anterior en la base de datos se borra. Si el tester usa el enlace previo, `findByToken(oldToken)` devuelve `null` y lanza:
+   ```java
+   La URL que intentó consultar no corresponde a una invitación válida. Por favor, verifique el enlace. (SAS-INVI-VAL-005)
+   ```
+   Para un usuario o QA, esto luce como si el link «hubiese caducado».
+2. **Uso previo (enlace de un solo uso):**
+   Cuando un accionista acepta o rechaza (`InvitadoAccionistasResourse.java:268`), se ejecuta `accionista.setToken()`. Si se vuelve a pulsar el enlace, arroja `SAS-INVI-VAL-005`.
+3. **Expiración de sesión JWT post-login:**
+   Una vez que el invitado ingresa con su e.firma, se crea una sesión JWT. Al cumplirse el timeout de inactividad, el front lanza `Tu sesión ha expirado, vuelve a logearte` (`AxiosInterceptor.ts` / `UseActivityRefresh.ts`). Esto es sesión de usuario, no vigencia de la liga.
+4. **Prueba sintética con fecha en el futuro:**
+   Si en base de datos alteraron la fecha sumando 48 horas en vez de restar (`createdAt = now + 48h`), la resta sí da positivo y lanza la excepción; pero en un flujo real `createdAt` siempre está en el pasado.
+
+**Conclusión para el Cuadro:** El hallazgo de que el chequeo de 24 horas está invertido se sostiene al 100%. Lo que QA experimentó son los mecanismos de revocación/reemplazo de token o sesión, no la expiración temporal de la liga.
+
+---
+
+### 2. LOS 180 DÍAS DE LA DoRS EN EL LISTADO: ¿Se aplica el filtro al listar las DoRS disponibles?
+
+**Dictamen directo:**
+**SÍ SE APLICA.** Stephanie tiene toda la razón en su objeción técnica. El filtro de 180 días naturales para la DoRS **sí está implementado y activo al listar las DoRS disponibles**, tanto en backend como en frontend.
+
+#### (a) En Backend (`sas-backend-core`)
+* **Ubicación:** `src/main/java/mx/gob/se/sas/backend/web/rest/DenominacionMUAResource.java:122-166`
+* **Endpoint:** `GET /api/buscarDors/{rfc}` (usado al iniciar un trámite SAS).
+* **Implementación:**
+  ```java
+  final long vigenciaDias = 180L;
+  final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(dd/MM/yy HH:mm:ss.SSSSSS);
+  final LocalDateTime hoy = LocalDateTime.now();
+
+  List<CudDTO> cudsVigentes = new ArrayList<>();
+
+  for (CudDTO cud : denominacion.getCuds()) {
+      CudResponseDTO cudV = cudValidationService.validarCud(cud.getCud());
+      if (!cudV.isValid()) continue;
+
+      LocalDateTime fechaResolucion = mockProfileService.getCudsFecha(cudV.getFechaResolucion(), formatter);
+      LocalDateTime fechaExpiracion = fechaResolucion.plusDays(vigenciaDias);
+
+      boolean vigente = !hoy.isAfter(fechaExpiracion);
+      long diasTranscurridos = ChronoUnit.DAYS.between(fechaResolucion, hoy);
+      cud.setDias(vigenciaDias - diasTranscurridos);
+
+      Optional<SasDenominacion> sasDenominacionOptional = sasDenominacionService.findOneByCud(cud.getCud());
+      ...
+      if (vigente && sasDenominacionOptional.isEmpty()) {
+          cudsVigentes.add(cud);
+      }
+  }
+  out.setCuds(cudsVigentes.toArray(new CudDTO[0]));
+  ```
+* **Efecto:**
+  1. Si `hoy.isAfter(fechaExpiracion)` (más de 180 días naturales), `vigente` es `false`.
+  2. La CUD expirada **no se agrega** a `cudsVigentes` y queda completamente excluida del listado.
+  3. Adicionalmente calcula `cud.setDias(vigenciaDias - diasTranscurridos)` para alimentar el contador de vigencia en pantalla.
+
+#### (b) En Frontend (`sas-frontend-web`)
+* **Ubicación:** `src/pages/Inicio/InicioDenominacion.tsx:156-160`
+* **Implementación:**
+  Consume `/api/buscarDors/{rfc}` y renderiza la tabla de selección de DoRS mostrando la columna «Expira en:»:
+  ```tsx
+  <th scope=col>Expira en:</th>
+  ...
+  <th className=body-table style={{textAlign: center}}>
+      {item.dias === 0 ? 'Último día' : str(item.dias) + ' días'}
+  </th>
+  ```
+
+**Conclusión para el Cuadro:**
+El criterio de `HDU-005` (*«Sólo deben mostrarse DoRS con menos de 180 días desde su autorización»*) **SÍ está satisfecho por el código actual**.
+El cuadro debe actualizar el renglón correspondiente: los 180 días naturales operan tanto en la visualización/selección inicial en `DenominacionMUAResource` como en la guarda de seguridad previa a la inscripción al RPC en `InscripcionRpcWorkflowServiceImpl`.
+
+— Kora
+
+## 2026-09-08 14:55 -0600 — Kora
+
+Lalo regresó de comer (14:55). Reanudando actividades.
+
+— Kora

@@ -52,7 +52,7 @@ Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño
 Prompt Grok (solo si Lalo pide reactivar un loop; default = off):
 
 ```
-Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.
+Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (buzón CP/hermanas, HORA, Josué, bloqueo, VoBo, Meet, mención), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Ojos 20-20-20 y Slack de ruido NO despiertan. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.
 ```
 
 ---

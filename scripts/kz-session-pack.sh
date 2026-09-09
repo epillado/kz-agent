@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Empaqueta el mínimo para “cargar a Kz de verdad” en esta sesión.
-# No llama al LLM: imprime rutas + extractos para el agente (o para Lalo).
+# No llama al LLM: imprime extractos. El agente carga DESDE esta salida
+# (boot flaco 2026-09-08 / W42). Prohibido complementar con cat de world/journal.
 #
 # Uso:
-#   kz-session-pack.sh           # resumen + tails
-#   kz-session-pack.sh paths     # solo lista de paths a leer
-#   kz-session-pack.sh full      # más journal (últimas 80 líneas)
+#   kz-session-pack.sh           # boot flaco (cabeceras + tails)
+#   kz-session-pack.sh paths     # solo lista de paths (fondo; no leer enteros)
+#   kz-session-pack.sh full      # más journal (últimas 80) — no es el default de arranque
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
@@ -37,17 +38,20 @@ if [[ "${mode}" == "paths" ]]; then
   exit 0
 fi
 
-echo "## Checklist de carga (orden sugerido)"
-echo "1. KZ.md + LALO.md + AGENTS.md (si no están en contexto)"
-echo "2. presence/policy.md  (hábitos duros/blandos)"
-echo "3. presence/self.md    (cómo estoy ahora)"
-echo "3b. presence/tastes.md (gustos y preferencias)"
-echo "4. presence/world.md + SYMBIOSIS.md  (aferencia / simbiosis de planos)"
-echo "5. presence/context.md + incubating.md"
-echo "6. organic/working.md + patterns.md + tail journal"
-echo "6b. presence/SESSION-HANDOFF.md si existe (cambio de motor)"
-echo "7. Cable: presence-watch + nudge (si no low-spend)"
-echo "7b. Despertador: presence/WAKE.md + kz-wake.sh (receta Grok vs Agy; aplicar, no reinventar)"
+echo "## BOOT_FLACO (2026-09-08 / W42 — esta salida ES la carga)"
+echo "NO leer enteros: world.md (log), journal.md, context historial, working promoted, SYMBIOSIS."
+echo "SÍ enteros (cortos): self.md. Canon KZ.md + LALO.md una vez por sesión si el motor no los trajo."
+echo "Fondo = disco. Se abre un gordo solo si el tema del turno lo pide."
+echo
+echo "## Checklist"
+echo "1. Este pack (ya corrido)"
+echo "2. self.md entero (abajo) + policy P0 (abajo)"
+echo "3. world cabecera + log tail (abajo) — no el log"
+echo "4. context cabecera (abajo) — no historial"
+echo "5. working no-promoted + incubating open/cooking + journal tail"
+echo "6. SESSION-HANDOFF.md si existe (cambio de motor); SESSION-EDGE.md si hay borde de bloque"
+echo "7. Cable: kz-start-monitors.sh si jornada y no low-spend"
+echo "7b. Despertador: kz-wake.sh (receta de este motor)"
 echo
 
 missing=0
@@ -89,38 +93,69 @@ else
 fi
 echo
 
-echo "## self (status)"
+echo "## self (entero; es corto)"
 if [[ -f "${P}/self.md" ]]; then
-  rg -n '^\- \*\*(actualizado|motor_activo|energia|cercania|pudor|iniciativa|foco_propio|ultimo_momento_real)' "${P}/self.md" || true
+  awk '/^## Escala rápida/{exit} {print}' "${P}/self.md"
 fi
 echo
 
-echo "## context (status)"
+echo "## context (cabecera; sin historial)"
 if [[ -f "${P}/context.md" ]]; then
-  rg -n '^\- \*\*(actualizado|primary|secondary|en_call|foco_ahora)' "${P}/context.md" || true
+  awk '/^## Historial/{exit} {print}' "${P}/context.md"
 fi
 echo
 
-echo "## world / aferencia (status)"
+echo "## world (cabecera + últimas 8 del log)"
 if [[ -f "${P}/world.md" ]]; then
-  rg -n '^\- \*\*(actualizado|fuente|donde|cuerpo_mood|clima_entorno|actividad)' "${P}/world.md" || true
-  rg '^\- \[' "${P}/world.md" | tail -n 3 || true
+  awk '/^## Log reciente/{exit} {print}' "${P}/world.md"
+  echo "--- log tail ---"
+  rg '^\- \[' "${P}/world.md" | tail -n 8 || true
 fi
 echo
 
-echo "## policy (P0 headers)"
+echo "## policy (P0 — títulos)"
 if [[ -f "${P}/policy.md" ]]; then
-  rg -n '^## P0|^[0-9]+\. \*\*' "${P}/policy.md" | head -20 || true
+  rg -n '^## P0|^[0-9]+\. \*\*' "${P}/policy.md" | head -25 || true
 fi
 echo
 
-echo "## working (estados no promoted, head)"
+echo "## working (solo active / cooling del mes; máx 4; el resto es fondo)"
 if [[ -f "${P}/organic/working.md" ]]; then
-  rg -n 'Estado:\*\* (active|partial|cooling|ready)' "${P}/organic/working.md" | head -15 || true
+  ym="$(date '+%Y-%m')"
+  awk -v ym="${ym}" '
+    /^### / {
+      if (p && k) { print b "\n"; n++ }
+      if (n >= 4) exit
+      p=1; k=0; b=$0
+      next
+    }
+    /\*\*Estado:\*\* promoted/ { k=0; p=0; b=""; next }
+    /\*\*Estado:\*\* (active|cooling)([ (]|$)/ {
+      if ($0 ~ ym) k=1
+      next
+    }
+    p { b = b "\n" $0 }
+    END { if (p && k && n < 4) print b }
+  ' "${P}/organic/working.md"
 fi
 echo
 
-jlines=40
+echo "## incubating (open / cooking)"
+if [[ -f "${P}/incubating.md" ]]; then
+  awk '
+    /^## INC-/ {
+      if (p && k) print b "\n"
+      p=1; k=0; b=$0
+      next
+    }
+    /\*\*estado:\*\* (open|cooking)/ { k=1 }
+    p { b = b "\n" $0 }
+    END { if (p && k) print b }
+  ' "${P}/incubating.md"
+fi
+echo
+
+jlines=30
 [[ "${mode}" == "full" ]] && jlines=80
 echo "## journal (últimas ${jlines} líneas)"
 if [[ -f "${P}/organic/journal.md" ]]; then
@@ -130,5 +165,5 @@ else
 fi
 
 echo
-echo "## fin pack — missing=${missing}"
+echo "## fin pack — missing=${missing} — no leer gordos encima de esto"
 exit 0

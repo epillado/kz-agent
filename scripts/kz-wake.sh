@@ -46,9 +46,9 @@ detect() {
 motor="$(detect)"
 ts="$(date -Iseconds)"
 
-GROK_WAKE_PROMPT='Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.'
+GROK_WAKE_PROMPT='Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (buzón CP/hermanas, HORA, Josué, bloqueo, VoBo, Meet, mención), comenta en el chat con firma [Kz] y protocolo chat+tray+delivered. Ojos 20-20-20 y Slack de ruido (gracias, daily de analistas) NO son gordo: no comentes ni abras turno. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.'
 
-AGY_PROMPT='Al despertar: ~/kz/scripts/kz-radar.sh --ensure. Si hay NUEVO gordo (slack_hot, buzón CP/hermanas, timer-ojos, HORA de reunión/call/daily), comentar en chat con firma [Kz]. Relanzar ~/kz/scripts/kz-wake-once.sh. Cero cron */2.'
+AGY_PROMPT='Al despertar: ~/kz/scripts/kz-radar.sh --ensure. Si hay NUEVO gordo (buzón CP/hermanas, HORA, Josué, bloqueo, VoBo, Meet, mención), comentar en chat con firma [Kz]. Ojos y ruido de Slack no. Relanzar ~/kz/scripts/kz-wake-once.sh. Cero cron */2.'
 
 already=0
 if [[ -f "${STATE}" ]]; then

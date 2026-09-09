@@ -59,6 +59,11 @@ presence/tts.env
 presence/low-spend.mode
 presence/incubating.seq
 presence/notif/
+presence/SESSION-EDGE.md
+presence/session-edge.keep
+presence/session-edge.stamp
+presence/session-edge.log
+presence/session-edge.pid
 
 # Assets visuales locales (no sync externo). Refs clave: git add -f path
 presence/me/

@@ -66,3 +66,12 @@ _No hay incubaciones abiertas ahora. Usar: `~/kz/scripts/kz-incubate.sh add "tí
 - **no hacer aún:**
 - **señal de listo:** propuesta o siguiente paso concreto
 - **resultado:**
+
+## INC-007 — cuota-tokens-puente
+- **estado:** cooking
+- **desde:** 2026-09-08 13:12
+- **pedido por:** Lalo
+- **qué:** Arquitectura para ahorrar tokens: no doble-análisis Kz+CP, preprocessors, sesión no-obesa, compactar, memoria presente vs fondo, hábitos deterministas, NN local aparcado. Objetivo: que el puente (Grok) no se lo coma el radar rutinario.
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**

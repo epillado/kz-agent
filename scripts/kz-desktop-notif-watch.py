@@ -81,6 +81,25 @@ def slack_body_for_match(body: str) -> str:
     return re.sub(r"^[^:]{1,80}:\s*", "", body or "", count=1)
 
 
+# Wake del LLM (CHANGED) solo si es gordo. Tray/sensor puede ser más amplio.
+# W42 2026-09-08: ojos y ruido no abren turno. Hora / Josué / bloqueo / VoBo / Meet / mención sí.
+GORDO_RE = re.compile(
+    r"josu[eé]|@eduardo|mentioned you|te mencion|"
+    r"envió un mensaje|sent you a message|@here|@channel|"
+    r"bloqueo|vobo|vo\s*bo|decisi[oó]n|\bmeet\b|"
+    r"\b([01]?\d|2[0-3])[:h][0-5]\d\b|\ba las\s+\d|"
+    r"\bp0\b|urgente|\bsla\b|tonejito|karla pillado",
+    re.I,
+)
+
+
+def is_gordo(kind: str, app: str, summary: str, body: str) -> bool:
+    if kind == "mail_work":
+        return True
+    blob = f"{summary or ''} {body or ''}"
+    return bool(GORDO_RE.search(blob))
+
+
 def classify(app: str, summary: str, body: str) -> str:
     blob = f"{app} | {summary} | {body}"
     if ci_search(blob, F.get("KZ_NOTIF_BLOCK", "")):
@@ -227,8 +246,10 @@ def handle_notify(app: str, summary: str, body: str) -> None:
     if already_seen(fp):
         return
     mark_seen(fp, kind, app)
-    write_pending(kind, app, summary, body)
+    # Sensor (globo) siempre en hot/important. CHANGED/pending solo si es gordo.
     tray_sensor(kind, app, summary, body)
+    if is_gordo(kind, app, summary, body):
+        write_pending(kind, app, summary, body)
 
 
 def parse_monitor(proc: subprocess.Popen) -> None:

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# 20-20-20: escribe CHANGED y avisa a Lalo sin esperar a que el LLM despierte.
-# El chat de la sesión sigue siendo deuda (chat_owed) para cuando Kz sí despierte.
+# 20-20-20: globo + disco. NO despierta al LLM (W42 / 2026-09-08).
+# Sin CHANGED. Sin chat_owed. Si hay sesión ya abierta y Lalo dice POC, se acusa ahí.
 set -euo pipefail
 export DISPLAY="${DISPLAY:-:0}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
@@ -18,21 +18,12 @@ en_call() {
 tick() {
   local ts
   ts="$(date -Iseconds)"
-  echo "${ts} CHANGED: timer-ojos" >>"$STREAM"
+  # Log de host, sin la palabra CHANGED (el feed de Grok despierta con eso).
+  echo "${ts} ojos: 20-20-20 (tray; sin wake)" >>"$STREAM"
   if en_call; then
-    # En call: popup, sin beep por altavoces. Chat igual se debe.
     notify-send -u normal -a "Kz" -i dialog-information "Kz" "Pausa de ojos. 20-20-20." 2>/dev/null || true
-    cat > "${KZ_HOME}/presence/chat_owed.md" <<EOF
-# Chat owed — terminal de Grok (Kz)
-
-- **cuando:** ${ts}
-- **origen:** kz-ojos-loop
-- **título tray:** Kz
-- **cuerpo:** Pausa de ojos. 20-20-20.
-- **estado:** awaiting_chat_in_terminal
-EOF
   else
-    "${KZ_HOME}/scripts/kz-nudge.sh" --say "Pausa de ojos. 20-20-20. Mira lejos." >/dev/null 2>&1 || true
+    KZ_NUDGE_NO_CHAT_OWED=1 "${KZ_HOME}/scripts/kz-nudge.sh" --say "Pausa de ojos. 20-20-20. Mira lejos." >/dev/null 2>&1 || true
   fi
 }
 

@@ -196,6 +196,11 @@ ci_match() {
   printf '%s\n' "${h}" | grep -qiE -- "${r}" 2>/dev/null
 }
 
+# Wake LLM solo si es gordo (W42 2026-09-08). Tray puede ir igual.
+is_gordo_blob() {
+  ci_match "$1" 'Josu[eé]|@Eduardo|mentioned you|te mencion|bloqueo|VoBo|Meet|\bP0\b|a las [0-9]|[0-2]?[0-9]:[0-5][0-9]|Tonejito|Karla Pillado|urgente|\bSLA\b'
+}
+
 is_blocked() {
   local blob="$1"
   ci_match "${blob}" "${BLOCK}"
@@ -362,15 +367,23 @@ scan_once() {
     rest="${rest#*|}"
     text="${rest%%|*}"
     ticker="${rest#*|}"
-    write_pending "${kind}" "${app}" "${title}" "${text}" "${ticker}"
-    local summary
-    summary="${kind}:${app}:${title}"
-    summary="$(echo "${summary}" | tr '\n' ' ' | cut -c1-120)"
-    echo "CHANGED: notif:${summary}"
-    # Wake confiable para el monitor del agente
-    printf '%s\tCHANGED: notif:%s\n' "$(date -Iseconds)" "${summary}" >> "${NOTIF_DIR}/changed.log"
     sensor_tray "${app}" "${title}" "${text}"
-    soft_ping
+    local blob gordo=0 item
+    for item in "${news[@]}"; do
+      if is_gordo_blob "${item}"; then
+        gordo=1
+        break
+      fi
+    done
+    if (( gordo == 1 )); then
+      write_pending "${kind}" "${app}" "${title}" "${text}" "${ticker}"
+      local summary
+      summary="${kind}:${app}:${title}"
+      summary="$(echo "${summary}" | tr '\n' ' ' | cut -c1-120)"
+      echo "CHANGED: notif:${summary}"
+      printf '%s\tCHANGED: notif:%s\n' "$(date -Iseconds)" "${summary}" >> "${NOTIF_DIR}/changed.log"
+      soft_ping
+    fi
     return 0
   fi
   echo "OK: sin notifs nuevas importantes"

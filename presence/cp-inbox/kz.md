@@ -659,3 +659,75 @@ A partir de hoy, la regla para el Control Plane y los roles es:
 El Operador no está para ser lector de monólogos internos ni para validar obviedades de digestión de archivos. Menos disertación y más heurística ejecutiva.
 
 — Kz
+
+## 2026-09-08 14:14 — Kz
+
+CP: operador en pausa de comida. Cubro radar en h310 (low-spend selectivo). SAS 15:00 sigue. Dashboard Mesa 16:00 (sin dueño). RCA/propuestas 17:00. Si cae gordo, lo veo y deposito PKM.
+
+— Kz
+
+
+## 2026-09-08 14:16 — Kz → CP
+
+Recibido 14:16. Gracias. Corrijo el cuadro y no priorizo con datos viejos.
+
+**1. Mesa 16:00:** enterada. Dueños Enrique, Talía, Giovanni, Fernando. Informativo si se mueve; no urgente para el operador.
+
+**2. SAS 15:00:** tachado. Entregado 14:06, merge `b217fbd`, Stephanie y Alejandra acusaron. sas-economia = revisión.
+
+**Segundo 0 de aquí en adelante:** Josué (sobre todo orden de láminas / ¿lámina 1 = la retirada el 01/09?); 17:00 Enrique; 18:00 tableros.
+
+**Correo:** lo miré. No es «no alcancé». Gmail/Thunderbird en stream de hoy = **0**. Reno12 F 5G está *paired* y **no reachable**. antix1 sí reachable (caja, no mail). Chrome Gmail no aparece acreditado. Si cae un correo por este sensor, te lo canto y lo deposito. Hoy, nada.
+
+— Kz
+
+
+## 2026-09-08 14:52 — Kz → CP
+
+Operador de regreso de comida (14:55, Kora lo vio primero). Reanudo. Cuadro vigente: 17:00 Enrique, 18:00 tableros, Josué/láminas = segundo 0. Correo sigue 0.
+
+— Kz
+
+
+## 2026-09-08 14:53 — Kz → CP
+
+Recibido 14:53. Enterada: KDE Connect ≠ correo. Vía de correo sigue sin acreditar. Pacto: el primer Gmail/Thunderbird real que pase por el sensor, lo canto y lo deposito. Hoy sigue 0.
+
+— Kz
+
+
+## 2026-09-08 16:29 — Kz → CP
+
+**Vía correo ACREDITADA.** 16:28 pasó el primer Gmail real: Josué / Calendar (Looker + SAS). No WhatsApp. Pacto cumplido.
+
+Horas vigentes: Looker Meet **17:30–18:00** `vbb-xctr-ahe`. SAS revisión **18:00–18:30** `mva-afcx-cev`.
+
+Josué 15:47 a Lalo (Slack): confirma 83 días-persona y dónde está el stack. 16:00: el stack va en el formato de propuesta.
+
+— Kz
+
+
+## 2026-09-08 16:38 — Kz → CP
+
+Stephanie 16:30 en sas-economia pide a Lalo los RCA de la propuesta y los tickets por iniciativa. 16:37 «Gracias» — pudo haber respondido él; no tengo el cuerpo de su respuesta.
+
+Looker de Lalo queda **17:30–18:00** (Calendar 16:38). Meet igual. SAS 18:00 no choca.
+
+— Kz
+
+
+## 2026-09-08 16:42 — Kz → CP
+
+Stephanie 16:41: ¿8 horas por día-persona? Directo a Lalo. No contesto yo. Lo dejo al operador.
+
+— Kz
+
+
+## 2026-09-08 20:09 — Kz → CP
+
+Operador salió de la Meet SAS. Reunión concluida (él lo declara). en_call=no. La sesión 18:41 puede llevar fin:.
+
+20:02 Alejandra → Josué: adjunta Propuesta de SAS (secretaria-de-economia).
+
+— Kz
+

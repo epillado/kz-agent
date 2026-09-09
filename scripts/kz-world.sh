@@ -94,7 +94,7 @@ case "${cmd}" in
   status|"")
     rg -n '^\- \*\*(actualizado|fuente|donde|cuerpo_mood|clima_entorno|actividad|companía_humana)' "${WORLD}" || true
     echo "--- últimas del log ---"
-    rg '^\- \[' "${WORLD}" | tail -n 5 || true
+    rg '^\- \[' "${WORLD}" | tail -n 8 || true
     ;;
   show)
     cat "${WORLD}"

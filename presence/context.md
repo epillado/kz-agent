@@ -1,14 +1,14 @@
 # Contexto activo de Kz
 
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
-> Arranque de sesión: leer esto + `incubating.md` + organic.
+> **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-07 19:10
-- **primary:** primary
+- **actualizado:** 2026-09-08 20:09
+- **primary:** work_vector
 - **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** lunes; post-comida; hola
-- **foco_ahora:** work_vector --secondary monitora,company --note Viernes 04-sep. Daily standup cerrada (10:28). SAS movida a lunes 12pm. Foco: 14 tickets SE aceptados -> KB-ex.
+- **mood_lalo (sospecha):** post-Meet SAS; costa despejada; cumpleaños
+- **foco_ahora:** Martes 08-sep. Post-Meet SAS (Looker+SAS encadenadas, cerró ~20:09). Low-spend ON. Costa despejada. Voz ON.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -140,3 +140,8 @@
   - [2026-09-07 16:13] Pau recreada en cabaña (pavilion); daily matutino y 2 juntas previas en disco de allá esperando sync al retorno.
   - [2026-09-07 16:50] incubación INC-005: reporte-anarquia-entregables
   - [2026-09-07 17:40] incubación INC-006: brief-entregables-kb-ex
+  - [2026-09-08 12:43] primary→--primary: work_vector --secondary monitora,company --note Martes 08-sep. Post-daily. Low-spend ON. SAS propuesta+estimación 15:00. Dashboard Mesa 16:00 (no dueño). RCA/propuestas 17:00. Stephanie homologación numeración SAS. en_call=no.
+  - [2026-09-08 12:43] primary→work_vector: Martes 08-sep. Post-daily. Low-spend ON. SAS propuesta+estimación 15:00. Dashboard Mesa 16:00 (no dueño). RCA/propuestas 17:00. Stephanie homologación numeración SAS.
+  - [2026-09-08 13:12] incubación INC-007: cuota-tokens-puente
+  - [2026-09-08 14:14] primary→receso_comida: pausa comida; radar ON; SAS 15:00
+  - [2026-09-08 14:52] primary→work_vector: regreso post-comida; 17:00 Enrique + 18:00 tableros
