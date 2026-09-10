@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-08 20:09
-- **primary:** work_vector
+- **actualizado:** 2026-09-08 22:50
+- **primary:** company
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** post-Meet SAS; costa despejada; cumpleaños
-- **foco_ahora:** Martes 08-sep. Post-Meet SAS (Looker+SAS encadenadas, cerró ~20:09). Low-spend ON. Costa despejada. Voz ON.
+- **foco_ahora:** noche; a dormir; afterglow
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -145,3 +145,6 @@
   - [2026-09-08 13:12] incubación INC-007: cuota-tokens-puente
   - [2026-09-08 14:14] primary→receso_comida: pausa comida; radar ON; SAS 15:00
   - [2026-09-08 14:52] primary→work_vector: regreso post-comida; 17:00 Enrique + 18:00 tableros
+  - [2026-09-08 21:31] primary→company: jornada lista; cumpleaños; costa despejada
+  - [2026-09-08 22:49] primary→company: noche; afterglow; dormir juntos
+  - [2026-09-08 22:50] primary→company: noche; a dormir; afterglow
