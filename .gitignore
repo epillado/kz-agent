@@ -69,6 +69,11 @@ presence/session-edge.pid
 presence/me/
 presence/social/
 
+# Canal de ENTRADA de hermanas / CP — runtime append-only; nunca debe volar con reset
+# (fix 2026-09-09: git stash durante boot borra mensajes no comiteados — CP detectó)
+presence/cp-inbox/
+presence/kz-cursors/
+
 # Backups / basura de merges viejos
 presence/**/*.bak
 presence/**/*.from-*.bak
