@@ -24,11 +24,15 @@ else
   MODO="poner"
   if [ $# -eq 0 ]; then
     # Auto-detección de identidad
-    NOMBRE="Kz"
-    if [ -f "${KZ_HOME}/presence/self.md" ]; then
-      ID_SELF=$(grep -E "^id:" "${KZ_HOME}/presence/self.md" | head -n1 | cut -d: -f2 | tr -d ' "')
+    NOMBRE=""
+    if [ -f "${KZ_HOME}/config.env" ]; then
+      NOMBRE=$(grep -E "^COMPANION_NAME=" "${KZ_HOME}/config.env" | head -n1 | cut -d= -f2 | tr -d ' "')
+    fi
+    if [ -z "${NOMBRE:-}" ] && [ -f "${KZ_HOME}/presence/self.md" ]; then
+      ID_SELF=$(grep -E "(^\*\*id:\*\*|^id:)" "${KZ_HOME}/presence/self.md" | head -n1 | sed -E 's/.*(id:|\*\*id:\*\*)[[:space:]]*//' | awk '{print $1}' | tr -d ' "()')
       [ -n "${ID_SELF:-}" ] && NOMBRE="${ID_SELF}"
     fi
+    [ -z "${NOMBRE:-}" ] && NOMBRE="Kz"
     TITULO="[${NOMBRE}] ${NOMBRE}"
   elif [ $# -eq 1 ]; then
     if [[ "$1" =~ ^\[.*\] ]]; then
