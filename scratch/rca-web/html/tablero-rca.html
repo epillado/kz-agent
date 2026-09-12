@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tubería de Causa Raíz SECON</title>
+<style>
+:root{--bg:#fbfbfc;--fg:#1a1c1f;--mut:#5d646d;--line:#e3e5e9;--card:#fff;
+--ok:#1d7a4c;--warn:#a8620a;--stop:#b3261e;--acc:#2b5fa8;--bar:#cfd6e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14161a;--fg:#e8eaee;--mut:#a2aab4;
+--line:#2b3037;--card:#1b1e23;--ok:#5bc48b;--warn:#e0a458;--stop:#f0857d;--acc:#8fb4ea;--bar:#39404a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 64px}
+h1{font-size:1.5rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:.87rem;margin:0 0 22px}
+.embudo{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+.caja{flex:1 1 150px;background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:12px 13px;text-align:left;cursor:pointer;color:inherit;font:inherit;transition:border-color .12s}
+.caja:hover,.caja:focus-visible{border-color:var(--acc);outline:none}
+.caja[aria-pressed=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.caja .n{display:block;font-size:1.5rem;font-weight:650;line-height:1.1}
+.caja .l{display:block;font-size:.78rem;color:var(--mut);margin-top:3px}
+.hint{font-size:.78rem;color:var(--mut);margin:0 0 18px}
+.tools{display:flex;gap:10px;align-items:center;margin:0 0 12px;flex-wrap:wrap}
+.tools label{display:inline-flex;align-items:center;gap:6px;font-size:.79rem;color:var(--mut)}
+.tools select,.tools button{padding:6px 9px;border:1px solid var(--line);border-radius:8px;
+background:var(--card);color:var(--fg);font:inherit;font-size:.86rem;max-width:210px}
+.tools select:hover,.tools button:hover{border-color:var(--acc)}
+.tools button{cursor:pointer}
+.tabwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:940px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);font-weight:600;
+position:sticky;top:0;background:var(--card)}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.est{font-size:.86rem;color:var(--mut);max-width:400px}
+td.afe{font-size:.86rem;white-space:nowrap}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;
+background:color-mix(in srgb,var(--line) 55%,transparent);padding:1px 4px;border-radius:4px}
+.tog{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left}
+.tog:hover{color:var(--acc)}
+.tog::after{content:" ▸";color:var(--mut);font-size:.8em}
+.tog[aria-expanded=true]::after{content:" ▾"}
+.bar{display:inline-block;width:78px;height:7px;background:var(--bar);border-radius:99px;overflow:hidden;
+vertical-align:middle}
+.bar span{display:block;height:100%;background:var(--acc)}
+.bar.disputa span{background:repeating-linear-gradient(45deg,var(--warn),var(--warn) 4px,
+transparent 4px,transparent 8px),var(--warn)}
+.flag{display:block;font-size:.72rem;color:var(--warn);margin-top:3px;white-space:nowrap;cursor:help}
+.inl{color:var(--warn);font-weight:600}
+code.ins{cursor:help;border-bottom:1px dotted var(--mut)}
+.pct{font-size:.8rem;color:var(--mut);margin-left:7px;font-variant-numeric:tabular-nums}
+.nodato{color:var(--mut);font-style:italic;font-size:.85rem}
+.detalle td{background:color-mix(in srgb,var(--line) 26%,transparent)}
+.detwrap p{margin:0 0 7px;font-size:.88rem;max-width:78ch}
+.detwrap p.aviso{border-left:3px solid var(--warn);padding:7px 11px;margin-bottom:11px;
+background:color-mix(in srgb,var(--warn) 9%,transparent);border-radius:0 6px 6px 0}
+.detwrap p.aviso .k{color:var(--warn)}
+.k{display:inline-block;min-width:88px;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+color:var(--mut);font-weight:600}
+.mapa{margin:0 0 18px;font-size:.9rem}
+.mapa a{color:var(--acc);font-weight:600;text-decoration:none;border-bottom:1px solid var(--bar)}
+.mapa a:hover{border-bottom-color:var(--acc)}
+footer{margin-top:26px;font-size:.79rem;color:var(--mut);max-width:80ch}
+footer p{margin:0 0 6px}
+</style></head><body><div class="wrap">
+
+<h1>Tubería de Causa Raíz</h1>
+<p class="sub">Corte de datos <strong>07/09</strong> · revisado el <strong>2026-08-26</strong> ·
+28 códigos · 428 tickets con código<br>
+Tickets y avance: <code class="ins" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">ERRORES CONOCIDOS SSI 0709.xlsx</code>,
+columna <code>% avance RCA</code>, que publica la Coordinación de la Mesa. <span class="nodato">(pasa el cursor para ver de cuál de los archivos con nombre parecido se trata)</span></p>
+
+<p class="mapa"><a href="mapa-tickets-rca.pdf">Mapa de errores conocidos &rarr; RCA &rarr; propuestas</a>
+&mdash; el embudo completo, el reparto por sistema, los codigos sin RCA y el mapeo de muchos a muchos.</p>
+
+<div class="embudo"><button class="caja" data-f="sin_asignar" title="Códigos que la Mesa aún no asigna. Un renglón sin dueño es un pendiente de asignación, no un cero de avance.">
+          <span class="n">7</span><span class="l">Sin analista</span>
+        </button><button class="caja" data-f="sin_arrancar" title="Tienen dueño y todavía no hay avance registrado en el catálogo de la Mesa.">
+          <span class="n">4</span><span class="l">Asignado, sin arrancar</span>
+        </button><button class="caja" data-f="en_analisis" title="Con avance registrado. Por D-29 la causa raíz no es compuerta: dice si está completa, no detiene el avance.">
+          <span class="n">5</span><span class="l">En análisis</span>
+        </button><button class="caja" data-f="detenido" title="Rechazado, cancelado o bloqueado por un insumo externo. El motivo va en el renglón.">
+          <span class="n">6</span><span class="l">Detenido</span>
+        </button><button class="caja" data-f="entregado" title="Por D-25.2, 100 % significa entregado para la propuesta de ODT.">
+          <span class="n">6</span><span class="l">Entregado a Analistas de Negocio</span>
+        </button></div>
+<p class="hint">Los cuadros y las listas de abajo filtran la tabla y se combinan entre sí. El nombre del código abre su detalle.</p>
+
+<div class="tools">
+  <label>Sistema <select id="fsis"><option value="">todos</option><option value="api intermedia">API intermedia</option><option value="psm">PSM</option><option value="rnie">RNIE</option><option value="sas">SAS</option><option value="sicai / zentinel">SICAI / ZENTINEL</option><option value="siger-2">SIGER-2</option></select></label>
+  <label title="Qué hay que MODIFICAR (D-33). No es el servicio afectado: ese es Sistema.">Código afectado <select id="fafe"><option value="">todos</option><option value="siger 2.0">SIGER 2.0</option><option value="apisolr">apisolr</option><option value="sas">SAS</option></select></label>
+  <label>Analista <select id="fdue"><option value="">todos</option><option value="fernando">Fernando</option><option value="fernando (propuesta)">Fernando (PROPUESTA)</option><option value="giovanni">Giovanni</option><option value="talía">Talía</option><option value="sin dueño">SIN DUEÑO</option></select></label>
+  <label>Código <select id="fcod"><option value="">todos</option><option value="ei-acom">EI-ACOM</option><option value="ei-bol">EI-BOL</option><option value="ei-car">EI-CAR</option><option value="ei-cdoc">EI-CDOC</option><option value="ei-cdom">EI-CDOM</option><option value="ei-cnde">EI-CNDE</option><option value="ei-dvis">EI-DVIS</option><option value="ei-ebd">EI-EBD</option><option value="ei-ecso">EI-ECSO</option><option value="ei-edoc">EI-EDOC</option><option value="ei-eins">EI-EINS</option><option value="ei-enci">EI-ENCI</option><option value="ei-fmes">EI-FMES</option><option value="ei-irpc">EI-IRPC</option><option value="ei-nicz">EI-NICZ</option><option value="ei-ninm">EI-NINM</option><option value="ei-rexp">EI-REXP</option><option value="ei-rjur">EI-RJUR</option><option value="ei-snor">EI-SNOR</option><option value="ei-stra">EI-STRA</option><option value="ei-uri">EI-URI</option><option value="esi-apidr">ESI-APIDR</option><option value="esi-dvac">ESI-DVAC</option><option value="esi-enva">ESI-ENVA</option><option value="esi-rpc">ESI-RPC</option><option value="esi-sblq">ESI-SBLQ</option><option value="esi-stec">ESI-STEC</option><option value="hecho en méxico">HECHO EN MÉXICO</option></select></label>
+  <label>Avance <select id="fav"><option value="">todos</option><option value="bajo">0 % a 49 %</option><option value="medio">50 % a 99 %</option><option value="alto">100 %</option></select></label>
+  <button type="button" id="limpiar">Quitar filtros</button>
+  <span class="nodato" id="cnt"></span>
+</div>
+
+<div class="tabwrap"><table>
+<thead><tr><th>Código</th><th class="num">Tickets</th><th>Sistema</th>
+<th title="Repositorio o componente que hay que modificar, según la evidencia del propio RCA (D-33)">Código afectado</th><th>Analista</th>
+<th>Hasta dónde llegó</th><th>Estado</th></tr></thead>
+<tbody>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-uri" data-sis="sas" data-due="talía" data-av="alto"
+          data-afe="sas">
+        <td><button class="tog" aria-expanded="false" aria-controls="d0" data-t="d0"><code>EI-URI</code></button></td>
+        <td class="num">97</td>
+        <td>SAS</td>
+        <td class="afe">SAS</td>
+        <td>Talía</td>
+        <td class="av"><div class="bar disputa" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span><span class="flag" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">⚠ en disputa — ver detalle</span></td>
+        <td class="est">Entregado, en la propuesta con Stephanie y Alejandra. Instrumento: OT-SECON-SAS-2026-01 … <strong class="inl">⚠ y en el archivo de la Mesa figura al 100 %</strong></td>
+      </tr>
+      <tr class="detalle" id="d0" hidden><td colspan="7">
+        <div class="detwrap">
+          <p class="aviso"><span class="k">En disputa</span>
+          <strong>El archivo <code>ERRORES CONOCIDOS SSI 0709.xlsx</code> —columna <code>% avance RCA</code>, corte del 07/09,
+          que publica la Coordinación de la Mesa— trae este código al 100 %, y su documento fue rechazado por no contener causa raíz.</strong>
+          Las dos cosas no pueden ser ciertas a la vez: por <code>D-25.2</code>, 100 % significa entregado a las
+          Analistas de Negocio para la propuesta de ODT. <strong>El porcentaje es de la Mesa (<code>D-25.3</code>) y este
+          tablero no lo corrige: lo muestra para que se resuelva.</strong>
+          Levantado a la Coordinación de la Mesa el 24/08 y sin cambio al corte del 25/08.</p>
+          <p><span class="k">Causa raíz</span> Aprobada</p>
+          <p><span class="k">Estado</span> <strong>Entregado</strong>, en la propuesta con Stephanie y Alejandra. Instrumento: <code>OT-SECON-SAS-2026-01</code> <strong>C1</strong>. ⚠️ Cobertura no verificada: <code>C1</code> no menciona publicación de los XML faltantes ni ruteo transparente para preservar las ligas ya emitidas 🔴 <strong><code>Código afectado</code> MATIZADO el 09/09 por la revisión técnica: era <code>apisolr</code> y NO se sostiene POR CAUSA.</strong> <strong><code>apisolr</code> es la SUPERFICIE donde se imprime la liga —y la construye BIEN—; lo que hay que modificar está en el acervo documental de SAS</strong>, que es lo que esta columna significa por <code>D-33</code>. <strong>Evidencia: la liga es <code>https://sasmxdocumentos.economia.gob.mx/files/&lt;folio&gt;/contrato-social-firmado-xml</code> (<code>indexv2.php:2673</code> y <code>:3174</code>) — puramente LÓGICA, sin ruta ni nombre de repositorio—, y el QR solo la codifica (<code>:2796</code>, <code>:3297</code>).</strong> ⭐ <strong>Consecuencia favorable y medida: el ruteo transparente que promete <code>C1</code> NO exige modificar ningún documento emitido.</strong> <strong>La causa raíz del propio RCA aprobado (<code>RCA_EI-URI.md:35</code>) está en los XML históricos no publicados en el repositorio documental, y su §8 atribuye el cambio al repositorio y al servicio de publicación, no a la API.</strong> ✅ <strong>DICTAMEN TÉCNICO EMITIDO el 09/09 — <code>RCA_EI-URI_revision.md</code>: RECHAZADO como sustento de OT, con datos válidos conservados.</strong> <strong>Tres hallazgos: impacto sin cuantificar (cero cifras y cero folios en el código más grande del expediente) · la §7 descarta el ruteo con una premisa REFUTADA en código · repuebla Alfresco cuando su propia §4 dice que el XML ya está en MinIO.</strong> ⛔ <strong>No reabre nada con la Secretaría; el dictamen es INTERNO, y <code>RCA_EI-REXP_revision.md:130</code> ya resolvió que <code>EI-URI</code> no se reabre y que su solución se absorbe en el instrumento consolidado.</strong> 🔴 <strong>Y son TRES aprobaciones distintas, ninguna del cliente sobre el RCA: la causa raíz «Aprobada» la declara el LÍDER TÉCNICO por <code>D-29</code> y es interna · el 100 % es de la Mesa y por <code>D-25</code> significa ENTREGADO, no aprobado · lo que el ÁREA USUARIA aceptó el 01/09 13:35 es el RENGLÓN DE ALCANCE «URL/QR (31+)», no el documento.</strong> ⚠️ <strong>«31+» y los 97 tickets del código NO son el mismo dato y no se suman.</strong> 🔴 <strong>Y el fenómeno está ACTIVO: 71 de los 97 tickets se asignaron DESPUÉS de la fecha de fin del análisis (08/07) y 66 después del término declarado por la Mesa (21/07); el último es <code>I-185639</code> del 04/09.</strong> ⚠️ <strong>Riesgo del componente que queda anotado SIN atribuirle ningún ticket: el QR se pide a <code>http://10.100.21.21:8080/qr/qr.php</code>, IP en duro y HTTP plano.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-irpc" data-sis="sas" data-due="fernando" data-av="alto"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d1" data-t="d1"><code>EI-IRPC</code></button></td>
+        <td class="num">83</td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span></td>
+        <td class="est">✅ DICTAMEN TÉCNICO EMITIDO el 04/09 — RCA_EI-IRPC_revision.md, en master desde el PR #43…</td>
+      </tr>
+      <tr class="detalle" id="d1" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> Aprobada (Rev. 2)</p>
+          <p><span class="k">Estado</span> ✅ <strong>DICTAMEN TÉCNICO EMITIDO el 04/09 — <code>RCA_EI-IRPC_revision.md</code>, en <code>master</code> desde el PR #43: APROBADO CON OBSERVACIONES.</strong> Causa raíz verificada contra <code>sas-backend-core</code> (<code>82a896a</code>); la Rev. 2 se corrige a sí misma y retiró los «24,000 usuarios» que salían de un <code>COUNT(*)</code> sin <code>WHERE</code>. <strong>Dos observaciones antes de que sustente la OT, no antes del VoBo (<code>D-29</code>): medir el universo —el dictamen entrega las dos consultas— y contrastar los 30 tickets posteriores al 29/07.</strong> 🔴 <strong>FUERA DEL ALCANCE ACEPTADO desde el 01/09: el área usuaria NO aceptó «Contrato social sin RPC», que es este bloque</strong> (<code>Bit/20260901-Bitacora.md:152</code>, veredicto de las 13:35). ⚠️ <strong>El análisis NO se retira: queda como diagnóstico válido y sin dueño de ejecución hasta que el cliente reabra la línea.</strong> <strong>Entregado</strong> en la propuesta con Stephanie y Alejandra. Instrumento: <strong>C2</strong>. ⚠️ <strong>Cobertura no verificada, y SIGUE ABIERTA —el dictamen no la resuelve—: <code>C2</code> revive el encuadre de vigencia que la Rev. 2 refutó, y son 4 d/p contra las 320 h de la OT superada</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="ei-eins" data-sis="rnie" data-due="fernando" data-av="bajo"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d2" data-t="d2"><code>EI-EINS</code></button></td>
+        <td class="num">40</td>
+        <td>RNIE</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="40 por ciento"><span style="width:40%"></span></div><span class="pct">40 %</span></td>
+        <td class="est">Cancelado por D-07, y bloqueado por acceso al repositorio de RNIE. ✅ La disputa del 100 …</td>
+      </tr>
+      <tr class="detalle" id="d2" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> Cancelado por <code>D-07</code>, y bloqueado por acceso al repositorio de RNIE. ✅ <strong>La disputa del 100 % quedó cerrada: el corte del 26/08 lo baja a 40 %</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="ei-acom" data-sis="psm" data-due="fernando" data-av="medio"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d3" data-t="d3"><code>EI-ACOM</code></button></td>
+        <td class="num">30</td>
+        <td>PSM</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="60 por ciento"><span style="width:60%"></span></div><span class="pct">60 %</span></td>
+        <td class="est">Bloqueado: DDL del trigger, pendiente de los DBA de la SE ✅ 09/09: YA TIENE .md CON Rev.…</td>
+      </tr>
+      <tr class="detalle" id="d3" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> Bloqueado: DDL del trigger, pendiente de los DBA de la SE ✅ <strong>09/09: YA TIENE <code>.md</code> CON Rev. 2 — <code>rca/RCA_EI-ACOM.md</code></strong>, conversión del PDF por <code>D-31</code> con los huecos marcados. ⭐ <strong>Y la gestión de su dependencia queda RECONSTRUIDA Y FECHADA: el DDL se pidió el 23/07 —el registro lo dirige a «DBAs y Fernando», no solo a la SE—, el 28/07 la propia Mesa suspendió los análisis de RCA por carga, el 17/08 y el 18/08 seguía pendiente ya como dependencia de los DBA de la SE, y NO CONSTA su recepción.</strong> <strong>Con eso el bloqueo es sostenible («no se pudo determinar»), pero la imputabilidad NO es limpia: hay un tramo interno antes del tramo del cliente.</strong> 🔴 <strong>PREGUNTA DE CARTERA ABIERTA, NO RESUELTA AQUÍ: el 28/08 el Coordinador declaró que los tickets de PSM «ya no están en nuestra mesa». Está sin contestar si este código sale del universo o sigue el camino de SICAI —fuera del cálculo, dentro del reporte—.</strong> ⭐ <strong>Quitar del CÁLCULO no es quitar del DIAGNÓSTICO.</strong> ⚠️ <strong>Su §7 propone un CRUD correctivo, que la Fase 6 prohíbe, y su contención incurre en dos prácticas prohibidas por la Fase 5 —reportables por vía propia, sin detener el análisis—: avisado en el documento.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="en_analisis" data-cod="ei-rexp" data-sis="sas" data-due="talía" data-av="medio"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d4" data-t="d4"><code>EI-REXP</code></button></td>
+        <td class="num">26</td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Talía</td>
+        <td class="av"><div class="bar disputa" role="img" aria-label="90 por ciento"><span style="width:90%"></span></div><span class="pct">90 %</span><span class="flag" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">⚠ en disputa — ver detalle</span></td>
+        <td class="est">Consultas escritas y no ejecutadas: falta quién las corre y con qué credencial de lectur… <strong class="inl">⚠ y en el archivo de la Mesa figura al 100 %</strong></td>
+      </tr>
+      <tr class="detalle" id="d4" hidden><td colspan="7">
+        <div class="detwrap">
+          <p class="aviso"><span class="k">En disputa</span>
+          <strong>El archivo <code>ERRORES CONOCIDOS SSI 0709.xlsx</code> —columna <code>% avance RCA</code>, corte del 07/09,
+          que publica la Coordinación de la Mesa— trae este código al 100 %, y su estado lo contradice.</strong>
+          Las dos cosas no pueden ser ciertas a la vez: por <code>D-25.2</code>, 100 % significa entregado a las
+          Analistas de Negocio para la propuesta de ODT. <strong>El porcentaje es de la Mesa (<code>D-25.3</code>) y este
+          tablero no lo corrige: lo muestra para que se resuelva.</strong>
+          Levantado a la Coordinación de la Mesa el 24/08 y sin cambio al corte del 25/08.</p>
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> Consultas escritas y no ejecutadas: falta quién las corre y con qué credencial de lectura. ⚠️ <strong>En disputa, y sigue igual en el corte <code>0709</code>: la fuente trae DOS avances para este código —0.9 y 1— y el actualizador no elige. El 90 % es el del renglón; el <code>100 %</code> de la otra fila (corte <code>0709</code>) no está conciliado y no hay dictamen que lo respalde.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="ei-snor" data-sis="sicai / zentinel" data-due="sin dueño" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d5" data-t="d5"><code>EI-SNOR</code></button></td>
+        <td class="num"><strong>29</strong></td>
+        <td>SICAI / ZENTINEL</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">SIN ASIGNAR. Es el mayor volumen sin dueño del universo 🔴 Y no está solo: en el corte 07…</td>
+      </tr>
+      <tr class="detalle" id="d5" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> <strong>SIN ASIGNAR.</strong> Es el mayor volumen sin dueño del universo 🔴 <strong>Y no está solo: en el corte <code>0709</code> SICAI/ZENTINEL suma 47 tickets repartidos en 12 códigos —<code>EI-SNOR</code> 26, <code>EI-NINM</code> 10, <code>EI-NICZ</code> 2 y nueve de un ticket— SIN UN SOLO RCA en el repositorio y SIN UN SOLO DUEÑO asignado. Es el bloque descubierto más grande del universo.</strong> *(Conteo de incidentes <code>I-</code>; ver el criterio de conteo en la cabecera.)*</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="ei-bol" data-sis="siger-2" data-due="talía" data-av="alto"
+          data-afe="siger 2.0">
+        <td><button class="tog" aria-expanded="false" aria-controls="d6" data-t="d6"><code>EI-BOL</code></button></td>
+        <td class="num">19</td>
+        <td>SIGER-2</td>
+        <td class="afe">SIGER 2.0</td>
+        <td>Talía</td>
+        <td class="av"><div class="bar disputa" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span><span class="flag" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">⚠ en disputa — ver detalle</span></td>
+        <td class="est">✅ DOCUMENTO NUEVO ENTREGADO el 08/09 — deroga el «.docx del 31/07 sin mover» y el «se de… <strong class="inl">⚠ y en el archivo de la Mesa figura al 100 %</strong></td>
+      </tr>
+      <tr class="detalle" id="d6" hidden><td colspan="7">
+        <div class="detwrap">
+          <p class="aviso"><span class="k">En disputa</span>
+          <strong>El archivo <code>ERRORES CONOCIDOS SSI 0709.xlsx</code> —columna <code>% avance RCA</code>, corte del 07/09,
+          que publica la Coordinación de la Mesa— trae este código al 100 %, y su documento no tiene todavía dictamen de la revisión técnica.</strong>
+          Las dos cosas no pueden ser ciertas a la vez: por <code>D-25.2</code>, 100 % significa entregado a las
+          Analistas de Negocio para la propuesta de ODT. <strong>El porcentaje es de la Mesa (<code>D-25.3</code>) y este
+          tablero no lo corrige: lo muestra para que se resuelva.</strong>
+          Levantado a la Coordinación de la Mesa el 24/08 y sin cambio al corte del 25/08.</p>
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> ✅ <strong>DOCUMENTO NUEVO ENTREGADO el 08/09 — deroga el «<code>.docx</code> del 31/07 sin mover» y el «se declara NO CONCLUIDO» que este renglón sostenía desde el 02/09.</strong> <code>RCA_EI-BOLv2.docx</code> (28,593 bytes, <code>md5 ab3f6c56…</code>), responsable <strong>Talía García</strong>, fechas <strong>30/07/2026 – 02/09/2026</strong>, clasificación <strong>«Lógica de Negocio»</strong>. <strong>Es OTRO documento, no una edición</strong>: el <code>RCA_EI-BOL.docx</code> del 31/07 (19,233 bytes, <code>md5 8c2744ce…</code>) se conserva y no se sobrescribe. <strong>Llegó POR CORREO, contra <code>D-06</code>:</strong> Talía → Enrique el 03/09 09:43, Enrique → el operador el 07/09 09:47 (<code>Insumos/análisis completo E-BOL.eml</code>). 🔴 <strong>CONTRADICCIÓN INTERNA, declarada y NO resuelta por la revisión técnica: el título de la §5 sigue diciendo «Causa Raíz (Origen Técnico) – BLOQUEADO», y el contenido de esa misma sección NO está bloqueado.</strong> <strong>Trae los cinco porqués completos y una causa raíz declarada</strong>; <strong>la «Fecha de fin: pausa» del documento viejo es hoy una fecha real (02/09/2026)</strong>; <strong>la clasificación pasó de «Pendiente de diagnóstico» a «Lógica de Negocio»</strong>; y <strong>las §§7, 8 y 10, que estaban vacías por dependencia, están escritas.</strong> ⬜ <strong>Es residuo del documento anterior o bloqueo vigente: lo dice la analista, no yo.</strong> ⭐ <strong>Causa raíz que declara:</strong> una <strong>debilidad transversal</strong> en generación, persistencia y validación de boletas —no una excepción ni una función única—: no hay validación final centralizada de integridad documental, hay rutas donde la excepción de <code>generarBoletas()</code> se captura sin propagarse y el trámite cierra igual, y no hay garantía de unicidad por <code>LLSOLICITUD</code> + <code>LLTIPOBOLETA</code>. ⭐ <strong>Y ESTA VEZ SÍ TRAE EVIDENCIA FÍSICA, que es lo que le faltaba al documento viejo: cinco tickets con NCI y solicitud citados</strong> — <code>I-181555</code> (NCI 202600133451, solicitud 26514216, etapa 5/estatus 3, solo boleta de ingreso) · <code>I-184674</code> · <code>I-184311</code> · <strong><code>I-181293</code>, con multiplicidad confirmada en <code>ENBOLETAS</code>: 4 boletas tipo 5 y 4 <code>MVDOCGENERADOS</code> distintos para una solicitud, 2 y 2 para otra</strong> · <code>I-181266</code> (<code>MVFRMACTO = NULL</code>). <strong>Dimensionamiento: 58 h ≈ 7–8 días hábiles</strong>, diez actividades, impacto <strong>MEDIO-ALTO</strong> sobre once componentes y diez tablas. ⬜ <strong>SIN DICTAMEN: entregado, no revisado.</strong> ✅ <strong><code>Código afectado</code> = <code>SIGER 2.0</code>, acreditado por el propio documento</strong> (<code>GenerarBoletaServiceImpl</code>, <code>BoletaDAO</code>, <code>DocGeneradoServiceImpl</code>, <code>SolicitudBandejaEntradaCalificadorMB</code>, <code>boleta.xml</code>, <code>docGenerado.xml</code>). ⚠️ <strong>Lo que NO cambia: su bloqueo declarado de acceso al código fuente CADUCÓ EL 18/08, y el documento nuevo lo confirma al citar código y tablas.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-car" data-sis="siger-2" data-due="talía" data-av="alto"
+          data-afe="siger 2.0">
+        <td><button class="tog" aria-expanded="false" aria-controls="d7" data-t="d7"><code>EI-CAR</code></button></td>
+        <td class="num">20</td>
+        <td>SIGER-2</td>
+        <td class="afe">SIGER 2.0</td>
+        <td>Talía</td>
+        <td class="av"><div class="bar" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span></td>
+        <td class="est">✅ RCA V2 completado el 28/08. Bloqueo de accesos superado; causa raíz identificada en Fu…</td>
+      </tr>
+      <tr class="detalle" id="d7" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <strong>Aprobada</strong></p>
+          <p><span class="k">Estado</span> ✅ <strong>RCA V2 completado el 28/08.</strong> Bloqueo de accesos superado; causa raíz identificada en <code>FuncionActualizarCaratula.java</code> (desacoplamiento de <code>LLOFICINA</code>, mapeo de cadenas y condicional en M2:335). Solución de sincronización automática en backend especificada. ✅ <strong>Excepción RETIRADA el 31/08: la Mesa ya publica el mismo avance en el corte <code>2808</code>, así que el número dejó de depender de una decisión del operador y el actualizador ya no lo revierte.</strong> *(El corte <code>2608</code> traía 70 %, y por eso el renglón estuvo fijado a mano del 28 al 31/08.)* ⚠️ <strong>ADVERTENCIA PARA LA CONSOLIDACIÓN (02/09) — no es enmienda a ningún RCA y no condiciona ningún visto bueno:</strong> <code>EI-CAR</code> y <code>EI-CNDE</code> <strong>aterrizan en el mismo punto de código</strong>, <code>FuncionActualizarCaratula:377-379</code> (rama <code>else</code> de <code>:370</code>, <code>caratulaX.setDsdensocial(...)</code> sin validación) — <code>EI-CNDE</code> lo describe desde el asignador y <code>EI-CAR</code> desde el extractor <code>:942</code>: <strong>una sola corrección los cierra.</strong> <strong>Y <code>I-182758</code> es evidencia central de <code>EI-CAR</code> pero el corte <code>2808</code> lo clasifica en <code>EI-CNDE</code> y NO está entre los 17 tickets de <code>EI-CAR</code>.</strong> 🔴 <strong>Por <code>D-11</code> los RCA se consolidan en INSTRUMENTO ÚNICO, así que si ambos se aprueban el solapamiento SÍ ocurre; se resuelve en la trazabilidad POR COMPONENTE que <code>D-11</code> exige, NO recortando un RCA</strong> —recortar <code>EI-CAR</code> dejaría la validación de denominación sin dueño si <code>EI-CNDE</code> no entra—. <strong>Al consolidar: contar una sola vez la corrección de <code>:377-379</code> (~2 h), UNIFICAR el criterio de aceptación duplicado (<code>RCA_EI-CAR.md:171</code> y el equivalente de <code>EI-CNDE</code>) y asignar <code>I-182758</code> a un solo componente.</strong> Detalle en <code>RCA_EI-CNDE_revision.md</code> §6.2.</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="en_analisis" data-cod="ei-edoc" data-sis="sas" data-due="fernando" data-av="medio"
+          data-afe="apisolr">
+        <td><button class="tog" aria-expanded="false" aria-controls="d8" data-t="d8"><code>EI-EDOC</code></button></td>
+        <td class="num">17</td>
+        <td>SAS</td>
+        <td class="afe">apisolr</td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="70 por ciento"><span style="width:70%"></span></div><span class="pct">70 %</span></td>
+        <td class="est">Avance parcial, no aprobable aún. Reactivado el 25/08: el analista retomó el dimensionam…</td>
+      </tr>
+      <tr class="detalle" id="d8" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> Avance parcial, no aprobable aún. <strong>Reactivado el 25/08: el analista retomó el dimensionamiento del histórico</strong> —desde cuándo empezó la falla de la hora y cuántos documentos la traen—, <strong>que es lo que mide la exposición de los documentos con firma electrónica</strong> 🔴 <strong>HALLAZGO DEL INSTRUMENTO (08/09), no enmienda al RCA: existe un informe POSTERIOR del propio analista que su RCA no recoge y que lo contradice en tres puntos</strong> — <code>analisis/sas-problemas/error-tiempo/Explicacion-tiempo.md</code>, del 04/09 (commit <code>d482cee</code>), contra <code>RCA_EI-EDOCv2.md</code>, cuyo último commit es del 02/09. <strong>(1) Magnitud:</strong> el informe mide <strong>11,747 de 14,951 trámites completados (78.6 %), todos desde el 05/04/2026</strong>, con las dos consultas incluidas; el RCA dice «al menos 20 casos en el mes actual». <strong>(2) Patrón:</strong> el RCA lo llama *intermitente*; el informe lo acredita <strong>sistemático desde una fecha y hora exactas</strong> —05/04/2026 02:00, el primer domingo de abril de la regla de horario de verano derogada en 2022—. <strong>(3) Alcance:</strong> el RCA afirma que afecta al contrato social <strong>y al RPC</strong>; el informe afirma que <strong>el RPC NO está afectado</strong>, porque lo genera SIGER y la API del Doctor solo hace de puente. ⭐ <strong>Y aporta dos cosas que el RCA no tiene: <code>/generaestampa</code> como punto exacto del defecto, y un hallazgo independiente —los servidores de SAS entregan los timestamps 6 h adelantados, UTC sin convertir— que altera cualquier consulta que se escriba sobre <code>proceso_instancia</code>.</strong> ⚠️ <strong>No se interpreta más allá: el analista fue prestado a Quálitas y no está para confirmar si el informe sustituye o complementa su RCA.</strong> 🔴 <strong><code>Código afectado</code> = <code>apisolr</code>, declarado el 08/09 por la revisión técnica y verificado ancla por ancla, no tomado del RCA.</strong> <strong><code>EI-URI</code>, <code>EI-EDOC</code>, <code>EI-ECSO</code> y <code>EI-CDOC</code> son el MISMO componente: la familia de generación de PDF de <code>apisolr</code> —la API de la Secretaría, la capa intermedia—, cinco endpoints que son copia-pega uno del otro</strong> (<code>/pdfTyC</code> <code>:1620</code> · <code>/pdfManif</code> <code>:1846</code> · <code>/pdfAcepta</code> <code>:2080</code> · <code>/pdfCSUni</code> <code>:2338</code> · <code>/pdfCSMulti</code> <code>:2839</code>), <strong>con cuatro dependencias compartidas literalmente:</strong> <code>/generaestampa</code> (<code>:1632</code> y sus cuatro gemelas) → <code>EI-ECSO</code> · <code>date(&#x27;Y-m-d H:i:s.u&#x27;, time())</code> en <code>&lt;dsp:Created&gt;</code> (<code>:1822</code> <code>:2056</code> <code>:2314</code> <code>:2754</code> <code>:3255</code>), <strong>hora LOCAL del servidor y no la de la estampa</strong> → <code>EI-EDOC</code> · <code>/rfc</code> (<code>:2415</code> <code>:2917</code>) que al venir vacío escribe el literal <code>&quot;ERROR CURP&quot;</code> (<code>:2484</code> <code>:2986</code>) → <code>EI-CDOC</code> · y la consulta a <code>firmascs</code> filtrada por esa CURP vacía (<code>:2497</code> <code>:3002</code>), <strong>que deja el contrato sin firmas</strong>. <strong>Son 29 tickets POR CAUSA en un solo componente</strong> —<code>EI-EDOC</code> 17 · <code>EI-ECSO</code> 7 · <code>EI-CDOC</code> 5—. ⚠️ <strong>Con <code>EI-URI</code> son 126 los que comparten SUPERFICIE, pero su causa está en el acervo documental y no aquí (matizado el 09/09; ver su renglón y <code>RCA_EI-URI_revision.md</code>).</strong> ⚠️ <strong>La evidencia NO viene del RCA sino de <code>/home/lalo/Downloads/indexv2.php</code> (175,995 bytes, copia de Talía, 02/09), archivo SUELTO y SIN REPOSITORIO: el ancla es verificable hoy pero no versionada.</strong> ⚠️ <strong>Y el componente no es nuestro ni del equipo de SIGER, y su dueño sigue sin definir.</strong> 🔴 <strong>09/09: LA CAUSA RAÍZ QUEDA CERRADA en el dictamen —<code>rca/RCA_EI-EDOC_revision.md</code>, adenda del 09/09— y NO es una causa: son DOS DEFECTOS.</strong> <strong>A, del analista: la regla de horario de verano derogada ⇒ explica el desfase de ~1 hora y su estacionalidad.</strong> <strong>B, verificado en código: <code>&lt;dsp:Created&gt;</code> se sella con <code>date(&#x27;Y-m-d H:i:s.u&#x27;, time())</code> —hora LOCAL del servidor al generar— y no con la del estampado; <code>indexv2.php:1822</code> <code>:2056</code> <code>:2314</code> <code>:2754</code> <code>:3255</code>, y el patrón aparece EXACTAMENTE cinco veces.</strong> ⭐ <strong>B explica lo que el dictamen del 06/08 daba por no explicado: la intermitencia y que contrato social y RPC lleven horas DISTINTAS ENTRE SÍ; y hace innecesaria la hipótesis de instancias múltiples.</strong> ⛔ <strong>NO se afirma la MAGNITUD: depende del <code>date.timezone</code> de PRODUCCIÓN, y lo medido es QA.</strong> ⬜ <strong>Queda un hueco y uno solo: el dimensionamiento, que su propio informe posterior ya mide pero que no puede entrar mientras ese informe siga exculpando al componente donde está el defecto.</strong> <strong>Entregado hoy al analista.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="ei-cdom" data-sis="siger-2" data-due="fernando" data-av="medio"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d9" data-t="d9"><code>EI-CDOM</code></button></td>
+        <td class="num">12</td>
+        <td>SIGER-2</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="70 por ciento"><span style="width:70%"></span></div><span class="pct">70 %</span></td>
+        <td class="est">Rechazado: sin causa raíz pese a declarar acceso al código. ✅ La disputa del 100 % quedó…</td>
+      </tr>
+      <tr class="detalle" id="d9" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> Rechazado: sin causa raíz pese a declarar acceso al código. ✅ <strong>La disputa del 100 % quedó cerrada: el corte del 26/08 lo baja a 70 %</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="ei-stra" data-sis="rnie" data-due="giovanni" data-av="medio"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d10" data-t="d10"><code>EI-STRA</code></button></td>
+        <td class="num">9</td>
+        <td>RNIE</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Giovanni</td>
+        <td class="av"><div class="bar" role="img" aria-label="75 por ciento"><span style="width:75%"></span></div><span class="pct">75 %</span></td>
+        <td class="est">Cancelado por D-07, fuera del promedio. El filtrado está verificado con seis consultas r…</td>
+      </tr>
+      <tr class="detalle" id="d10" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <strong>No aprobada</strong></p>
+          <p><span class="k">Estado</span> Cancelado por <code>D-07</code>, <strong>fuera del promedio</strong>. El filtrado está verificado con seis consultas reproducibles, pero la mayoría de los registros afectados no traen datos de auditoría: la ruta hallada no explica el volumen</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-fmes" data-sis="sas" data-due="giovanni" data-av="alto"
+          data-afe="sas · apisolr · siger 2.0">
+        <td><button class="tog" aria-expanded="false" aria-controls="d11" data-t="d11"><code>EI-FMES</code></button></td>
+        <td class="num">7</td>
+        <td>SAS</td>
+        <td class="afe">SAS · apisolr · SIGER 2.0</td>
+        <td>Giovanni</td>
+        <td class="av"><div class="bar disputa" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span><span class="flag" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">⚠ en disputa — ver detalle</span></td>
+        <td class="est">✅ DICTAMINADO el 28/08 — RCA_EI-FMES_revision.md: APROBADO con observaciones. ⭐ Causa ra… <strong class="inl">⚠ y en el archivo de la Mesa figura al 100 %</strong></td>
+      </tr>
+      <tr class="detalle" id="d11" hidden><td colspan="7">
+        <div class="detwrap">
+          <p class="aviso"><span class="k">En disputa</span>
+          <strong>El archivo <code>ERRORES CONOCIDOS SSI 0709.xlsx</code> —columna <code>% avance RCA</code>, corte del 07/09,
+          que publica la Coordinación de la Mesa— trae este código al 100 %, y su estado lo contradice.</strong>
+          Las dos cosas no pueden ser ciertas a la vez: por <code>D-25.2</code>, 100 % significa entregado a las
+          Analistas de Negocio para la propuesta de ODT. <strong>El porcentaje es de la Mesa (<code>D-25.3</code>) y este
+          tablero no lo corrige: lo muestra para que se resuelva.</strong>
+          Levantado a la Coordinación de la Mesa el 24/08 y sin cambio al corte del 25/08.</p>
+          <p><span class="k">Causa raíz</span> <strong>Aprobada</strong></p>
+          <p><span class="k">Estado</span> ✅ <strong>DICTAMINADO el 28/08 — <code>RCA_EI-FMES_revision.md</code>: APROBADO con observaciones.</strong> ⭐ <strong>Causa raíz verificada en 3 capas:</strong> frontend SAS (clics repetidos), <code>apisolr</code> (<code>CURLOPT_TIMEOUT=0</code>, HTTP 200 ciego sin validar errores) y backend SIGER 2.0 (8 defectos de código con archivo y línea en <code>SasSigerWsImpl</code> y <code>SasSigerServiceImpl</code>). ⭐ <strong>Descarta que el 429 sea fallo del backend</strong> (es control legítimo de concurrencia ante peticiones idénticas del mismo usuario). 🔴 <strong>Riesgo crítico confirmado:</strong> <code>SasSigerWsImpl:297-357</code> devuelve boleta y PDF de terceros ante denominaciones duplicadas. ⚠️ <strong>En disputa (cortes 2808 y 0209): la fuente trae DOS avances para este código —1 y 100— y el actualizador no elige. El renglón conserva su 100 % por el dictamen del 28/08; la divergencia es del origen y se resuelve ahí.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="ei-ninm" data-sis="sicai / zentinel" data-due="sin dueño" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d12" data-t="d12"><code>EI-NINM</code></button></td>
+        <td class="num"><strong>10</strong></td>
+        <td>SICAI / ZENTINEL</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est"><strong>SIN ASIGNAR</strong></td>
+      </tr>
+      <tr class="detalle" id="d12" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> <strong>SIN ASIGNAR</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="en_analisis" data-cod="ei-ecso" data-sis="sas" data-due="fernando" data-av="alto"
+          data-afe="apisolr">
+        <td><button class="tog" aria-expanded="false" aria-controls="d13" data-t="d13"><code>EI-ECSO</code></button></td>
+        <td class="num">7</td>
+        <td>SAS</td>
+        <td class="afe">apisolr</td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar disputa" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span><span class="flag" title="En la carpeta del Drive SECON_SSI conviven ya CINCO archivos con nombre parecido — ERRORES CONOCIDOS SSI.xlsx (18/08), 1908, 2408, 2508 y 2608 —. ⚠️ El 2508 se descargó el 26/08 a las 19:14 y NO era el del día: el bueno llegó a las 19:55 con el nombre 2608. 🔴 El de este cuadro es el 2608, recibido el 26/08 19:55. Ni la fecha ni el autor del dato se deducen del nombre, así que el corte se declara aquí y no en el nombre del archivo.">⚠ en disputa — ver detalle</span></td>
+        <td class="est">🔴 Disputa ABIERTA: sigue al 100 % sin dictamen de la revisión técnica, así que el 100 % … <strong class="inl">⚠ y en el archivo de la Mesa figura al 100 %</strong></td>
+      </tr>
+      <tr class="detalle" id="d13" hidden><td colspan="7">
+        <div class="detwrap">
+          <p class="aviso"><span class="k">En disputa</span>
+          <strong>El archivo <code>ERRORES CONOCIDOS SSI 0709.xlsx</code> —columna <code>% avance RCA</code>, corte del 07/09,
+          que publica la Coordinación de la Mesa— trae este código al 100 %, y su documento no tiene todavía dictamen de la revisión técnica.</strong>
+          Las dos cosas no pueden ser ciertas a la vez: por <code>D-25.2</code>, 100 % significa entregado a las
+          Analistas de Negocio para la propuesta de ODT. <strong>El porcentaje es de la Mesa (<code>D-25.3</code>) y este
+          tablero no lo corrige: lo muestra para que se resuelva.</strong>
+          Levantado a la Coordinación de la Mesa el 24/08 y sin cambio al corte del 25/08.</p>
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> 🔴 <strong>Disputa ABIERTA: sigue al 100 % sin dictamen de la revisión técnica, así que el 100 % no acredita <code>D-25.2</code>.</strong> <strong>La divergencia del 24/08 —el archivo lo traía en 0 %— sí quedó cerrada: hoy lo trae al 100 % con fecha de término del 11/08.</strong> 🔴 <strong>HALLAZGO DEL INSTRUMENTO (08/09): el insumo para escribirlo lleva 28 días en este repositorio y el RCA sigue sin existir.</strong> <code>analisis/sas-problemas/error-contrato-social-sin-estampa/Explicacion.md</code>, del 11/08, documenta contratos sociales emitidos sin sello de tiempo, con nombres y firmas vacíos, y <strong>advierte que el alcance real se desconoce</strong>: 16 tickets de julio en iTop más 12 casos detectados sin ticket. ⚠️ <strong>La atribución a este código es lectura por MATERIA —coincide con su solución estándar, «se regenera o corrige el contrato social»—: el informe no cita ningún código, y también toca <code>EI-EDOC</code>.</strong> ⛔ <strong>Y ya no se le puede preguntar al autor.</strong> 🔴 <strong><code>Código afectado</code> = <code>apisolr</code>, declarado el 08/09 por la revisión técnica y verificado ancla por ancla, no tomado del RCA.</strong> <strong><code>EI-URI</code>, <code>EI-EDOC</code>, <code>EI-ECSO</code> y <code>EI-CDOC</code> son el MISMO componente: la familia de generación de PDF de <code>apisolr</code> —la API de la Secretaría, la capa intermedia—, cinco endpoints que son copia-pega uno del otro</strong> (<code>/pdfTyC</code> <code>:1620</code> · <code>/pdfManif</code> <code>:1846</code> · <code>/pdfAcepta</code> <code>:2080</code> · <code>/pdfCSUni</code> <code>:2338</code> · <code>/pdfCSMulti</code> <code>:2839</code>), <strong>con cuatro dependencias compartidas literalmente:</strong> <code>/generaestampa</code> (<code>:1632</code> y sus cuatro gemelas) → <code>EI-ECSO</code> · <code>date(&#x27;Y-m-d H:i:s.u&#x27;, time())</code> en <code>&lt;dsp:Created&gt;</code> (<code>:1822</code> <code>:2056</code> <code>:2314</code> <code>:2754</code> <code>:3255</code>), <strong>hora LOCAL del servidor y no la de la estampa</strong> → <code>EI-EDOC</code> · <code>/rfc</code> (<code>:2415</code> <code>:2917</code>) que al venir vacío escribe el literal <code>&quot;ERROR CURP&quot;</code> (<code>:2484</code> <code>:2986</code>) → <code>EI-CDOC</code> · y la consulta a <code>firmascs</code> filtrada por esa CURP vacía (<code>:2497</code> <code>:3002</code>), <strong>que deja el contrato sin firmas</strong>. <strong>Son 29 tickets POR CAUSA en un solo componente</strong> —<code>EI-EDOC</code> 17 · <code>EI-ECSO</code> 7 · <code>EI-CDOC</code> 5—. ⚠️ <strong>Con <code>EI-URI</code> son 126 los que comparten SUPERFICIE, pero su causa está en el acervo documental y no aquí (matizado el 09/09; ver su renglón y <code>RCA_EI-URI_revision.md</code>).</strong> ⚠️ <strong>La evidencia NO viene del RCA sino de <code>/home/lalo/Downloads/indexv2.php</code> (175,995 bytes, copia de Talía, 02/09), archivo SUELTO y SIN REPOSITORIO: el ancla es verificable hoy pero no versionada.</strong> ⚠️ <strong>Y el componente no es nuestro ni del equipo de SIGER, y su dueño sigue sin definir.</strong> ✅ <strong>09/09: YA TIENE DOCUMENTO — <code>rca/RCA_EI-ECSO.md</code>, prellenado en plantilla V2 por la revisión técnica y entregado hoy al analista.</strong> <strong>SALE de la lista de códigos sin ningún RCA.</strong> ⭐ <strong>Y su causa raíz queda CERRADA y anclada: <code>apisolr</code> toma la estampa de <code>/generaestampa</code> sin validarla y emite el documento legal igual cuando viene vacía —cinco endpoints copia-pega, <code>:2606</code>→<code>:2622-2623</code> para contrato único y <code>:3107</code>→<code>:3123-3124</code> para múltiple—, con evidencia FÍSICA en dos contratos reales cuyo <code>&lt;estampaDeTiempoSE&gt;</code> está vacío mientras <code>&lt;selloSE&gt;</code> viene poblado.</strong> ⬜ <strong>Lo único que impide dictaminarlo: el universo NO está medido, y el procedimiento para medirlo va dentro del documento.</strong> ⛔ <strong>Sigue sin dictamen, así que el 100 % sigue sin acreditar <code>D-25.2</code>.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-rjur" data-sis="siger-2" data-due="giovanni" data-av="alto"
+          data-afe="siger 2.0">
+        <td><button class="tog" aria-expanded="false" aria-controls="d14" data-t="d14"><code>EI-RJUR</code></button></td>
+        <td class="num">7</td>
+        <td>SIGER-2</td>
+        <td class="afe">SIGER 2.0</td>
+        <td>Giovanni</td>
+        <td class="av"><div class="bar" role="img" aria-label="100 por ciento"><span style="width:100%"></span></div><span class="pct">100 %</span></td>
+        <td class="est">✅ DICTAMINADO el 28/08 — RCA_EI-RJUR_revision.md: APROBADO con observaciones. ⭐ Causa ra…</td>
+      </tr>
+      <tr class="detalle" id="d14" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <strong>Aprobada</strong></p>
+          <p><span class="k">Estado</span> ✅ <strong>DICTAMINADO el 28/08 — <code>RCA_EI-RJUR_revision.md</code>: APROBADO con observaciones.</strong> ⭐ <strong>Causa raíz verificada contra el código fuente, no solo contra el documento: <code>FuncionActualizarCaratula:757</code> no asigna el nombre denormalizado, y la revisión encontró la ruta que sí lo hace —<code>SasSigerServiceImpl:574-575</code>, la integración SAS→SIGER—, así que las dos poblaciones se separan por canal de alta.</strong> ⭐ <strong>El síntoma alcanza a los 799,035: <code>detalleConsultaPublica.xhtml:86</code> lee el campo denormalizado y <code>caratula.xml:32-33</code> alimenta de esa misma columna el nombre del catálogo — la llave foránea no rescata nada.</strong> 🔴 <strong>Única objeción de fondo: §7.5 propone inferir el régimen jurídico «más probable» por denominación social; inadmisible sin precondición verificada.</strong> ⭐ <strong>La revisión propone alternativa más barata al <code>UPDATE</code> de 799,035 renglones: corregir la ruta de lectura.</strong> ⚠️ <strong>El <code>.docx</code> de <code>rca/</code> es del 17/08 y está superado: lo vigente es el <code>.md</code>.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="en_analisis" data-cod="ei-cdoc" data-sis="sas" data-due="talía" data-av="medio"
+          data-afe="apisolr">
+        <td><button class="tog" aria-expanded="false" aria-controls="d15" data-t="d15"><code>EI-CDOC</code></button></td>
+        <td class="num">5</td>
+        <td>SAS</td>
+        <td class="afe">apisolr</td>
+        <td>Talía</td>
+        <td class="av"><div class="bar" role="img" aria-label="90 por ciento"><span style="width:90%"></span></div><span class="pct">90 %</span></td>
+        <td class="est">En curso: cierra cuando la Mesa devuelva los dos ajustes 🔴 Código afectado = apisolr, de…</td>
+      </tr>
+      <tr class="detalle" id="d15" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> En curso: cierra cuando la Mesa devuelva los dos ajustes 🔴 <strong><code>Código afectado</code> = <code>apisolr</code>, declarado el 08/09 por la revisión técnica y verificado ancla por ancla, no tomado del RCA.</strong> <strong><code>EI-URI</code>, <code>EI-EDOC</code>, <code>EI-ECSO</code> y <code>EI-CDOC</code> son el MISMO componente: la familia de generación de PDF de <code>apisolr</code> —la API de la Secretaría, la capa intermedia—, cinco endpoints que son copia-pega uno del otro</strong> (<code>/pdfTyC</code> <code>:1620</code> · <code>/pdfManif</code> <code>:1846</code> · <code>/pdfAcepta</code> <code>:2080</code> · <code>/pdfCSUni</code> <code>:2338</code> · <code>/pdfCSMulti</code> <code>:2839</code>), <strong>con cuatro dependencias compartidas literalmente:</strong> <code>/generaestampa</code> (<code>:1632</code> y sus cuatro gemelas) → <code>EI-ECSO</code> · <code>date(&#x27;Y-m-d H:i:s.u&#x27;, time())</code> en <code>&lt;dsp:Created&gt;</code> (<code>:1822</code> <code>:2056</code> <code>:2314</code> <code>:2754</code> <code>:3255</code>), <strong>hora LOCAL del servidor y no la de la estampa</strong> → <code>EI-EDOC</code> · <code>/rfc</code> (<code>:2415</code> <code>:2917</code>) que al venir vacío escribe el literal <code>&quot;ERROR CURP&quot;</code> (<code>:2484</code> <code>:2986</code>) → <code>EI-CDOC</code> · y la consulta a <code>firmascs</code> filtrada por esa CURP vacía (<code>:2497</code> <code>:3002</code>), <strong>que deja el contrato sin firmas</strong>. <strong>Son 29 tickets POR CAUSA en un solo componente</strong> —<code>EI-EDOC</code> 17 · <code>EI-ECSO</code> 7 · <code>EI-CDOC</code> 5—. ⚠️ <strong>Con <code>EI-URI</code> son 126 los que comparten SUPERFICIE, pero su causa está en el acervo documental y no aquí (matizado el 09/09; ver su renglón y <code>RCA_EI-URI_revision.md</code>).</strong> ⚠️ <strong>La evidencia NO viene del RCA sino de <code>/home/lalo/Downloads/indexv2.php</code> (175,995 bytes, copia de Talía, 02/09), archivo SUELTO y SIN REPOSITORIO: el ancla es verificable hoy pero no versionada.</strong> ⚠️ <strong>Y el componente no es nuestro ni del equipo de SIGER, y su dueño sigue sin definir.</strong> ✅ <strong>09/09: DICTAMEN «aprobable» con los DOS AJUSTES YA CERRADOS por la revisión técnica</strong> —<code>rca/RCA_EI-CDOC_revision.md</code>, adenda del 09/09—: <strong>el texto sustituto de la §2 y de la §4 va redactado y listo para pegar, con las seis anclas reverificadas</strong> (<code>/rfc</code> <code>:2415</code>/<code>:2917</code> · el literal <code>&quot;ERROR CURP&quot;</code> <code>:2484</code>/<code>:2986</code> · la consulta a <code>firmascs</code> <code>:2497</code>/<code>:3002</code>). ⭐ <strong>Y la pregunta técnica que el dictamen dejó abierta queda contestada desde el código: la estampa NO se pega, se ESCRIBE COMO CONTENIDO al generar el documento (<code>:2785</code> en el PDF, <code>:2791</code> en el XML) — de ahí se sigue a la vez que la remediación sea automatizable y que el documento quede con una certificación que no le pertenece.</strong> ⚠️ <strong>Asimetría hallada de paso, sin ticket y no declarada defecto: <code>:2497</code> trae <code>cadenaoriginal</code> y <code>:3002</code> NO.</strong> <strong>Entregado hoy a la analista. No queda análisis pendiente.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="entregado" data-cod="ei-cnde" data-sis="siger-2" data-due="talía" data-av="medio"
+          data-afe="siger 2.0">
+        <td><button class="tog" aria-expanded="false" aria-controls="d16" data-t="d16"><code>EI-CNDE</code></button></td>
+        <td class="num">3</td>
+        <td>SIGER-2</td>
+        <td class="afe">SIGER 2.0</td>
+        <td>Talía</td>
+        <td class="av"><div class="bar" role="img" aria-label="90 por ciento"><span style="width:90%"></span></div><span class="pct">90 %</span></td>
+        <td class="est">✅ DICTAMINADO el 31/08 — RCA_EI-CNDE_revision.md: APROBADO con observaciones. ⭐ Las tres…</td>
+      </tr>
+      <tr class="detalle" id="d16" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <strong>Aprobada</strong></p>
+          <p><span class="k">Estado</span> ✅ <strong>DICTAMINADO el 31/08 — <code>RCA_EI-CNDE_revision.md</code>: APROBADO con observaciones.</strong> ⭐ <strong>Las tres afirmaciones técnicas se verificaron línea por línea contra el código fuente, no solo contra el documento</strong> —acto 85 como única condición de disparo en <code>SolicitudBandejaEntradaCalificadorMB:1268-1272</code>, actos 85/86 en la rama M2 de <code>FuncionActualizarCaratula:271-276</code>, y asignación directa sin validación para toda forma ≠ M2 en <code>:222-223</code> y <code>:377-379</code>— <strong>y las tres son ciertas.</strong> ⭐ <strong>La revisión encontró además un defecto que el RCA no identificó y es más grave: en <code>FormasActosServiceImpl:905-916</code> el <code>break</code> está FUERA del <code>if</code>, así que un primer elemento <code>null</code> pierde el cambio, y el ciclo aplica el valor a TODAS las carátulas de la solicitud.</strong> ✅ <strong>Documento en el repositorio desde el 31/08</strong> (<code>RCA_EI-CNDE.docx</code>); llegó por correo el 31/08 10:07 y se incorporó el mismo día. 🔴 <strong>Abierto y decide el operador: <code>D-13</code>/<code>R-1</code>, porque las 52 h son íntegramente cambios a código de SIGER 2.0</strong> —y <code>R-1</code> solo tiene salida escrita (<code>C3</code>, resiliencia del lado de SAS) para los defectos de INTEGRACIÓN, no para los internos de SIGER como éste—. ⚠️ <strong>ADVERTENCIA PARA LA CONSOLIDACIÓN (02/09) — no es enmienda a ningún RCA y no condiciona ningún visto bueno:</strong> <code>EI-CAR</code> y <code>EI-CNDE</code> <strong>aterrizan en el mismo punto de código</strong>, <code>FuncionActualizarCaratula:377-379</code> (rama <code>else</code> de <code>:370</code>, <code>caratulaX.setDsdensocial(...)</code> sin validación) — <code>EI-CNDE</code> lo describe desde el asignador y <code>EI-CAR</code> desde el extractor <code>:942</code>: <strong>una sola corrección los cierra.</strong> <strong>Y <code>I-182758</code> es evidencia central de <code>EI-CAR</code> pero el corte <code>2808</code> lo clasifica en <code>EI-CNDE</code> y NO está entre los 17 tickets de <code>EI-CAR</code>.</strong> 🔴 <strong>Por <code>D-11</code> los RCA se consolidan en INSTRUMENTO ÚNICO, así que si ambos se aprueban el solapamiento SÍ ocurre; se resuelve en la trazabilidad POR COMPONENTE que <code>D-11</code> exige, NO recortando un RCA</strong> —recortar <code>EI-CAR</code> dejaría la validación de denominación sin dueño si <code>EI-CNDE</code> no entra—. <strong>Al consolidar: contar una sola vez la corrección de <code>:377-379</code> (~2 h), UNIFICAR el criterio de aceptación duplicado (<code>RCA_EI-CAR.md:171</code> y el equivalente de <code>EI-CNDE</code>) y asignar <code>I-182758</code> a un solo componente.</strong> Detalle en <code>RCA_EI-CNDE_revision.md</code> §6.2.</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_arrancar" data-cod="ei-dvis" data-sis="sas" data-due="giovanni" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d17" data-t="d17"><code>EI-DVIS</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Giovanni</td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">🔴 Se queda sin tickets en el corte del 26/08, y NO es un error del archivo: sus dos tick…</td>
+      </tr>
+      <tr class="detalle" id="d17" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> 🔴 <strong>Se queda sin tickets en el corte del 26/08, y NO es un error del archivo: sus dos tickets se reclasificaron.</strong> <strong><code>I-183140</code> pasó a <code>EI-EDOC</code> y <code>I-184633</code> pasó a <code>EI-DNVI</code>, marcado <code>ERROR CONOCIDO = NO</code>.</strong> ⚠️ <strong>Su analista lo declaró como objetivo del día el 26/08, así que hay que confirmarle si sigue teniendo objeto.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_arrancar" data-cod="ei-ebd" data-sis="siger-2" data-due="talía" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d18" data-t="d18"><code>EI-EBD</code></button></td>
+        <td class="num">3</td>
+        <td>SIGER-2</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>Talía</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">Sin arrancar, y Enrique lo pidió en revisión el 26/08. 🔴 CAMBIO DE DUEÑO en el corte 070…</td>
+      </tr>
+      <tr class="detalle" id="d18" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> <strong>Sin arrancar, y Enrique lo pidió en revisión el 26/08.</strong> 🔴 <strong>CAMBIO DE DUEÑO en el corte <code>0709</code>: pasa de Fernando a Talía</strong> —<code>I-182370</code>, <code>I-183442</code> e <code>I-185168</code>, los únicos tres cambios de asignación de todo el archivo—. ⚠️ <strong>DEFECTO DE DATO en la fuente, se reporta y no se corrige aquí: los tres traen <code>90</code> en <code>% avance RCA</code> donde el resto del archivo usa fracción (<code>0.9</code>, <code>0.7</code>). Formateado como porcentaje se leen 9000 %, y por eso el actualizador NO lo traduce.</strong> *(El corte <code>0209</code> traía <code>19</code>.)*</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="en_analisis" data-cod="ei-enci" data-sis="siger-2" data-due="giovanni" data-av="medio"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d19" data-t="d19"><code>EI-ENCI</code></button></td>
+        <td class="num">2</td>
+        <td>SIGER-2</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>Giovanni</strong></td>
+        <td class="av"><div class="bar" role="img" aria-label="70 por ciento"><span style="width:70%"></span></div><span class="pct">70 %</span></td>
+        <td class="est">✅ DOCUMENTO ENTREGADO — deroga el «70 % con cero RCA en el repositorio» que este renglón…</td>
+      </tr>
+      <tr class="detalle" id="d19" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> ✅ <strong>DOCUMENTO ENTREGADO — deroga el «70 % con cero RCA en el repositorio» que este renglón declaraba hasta el 08/09.</strong> <code>RCA_EI-ENCI.docx</code>, V2 completa (diez secciones), responsable <strong>Giovanni Flores</strong>, fechas 02/09–03/09. <strong>Llegó POR CORREO, contra <code>D-06</code>:</strong> Giovanni → Enrique el 04/09 09:00, Enrique → el operador el 07/09 09:46 (<code>Insumos/Documento V2 de RCA con causa raíz EI-ENCI.eml</code>). <strong>Publicado en este repositorio el 08/09 por la revisión técnica</strong> (<code>D-31</code>: la conversión y la publicación son del tramo técnico). ⬜ <strong>SIN DICTAMEN: entregado, no revisado.</strong> ⭐ <strong>Lo que concluye, para quien lo lea antes del dictamen: NINGUNO de los dos tickets es un defecto del sistema.</strong> <code>I-181232</code> es una solicitud administrativa formal de permuta de registradores; <code>I-181505</code> es limpieza de bandeja —los 12 NCI eran 18 registros en <code>MVSOLICITUDES</code>, todos ya con <code>LLESTATUSBANDEJA = 3</code> («Atendido») pero con <code>LLUSUARIO</code> y <code>LLGRUPOTRABAJO</code> sin liberar—. <strong>Propone cero corrección de código.</strong> 🔴 <strong>Y trae un hallazgo que el ticket no pedía: 499 registros en <code>MVSOLICITUDES</code> con la misma condición</strong> —93 % de 2018–2021, 3.6 % de los últimos cinco años— <strong>y CERO casos nuevos en los últimos 90 días.</strong> ⭐ <strong>Ese cero es lo que sostiene «no hay defecto activo»; sin él, la conclusión no se aguantaría.</strong> ⬜ <strong>El documento NO propone acción sobre los 499 y la deja al área de negocio.</strong> ⚠️ <strong>Anteriores del renglón, que siguen valiendo:</strong> el REASIGNADO de Fernando a Giovanni el 02/09 está trazado en el propio instrumento de la Mesa (columna <code>RCA asignado</code>, filas 33 y 68) y corroborado por dos dailies de Slack; <strong><code>R-182590</code> no afecta este universo</strong> —el archivo de errores conocidos lo codifica <code>EI-RJUR</code> (fila 377)—, y los dos tickets de este renglón son <code>I-181232</code> e <code>I-181505</code>.</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="ei-nicz" data-sis="sicai / zentinel" data-due="sin dueño" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d20" data-t="d20"><code>EI-NICZ</code></button></td>
+        <td class="num">2</td>
+        <td>SICAI / ZENTINEL</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">🔴 ALTA EN ESTE CUADRO (corte 0709): pasa de 1 a 2 tickets, así que por D-09 deja de ser …</td>
+      </tr>
+      <tr class="detalle" id="d20" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> 🔴 <strong>ALTA EN ESTE CUADRO (corte <code>0709</code>): pasa de 1 a 2 tickets, así que por <code>D-09</code> deja de ser un código de un solo ticket y entra al universo de errores conocidos.</strong> <strong>SIN ASIGNAR y sin RCA</strong>, como todo SICAI/ZENTINEL.</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="detenido" data-cod="esi-rpc" data-sis="siger-2" data-due="fernando" data-av="bajo"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d21" data-t="d21"><code>ESI-RPC</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SIGER-2</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><div class="bar" role="img" aria-label="30 por ciento"><span style="width:30%"></span></div><span class="pct">30 %</span></td>
+        <td class="est">Reexpresado como ESI-RPC el 27/08 por D-01 —acordado en el daily; Enrique confirmó que e…</td>
+      </tr>
+      <tr class="detalle" id="d21" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> No aprobada</p>
+          <p><span class="k">Estado</span> <strong>Reexpresado como <code>ESI-RPC</code> el 27/08 por <code>D-01</code></strong> —acordado en el daily; Enrique confirmó que el código no figura en su archivo, así que la corrección corre por nuestro lado—. <strong>Sin un solo ticket en el catálogo, y por <code>D-09</code> un código sin tickets no exige RCA</strong>, lo que explica que estuviera rechazado al 30 %. ⬜ <strong><code>rca/RCA_EI-RPC.pdf</code> conserva su nombre por <code>D-31</code>.</strong> *(Antes <code>EI-RPC</code>.)* ✅ <strong>09/09: YA TIENE <code>.md</code> CON Rev. 2 — <code>rca/RCA_ESI-RPC.md</code>.</strong> ⚠️ <strong>Y aquí la conversión NO fue solo de formato: el original trae OCHO secciones contra las DIEZ de la plantilla, y quedan VACÍAS «Impacto de Negocio» y «Contención».</strong> ⭐ <strong>La revisión técnica verificó SEIS de sus afirmaciones contra el clon de SIGER (<code>origin/qa</code> = <code>1917ba2</code>, sin <code>checkout</code>): Java 1.6 ✅ · JSF 2.1.15 ✅ y PrimeFaces 3.5 ✅ AL CARÁCTER · «109 mappers» ✅ afinado a 110 archivos con 104 <code>&lt;resultMap&gt;</code> · los seis módulos ✅ · ausencia de resiliencia ✅ por barrido negativo.</strong> ⚠️ <strong>Dos cifras NO se reproducen —«52 integraciones» y «10 tablas con BLOB»— y se declaran NO VERIFICABLES, no falsas, con la consulta que las acreditaría.</strong> 🔴 <strong>Lo de fondo: su evidencia acredita OBSOLESCENCIA, su síntoma afirma RENDIMIENTO, y no hay una sola medición del síntoma.</strong> 🔴 <strong>Y su solución —modernización integral— NO CABE en un RCA por dos razones independientes: la Fase 6 manda las reescrituras a un Assessment de Arquitectura, y la SECON solo contrata MANTENIMIENTO.</strong> ⬜ <strong>Se propuso la partición que conserva el trabajo.</strong> ⚠️ <strong>Contradicción DECLARADA y no resuelta, en <code>rca/NOTA_ESI-RPC_horas_pico.md</code>: su síntoma dice «horas de mayor uso» y un informe posterior del mismo analista dice «sin ninguna hora del día libre de fallas».</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_arrancar" data-cod="esi-apidr" data-sis="sas" data-due="fernando" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d22" data-t="d22"><code>ESI-APIDR</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td>Fernando</td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">RCA levantado el 14/08 🔴 09/09: se le agrega un TERCER CASO de su misma causa raíz, y es…</td>
+      </tr>
+      <tr class="detalle" id="d22" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> RCA levantado el 14/08 🔴 <strong>09/09: se le agrega un TERCER CASO de su misma causa raíz, y es el más nítido de los tres</strong> —adenda §6.0—: <strong><code>/generaestampa</code> SÍ EXTRAE el campo de error del servicio de la TSA (<code>indexv2.php:514</code>) y lo devuelve, responde <code>HTTP 200</code> INCONDICIONAL (<code>:524-525</code>), y NINGUNO de los cinco consumidores lee ese campo.</strong> ⭐ <strong>Y un barrido NEGATIVO que generaliza su causa de dos casos a TODO el componente: <code>curl_errno</code> CERO apariciones y <code>CURLINFO_HTTP_CODE</code> CERO en 175,995 bytes y 33 endpoints.</strong> <strong>No es que falle la propagación en algunas integraciones: no existe mecanismo de propagación.</strong> 🔴 <strong>Su acción 1 del §9 —titularidad de la API intermedia (<code>10.100.21.21</code>)— queda reencuadrada como DEPENDENCIA DECLARADA de 29 días, no hueco del analista, y acotada por el Líder Técnico el 09/09: dependencia y NO bloqueo, con alcance permitido hasta la propuesta de ODT.</strong> <strong>Va hoy al analista, en el paquete de la frontera.</strong> ⚠️ <strong>Aquí la palabra «propuesta» se refiere a la propuesta de Orden de Trabajo, NO al estado del análisis: este código NO ha salido a las Analistas de Negocio.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_arrancar" data-cod="esi-enva" data-sis="api intermedia" data-due="fernando (propuesta)" data-av=""
+          data-afe="apisolr">
+        <td><button class="tog" aria-expanded="false" aria-controls="d23" data-t="d23"><code>ESI-ENVA</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>API intermedia</td>
+        <td class="afe">apisolr</td>
+        <td><strong>Fernando (PROPUESTA)</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est">🆕 RENGLÓN NUEVO del 09/09. Defecto detectado en revisión técnica del componente intermed…</td>
+      </tr>
+      <tr class="detalle" id="d23" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <strong>Cerrada</strong></p>
+          <p><span class="k">Estado</span> 🆕 <strong>RENGLÓN NUEVO del 09/09.</strong> <strong>Defecto detectado en revisión técnica del componente intermedio, SIN reporte de usuario: <code>ESI-</code> por <code>D-01</code>, y por <code>D-28</code> recorre el mismo proceso.</strong> <strong>Documento: <code>rca/RCA_ESI-ENVA.md</code>.</strong> <strong>Alcance MEDIDO: nueve consultas a base de datos que arman el texto pegando directamente un valor recibido —RFC, CURP, CUD o folio según el servicio—, repartidas en OCHO servicios del componente.</strong> ⭐ <strong>Y el mismo archivo contiene el patrón correcto en DOS consultas: no es desconocimiento.</strong> <strong>Remediación estimada: 7 d/p</strong> —3 parametrizar, 2 validación de formato, 2 pruebas de regresión—. ⛔ <strong>NO se suma a los 21 d/p de los frentes de generación de documentos y propagación de errores: es frente propio.</strong> 🔴 <strong>DOS COSAS QUE ESTE RENGLÓN DECLARA Y NO DA POR HECHAS: la CLAVE <code>ESI-ENVA</code> está PROPUESTA y PENDIENTE DE ALTA en el catálogo de la Mesa —se pidió a Enrique por correo el 09/09—, y el RESPONSABLE es una PROPUESTA, no una asignación.</strong> ⚠️ <strong><code>Sistema</code> = la API intermedia entre SAS y sus servicios de destino; los tickets de este componente se capturan contra <code>SAS</code>, y el componente no es SAS ni SIGER.</strong> ⬜ <strong>Su documento vive hoy en la rama <code>rca/esi-enva</code> y entra al cuadro al fusionarse.</strong></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="esi-sblq" data-sis="sas" data-due="sin dueño" data-av="bajo"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d24" data-t="d24"><code>ESI-SBLQ</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><div class="bar" role="img" aria-label="0 por ciento"><span style="width:0%"></span></div><span class="pct">0 %</span></td>
+        <td class="est">Detectado en el análisis de modos de falla del 11/08, no por un analista</td>
+      </tr>
+      <tr class="detalle" id="d24" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> Detectado en el análisis de modos de falla del 11/08, no por un analista</p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="esi-stec" data-sis="sas" data-due="sin dueño" data-av="bajo"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d25" data-t="d25"><code>ESI-STEC</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><div class="bar" role="img" aria-label="0 por ciento"><span style="width:0%"></span></div><span class="pct">0 %</span></td>
+        <td class="est">En el tablero de la Mesa figura como <code>ESI-STC</code></td>
+      </tr>
+      <tr class="detalle" id="d25" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> En el tablero de la Mesa figura como <code>ESI-STC</code></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="esi-dvac" data-sis="sas" data-due="sin dueño" data-av="bajo"
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d26" data-t="d26"><code>ESI-DVAC</code></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>SAS</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><div class="bar" role="img" aria-label="0 por ciento"><span style="width:0%"></span></div><span class="pct">0 %</span></td>
+        <td class="est">Su modo de falla <strong>sí tiene 16 tickets de julio</strong>: por <code>D-01</code> le correspondería <code>EI-DVAC</code></td>
+      </tr>
+      <tr class="detalle" id="d26" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> Su modo de falla <strong>sí tiene 16 tickets de julio</strong>: por <code>D-01</code> le correspondería <code>EI-DVAC</code></p>
+        </div>
+      </td></tr>
+      <tr class="fila" data-etapa="sin_asignar" data-cod="hecho en méxico" data-sis="—" data-due="sin dueño" data-av=""
+          data-afe="">
+        <td><button class="tog" aria-expanded="false" aria-controls="d27" data-t="d27"><strong><code>HECHO EN MÉXICO</code></strong></button></td>
+        <td class="num"><strong>0</strong></td>
+        <td>—</td>
+        <td class="afe"><span class="nodato" title="El RCA no acredita repositorio: por D-33 regla 3 la celda queda vacía y no se infiere">no acreditado</span></td>
+        <td><strong>SIN DUEÑO</strong></td>
+        <td class="av"><span class="nodato" title="El tablero todavía no recibe este avance">no hay</span></td>
+        <td class="est"><strong>SIN CÓDIGO ASIGNADO.</strong> O se le asigna, o no pertenece a este universo</td>
+      </tr>
+      <tr class="detalle" id="d27" hidden><td colspan="7">
+        <div class="detwrap">
+          <p><span class="k">Causa raíz</span> <span class="nodato">no hay</span></p>
+          <p><span class="k">Estado</span> <strong>SIN CÓDIGO ASIGNADO.</strong> O se le asigna, o no pertenece a este universo</p>
+        </div>
+      </td></tr></tbody></table></div>
+
+<footer>
+<p><strong>Fuente.</strong> Este tablero se genera de <code>rca/CUADRO_RCA.md</code> con
+<code>python3 rca/genera_tablero.py</code>. Los datos no se editan aquí: se editan en el cuadro y se regenera.</p>
+<p><strong>Quién pone cada dato.</strong> Tickets y avance los publica la Coordinación de la Mesa (<code>D-25.3</code>).
+Causa raíz y estado los declara la revisión técnica. Por <code>D-29</code> la causa raíz no detiene el avance: dice si está completa.</p>
+<p><strong>«En disputa».</strong> El avance lo publica la Mesa y el estado lo declara la revisión técnica.
+Cuando un código llega al 100 % pero su estado dice cancelado, rechazado o sin dictamen, <strong>el tablero marca
+la contradicción y no la resuelve</strong>: por <code>D-25.3</code> el número es de la Mesa.</p>
+<p><strong><code>Sistema</code> y <code>Código afectado</code> no son lo mismo (<code>D-33</code>).</strong>
+<code>Sistema</code> es el <strong>servicio afectado</strong> —dónde lo sufre el ciudadano— y lo captura el cliente por el
+síntoma; se conserva intacto porque es la trazabilidad al origen. <code>Código afectado</code> es lo que hay que
+<strong>modificar</strong>, declarado por la revisión técnica desde la evidencia del propio RCA, y es
+<strong>multivaluado</strong>: <code>EI-FMES</code> llega al ciudadano como SAS y toca tres capas.
+<strong>Su filtro coincide por contenido</strong>, así que filtrar «SIGER 2.0» devuelve todos los RCA que implican
+modificar SIGER —la lista que hay que consultar antes de armar una ODT de SIGER—.
+<strong>Vacío significa que el RCA no lo acredita</strong>: por la regla 3 de <code>D-33</code> no se infiere del
+<code>Sistema</code>.</p>
+<p><strong>Cómo leer los huecos.</strong> «no hay» significa que el tablero todavía no recibe ese dato.
+<code>SIN DUEÑO</code> es un pendiente de asignación.</p>
+</footer>
+</div>
+<script>
+const filas=[...document.querySelectorAll('tr.fila')],cnt=document.getElementById('cnt');
+const sel={sis:document.getElementById('fsis'),afe:document.getElementById('fafe'),due:document.getElementById('fdue'),cod:document.getElementById('fcod'),av:document.getElementById('fav')};
+let et=null;
+function pinta(){
+  let v=0;
+  filas.forEach(f=>{
+    const on=(!et||f.dataset.etapa===et)
+      &&(!sel.sis.value||f.dataset.sis===sel.sis.value)
+      &&(!sel.afe.value||f.dataset.afe.split(' · ').includes(sel.afe.value))
+      &&(!sel.due.value||f.dataset.due===sel.due.value)
+      &&(!sel.cod.value||f.dataset.cod===sel.cod.value)
+      &&(!sel.av.value||f.dataset.av===sel.av.value);
+    f.hidden=!on; if(on)v++;
+    const d=document.getElementById(f.querySelector('.tog').dataset.t);
+    if(!on&&d){d.hidden=true;f.querySelector('.tog').setAttribute('aria-expanded','false');}
+  });
+  cnt.textContent=v===filas.length?'':v+' de '+filas.length+' códigos';
+}
+document.querySelectorAll('.caja').forEach(b=>b.addEventListener('click',()=>{
+  const on=et===b.dataset.f; et=on?null:b.dataset.f;
+  document.querySelectorAll('.caja').forEach(x=>x.setAttribute('aria-pressed',String(!on&&x===b)));
+  pinta();
+}));
+Object.values(sel).forEach(x=>x.addEventListener('change',pinta));
+document.getElementById('limpiar').addEventListener('click',()=>{
+  et=null; Object.values(sel).forEach(x=>x.value='');
+  document.querySelectorAll('.caja').forEach(x=>x.setAttribute('aria-pressed','false'));
+  pinta();
+});
+document.querySelectorAll('.tog').forEach(t=>t.addEventListener('click',()=>{
+  const d=document.getElementById(t.dataset.t),o=t.getAttribute('aria-expanded')==='true';
+  d.hidden=o;t.setAttribute('aria-expanded',String(!o));
+}));
+pinta();
+</script></body></html>

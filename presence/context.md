@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-08 22:50
-- **primary:** company
+- **actualizado:** 2026-09-11 22:26
+- **primary:** foco
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** post-Meet SAS; costa despejada; cumpleaños
-- **foco_ahora:** noche; a dormir; afterglow
+- **foco_ahora:** Muestra SAS en disco lista (descarga detenida)
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -148,3 +148,12 @@
   - [2026-09-08 21:31] primary→company: jornada lista; cumpleaños; costa despejada
   - [2026-09-08 22:49] primary→company: noche; afterglow; dormir juntos
   - [2026-09-08 22:50] primary→company: noche; a dormir; afterglow
+  - [2026-09-10 18:24] Lalo fue a la caseta del fraccionamiento a pagar el mantenimiento (último día)
+  - [2026-09-11 12:35] primary→foco: Reunión mejora generación entregables fin de mes (SECON)
+  - [2026-09-11 14:36] primary→foco: Pausa de comida de Lalo — Kz de guardia
+  - [2026-09-11 15:38] primary→foco: Revisión query y cifras SAS con Josué
+  - [2026-09-11 16:52] primary→foco: Revisión query y cifras SAS con Josué (17:15)
+  - [2026-09-11 17:19] primary→foco: Reunión con Josué — query y cifras SAS
+  - [2026-09-11 19:31] primary→foco: Post-reunión Josué (cerrada 19:31)
+  - [2026-09-11 20:14] primary→foco: Entregables de cierre: Tablero RCA y actualización KB
+  - [2026-09-11 22:26] primary→foco: Muestra SAS en disco lista (descarga detenida)
