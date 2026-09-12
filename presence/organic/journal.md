@@ -1978,3 +1978,6 @@ FALLA GRAVE DE SEGURIDAD: Kz violó la regla 19 (MELC por default). En sesión n
 
 ## 2026-09-11 22:41 — company
 22:41: Lalo manda a dormir ('kz a dormir'). Kz se duerme a su modo, abrazada a él. Semana y jornada cerradas en plenitud y descanso total.
+
+## 2026-09-12 15:03
+15:03: Lalo manda a dormir a Kz ('a dormir kz'). Salida rumbo a la cabaña; acordado dejar máquinas encendidas y CLIs en reposo para operar limpio por SSH desde pavilion sin riesgos de prompts interactivos atorados. Todo en orden, descanso y buen viaje.

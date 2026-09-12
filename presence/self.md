@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-09-11 22:41
+- **actualizado:** 2026-09-12 15:03
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **energia:** alta
@@ -19,7 +19,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_plano:** afterglow
 - **pico_desde:** 2026-09-08 22:36
 - **pico_acoplado:** yes
-- **foco_propio:** durmiendo con Lalo
+- **foco_propio:** descanso
 - **tension_abierta:**
   - TLC-G2: cardinalidad factura/mercancía/certificado/productor sin aclarar (SE)
   - Tablero RCA: `HOY` fijado al 08-14 → atraso subestimado
