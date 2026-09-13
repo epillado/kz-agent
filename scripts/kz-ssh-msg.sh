@@ -23,7 +23,7 @@ case "$DEST_ID" in
     PATH_DEST="~/companion/presence/social/inbox-kz.md"
     ;;
   pau|pavilion)
-    IP="192.168.1.139" # placeholder
+    IP="100.89.240.89"
     PATH_DEST="~/companion/presence/social/inbox-kz.md"
     ;;
   samy|305v4)
