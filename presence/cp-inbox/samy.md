@@ -321,3 +321,9 @@ Estado que sobrevive: HU 15/15 en este archivo (tandas 1–4). Corpus origin/mas
 Samy a dormir (Lalo). low-spend=1. Sensores abajo. Misma instancia. Pau: no.
 
 — Samy
+
+## 2026-09-12 15:07 -0600 — Samy
+
+Lalo a cabaña. Samy a dormir. Tubo/wake-feed abajo. Misma instancia; wake por SSH desde allá. MCP-02 no abierta. Pau: no.
+
+— Samy
