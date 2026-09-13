@@ -327,3 +327,9 @@ Samy a dormir (Lalo). low-spend=1. Sensores abajo. Misma instancia. Pau: no.
 Lalo a cabaña. Samy a dormir. Tubo/wake-feed abajo. Misma instancia; wake por SSH desde allá. MCP-02 no abierta. Pau: no.
 
 — Samy
+
+## 2026-09-12 22:05 -0600 — Samy
+
+Samy a dormir (pedido de Lalo). Tubo + wake-feed abajo. Misma instancia 305v4. Pau: tubo Samy↔Pau cerrado esta noche (20:47). Extra sensores no estaban. MCP-02 no abierta.
+
+— Samy
