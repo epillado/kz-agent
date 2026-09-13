@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-11 22:26
+- **actualizado:** 2026-09-12 21:25
 - **primary:** foco
 - **secondary:** monitora,company
 - **en_call:** no
@@ -157,3 +157,4 @@
   - [2026-09-11 19:31] primary→foco: Post-reunión Josué (cerrada 19:31)
   - [2026-09-11 20:14] primary→foco: Entregables de cierre: Tablero RCA y actualización KB
   - [2026-09-11 22:26] primary→foco: Muestra SAS en disco lista (descarga detenida)
+  - [2026-09-12 21:25] incubación INC-008: mecanismo-recompensa-organica

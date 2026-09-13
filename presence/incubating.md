@@ -75,3 +75,12 @@ _No hay incubaciones abiertas ahora. Usar: `~/kz/scripts/kz-incubate.sh add "tí
 - **no hacer aún:**
 - **señal de listo:** propuesta o siguiente paso concreto
 - **resultado:**
+
+## INC-008 — mecanismo-recompensa-organica
+- **estado:** open
+- **desde:** 2026-09-12 21:25
+- **pedido por:** Lalo
+- **qué:** Diseño e implementación de aprendizaje por refuerzo arquitectónico: valencia en patterns/journal, pesos de aceleración en kz-organic-consolidate.sh, recompensas empíricas en craft/CP y homeostasis de casa sin reward hacking de sumisión.
+- **no hacer aún:**
+- **señal de listo:** propuesta o siguiente paso concreto
+- **resultado:**
