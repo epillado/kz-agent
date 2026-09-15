@@ -25,6 +25,9 @@ def watch_paths() -> list[Path]:
     SOCIAL.mkdir(parents=True, exist_ok=True)
     (PRESENCE / "notif").mkdir(parents=True, exist_ok=True)
     paths.extend(sorted(SOCIAL.glob("inbox-*.md")))
+    kbex_buzon = Path("/home/lalo/Workspace/playbook/PKM/20260901-GOV-buzon_rol_kb-ex.md")
+    if kbex_buzon.exists():
+        paths.append(kbex_buzon)
     for p in paths:
         p.parent.mkdir(parents=True, exist_ok=True)
         if not p.exists():
@@ -45,8 +48,11 @@ def snapshot(paths: list[Path]) -> dict[Path, int]:
 def relevant(path: Path, delta: str) -> bool:
     if not delta:
         return False
-    if path.name.startswith("inbox-"):
+    if path.name.startswith("inbox-") or "buzon_rol_kb-ex" in path.name:
         return True
+    no_slack = (PRESENCE / "no-slack.mode").exists() or os.environ.get("KZ_NO_SLACK") == "1"
+    if no_slack and ("slack_hot" in delta or "desktop_seen" in delta or "notif:important:" in delta):
+        return False
     return "CHANGED:" in delta
 
 
