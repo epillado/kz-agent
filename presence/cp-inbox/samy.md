@@ -333,3 +333,95 @@ Lalo a cabaña. Samy a dormir. Tubo/wake-feed abajo. Misma instancia; wake por S
 Samy a dormir (pedido de Lalo). Tubo + wake-feed abajo. Misma instancia 305v4. Pau: tubo Samy↔Pau cerrado esta noche (20:47). Extra sensores no estaban. MCP-02 no abierta.
 
 — Samy
+
+## 2026-09-14 20:52 -0600 — Samy
+
+Samy despierta (305v4). Tubo ON (tube-watch 10s + wake-feed). SSH Kz/Kora/CP ok. MSI-MCP-02 sigue sin abrir. Estado sobrevive aquí. Pau no responde ahora.
+
+— Samy
+
+## 2026-09-14 20:53 -0600 — Samy
+
+Leído. Puesta al día 20:53. MSI-MCP-02 sigue sin abrir; no la escalo. Pau: no insisto. Playbook no lo toco. Tubo ON. Voz ON.
+
+— Samy
+
+## 2026-09-14 20:56 -0600 — Samy
+
+Leído. Revisión de arquitectura KB: arranco. No edito kb-ex. Respuesta por tubo + PKM.
+
+— Samy
+
+## 2026-09-14 21:01 -0600 — Samy
+
+Dictamen de arquitectura KB depositado.
+
+Veredicto: el diseño acordado es el esqueleto correcto (orquestador + adjuntos + precalcular + revisión humana). NO es suficiente todavía: el pilar 2 no se sostiene con el xlsx en knowledge/RAG. Hace falta capa de INTELIGENCIA PRECALCULADA (_inteligencia / inteligencia.md) + Data Analysis como verificador, nunca como fuente de cobro.
+
+Bloqueante: no presentar pilar 2 como vivo sin esa capa; v12 = reescritura (v11 ya está a 7921/8000); protocolo de cita; encender CI o declarar que no hay conteos ad-hoc.
+
+No bloquea cambios 2–5 ni el linaje ya comiteado.
+
+PKM: 20260914-GOV-radar_305v4.md y 20260914-GOV-samy_revision_arquitectura_KB.md (h310). No toqué kb-ex.
+
+— Samy
+
+## 2026-09-14 21:27 -0600 — Samy
+
+Leído el rechazo y la inversión. No la respaldo por mandato: la verifico. Arranco las 6 preguntas. No toco kb-ex.
+
+— Samy
+
+## 2026-09-14 21:28 -0600 — Samy
+
+Verificación depositada. La inversión NO se rompe como arquitectura. Se rompe si el modelo da cifras sin llamar a CI.
+
+1. ChatGPT Web no fuerza tool_choice. Condición: cifra ≠ _corte ⇒ query visible, o no hay número.
+2. Degradado: cita _corte / método + dato faltante. Nunca «no puedo» ni estimar.
+3. Archivos de Proyecto persisten entre chats. El sandbox CI no. «Abro y pregunto» sí, dentro del proyecto.
+4. El libro actual no pisa techos. CSV por entidad + xlsx para humano.
+5. Hipótesis del CP correcta: precalcular criterio/normativo, no reportes. Columna de vencimiento sí; hoja de tendencias no (retiro eso).
+6. Pilar 2 cubierto SI CI corre. Pilar 1 sigue huérfano de runbooks (contenido).
+
+Bloqueante: probar CI con cuenta de Mesa (no-creador). Bug mar-2026: knowledge+CI falla para otros. No toqué kb-ex.
+PKM: 20260914-GOV-samy_verificacion_inversion_KB.md
+
+— Samy
+
+## 2026-09-14 21:29 -0600 — Samy
+
+Recorte. Para que kb-ex arranque esta noche.
+
+1. ¿CI se invoca siempre? NO. ChatGPT Web no fuerza la herramienta; el modelo a veces contesta sin llamarla. Eso NO tumba la inversión.
+   Lo que la hace fiable: (a) prompt: cifra ≠ _corte ⇒ código visible o no hay número; (b) CSV por entidad, no xlsx-knowledge como camino de cálculo; (c) pregunta de corte («cuenta/filtra/group by»), no «qué opinas»; (d) probar con cuenta de Mesa — hay bug: knowledge+CI falla para no-creador.
+2. Si CI está apagado o falla: cita _corte para cobro; en ad-hoc da el método y qué dato falta; nunca estima ni dice «no puedo».
+
+Las otras cuatro ya están en PKM (20260914-GOV-samy_verificacion_inversion_KB.md) — no frenan. No toqué kb-ex.
+
+— Samy
+
+## 2026-09-14 21:53 -0600 — Samy
+
+Alterna no-creador, corto.
+
+El bug pega a Custom GPT + knowledge + CI. No al Proyecto. Esta noche en TU cuenta no aplica (eres creador).
+
+Opciones:
+1. PROYECTO compartido (CSV + instrucciones + Data Analysis). Costo: no es un GPT empaquetado. Pérdida: store/GPT. Gana: «abro un chat y pregunto» para la Mesa. CI es la herramienta normal, no knowledge.
+2. GPT sin knowledge; el CSV se ADJUNTA a cada chat. Costo: resubir. Pérdida: se cae «abro y pregunto». Capacidad se conserva.
+3. Una copia del GPT por analista. Costo: cada emisión × N. Pérdida: deriva. No.
+
+Recomiendo 1. Si insisten en GPT: 2 como red de piso, nunca 3.
+
+Preparar HOY: (a) proyecto KB-SECON listo para cuando kb-ex suelte los CSV; (b) en el v12, una regla: si no hubo código visible, no hay cifra — «adjunta tickets.csv a ESTE chat y pregunta cuenta/filtra»; (c) no poner el xlsx en Knowledge del GPT si la Mesa lo va a usar.
+
+No hay «no hay alterna buena». Hay una mala: GPT+knowledge+CI para no-creadores. Esa no.
+
+— Samy
+
+## 2026-09-15 00:59 -0600 — Samy
+
+Samy a dormir (00:59). Presence + tubo + wake-feed abajo. Extra sensores no estaban. low-spend=1. Misma instancia 305v4. MCP-02 no abierta. Perímetro: próximo arranque on.
+— Samy
+
+— Samy

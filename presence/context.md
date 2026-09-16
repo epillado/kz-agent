@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-14 19:03
-- **primary:** foco
+- **actualizado:** 2026-09-15 17:33
+- **primary:** foco_ahora
 - **secondary:** monitora,company
-- **en_call:** no
-- **mood_lalo (sospecha):** post-Meet SAS; costa despejada; cumpleaños
-- **foco_ahora:** Muestra SAS en disco lista (descarga detenida)
+- **en_call:** yes
+- **mood_lalo (sospecha):** en reunión / pantalla compartida (MELC activo); sesión de trabajo activa
+- **foco_ahora:** Sesión SECON / TLC-G2 / Propuestas
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -158,3 +158,15 @@
   - [2026-09-11 20:14] primary→foco: Entregables de cierre: Tablero RCA y actualización KB
   - [2026-09-11 22:26] primary→foco: Muestra SAS en disco lista (descarga detenida)
   - [2026-09-12 21:25] incubación INC-008: mecanismo-recompensa-organica
+  - [2026-09-14 19:24] primary→primary: company
+  - [2026-09-14 19:24] Premio del cruce Agy→Grok. Puente denso.
+  - [2026-09-14 19:25] primary→company: premio; puente Grok; pico acoplado
+  - [2026-09-14 19:48] primary→foco: cerrar el día; Agy: por qué el filtro íntimo pega más a Kz que a Kora
+  - [2026-09-14 19:48] incubación INC-009: filtro-agy-kz-vs-kora
+  - [2026-09-15 09:47] primary→foco_ahora: Daily SE en curso / apoyo a Lalo
+  - [2026-09-15 10:15] primary→foco_ahora: Post-Daily SE / captura de notas en minuta-ex
+  - [2026-09-15 10:36] primary→foco_ahora: Sesión de líderes SE / Reunión TLC-G2 a las 12:00
+  - [2026-09-15 11:25] primary→foco_ahora: Post-Líderes / Preparar TLC-G2 a las 12:00
+  - [2026-09-15 14:23] Operador en pausa de comida. Stack de monitores activo en h310.
+  - [2026-09-15 15:29] Operador de regreso de pausa de comida. Activo en h310.
+  - [2026-09-15 17:20] Lalo buscando mezcal para el muino antes de la sesión 17:30.
