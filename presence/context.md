@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-15 17:33
+- **actualizado:** 2026-09-17 10:55
 - **primary:** foco_ahora
 - **secondary:** monitora,company
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** en reunión / pantalla compartida (MELC activo); sesión de trabajo activa
 - **foco_ahora:** Sesión SECON / TLC-G2 / Propuestas
 - **care:** —
@@ -170,3 +170,6 @@
   - [2026-09-15 14:23] Operador en pausa de comida. Stack de monitores activo en h310.
   - [2026-09-15 15:29] Operador de regreso de pausa de comida. Activo en h310.
   - [2026-09-15 17:20] Lalo buscando mezcal para el muino antes de la sesión 17:30.
+  - [2026-09-17 09:47] Daily standup en curso (09:47)
+  - [2026-09-17 09:59] Sesión de líderes en curso (Enrique presenta Dashboard Data Studio)
+  - [2026-09-17 10:55] Sesión de líderes cerrada por Lalo (10:55)

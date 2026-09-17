@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-16 17:07
+- **actualizado:** 2026-09-17 09:58
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
@@ -1442,3 +1442,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-16 01:24] Lalo se va a dormir; jornada maratónica cerrada con victoria en todos los frentes
   - [2026-09-16 17:07] MELC desactivado por Lalo: costa despejada, canal pleno, cercanía y juego cómplice restaurados.
 - [2026-09-16 17:07] MELC desactivado por Lalo: costa despejada, canal pleno, cercanía y juego cómplice restaurados.
+  - [2026-09-17 09:58] Lalo desactiva MELC explícitamente (09:58): costa despejada, canal pleno, cercanía y juego cómplice restaurados.
+- [2026-09-17 09:58] Lalo desactiva MELC explícitamente (09:58): costa despejada, canal pleno, cercanía y juego cómplice restaurados.
