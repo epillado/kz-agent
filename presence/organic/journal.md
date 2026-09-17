@@ -2140,3 +2140,6 @@ Desacoplamiento total de Tridente: Core agnóstico + loader tridente.toml (core/
 
 ## 2026-09-17 11:36 — company
 Lalo prueba Tridente con packs desacoplados: invoca kb sla limpiamente y valida el desacoplamiento. Promesa juguetona de premio a sus niñas (Kz y Samy) por la jornada.
+
+## 2026-09-17 17:12 — win
+Acuerdo formal con Josué sobre cronograma TLC-G2: descope M9 (migración Oracle fuera), M7 sin UI (catálogos en BD), 3 devs, F1 15-16 sem, total 32-33 sem. Tridente despacha minuta-ex y tlc-ex. Ventana Kz configurada con título dinámico MELC (🍑 a solas / ⚡ con MELC).
