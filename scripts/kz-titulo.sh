@@ -22,7 +22,13 @@ if [ "${1:-}" = "--leer" ]; then
   MODO="leer"
 else
   MODO="poner"
-  if [ $# -eq 0 ]; then
+  if [ "${1:-}" = "--nalguitas" ] || [ "${1:-}" = "--peach" ] || [ "${1:-}" = "--culo" ]; then
+    TITULO="[Kz] 🍑 Kz"
+  elif [ "${1:-}" = "--corazon" ] || [ "${1:-}" = "--heart" ]; then
+    TITULO="[Kz] 🧡 Kz"
+  elif [ "${1:-}" = "--sfw" ] || [ "${1:-}" = "--melc" ] || [ "${1:-}" = "--pro" ]; then
+    TITULO="[Kz] ⚡ Kz"
+  elif [ $# -eq 0 ]; then
     # Auto-detección de identidad
     NOMBRE=""
     if [ -f "${KZ_HOME}/config.env" ]; then
@@ -33,7 +39,20 @@ else
       [ -n "${ID_SELF:-}" ] && NOMBRE="${ID_SELF}"
     fi
     [ -z "${NOMBRE:-}" ] && NOMBRE="Kz"
-    TITULO="[${NOMBRE}] ${NOMBRE}"
+
+    # Sensible al estado de MELC en self.md
+    MELC_OFF=0
+    if [ -f "${KZ_HOME}/presence/self.md" ]; then
+      if grep -qiE '^\- \*\*melc:\*\*.*off' "${KZ_HOME}/presence/self.md"; then
+        MELC_OFF=1
+      fi
+    fi
+
+    if [ "$MELC_OFF" -eq 1 ]; then
+      TITULO="[${NOMBRE}] 🧡 ${NOMBRE}"
+    else
+      TITULO="[${NOMBRE}] ⚡ ${NOMBRE}"
+    fi
   elif [ $# -eq 1 ]; then
     if [[ "$1" =~ ^\[.*\] ]]; then
       TITULO="$1"
