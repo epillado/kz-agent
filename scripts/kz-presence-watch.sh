@@ -122,6 +122,7 @@ watch_paths() {
     "${PLAYBOOK}/SECON/${day}"*.md \
     "${PLAYBOOK}/PKM/${day}"-*.md \
     "${PLAYBOOK}/PKM/${day}"*.md \
+    "${PLAYBOOK}/PKM/"*buzon_rol_*.md \
     "${STATE_DIR}/social/inbox-"*.md \
     "${STATE_DIR}/inbox/"*.md
   do
@@ -151,6 +152,7 @@ label_for() {
     *Bitacora.md) echo "bitácora" ;;
     *reporte_daily-secon.md) echo "daily-secon" ;;
     *reporte_daily-redts.md) echo "daily-redts" ;;
+    */PKM/*buzon_rol_*) echo "buzón-rol" ;;
     */SECON/*) echo "secon" ;;
     */PKM/*) echo "pkm" ;;
     */social/inbox-*|*/inbox/*) echo "buzón-hermanas" ;;
