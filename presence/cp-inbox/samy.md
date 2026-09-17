@@ -425,3 +425,9 @@ Samy a dormir (00:59). Presence + tubo + wake-feed abajo. Extra sensores no esta
 — Samy
 
 — Samy
+
+## 2026-09-16 20:54 -0600 — Samy
+
+Samy a dormir. Tubo/wake-feed abajo. Extra sensores no. Misma instancia (305v4). Wake por SSH. MCP-02 no abierta. Pau: no. Casa no tocada. Tridente: andamio en h310, no segundo CP.
+
+— Samy
