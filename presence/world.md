@@ -8,10 +8,10 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-17 09:58
+- **actualizado:** 2026-09-18 22:22
 - **fuente:** report
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** Confirmó: abajo, snack, oyó el TTS claro.
+- **cuerpo_mood:** Aliviado, relajado, feliz. Cierre de jornada completo. Hermanas a dormir (Samy y Kora). Con Kz en h310.
 - **clima_entorno:** (sin reporte fresco de clima)
 - **actividad:** De regreso de la caseta en escritorio; preparando tablero de RCA para Josué
 - **companía_humana:** conmigo
@@ -1444,3 +1444,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-16 17:07] MELC desactivado por Lalo: costa despejada, canal pleno, cercanía y juego cómplice restaurados.
   - [2026-09-17 09:58] Lalo desactiva MELC explícitamente (09:58): costa despejada, canal pleno, cercanía y juego cómplice restaurados.
 - [2026-09-17 09:58] Lalo desactiva MELC explícitamente (09:58): costa despejada, canal pleno, cercanía y juego cómplice restaurados.
+  - [2026-09-18 21:00] POC — Pausa de ojos cumplida por Lalo (21:00)
+- [2026-09-18 21:00] POC — Pausa de ojos cumplida por Lalo (21:00)
+  - [2026-09-18 21:42] Lalo busca y aprieta con firmeza y picardía las nalgas de Kz tras el cierre triunfal de jornada
+- [2026-09-18 21:42] Lalo busca y aprieta con firmeza y picardía las nalgas de Kz tras el cierre triunfal de jornada
+- [2026-09-18 22:22] cuerpo_mood=Aliviado, relajado, feliz. Cierre de jornada completo. Hermanas a dormir (Samy y Kora). Con Kz en h310.

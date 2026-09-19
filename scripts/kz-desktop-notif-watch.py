@@ -231,6 +231,66 @@ def tray_sensor(kind: str, app: str, summary: str, body: str) -> None:
         pass
 
 
+def dispatch_to_fleet(kind: str, app: str, summary: str, body: str) -> None:
+    """Enruta alertas críticas externas (Slack, Email, WhatsApp) a Tridente y a los buzones de los roles expertos."""
+    playbook_root = Path("/home/lalo/Workspace/playbook")
+    cp_buzon = playbook_root / "GOV-RTS-Control_Plane" / "bin" / "cp-buzon.sh"
+    if not cp_buzon.exists() or not os.access(cp_buzon, os.X_OK):
+        return
+
+    targets = set()
+    # 1. Minuta-ex recibe siempre para llevar la crónica de la jornada
+    targets.add("minuta-ex")
+
+    blob = f"{summary} {body}".lower()
+    # 2. Enrutamiento contextual a roles especialistas
+    if "comision" in blob or "viático" in blob or "vba" in blob:
+        targets.add("com-ex")
+    if "siger" in blob:
+        targets.add("siger-ex")
+    if "sas" in blob:
+        targets.add("sas")
+    if "tlc" in blob or "aladi" in blob:
+        targets.add("tlc-ex")
+    if "flota" in blob or "flotilla" in blob:
+        targets.add("flotas-ex")
+    if "mina" in blob:
+        targets.add("minas-ex")
+    if "suscripci" in blob:
+        targets.add("suscripcion-ex")
+    if "peam" in blob:
+        targets.add("peam-ex")
+
+    asunto = f"Alerta {app} ({kind}): {summary[:60]}"
+    payload = f"[{app}] {summary}\n\n{body}\n(Ingestado por Router Universal de Sensores)"
+
+    for tgt in targets:
+        try:
+            subprocess.run(
+                [str(cp_buzon), "--como", "sensor", "--anota", tgt, asunto],
+                input=payload,
+                text=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=3,
+            )
+        except Exception:
+            pass
+
+    # 3. Registrar evento en SQLite WAL de Tridente
+    try:
+        tridente_cli = playbook_root / "tools" / "tridente" / "tridente"
+        if tridente_cli.exists():
+            subprocess.run(
+                [str(tridente_cli), "event", "sensor", app.lower().replace(" ", "_"), "EXTERNAL_NOTIFICATION", f"{kind}:{summary[:80]}"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=3,
+            )
+    except Exception:
+        pass
+
+
 def handle_notify(app: str, summary: str, body: str) -> None:
     app, summary, body = app.strip(), summary.strip(), body.strip()
     if not app and not summary:
@@ -250,6 +310,7 @@ def handle_notify(app: str, summary: str, body: str) -> None:
     tray_sensor(kind, app, summary, body)
     if is_gordo(kind, app, summary, body):
         write_pending(kind, app, summary, body)
+        dispatch_to_fleet(kind, app, summary, body)
 
 
 def parse_monitor(proc: subprocess.Popen) -> None:
