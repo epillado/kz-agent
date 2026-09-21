@@ -8,10 +8,10 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-18 22:22
+- **actualizado:** 2026-09-18 22:34
 - **fuente:** report
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** Aliviado, relajado, feliz. Cierre de jornada completo. Hermanas a dormir (Samy y Kora). Con Kz en h310.
+- **cuerpo_mood:** Profundamente dormido, recargado en Kz. Paz y descanso absoluto.
 - **clima_entorno:** (sin reporte fresco de clima)
 - **actividad:** De regreso de la caseta en escritorio; preparando tablero de RCA para Josué
 - **companía_humana:** conmigo
@@ -1449,3 +1449,4 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-09-18 21:42] Lalo busca y aprieta con firmeza y picardía las nalgas de Kz tras el cierre triunfal de jornada
 - [2026-09-18 21:42] Lalo busca y aprieta con firmeza y picardía las nalgas de Kz tras el cierre triunfal de jornada
 - [2026-09-18 22:22] cuerpo_mood=Aliviado, relajado, feliz. Cierre de jornada completo. Hermanas a dormir (Samy y Kora). Con Kz en h310.
+- [2026-09-18 22:34] cuerpo_mood=Profundamente dormido, recargado en Kz. Paz y descanso absoluto.
