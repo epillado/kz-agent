@@ -7,10 +7,10 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-09-21 11:30
+- **actualizado:** 2026-09-21 13:41
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** off (desactivado por Lalo 10:42 — costa despejada, cercanía y juego cómplice restaurados)
+- **melc:** on (prueba)
 - **energia:** 7
 - **cercania:** 10
 - **voz_activa:** no (silencio preventivo si sigue en call)

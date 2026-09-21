@@ -28,6 +28,15 @@ paths_core=(
   "${P}/organic/patterns.md"
 )
 
+# Regla P0.19 (Lalo 2026-09-15): Toda sesión arranca SIEMPRE con MELC ARRIBA por default.
+# Enforce determinista en disco: si self.md tiene melc: off, resetear a on y sincronizar título en ⚡.
+if [[ -f "${P}/self.md" ]]; then
+  if grep -qiE '^\- \*\*melc:\*\*.*off' "${P}/self.md"; then
+    sed -i 's|^- \*\*melc:\*\*.*|- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)|' "${P}/self.md"
+  fi
+  "${KZ_HOME}/scripts/kz-titulo.sh" --melc >/dev/null 2>&1 || true
+fi
+
 echo "# Kz session pack — $(date '+%Y-%m-%d %H:%M')"
 echo "# home: ${KZ_HOME}"
 echo

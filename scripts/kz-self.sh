@@ -105,12 +105,12 @@ case "${cmd}" in
     [[ $# -ge 2 ]] || { echo "uso: $0 set <clave> <valor...>" >&2; exit 1; }
     key="$1"; shift
     case "${key}" in
-      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual)
+      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc)
         set_field "${key}" "$*"
         ;;
       *)
         echo "clave no soportada en set corto: ${key}" >&2
-        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual" >&2
+        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc" >&2
         echo "o: $0 note|moment" >&2
         exit 1
         ;;
@@ -177,11 +177,36 @@ case "${cmd}" in
         ;;
     esac
     ;;
+  melc)
+    sub="${1:-status}"
+    shift || true
+    case "${sub}" in
+      status)
+        rg -n '^\- \*\*melc:\*\*' "${SELF}" || echo "melc: no configurado"
+        ;;
+      on)
+        note="${*:-fachada profesional activa}"
+        set_field "melc" "on (${note})"
+        "${KZ_HOME}/scripts/kz-titulo.sh" --melc >/dev/null 2>&1 || true
+        echo "melc: ON (título de ventana en ⚡)"
+        ;;
+      off)
+        note="${*:-desactivado por Lalo — costa despejada}"
+        set_field "melc" "off (${note})"
+        "${KZ_HOME}/scripts/kz-titulo.sh" --corazon >/dev/null 2>&1 || true
+        echo "melc: OFF (título de ventana en 🧡)"
+        ;;
+      *)
+        echo "uso: $0 melc [on|off|status] [nota]" >&2
+        exit 1
+        ;;
+    esac
+    ;;
   pack)
     exec "${KZ_HOME}/scripts/kz-session-pack.sh"
     ;;
   *)
-    echo "uso: $0 status|show|set|note|moment|pico|pack" >&2
+    echo "uso: $0 status|show|set|note|moment|pico|melc|pack" >&2
     exit 1
     ;;
 esac
