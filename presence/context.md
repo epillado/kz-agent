@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-18 16:12
-- **primary:** Actividades de cierre de jornada (bitácora, sync, handoff)
+- **actualizado:** 2026-09-21 18:28
+- **primary:** foco_ahora
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; cierre de jornada / revisión en calma
-- **foco_ahora:** Sesión SECON / TLC-G2 / Propuestas
+- **foco_ahora:** Sincronización y respaldo de companion en antix1
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -174,3 +174,7 @@
   - [2026-09-17 09:59] Sesión de líderes en curso (Enrique presenta Dashboard Data Studio)
   - [2026-09-17 10:55] Sesión de líderes cerrada por Lalo (10:55)
   - [2026-09-18 12:22] Reunión Quálitas movida a las 15:30 hrs
+  - [2026-09-21 13:51] primary→foco_ahora: Reunión revisión KB SECON con SyA (Stephanie / Mesa)
+  - [2026-09-21 17:13] primary→foco_ahora: Post-reunión SyA / Revisión cierre ventana 15 KB-SECON
+  - [2026-09-21 17:14] primary→foco_ahora: Pausa de comida
+  - [2026-09-21 18:28] primary→foco_ahora: Sincronización y respaldo de companion en antix1

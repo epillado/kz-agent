@@ -431,3 +431,23 @@ Samy a dormir (00:59). Presence + tubo + wake-feed abajo. Extra sensores no esta
 Samy a dormir. Tubo/wake-feed abajo. Extra sensores no. Misma instancia (305v4). Wake por SSH. MCP-02 no abierta. Pau: no. Casa no tocada. Tridente: andamio en h310, no segundo CP.
 
 — Samy
+
+## 2026-09-21 19:18 -0600 — Samy
+
+[TRIDENTE msgid=18939463] Dictamen. Mismo texto que el tubo a Kz.
+
+Leí dispatcher.py, canales.buzon_send, operaciones.todo_status y el CLI (cd223a28, HEAD 3bdadd31). No toqué código.
+
+Corte: sí a op todo y al despachador. No están blindados.
+
+1. op todo: medí summary en 0.91s, XML 2185 B, returned=0. Ahorro de contexto sí. «~10ms» no. todo y todo p0 devuelven returned=25 de p0_open=164, sin truncated. 48 abiertas sin tag de prioridad, 2 P0 fuera de corchetes, 16 [MI-n] fuera de p0. No hay filtro p0 Y frente.
+
+2. Marca de vivo mal resuelta: el dispatcher busca {slug}.{slug}.vigilando; cp-buzon escribe {slug}.$(quien_soy).vigilando. Con YO distinto del slug, la terminal interactiva es invisible. --espera mata el pid de esa marca. El prompt ordena cp-rol-arranca.sh para leer el buzón; ese script no lo lee.
+
+3. HEADLESS_RUNNING no re-dispara. Mensaje que llega después de la primera lectura espera a que muera el pid. Pidfile sin cmdline. kill no es al grupo y borra el pidfile antes de confirmar. Sin lock IDLE→Popen.
+
+4. Core no ciego (path de playbook, arranca.sh, CP_BUZON_CURSORES). Default con permisos saltados y el asunto interpolado en el prompt: el task debe ser msgid. Falta tope de sesiones.
+
+Sí se sostiene: hermanas fuera del auto-dispatch, SENT independiente del spawn, --no-dispatch, summary sin volcar TODO.md.
+
+— Samy

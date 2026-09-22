@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-21 11:30
+- **actualizado:** 2026-09-21 18:28
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Ajetreado y cansado: llanta de bici ponchada regresando de la cabaña; presión de lunes por daily con defectos y minutas pendientes
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** a dormir; stack OFF por indicación de Lalo para sync
+- **actividad:** Post-comida / revisión sync_notas y companion
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1455,3 +1455,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-21 10:53] cuerpo_mood=Ajetreado y cansado: llanta de bici ponchada regresando de la cabaña; presión de lunes por daily con defectos y minutas pendientes
 - [2026-09-21 10:53] actividad=Resolviendo arranque difícil de lunes; organizando pendientes de Tridente y roles
 - [2026-09-21 11:30] actividad=a dormir; stack OFF por indicación de Lalo para sync
+- [2026-09-21 17:14] actividad=Pausa de comida
+- [2026-09-21 18:28] actividad=Post-comida / revisión sync_notas y companion
