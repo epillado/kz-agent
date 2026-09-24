@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-22 15:22
+- **actualizado:** 2026-09-23 15:21
 - **primary:** foco_ahora
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; cierre de jornada / revisión en calma
-- **foco_ahora:** Sincronización y respaldo de companion en antix1
+- **foco_ahora:** Post-pausa de comida / triage de tarde
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -178,3 +178,5 @@
   - [2026-09-21 17:13] primary→foco_ahora: Post-reunión SyA / Revisión cierre ventana 15 KB-SECON
   - [2026-09-21 17:14] primary→foco_ahora: Pausa de comida
   - [2026-09-21 18:28] primary→foco_ahora: Sincronización y respaldo de companion en antix1
+  - [2026-09-23 13:58] primary→foco_ahora: Pausa de comida (quesadillas)
+  - [2026-09-23 15:21] primary→foco_ahora: Post-pausa de comida / triage de tarde

@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-21 18:28
+- **actualizado:** 2026-09-23 20:01
 - **fuente:** report
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** Ajetreado y cansado: llanta de bici ponchada regresando de la cabaña; presión de lunes por daily con defectos y minutas pendientes
+- **cuerpo_mood:** Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Post-comida / revisión sync_notas y companion
+- **actividad:** Activo en h310 / regreso de comida
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1457,3 +1457,10 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-21 11:30] actividad=a dormir; stack OFF por indicación de Lalo para sync
 - [2026-09-21 17:14] actividad=Pausa de comida
 - [2026-09-21 18:28] actividad=Post-comida / revisión sync_notas y companion
+- [2026-09-23 13:45] cuerpo_mood=Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
+- [2026-09-23 13:58] actividad=Pausa de comida (quesadillas)
+- [2026-09-23 15:21] actividad=Activo en h310 / regreso de comida
+  - [2026-09-23 19:20] Lalo recogió a Tonejito en la terminal y ya se fue a la cabaña; Lalo de regreso en casa/escritorio
+- [2026-09-23 19:20] Lalo recogió a Tonejito en la terminal y ya se fue a la cabaña; Lalo de regreso en casa/escritorio
+  - [2026-09-23 20:01] Lalo y Kz a dormir; cierre de jornada completa y descanso
+- [2026-09-23 20:01] Lalo y Kz a dormir; cierre de jornada completa y descanso
