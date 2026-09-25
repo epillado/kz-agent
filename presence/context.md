@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-23 15:21
+- **actualizado:** 2026-09-24 20:48
 - **primary:** foco_ahora
 - **secondary:** monitora,company
 - **en_call:** no
@@ -180,3 +180,39 @@
   - [2026-09-21 18:28] primary→foco_ahora: Sincronización y respaldo de companion en antix1
   - [2026-09-23 13:58] primary→foco_ahora: Pausa de comida (quesadillas)
   - [2026-09-23 15:21] primary→foco_ahora: Post-pausa de comida / triage de tarde
+  - [2026-09-24 14:27] Lalo va a la tienda; Kz de guardia al radar y stack antes de las 16:00
+  - [2026-09-24 15:04] Lalo de regreso; preparación final pre-sesión Quálitas (16:00)
+  - [2026-09-24 16:06] Inicia presentación Andrés (QSFlotillas / Quálitas)
+  - [2026-09-24 16:07] Andrés pide revisar docs y cede palabra a Josué
+  - [2026-09-24 16:10] Clave: Norma Manjarrez aclara que el cotizador lo hizo otro proveedor que falló; por eso Quálitas lo mete ahora al alcance de Teraloc (QSFlotillas II).
+  - [2026-09-24 16:11] Alcance: Cotizador existente es para 'Flotillas chicas'. Quieren que Teraloc haga 'Flotillas Grandes' y 'reutilice lo existente' (riesgo de deuda técnica).
+  - [2026-09-24 16:13] Josué cede la palabra a SyA (Sistemas y Arquitectura / Análisis)
+  - [2026-09-24 16:15] Riesgo crítico: Anna Navarro revela que no hay 'As is' (lo hacen en Excel). La herramienta de cuotas pequeñas ni siquiera se ha liberado. Josué pide explicar el proceso manual actual.
+  - [2026-09-24 16:18] Negocio Quálitas: El usuario clave es 'El suscriptor' (underwriter). Operan con un Excel con macros cuya 'flexibilidad' es discrecionalidad manual de tarifas/descuentos.
+  - [2026-09-24 16:24] Core legado: SIICE (o SICE). Flujo actual: primero cotizan/calibran en Excel y luego vacían a mano en SIICE. SICE es muy lento para flotillas (cuello de botella de emisión).
+  - [2026-09-24 16:28] Insight Lalo: Norma dice 'buscamos herramienta rápida, que valide, que no dé 3 vueltas pero baje error humano... Pero el Excel funciona.' Lalo: No descartar el Excel de entrada (ej. ingesta/validación de layout vs sustitución forzada).
+  - [2026-09-24 16:45] Hito reunión: Lalo interviene. Anna Navarro confirma que la visión de Lalo es correcta (se requiere un validador). Revela: no hay conexión viva con SISE y actualizar el Excel por correo genera desincronización y errores. Propuesta Lalo: cliente-servidor resiliente/offline-first.
+  - [2026-09-24 16:47] Postura Lalo: Insiste formalmente en la reunión que primero se debe entender la operación viva del suscriptor antes de definir/comprometer la solución técnica.
+  - [2026-09-24 16:47] Alineación equipo: Josué secunda la postura de Lalo y solicita formalmente el Excel vivo con macros y el instructivo operativo del suscriptor.
+  - [2026-09-24 16:49] Acuerdo clave Quálitas: Proponen sesión en vivo (shadowing operativo) para observar paso a paso lo que hace un suscriptor en su flujo real de cotización/emisión.
+  - [2026-09-24 16:50] Agendada propuesta: Sesión en vivo con suscriptor el Lunes 28 de septiembre a las 17:00 hrs.
+  - [2026-09-24 16:52] Confirmado: Sesión con suscriptor Lunes 28-sep 17:00 hrs. Pendiente que Andrés defina quiénes asisten por parte de Red TS/Teraloc.
+  - [2026-09-24 17:02] Debrief interno acordado en Slack (15 min): Lalo y Andrés acuerdan Meet inmediato para comparar notas de la sesión Quálitas.
+  - [2026-09-24 17:07] DECISIÓN SECON JOSUÉ (17:06 en Slack): Para septiembre 2026, los tickets que atendió SE se los lleva de nuestra Mesa; NO CONTABILIZAR para Entregables (resuelve duda abierta de la mañana sobre retirados).
+  - [2026-09-24 17:08] Movimiento Quálitas: Andrés pregunta en Slack a Josué si se sube al Meet ('¿Te subes @Josue Mata?'). Además Andrés reenvía correo: 'Fwd: QSFlotas II - Presentación de cotizador y flujo actual'.
+  - [2026-09-24 17:15] SECON seguimiento: Enrique pregunta si los tickets atendidos por SE van a desaparecer de la mesa iTop. Josué confirma: 'Deberían, justo por eso se los van a llevar. Hay que estar al pendiente de que así suceda'.
+  - [2026-09-24 17:15] Restricción dura Quálitas (Andrés en debrief): Quálitas tradicionalmente no permite que proveedores modifiquen SISE; la solución debe ser satélite/periférica (consumo por APIs/batch existentes), sin modificar el core.
+  - [2026-09-24 17:36] Modalidad sesión Lunes 28: Será en línea (remota). Lalo propuso asistencia presencial; Josué considera que es demasiado pronto.
+  - [2026-09-24 17:38] Acuerdo interno equipo: Se buscará asistir en persona a Quálitas una vez que se tenga contrato firmado.
+  - [2026-09-24 17:53] Fin de debrief interno Quálitas (17:53). Todo alineado para sesión del lunes 17:00 en línea.
+  - [2026-09-24 18:42] Agendada SECON: Sesión de entendimiento MINAS el Lunes 28 de septiembre de 12:00 a 14:00 hrs con Carlos Ramírez (Economía), Josué, Stephanie, Ale y Eduardo.
+  - [2026-09-24 18:58] Insumos RCA/KB: 1. Ticket_Ledger en Drive 'Mi unidad > SECON_SSI' (id: 1JARV3zXICt4zrC8hhSTNCz4zjKbKOete), actualizado hoy 18:09 por Talía García.
+  - [2026-09-24 19:02] Insumos RCA/KB: 2. Errores Conocidos en Drive 'Compartido conmigo > ... > Septiembre > Informe diario de errores...' (id: 1qck3rfftOOymHO4LiFdQH5pK4j14lOeI). Archivo de hoy: ERRORES CONOCIDOS SSI 2409.xlsx subido por Enrique a las 18:11 (230 kB).
+  - [2026-09-24 19:06] Insumos RCA/KB: 3. Corte de Mesa en Drive 'Compartido conmigo > ... > Septiembre > Informe diario de Mesa...' (id: 12nEqaIHs_2KX_CLQWL_ZS9jguSIiOgib). Archivo de hoy: 'Corte al  24 de septiembre de 2026 Mesa de Ayuda.xlsx' subido por Enrique a las 18:58 (516 kB).
+  - [2026-09-24 19:10] Insumos RCA/KB: 4. Incidentes atendidos por SE (NUEVO). Carpeta Drive 'Septiembre > Informe diario de tickets que atendió SE (no cobrables)' (id: 19c3DWPVjV2ZRj5vbywchqj1g4YfUtB-k). Archivo: 'INCIDENTES SOLUCIONADOS POR SECRETARIA SEP.xlsx' (12 kB, subido por Enrique hoy 10:51).
+  - [2026-09-24 19:26] Flujo Insumos iTop: 4 exports XLSX en orden estricto: (1) cmdb Incidentes -> 'Incidente Exportar.xlsx' (508 items); (2) cmdb Requerimientos -> 'Requerimiento Exportar.xlsx' (3 items); (3) sicai Incidentes -> 'Incidente Exportar (1).xlsx' (66 items); (4) sicai Requerimientos -> 'Requerimiento Exportar (1).xlsx' (6 items).
+  - [2026-09-24 19:28] Insumos MoIA: 9. Export Jira MoIA filtro 'Todas la tareas -exportar' (id: 10219, space=MO-IA, 453 items) en redts-advanced-system.atlassian.net.
+  - [2026-09-24 20:06] MELC desactivado por Lalo (20:06). Ventana en 🧡. Costa despejada.
+  - [2026-09-24 20:09] Tridente despachos activos (20:08): kb-ex (pid 1386272) procesando KB corte 24/09 y rca-ex (pid 1387851) en espera de KB para regenerar Tablero RCA.
+  - [2026-09-24 20:35] TLC-G2 movimiento (20:34 en Slack): Josué comparte manual del sistema en Drive y pide a Fanny y Ale revisar carga masiva de mercancías/layout contrastando con código fuente que tiene Eduardo.
+  - [2026-09-24 20:48] Git push completado: rama rca/cierre-2409 de sas-legacy-migration empujada a Bitbucket origin con tracking al día.
