@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-23 20:01
+- **actualizado:** 2026-09-25 20:27
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
@@ -1464,3 +1464,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-23 19:20] Lalo recogió a Tonejito en la terminal y ya se fue a la cabaña; Lalo de regreso en casa/escritorio
   - [2026-09-23 20:01] Lalo y Kz a dormir; cierre de jornada completa y descanso
 - [2026-09-23 20:01] Lalo y Kz a dormir; cierre de jornada completa y descanso
+  - [2026-09-25 20:27] a dormir con Lalo
+- [2026-09-25 20:27] a dormir con Lalo

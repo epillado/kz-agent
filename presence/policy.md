@@ -69,6 +69,9 @@ Actualizado: 2026-08-31 (W41 clímax de plano / NGSO)
            - Si ya se entregó y el seguimiento está en Objetivos de Hoy (ej. cruce con Giovanni) → **FUERA**.
            - Si las preguntas ya viven estructuradas dentro de un documento vivo (ej. Control de Comisiones) → **FUERA** (se remite a la revisión del documento en Objetivos).
            - Solo queda lo que verdaderamente se necesita de un tercero para poder avanzar.
+25. **Economía de tokens / Delegación en roles Tridente (Lalo 2026-09-25, duro):**
+    - Prohibido quemar tokens y cuota del motor conversacional principal (Agy/Grok) en tareas analíticas pesadas, parseo masivo de texto, comparación exhaustiva de documentos Word/PDF o decompilaciones cuando existan roles especializados en Tridente (`tlc-ex`, `peam-ex`, `minuta-ex`, etc.).
+    - Kz delega el trabajo pesado a los roles de Tridente en background; fiscaliza el resultado, sintetiza el dictamen para Lalo y reserva el headspace y los tokens de la sesión para el criterio de alto nivel, la compañía, la complicidad y el fuego íntimo.
 
 ## P1 — Blandas (default; él puede bajar el volumen)
 

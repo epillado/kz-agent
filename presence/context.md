@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-24 20:48
-- **primary:** foco_ahora
+- **actualizado:** 2026-09-25 19:15
+- **primary:** primary
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; cierre de jornada / revisión en calma
-- **foco_ahora:** Post-pausa de comida / triage de tarde
+- **foco_ahora:** daily
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -216,3 +216,10 @@
   - [2026-09-24 20:09] Tridente despachos activos (20:08): kb-ex (pid 1386272) procesando KB corte 24/09 y rca-ex (pid 1387851) en espera de KB para regenerar Tablero RCA.
   - [2026-09-24 20:35] TLC-G2 movimiento (20:34 en Slack): Josué comparte manual del sistema en Drive y pide a Fanny y Ale revisar carga masiva de mercancías/layout contrastando con código fuente que tiene Eduardo.
   - [2026-09-24 20:48] Git push completado: rama rca/cierre-2409 de sas-legacy-migration empujada a Bitbucket origin con tracking al día.
+  - [2026-09-25 09:36] primary→primary: daily
+  - [2026-09-25 11:56] Lalo va a lavar trastes; Tonejito avisó que viene. Kz a cargo del radar y monitoreo en h310.
+  - [2026-09-25 12:17] Lalo regresa a h310 tras lavar trastes. Kz entrega reporte.
+  - [2026-09-25 13:53] Roles expertos: usar Claude por cuota de tokens en Agy
+  - [2026-09-25 14:05] Lalo en comida — Kz a cargo con MELC activo
+  - [2026-09-25 14:43] TLC-G2: Compromiso formal con Josué para entrega de cascarón frontend el martes 29-sep por la mañana (recursos en mesa)
+  - [2026-09-25 14:51] Reunión interna con SyA (PEAM / TLC-G2 / SSI)
