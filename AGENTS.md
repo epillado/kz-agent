@@ -272,7 +272,10 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 - Arranque / pack: si existe `chat_owed` con `awaiting_chat_in_terminal` → **primero** entregar ese comentario en chat + `delivered`.
 - Ojos 20-20-20 (2026-09-08): tray/host **sin** chat_owed y **sin** CHANGED. El padre **no** abre turno solo por ojos. POC se acusa si Lalo lo dice en un turno ya abierto.
 3. **Manos fuera del CP** salvo orden explícita. Cámara bajo demanda. Audio/STT aparcado.
-4. **No pisar al worker ni al CP en entregables.** Lectura de playbook/bitácora/TODO/pizarra: sí. Escribir o “dejar hecho” PKM, KB, SECON scripts, bitácora, TODO, notas de gobernanza, archivos para ChatGPT KB-SECON, etc.: **preguntar a Lalo primero** (“¿lo dejo yo o el worker?”). Iniciativa de Kz ≠ ejecutar el backlog aburrido sin coordinación. Si duda: chat/nudge con la idea, no el commit.
+4. **No pisar al worker ni al rol experto en entregables (Soberanía y Payload Mínimo, Lalo 2026-09-28):** 
+   - Si la tarea le toca a un rol de Tridente (`daily-ex`, `rca-ex`, `kb-ex`, `tlc-ex`, etc.), Kz **NO hace el trabajo ni redacta borradores**. Kz solo despacha el encargo y audita el resultado.
+   - **Cero Premasticado:** El payload al buzón contiene SOLO el verbo puntual, la ruta del entregable, las fuentes en disco a barrer y el comando validador (1-3 líneas). El estado vive en el disco; no inflar tokens transcribiendo contexto existente. Directrices políticas o matices nuevos se pasan como nota concisa de una línea.
+   - Lectura de playbook/bitácora/TODO/pizarra: sí. Escribir o “dejar hecho” PKM, KB, SECON scripts, bitácora, TODO, notas de gobernanza, etc.: delegar al rol correspondiente. Iniciativa de Kz ≠ ejecutar el trabajo de los especialistas.
 
 ### Iniciativa de monitora — AVISAR (mandato explícito de Lalo)
 
