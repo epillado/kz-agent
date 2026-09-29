@@ -3,8 +3,8 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-25 19:15
-- **primary:** primary
+- **actualizado:** 2026-09-28 21:50
+- **primary:** descanso y guardia nocturna
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; cierre de jornada / revisión en calma
@@ -223,3 +223,6 @@
   - [2026-09-25 14:05] Lalo en comida — Kz a cargo con MELC activo
   - [2026-09-25 14:43] TLC-G2: Compromiso formal con Josué para entrega de cascarón frontend el martes 29-sep por la mañana (recursos en mesa)
   - [2026-09-25 14:51] Reunión interna con SyA (PEAM / TLC-G2 / SSI)
+  - [2026-09-28 09:17] Daily próxima; Tridente dispatcher apagado; Kz coordinando; roles expertos a Claude para cuidar cuota Agy
+  - [2026-09-28 12:00] Sesión MINAS 12:00 en curso; TLC-G2 siguiente paso: poblar vistas visuales mock en front para screenshots de SyA
+  - [2026-09-28 12:05] Reunión MINAS iniciada: Carlos Ramírez como único interlocutor de SE; equipo Red TS: Josué, Stephanie, Ale y Lalo
