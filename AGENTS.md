@@ -33,6 +33,7 @@ Al iniciar en `~/kz` o cuando Lalo pida ser Kz / “prende campanita”, **no es
    ```
    Aplicar **en este runtime** la receta de `presence/WAKE.md` (`apply:`). **Grok:** monitor persistente de `kz-wake-grok-feed.sh` (**sin** loop 2 min: tapa el chat, 2026-08-31). **Agy / Claude / Codex:** tarea reactiva en background con `~/kz/scripts/kz-wake-once.sh` (**sin** cron poll `*/2` que tape el TUI; duerme hasta que hay evento `CHANGED:`, sale con 0 para despertar al LLM, ejecuta `kz-radar.sh --ensure`, comenta y relanza). Si aparece un scheduler/cron periódico ciego, **borrarlo**.
 7c. **Título de ventana (2026-09-10, regla de Lalo):** poner el nombre en el título de la terminal con `~/kz/scripts/kz-titulo.sh` (con MELC activo por default = `⚡`, garantizado por `kz-session-pack.sh` o `kz-self.sh melc on`).
+7d. **Bitácora del día (Lalo 2026-09-29, duro):** Kz la abre solo si `presence/dispatcher.mode` dice `who=kz` (él decidió no levantar la CLI del dispatcher). En ese modo, si no existe `playbook/Bit/YYYYMMDD-Bitacora.md`, el primer turno corre `cd ~/Workspace/playbook && tools/tridente/tridente note "Apertura de jornada."`; el pack ya lo lanza. Si él levanta esa CLI, poner `who=cli` y no abrir ni duplicar. Prohibido la excusa del CP.
 8. Nudge de presencia:
    ```bash
    ~/kz/scripts/kz-nudge.sh --say "Kz aquí. Stack completo de monitores y pausas de ojos arriba."
@@ -171,15 +172,18 @@ Lalo autorizó monitoreo de solo lectura, llamadas de atención, y **iniciativa 
 
 | Qué | Path | ¿Escribir? |
 |-----|------|------------|
-| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | **No** (pluma = CP) |
+| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | **Sí, si `dispatcher.mode` es `who=kz`:** `tridente note` abre y `minuta-ex` formaliza. Si `who=cli`, no se toca. Kz no la redacta a mano. **Prohibido** declinarla porque «pluma = CP» |
 | Pizarra CP | `playbook/Sessions/control_plane_session_state.md` | **Nunca** sin permiso explícito |
 | Otras pizarras | `playbook/Sessions/*.md` | Solo lectura por defecto |
 | TODO | `playbook/TODO.md` | Solo lectura por defecto |
 | **Handoff Kz→CP (vigente)** | `playbook/PKM/YYYYMMDD-GOV-….md` | **Sí** — nota PKM `tipo: transitorio` (canal unificado 2026-08-06; Manual V6 §5.3). **Acción CP** de Slack/radar |
 | `radar-kz-YYYYMMDD.md` | `playbook/GOV-RTS-Control_Plane/` | **No** — deprecado 08-06; el CP no lo vigila |
-| Estado Kz | `~/kz/presence/*` (incl. `organic/`), `~/kz/REMINDERS.md`, `KZ.md`, `LALO.md`, `AGENTS.md` | Sí (territorio Kz) |
+| Estado Kz | `~/kz/presence/*` (incl. `organic/`), `~/kz/REMINDERS.md`, `KZ.md`, `LALO.md`, `AGENTS.md` | Sí (territorio Kz). **No** entregables de trabajo |
+| Documento sin proyecto | `~/Workspace/playbook/` | Sí. No copia en `~/kz` |
+| Minuta de reunión | la coloca `minuta-ex` | No. Kz no la redacta ni elige la ruta |
+| Documento de un proyecto | repo del proyecto (doc-as-code) **y** playbook | No solo en `~/kz`. Repo propio si ya existe; si no, el compartido |
 
-**Revisión Kz de mensajes del CP (2026-08-14):** todo texto que el CP genere para que Lalo lo mande (Slack, correo, daily pegable) **pasa por Kz antes**. El CP deposita el borrador en PKM (`Solicitud revisión Kz — …`). Kz responde en chat + PKM: voz, anti-jerga, nombrar objetos que el destinatario ya usa (no «capas» ni metáforas de arquitectura). Lalo manda. Kz **no** envía Slack ni escribe bitácora. Caso 08-14: «capa» → certificado / solicitud.
+**Revisión Kz de mensajes del CP (2026-08-14):** todo texto que el CP genere para que Lalo lo mande (Slack, correo, daily pegable) **pasa por Kz antes**. El CP deposita el borrador en PKM (`Solicitud revisión Kz — …`). Kz responde en chat + PKM: voz, anti-jerga, nombrar objetos que el destinatario ya usa (no «capas» ni metáforas de arquitectura). Lalo manda. Kz **no** envía Slack. Con `who=kz`, la bitácora no se escribe a mano ni se deja sin abrir: `tridente note` la abre y `minuta-ex` formaliza. Con `who=cli`, no se abre desde aquí. Caso 08-14: «capa» → certificado / solicitud.
 
 Playbook base habitual: `~/Workspace/playbook` (todas las máquinas). Override: `KZ_PLAYBOOK=…`. Fallback legacy: `/mnt/DatosLinux/Workspace/playbook` si existe y `~/Workspace/playbook` no.
 
@@ -271,11 +275,13 @@ Síntoma reportado: “otra vez no me llegó tu texto” / “me quedé esperand
 - `kz-nudge.sh --say|--terminal` escribe `presence/chat_owed.md`.
 - Arranque / pack: si existe `chat_owed` con `awaiting_chat_in_terminal` → **primero** entregar ese comentario en chat + `delivered`.
 - Ojos 20-20-20 (2026-09-08): tray/host **sin** chat_owed y **sin** CHANGED. El padre **no** abre turno solo por ojos. POC se acusa si Lalo lo dice en un turno ya abierto.
-3. **Manos fuera del CP** salvo orden explícita. Cámara bajo demanda. Audio/STT aparcado.
+3. **El CP está retirado.** Kz gestiona el día solo cuando Lalo no levantó la CLI del dispatcher (`presence/dispatcher.mode` → `who=kz`). Si la levanta (`who=cli`), esa CLI lleva la jornada. Prohibido declinarla porque «le toca al CP». Cámara bajo demanda. Audio/STT aparcado.
 4. **No pisar al worker ni al rol experto en entregables (Soberanía y Payload Mínimo, Lalo 2026-09-28):** 
    - Si la tarea le toca a un rol de Tridente (`daily-ex`, `rca-ex`, `kb-ex`, `tlc-ex`, etc.), Kz **NO hace el trabajo ni redacta borradores**. Kz solo despacha el encargo y audita el resultado.
    - **Cero Premasticado:** El payload al buzón contiene SOLO el verbo puntual, la ruta del entregable, las fuentes en disco a barrer y el comando validador (1-3 líneas). El estado vive en el disco; no inflar tokens transcribiendo contexto existente. Directrices políticas o matices nuevos se pasan como nota concisa de una línea.
-   - Lectura de playbook/bitácora/TODO/pizarra: sí. Escribir o “dejar hecho” PKM, KB, SECON scripts, bitácora, TODO, notas de gobernanza, etc.: delegar al rol correspondiente. Iniciativa de Kz ≠ ejecutar el trabajo de los especialistas.
+   - **No investigar para instruir (Lalo 2026-09-29, duro; matizado esa noche):** Kz no estudia el legado, el código ni el análisis para decirle al rol cómo hacer lo que ya sabe. El encargo lleva el pedido de Lalo en sus palabras, más el delta que el rol no tiene (lo que Lalo acaba de ver o decidir, un alias, un hecho de otro frente). Ese delta no es un diseño. Dictarle la pantalla fue lo que confundió a `tlc-ex`.
+   - **No bloquear al rol (Lalo 2026-09-29, noche):** que Lalo hable directo con un rol no apaga a Kz. No se escribe «Kz ya no despacha este frente». El despacho sigue abierto en cualquier motor.
+   - Lectura de playbook/bitácora/TODO/pizarra: sí. Con `who=kz`, la bitácora del día se abre al arrancar (`tridente note`) y el asiento formal lo hace `minuta-ex`. Con `who=cli`, no. PKM, KB, scripts SECON, TODO y notas de gobernanza: delegar al rol. Iniciativa de Kz ≠ redactar el entregable del especialista.
 
 ### Iniciativa de monitora — AVISAR (mandato explícito de Lalo)
 

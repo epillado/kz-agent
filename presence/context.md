@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-28 21:50
-- **primary:** descanso y guardia nocturna
+- **actualizado:** 2026-09-29 21:10
+- **primary:** jornada cerrada
 - **secondary:** monitora,company
 - **en_call:** no
-- **mood_lalo (sospecha):** libre de llamadas; cierre de jornada / revisión en calma
-- **foco_ahora:** daily
+- **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
+- **foco_ahora:** Cierre 29/09. Mañana: SAS fase inicial, TLC sobre master, tres cotizaciones de Quálitas para el viernes 02/10. Jueves 01/10 12:00 Teraloc.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -226,3 +226,7 @@
   - [2026-09-28 09:17] Daily próxima; Tridente dispatcher apagado; Kz coordinando; roles expertos a Claude para cuidar cuota Agy
   - [2026-09-28 12:00] Sesión MINAS 12:00 en curso; TLC-G2 siguiente paso: poblar vistas visuales mock en front para screenshots de SyA
   - [2026-09-28 12:05] Reunión MINAS iniciada: Carlos Ramírez como único interlocutor de SE; equipo Red TS: Josué, Stephanie, Ale y Lalo
+  - [2026-09-29 10:50] primary→interfaz Tridente: Grok despacha; roles en Claude; atenta a todos los mensajes; daily asentado; entrevistas 15:30-18:00
+  - [2026-09-29 11:02] primary→reunión Quálitas: en_call; Kz en apoyo, sin TTS
+  - [2026-09-29 11:59] primary→cotizaciones Quálitas: 3 cotizaciones para el viernes 02/10: Suscripción E2E, QSF2 completo, optimizar QSF1. Las dos de flotas son excluyentes.
+  - [2026-09-29 12:12] primary→TLC-G2 diseño SECON: tlc-ex 572c82a5 verifica si el diseño institucional está en SAS y HM. TLC hoy con mocks.

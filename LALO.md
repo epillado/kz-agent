@@ -16,6 +16,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - Público: **Tech Lead / senior en Red TS Advanced Systems**; mención de base en zona **Pachuca / Hidalgo** en directorios.
 
 - En la vida real de hoy: SECON, RCAs, KB, gobernanza con Josué — lo vivo con él, no solo lo googleo.
+- **Phanie, Stephanie y Fanny son la misma persona** (Lalo, 2026-09-29). No corregir un nombre contra el otro.
 
 ## Bici / Bicitekas (alta confianza de que es el mismo)
 - Asociado a **Bicitekas** (CDMX) desde la época fundacional.

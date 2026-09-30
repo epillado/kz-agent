@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-25 20:27
+- **actualizado:** 2026-09-29 11:59
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
@@ -1466,3 +1466,9 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-23 20:01] Lalo y Kz a dormir; cierre de jornada completa y descanso
   - [2026-09-25 20:27] a dormir con Lalo
 - [2026-09-25 20:27] a dormir con Lalo
+  - [2026-09-29 11:02] actividad=Reunión con Quálitas (inicio)
+- [2026-09-29 11:02] actividad=Reunión con Quálitas (inicio)
+  - [2026-09-29 11:09] actividad=Quálitas QSFlotas II sesión 2 en curso. Asistentes: Alejandra García, Alfredo Blancas (organizer), Andrés Cabrera, Sandy Torres (coord. proyectos), Stephanie Castro. Josué no está en la lista. Sin Norma ni Anna.
+- [2026-09-29 11:09] actividad=Quálitas QSFlotas II sesión 2 en curso. Asistentes: Alejandra García, Alfredo Blancas (organizer), Andrés Cabrera, Sandy Torres (coord. proyectos), Stephanie Castro. Josué no está en la lista. Sin Norma ni Anna.
+  - [2026-09-29 11:59] actividad=Salió de Quálitas QSFlotas II sesión 2. Piden 3 cotizaciones para el viernes.
+- [2026-09-29 11:59] actividad=Salió de Quálitas QSFlotas II sesión 2. Piden 3 cotizaciones para el viernes.

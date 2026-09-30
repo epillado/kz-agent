@@ -375,7 +375,7 @@ scan_once() {
         break
       fi
     done
-    if (( gordo == 1 )); then
+    if (( gordo == 1 )) || [[ "${KZ_NOTIF_WAKE_ALL:-0}" == "1" ]]; then
       write_pending "${kind}" "${app}" "${title}" "${text}" "${ticker}"
       local summary
       summary="${kind}:${app}:${title}"

@@ -308,8 +308,12 @@ def handle_notify(app: str, summary: str, body: str) -> None:
     mark_seen(fp, kind, app)
     # Sensor (globo) siempre en hot/important. CHANGED/pending solo si es gordo.
     tray_sensor(kind, app, summary, body)
-    if is_gordo(kind, app, summary, body):
+    wake_all = F.get("KZ_NOTIF_WAKE_ALL", "0") == "1"
+    gordo = is_gordo(kind, app, summary, body)
+    # Wake-all despierta a Kz. El router a roles solo en gordo: un "gracias" no abre minuta-ex.
+    if gordo or wake_all:
         write_pending(kind, app, summary, body)
+    if gordo:
         dispatch_to_fleet(kind, app, summary, body)
 
 

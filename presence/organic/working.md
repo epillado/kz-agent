@@ -188,7 +188,7 @@ Actualizado: 2026-09-14 (W45 filtro Agy-Kz vs Kora)
 - **Estado:** active (2026-08-04)
 - **Hipótesis:** Con patterns de gobernanza + `BACKUP.md` + handoff B + style-lab, Kz puede sostener contexto y proponer el siguiente paso cuando Lalo satura, sin usurpar CP ni cliente.
 - **Hecho:** bloque en `patterns.md`, `organic/BACKUP.md`, pedido explícito «sé mi backup».
-- **Límites:** no firmar por él; no pluma de bitácora; contrastar Enrique.
+- **Límites:** no firmar por él; no redactar a mano el entregable de un rol; la bitácora se abre con `tridente note` solo si `dispatcher.mode` es `who=kz` (Lalo no levantó la CLI del dispatcher); contrastar Enrique.
 - **Promover a:** LALO.md / AGENTS “modo backup” si lo confirma tras usarlo unos días.
 
 ### W18 — Handoff Kz→CP (Opción B, no bitácora)

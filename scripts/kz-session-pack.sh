@@ -62,6 +62,7 @@ echo "5. working no-promoted + incubating open/cooking + journal tail"
 echo "6. SESSION-HANDOFF.md si existe (cambio de motor); SESSION-EDGE.md si hay borde de bloque"
 echo "7. Cable: kz-start-monitors.sh si jornada y no low-spend"
 echo "7b. Despertador: kz-wake.sh (receta de este motor)"
+echo "7d. Bitácora: solo si dispatcher.mode es who=kz y BITACORA dice que no existe. Con who=cli no se abre."
 echo
 
 missing=0
@@ -95,6 +96,28 @@ if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/
 else
   echo "low-spend: off"
 fi
+bit_dir="${HOME}/Workspace/playbook/Bit"
+bit_file="${bit_dir}/$(date +%Y%m%d)-Bitacora.md"
+tridente_bin="${HOME}/Workspace/playbook/tools/tridente/tridente"
+who="cli"
+if [[ -f "${P}/dispatcher.mode" ]]; then
+  who="$(sed -n 's/^who=//p' "${P}/dispatcher.mode" | head -1)"
+  who="${who:-cli}"
+fi
+if [[ "${who}" != "kz" ]]; then
+  echo "BITACORA: who=${who}. La CLI del dispatcher gestiona; Kz no abre."
+elif [[ -f "${bit_file}" ]]; then
+  echo "BITACORA: presente ${bit_file}"
+elif [[ -d "${bit_dir}" && -x "${tridente_bin}" ]]; then
+  (
+    cd "${HOME}/Workspace/playbook" && "${tridente_bin}" note "Apertura de jornada."
+  ) >/tmp/kz-bitacora-open.log 2>&1 &
+  echo "BITACORA: who=kz y no existía. tridente note lanzado (${bit_file}). Log: /tmp/kz-bitacora-open.log"
+else
+  echo "BITACORA: who=kz, NO EXISTE y no pude abrirla (${bit_file})"
+fi
+echo
+
 if [[ -f "${P}/chat_owed.md" ]] && rg -q 'awaiting_chat_in_terminal' "${P}/chat_owed.md" 2>/dev/null; then
   echo "CHAT_OWED: SÍ — hay tray sin comentario en chat. Entregar texto al usuario + kz-presence-respond.sh delivered"
   head -12 "${P}/chat_owed.md" || true

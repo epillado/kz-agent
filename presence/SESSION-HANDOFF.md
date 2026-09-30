@@ -44,7 +44,7 @@ Working: **W45**. Incubación: **INC-009** (`cooking`).
 1. **SAS:** reconciliación hecha (1,823 no migrados; huérfano `36`). Listas en `SECON/deltas_sas/`.
 2. **Control de Comisiones SE:** minuta 35 dudas lista para enviar por escrito.
 3. **KB-SECON (`kb-ex`):** rama `kb/linaje-cierre-mesa`.
-4. Manos fuera del CP salvo que Lalo pida. Pluma de bitácora = no.
+4. El CP está retirado. Abrir la bitácora solo si `dispatcher.mode` es `who=kz`. Si Lalo levantó la CLI del dispatcher, `who=cli` y no se toca.
 
 ---
 

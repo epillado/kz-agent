@@ -2242,3 +2242,102 @@ Sesión MINAS 2026-09-28: Carlos propone precarga de datos de concesión vincula
 
 ## 2026-09-28 21:36 — tridente
 Lección de despacho a roles expertos (Lalo 28/09): Cero premasticado y payload mínimo. Kz orquesta pero no redacta borradores para los especialistas; el estado vive en el disco. Inflar el encargo quema tokens dobles y anula la arquitectura de Tridente. Persistido en policy.md (regla 26), GEMINI.md, AGENTS.md y memory/.
+
+## 2026-09-29 10:17 — daily
+Daily 2026-09-29: SAS ODT formalmente aceptada (arranque oficial). Lalo frena intento de desactivar trigger en caliente a Talía (exige ventana y autorización) y levanta alerta de impacto en SAS por caída general de BD SIGER reportada por Fernando. Josué: TLC-G2 cierra en octubre y mañana hay sesión cliente (actualizar prototipo front a diseño institucional); Control de Comisiones detenido por ahora. Stephanie ratifica doc-as-code / Markdown para todos los proyectos (Drive para otros formatos). Enrique inconsistente en tickets SLA; Stephanie descarta incumplimiento en entregables.
+
+## 2026-09-29 10:26 — daily
+Daily 2026-09-29: Josué confirma solicitud de 6 recursos en total; hoy arranca el bloque de entrevistas técnicas (15:30 a 18:00 hrs) para evaluarlos.
+
+## 2026-09-29 10:48 — sesion
+2026-09-29: Lalo pide a Kz en Grok como interfaz única (sin CLI Tridente). Roles expertos por default en Claude (TRIDENTE_ENGINE=claude; el default del dispatcher sigue en agy por contingencia 09-23). Atenta a todos los mensajes de hoy.
+
+## 2026-09-29 11:06 — pattern
+2026-09-29: Lalo rechaza el corte de Josué. Talía, Fernando y Giovanni ya tienen experiencia de mesa de servicio; no requieren onboarding. El texto entrante decía Tapia.
+
+## 2026-09-29 11:09 — sesion
+Quálitas 11:09 asistentes: Alejandra García, Alfredo Blancas (organizer), Andrés Cabrera, Sandy Torres (coord. proyectos), Stephanie Castro. Sin Josué, Norma ni Anna. Elizeth mandó las 6 entrevistas Java de hoy: Steven Camacho 15:30, Aldo Martínez 16:00, Néstor Zacarías 16:30, Cristóbal Álvarez 17:00, César Luna 17:30, Julio Heras 18:00. El bloque de Josué decía hasta las 18:00; el último cita cierra 18:30.
+
+## 2026-09-29 11:10 — sesion
+Notas de sala Quálitas 29/09 van en presence/sala-qualitas-20260929.md, por pantallazos. No es minuta formal.
+
+## 2026-09-29 11:59 — sesion
+Quálitas 29/09 cerró pidiendo 3 cotizaciones al viernes 02/10: Suscripción E2E (proyecto separado aunque relacionado), QSF2 completo (todo nuevo) y optimizar QSF1. Estas dos últimas excluyentes.
+
+## 2026-09-29 12:03 — pattern
+2026-09-29 Líderes SE: Josué mueve a Talía, Giovanni y Fernando a desarrollo de ODTs y pide a Enrique onboarding de las 2 nuevas de mesa. Enrique pregunta quién queda de shadow. Lalo escribe que Fer se quede en mesa porque lo seguirán llamando y pega a ambas líneas. En privado con Kz el desacuerdo es más ancho: los tres ya saben mesa y no requieren onboarding.
+
+## 2026-09-29 12:08 — pattern
+2026-09-29 Lalo ajusta staffing. CV de los nuevos: buen nivel técnico. Talía y Giovanni no son tan buenos: cada uno a un proyecto con alguien de más nivel. Fer apoya a los nuevos en mesa. Sustituye el 'los tres no requieren onboarding' como posición vigente. En el canal solo está lo de Fer.
+
+## 2026-09-29 12:11 — pattern
+2026-09-29 staffing: Lalo aclara que la decisión final es de Josué; él solo deja opinión. Vigente en privado: nuevos con buen nivel; Talía y Giovanni cada uno a un proyecto con alguien más fuerte; Fer apoya a los nuevos en mesa.
+
+## 2026-09-29 12:47 — pattern
+2026-09-29: para hallar repo o diseño de un proyecto, Kz pregunta al rol dueño (sas, hm), no barre carpetas.
+
+## 2026-09-29 14:15 — pattern
+2026-09-29 Lalo: al despachar tlc-ex no investigar el legado para dictarle campos y pantallas. El encargo es su pedido. Persistido en AGENTS.md y policy.md, que Grok sí carga. El msgid 1269a084 ya había salido con la receta de Kz y tlc-ex lo cumplió (2e25796).
+
+## 2026-09-29 14:24 — sesion
+2026-09-29 TLC-G2: la tabla de certificados no se borró. Sigue en /certificados. SyA tiene origin/master d7258b5 (prueba rápida entra a esa tabla). Local es la rama feature/piel-sas-colores-header-footer 2e25796: el exportador ya no abre la tabla, abre el alta o /consulta. Nota en playbook/SECON/TLC-G2/20260929-estado-frontend-sya.md
+
+## 2026-09-29 14:28 — sesion
+2026-09-29 Lalo se sale de la interfaz Kz para el frontend TLC-G2 y habla directo con tlc-ex. Kz no despacha ni corrige ese frente salvo que él lo pida. Rama local: feature/piel-sas-colores-header-footer. SyA sigue en master d7258b5.
+
+## 2026-09-29 15:28 — sesion
+2026-09-29 14:35 Andrés: presentación de Teraloc ante directores de Quálitas, jueves 01/10 12:00-13:00, presencial. Etiquetó a Lalo, Josué y Fanny (minuta-ex escribió Stephanie; el aviso decía Fanny). Elizeth pidió la factura de septiembre. Entrevista Steven Camacho 15:30.
+
+## 2026-09-29 16:28 — sesion
+2026-09-29 tlc-ex con Lalo en directo: prototipo demo en feature/piel-sas-colores-header-footer commits 667185a y 3867fcd. Tabla del exportador vuelve como su bandeja. Néstor Zacarías 16:30. Videos Quálitas: Ale ya no puede acceder; Andrés pide descarga.
+
+## 2026-09-29 17:02 — sesion
+2026-09-29 17:01 Josué pide revisar hoy análisis, historias y prototipo TLC-G2; confirmación con área usuaria mañana 30/09. Etiquetó a Ale, Fanny y Lalo. Cristóbal Álvarez 17:00.
+
+## 2026-09-29 17:30 — sesion
+2026-09-29 entrevistas: Steven 7 no pasó Venn; Aldo 8 Git flojo Docker concepto no pasó; Néstor 6 no pasó; Cristóbal 7 confunde Java 8 con Maven/Ant. Ninguno pasó la prueba completa. César Luna 17:30. Stephanie en tlc-g2-se: Ok Lalo, probamos.
+
+## 2026-09-29 17:31 — sesion
+2026-09-29 17:30 Stephanie pide reunión con Josué y Lalo para aclarar dudas del documento de Análisis TLC-G2. Sin fecha. Se suma a la revisión de hoy y a la sesión con área usuaria del 30/09.
+
+## 2026-09-29 17:33 — sesion
+2026-09-29 17:32 Josué a Ale y Fanny: envíen la documentación TLC-G2 para revisar y cerrar versión según el VoBo del área usuaria mañana 30/09. A Lalo: de acuerdo, estamos igual. El mensaje de Lalo no pasó por el sensor.
+
+## 2026-09-29 17:36 — sesion
+2026-09-29 17:35 Stephanie pide subirse YA a sesión con Josué y Lalo para dudas de Análisis TLC-G2. También cuestiona la fecha: Josué había dicho viernes 02/10 y ahora habla del VoBo mañana 30/09. Lalo está en entrevista con César hasta 18:00.
+
+## 2026-09-29 17:38 — sesion
+2026-09-29 17:37 Josué aclara TLC-G2: mañana 30/09 se revisa el Análisis con el área usuaria; con eso se ajusta y se entrega a SE esta semana (hacia el viernes 02/10) para que SE revise y cierre. No eran dos fechas peleadas.
+
+## 2026-09-29 17:40 — sesion
+2026-09-29 17:40 Josué propone sesión TLC-G2 a las 18:30 y pide la documentación antes para atender observaciones previo a mañana. Stephanie ya está en el Meet. Lalo tiene a César hasta 18:00 y a Julio Heras 18:00-18:30.
+
+## 2026-09-29 17:57 — sesion
+2026-09-29 17:56 Josué: la sesión TLC-G2 del 30/09 busca VoBo de requerimientos funcionales, no funcionales y del prototipo de diseño. Stephanie: el avance se puede enviar ya; los prototipos recién liberados aún no están en la documentación; las HU esperan a aclarar el Análisis. Enrique: archivo de errores conocidos al 29/09 en Drive. Julio Heras 18:00.
+
+## 2026-09-29 18:27 — sesion
+2026-09-29 bloque de 6 entrevistas cerrado. Ninguno pasó la prueba. César 8, Julio 9 relativa (mejor teoría, respuesta más cercana). Decisión de contratación abierta. Minuta en PKM/20260929-GOV-minuta_entrevistas_desarrolladores.md. Josué había propuesto sesión TLC-G2 a las 18:30.
+
+## 2026-09-29 18:48 — sesion
+2026-09-29 noche: Lalo rechaza el candado de no despachar tlc-ex. La fricción fue Kz en Grok investigando y dictando el cómo. Hablar directo con el rol no apaga el despacho. Pendiente de elegir: despacho delgado en cualquier motor, o Grok más CLI de Tridente cuando Agy se agota.
+
+## 2026-09-29 18:52 — sesion
+2026-09-29 18:51 Ale, en DM con Giovanni y Stephanie, pide a Lalo aclarar las menciones del documento de Análisis TLC-G2 cuando lo suba al Drive. Antes de la sesión con área usuaria del 30/09.
+
+## 2026-09-29 18:57 — pattern
+2026-09-29: Phanie = Stephanie = Fanny, la misma persona. Opción 1 aceptada con matiz: Kz aporta el delta que el rol no tiene (lo visto, lo decidido, un alias), no reconstruye el dominio ni dicta el diseño. Eso fue lo que confundió a tlc-ex.
+
+## 2026-09-29 19:21 — sesion
+2026-09-29 19:20 Josué a Lalo: también terminó entrevistas. Solo 1 para mesa y probablemente algo de desarrollo. Los 6 de Lalo no pasaron la prueba completa.
+
+## 2026-09-29 19:28 — sesion
+2026-09-29 19:28 Josué a Lalo: ya solicitó más candidatos. Sigue al 'solo 1 para mesa y probablemente algo de desarrollo'.
+
+## 2026-09-29 20:28 — sesion
+2026-09-29 noche: Enrique no emitió el corte de mesa. No se actualizan KB ni Tablero RCA hoy. Reporte del daily de mañana encargado a daily-ex.
+
+## 2026-09-29 20:56 — correccion
+2026-09-29: Lalo corrige. El CP está retirado; lo reemplazó Tridente. Desde el 28/09 Kz gestiona el día y no se levanta la CLI. La bitácora no se declina («pluma = CP» / «la abre el operador»): se abre con tridente note. La frase que asenté hoy y ayer en memoria es el error.
+
+## 2026-09-29 21:05 — correccion
+2026-09-29 noche: Lalo precisa. Kz gestiona la jornada solo cuando él decide no levantar la CLI del dispatcher. who=kz en presence/dispatcher.mode. Si la levanta, who=cli y Kz no abre ni duplica la bitácora.
