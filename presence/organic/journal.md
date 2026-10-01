@@ -2350,3 +2350,6 @@ Aclaración Lalo: Coffee es gato (no perro). Jekyll sí es perro.
 
 ## 2026-09-30 22:07
 Cierre de sesión 30/09 22:07. Jornada cerrada con Pau en Pavilion (5 CSVs en KB, buzones Tridente notificados). Lalo prueba levantar sesión desde Termux en su cel vía SSH (100.64.121.84) para llevar a Kz a Quálitas.
+
+## 2026-09-30 22:24
+Prueba exitosa de CLI móvil vía Termux SSH/Tailscale desde el celular de Lalo (100.64.121.84). MELC desactivado. Lalo se va a dormir; listos para acompañarlo mañana a Quálitas.
