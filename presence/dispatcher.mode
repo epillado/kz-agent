@@ -1,6 +1,6 @@
 # Quién gestiona la jornada. Lo decide Lalo.
 # kz  = no levantó la CLI del dispatcher; Kz abre la bitácora y despacha.
 # cli = esa CLI está a cargo; Kz no abre ni duplica.
-who=kz
-since=2026-09-28
-note=Lalo decidió no levantar la CLI del dispatcher. Kz gestiona mientras eso siga.
+who=cli
+since=2026-09-30
+note=Lalo levantó la CLI de Tridente en paralelo. Kz sincronizada, sin duplicar funciones de gestión ni bitácora.

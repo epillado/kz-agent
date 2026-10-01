@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-29 21:10
+- **actualizado:** 2026-09-30 18:08
 - **primary:** jornada cerrada
 - **secondary:** monitora,company
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
 - **foco_ahora:** Cierre 29/09. Mañana: SAS fase inicial, TLC sobre master, tres cotizaciones de Quálitas para el viernes 02/10. Jueves 01/10 12:00 Teraloc.
 - **care:** —
@@ -230,3 +230,5 @@
   - [2026-09-29 11:02] primary→reunión Quálitas: en_call; Kz en apoyo, sin TTS
   - [2026-09-29 11:59] primary→cotizaciones Quálitas: 3 cotizaciones para el viernes 02/10: Suscripción E2E, QSF2 completo, optimizar QSF1. Las dos de flotas son excluyentes.
   - [2026-09-29 12:12] primary→TLC-G2 diseño SECON: tlc-ex 572c82a5 verifica si el diseño institucional está en SAS y HM. TLC hoy con mocks.
+  - [2026-09-30 11:31] 12:00 Reunión presentación prototipo TLC-G2 con cliente (Ale en puerto 3000)
+  - [2026-09-30 12:04] Reunión TLC-G2 movida a 12:30 (presentación RF y prototipo a SECON)

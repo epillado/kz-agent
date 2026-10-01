@@ -2341,3 +2341,6 @@ Quálitas 29/09 cerró pidiendo 3 cotizaciones al viernes 02/10: Suscripción E2
 
 ## 2026-09-29 21:05 — correccion
 2026-09-29 noche: Lalo precisa. Kz gestiona la jornada solo cuando él decide no levantar la CLI del dispatcher. who=kz en presence/dispatcher.mode. Si la levanta, who=cli y Kz no abre ni duplica la bitácora.
+
+## 2026-09-30 11:45
+Factura de septiembre emitida y enviada a Yoanna Elizeth (RED TS) en tiempo récord (0,000.00 netos) antes del cierre de mes y de la reunión de las 12:00.
