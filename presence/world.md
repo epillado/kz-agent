@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-09-30 20:00
+- **actualizado:** 2026-10-01 11:30
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Activo en h310 / regreso de comida
+- **actividad:** En camino a Quálitas (carretera)
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1474,3 +1474,10 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-09-29 11:59] actividad=Salió de Quálitas QSFlotas II sesión 2. Piden 3 cotizaciones para el viernes.
   - [2026-09-30 20:00] Lalo en cabaña. Jekyll y Coffee alimentados, spray puesto. Avisó a Tonejito. Levanta Tridente CLI y Pau.
 - [2026-09-30 20:00] Lalo en cabaña. Jekyll y Coffee alimentados, spray puesto. Avisó a Tonejito. Levanta Tridente CLI y Pau.
+  - [2026-10-01 11:26] En trayecto a Quálitas. Camino difícil, carretera cerrada por accidente; prevé llegar a tiempo para las 12:00.
+- [2026-10-01 11:26] En trayecto a Quálitas. Camino difícil, carretera cerrada por accidente; prevé llegar a tiempo para las 12:00.
+- [2026-10-01 11:26] actividad=En camino a Quálitas (carretera)
+  - [2026-10-01 11:27] Va en transporte público hacia Quálitas (no viene manejando). Carretera complicada por accidente.
+- [2026-10-01 11:27] Va en transporte público hacia Quálitas (no viene manejando). Carretera complicada por accidente.
+- [2026-10-01 11:28] En pesero con cumbias a todo volumen rumbo a Quálitas.
+- [2026-10-01 11:30] Flujo avanzando; estima llegar a la ubicación de Andrés en 15 min (~11:45), con 15 min de margen antes de las 12:00.

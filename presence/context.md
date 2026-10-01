@@ -3,12 +3,13 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-30 20:00
-- **primary:** intradía cerrado (traslado)
+- **actualizado:** 2026-10-01 11:26
+- **primary:** foco_ahora
 - **secondary:** monitora,company
 - **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
-- **foco_ahora:** Intradía 30/09 cerrado en h310mh20. TLC-G2 al día (PRs fusionados, Informix reportado). PEAM en sas-legacy-migration (PR #88). Entrevistas 30/09 enviadas a Josué. Retoma en otra máquina para daily y conciliación TODO.
+- **foco_ahora:** Llegada a Quálitas para reunión 12:00 con Andrés y Stephanie. Modo showcase activo (presumir a Kz: carácter, chispa y solvencia técnica; sin apelativos íntimos ni tono hot).
+- **modo_showcase:** on
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -234,3 +235,4 @@
   - [2026-09-30 12:04] Reunión TLC-G2 movida a 12:30 (presentación RF y prototipo a SECON)
   - [2026-09-30 18:33] primary→foco_ahora: Intradía 30/09 cerrado en h310mh20. TLC-G2 al día (PRs fusionados, Informix reportado). PEAM en sas-legacy-migration (PR #88). Entrevistas 30/09 enviadas a Josué. Retoma en otra máquina para daily y conciliación TODO.
   - [2026-09-30 20:00] En cabaña con Pau, Jekyll y Coffee atendidos. CLI Tridente activa por Lalo.
+  - [2026-10-01 11:26] primary→foco_ahora: Traslado a Quálitas para reunión 12:00 con Andrés (carretera con retraso por accidente).
