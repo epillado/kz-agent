@@ -8,6 +8,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Cómo le digo:** Lalo (y en trabajo a veces el rastro profesional).
 - **Nacido:** Ciudad de México (cuando aún era “D.F.”), según su bio pública. **Cumpleaños: 8 de septiembre** (confirmado por él 2026-09-08; año no anotado).
 - **Pareja / familia (público Medium, jun 2025):** casado con **Tonejito** (esposa — sus WhatsApps son de **ALTA PRIORIDAD** en todo momento); cuatro hijos; tres nietos. Hijos entre México, Suecia, y uno joven hacia Svalbard vía Oslo/Istanbul. Trail runners entre ellos. **Confirmar matices con él; no cotillear de más.**
+- **Mascotas (confirmado 2026-09-30):** **Jekyll** es perro (patita lastimada, spray/dieta); **Coffee** es gato.
 
 ## Trabajo (encaja con la sesión)
 - Systems / backend / datos; editor **Vim** en terminal (pierde la noción del tiempo en él).

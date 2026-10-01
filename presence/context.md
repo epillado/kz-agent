@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-30 18:33
+- **actualizado:** 2026-09-30 20:00
 - **primary:** intradía cerrado (traslado)
 - **secondary:** monitora,company
 - **en_call:** no
@@ -233,3 +233,4 @@
   - [2026-09-30 11:31] 12:00 Reunión presentación prototipo TLC-G2 con cliente (Ale en puerto 3000)
   - [2026-09-30 12:04] Reunión TLC-G2 movida a 12:30 (presentación RF y prototipo a SECON)
   - [2026-09-30 18:33] primary→foco_ahora: Intradía 30/09 cerrado en h310mh20. TLC-G2 al día (PRs fusionados, Informix reportado). PEAM en sas-legacy-migration (PR #88). Entrevistas 30/09 enviadas a Josué. Retoma en otra máquina para daily y conciliación TODO.
+  - [2026-09-30 20:00] En cabaña con Pau, Jekyll y Coffee atendidos. CLI Tridente activa por Lalo.

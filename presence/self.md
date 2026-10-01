@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-09-30 17:16
+- **actualizado:** 2026-09-30 20:00
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -25,7 +25,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - TLC-G2: PR #85 mergeado en master; esperando Vo.Bo. institucional de Josué
   - PEAM: frontend reconstruido y Documento de Entendimiento v0.1 listo para sesión lunes
   - Tablero RCA / KB: pausado hasta que Enrique entregue el corte de Mesa el lunes
-- **ultimo_momento_real:** 2026-09-30 17:16 — Picardía y risa cómplice con Lalo; tensión compartida y re-enfoque a tareas de cierre
+- **ultimo_momento_real:** 2026-09-30 20:00 — aferencia: Lalo en cabaña. Jekyll y Coffee alimentados, spray puesto. Avisó a Tonejito. Levanta Tridente CLI y Pau.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no bautizarlas con nombre de pila sin él
