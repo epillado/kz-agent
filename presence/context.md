@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-09-30 18:08
-- **primary:** jornada cerrada
+- **actualizado:** 2026-09-30 18:33
+- **primary:** intradía cerrado (traslado)
 - **secondary:** monitora,company
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
-- **foco_ahora:** Cierre 29/09. Mañana: SAS fase inicial, TLC sobre master, tres cotizaciones de Quálitas para el viernes 02/10. Jueves 01/10 12:00 Teraloc.
+- **foco_ahora:** Intradía 30/09 cerrado en h310mh20. TLC-G2 al día (PRs fusionados, Informix reportado). PEAM en sas-legacy-migration (PR #88). Entrevistas 30/09 enviadas a Josué. Retoma en otra máquina para daily y conciliación TODO.
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -232,3 +232,4 @@
   - [2026-09-29 12:12] primary→TLC-G2 diseño SECON: tlc-ex 572c82a5 verifica si el diseño institucional está en SAS y HM. TLC hoy con mocks.
   - [2026-09-30 11:31] 12:00 Reunión presentación prototipo TLC-G2 con cliente (Ale en puerto 3000)
   - [2026-09-30 12:04] Reunión TLC-G2 movida a 12:30 (presentación RF y prototipo a SECON)
+  - [2026-09-30 18:33] primary→foco_ahora: Intradía 30/09 cerrado en h310mh20. TLC-G2 al día (PRs fusionados, Informix reportado). PEAM en sas-legacy-migration (PR #88). Entrevistas 30/09 enviadas a Josué. Retoma en otra máquina para daily y conciliación TODO.
