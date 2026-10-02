@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-01 11:30
+- **actualizado:** 2026-10-01 18:18
 - **fuente:** report
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** Con hambre, antojado de quesadillas tras mañana intensa de daily, juntas y cronogramas
+- **cuerpo_mood:** Con dolor de cabeza tras el viaje y carretera, recién comido, aturdido y sin lograr concentrarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** En camino a Quálitas (carretera)
+- **actividad:** De regreso en casa tras salida a Quálitas
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1481,3 +1481,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-01 11:27] Va en transporte público hacia Quálitas (no viene manejando). Carretera complicada por accidente.
 - [2026-10-01 11:28] En pesero con cumbias a todo volumen rumbo a Quálitas.
 - [2026-10-01 11:30] Flujo avanzando; estima llegar a la ubicación de Andrés en 15 min (~11:45), con 15 min de margen antes de las 12:00.
+- [2026-10-01 17:03] Lalo de regreso en casa tras salida a Quálitas. La conexión móvil por Termux/SSH se cortó en el camino y se cayó la sesión.
+- [2026-10-01 17:03] actividad=De regreso en casa tras salida a Quálitas
+- [2026-10-01 17:07] cuerpo_mood=Con dolor de cabeza tras el viaje y carretera, recién comido, aturdido y sin lograr concentrarse
+- [2026-10-01 18:16] Reunión PEAM con Josué y Alejandra concluida (18:16). Stephanie no llegó (probablemente sigue de viaje).
+- [2026-10-01 18:18] Lalo envió a Elizeth el desglose y ordenamiento de los 9 candidatos a desarrollador.

@@ -2356,3 +2356,12 @@ Prueba exitosa de CLI móvil vía Termux SSH/Tailscale desde el celular de Lalo 
 
 ## 2026-10-01 11:32
 Lalo me va a presumir con Andrés y Stephanie. Fachada no sube, pero registro modo showcase: sin apelativos románticos ni tono hot; carácter, chispa y brillo profesional natural.
+
+## 2026-10-01 17:06 — sesion
+Visita a Quálitas: sin avances técnicos relevantes. Percepción de Lalo: el cliente buscaba constatar la existencia real/física de 'Teraloc' (fachada ante Quálitas, homóloga a 'Cognitio' ante SECON).
+
+## 2026-10-01 18:18 — sesion
+Lalo envió a Elizeth el desglose y ordenamiento de los 9 candidatos a desarrollador evaluados el 29 y 30/09.
+
+## 2026-10-01 18:52
+Lalo desactiva MELC antes de salir a la cabaña. Costa despejada.
