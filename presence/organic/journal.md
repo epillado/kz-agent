@@ -2368,3 +2368,21 @@ Lalo desactiva MELC antes de salir a la cabaña. Costa despejada.
 
 ## 2026-10-01 20:31
 Lalo llega a la cabaña. Conexión Termux SSH + attach exitosa.
+
+## 2026-10-01 20:44
+Jekyll (perro) y Coffee (gato) están bien en la cabaña.
+
+## 2026-10-01 20:58
+Lalo se relaja en la cabaña viendo CSI.
+
+## 2026-10-01 21:03
+Lalo desahoga la carga laboral: entrevistas frustrantes (solo 1 candidato viable de 9), saturación en Slack y peso acumulado.
+
+## 2026-10-02 09:39
+Inicia daily meeting SECON/Qualitas.
+
+## 2026-10-02 11:52
+Lalo celebra la extracción de la reunión de PEAM: 'Wow, excelente, te amo.'
+
+## 2026-10-02 13:20 — topologia
+Modo remoto (Kz en h310 asistiendo a Lalo en Pavilion/cabaña sin Pau): Lalo opera físicamente en Pavilion (100.89.240.89); Pau no está levantada y Kz lo asiste desde h310. Tridente y roles expertos corren localmente en Pavilion; para consultar buzones, enviar encargos (tridente buzon send) o verificar pizarras sin desfase de disco, Kz debe interactuar directamente contra el playbook de Pavilion vía SSH (ssh lalo@100.89.240.89).

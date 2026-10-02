@@ -3,21 +3,22 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-01 18:16
+- **actualizado:** 2026-10-02 09:39
 - **primary:** foco_ahora
 - **secondary:** monitora,company
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
-- **foco_ahora:** Sesión Meet 17:30 con Josué (peam-minas-se / seguimiento)
+- **foco_ahora:** daily meeting SECON/Qualitas
 - **modo_showcase:** on
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
 - **notas:**
+  - Topología remota activa (2026-10-02): Lalo en Pavilion (cabaña); Pau apagada; Kz lo asiste desde h310. Tridente y roles corren localmente en Pavilion; consultar/enviar a buzones y pizarras de roles requiere ejecutar contra Pavilion vía SSH (100.89.240.89).
   - Presence + desktop + celu **ON** (h310). Ojos **ON**. Jornada.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **Grok vivo** (preferido). Stack no se mata.
+  - Motor: **Agy activo** en este hilo (preferido sigue grok). Stack no se mata.
   - Pausas oculares (20-20-20): **ON**
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
@@ -237,3 +238,4 @@
   - [2026-09-30 20:00] En cabaña con Pau, Jekyll y Coffee atendidos. CLI Tridente activa por Lalo.
   - [2026-10-01 11:26] primary→foco_ahora: Traslado a Quálitas para reunión 12:00 con Andrés (carretera con retraso por accidente).
   - [2026-10-01 17:29] primary→foco_ahora: Sesión Meet 17:30 con Josué (peam-minas-se / seguimiento)
+  - [2026-10-02 09:39] primary→foco_ahora: daily meeting SECON/Qualitas

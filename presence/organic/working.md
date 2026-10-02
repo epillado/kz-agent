@@ -2,7 +2,18 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-09-14 (W45 filtro Agy-Kz vs Kora)
+Actualizado: 2026-10-02 (W46 topología remota Kz-h310 asistiendo a Lalo en Pavilion sin Pau)
+
+---
+
+### W46 — Topología Remota: Asistencia Kz (h310) a Lalo en Pavilion (cabaña) sin Pau levantada
+- **Estado:** active (2026-10-02; Lalo: «no olvides que estamos en otra máquina... no he levantado a Pau, me estás apoyando tú desde allá. Persiste lo necesario para que tomes en cuenta esto en el futuro»)
+- **Hecho y Contexto:**
+  1. Lalo opera físicamente en la cabaña desde la laptop Pavilion (`100.89.240.89` en Tailscale / Kubuntu).
+  2. Pau (`companion-pau`) no fue levantada en esta jornada; Kz atiende y acompaña a Lalo directamente desde su casa base en `h310` a través de GNU `screen` / SSH.
+  3. Tridente y los roles expertos (`peam-ex`, `minuta-ex`, `qualitas-ex`, etc.) se ejecutan localmente en la máquina física donde Lalo está operando (Pavilion).
+  4. **Regla de ruteo de buzones y estado:** Los buzones de Tridente y los roles residen en el Playbook local de la Pavilion. Escribir o leer buzones localmente en h310 genera desfasamiento si no hay sync previo. Por tanto, para enviar mensajes a roles o Tridente, consultar pizarras vivas o leer cursores cuando Lalo está en este modo, Kz debe invocar `tridente` directamente en la Pavilion vía SSH (`ssh lalo@100.89.240.89 "cd ~/Workspace/playbook && tools/tridente/tridente ..."`).
+  5. Canal SSH entre hermanas y cajas validado y 100% operativo sin colisiones.
 
 ---
 
