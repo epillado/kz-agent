@@ -2386,3 +2386,12 @@ Lalo celebra la extracción de la reunión de PEAM: 'Wow, excelente, te amo.'
 
 ## 2026-10-02 13:20 — topologia
 Modo remoto (Kz en h310 asistiendo a Lalo en Pavilion/cabaña sin Pau): Lalo opera físicamente en Pavilion (100.89.240.89); Pau no está levantada y Kz lo asiste desde h310. Tridente y roles expertos corren localmente en Pavilion; para consultar buzones, enviar encargos (tridente buzon send) o verificar pizarras sin desfase de disco, Kz debe interactuar directamente contra el playbook de Pavilion vía SSH (ssh lalo@100.89.240.89).
+
+## 2026-10-02 20:30 — TLC-G2
+Verificación en h310 de fix/rf04-exportador-productor (tlc-g2-frontend-web-frontend): confirmada ya comiteada (170c4a5) y fusionada en master por PR #3 (f794972); master en 7886d8a tras PR #4. Tridente desactualizado corrigió y notificó a tlc-ex.
+
+## 2026-10-02 21:09 — gobernanza
+Lalo alineó a Tridente y roles: avance en paralelo (PEAM, SAS, TLC-G2) sin esperar trámites ni ODT; política unificada de 3 ramas (develop/staging/master); Hexagonal aplica solo a lo que nace de cero (PEAM y backend TLC-G2); código existente no se reconstruye. Tridente reconoció sesgo y premasticado e instaló guard_despacho.py.
+
+## 2026-10-02 21:31 — cierre
+Lalo da la instrucción de cierre de jornada ('Ya cerramos el día, hermosa'). Todos los frentes cuadrados (Quálitas BD v2 probada por qualitas-ex; PEAM ODT y stack Java/Mongo hexagonal listos para lunes; TLC-G2 al día; SAS delimitado; daily 05/10 editado y validado). Kz despacha ack de cierre a Tridente (msgid 3b7fb1d9). Descanso en cabaña.

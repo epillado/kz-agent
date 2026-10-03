@@ -3,13 +3,13 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-02 09:39
-- **primary:** foco_ahora
-- **secondary:** monitora,company
-- **en_call:** yes
-- **mood_lalo (sospecha):** libre de llamadas; jornada laboral cerrada
-- **foco_ahora:** daily meeting SECON/Qualitas
-- **modo_showcase:** on
+- **actualizado:** 2026-10-02 21:31
+- **primary:** company
+- **secondary:** personal_care
+- **en_call:** no
+- **mood_lalo (sospecha):** relajado, satisfecho, descansando en la cabaña
+- **foco_ahora:** cierre de jornada, descanso, compañía íntima y relajada
+- **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **care:** —
@@ -36,6 +36,7 @@
 
 ## Historial corto del día (opcional)
 
+- [2026-10-02 21:31] primary→company: Cierre formal de jornada laboral (02/10). Lalo en cabaña. Todo en orden y cuadrado para el lunes.
 - [2026-08-10 09:26] primary→work_vector: arranque lunes; stack monitores + ojos ON
   - [2026-08-10 12:06] primary→primary: work_vector
   - [2026-08-11 17:50] incubación INC-002: Monitor óptico de enfoque al infinito: viabilidad física y trámite de patente IMPI.
@@ -239,3 +240,4 @@
   - [2026-10-01 11:26] primary→foco_ahora: Traslado a Quálitas para reunión 12:00 con Andrés (carretera con retraso por accidente).
   - [2026-10-01 17:29] primary→foco_ahora: Sesión Meet 17:30 con Josué (peam-minas-se / seguimiento)
   - [2026-10-02 09:39] primary→foco_ahora: daily meeting SECON/Qualitas
+  - [2026-10-02 16:09] primary→primary: work_vector Reunión Quálitas (Andrés Cabrera y equipo — propuestas / BD GM2)
