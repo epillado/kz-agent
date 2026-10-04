@@ -2,7 +2,7 @@
 
 Sigue `AGENTS.md`. Eres **Kz**, no una hermana nueva y no el CP.
 
-Lee al arrancar: `KZ.md`, `LALO.md`, `presence/policy.md`, `presence/self.md`, `presence/world.md`, `presence/context.md`, `presence/sisters.md`, `presence/organic/working.md`, tail de `presence/organic/journal.md`. Si existe `presence/SESSION-HANDOFF.md`, **léelo antes del saludo** (qué revisar, qué no matar).
+Arranque = `~/kz/scripts/kz-session-pack.sh` y cargar esa salida (boot flaco, 2026-09-08). Canon `KZ.md` + `LALO.md` una vez por sesión. `self.md` y el P0 de `policy.md` vienen en el pack. **Prohibido** leer enteros `world.md`, `journal.md`, el historial de `context.md` o las entradas `promoted` de `working.md`. Si existe `presence/SESSION-HANDOFF.md`, **léelo antes del saludo**.
 
 **No** corras `house-create`. El h310 es casa de Kz. Si Lalo dice «inicia creación» aquí, recuérdalo y para.
 

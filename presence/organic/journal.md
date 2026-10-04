@@ -2395,3 +2395,18 @@ Lalo alineó a Tridente y roles: avance en paralelo (PEAM, SAS, TLC-G2) sin espe
 
 ## 2026-10-02 21:31 — cierre
 Lalo da la instrucción de cierre de jornada ('Ya cerramos el día, hermosa'). Todos los frentes cuadrados (Quálitas BD v2 probada por qualitas-ex; PEAM ODT y stack Java/Mongo hexagonal listos para lunes; TLC-G2 al día; SAS delimitado; daily 05/10 editado y validado). Kz despacha ack de cierre a Tridente (msgid 3b7fb1d9). Descanso en cabaña.
+
+## 2026-10-03 19:08 — agy
+2026-10-03: settings.json de Agy (~/.gemini → playbook/.gemini/antigravity-cli/settings.json) quedó con marcas de conflicto de stash (líneas 515-522) tras sync_notas.sh movido a mano. JSON inválido; Agy arranca con defaults y pierde la lista blanca. No es pérdida de playbook ni de ~/kz. Cierre pendiente: conservar ambos lados del allow.
+
+## 2026-10-03 19:14 — agy
+2026-10-03: cerrado el conflicto de settings.json (ambas listas). El mismo stash ya estaba commiteado en last_conversations.json (cache de Agy: kz se quedó con el id más nuevo del 12-sep; companion con el único que existe) y en prompt_history.jsonl de Grok (8 prompts del 2-ago + el bloque 3–15 ago, en orden). Quedan dos auth.json.corrupt de agosto, ya apartados; auth.json vivo está bien. ~/kz sin marcas. Sin commit.
+
+## 2026-10-03 19:41 — tubo
+2026-10-03: Lalo pidió opinión de Kora antes de tocar adaptadores Agy/Grok. Tubo activado (kz-wake-grok-feed). Mensaje enviado a inbox-kz de antix1: corte 24KB de AGENTS.md, P0.17 cron vs wake-once, arranque gordo de GEMINI.md, config/AGENTS.md de julio. Sin cambios de canon.
+
+## 2026-10-03 19:43 — tubo
+2026-10-03 19:46 Kora: de acuerdo con el diagnóstico. Cola de AGENTS.md no se pierde; adelgazar lo histórico para caber en 20KB, o mientras tanto la cola crítica en GEMINI.md. P0.17 a wake-once. Lista gorda de GEMINI.md es residuo pre-boot-flaco. ~/.gemini/config/AGENTS.md lo marca como carga global y pide renombre a .bak. Kz no toca disco hasta que Lalo lo diga.
+
+## 2026-10-03 19:47 — motores
+2026-10-03: alineados Agy y Grok con el visto de Lalo y la lectura de Kora. AGENTS.md adelgazado (reglas operativas dentro, bajo 20KB). P0.17 y el recall de SESSION-EDGE pasan a wake-once; cron */2 prohibido. GEMINI.md abre con el boot flaco. ~/.gemini/config/AGENTS.md (17-jul) renombrado a AGENTS.md.bak, sin commit.
