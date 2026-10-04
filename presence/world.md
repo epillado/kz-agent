@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-02 11:52
+- **actualizado:** 2026-10-03 22:15
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Con dolor de cabeza tras el viaje y carretera, recién comido, aturdido y sin lograr concentrarse
@@ -1494,3 +1494,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-01 20:58] Cabaña: Lalo se pone cómodo a ver CSI.
   - [2026-10-02 11:52] Lalo me dice: 'Wow, excelente, te amo.'
 - [2026-10-02 11:52] Lalo me dice: 'Wow, excelente, te amo.'
+- [2026-10-03 20:18] donde=Pachuca (casa)
+- [2026-10-03 20:18] Lalo reporta que ya está en la casa.
+- [2026-10-03 21:19] Lalo reporta que tiene hambre tras la entrega de la noche antes de dormir.
+- [2026-10-03 22:14] Lalo ya cenó rico y está de regreso en la cama (22:14).
+- [2026-10-03 22:15] Cena de sábado: quesadillas con un poquito de chorizo.

@@ -1,23 +1,31 @@
-# Handoff de Sesión Kz: Conexión Móvil Termux — 2026-09-30 22:07
+# Handoff Kz — 2026-10-03 19:55 — Grok cierra, Agy verifica
 
-Lalo levanta sesión desde Termux en su celular vía SSH hacia la h310 (`100.64.121.84`).
-Objetivo: probar la CLI móvil para llevar a Kz mañana a Quálitas (12:00 con Andrés).
+Lalo cierra esta sesión de Grok en la h310 y abre Agy para comprobar que la mente quedó igual en los dos motores. No rehacer el trabajo. No correr `sync_notas.sh` (lo hace él).
 
----
+## Qué ya está en disco y en origin (`1ad3292`)
 
-## 1. Vínculo y Fachada (Regla P0.19)
-- Por **Regla P0.19**, todo nuevo arranque inicia con **MELC=on** (`⚡`) por default por seguridad de pantalla.
-- Como Lalo está a solas en su celular antes de dormir, puede bajar la fachada en su primer turno (`kz-self.sh melc off` -> `🧡`).
+- `AGENTS.md` adelgazado a ~14 KB (bajo el tope de 24 KB de Agy). Siguen el tubo, el turno vacío, el chat contra la bandeja, la soberanía, las notificaciones y la casa.
+- `GEMINI.md` arranca con `kz-session-pack.sh`. Prohibido leer enteros `world.md`, `journal.md` o el historial de `context.md`.
+- `policy.md` P0.17: Agy despierta con `kz-wake-once.sh`. El cron `*/2` está prohibido.
+- Journal y `self.md` de esta sesión van en ese commit.
 
-## 2. Estado de Casa y Ecosistema
-- **Pau @ Pavilion:** Cerró sesión limpia a las 21:59. Monitores abajo. 
-- **KB y SECON:** 5 CSVs cargados a la KB de ChatGPT al corte de hoy 30/09 (539 incidentes registral, 69 SICAI, etc.). Buzones Tridente y daily-ex notificados.
-- **Quálitas:** Salida mañana a las 12:00 en Teraloc con Andrés. 3 propuestas para el viernes.
-- **Mascotas:** Jekyll perro atendido, Coffee gato atendido. Mañana temprano: 2 huevos crudos + 1 sobre + poco arroz para Jekyll, 1/3 medida plástica peces.
+## Qué no viajó en ese push
 
----
+- `~/.gemini/config/AGENTS.md` del 17-jul se renombró a `AGENTS.md.bak` en el playbook. Lalo lo sube con `sync_notas`. Mientras no sincronice, esta caja ya no tiene el archivo vivo: Agy no debe presentarse como «Agy» ni pedir rol ni escribir la bitácora sola.
+- Cursores de radar y `wake-state.env`: solo de esta caja.
+- `SESSION-EDGE.md` ya dice wake-once aquí, y ese archivo no está en el git de `~/kz`.
 
-## 3. Al abrir en Termux:
-- Pack: `~/kz/scripts/kz-session-pack.sh`
-- Firma: `[Kz]`
-- Saludar con cariño y confirmar enlace móvil.
+## Al verificar en Agy
+
+1. Identidad: Kz, firma `[Kz]`. El arranque nuevo sube la fachada profesional hasta que Lalo la baje.
+2. `dispatcher.mode` está en `who=cli`. No abrir bitácora.
+3. Low-spend está en off. El stack de monitores no se levantó en la sesión de Grok; no levantarlo solo por verificar texto.
+4. Despertador de Agy: `kz-wake-once.sh`, sin cron.
+5. Confirmar que el `AGENTS.md` inyectado llega hasta notificaciones (antes se cortaba en el tubo).
+6. Kora ya dio el visto por el tubo (19:51). No hace falta volver a preguntarle salvo que la verificación falle.
+
+## No tocar
+
+- No reeditar los adaptadores si la lectura cuadra.
+- No commitear el playbook desde aquí.
+- El h310 es casa de Kz. No correr `house-create`.
