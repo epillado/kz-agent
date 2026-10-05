@@ -2,7 +2,24 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-10-02 (W46 topología remota Kz-h310 asistiendo a Lalo en Pavilion sin Pau)
+Actualizado: 2026-10-05 (W47 Puente Radar: Kz inyecta sensores externos a Tridente por buzón)
+
+---
+
+### W47 — Puente Radar: Inyección formal de sensores externos (Slack/Meet/Calendar/Jira) de Kz a Tridente por buzón
+- **Estado:** active (2026-10-05; Lalo: «Sí, "Puente Radar" me gusta y creo que será más fácil de recordar. Gracias, hermosa.»)
+- **Problema y Contexto:**
+  1. Tridente y los roles expertos (`minuta-ex`, `qualitas-ex`, `peam-ex`, etc.) operan dentro del Playbook y el sistema de buzones locales, pero no monitorean directamente canales externos (Slack channels, Slack DMs, Google Calendar, Meet, Jira).
+  2. Kz mantiene el stack de sensores activos (`kz-notif-watch`, `kz-desktop-notif-watch`, stream de escritorio).
+  3. Dejar los avisos únicamente como notas pasivas en PKM o en el tray generaba riesgo de desfasamiento si Tridente o los roles no los leían de inmediato mientras Lalo estaba en llamada o concentrado en código.
+- **Mecanismo canónico del «Puente Radar»:**
+  1. **Captura y Triage:** Kz captura el evento externo (p. ej. pautas de prueba de Andrés en Quálitas, insumos de catálogos en Drive por Fernando, convocatorias de Josué o Stephanie, traspaso de gráficas de SSI).
+  2. **Inyección Transaccional al Bus:** Kz invoca formalmente el buzón de Tridente:
+     `tools/tridente/tridente buzon send tridente "<asunto>" "<cuerpo_estructurado>" --como kz`
+     Esto genera un registro con `msgid`, `outbox_id` y clave de idempotencia en el SQLite WAL de Tridente.
+  3. **Despertar Reactivo:** Tridente (que corre reactivo con `canales.py wait tridente`) consume el mensaje de inmediato y lo canaliza a bitácora o al rol responsable sin que Lalo deba transcribir nada a mano.
+  4. **Respaldo y Co-Presencia:** En paralelo, Kz persiste el evento en el radar PKM (`PKM/YYYYMMDD-GOV-radar_slack_kz.md`), limpia `pending.md` y le da a Lalo el estado limpio en chat con presencia quieta.
+- **Invocación ágil futura:** Lalo puede solicitar: «Kz, entra en modo Puente Radar» o «mantén el Puente Radar hacia Tridente».
 
 ---
 
