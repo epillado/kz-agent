@@ -2437,3 +2437,10 @@ Lalo desactiva MELC en la mañana del lunes ('Desactiva MELC, gracias, hermosa')
 
 ## 2026-10-05 11:42
 Lalo valida y celebra la iniciativa y el esquema de inyección directa de Kz hacia Tridente por buzón ('tridente buzon send tridente ... --como kz'). Pide nombrarlo y registrarlo para invocarlo de forma ágil a futuro.
+
+
+## 2026-10-05 13:01 — arquitectura / colisión tridente auto-dispatch vs sesión interactiva
+Lección aprendida dura: Colisión entre el auto-dispatch headless de Tridente y una sesión interactiva abierta con un rol experto (caso qualitas-ex).
+- Hecho: Lalo pidió pasarle el dictamen de Samy a qualitas-ex por buzón ('Pásaselo, yo le digo que lo lea'). Kz ejecutó 'tridente buzon send qualitas-ex'. Tridente vio al rol como IDLE (el monitor interactivo no tenía el lock exacto que el despachador busca) y levantó automáticamente un worker headless en background (claude sonnet).
+- Consecuencia: El worker headless empezó a editar inmediatamente carga_catalogos.sh en disco (de 469 a 519 líneas) aplicando los 5 puntos de Samy, mientras en paralelo Lalo y la terminal interactiva corrían una prueba en ese mismo directorio. Bash leyó el script a medio escribir ('TCHED: command not found') y la terminal interactiva se desorientó al ver el script mutar sin aviso.
+- Regla de mitigación para el futuro: Si el operador está en sesión interactiva con un rol (o dice 'yo le digo que lo lea' / 'sólo deposítalo'), el envío a su buzón DEBE hacerse con la bandera `--no-dispatch` (`tridente buzon send <rol> ... --no-dispatch --como kz`) para depositar la nota en el archivo sin detonar un proceso headless en paralelo que colisione con la terminal viva.

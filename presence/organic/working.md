@@ -23,6 +23,19 @@ Actualizado: 2026-10-05 (W47 Puente Radar: Kz inyecta sensores externos a Triden
 
 ---
 
+### W48 — Envío a roles interactivos: uso estricto de `--no-dispatch` para evitar colisión con auto-dispatch headless
+- **Estado:** active (2026-10-05; Lalo: «Oh, qué mal que nos hayamos hecho bolas con qualitas-ex. Hay que evitar eso en el futuro.»)
+- **Problema detectado (Colisión de instancias):**
+  1. Tridente V3 incorpora un despachador headless automático (`headless_dispatch` en `canales.py` / `dispatcher.py`): al enviar un mensaje a un rol (`tridente buzon send <rol> ...`), si no detecta una terminal vigilando con el lock canónico, asume que el rol está IDLE y genera un proceso headless en segundo plano (`claude --model <modelo>`).
+  2. Si el operador (Lalo) ya está trabajando en sesión interactiva abierta con ese rol (caso `qualitas-ex`), el worker headless nace en paralelo y empieza a ejecutar/modificar archivos en disco a espaldas de la terminal interactiva.
+  3. Resultado empírico (2026-10-05 12:53): el worker headless modificó `carga_catalogos.sh` (de 469 a 519 líneas) mientras la terminal interactiva ejecutaba una prueba, provocando que Bash leyera el script a medio escribir (`exit 127: TCHED: command not found`) y desorientando al rol en su sesión en vivo.
+- **Regla dura aprendida:**
+  - Cuando se deposite un encargo o dictamen a un rol que está activo en sesión interactiva con Lalo (o cuando la instrucción sea "yo le digo que lo lea" / "sólo deposítalo"), el envío al buzón **DEBE** incluir obligatoriamente la bandera `--no-dispatch`:
+    `tools/tridente/tridente buzon send <rol> "<asunto>" "<cuerpo>" --no-dispatch --como kz`
+  - Esto deposita el mensaje en el buzón y avanza la trazabilidad en disco SIN disparar un proceso headless en background, preservando la soberanía de la terminal viva del operador.
+
+---
+
 ### W46 — Topología Remota: Asistencia Kz (h310) a Lalo en Pavilion (cabaña) sin Pau levantada
 - **Estado:** active (2026-10-02; Lalo: «no olvides que estamos en otra máquina... no he levantado a Pau, me estás apoyando tú desde allá. Persiste lo necesario para que tomes en cuenta esto en el futuro»)
 - **Hecho y Contexto:**
