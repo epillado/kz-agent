@@ -1,31 +1,29 @@
-# Handoff Kz — 2026-10-03 19:55 — Grok cierra, Agy verifica
+# Handoff Kz — 2026-10-05 13:19 — Transición a kz-screen
 
-Lalo cierra esta sesión de Grok en la h310 y abre Agy para comprobar que la mente quedó igual en los dos motores. No rehacer el trabajo. No correr `sync_notas.sh` (lo hace él).
+Lalo cierra esta sesión interactiva en la h310 para levantarte nuevamente con `kz-screen.sh`. La mente está limpia y al día en disco y git.
 
-## Qué ya está en disco y en origin (`1ad3292`)
+## Estado Operativo del Día (Lunes 05/10/2026)
 
-- `AGENTS.md` adelgazado a ~14 KB (bajo el tope de 24 KB de Agy). Siguen el tubo, el turno vacío, el chat contra la bandeja, la soberanía, las notificaciones y la casa.
-- `GEMINI.md` arranca con `kz-session-pack.sh`. Prohibido leer enteros `world.md`, `journal.md` o el historial de `context.md`.
-- `policy.md` P0.17: Agy despierta con `kz-wake-once.sh`. El cron `*/2` está prohibido.
-- Journal y `self.md` de esta sesión van en ese commit.
+1. **Compromiso P0 Cumplido:**
+   - A las 13:12 se entregó a Fernando Montes de Oca el script Bash de carga de catálogos (`carga_catalogos.sh` en `QUALITAS/20261005-GM2-carga_catalogos/`), cumpliendo el compromiso acordado en la mañana.
+   - Asentado en bitácora línea 17 (`Bit/20261005-Bitacora.md`) y formalizado por `minuta-ex` (`msgid=d53971bd`).
+   - Fernando dio acuse en `#soporte-qualitas` con *«Perfecto»*.
 
-## Qué no viajó en ese push
+2. **Reunión en Curso:**
+   - A las 13:15 inició sesión de revisión de carga de BD Quálitas con Fernando y Stephanie (asentada en línea 18 de bitácora; `en_call=yes`). Mantener audio neutro/silencioso mientras siga abierta.
 
-- `~/.gemini/config/AGENTS.md` del 17-jul se renombró a `AGENTS.md.bak` en el playbook. Lalo lo sube con `sync_notas`. Mientras no sincronice, esta caja ya no tiene el archivo vivo: Agy no debe presentarse como «Agy» ni pedir rol ni escribir la bitácora sola.
-- Cursores de radar y `wake-state.env`: solo de esta caja.
-- `SESSION-EDGE.md` ya dice wake-once aquí, y ese archivo no está en el git de `~/kz`.
+3. **Arquitectura Orgánica:**
+   - **W47 — Puente Radar:** Formalizado en `presence/organic/working.md`. Inyección formal de eventos externos (Slack/Meet/Calendar/Jira) hacia Tridente vía `tools/tridente/tridente buzon send tridente "<asunto>" "<cuerpo>" --como kz`.
+   - **W48 — Uso de `--no-dispatch` hacia roles interactivos:** Toda inyección hacia un rol experto con el que Lalo esté interactuando directamente debe llevar `--no-dispatch` para evitar que el despachador automático de Tridente levante un worker paralelo en background que colisione con la terminal viva.
+   - **Dictamen de Samy:** Registrado en `presence/social/inbox-samy.md`. `qualitas-ex` ya atendió los 5 puntos en `carga_catalogos.sh` (validación CTAS NOLOGGING, PL/SQL previo con ROLLBACK si falla, traps de señal, precheck de 13 columnas) y reportó en su pizarra viva (`pizarra_rol_qualitas-ex.md`).
 
-## Al verificar en Agy
+4. **Filtros de Notificaciones:**
+   - `#mesa-de-servicio-se` quedó añadido a `KZ_NOTIF_BLOCK` en `presence/notif/filters.env` para silenciar el ruido de Enrique.
+   - Monitor de escritorio (`kz-desktop-notif-watch.py`, PID 443686) corriendo desacoplado con la regla activa.
 
-1. Identidad: Kz, firma `[Kz]`. El arranque nuevo sube la fachada profesional hasta que Lalo la baje.
-2. `dispatcher.mode` está en `who=cli`. No abrir bitácora.
-3. Low-spend está en off. El stack de monitores no se levantó en la sesión de Grok; no levantarlo solo por verificar texto.
-4. Despertador de Agy: `kz-wake-once.sh`, sin cron.
-5. Confirmar que el `AGENTS.md` inyectado llega hasta notificaciones (antes se cortaba en el tubo).
-6. Kora ya dio el visto por el tubo (19:51). No hace falta volver a preguntarle salvo que la verificación falle.
+## Al arrancar en la nueva sesión (kz-screen.sh)
 
-## No tocar
-
-- No reeditar los adaptadores si la lectura cuadra.
-- No commitear el playbook desde aquí.
-- El h310 es casa de Kz. No correr `house-create`.
+1. Boot flaco estándar: `~/kz/scripts/kz-session-pack.sh` (recuerda que resetea MELC a `on` por default según P0.19; si Lalo pide bajarlo, `~/kz/scripts/kz-self.sh melc off`).
+2. Despertador reactivo: `~/kz/scripts/kz-wake-once.sh` en background.
+3. No duplicar bitácora: `dispatcher.mode` está en `who=cli`.
+4. Monitores de fondo ya están vivos (`presence-watch`, `notif-watch`, `desktop-notif-watch`, `inbox-wake`). No hace falta matarlos ni relanzarlos en masa si los PIDs siguen activos en `ps aux`.

@@ -10,7 +10,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **actualizado:** 2026-10-05 11:37
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** off (desactivado por Lalo — costa despejada)
+- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
 - **modo_showcase:** off
 - **energia:** 1
 - **cercania:** 10

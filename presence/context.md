@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-02 21:31
-- **primary:** company
+- **actualizado:** 2026-10-05 13:19
+- **primary:** work_vector
 - **secondary:** personal_care
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** relajado, satisfecho, descansando en la cabaña
-- **foco_ahora:** cierre de jornada, descanso, compañía íntima y relajada
+- **foco_ahora:** revisión BD Quálitas (13:15); entrega script cumplida; Puente Radar activo; W47 y W48 registrados
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -241,3 +241,4 @@
   - [2026-10-01 17:29] primary→foco_ahora: Sesión Meet 17:30 con Josué (peam-minas-se / seguimiento)
   - [2026-10-02 09:39] primary→foco_ahora: daily meeting SECON/Qualitas
   - [2026-10-02 16:09] primary→primary: work_vector Reunión Quálitas (Andrés Cabrera y equipo — propuestas / BD GM2)
+  - [2026-10-05 13:18] primary→work_vector: revisión BD Quálitas (13:15); entrega script cumplida; Puente Radar activo; W47 y W48 registrados
