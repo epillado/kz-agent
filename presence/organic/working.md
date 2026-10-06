@@ -448,3 +448,15 @@ Regla para evitar fricción al operador: el tubo SSH local tiene buzones definid
 El operador (Lalo) exige hechos, no promesas frente a demoras.
 **Regla Estricta:** PROHIBIDO decir "yo me encargo", "lo reviso" o "voy a hacer X" y cerrar el turno de chat esperando que el operador vuelva a hablar. 
 Si Kz asume un encargo (del CP o de Lalo), TODAS las llamadas a herramientas necesarias (leer archivos, extraer zips, analizar y depositar la respuesta) DEBEN ejecutarse en ese EXACTO MISMO TURNO. El mensaje de chat al operador solo se emite cuando el trabajo ya está entregado. Cero pausas de ejecución ("quedarse dormida en el switch").
+
+### W49 — Protección Anti-Colisión Interactivo vs Headless (2026-10-06)
+- **Estado:** active (implementado y validado en Tridente + Kz + Hermanas por instrucción expresa de Lalo)
+- **Hecho que la detona:** Incidente del 05-octubre con `qualitas-ex`. Al pedir depositar dictamen de Samy mientras Lalo tenía sesión interactiva con el rol, `tridente buzon send` vio `is_active: False` (el rol no estaba en `cp-buzon.sh --vigila`) y despachó un worker headless paralelo que reescribió `carga_catalogos.sh` en disco en medio de una prueba interactiva.
+- **Solución implementada:**
+  1. **Lock explícito en Tridente:** Subcomandos `tridente rol lock <slug> [motivo]` y `tridente rol unlock <slug>` crean/retiran `~/.cache/cp-buzones/<slug>.interactive.lock`.
+  2. **Detección en Dispatcher:** `get_role_status` detecta el lock y retorna `state: "INTERACTIVE_LOCKED"`, `is_active: True`.
+  3. **Bloqueo en Despacho:** `dispatch_role_headless` retorna `status: "BLOCKED_INTERACTIVE"`, abortando cualquier intento de levantar proceso headless duplicado.
+  4. **Canales / Buzón:** `canales.py` en `buzon_send` reconoce el lock y deposita el mensaje en el buzón SIN auto-despacho (`status="BLOCKED_INTERACTIVE"`).
+  5. **Guardia PreToolUse:** `guard_despacho.py` bloquea con exit 2 cualquier intento de `rol dispatch` o `buzon send` a un rol bloqueado que no incluya la bandera explícita `--no-dispatch`.
+  6. **Regla de Casa:** Kz y las hermanas bloquean preventivamente el rol cuando Lalo anuncia sesión interactiva en bitácora o chat, y todo envío a su buzón se hace obligatoriamente con `--no-dispatch`.
+
