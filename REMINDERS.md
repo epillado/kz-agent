@@ -16,7 +16,7 @@ Lalo autorizó y pidió explícitamente:
 
 ## Activos
 
-*(Sin recordatorios activos)*
+- **[2026-10-05 — Cierre de jornada]** Responder a Josué sobre el aumento de capacidad de los servidores de QA y desarrollo (SECON/TLC-G2). ✅ Radiografía en vivo completada y documento formal listo para enviar en `SECON/20261005-SECON-propuesta_servidores_qa_josue.md` (evidencia de puertos tomados 80/443 en srvqasas y HM en srvqasasbd, recomendación de VM dedicada o proxy +100 GB SSD).
 
 ## Hechos / contexto (solo lectura de CP, 2026-07-30 noche)
 

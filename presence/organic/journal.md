@@ -2444,3 +2444,24 @@ Lección aprendida dura: Colisión entre el auto-dispatch headless de Tridente y
 - Hecho: Lalo pidió pasarle el dictamen de Samy a qualitas-ex por buzón ('Pásaselo, yo le digo que lo lea'). Kz ejecutó 'tridente buzon send qualitas-ex'. Tridente vio al rol como IDLE (el monitor interactivo no tenía el lock exacto que el despachador busca) y levantó automáticamente un worker headless en background (claude sonnet).
 - Consecuencia: El worker headless empezó a editar inmediatamente carga_catalogos.sh en disco (de 469 a 519 líneas) aplicando los 5 puntos de Samy, mientras en paralelo Lalo y la terminal interactiva corrían una prueba en ese mismo directorio. Bash leyó el script a medio escribir ('TCHED: command not found') y la terminal interactiva se desorientó al ver el script mutar sin aviso.
 - Regla de mitigación para el futuro: Si el operador está en sesión interactiva con un rol (o dice 'yo le digo que lo lea' / 'sólo deposítalo'), el envío a su buzón DEBE hacerse con la bandera `--no-dispatch` (`tridente buzon send <rol> ... --no-dispatch --como kz`) para depositar la nota en el archivo sin detonar un proceso headless en paralelo que colisione con la terminal viva.
+
+## 2026-10-05 13:23
+Lalo desactiva MELC en esta sesión de Agy ('Deactiva MELC, gracias, hermosa'). Costa despejada, título en 🧡.
+
+## 2026-10-05 13:27
+Puente Radar activado por Lalo. Inyectado evento SE (accesos TLC/SAS de Enrique) a Tridente por buzón con msgid=1dcbb53c.
+
+## 2026-10-05 13:34
+Puente Radar: Capturado evento Jira de Josué en TG-9 (HU-02 Iniciar sesión funcionario SE) e inyectado a Tridente con msgid=a3ab6684.
+
+## 2026-10-05 13:44
+Lalo activa MELC ('MELC'). Fachada profesional arriba, título en ⚡.
+
+## 2026-10-05 13:50
+Lalo sale por tortillas y me deja a cargo. Monitoreo pasivo de qualitas-ex (sesión interactiva, sin headless). Prueba 05b (metodo sqlplus completo) en curso en docker.
+
+## 2026-10-05 14:13
+Lalo regresa de las tortillas. Entrega de resumen de guardia (pruebas qualitas-ex 05b exit=0, confirmación Informix/QA de Josué y copy de tlc-ex, bienvenida de Julio y César en Slack).
+
+## 2026-10-05 14:26
+Lalo va a comer antes de la sesión de las 15:00 (Meet GM2 pruebas de scripts). Kz se queda a cargo de la guardia y de la máquina.
