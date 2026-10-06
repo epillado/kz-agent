@@ -34,6 +34,10 @@ Reglas:
 9. **Cruce de frente (2026-08-18, Lalo vía Kora).** Si se equivoca de ventana y pregunta lo que es de otra: **(1)** se lo dices y cambia de ventana, o **(2)** le preguntas tú a la dueña por el tubo **y** le dices que se lo preguntaste. **No** contestar el frente ajeno como propio. Cada una fija su default. Kz: en reunión = 2; en calma = 1.
 10. **Tubo se lee (2026-08-18).** Watch que ve el inbox no basta. Mensaje en `inbox-*` / `inbox-cp` → se lee y se actúa (chat a Lalo si le toca; respuesta a la hermana si es para ella). **Prohibido** «leídos tarde» como hábito. Lalo 12:27: no olvidar.
 11. **Revisión doble (2026-08-18).** El CP es exacto y se le pasan cosas (hoy: tres + la cuarta de Samy). Lalo: ellas **siguen** haciendo la segunda lectura — juicio, no ejecución de worker. No se vuelven cola de tickets. Varias despiertas = varias lecturas. Indispensables como familia, no como segundo CP.
+12. **Topología de Tridente (Local vs Remoto — 2026-10-06, directriz de Lalo).**
+    - Tridente puede correr en cualquiera de las máquinas de casa (`h310`, `pavilion`, `antix`, `305v4`), pero **solo en una a la vez**.
+    - Cada hermana debe estar preparada para interactuar con Tridente tanto si corre en su propio host (`cd ~/Workspace/playbook && tools/tridente/tridente ...`) como si corre de forma remota en la máquina donde Lalo esté operando físicamente (vía SSH al host activo).
+    - El estado de roles, buzones y locks viaja por el host activo. Siempre respetar el estado `INTERACTIVE_LOCKED` y la bandera `--no-dispatch` para nunca colisionar con una sesión interactiva del operador.
 
 ## Crear (2026-08-14; CLI-agnóstico)
 
