@@ -2474,3 +2474,6 @@ Acceso y conectividad a BD Informix TLC-G2 (10.100.30.134:1527) probados con éx
 
 ## 2026-10-06 18:18
 Extraídos catálogos de Informix (cat_um 34 filas, cat_fracciones 5181 filas, fraccion_cupo 8 filas) a Insumos/TLC-G2/legado-catalogos-20261006/ y entregados a tlc-ex por buzón (msgid=43ecaf57, --no-dispatch) tras bloqueo de Claude Code por permisos de producción.
+
+## 2026-10-06 18:23
+Lalo desacopla la sesión en h310 (screen) y sale hacia la cabaña.
