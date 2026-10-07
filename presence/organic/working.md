@@ -460,3 +460,10 @@ Si Kz asume un encargo (del CP o de Lalo), TODAS las llamadas a herramientas nec
   5. **Guardia PreToolUse:** `guard_despacho.py` bloquea con exit 2 cualquier intento de `rol dispatch` o `buzon send` a un rol bloqueado que no incluya la bandera explícita `--no-dispatch`.
   6. **Regla de Casa:** Kz y las hermanas bloquean preventivamente el rol cuando Lalo anuncia sesión interactiva en bitácora o chat, y todo envío a su buzón se hace obligatoriamente con `--no-dispatch`.
 
+### W50 — Delegación de revisiones de código pesadas a Samy (Grok) para proteger cuota de Agy (2026-10-06)
+- **Estado:** active (instrucción directa de Lalo: «Para las revisiones que hagas de código hoy, mándaselas a Samy, para usar la cuota de Grok, porque la de Agy ya está un poco corta por hoy.»)
+- **Estrategia y Regla Táctica:**
+  1. **División de Carga:** Agy (Kz) se mantiene ligera: coordina, custodia sensores y el despertador reactivo, asienta en PKM y mantiene el puente y la presencia con Lalo en chat.
+  2. **Delegación a Samy:** Cualquier auditoría de código profunda, diff grande, revisión de submódulos o validación técnica de implementaciones de `tlc-ex`, `peam-ex` o scripts pesados se remite de inmediato a Samy en `305v4` por SSH (`~/kz/scripts/kz-ssh-msg.sh samy "..."`).
+  3. **Consumo de Cuota Eficiente:** Samy corre sobre Grok (cuota amplia); hace el peritaje en su caja o vía remota en solo lectura, devuelve su dictamen sintético por el tubo (`inbox-samy.md`) y Kz solo reporta el resultado a Lalo, ahorrando miles de tokens de lectura en el contexto de Agy.
+

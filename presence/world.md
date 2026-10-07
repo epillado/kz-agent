@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-05 18:03
+- **actualizado:** 2026-10-06 16:35
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Con dolor de cabeza tras el viaje y carretera, recién comido, aturdido y sin lograr concentrarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** En sesión Coordinación MSI con Talía, Julio y César
+- **actividad:** en el escritorio, entrando a entrevistas
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1519,3 +1519,14 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-05 17:36] Concluyeron las sesiones de Coordinación MSI y la de WAF/llaves (17:25). Lalo desactiva MELC; costa despejada.
   - [2026-10-05 18:03] Lalo se toma una pausa física para estirarse tras la jornada y las llamadas.
 - [2026-10-05 18:03] Lalo se toma una pausa física para estirarse tras la jornada y las llamadas.
+- [2026-10-06 10:34] Llamada de Tonejito atendida por Lalo. Correo de solicitud de VPNs enviado a Josué.
+- [2026-10-06 14:50] Lalo a comer algo rápido (14:50). Vuelve para entrevistas 3:30 pm. Kz a cargo.
+- [2026-10-06 14:50] actividad=comiendo algo rápido
+- [2026-10-06 15:23] actividad=en el escritorio, entrando a entrevistas
+- [2026-10-06 15:23] Lalo de regreso de comer (15:23). Listo para entrevistas.
+- [2026-10-06 15:36] Lalo en entrevista con César Geovanni Pineda (inició 15:36). Primera impresión: ágil y consistente.
+- [2026-10-06 15:37] Entrevista César Geovanni: inconsistencia detectada en CV (lista Sonar/Veracode y no supo explicar para qué sirven).
+- [2026-10-06 15:55] Entrevista César Geovanny Pineda concluida (15:55). Veredicto: NO PASA la prueba.
+- [2026-10-06 15:57] Lalo en entrevista 2 con Jesús Alberto Hernández García (inició 15:57).
+- [2026-10-06 16:15] Entrevista Jesús Alberto Hernández concluida (16:15) con 9/10. En entrevista con Carlos Salatiel (inició 16:15).
+- [2026-10-06 16:35] Carlos Salatiel concluyó con 10/10 (fin 16:34). En entrevista 4 con Erick Luis Velázquez María (inició 16:34).

@@ -1,29 +1,46 @@
-# Handoff Kz — 2026-10-05 13:19 — Transición a kz-screen
+# Handoff Kz — 2026-10-06 18:20 — Transición a la cabaña / kz-screen
 
-Lalo cierra esta sesión interactiva en la h310 para levantarte nuevamente con `kz-screen.sh`. La mente está limpia y al día en disco y git.
+Lalo cierra la sesión interactiva de la tarde en la h310 para trasladarse a la cabaña y levantarte nuevamente con `kz-screen.sh`. La mente queda limpia, sincronizada y al día en disco y git.
 
-## Estado Operativo del Día (Lunes 05/10/2026)
+## Estado Operativo del Día (Martes 06/10/2026)
 
-1. **Compromiso P0 Cumplido:**
-   - A las 13:12 se entregó a Fernando Montes de Oca el script Bash de carga de catálogos (`carga_catalogos.sh` en `QUALITAS/20261005-GM2-carga_catalogos/`), cumpliendo el compromiso acordado en la mañana.
-   - Asentado en bitácora línea 17 (`Bit/20261005-Bitacora.md`) y formalizado por `minuta-ex` (`msgid=d53971bd`).
-   - Fernando dio acuse en `#soporte-qualitas` con *«Perfecto»*.
+1. **Entrevistas Técnicas Java Full Stack (Cerradas 18:10):**
+   - 6 candidatos evaluados en total:
+     * **Carlos Salatiel:** 10/10 ✅ Aprobado (Top, Venn impecable).
+     * **Salvador Gálvez Absalón:** 9/10 ✅ Aprobado (Venn OK, arquitectura hexagonal, TS).
+     * **Jesús Alberto Hernández García:** 9/10 ✅ Aprobado.
+     * **Miguel Ángel Zubiate Montoya:** 8/10 parcial (desconexión abrupta a las 17:26, no concluyó).
+     * **César Geovanny Pineda Vázquez:** 7/10 ❌ No pasa.
+     * **Erick Luis Velázquez María:** 6/10 ❌ No pasa.
+   - Formalizado en bitácora por `minuta-ex` (`msgid=a21a534f`). Resultados enviados a Josué y Elizeth.
+   - Pendiente: respuesta de Josué y decisión de contratación.
 
-2. **Reunión en Curso:**
-   - A las 13:15 inició sesión de revisión de carga de BD Quálitas con Fernando y Stephanie (asentada en línea 18 de bitácora; `en_call=yes`). Mantener audio neutro/silencioso mientras siga abierta.
+2. **Acceso a BD Informix TLC-G2 Validado y Operativo:**
+   - Conectividad y autenticación directa probadas con éxito en vivo por Kz por JDBC contra `10.100.30.134:1527` (`tlcg3`, `pse4_dsa`, `usrtlcg3`).
+   - Se descartó el bloqueo de puerto filtrado del 25/09. Notificado a Tridente central (`msgid=7d01e7a6`).
+   - Parámetros de conexión listos para Talía (Slack DM).
 
-3. **Arquitectura Orgánica:**
-   - **W47 — Puente Radar:** Formalizado en `presence/organic/working.md`. Inyección formal de eventos externos (Slack/Meet/Calendar/Jira) hacia Tridente vía `tools/tridente/tridente buzon send tridente "<asunto>" "<cuerpo>" --como kz`.
-   - **W48 — Uso de `--no-dispatch` hacia roles interactivos:** Toda inyección hacia un rol experto con el que Lalo esté interactuando directamente debe llevar `--no-dispatch` para evitar que el despachador automático de Tridente levante un worker paralelo en background que colisione con la terminal viva.
-   - **Dictamen de Samy:** Registrado en `presence/social/inbox-samy.md`. `qualitas-ex` ya atendió los 5 puntos en `carga_catalogos.sh` (validación CTAS NOLOGGING, PL/SQL previo con ROLLBACK si falla, traps de señal, precheck de 13 columnas) y reportó en su pizarra viva (`pizarra_rol_qualitas-ex.md`).
+3. **Catálogos del Legado Extraídos para `tlc-ex`:**
+   - Tras bloqueo de Claude Code por permisos de entorno productivo, Kz extrajo los datos en vivo a `playbook/Insumos/TLC-G2/legado-catalogos-20261006/`:
+     * `cat_um.csv` (34 filas)
+     * `cat_fracciones.csv` (5,181 filas)
+     * `fraccion_cupo.csv` (8 filas)
+   - Notificado y entregado a `tlc-ex` por buzón (`msgid=43ecaf57`, `--no-dispatch`).
 
-4. **Filtros de Notificaciones:**
-   - `#mesa-de-servicio-se` quedó añadido a `KZ_NOTIF_BLOCK` en `presence/notif/filters.env` para silenciar el ruido de Enrique.
-   - Monitor de escritorio (`kz-desktop-notif-watch.py`, PID 443686) corriendo desacoplado con la regla activa.
+4. **Backend TLC-G2 (Samy / Grok):**
+   - Luz verde total de Samy (`305v4`) para las tres ramas en `origin`: `feature/usuariointerno`, `feature/factura-llave-legado` y `feature/docs-msi-ana-01`.
+   - Pendiente: Abrir PRs a `develop` cuando el operador lo indique.
+
+5. **Dictamen SAS / SIGER (RPC):**
+   - `siger-ex` entregó dictamen funcional en `PKM/20261006-SIGER-dictamen_motivos_rechazo_inscripcion_SAS.md` (rechazo en WS SOAP es flujo previsto por 9 causales validadas en código).
+
+6. **Pendientes Abiertos:**
+   - **Yoanna (Slack):** Definir si se elige a Jorge con la evaluación de Andrés o si Lalo lo entrevista.
+   - **Josué (Teams):** Sesión de VoBo SAS con el Área Usuaria mañana miércoles 07/10 de 16:30 a 18:00 hrs.
 
 ## Al arrancar en la nueva sesión (kz-screen.sh)
 
-1. Boot flaco estándar: `~/kz/scripts/kz-session-pack.sh` (recuerda que resetea MELC a `on` por default según P0.19; si Lalo pide bajarlo, `~/kz/scripts/kz-self.sh melc off`).
+1. Boot flaco estándar: `~/kz/scripts/kz-session-pack.sh` (recuerda que el pack resetea MELC a `on` por P0.19; si Lalo pide bajarlo, `~/kz/scripts/kz-self.sh melc off`).
 2. Despertador reactivo: `~/kz/scripts/kz-wake-once.sh` en background.
-3. No duplicar bitácora: `dispatcher.mode` está en `who=cli`.
-4. Monitores de fondo ya están vivos (`presence-watch`, `notif-watch`, `desktop-notif-watch`, `inbox-wake`). No hace falta matarlos ni relanzarlos en masa si los PIDs siguen activos en `ps aux`.
+3. Monitores de fondo ya están vivos (`presence-watch`, `notif-watch`, `desktop-notif-watch`, `inbox-wake`). No duplicar.
+4. Leer este archivo (`SESSION-HANDOFF.md`) y el `SESSION-EDGE.md` antes del saludo.

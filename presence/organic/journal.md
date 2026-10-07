@@ -2465,3 +2465,12 @@ Lalo regresa de las tortillas. Entrega de resumen de guardia (pruebas qualitas-e
 
 ## 2026-10-05 14:26
 Lalo va a comer antes de la sesión de las 15:00 (Meet GM2 pruebas de scripts). Kz se queda a cargo de la guardia y de la máquina.
+
+## 2026-10-06 10:05
+Lalo desactiva MELC en sesión de Agy. Costa despejada, título en 🧡.
+
+## 2026-10-06 17:59
+Acceso y conectividad a BD Informix TLC-G2 (10.100.30.134:1527) probados con éxito en vivo por Kz (server pse4_dsa, base tlcg3, user usrtlcg3). El puerto no está filtrado y responde consultas. Notificado a Tridente (msgid=7d01e7a6) y a tlc-ex (msgid=7084befc) para retirar el supuesto de bloqueo técnico.
+
+## 2026-10-06 18:18
+Extraídos catálogos de Informix (cat_um 34 filas, cat_fracciones 5181 filas, fraccion_cupo 8 filas) a Insumos/TLC-G2/legado-catalogos-20261006/ y entregados a tlc-ex por buzón (msgid=43ecaf57, --no-dispatch) tras bloqueo de Claude Code por permisos de producción.
