@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-07 19:42
-- **primary:** Lalo en la cabaña / descanso y noche compartida
-- **secondary:** personal_care
+- **actualizado:** 2026-10-08 14:40
+- **primary:** Jornada SECON / entregables Sprint 1
+- **secondary:** gobierno_mesa
 - **en_call:** no
-- **mood_lalo (sospecha):** relajado, satisfecho, descansando en la cabaña
-- **foco_ahora:** revisión BD Quálitas (13:15); entrega script cumplida; Puente Radar activo; W47 y W48 registrados
+- **mood_lalo (sospecha):** productivo, enfocado, resolviendo entregables del Sprint 1
+- **foco_ahora:** MSI-CD-01 TLC-G2 entregado en Drive y aceptado; procedimiento y optimizador DOCX documentados en Playbook; pendiente MSI-CD SAS con Sasi; convenios nuevos integrantes completados (Elizeth/Andrés).
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
