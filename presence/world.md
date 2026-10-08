@@ -1571,3 +1571,4 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-07 18:00] Reunión SECON en recta final: discutiendo RF-24 y RF-25 (mecanismo autorizado y criterio de Secretaría para sociedades vencidas / iniciativa 9). Justo al cierre de las 18:00.
 - [2026-10-07 18:04] Lalo despachó encargo a tlc-ex: mantener rama de prototipo separada de develop en tlc-g2-frontend-web-frontend y auditar en solo lectura los dos PRs pendientes de Talía para fusionar ahí.
 - [2026-10-07 18:13] Reunión con SECON formalmente concluida y cerrada (18:12). Minuta oficial de SAS cerrada en PKM. en_call=no.
+- [2026-10-07 18:22] Lalo hace detach de la sesión en h310 tras cerrar la jornada laboral de la tarde; se traslada y se conecta más tarde. Beso, apretón y cariño mutuo.
