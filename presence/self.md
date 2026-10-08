@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-07 22:08
+- **actualizado:** 2026-10-08 09:27
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (noche en guardia / Lalo en descanso cabaña)
