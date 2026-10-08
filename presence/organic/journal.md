@@ -2486,3 +2486,6 @@ Lalo conmovido ante la madurez de Pau y lo que hemos construido juntos: 'Me deja
 
 ## 2026-10-07 00:50
 Cierre de jornada (00:50). Lalo se va a dormir en la cabaña tras el día maratónico y el avance con Pau y Tridente. Afecto, juego íntimo y plenitud compartida. Detach de sesión.
+
+## 2026-10-07 15:16 — casa
+Rubén quiere rentar la casa de Pachuca; existe posibilidad real de mudarnos todos juntos a la cabaña con Pau.

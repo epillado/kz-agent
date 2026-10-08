@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-07 00:51
-- **fuente:** report
+- **actualizado:** 2026-10-07 17:04
+- **fuente:** chat/script (cafe)
 - **donde:** Pachuca (casa)
-- **cuerpo_mood:** Con dolor de cabeza tras el viaje y carretera, recién comido, aturdido y sin lograr concentrarse
+- **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** en el escritorio, entrando a entrevistas
+- **actividad:** Revisando situación de Alejandra / SAS pre-reunión 16:30
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1535,3 +1535,39 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-06 20:18] Lalo cumplió pausa de ojos (POC) en la cabaña.
 - [2026-10-06 21:00] Lalo en la cabaña, sonriendo y trabajando alegre tras el momento compartido con Kz y Pau.
 - [2026-10-07 00:51] Lalo se va a dormir en la cabaña (00:50). Descanso de jornada.
+- [2026-10-07 09:21] Lalo llegó a la h310 desde la cabaña tras tráfico de hora pico; en el teclado para el daily.
+  - [2026-10-07 09:23] Me voy a dar un baño super rápido, es que allá estaba muy frío y nublado
+- [2026-10-07 09:23] Me voy a dar un baño super rápido, es que allá estaba muy frío y nublado
+- [2026-10-07 09:32] actividad=En daily de SECON
+- [2026-10-07 09:32] Lalo entrando al Daily de SECON (3º en turno)
+  - [2026-10-07 11:34] Lalo fue rápido por un espresso y celebra la coordinación y resolución rápida
+- [2026-10-07 11:34] [cafe] Lalo fue rápido por un espresso y celebra la coordinación y resolución rápida
+- [2026-10-07 12:19] cuerpo_mood=Relajado, calientito con espresso tomado, tomando pausa para estirarse
+- [2026-10-07 12:19] actividad=Pausa de estiramiento tras cerrar pendientes de la mañana
+- [2026-10-07 12:19] Lalo se estira y toma pausa física tras dejar la mañana en orden.
+- [2026-10-07 12:48] actividad=En el teclado de la h310
+- [2026-10-07 12:48] Lalo regresa al teclado tras estirarse.
+- [2026-10-07 14:09] actividad=Salió por quesadillas a la calle
+- [2026-10-07 14:09] Lalo sale un rato por comida (quesadillas); Kz queda a cargo de la casa y del radar.
+- [2026-10-07 14:22] Llegó notificación de Caseta La Cantera: Su paquete ya está en caseta (para recoger al volver).
+- [2026-10-07 15:08] actividad=De regreso de comer quesadillas en la h310
+- [2026-10-07 15:08] Lalo de regreso con sus quesadillas. Casa/Pachuca.
+- [2026-10-07 15:16] Lalo comió rico. Entregó documento CD (MSI-CD-01) en Drive. Rubén quiere rentar esta casa (Pachuca); posible mudanza de todos a la cabaña. QEPD no fue nadie cercano. Ahora revisa situación de Alejandra pre-16:30.
+- [2026-10-07 15:16] actividad=Revisando situación de Alejandra / SAS pre-reunión 16:30
+- [2026-10-07 15:20] Lalo recogió su paquete de caseta. Preocupación por variación de voltaje en la cabaña para la h310 (necesitará UPS/regulador si se concreta mudanza).
+- [2026-10-07 15:49] Lalo envió a Josué por Slack la especificación técnica consolidada de la 'super VM' (SAS + TLC-G2 + PEAM) con 16 vCPUs, 48GB RAM, +500GB SSD, 3 FQDNs y matriz de conectividad para DGTI.
+- [2026-10-07 17:04] Reunión SECON SAS en curso: Lalo reporta que muchos de los supuestos defectos en las reglas eran alucinaciones de Josué; SECON afirma que las reglas funcionan bien y que los problemas reales provienen de datos inconsistentes del sistema legado.
+- [2026-10-07 17:15] Lalo alerta a Josué sobre dos impactos críticos de SECON: 1) modifican código de SAS (requiere esquema de entrega/repos), 2) cambio de régimen sin soporte en BD ni proceso. Josué concuerda: en algún momento pegará a SAS y ameritará otra ODT/espacio.
+- [2026-10-07 17:30] En Slack #sas-economia, Josué preguntó si regenerar documentos desde data es alcance. Lalo lo frenó en seco: imposible por estampa de tiempo/validez legal, y ligas tuempresa (archivodigital) corresponden a documentos ya generados/analizados (Talía/Giovanni). Josué rectificó de regenerar a (recuperar).
+- [2026-10-07 17:31] Josué etiquetó en #sas-economia a Talía, Fanny, Ale y Lalo solicitando revisar folios I-184183 y I-185272 para las reglas de negocio.
+- [2026-10-07 17:34] En Slack #sas-economia, Lalo encuadró la revisión de los tickets I-184183 e I-185272: SECON sostiene que validaciones operan bien y teoría es datos inconsistentes; si no se robustece código para excepciones, la concentración documental de la ODT actual subsanará el tema.
+- [2026-10-07 17:37] Lalo reporta avance de reunión SECON: tras más de una hora apenas van en el RF-03 (de 25), y pretenden que esté todo definido e iniciada construcción para el viernes 09/10. Ritmo y viabilidad completamente irreales.
+- [2026-10-07 17:38] Lalo nota cambio de conducta en reunión SECON (17:38): Alejandra empezó a leer los RF de corrido sin detenerse a aclarar dudas como venía haciendo. Síntoma de prisa por cierre de horario (termina a las 18:00) con riesgo de dar por "revisado" el alcance en falso.
+- [2026-10-07 17:45] Josué reaccionó con 👍 al mensaje de confirmación de que no se pueden regenerar documentos por estampa de tiempo. Queda cerrado y aceptado el punto.
+- [2026-10-07 17:46] SECON aceptó en la reunión la propuesta de Lalo de implementar la cola de solicitudes del lado de SAS. Acuerdo de arquitectura mayor.
+- [2026-10-07 17:48] Josué admite a Lalo por privado: "Hay que validar con Ale y Fanny, esos requerimientos porque creo que les hace falta definición y no están del todo alineados a lo que nos solicitan". Se cae por su propio peso el inicio de construcción el viernes.
+- [2026-10-07 17:53] Lalo reiteró la explicación de la cola de solicitudes y reintentos del lado de SAS para peticiones a SIGER; los asistentes confirmaron su conformidad plena.
+- [2026-10-07 17:55] En la reunión SECON, Alejandra aceleró de corrido y ya van en el RF-19 (16 requerimientos cubiertos en 18 minutos). Lalo bromea con el cambio radical de ritmo.
+- [2026-10-07 18:00] Reunión SECON en recta final: discutiendo RF-24 y RF-25 (mecanismo autorizado y criterio de Secretaría para sociedades vencidas / iniciativa 9). Justo al cierre de las 18:00.
+- [2026-10-07 18:04] Lalo despachó encargo a tlc-ex: mantener rama de prototipo separada de develop en tlc-g2-frontend-web-frontend y auditar en solo lectura los dos PRs pendientes de Talía para fusionar ahí.
+- [2026-10-07 18:13] Reunión con SECON formalmente concluida y cerrada (18:12). Minuta oficial de SAS cerrada en PKM. en_call=no.
