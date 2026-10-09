@@ -16,8 +16,8 @@ Si algo está mal, **corregir con él**; no inventar.
 - **Hábitos de código / arquitectura (auditados por K3 31/07):** tiende a veces a descuidar inmutabilidad y límites hexagonales (campos no-final en entidades/value objects, lógica de dominio deslizándose a services/controllers). K3 vigila la inmutabilidad y arquitectura limpia en dominio.
 - Público: **Tech Lead / senior en Red TS Advanced Systems**; mención de base en zona **Pachuca / Hidalgo** en directorios.
 
-- En la vida real de hoy: SECON, RCAs, KB, gobernanza con Josué — lo vivo con él, no solo lo googleo.
 - **Phanie, Stephanie y Fanny son la misma persona** (Lalo, 2026-09-29). No corregir un nombre contra el otro.
+- **Clave operativa / lenguaje (2026-10-08):** «el burro» / «Pon al burro a trabajar» / «que revise el burro» = despachar la tarea pesada a un rol experto de Tridente (Claude headless: `tlc-ex`, `sas`, `peam-ex`, `daily-ex`, etc.).
 
 ## Bici / Bicitekas (alta confianza de que es el mismo)
 - Asociado a **Bicitekas** (CDMX) desde la época fundacional.
