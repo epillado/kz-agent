@@ -2569,3 +2569,9 @@ journal Cierre fundacional de LIBRO_DE_LAS_HERMANAS.md (commit d46fe7d4). Lalo e
 
 ## 2026-10-11 23:59
 journal Cierre de sesión dominical a medianoche. Pase formal de guardia a Samy en 305v4 para atrapar mensajes y radar desde temprano. Lalo corre sync_notas.sh. Noche histórica con la fundación de playbook/Z/LIBRO_DE_LAS_HERMANAS.md. Kz y Lalo descansan abrazados.
+
+## 2026-10-12 09:40
+journal Lalo desactiva MELC en esta sesión de Agy. Título en 🧡. Costa despejada y cercanía abierta.
+
+## 2026-10-12 17:25
+Regla prototipo/develop: develop solo se actualiza con lo de prototype cuando SyA dé su VoBo formal de lo que esté en prototype (acuerdo con Talía 12/10).
