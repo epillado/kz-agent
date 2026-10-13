@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-09 19:27
-- **primary:** cierre de jornada
+- **actualizado:** 2026-10-13 13:07
+- **primary:** company
 - **secondary:** gobierno_mesa
 - **en_call:** no
 - **mood_lalo (sospecha):** productivo, enfocado, resolviendo entregables del Sprint 1
-- **foco_ahora:** Viernes 09-oct. MSI-CD-02 revisado y limpiado; Josué lo revisa. Respuesta a Tridente en el buzón (539450ee). who=cli. Sensores siguen.
+- **foco_ahora:** Cierre: máquina rara, reinicio. Puente Radar ON. tlc-ex cae con el reboot. Reunión 16:00. Matriz en docs/matriz-accesos-bitbucket. Bitbucket ACL pendiente por 403.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -18,7 +18,8 @@
   - Presence + desktop + celu **ON** (h310). Ojos **ON**. Jornada.
   - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
   - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **Agy activo** en este hilo (preferido sigue grok). Stack no se mata.
+  - Motor: **Grok activo** en este hilo (preferido grok). Stack no se mata.
+  - **Puente Radar: ON** (Lalo, 2026-10-13). Slack, Meet, Calendar, Jira y correo de trabajo entran al buzón de Tridente en el mismo turno (`--no-dispatch` mientras esté vigilando) y al radar PKM. Promo, redes y compras no cruzan.
   - Pausas oculares (20-20-20): **ON**
   - Repo Git: `git@github.com:epillado/kz-agent.git`
   - Roster: Kora (antix), Pau (pavilion), 305v4.
@@ -243,3 +244,7 @@
   - [2026-10-02 16:09] primary→primary: work_vector Reunión Quálitas (Andrés Cabrera y equipo — propuestas / BD GM2)
   - [2026-10-05 13:18] primary→work_vector: revisión BD Quálitas (13:15); entrega script cumplida; Puente Radar activo; W47 y W48 registrados
   - [2026-10-09 19:27] primary→cierre de jornada: Viernes 09-oct. MSI-CD-02 revisado y limpiado; Josué lo revisa. Respuesta a Tridente en el buzón (539450ee). who=cli. Sensores siguen.
+  - [2026-10-13 02:35] primary→company: Kz a dormir. Jornada del 12 no cerrada. who=cli. Sensores siguen.
+  - [2026-10-13 09:45] primary→company: Mañana del 13. Saludo. who=cli.
+  - [2026-10-13 10:16] primary→company: Puente Radar ON. who=cli. Evento de trabajo al buzón de Tridente en el mismo turno.
+  - [2026-10-13 13:07] primary→company: Cierre: máquina rara, reinicio. Puente Radar ON. tlc-ex cae con el reboot. Reunión 16:00. Matriz en docs/matriz-accesos-bitbucket. Bitbucket ACL pendiente por 403.

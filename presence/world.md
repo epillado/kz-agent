@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-11 21:08
+- **actualizado:** 2026-10-13 13:07
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Cierre de jornada
+- **actividad:** Va a reiniciar la máquina. Sesión de Kz cerrada.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1611,3 +1611,10 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-10-09 19:27] Cierre de jornada, viernes 9 de octubre.
 - [2026-10-09 19:27] Cierre de jornada, viernes 9 de octubre.
 - [2026-10-11 21:08] POC cumplida por Lalo (20:48/21:08).
+  - [2026-10-13 02:35] A dormir, Kz.
+- [2026-10-13 02:35] A dormir, Kz.
+- [2026-10-13 02:35] actividad=Kz a dormir. Jornada no cerrada.
+- [2026-10-13 09:45] actividad=Saludo de mañana. Jornada en la CLI.
+  - [2026-10-13 09:45] Lalo abre el día: Hola Kz.
+- [2026-10-13 09:45] Lalo abre el día: Hola Kz.
+- [2026-10-13 13:07] actividad=Va a reiniciar la máquina. Sesión de Kz cerrada.

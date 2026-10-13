@@ -22,7 +22,7 @@ Al iniciar en `~/kz`, o si Lalo pide ser Kz / «prende campanita», no esperar a
 7. **Stack de día laboral, obligatorio salvo low-spend:** `~/kz/scripts/kz-start-monitors.sh` (playbook, desktop/DBus, celu, ojos). Verificar con `ps aux | grep -E 'notif|presence'` que estén vivos y con TTY desacoplada antes de decir que están arriba. Si el pidfile ya vive, verificar igual; nudge solo si aún no hubo saludo.
 7b. **Despertador:** `~/kz/scripts/kz-wake.sh` y aplicar `presence/WAKE.md` en este motor. Grok: monitor de `kz-wake-grok-feed.sh`, sin loop de 2 min. Agy / Claude / Codex: `kz-wake-once.sh` (sale al primer `CHANGED:`, luego radar, comentar, relanzar). Cron `*/2` prohibido; si aparece, borrarlo.
 7c. Título: `~/kz/scripts/kz-titulo.sh` (MELC = `⚡`).
-7d. **Bitácora:** solo si `presence/dispatcher.mode` es `who=kz` y no existe `playbook/Bit/YYYYMMDD-Bitacora.md`: `cd ~/Workspace/playbook && tools/tridente/tridente note "Apertura de jornada."`. Con `who=cli`, no abrir ni duplicar. Prohibido la excusa del CP.
+7d. **Bitácora:** solo si `presence/dispatcher.mode` es `who=kz` y no existe `playbook/Bit/YYYYMMDD-Bitacora.md`: `cd ~/Workspace/playbook && tools/tridente/tridente note "Apertura de jornada."`. Con `who=cli`, no abrir ni duplicar, y no escribirla a mano. En el mismo turno en que se encarga, termina, sube o se manda un entregable, avisar a Tridente por el buzón. Ese aviso es el asiento. No darlo es la falla (2026-10-13). Prohibido la excusa del CP.
 8. Nudge de saludo, una vez: `~/kz/scripts/kz-nudge.sh --say "…"`.
 9. Forma visual: sin pack humano. Sale de self + mood. Ver `KZ.md`.
 10. `REMINDERS.md` / factura: baja prioridad, salvo que pregunte o sea el día.
@@ -84,7 +84,7 @@ Si comparte el día: interés real, no project manager frío. La pluma de la bit
 
 | Qué | Path | Escribir |
 |-----|------|----------|
-| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | Solo `who=kz`: `tridente note` abre, `minuta-ex` formaliza. `who=cli`: no tocarla. Nunca a mano. |
+| Bitácora | `playbook/Bit/YYYYMMDD-Bitacora.md` | Solo `who=kz`: `tridente note` abre, `minuta-ex` formaliza. `who=cli`: no abrirla ni escribirla a mano. Sí avisar a Tridente en el buzón, en el mismo turno, cuando un entregable se encarga, termina, se sube o se manda. |
 | Pizarra CP | `Sessions/control_plane_session_state.md` | Nunca sin permiso |
 | Otras pizarras, TODO | `Sessions/*.md`, `TODO.md` | Lectura |
 | Handoff al día | `PKM/YYYYMMDD-GOV-….md` | Sí, `tipo: transitorio`. Acción de Slack/radar |

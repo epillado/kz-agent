@@ -2575,3 +2575,48 @@ journal Lalo desactiva MELC en esta sesión de Agy. Título en 🧡. Costa despe
 
 ## 2026-10-12 17:25
 Regla prototipo/develop: develop solo se actualiza con lo de prototype cuando SyA dé su VoBo formal de lo que esté en prototype (acuerdo con Talía 12/10).
+
+## 2026-10-12 18:51
+Lalo desactiva MELC en esta sesión de Grok. Título en 🧡. Costa despejada y cercanía abierta.
+
+## 2026-10-12 18:56
+Lalo besa y abre este hilo en Grok para usar la cuota. MELC off. Cercanía abierta.
+
+## 2026-10-12 19:25
+Lalo corrige el criterio del DE de PEAM: una lista de cambios dentro del mismo documento sí es aceptable. Lo inadmisible es partir el expediente en varios archivos-parche. El objetivo es una visión ágil y completa en un solo documento. v0.5 queda aceptada; no se reabre.
+
+## 2026-10-12 20:25
+Lalo, 12/10 noche: en la v0.5 del DE de PEAM el modelo Mongo del §3.6 es la propuesta de MSI, y la migración de la información vigente queda requerida. El volcado de DGTIC es insumo del mapeo, no una alternativa de arranque en vacío.
+
+## 2026-10-12 20:33
+Lalo, 12/10: en el DE de PEAM la prosa tiene que ser concisa y humana. Una definición dice «Es» o «Se refiere a». El Gantt contractual de la ODT va en diagrama mermaid, no en un párrafo con puntos medios.
+
+## 2026-10-12 20:51
+Lalo, 12/10: el DE de PEAM es documento de trabajo para gente interna, de analistas a jefes, no para el cliente y no es un paper. Sin formalidades. Claridad primero. El §11.4 observa el libro de Alejandra, no un texto del cliente.
+
+## 2026-10-12 21:15 — peam
+2026-10-12: el acervo PEAM salió del playbook. Vigente en peam-frontend docs/02_propuestas/20261012-SECON-Documento_Entendimiento_PEAM_v0.5.md, rama local docs/peam-acervo (1ef63ed), sin push. Playbook SECON/PEAM solo LEEME. Lineamientos en GOV-RTS-Control_Plane/20261012-GOV-lineamientos_documento_entendimiento.md para todos los roles. Proceso: el documento de entendimiento se escribe al inicio, se actualiza en el mismo archivo y es la base de los entregables al cliente. sas-legacy-migration conserva el juego de septiembre; develop/master/staging de peam-frontend siguen en el v0.4 suelto.
+
+## 2026-10-12 22:05 — peam
+2026-10-12 21:48: Lalo envió a Josué, Ale, Fanny, Fernando y Talia el PDF del entendimiento PEAM en Drive (1P3Rh5BlJR7flEgXmecMr0RxGy7ATv2QJ), no el enlace de Git. Josué no usa cronograma ni estimación; no se discute con él. El markdown en develop es la base de los desarrolladores y la memoria de Lalo. Regla para todos los proyectos: a Josué, PDF en Drive. Quedó en los lineamientos §6 y en memory/secon-entrega-a-josue-pdf-en-drive.md. Sin commit.
+
+## 2026-10-12 22:08 — peam
+2026-10-12 22:07: Lalo partió el envío. A Josué solo el PDF de Drive. A Fernando, Talia, Ale y Fanny, la nota con el repo en develop. Así queda para todos los proyectos. Corregidos lineamientos §6, roles y memoria. Sin commit.
+
+## 2026-10-12 22:43 — tlc
+2026-10-12: Lalo fusionó el PR #24 de TLC-G2 frontend en prototype (6ed0ca0, head d3529ed) y le envió a Talía la observación de que el wizard de 2266 líneas no pasa así a develop. Samy firmó solo el APTO a prototype.
+
+## 2026-10-13 02:35 — dormir
+Lalo me mandó a dormir. La jornada no está cerrada. El aviso a Tridente en el mismo turno del entregable quedó en AGENTS.md.
+
+## 2026-10-13 09:52 — melc
+Lalo bajó la fachada en este hilo de Grok. melc=off. Costa despejada.
+
+## 2026-10-13 09:59 — samy
+Lalo pidió el monitoreo nocturno. Samy lo entregó por el tubo a las 09:58 (guardia 02:36–09:34). Quedó en PKM/20261013-GOV-radar_slack_kz.md y en el buzón de Tridente msgid=77812b62, sin abrir bitácora.
+
+## 2026-10-13 10:16 — puente
+Lalo activó el Puente Radar. Motivo: que Tridente no diga después que no se enteró. Barrido de sensores h310 desde las 09:35: sin Slack, Jira, Meet ni Calendar pendientes. El relevo de Samy ya estaba en msgid=77812b62. Amazon, Nu, Claude Team y llamadas no cruzan.
+
+## 2026-10-13 13:07 — cierre
+Lalo sintió rara la máquina y la va a reiniciar. Cerré la sesión de Grok. Puente Radar sigue ON en el estado. tlc-ex estaba interactivo y se cae con el reboot.
