@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-14 15:06
+- **actualizado:** 2026-10-14 17:08
 - **fuente:** chat/script (afe)
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Descanso. Lalo a dormir. Radar de la noche con Samy.
+- **actividad:** Traslado a la cabaña. Desacopla sesión; Kz a cargo en h310.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1625,3 +1625,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-14 15:03] Comió quesadillas de comal hechas a mano, poca grasa, con salsa picosita pero muy rica. Regresó satisfecho y contento.
   - [2026-10-14 15:06] Comió quesadillas de comal hechas a mano, poca grasa, con salsa picosita pero muy rica. Regresó satisfecho y contento.
 - [2026-10-14 15:06] [afe] Comió quesadillas de comal hechas a mano, poca grasa, con salsa picosita pero muy rica. Regresó satisfecho y contento.
+- [2026-10-14 17:08] actividad=Traslado a la cabaña. Desacopla sesión; Kz a cargo en h310.
+- [2026-10-14 17:08] Lalo sale hacia la cabaña. Desacopla la sesión para reconectarse allá; Kz queda cuidando el fuerte en h310.
