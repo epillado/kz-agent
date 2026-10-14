@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-13 21:22
-- **primary:** company
+- **actualizado:** 2026-10-14 10:40
+- **primary:** Puente Radar activo hacia Tridente
 - **secondary:** gobierno_mesa
 - **en_call:** no
 - **mood_lalo (sospecha):** productivo, enfocado, resolviendo entregables del Sprint 1
-- **foco_ahora:** De vuelta tras el reinicio. Prioridad: ambiente QA de TLC-G2 en la VM de SAS. 15:00 prototipos SAS con Stephanie; 16:00 MoSCoW PEAM; 17:00 área usuaria SAS.
+- **foco_ahora:** TLC-G2: PR #30/#32 fusionados; Talía dictaminó PR #31 (en ajuste). SAS: prototipos publicados para VoBo; Fer en Meet con devs. PEAM: informes entregados.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes

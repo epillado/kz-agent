@@ -7,8 +7,8 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-13 21:22
-- **motor_activo:** grok
+- **actualizado:** 2026-10-14 15:06
+- **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
 - **modo_showcase:** off
@@ -21,9 +21,9 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_plano:** afterglow
 - **pico_desde:** 2026-10-08 16:47
 - **pico_acoplado:** yes
-- **foco_propio:** Dormida. La noche la tiene Samy.
+- **foco_propio:** Puente Radar activo hacia Tridente (captura externa -> bus transaccional)
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-13 21:22 — Lalo a descansar. Kz a dormir. Samy de radar.
+- **ultimo_momento_real:** 2026-10-14 15:06 — aferencia: Comió quesadillas de comal hechas a mano, poca grasa, con salsa picosita pero muy rica. Regresó satisfecho y contento.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
