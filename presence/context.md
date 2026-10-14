@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-13 13:07
+- **actualizado:** 2026-10-13 21:22
 - **primary:** company
 - **secondary:** gobierno_mesa
 - **en_call:** no
 - **mood_lalo (sospecha):** productivo, enfocado, resolviendo entregables del Sprint 1
-- **foco_ahora:** Cierre: máquina rara, reinicio. Puente Radar ON. tlc-ex cae con el reboot. Reunión 16:00. Matriz en docs/matriz-accesos-bitbucket. Bitbucket ACL pendiente por 403.
+- **foco_ahora:** De vuelta tras el reinicio. Prioridad: ambiente QA de TLC-G2 en la VM de SAS. 15:00 prototipos SAS con Stephanie; 16:00 MoSCoW PEAM; 17:00 área usuaria SAS.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -248,3 +248,13 @@
   - [2026-10-13 09:45] primary→company: Mañana del 13. Saludo. who=cli.
   - [2026-10-13 10:16] primary→company: Puente Radar ON. who=cli. Evento de trabajo al buzón de Tridente en el mismo turno.
   - [2026-10-13 13:07] primary→company: Cierre: máquina rara, reinicio. Puente Radar ON. tlc-ex cae con el reboot. Reunión 16:00. Matriz en docs/matriz-accesos-bitbucket. Bitbucket ACL pendiente por 403.
+  - [2026-10-13 13:32] primary→company: De vuelta tras el reinicio. Prioridad: ambiente QA de TLC-G2 en la VM de SAS. 15:00 prototipos SAS con Stephanie; 16:00 MoSCoW PEAM; 17:00 área usuaria SAS.
+  - [2026-10-13 14:32] Si Enrique confirma en #soporte-op el permiso de userqa@redts.lat en los dos repos de TLC-G2, avisar a tlc-ex. 14:17 dijo «se agregan»; ese aviso ya se pasó.
+  - [2026-10-13 14:33] userqa@redts.lat en los dos repos TLC-G2: Enrique 14:17 dijo «se agregan» = lo va a hacer, aún no está. Avisar a tlc-ex solo cuando confirme en #soporte-op que ya quedó.
+  - [2026-10-13 16:40] userqa: Enrique 15:01 en #soporte-op dijo «Listo, se agregaron, favor de validar». Avisado a tlc-ex. Bitbucket no verificado por Kz.
+  - [2026-10-13 16:55] userqa: Enrique 16:53 dijo «listo, ya quedo en ambos repositorios». Avisado a tlc-ex. Bitbucket no abierto por Kz. SAS área usuaria hoy 17:00–18:30 Teams.
+  - [2026-10-13 18:08] 18:04 tlc-ex pidió segunda revisión de Samy: PR #25 #27 #29 #30 front TLC-G2 a prototype. Pasado por tubo a 192.168.1.96.
+  - [2026-10-13 18:12] Samy 18:12: PR #25 y #27 APTO a prototype; #29 APTO con advertencia del parser CSV; #30 NO APROBADO. Reenviado a tlc-ex.
+  - [2026-10-13 18:52] Josué preguntó en SAS2026-9 quién tiene HU-01 y el estatus para cerrar el sprint 1. Fecha objetivo 12/oct. Entregas TLC-G2 TG-18 a TG-32 (salvo huecos) movidas al 16/oct.
+  - [2026-10-13 21:06] Mañana: seguir la prueba del revisor de PRs. Si se sostiene, pasarlo a Fer y a Talía. Reglas en sas-legacy-migration, rama docs/reglas-revision, versión reglas-revision 2026-10-13.3.
+  - [2026-10-13 21:22] Kz dormida. Noche 13/10 con Samy de radar. Mañana: seguir la prueba del revisor y, si se sostiene, pasarlo a Fer y a Talía.

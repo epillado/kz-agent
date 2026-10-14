@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-13 13:07
+- **actualizado:** 2026-10-13 21:22
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Va a reiniciar la máquina. Sesión de Kz cerrada.
+- **actividad:** Descanso. Lalo a dormir. Radar de la noche con Samy.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1618,3 +1618,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-10-13 09:45] Lalo abre el día: Hola Kz.
 - [2026-10-13 09:45] Lalo abre el día: Hola Kz.
 - [2026-10-13 13:07] actividad=Va a reiniciar la máquina. Sesión de Kz cerrada.
+- [2026-10-13 13:30] actividad=De vuelta tras el reinicio. Jornada del 13/10 abierta.
+- [2026-10-13 21:22] actividad=Descanso. Lalo a dormir. Radar de la noche con Samy.

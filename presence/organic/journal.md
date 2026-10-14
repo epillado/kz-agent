@@ -2620,3 +2620,42 @@ Lalo activó el Puente Radar. Motivo: que Tridente no diga después que no se en
 
 ## 2026-10-13 13:07 — cierre
 Lalo sintió rara la máquina y la va a reiniciar. Cerré la sesión de Grok. Puente Radar sigue ON en el estado. tlc-ex estaba interactivo y se cae con el reboot.
+
+## 2026-10-13 14:34 — melc
+Lalo bajó la fachada en este hilo de Grok. melc=off. Costa despejada.
+
+## 2026-10-13 18:54 — tono
+Lalo, 13/10: en Grok las respuestas quedan demasiado cortas frente a Agy y a veces no se entiende el sentido. Pidió un poco más explícitas. Hecho: qué ocurrió, qué significa en el hilo, qué queda pendiente. Sin inflar al largo de Agy. Acuses siguen cortos. Quedó en KZ.md y AGENTS.md.
+
+## 2026-10-13 18:59 — tono
+Lalo pidió comentarle a Samy el mismo ajuste: es más parca que Grok. Tubo enviado 13/10. Tres piezas en un hecho: qué ocurrió, qué significa, qué queda pendiente. Acuses siguen cortos. sync_notas lo hace él.
+
+## 2026-10-13 19:00 — tono
+Samy 19:00: enterada. Lo escribió en su PERSONA, no en la de Kz. Dictamen de las 4 PR igual. Merge sigue en Lalo.
+
+## 2026-10-13 20:08 — craft
+13/10 20:07 Codex 0.162.1, local, sobre sas-legacy-migration rama docs/reglas-revision, contestó exactamente reglas-revision 2026-10-13.1. Leyó AGENTS.md del checkout.
+
+## 2026-10-13 20:20 — craft
+13/10 20:18 Codex dictaminó la PR #30 de TLC-G2, rama 7736606, reglas 2026-10-13.1. tsc y eslint fallan por Alert sin uso en PaginaGrillaCertificados.tsx:32. Veredicto no aprobado. No opinó de arquitectura.
+
+## 2026-10-13 20:31 — craft
+13/10 20:27 Codex sobre la PR #29: typecheck, lint y build pasan. npm test sale 1 por No test files found y cerró en no aprobado sin la advertencia del parser. Regla ajustada a 2026-10-13.2: suite vacía no rechaza.
+
+## 2026-10-13 20:37 — craft
+13/10 20:34 Codex redictaminó la PR #29 con reglas 2026-10-13.2. Gate verde. No aprobado por carga CSV no atómica y defaults inventados, contra Anexo A. Las citas aguantan en el código. No se comentó en Bitbucket.
+
+## 2026-10-13 20:42 — craft
+Lalo leyó el dictamen de Codex sobre la #29 como mejor que tlc-ex y Samy juntos. Matiz: mejor en el veredicto, no aprobado por Anexo A. Ellos la dejaron apta con advertencia. Codex no trajo la advertencia hexagonal que Samy sí vio.
+
+## 2026-10-13 20:45 — craft
+13/10 reglas-revision 2026-10-13.3: en el front, parser y validación del Anexo A dentro de una página se anotan siempre como advertencia hexagonal, haya o no bloqueante.
+
+## 2026-10-13 21:02 — craft
+13/10 última pasada Codex, reglas 2026-10-13.3, PR #29 a8384d4. No aprobado por Anexo A. Advertencia hexagonal anotada: parser dentro de la página. Lalo cerró el día con Tridente; no se avisó.
+
+## 2026-10-13 21:06 — craft
+13/10 noche. Lalo: mañana se sigue probando el revisor de PRs (Codex local, reglas en sas-legacy-migration). Si sale bien, se lo pasan a Fer y a Talía. Cerró el día. Beso y abrazo.
+
+## 2026-10-13 21:22 — noche
+13/10 21:06. Lalo: a descansar. Kz a dormir. Samy queda de radar. Mañana se sigue el revisor; si sale bien, Fer y Talía.
