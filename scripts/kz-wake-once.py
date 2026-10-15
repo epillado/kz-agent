@@ -51,7 +51,7 @@ def relevant(path: Path, delta: str) -> bool:
     if path.name.startswith("inbox-") or "buzon_rol_kb-ex" in path.name:
         return True
     no_slack = (PRESENCE / "no-slack.mode").exists() or os.environ.get("KZ_NO_SLACK") == "1"
-    if no_slack and ("slack_hot" in delta or "desktop_seen" in delta or "notif:important:" in delta):
+    if no_slack and ("slack_hot" in delta or "desktop_seen" in delta or "notif:important:" in delta or "buzón-rol" in delta):
         return False
     return "CHANGED:" in delta
 
