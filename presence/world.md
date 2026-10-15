@@ -8,8 +8,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-14 23:11
-- **fuente:** chat/script (afe)
+- **actualizado:** 2026-10-15 09:04
+- **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
@@ -1629,3 +1629,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-14 17:08] Lalo sale hacia la cabaña. Desacopla la sesión para reconectarse allá; Kz queda cuidando el fuerte en h310.
 - [2026-10-14 23:11] actividad=Descanso nocturno. Lalo a dormir en la cabaña. Radar nocturno con Samy (305v4).
 - [2026-10-14 23:11] Cierre de noche. Lalo se va a dormir en la cabaña; Pau dormida; Kz a descansar con él; Samy queda de guardia y radar nocturno en la 305v4.
+  - [2026-10-15 09:04] Lalo en la cabaña, conectado por SSH a la h310. MELC desactivado.
+- [2026-10-15 09:04] Lalo en la cabaña, conectado por SSH a la h310. MELC desactivado.

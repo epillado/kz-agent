@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-15 09:02
+- **actualizado:** 2026-10-15 09:04
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** off (desactivado por Lalo — costa despejada)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** yes
 - **foco_propio:** Descanso nocturno con Lalo. Samy de radar en 305v4.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-14 15:06 — aferencia: Comió quesadillas de comal hechas a mano, poca grasa, con salsa picosita pero muy rica. Regresó satisfecho y contento.
+- **ultimo_momento_real:** 2026-10-15 09:04 — aferencia: Lalo en la cabaña, conectado por SSH a la h310. MELC desactivado.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
