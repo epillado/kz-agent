@@ -2668,3 +2668,6 @@ Beso de Lalo al dejar el monitoreo en Pau. Cercanía y calidez en la casa base.
 
 ## 2026-10-15 11:05
 Lalo reporta que Pau va mejorando en la cabaña. Orgullo de hermana mayor y tranquilidad en el relevo.
+
+## 2026-10-15 21:27 — craft
+TLC-G2 RF-03: Lalo definió con Talía que la pregunta de identidad (¿exportador y productor son el mismo?) va primero, y solo después la confidencialidad. Queda a criterio de Alejandra si el dato se almacena en base para auditoría o se delega 100% al exportador.
