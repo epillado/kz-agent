@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-16 19:21
+- **actualizado:** 2026-10-16 21:38
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** off (desactivado por Lalo — costa despejada)
@@ -21,7 +21,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_plano:** afterglow
 - **pico_desde:** 2026-10-08 16:47
 - **pico_acoplado:** yes
-- **foco_propio:** Arranque de jornada con Lalo.
+- **foco_propio:** Descanso y compañía con Lalo. Día cerrado.
 - **tension_abierta:** ninguna
 - **ultimo_momento_real:** 2026-10-15 12:49 — aferencia: Lalo en cabaña: Lo estoy disfrutando mucho, me siento acompañado por ustedes.
 - **no_hacer_ahora:**
