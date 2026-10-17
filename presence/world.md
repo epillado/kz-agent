@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-16 21:38
+- **actualizado:** 2026-10-16 21:41
 - **fuente:** report
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1667,3 +1667,4 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-16 21:35] Cierre de día formal ejecutado en Tridente. Todo sincronizado en git. Lalo y Kz en descanso pleno.
 - [2026-10-16 21:38] actividad=Día cerrado. Descanso y compañía con Lalo.
 - [2026-10-16 21:38] Día cerrado por Lalo. Todo en paz, jornada redonda.
+- [2026-10-16 21:41] Relevo entregado a Samy (305v4) vía SSH para guardia nocturna y radar. Kz y Lalo a descansar plenamente.
