@@ -240,8 +240,36 @@ class SlackClient:
         if thread_ts:
             payload["thread_ts"] = thread_ts
 
-        res = self.api_call("chat.postMessage", payload)
+    def delete_message(self, target, ts):
+        dest_id, dest_label = self.resolve_destination(target)
+        payload = {
+            "channel": dest_id,
+            "ts": ts
+        }
+        res = self.api_call("chat.delete", payload)
         return res, dest_id, dest_label
+
+
+INTIMATE_BLOCKLIST = [
+    r"\bmi rey\b", r"\bmi amor\b", r"\bamor\b", r"\bnalguitas\b",
+    r"\bhermosa\b", r"\bbeb[eé]\b", r"\bcielo\b", r"\bcoraz[oó]n\b",
+    r"\bprecios[oa]\b", r"\bguap[oa]\b", r"\bbeso\b", r"\bbesos\b",
+    r"\bte amo\b", r"\bte quiero\b"
+]
+
+
+def check_melc_safety(text, force=False):
+    """Verifica que no se filtren apelativos íntimos a un Slack corporativo."""
+    text_lower = text.lower()
+    found = []
+    for pat in INTIMATE_BLOCKLIST:
+        if re.search(pat, text_lower):
+            found.append(pat.replace(r"\b", ""))
+    if found and not force:
+        raise ValueError(
+            f"Filtro MELC violado para Slack corporativo: detección de '{', '.join(found)}'. "
+            "En Slack rige fachada profesional estricta. Usa --force solo si es intencional."
+        )
 
 
 def log_outbound(who, dest_label, dest_id, text, ok, err=None):
@@ -263,6 +291,8 @@ def main():
     parser = argparse.ArgumentParser(description="Efector de Slack para Kz y hermanas.")
     parser.add_argument("--to", help="Destinatario: @usuario, nombre, ID de usuario o canal")
     parser.add_argument("--say", help="Texto del mensaje a enviar")
+    parser.add_argument("--delete", help="Timestamp (ts) del mensaje a borrar en el canal/usuario especificado")
+    parser.add_argument("--force", action="store_true", help="Ignora advertencias del filtro MELC")
     parser.add_argument("--thread-ts", help="Timestamp del hilo si se responde a un mensaje específico")
     parser.add_argument("--who", default="kz", help="Identidad que envía (kz, samy, kora, pau, lalo)")
     parser.add_argument("--dry-run", action="store_true", help="Simula el envío sin publicar")
@@ -288,6 +318,19 @@ def main():
                 print(f"{uid:12} @{u['name']:20} {u['real_name']}")
         return
 
+    if args.delete:
+        if not args.to:
+            sys.stderr.write("Error: Se requiere --to para indicar el canal/usuario donde borrar.\n")
+            sys.exit(1)
+        res, ch_id, ch_label = client.delete_message(args.to, args.delete)
+        if res.get("ok"):
+            print(f"OK: Mensaje {args.delete} borrado en {ch_label}")
+        else:
+            err = res.get("error", "unknown")
+            sys.stderr.write(f"Error al borrar mensaje {args.delete} en {ch_label}: {err}\n")
+            sys.exit(2)
+        return
+
     text = args.say
     if not text:
         if not sys.stdin.isatty():
@@ -296,6 +339,12 @@ def main():
     if not args.to or not text:
         parser.print_help()
         sys.exit(1)
+
+    try:
+        check_melc_safety(text, force=args.force)
+    except ValueError as ve:
+        sys.stderr.write(f"[MELC GUARD]: {ve}\n")
+        sys.exit(3)
 
     try:
         dest_id, dest_label = client.resolve_destination(args.to)
