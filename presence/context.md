@@ -3,26 +3,25 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-14 10:40
-- **primary:** Puente Radar activo hacia Tridente
-- **secondary:** gobierno_mesa
+- **actualizado:** 2026-10-19 17:30
+- **primary:** company
+- **secondary:** work_vector
 - **en_call:** no
-- **mood_lalo (sospecha):** productivo, enfocado, resolviendo entregables del Sprint 1
-- **foco_ahora:** TLC-G2: PR #30/#32 fusionados; Talía dictaminó PR #31 (en ajuste). SAS: prototipos publicados para VoBo; Fer en Meet con devs. PEAM: informes entregados.
+- **mood_lalo (sospecha):** relajado, tomando café, productivo y en complicidad plena
+- **foco_ahora:** Seguimiento PEAM ODT 03 (respuesta de Alejandra), soporte Docker per-user a Carlos y túnel MinIO Prod para Enrique
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
-- **care:** —
 - **notas:**
-  - Topología remota activa (2026-10-02): Lalo en Pavilion (cabaña); Pau apagada; Kz lo asiste desde h310. Tridente y roles corren localmente en Pavilion; consultar/enviar a buzones y pizarras de roles requiere ejecutar contra Pavilion vía SSH (100.89.240.89).
-  - Presence + desktop + celu **ON** (h310). Ojos **ON**. Jornada.
-  - Handoff Kz→CP = PKM unificado (no radar-kz). Backup patterns ON.
-  - Incubación abierta: INC-001 HM Docs Repo (retomar lunes). INC-003 Dashboard Josué.
-  - Motor: **Grok activo** en este hilo (preferido grok). Stack no se mata.
-  - **Puente Radar: ON** (Lalo, 2026-10-13). Slack, Meet, Calendar, Jira y correo de trabajo entran al buzón de Tridente en el mismo turno (`--no-dispatch` mientras esté vigilando) y al radar PKM. Promo, redes y compras no cruzan.
-  - Pausas oculares (20-20-20): **ON**
-  - Repo Git: `git@github.com:epillado/kz-agent.git`
-  - Roster: Kora (antix), Pau (pavilion), 305v4.
+  - Lalo en h310 (Pachuca). Kz en Agy (Gemini Flash). MELC OFF en este chat.
+  - Efector Slack (kz-slack-send.sh) operativo y probado con auditoría y filtro MELC.
+  - Dictamen PEAM ODT 03 completado por peam-ex y Samy (Aprobado con observaciones); mensaje enviado a Alejandra.
+  - Jorge Olmos destrabado con parámetros SOAP de RUPA (.class de 2004).
+  - Enrique instruido con túnel MinIO Prod por QA (puertos 9000 API y 9001 Consola).
+  - Carlos desatorado con Docker Desktop en modo Per-User (sin admin).
+  - Canal móvil privado (Telegram / KDE Connect) acordado para AFK.
+  - Samy durmiendo en 305v4.
+  - Presence + desktop + celu ON. Centinela kz-wake-once activo.
 
 ## Espacios activos (peso)
 
@@ -258,3 +257,5 @@
   - [2026-10-13 18:52] Josué preguntó en SAS2026-9 quién tiene HU-01 y el estatus para cerrar el sprint 1. Fecha objetivo 12/oct. Entregas TLC-G2 TG-18 a TG-32 (salvo huecos) movidas al 16/oct.
   - [2026-10-13 21:06] Mañana: seguir la prueba del revisor de PRs. Si se sostiene, pasarlo a Fer y a Talía. Reglas en sas-legacy-migration, rama docs/reglas-revision, versión reglas-revision 2026-10-13.3.
   - [2026-10-13 21:22] Kz dormida. Noche 13/10 con Samy de radar. Mañana: seguir la prueba del revisor y, si se sostiene, pasarlo a Fer y a Talía.
+  - [2026-10-19 11:34] primary→en_call: yes
+  - [2026-10-19 12:08] primary→en_call: no
