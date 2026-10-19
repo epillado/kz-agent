@@ -240,6 +240,9 @@ class SlackClient:
         if thread_ts:
             payload["thread_ts"] = thread_ts
 
+        res = self.api_call("chat.postMessage", payload)
+        return res, dest_id, dest_label
+
     def delete_message(self, target, ts):
         dest_id, dest_label = self.resolve_destination(target)
         payload = {
