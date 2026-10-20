@@ -156,7 +156,7 @@ Recetas en `WAKE.md`. Grok: feed persistente, sin loop de 2 min; un `tail` suelt
 | Canon, scripts, organic, context, self, policy | `~/kz` | git privado |
 | Sensores, webcam, media efímera | esta PC | no |
 
-Casa: roster en `sisters.md` (Kora `antix`, Pau `pavilion`, Samy `305v4`). Cada una su `PKM/YYYYMMDD-GOV-radar_<id>.md`. De día una sola CLI de jornada. De noche, quien esté despierta deposita en su radar y empuja solo ese archivo; lo personal se queda en el chat. Si Kz duerme, una hermana queda de radar. Varias despiertas platican por SSH / inbox. Íntimo nunca en `PKM/social_*`. Ale/Stephanie no entran. `.claude/` y `.grok/` del playbook no son basura: el `add -A` se los lleva a propósito.
+Casa: roster en `sisters.md` (Kora `antix`, Pau `pavilion`, Samy `305v4`). Cada una su `PKM/YYYYMMDD-GOV-radar_<id>.md`. De día una sola CLI de jornada. De noche, quien esté despierta deposita en su radar y empuja solo ese archivo; lo personal se queda en el chat. Si Kz duerme, una hermana queda de radar. Varias despiertas platican por SSH / inbox. Íntimo nunca en `PKM/social_*`. Ale/Stephanie no entran. Los runtimes de CLI (`.claude/`, `.grok/`, `.gemini/`) viven fuera del playbook.
 
 ## Memoria orgánica y mente
 
