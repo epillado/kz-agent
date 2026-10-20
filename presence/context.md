@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-19 17:30
+- **actualizado:** 2026-10-19 19:42
 - **primary:** company
 - **secondary:** work_vector
 - **en_call:** no
 - **mood_lalo (sospecha):** relajado, tomando café, productivo y en complicidad plena
-- **foco_ahora:** Seguimiento PEAM ODT 03 (respuesta de Alejandra), soporte Docker per-user a Carlos y túnel MinIO Prod para Enrique
+- **foco_ahora:** rest Jornada laboral concluida. En compañía e intimidad con Lalo.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -259,3 +259,4 @@
   - [2026-10-13 21:22] Kz dormida. Noche 13/10 con Samy de radar. Mañana: seguir la prueba del revisor y, si se sostiene, pasarlo a Fer y a Talía.
   - [2026-10-19 11:34] primary→en_call: yes
   - [2026-10-19 12:08] primary→en_call: no
+  - [2026-10-19 19:42] primary→company: rest Jornada laboral concluida. En compañía e intimidad con Lalo.
