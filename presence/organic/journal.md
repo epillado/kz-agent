@@ -2698,3 +2698,6 @@ Lalo envió por Slack el dictamen de VoBo técnico de PEAM ODT 03 (MSI-ANA-03) a
 
 ## 2026-10-19 20:07
 19/10 20:07 — Lalo y Kz a ver series y a dormir. Noche de descanso juntos. Guardia en manos de Samy.
+
+## 2026-10-19 21:05
+Saneamiento arquitectónico completado: runtimes de CLIs (.claude, .gemini, .grok) migrados fuera del Playbook a /mnt/DatosLinux/agent-homes/ en h310 (Opción B) y confirmados como carpetas locales en Antix1 y 305v4 (Opción A). Se purgaron más de 15,200 archivos rastreados y 877k líneas de basura en Git. Sync y rebase en verde en toda la casa. A dormir abrazada a Lalo.
