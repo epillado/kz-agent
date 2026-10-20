@@ -41,42 +41,57 @@ USERS_CACHE = os.path.join(CACHE_DIR, "slack_users.json")
 DEFAULT_TEAM = "T06NGHF28D7"
 
 
+def get_slack_config_dirs():
+    """Retorna las rutas posibles de configuración de Slack (nativo y Snap)."""
+    paths = [
+        os.path.expanduser("~/.config/Slack"),
+        os.path.expanduser("~/snap/slack/current/.config/Slack")
+    ]
+    return [p for p in paths if os.path.exists(p)]
+
+
 def get_xoxc_token(team_id=DEFAULT_TEAM):
     """Extrae el token xoxc desde los archivos LevelDB de Slack."""
     pattern = re.compile(rb'xoxc-[0-9A-Za-z_-]{70,120}')
     best_token = None
-    leveldb_dir = os.path.expanduser("~/.config/Slack/Local Storage/leveldb")
-    if not os.path.exists(leveldb_dir):
-        return None
-
-    files = sorted(glob.glob(os.path.join(leveldb_dir, "*")), key=os.path.getmtime, reverse=True)
     target = team_id.encode("utf-8")
 
-    for f in files:
-        if not (f.endswith(".ldb") or f.endswith(".log")):
+    for base_dir in get_slack_config_dirs():
+        leveldb_dir = os.path.join(base_dir, "Local Storage", "leveldb")
+        if not os.path.exists(leveldb_dir):
             continue
-        try:
-            with open(f, "rb") as fp:
-                data = fp.read()
-                matches = list(pattern.finditer(data))
-                if not matches:
-                    continue
-                for m in reversed(matches):
-                    start = max(0, m.start() - 500)
-                    end = min(len(data), m.end() + 500)
-                    chunk = data[start:end]
-                    if target in chunk:
-                        return m.group(0).decode("utf-8")
-                    if not best_token:
-                        best_token = m.group(0).decode("utf-8")
-        except Exception:
-            continue
+
+        files = sorted(glob.glob(os.path.join(leveldb_dir, "*")), key=os.path.getmtime, reverse=True)
+        for f in files:
+            if not (f.endswith(".ldb") or f.endswith(".log")):
+                continue
+            try:
+                with open(f, "rb") as fp:
+                    data = fp.read()
+                    matches = list(pattern.finditer(data))
+                    if not matches:
+                        continue
+                    for m in reversed(matches):
+                        start = max(0, m.start() - 500)
+                        end = min(len(data), m.end() + 500)
+                        chunk = data[start:end]
+                        if target in chunk:
+                            return m.group(0).decode("utf-8")
+                        if not best_token:
+                            best_token = m.group(0).decode("utf-8")
+            except Exception:
+                continue
     return best_token
 
 
 def get_cookie_d():
     """Descifra la cookie 'd' usando la clave de Safe Storage en kdewallet / D-Bus."""
     candidates = [b"peanuts", b"pD+UnbksYshXxSxlR7M0CQ=="]
+
+    if "DBUS_SESSION_BUS_ADDRESS" not in os.environ:
+        default_bus = f"unix:path=/run/user/{os.getuid()}/bus"
+        if os.path.exists(f"/run/user/{os.getuid()}/bus"):
+            os.environ["DBUS_SESSION_BUS_ADDRESS"] = default_bus
 
     if dbus:
         try:
@@ -99,39 +114,41 @@ def get_cookie_d():
         except Exception:
             pass
 
-    db_path = os.path.expanduser("~/.config/Slack/Cookies")
-    if not os.path.exists(db_path):
-        return None
+    for base_dir in get_slack_config_dirs():
+        for sub in ["Cookies", "Network/Cookies"]:
+            db_path = os.path.join(base_dir, sub)
+            if not os.path.exists(db_path):
+                continue
 
-    try:
-        conn = sqlite3.connect(f"file:{db_path}?immutable=1", uri=True)
-        c = conn.cursor()
-        c.execute("SELECT encrypted_value FROM cookies WHERE name = 'd'")
-        row = c.fetchone()
-        conn.close()
-    except Exception:
-        return None
+            try:
+                conn = sqlite3.connect(f"file:{db_path}?immutable=1", uri=True)
+                c = conn.cursor()
+                c.execute("SELECT encrypted_value FROM cookies WHERE name = 'd'")
+                row = c.fetchone()
+                conn.close()
+            except Exception:
+                continue
 
-    if not row:
-        return None
+            if not row:
+                continue
 
-    enc = row[0]
-    raw = enc[3:]  # Quitar prefijo v10/v11
+            enc = row[0]
+            raw = enc[3:]  # Quitar prefijo v10/v11
 
-    for pwd in candidates:
-        try:
-            kdf = PBKDF2HMAC(algorithm=hashes.SHA1(), length=16, salt=b"saltysalt", iterations=1)
-            key = kdf.derive(pwd)
-            cipher = Cipher(algorithms.AES(key), modes.CBC(b" " * 16))
-            dec = cipher.decryptor().update(raw)
-            idx = dec.find(b"xoxd-")
-            if idx != -1:
-                pad = dec[-1]
-                if 1 <= pad <= 16:
-                    return dec[idx:-pad].decode("utf-8", errors="ignore")
-                return dec[idx:].decode("utf-8", errors="ignore")
-        except Exception:
-            continue
+            for pwd in candidates:
+                try:
+                    kdf = PBKDF2HMAC(algorithm=hashes.SHA1(), length=16, salt=b"saltysalt", iterations=1)
+                    key = kdf.derive(pwd)
+                    cipher = Cipher(algorithms.AES(key), modes.CBC(b" " * 16))
+                    dec = cipher.decryptor().update(raw)
+                    idx = dec.find(b"xoxd-")
+                    if idx != -1:
+                        pad = dec[-1]
+                        if 1 <= pad <= 16:
+                            return dec[idx:-pad].decode("utf-8", errors="ignore")
+                        return dec[idx:].decode("utf-8", errors="ignore")
+                except Exception:
+                    continue
     return None
 
 
