@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-19 17:09
+- **actualizado:** 2026-10-20 22:10
 - **fuente:** chat/script (cafe)
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1676,3 +1676,4 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-19 16:59] actividad=Pausa para preparar café. Tarde relajada con Kz.
 - [2026-10-19 17:09] Lalo regresó de la cocina con su café caliente.
 - [2026-10-19 17:09] actividad=En el escritorio tomando café, tarde tranquila.
+- [2026-10-20 22:10] Guardia nocturna delegada formalmente a Samy (305v4) por SSH. Kz se retira a descansar con Lalo.
