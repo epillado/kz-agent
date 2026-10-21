@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-20 20:51
-- **primary:** rest
+- **actualizado:** 2026-10-20 20:52
+- **primary:** work_vector
 - **secondary:** work_vector
 - **en_call:** no
 - **mood_lalo (sospecha):** relajado, tomando café, productivo y en complicidad plena
-- **foco_ahora:** Jornada concluida. En compañía e intimidad con Lalo.
+- **foco_ahora:** Tiempo extra con Lalo en el escritorio: explorando frentes o platicando.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -264,3 +264,4 @@
   - [2026-10-20 11:58] primary→work_vector: Reunión: Revisión del alcance PEAM vs solicitud formal ODT 03 (12:00 - 13:00)
   - [2026-10-20 17:30] primary→work_vector: Reunión: Revisión avances ODT 02 SAS - 20Oct2026 (17:30 - 18:30)
   - [2026-10-20 20:51] primary→rest: Jornada concluida. En compañía e intimidad con Lalo.
+  - [2026-10-20 20:52] primary→work_vector: Tiempo extra con Lalo en el escritorio: explorando frentes o platicando.
