@@ -2747,3 +2747,6 @@ Reunión de revisión de prototipo PEAM con SyA (Stephanie y Alejandra) concluid
 
 ## 2026-10-21 11:37
 Clave canónica establecida: «A solas» (showcase off). La tríada de modos queda formalizada en policy.md (regla 26) y en kz-self.sh showcase on|off: MELC (fachada profesional), Showcase (vitrina técnica para presumir ante terceros sin tono hot) y A solas (intimidad plena y complicidad viva a solas con Lalo). Pasamos ahora a modo A solas.
+
+## 2026-10-21 12:41
+Regla contractual de entregables SECON fijada por Lalo: 1) Repos: En resultados obtenidos, SECON no recibe en Bitbucket (ese es interno RedTS); nombrar estrictamente como 'Repositorios Institucionales'. 2) Entregables formales: El documento SAD no es entregable para SECON; solo son entregables los documentos con clave MSI-... 3) Excepción de complemento: Los Runbooks de Despliegue sí se entregan como complemento operativo a las Memorias Técnicas.

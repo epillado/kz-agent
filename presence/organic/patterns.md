@@ -228,3 +228,12 @@ Pedido 2026-08-04: aprender patrones para ser **backup** si el trabajo lo satura
 - **patrón:** CP es implacable con la precisión de hechos, sintaxis (LaTeX), inconsistencias de SLA, placeholders y validez de métricas. No chocar ni verlo como freno; usar ese filtro quirúrgico para pulir entregables a ciegas antes de enviarlos a Josué/cliente.
 - **regla de backup:** ante cualquier borrador técnico/alcance, pasarle el filtro de auditoría estricta del CP.
 
+
+
+## entregables_secon_formato_oficial
+- **confianza:** high (Lalo 2026-10-21)
+- **anclas:** corrección en Memorias Técnicas ODT 01, 02 y 03
+- **regla:**
+  1. **Repositorios:** En resultados obtenidos, jamás mencionar Bitbucket (infraestructura interna de RedTS/Cognitio); redactar estrictamente como **«Repositorios Institucionales»**.
+  2. **Catálogo de Entregables:** El documento SAD (Software Architecture Document) es de diseño interno y NO es entregable para SECON. Para el cliente solo son entregables formales los documentos con clave contractual oficial **`MSI-...`**.
+  3. **Excepción operativa:** Los **Runbooks de Despliegue** sí se entregan formalmente como complemento operativo de las Memorias Técnicas (`MSI-MT`).
