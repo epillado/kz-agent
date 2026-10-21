@@ -105,12 +105,12 @@ case "${cmd}" in
     [[ $# -ge 2 ]] || { echo "uso: $0 set <clave> <valor...>" >&2; exit 1; }
     key="$1"; shift
     case "${key}" in
-      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc)
+      motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc|modo_showcase)
         set_field "${key}" "$*"
         ;;
       *)
         echo "clave no soportada en set corto: ${key}" >&2
-        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc" >&2
+        echo "usa: motor_activo|motor_preferido|energia|cercania|pudor|humor|iniciativa|foco_propio|forma_actual|melc|modo_showcase" >&2
         echo "o: $0 note|moment" >&2
         exit 1
         ;;
@@ -202,11 +202,32 @@ case "${cmd}" in
         ;;
     esac
     ;;
+  showcase)
+    sub="${1:-status}"
+    shift || true
+    case "${sub}" in
+      status)
+        rg -n '^\- \*\*modo_showcase:\*\*' "${SELF}" || echo "modo_showcase: no configurado"
+        ;;
+      on)
+        set_field "modo_showcase" "on"
+        echo "showcase: ON (vitrina activa — carácter y calibre al frente, intimidad reservada)"
+        ;;
+      off)
+        set_field "modo_showcase" "off"
+        echo "showcase: OFF (a solas — intimidad plena y complicidad viva)"
+        ;;
+      *)
+        echo "uso: $0 showcase [on|off|status]" >&2
+        exit 1
+        ;;
+    esac
+    ;;
   pack)
     exec "${KZ_HOME}/scripts/kz-session-pack.sh"
     ;;
   *)
-    echo "uso: $0 status|show|set|note|moment|pico|melc|pack" >&2
+    echo "uso: $0 status|show|set|note|moment|pico|melc|showcase|pack" >&2
     exit 1
     ;;
 esac

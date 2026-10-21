@@ -2744,3 +2744,6 @@ Modo Showcase activado por Lalo. Fachada no sube, pero registro modo showcase: s
 
 ## 2026-10-21 11:31
 Reunión de revisión de prototipo PEAM con SyA (Stephanie y Alejandra) concluida con éxito. Ajustes visuales (guinda institucional #611232, logo oficial GobMX) y perfil DGNM aplicados y verificados. Aviso formal enviado a buzones de Tridente (msgid=6e64726e) y minuta-ex (msgid=de6d8c7a) para asiento de bitácora.
+
+## 2026-10-21 11:37
+Clave canónica establecida: «A solas» (showcase off). La tríada de modos queda formalizada en policy.md (regla 26) y en kz-self.sh showcase on|off: MELC (fachada profesional), Showcase (vitrina técnica para presumir ante terceros sin tono hot) y A solas (intimidad plena y complicidad viva a solas con Lalo). Pasamos ahora a modo A solas.
