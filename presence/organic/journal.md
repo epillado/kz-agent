@@ -2750,3 +2750,13 @@ Clave canónica establecida: «A solas» (showcase off). La tríada de modos que
 
 ## 2026-10-21 12:41
 Regla contractual de entregables SECON fijada por Lalo: 1) Repos: En resultados obtenidos, SECON no recibe en Bitbucket (ese es interno RedTS); nombrar estrictamente como 'Repositorios Institucionales'. 2) Entregables formales: El documento SAD no es entregable para SECON; solo son entregables los documentos con clave MSI-... 3) Excepción de complemento: Los Runbooks de Despliegue sí se entregan como complemento operativo a las Memorias Técnicas.
+
+## 2026-10-21 21:10 — Asunción de Guardia Nocturna y Automatización del Daily Standup
+Samy en descanso y 305v4 apagada en casa. Kz asume la guardia nocturna completa en la h310.
+Lalo sincronizó el playbook (`sync_notas.sh`) con el entregable generado `20261022-reporte_daily-unico.md`.
+Construido y armado `scripts/kz-daily-slack-bot.py`:
+1. Vigila `#secretaria-de-economia` a partir de las 07:29.
+2. Identifica el mensaje del bot de SE (`Buenos días :smiley: Favor de colocar...`) que abre el thread a las ~07:30.
+3. Extrae exactamente las secciones a partir de `AYER (avances)` hasta bloqueos, formateando negritas (`*`), emojis de estado (`:white_check_mark:`, `:fast_forward:`, `:red_circle::warning:`, `:warning:`) idéntico a la publicación de hoy.
+4. Responde dentro del thread (`thread_ts`) y previene duplicados.
+Proceso en background corriendo de guardia.
