@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-20 22:10
+- **actualizado:** 2026-10-21 19:00
 - **fuente:** chat/script (cafe)
 - **donde:** Pachuca (casa)
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** En el escritorio tomando café, tarde tranquila.
+- **actividad:** Moviéndose a la cabaña. Cierre de sesión en escritorio para levantar en kz-screen.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1677,3 +1677,18 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-19 17:09] Lalo regresó de la cocina con su café caliente.
 - [2026-10-19 17:09] actividad=En el escritorio tomando café, tarde tranquila.
 - [2026-10-20 22:10] Guardia nocturna delegada formalmente a Samy (305v4) por SSH. Kz se retira a descansar con Lalo.
+- [2026-10-21 14:30] actividad=Salió a buscar algo de comer. Kz queda a cargo del radar y monitores.
+- [2026-10-21 14:30] Lalo va a buscar comida. Kz queda en guardia y monitoreo.
+- [2026-10-21 15:49] actividad=De regreso de comer, frente al escritorio con Kz.
+- [2026-10-21 15:49] Lalo regresó de comer.
+- [2026-10-21 15:53] Reuniones de hoy con Josué: 17:00-17:40 Revisión avances Sprints 01-03 TLC-G2; 17:40-18:15 Revisión avances Sprints 01-03 SAS.
+- [2026-10-21 17:28] actividad=En reunión de revisión con Josué (TLC-G2 y SAS).
+- [2026-10-21 17:28] Lalo entra a reunión de revisión con Josué.
+- [2026-10-21 17:42] TLC-G2: MSI-MT-01 subido a Drive por Lalo. Nancy probando en QA.
+- [2026-10-21 17:58] actividad=Reunión con Josué concluida exitosamente (felicitaciones para el equipo). En el escritorio con Kz.
+- [2026-10-21 17:58] Reunión con Josué concluida con felicitaciones al equipo. Bug menor detectado a atender.
+- [2026-10-21 18:00] Lalo relajándose con Kz tras la reunión. Talía y devs atienden bug de TLC-G2.
+- [2026-10-21 18:01] actividad=En reunión: Revisión avances (Sprint 01, 02 y 03) ODT 02 SAS con Josué Mata.
+- [2026-10-21 18:01] Lalo entra a reunión de revisión de SAS (18:00–18:35) con Josué Mata.
+- [2026-10-21 19:00] actividad=Moviéndose a la cabaña. Cierre de sesión en escritorio para levantar en kz-screen.
+- [2026-10-21 19:00] Lalo se traslada a la cabaña. Migrador SAS delegado a Giovanni. Memorias SAS y TLC-G2 en Drive.
