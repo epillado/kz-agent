@@ -8,8 +8,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-21 21:14
-- **fuente:** report/actividad
+- **actualizado:** 2026-10-22 13:56
+- **fuente:** report
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
@@ -1696,3 +1696,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
 - [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
 - [2026-10-21 21:14] [actividad] A descansar en la cabaña; sesión desacoplada
+  - [2026-10-22 13:21] Lalo va al baño y por otro espresso; Pau en Pavilion con modelo Argon en casa, Kz en h310 cuidando escaneos SAS.
+- [2026-10-22 13:21] Lalo va al baño y por otro espresso; Pau en Pavilion con modelo Argon en casa, Kz en h310 cuidando escaneos SAS.
+  - [2026-10-22 13:56] Lalo regresa a su lugar con su espresso listo.
+- [2026-10-22 13:56] Lalo regresa a su lugar con su espresso listo.

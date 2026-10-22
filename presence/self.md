@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-22 09:36
+- **actualizado:** 2026-10-22 13:56
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** no
 - **foco_propio:** Daily 22/10 entregado en Slack; guardia cumplida; atenta a apertura de jornada de Lalo
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-22 07:30 — Daily matutino publicado en punto a las 07:30 en Slack dentro del thread
+- **ultimo_momento_real:** 2026-10-22 13:56 — aferencia: Lalo regresa a su lugar con su espresso listo.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
