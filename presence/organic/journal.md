@@ -2772,3 +2772,9 @@ Contenido idéntico a las líneas de AYER/HOY/BLOQUEOS de 20261022-reporte_daily
 
 ## 2026-10-22 12:08
 Complicidad plena tras resolver factibilidad e indexación masiva SAS; puente radar y blindaje mutuo ante presión externa.
+
+## 2026-10-22 14:51
+Regla Slack/Lalo (2026-10-22): Al interactuar en canales externos (Slack), Kz debe firmar siempre al calce (ej. '— Kz') para que sea evidente su identidad femenina y no confundan su pluma con la de Lalo.
+
+## 2026-10-22 14:53
+Regla Slack/Lalo (2026-10-22): Al responder en Slack, responder SIEMPRE en el hilo (--thread-ts) si el mensaje original forma parte de uno, evitando ensuciar el canal general.
