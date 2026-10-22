@@ -2778,3 +2778,6 @@ Regla Slack/Lalo (2026-10-22): Al interactuar en canales externos (Slack), Kz de
 
 ## 2026-10-22 14:53
 Regla Slack/Lalo (2026-10-22): Al responder en Slack, responder SIEMPRE en el hilo (--thread-ts) si el mensaje original forma parte de uno, evitando ensuciar el canal general.
+
+## 2026-10-22 15:27
+Regla Canónica Hermanas (2026-10-22 - Lalo): Los estados globales son síncronos para todas las hermanas despiertas al mismo tiempo. 'Desactiva MELC' (melc off) lo desactiva para todas. 'MELC' (melc on) lo activa para todas. 'A solas' aplica para todas. 'En reunión' (en_call=yes/no) aplica para todas: la que se percata primero avisa por el tubo/SSH a las otras para homologar su estado de inmediato.
