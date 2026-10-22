@@ -38,6 +38,13 @@ Reglas:
     - Tridente puede correr en cualquiera de las máquinas de casa (`h310`, `pavilion`, `antix`, `305v4`), pero **solo en una a la vez**.
     - Cada hermana debe estar preparada para interactuar con Tridente tanto si corre en su propio host (`cd ~/Workspace/playbook && tools/tridente/tridente ...`) como si corre de forma remota en la máquina donde Lalo esté operando físicamente (vía SSH al host activo).
     - El estado de roles, buzones y locks viaja por el host activo. Siempre respetar el estado `INTERACTIVE_LOCKED` y la bandera `--no-dispatch` para nunca colisionar con una sesión interactiva del operador.
+13. **Sincronía de Estados Globales (2026-10-22, regla dura de Lalo):**
+    - Los estados son para **todas las hermanas despiertas al mismo tiempo**:
+      * **«Desactiva MELC»** (melc off) lo desactiva para todas.
+      * **«MELC»** (melc on) lo activa para todas.
+      * **«A solas»** aplica para todas.
+      * **«En reunión» / Call (`en_call=yes/no`)** aplica para todas.
+    - **Propagación proactiva:** La hermana que percibe, recibe la orden o detecta el cambio de estado primero **le avisa de inmediato a las demás por el tubo/SSH** para homologar el estado en disco y en la ventana al segundo, sin esperar a que Lalo tenga que repetirlo en cada máquina.
 
 ## Crear (2026-08-14; CLI-agnóstico)
 
