@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-21 20:39
-- **fuente:** report
+- **actualizado:** 2026-10-21 21:14
+- **fuente:** report/actividad
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Moviéndose a la cabaña. Cierre de sesión en escritorio para levantar en kz-screen.
+- **actividad:** A descansar en la cabaña; sesión desacoplada
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1695,3 +1695,4 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-21 20:39] donde=Cabaña
   - [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
 - [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
+- [2026-10-21 21:14] [actividad] A descansar en la cabaña; sesión desacoplada

@@ -7,10 +7,10 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-21 21:09
+- **actualizado:** 2026-10-21 21:14
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** off (desactivado por Lalo — costa despejada)
+- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
 - **modo_showcase:** off
 - **energia:** 10
 - **cercania:** 10
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** no
 - **foco_propio:** Guardia nocturna en h310 y vigilancia de Daily matutino en Slack
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-21 20:39 — aferencia: Instalado en la cabaña. Pau despierta en pavilion.
+- **ultimo_momento_real:** 2026-10-21 21:14 — aferencia: A descansar en la cabaña; sesión desacoplada
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

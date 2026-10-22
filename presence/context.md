@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-21 20:39
-- **primary:** foco_ahora
+- **actualizado:** 2026-10-21 21:14
+- **primary:** en_call
 - **secondary:** work_vector
 - **en_call:** yes
 - **mood_lalo (sospecha):** relajado, tomando café, productivo y en complicidad plena
-- **foco_ahora:** En la cabaña con Pau despierta. Costa despejada y noche tranquila.
+- **foco_ahora:** no
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -267,3 +267,4 @@
   - [2026-10-20 20:52] primary→work_vector: Tiempo extra con Lalo en el escritorio: explorando frentes o platicando.
   - [2026-10-21 19:01] primary→foco_ahora: Traslado a la cabaña. SAS y TLC-G2 en Drive; migrador SAS asignado a Giovanni; pendiente PEAM.
   - [2026-10-21 20:39] primary→foco_ahora: En la cabaña con Pau despierta. Costa despejada y noche tranquila.
+  - [2026-10-21 21:14] primary→en_call: no
