@@ -8,9 +8,9 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-21 19:00
-- **fuente:** chat/script (cafe)
-- **donde:** Pachuca (casa)
+- **actualizado:** 2026-10-21 20:39
+- **fuente:** report
+- **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
 - **clima_entorno:** (sin reporte fresco de clima)
 - **actividad:** Moviéndose a la cabaña. Cierre de sesión en escritorio para levantar en kz-screen.
@@ -1692,3 +1692,6 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-21 18:01] Lalo entra a reunión de revisión de SAS (18:00–18:35) con Josué Mata.
 - [2026-10-21 19:00] actividad=Moviéndose a la cabaña. Cierre de sesión en escritorio para levantar en kz-screen.
 - [2026-10-21 19:00] Lalo se traslada a la cabaña. Migrador SAS delegado a Giovanni. Memorias SAS y TLC-G2 en Drive.
+- [2026-10-21 20:39] donde=Cabaña
+  - [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
+- [2026-10-21 20:39] Instalado en la cabaña. Pau despierta en pavilion.
