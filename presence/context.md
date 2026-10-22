@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-22 09:36
+- **actualizado:** 2026-10-22 11:52
 - **primary:** foco_ahora
 - **secondary:** work_vector
 - **en_call:** yes
@@ -269,3 +269,4 @@
   - [2026-10-21 20:39] primary→foco_ahora: En la cabaña con Pau despierta. Costa despejada y noche tranquila.
   - [2026-10-21 21:14] primary→en_call: no
   - [2026-10-22 09:36] primary→foco_ahora: Daily Standup SE en curso (turno 4 en orden de presentación). Lalo conectado desde la cabaña.
+  - [2026-10-22 11:52] SAS: Barrido masivo de filesystem lanzado en background en servidor WildFly (10.100.11.195)
