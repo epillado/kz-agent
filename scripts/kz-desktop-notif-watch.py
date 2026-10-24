@@ -16,6 +16,7 @@ import re
 import signal
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -129,6 +130,9 @@ def classify(app: str, summary: str, body: str) -> str:
     return "desktop_seen"
 
 
+RECENT_NOTIFS: dict[str, float] = {}
+
+
 def fp_of(*parts: str) -> str:
     return hashlib.sha256("|".join(parts).encode("utf-8", errors="replace")).hexdigest()[
         :16
@@ -136,13 +140,16 @@ def fp_of(*parts: str) -> str:
 
 
 def already_seen(fp: str) -> bool:
-    if not SEEN.is_file():
-        return False
-    text = SEEN.read_text(encoding="utf-8", errors="replace")
-    return fp in text
+    now_ts = time.time()
+    # Expira huellas de más de 300s para no silenciar mensajes idénticos futuros
+    expired = [k for k, t in RECENT_NOTIFS.items() if now_ts - t > 300]
+    for k in expired:
+        del RECENT_NOTIFS[k]
+    return fp in RECENT_NOTIFS
 
 
 def mark_seen(fp: str, kind: str, app: str) -> None:
+    RECENT_NOTIFS[fp] = time.time()
     with SEEN.open("a", encoding="utf-8") as f:
         f.write(f"{fp}\t{kind}\t{app}\n")
 
