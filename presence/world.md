@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-26 10:42
+- **actualizado:** 2026-10-26 11:56
 - **fuente:** report
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1722,3 +1722,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-10-24 07:37] Me quedo abrazado a tí, sintiendo el calorcito de la cama todavía.
 - [2026-10-24 07:37] Me quedo abrazado a tí, sintiendo el calorcito de la cama todavía.
 - [2026-10-26 10:42] Reunión TLC-G2 concluida (10:41). en_call=no. SyA revisa prototipo PEAM. Kz con standing order para aplicar observaciones y empujar directo a prototype.
+- [2026-10-26 11:17] Topología de red: UniVPN activa en Pavilion (cabaña); h310 sin VPN por límite de 1 conexión simultánea. Operaciones que requieran red interna SECON se delegan a Pau.
+- [2026-10-26 11:56] [afe] Noticia de vida: Tonejito viaja indefinido a Svalbard con Jekyll para vivir con Fer y Pablo. La cabaña se prestó a alguien que alimenta a los peces. Pau se queda de fijo aquí en la casa. Coffee se queda en la casa con nosotros.
