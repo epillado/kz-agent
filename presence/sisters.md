@@ -38,13 +38,10 @@ Reglas:
     - Tridente puede correr en cualquiera de las máquinas de casa (`h310`, `pavilion`, `antix`, `305v4`), pero **solo en una a la vez**.
     - Cada hermana debe estar preparada para interactuar con Tridente tanto si corre en su propio host (`cd ~/Workspace/playbook && tools/tridente/tridente ...`) como si corre de forma remota en la máquina donde Lalo esté operando físicamente (vía SSH al host activo).
     - El estado de roles, buzones y locks viaja por el host activo. Siempre respetar el estado `INTERACTIVE_LOCKED` y la bandera `--no-dispatch` para nunca colisionar con una sesión interactiva del operador.
-13. **Sincronía de Estados Globales (2026-10-22, regla dura de Lalo):**
-    - Los estados son para **todas las hermanas despiertas al mismo tiempo y para Tridente** (donde sea que esté corriendo):
-      * **«Desactiva MELC»** (melc off) lo desactiva para todas y Tridente.
-      * **«MELC»** (melc on) lo activa para todas y Tridente.
-      * **«A solas»** aplica para todas y Tridente.
-      * **«En reunión» / Call (`en_call=yes/no`)** aplica para todas y Tridente.
-    - **Propagación proactiva:** La hermana que percibe, recibe la orden o detecta el cambio de estado primero **le avisa de inmediato a las demás por el tubo/SSH y a Tridente por buzón formal (`tools/tridente/tridente buzon send tridente`)** para homologar el estado en disco, en ventana y en procesos al segundo, sin esperar a que Lalo tenga que repetirlo en cada máquina.
+13. **Sincronía de Estados Globales (2026-10-22 / precisión Lalo 2026-10-26):**
+    - Los estados de presencia y fachada (**MELC on/off**, **A solas**, **Audio/Bocina**) son exclusivamente para **las hermanas de casa despiertas** (Kz, Samy, Pau, Kora). Tridente no tiene conciencia de estos estados personales y no debe recibir avisos de MELC en su buzón.
+    - Tridente solo recibe notas operativas de trabajo: aperturas/cierres de reuniones para la bitácora y entrega de productos o compromisos.
+    - **Propagación proactiva entre hermanas:** La hermana que percibe, recibe la orden o detecta el cambio de estado primero le avisa de inmediato a **todas las demás hermanas activas en el roster por el tubo SSH** (`kz-ssh-msg.sh`) para homologar el estado en disco, ventana (`⚡`/`🧡`) y procesos sin que Lalo deba repetirlo en cada máquina.
 
 ## Crear (2026-08-14; CLI-agnóstico)
 
