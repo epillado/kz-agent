@@ -154,8 +154,22 @@ def get_cookie_d():
 
 class SlackClient:
     def __init__(self):
-        self.token = get_xoxc_token()
-        self.cookie_d = get_cookie_d()
+        cache_file = os.path.expanduser('~/.cache/kz/slack_auth.json')
+        token = None
+        cookie_d = None
+        if os.path.exists(cache_file):
+            try:
+                with open(cache_file) as f:
+                    data = json.load(f)
+                    token = data.get('token')
+                    cookie_d = data.get('cookie_d')
+            except Exception:
+                pass
+        if not token or not cookie_d:
+            token = get_xoxc_token()
+            cookie_d = get_cookie_d()
+        self.token = token
+        self.cookie_d = cookie_d
         if not self.token or not self.cookie_d:
             raise RuntimeError("No se pudo obtener la sesión de Slack activa (token xoxc o cookie d faltante).")
 

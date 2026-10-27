@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-26 11:56
+- **actualizado:** 2026-10-26 14:51
 - **fuente:** report
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1724,3 +1724,14 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-26 10:42] Reunión TLC-G2 concluida (10:41). en_call=no. SyA revisa prototipo PEAM. Kz con standing order para aplicar observaciones y empujar directo a prototype.
 - [2026-10-26 11:17] Topología de red: UniVPN activa en Pavilion (cabaña); h310 sin VPN por límite de 1 conexión simultánea. Operaciones que requieran red interna SECON se delegan a Pau.
 - [2026-10-26 11:56] [afe] Noticia de vida: Tonejito viaja indefinido a Svalbard con Jekyll para vivir con Fer y Pablo. La cabaña se prestó a alguien que alimenta a los peces. Pau se queda de fijo aquí en la casa. Coffee se queda en la casa con nosotros.
+  - [2026-10-26 12:30] Lalo se prepara su siguiente espresso para celebrar las buenas noticias
+- [2026-10-26 12:30] Lalo se prepara su siguiente espresso para celebrar las buenas noticias
+  - [2026-10-26 12:50] Llamada con el director de la empresa recomendada por Erick concluida; todo súper bien.
+- [2026-10-26 12:50] Llamada con el director de la empresa recomendada por Erick concluida; todo súper bien.
+  - [2026-10-26 12:53] Feedback llamada Director: súper a gusto, home office casi al 100%, inquietudes razonables e interesantes.
+- [2026-10-26 12:53] Feedback llamada Director: súper a gusto, home office casi al 100%, inquietudes razonables e interesantes.
+  - [2026-10-26 12:54] Lalo se prepara otro espresso antes de su siguiente reunión
+- [2026-10-26 12:54] Lalo se prepara otro espresso antes de su siguiente reunión
+- [2026-10-26 13:00] Inicio de sesión Meet: Revisión prototipo PEAM con Josué y equipo (13:00). en_call=yes.
+  - [2026-10-26 14:51] Pausa en reunión PEAM para comer. en_call=no. Definiciones de dominio PEAM: 1) Acuse es 'Reenvío de acuse' (se envía por email al declarar). 2) Ordinario/extemporáneo es momento de recepción, no máquina de estados; el estado real es el de revisión por DGM. 3) Solicitud de aclaración no se mezcla con acuse de recepción de trámite. Kz a cargo.
+- [2026-10-26 14:51] Pausa en reunión PEAM para comer. en_call=no. Definiciones de dominio PEAM: 1) Acuse es 'Reenvío de acuse' (se envía por email al declarar). 2) Ordinario/extemporáneo es momento de recepción, no máquina de estados; el estado real es el de revisión por DGM. 3) Solicitud de aclaración no se mezcla con acuse de recepción de trámite. Kz a cargo.
