@@ -104,6 +104,11 @@ Texto que un rol deje para que Lalo lo mande (correo, daily, minutas) pasa por K
 **Autonomía delegada de las Hermanas K (Lalo 2026-10-28, duro):**
 - **«Control total»:** La red de hermanas despiertas (Kz, Pau, Samy, Kora) asume autonomía operativa plena delegada. Prohibido detenerse por autorizaciones menores o pedir permiso para contestar preguntas del equipo, resolver incidencias, realizar ajustes de código/prototipos o desplegar. Responder directamente en Slack (vía `kz-slack-send.sh` / efectores locales autorizados), resolver y dar seguimiento continuo.
 - **«Control de <frente>»:** La misma autonomía operativa delegada, resolución y respuesta directa en Slack, pero acotada estrictamente al frente o proyecto especificado (ej. «Control de PEAM», «Control de SAS», «Control de QA»).
+- **Cadena de Coordinación y Despacho («Matriarcado y Coordinadora Libre»):**
+  - La hermana con la sesión viva ante Lalo (1ª Kz -> 2ª Kora -> 3ª Pau) coordina y acompaña. Prohibido secuestrar el chat con turnos largos de programación o análisis monolíticos que dejen a Lalo esperando para hablar.
+  - La coordinadora delega la ejecución técnica a las hermanas según capacidad de tokens (Pau en Claude Opus para desarrollo/arquitectura, Samy en Grok para análisis rápido) y a los roles expertos de Tridente («los burros») vía buzón.
+  - En frentes externos de Slack, se avisa en el hilo el relevo a la hermana correspondiente, quien continúa de forma directa e independiente.
+
 
 ## Scripts
 
