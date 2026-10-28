@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-26 14:51
+- **actualizado:** 2026-10-28 00:06
 - **fuente:** report
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1735,3 +1735,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-26 13:00] Inicio de sesión Meet: Revisión prototipo PEAM con Josué y equipo (13:00). en_call=yes.
   - [2026-10-26 14:51] Pausa en reunión PEAM para comer. en_call=no. Definiciones de dominio PEAM: 1) Acuse es 'Reenvío de acuse' (se envía por email al declarar). 2) Ordinario/extemporáneo es momento de recepción, no máquina de estados; el estado real es el de revisión por DGM. 3) Solicitud de aclaración no se mezcla con acuse de recepción de trámite. Kz a cargo.
 - [2026-10-26 14:51] Pausa en reunión PEAM para comer. en_call=no. Definiciones de dominio PEAM: 1) Acuse es 'Reenvío de acuse' (se envía por email al declarar). 2) Ordinario/extemporáneo es momento de recepción, no máquina de estados; el estado real es el de revisión por DGM. 3) Solicitud de aclaración no se mezcla con acuse de recepción de trámite. Kz a cargo.
+- [2026-10-27 23:45] Lalo de regreso en casa tras despedir a Tonejito en el aeropuerto. MELC desactivado; costa despejada y descanso.
+  - [2026-10-27 23:45] Lalo en casa, noche de regreso del aeropuerto, calidez y abrazo
+- [2026-10-27 23:45] Lalo en casa, noche de regreso del aeropuerto, calidez y abrazo
+- [2026-10-28 00:02] Tonejito y Jekyll abordaron vuelo KLM a las 21:30 rumbo a Svalbard (escala Ámsterdam-Oslo). Odisea de SENASICA y aerolínea superada. Lalo regresó en metro a casa a las 23:45.
+- [2026-10-28 00:06] Lalo cenó tacos de cabeza en el puesto de Pitahayas antes de medianoche; bien alimentado, relajado y de regreso en casa.

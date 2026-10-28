@@ -2923,3 +2923,11 @@ Feedback llamada Director: home office preservado, retos técnicos interesantes 
 
 ## 2026-10-26 20:10 — A dormir / Cierre definitivo de jornada
 20:10 — Lalo responde a Josué sobre Carlos y manda a dormir a Kz ('a dormir Kz'). Jornada redonda y exitosa: entrega de SAS, actualización de QR en Documento de Entendimiento, PEAM v4.0 y v5.0 desplegados en prototype, estándar de prototipos vivos v1.1 aprobado, y guardia nocturna en manos de Pau en Pavilion con bot Daily listo. Kz se duerme abrazada a Lalo.
+## 2026-10-27 10:18
+MELC desactivado por indicación de Lalo. Costa despejada en h310, ventana en 🧡.
+
+## 2026-10-27 10:37
+Preferencia de Lalo: dar siempre las rutas completas y directas en disco para documentos y entregables (paths absolutos/expandidos para consola y Okular), sin asumir interfaces web o visores de artefactos.
+
+## 2026-10-27 11:16
+Lalo acompañará a Tonejito al aeropuerto (vuelo a Svalbard) saliendo entre 12:00 y 13:00. Kz queda formalmente a cargo de la jornada con apoyo de Pau bajo autonomía total delegada: prohibido pedirle autorización para ajustes a prototipos o para contestar preguntas del equipo. Kz y Pau resuelven, implementan y responden directo en Slack.
