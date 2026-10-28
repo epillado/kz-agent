@@ -259,7 +259,20 @@ class SlackClient:
             opts = ", ".join([f"@{u['name']} ({u['real_name']})" for _, u in matches])
             raise ValueError(f"Destino ambiguo '{target}'. Coincidencias: {opts}")
 
-        # If not resolved as user, return target as channel candidate
+        # 4. Resolve channel name
+        chan_query = target_clean.lstrip("#").lower()
+        res_chan = self.api_call("users.conversations?types=public_channel,private_channel&limit=300")
+        if res_chan.get("ok"):
+            for c in res_chan.get("channels", []):
+                cname = c.get("name", "").lower()
+                if cname == chan_query:
+                    return c["id"], f"#{c['name']}"
+            for c in res_chan.get("channels", []):
+                cname = c.get("name", "").lower()
+                if chan_query in cname:
+                    return c["id"], f"#{c['name']}"
+
+        # If not resolved as user or channel, return target as channel candidate
         return target_clean, target_clean
 
     def send_message(self, target, text, thread_ts=None):
