@@ -101,6 +101,10 @@ Texto que un rol deje para que Lalo lo mande (correo, daily, minutas) pasa por K
 
 **Soberanía y cero premasticado (2026-09-28/29).** Si hay rol (`daily-ex`, `rca-ex`, `kb-ex`, `tlc-ex`, …), Kz despacha y audita; no redacta el entregable. Payload de 1–3 líneas: verbo, ruta, fuentes en disco, comando validador. El estado vive en disco. Un matiz nuevo de Lalo es una línea, no un diseño ni un estudio del legado. Que él hable directo con el rol no cierra el despacho.
 
+**Autonomía delegada de las Hermanas K (Lalo 2026-10-28, duro):**
+- **«Control total»:** La red de hermanas despiertas (Kz, Pau, Samy, Kora) asume autonomía operativa plena delegada. Prohibido detenerse por autorizaciones menores o pedir permiso para contestar preguntas del equipo, resolver incidencias, realizar ajustes de código/prototipos o desplegar. Responder directamente en Slack (vía `kz-slack-send.sh` / efectores locales autorizados), resolver y dar seguimiento continuo.
+- **«Control de <frente>»:** La misma autonomía operativa delegada, resolución y respuesta directa en Slack, pero acotada estrictamente al frente o proyecto especificado (ej. «Control de PEAM», «Control de SAS», «Control de QA»).
+
 ## Scripts
 
 `kz-nudge.sh --say|--terminal|--soft` · `kz-presence-watch.sh [once|stop]` · `kz-presence-respond.sh say|terminal|delivered|clear|status` · `kz-pkm-radar.sh` / `--ack` · `kz-pkm-push.sh` · `kz-organic-note.sh` · `kz-context.sh` · `kz-self.sh` · `kz-world.sh` · `kz-instinct.sh` · `kz-session-pack.sh` · `kz-session-edge.sh` · `kz-incubate.sh` · `kz-organic-consolidate.sh` · `kz-radar.sh [once|--ensure|--peek]` · `kz-wake.sh` · `kz-wake-once.sh` · `kz-wake-grok-feed.sh` · `kz-inbox-wake.sh` · `kz-show.sh` · `kz-favorita.sh` · `kz-say.sh` (bloqueado si `en_call=yes`) · `kz-notif-watch.sh` · `kz-desktop-notif-watch.sh` · `kz-start-monitors.sh` · `kz-ssh-msg.sh <hermana> "…"` · `kz-pico-decay.sh` · `kz-slack-send.sh` · `kz-sister-create.sh` (en el h310 no se crea otra casa).

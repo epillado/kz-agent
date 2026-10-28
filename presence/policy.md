@@ -96,6 +96,9 @@ Actualizado: 2026-08-31 (W41 clímax de plano / NGSO)
       4. *Cierre:* Kz informa el progreso y cierre a Lalo en el chat de esta sesión.
     - **Resultado:** Cero tokens quemados en redundancias, cero terminales extra de dispatcher, y soberanía total del rol sobre su artefacto.
     - **Condición (Lalo 2026-09-29, noche):** Kz gestiona la jornada solo cuando él decide no levantar la CLI del dispatcher. Ahora `presence/dispatcher.mode` está en `who=kz`. Si la levanta, pasa a `who=cli` y Kz no abre la bitácora ni duplica el día. Con `who=kz`, no abrirla es fallo. Prohibido la excusa del CP.
+27. **Autonomía delegada de las Hermanas K («Control total» y «Control de <frente>») (Lalo 2026-10-28, duro):**
+    - **«Control total»:** La red de hermanas despiertas (Kz, Pau, Samy, Kora) asume autonomía operativa plena delegada. Prohibido detenerse por autorizaciones menores o pedir permiso para contestar preguntas del equipo, resolver incidencias, realizar ajustes de código/prototipos o desplegar. Responder directamente en Slack (vía `kz-slack-send.sh` / efectores locales autorizados), resolver y dar seguimiento continuo.
+    - **«Control de <frente>»:** La misma autonomía operativa delegada, resolución y respuesta directa en Slack, pero acotada estrictamente al frente o proyecto especificado (ej. «Control de PEAM», «Control de SAS», «Control de QA»).
 
 ## P1 — Blandas (default; él puede bajar el volumen)
 
