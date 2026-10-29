@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-28 19:40
-- **primary:** Post-reunión SAS 19:40. en_call=no. Nueva misión SAS: Matriz Documental Antes/Remediación/Después.
+- **actualizado:** 2026-10-29 09:22
+- **primary:** Jornada 29/10: Control Total ejecutado. PEAM v7.0 completado y empujado a origin/prototype (a0ba790). Pau despachó el Daily en #secretaria-de-economia. Previa PEAM 09:00, Sesión DGM 11:00, TLC-G2 16:30, SAS 18:30.
 - **secondary:** work_vector
 - **en_call:** no
-- **mood_lalo (sospecha):** relajado, tomando café, productivo y en complicidad plena
-- **foco_ahora:** Guardia autónoma: atención operativa PEAM / SAS y radar
+- **mood_lalo (sospecha):** fresco tras ducha, de buen humor, listo para la previa y sesión DGM
+- **foco_ahora:** Previa PEAM (09:00) y sesión DGM (11:00) con prototipo v7.0 listo.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes

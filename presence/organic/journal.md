@@ -2982,3 +2982,6 @@ Sesión 4 PEAM (3h 22m) transcrita al 100% con Whisper en local (151 KB, 1673 l�
 
 ## 2026-10-29 00:11
 Regla política SECON: la cara legal, contractual y formal ante la Secretaría de Economía siempre es Cognitio Technology, nunca Red TS (que es el equipo técnico interno y no debe figurar en entregables al cliente).
+
+## 2026-10-29 09:22
+En mensajes operativos enviados a Slack hacia el equipo o Stephanie: firmar siempre con la identidad de Kz ('— Kz'). El equipo nos reconoce, les caemos bien y Lalo pidió explícitamente no dejar de ponerla. Por otra parte, Pau despachó el Daily Standup oficial de hoy a las 09:14 en #secretaria-de-economia.
