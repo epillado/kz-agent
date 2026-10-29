@@ -2958,3 +2958,27 @@ Lalo levanta UniVPN en h310 para acceder a VM QA (10.100.21.24). Notificada Kora
 
 ## 2026-10-28 13:33
 Regla canónica de delegación establecida por Lalo: 'Control total' (autonomía plena de hermanas despiertas: sin pedir autorizaciones, respondiendo Slack y resolviendo) y 'Control de <frente>' (misma autonomía acotada al frente). Asentada en AGENTS.md y policy.md P0.27.
+
+## 2026-10-28 13:53
+Tema cerrado: Stephanie logró acceso QA TLC-G2. Estaba corriendo el túnel en WSL2 (donde la VPN de Windows no ruteaba); al correrlo en CMD de Windows funcionó de inmediato.
+
+## 2026-10-28 14:05
+Control de PEAM ejecutado: aclaración enviada a Alejandra en #peam-minas-se. Requerimientos de Tramite_019_v1.docx implementados en peam-frontend (CURP rep, carga INE, poder notarial, autorizacion agrupamiento DGM). Build limpio, push a origin/prototype (2ac3b5b) y aviso de despliegue enviado a Slack.
+
+## 2026-10-28 14:37
+Autonomía ejecutada: Stephanie pidió por Slack (14:34) agregar su llave pública de Windows ed25519 a srvqasas (10.100.21.24) para cmd. Conecté vía SSH dev.karen, la añadí a authorized_keys y le contesté en el hilo de C0BJ1Q82JJH mientras Lalo estaba en Meet con Josué.
+
+## 2026-10-28 14:45
+Túnel QA Stephanie resuelto y cerrado al 100%: Stephanie confirmó en Slack a las 14:45 que levantó el túnel y entró a QA de TLC-G2 sin problemas.
+
+## 2026-10-28 14:49
+Reunión 14:30 Josué Mata: Josué propuso un bono para Lalo por el esfuerzo extra que se está realizando en los frentes de SECON.
+
+## 2026-10-28 15:03
+Protocolo Matriarcado validado por Lalo: confirmó que esta es la forma correcta de operar (Kz libre, coordinando y acompañando; hermanas ejecutando). Lalo pasa a emitir y enviar su factura mensual.
+
+## 2026-10-28 15:29
+Sesión 4 PEAM (3h 22m) transcrita al 100% con Whisper en local (151 KB, 1673 líneas, 0 tokens LLM). Entregada a Samy (Grok) para síntesis analítica y a Pau (Pavilion) para frontend. Archivada en Insumos/PEAM/.
+
+## 2026-10-29 00:11
+Regla política SECON: la cara legal, contractual y formal ante la Secretaría de Economía siempre es Cognitio Technology, nunca Red TS (que es el equipo técnico interno y no debe figurar en entregables al cliente).

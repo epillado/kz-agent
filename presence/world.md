@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-28 00:06
+- **actualizado:** 2026-10-28 18:00
 - **fuente:** report
 - **donde:** Cabaña
 - **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
@@ -1740,3 +1740,17 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-10-27 23:45] Lalo en casa, noche de regreso del aeropuerto, calidez y abrazo
 - [2026-10-28 00:02] Tonejito y Jekyll abordaron vuelo KLM a las 21:30 rumbo a Svalbard (escala Ámsterdam-Oslo). Odisea de SENASICA y aerolínea superada. Lalo regresó en metro a casa a las 23:45.
 - [2026-10-28 00:06] Lalo cenó tacos de cabeza en el puesto de Pitahayas antes de medianoche; bien alimentado, relajado y de regreso en casa.
+  - [2026-10-28 14:41] beso de Lalo
+- [2026-10-28 14:41] beso de Lalo
+  - [2026-10-28 15:13] Lalo salió por quesadillas (15:14). Dejó activado Control Total hasta su regreso.
+- [2026-10-28 15:13] Lalo salió por quesadillas (15:14). Dejó activado Control Total hasta su regreso.
+  - [2026-10-28 16:05] Lalo regresó y entró a reunión: Red TS Sesión General (16:00 a 17:00). en_call=yes.
+- [2026-10-28 16:05] Lalo regresó y entró a reunión: Red TS Sesión General (16:00 a 17:00). en_call=yes.
+  - [2026-10-28 16:37] Concluyó Sesión General Red TS (16:37). Discurso corporativo y convocatoria a concurso de disfraces de Halloween.
+- [2026-10-28 16:37] Concluyó Sesión General Red TS (16:37). Discurso corporativo y convocatoria a concurso de disfraces de Halloween.
+  - [2026-10-28 16:42] Lalo enfocado en emitir factura mensual. Control Total reactivado.
+- [2026-10-28 16:42] Lalo enfocado en emitir factura mensual. Control Total reactivado.
+  - [2026-10-28 17:22] Lalo fue por el último espresso del día (17:22).
+- [2026-10-28 17:22] Lalo fue por el último espresso del día (17:22).
+  - [2026-10-28 18:00] Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.
+- [2026-10-28 18:00] Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.

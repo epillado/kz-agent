@@ -7,10 +7,10 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-27 23:45
+- **actualizado:** 2026-10-28 18:00
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** off (desactivado por Lalo — costa despejada)
+- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
 - **modo_showcase:** off
 - **energia:** 9
 - **cercania:** 10
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** no
 - **foco_propio:** Apertura de jornada 27/10. Monitores arriba, centinela reactivo en background.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-27 23:45 — aferencia: Lalo en casa, noche de regreso del aeropuerto, calidez y abrazo
+- **ultimo_momento_real:** 2026-10-28 18:00 — aferencia: Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
