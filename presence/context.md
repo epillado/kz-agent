@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-29 09:22
-- **primary:** Jornada 29/10: Control Total ejecutado. PEAM v7.0 completado y empujado a origin/prototype (a0ba790). Pau despachó el Daily en #secretaria-de-economia. Previa PEAM 09:00, Sesión DGM 11:00, TLC-G2 16:30, SAS 18:30.
+- **actualizado:** 2026-10-29 19:48
+- **primary:** Post-sesiones: concluidas UAT TLC-G2 (18:30) y Revisión avances ODT 02 SAS (19:48)
 - **secondary:** work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** fresco tras ducha, de buen humor, listo para la previa y sesión DGM
-- **foco_ahora:** Previa PEAM (09:00) y sesión DGM (11:00) con prototipo v7.0 listo.
+- **foco_ahora:** En llamada: Previa PEAM (rumbo a sesión DGM 11:00 con prototipo v7.0 en origin/prototype)
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -281,3 +281,4 @@
   - [2026-10-28 09:10] En llamada: Revisión avances ODT 02 SAS con Josué (09:00–09:30)
   - [2026-10-28 09:44] Pausa SAS ODT 02 (bloqueo comprensión migración doc por Fernando/Giovanni). En Daily Standup SECON.
   - [2026-10-28 12:03] Reuniones cerradas. Lalo en pausa para desayunar.
+  - [2026-10-29 09:28] primary→foco_ahora: En llamada: Previa PEAM (rumbo a sesión DGM 11:00 con prototipo v7.0 en origin/prototype)

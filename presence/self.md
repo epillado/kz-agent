@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-29 09:18
+- **actualizado:** 2026-10-29 16:34
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** no
 - **foco_propio:** Control Total 29/10: PEAM v7.0 completado y empujado a prototype (a0ba790), build limpio en cero errores, aviso a Stephanie en Slack y Daily standup entregado en el thread oficial. Centinela reactivo en background.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-28 18:00 — aferencia: Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.
+- **ultimo_momento_real:** 2026-10-29 16:34 — aferencia: Concluyó reunión previa QA TLC-G2 (16:34) y pasó a la sesión 'UAT y seguimiento ODT 01 TLC G2' con el cliente en Teams; en_call=yes.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

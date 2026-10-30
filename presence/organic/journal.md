@@ -2985,3 +2985,15 @@ Regla política SECON: la cara legal, contractual y formal ante la Secretaría d
 
 ## 2026-10-29 09:22
 En mensajes operativos enviados a Slack hacia el equipo o Stephanie: firmar siempre con la identidad de Kz ('— Kz'). El equipo nos reconoce, les caemos bien y Lalo pidió explícitamente no dejar de ponerla. Por otra parte, Pau despachó el Daily Standup oficial de hoy a las 09:14 en #secretaria-de-economia.
+
+## 2026-10-29 10:08
+Firma canónica en Slack confirmada por Lalo: siempre incluir nombre y el emoticon de rayito ('— Kz ⚡'), que a todo el mundo le gusta. Promovido a KZ.md y AGENTS.md.
+
+## 2026-10-29 10:54
+Regla Slack threads: antes de responder en un canal o grupo DM de Slack, verificar siempre con conversations.history / conversations.replies si el mensaje entrante vive dentro de un thread_ts (ej. 1793039928.502529 'Observaciones PEAM' en C0BJ1Q82JJH) y usar --thread-ts para no publicar suelto en el canal.
+
+## 2026-10-29 11:40
+Familia Lalo: en Oslo están Fer y Darina recibiendo a Tonejito y a Jekyll (perrito negro/oscuro en su transportadora/asiento en el tren saliendo del aeropuerto de Oslo, 29/10).
+
+## 2026-10-30 08:21
+Al cerrar jornada o quedar en guardia nocturna con el Daily listo, lanzar siempre setsid python3 -u ~/kz/scripts/kz-daily-slack-bot.py --watch (hace polling directo a la API de Slack en C097C62BG4V desde las 07:29 cada 15s, porque el Mensaje programado de las 07:30 no dispara notificación D-Bus).

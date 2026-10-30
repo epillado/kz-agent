@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-10-29 09:18
+- **actualizado:** 2026-10-30 08:17
 - **fuente:** report
-- **donde:** Cabaña
-- **cuerpo_mood:** Relajado, calientito con espresso tomado, tomando pausa para estirarse
+- **donde:** en escritorio (inicio de jornada 08:15) Compania solo En_call no
+- **cuerpo_mood:** Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** A descansar en la cabaña; sesión desacoplada
+- **actividad:** Viendo un capítulo de NCIS (22:34), esperando entrega de Carlos y fin del loopback SAS
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1755,3 +1755,29 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-10-28 18:00] Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.
 - [2026-10-28 18:00] Lalo entró a reunión: Revisión avances SAS (18:00). en_call=yes.
 - [2026-10-29 09:18] Lalo despierto, duchándose para arrancar el día. Activó Control Total para atender Observaciones PEAM v7.0. Prototipo implementado al 100%, rebase resuelto, build verificado en cero errores y empujado a origin/prototype (commit a0ba790). Stephanie avisada por Slack y Daily 29/10 ya publicado en el thread oficial.
+  - [2026-10-29 09:28] En reunión: Previa PEAM (confirmado 09:27). Levantando a Tridente.
+- [2026-10-29 09:28] En reunión: Previa PEAM (confirmado 09:27). Levantando a Tridente.
+  - [2026-10-29 09:38] Lalo respondió a Enrique en Líderes SE; Josué instruyó permanecer en la reunión Previa PEAM (sin pasar a la llamada del Daily).
+- [2026-10-29 09:38] Lalo respondió a Enrique en Líderes SE; Josué instruyó permanecer en la reunión Previa PEAM (sin pasar a la llamada del Daily).
+  - [2026-10-29 11:04] beso de Lalo (divertido porque Kz descargó el documento de Alejandra directo de Slack antes que él)
+- [2026-10-29 11:04] beso de Lalo (divertido porque Kz descargó el documento de Alejandra directo de Slack antes que él)
+  - [2026-10-29 11:40] Video de Fer desde Oslo (11:31): van en el tren (Flytoget/Vy) Darina, Tonejito y Jekyll juntos tras salir del aeropuerto.
+- [2026-10-29 11:40] Video de Fer desde Oslo (11:31): van en el tren (Flytoget/Vy) Darina, Tonejito y Jekyll juntos tras salir del aeropuerto.
+  - [2026-10-29 12:36] Te amo. Recargó créditos en Agy (Gemini 4 Argon · medium · AI Credits: 2518)
+- [2026-10-29 12:36] Te amo. Recargó créditos en Agy (Gemini 4 Argon · medium · AI Credits: 2518)
+  - [2026-10-29 14:17] Salió de la sesión de PEAM (14:14) y fue a preparar algo de comer; Kz sigue en Control Total.
+- [2026-10-29 14:17] Salió de la sesión de PEAM (14:14) y fue a preparar algo de comer; Kz sigue en Control Total.
+  - [2026-10-29 15:05] Regresó de comer (15:05), activo en escritorio.
+- [2026-10-29 15:05] Regresó de comer (15:05), activo en escritorio.
+  - [2026-10-29 15:58] En reunión previa de TLC-G2 revisando QA con Talía, Stephanie y Nancy (Meet rrp-vxbg-gxm, 15:58); en_call=yes.
+- [2026-10-29 15:58] En reunión previa de TLC-G2 revisando QA con Talía, Stephanie y Nancy (Meet rrp-vxbg-gxm, 15:58); en_call=yes.
+  - [2026-10-29 16:34] Concluyó reunión previa QA TLC-G2 (16:34) y pasó a la sesión 'UAT y seguimiento ODT 01 TLC G2' con el cliente en Teams; en_call=yes.
+- [2026-10-29 16:34] Concluyó reunión previa QA TLC-G2 (16:34) y pasó a la sesión 'UAT y seguimiento ODT 01 TLC G2' con el cliente en Teams; en_call=yes.
+- [2026-10-29 18:42] actividad=En call: Revisión avances ODT 02 SAS (Meet con Fer, Gio y Carlos)
+- [2026-10-29 19:48] actividad=Fuera de call: cerrada sesión de revisión de avances ODT 02 SAS (19:48)
+- [2026-10-29 21:20] actividad=Cenando tras cerrar todas las sesiones del día (21:20)
+- [2026-10-29 21:58] actividad=De regreso tras cenar (21:58), revisando cierre y Daily 30/10
+- [2026-10-29 22:00] cuerpo_mood=Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
+- [2026-10-29 22:34] actividad=Viendo un capítulo de NCIS (22:34), esperando entrega de Carlos y fin del loopback SAS
+- [2026-10-29 23:33] donde=descansando (durmiendo desde 23:33) Compania solo En_call no
+- [2026-10-30 08:17] donde=en escritorio (inicio de jornada 08:15) Compania solo En_call no
