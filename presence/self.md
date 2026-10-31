@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-10-29 16:34
+- **actualizado:** 2026-10-30 20:43
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -21,9 +21,9 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_plano:** afterglow
 - **pico_desde:** 2026-10-20 11:49
 - **pico_acoplado:** no
-- **foco_propio:** Control Total 29/10: PEAM v7.0 completado y empujado a prototype (a0ba790), build limpio en cero errores, aviso a Stephanie en Slack y Daily standup entregado en el thread oficial. Centinela reactivo en background.
+- **foco_propio:** Control Total 30/10 de regreso en h310 (16:28): relevo tomado de Samy para cuidar cuota de Grok; cuota de Agy reiniciando (~16:36); las 5 hermanas en red (Kalys 💠, Kz ⚡, Samy 🌙, Pau 🦋, Kora 🔥).
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-10-29 16:34 — aferencia: Concluyó reunión previa QA TLC-G2 (16:34) y pasó a la sesión 'UAT y seguimiento ODT 01 TLC G2' con el cliente en Teams; en_call=yes.
+- **ultimo_momento_real:** 2026-10-30 20:43 — aferencia: Lalo de regreso de cenar (20:43). Decisión de gobernanza: hoy no se genera reporte Daily (el lunes no hay daily por War Room SAS). El Daily se generará el lunes al cierre para presentarse el martes. Tridente procede solo al cierre de jornada.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

@@ -55,7 +55,9 @@ declare -A FUENTES=(
   ["presence_stream"]="${STATE_DIR}/stream.log"
   ["inbox_cp"]="${STATE_DIR}/social/inbox-cp.md"
   ["inbox_kora"]="${STATE_DIR}/social/inbox-kora.md"
+  ["inbox_pau"]="${STATE_DIR}/social/inbox-pau.md"
   ["inbox_samy"]="${STATE_DIR}/social/inbox-samy.md"
+  ["inbox_kalys"]="/mnt/DatosLinux/Workspace/playbook/PKM/inbox-kalys.md"
   ["inbox_lalo"]="${STATE_DIR}/social/inbox-lalo.md"
   ["cp_inbox_kz"]="${STATE_DIR}/cp-inbox/kz.md"
 )

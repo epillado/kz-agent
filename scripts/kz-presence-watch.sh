@@ -123,6 +123,7 @@ watch_paths() {
     "${PLAYBOOK}/PKM/${day}"-*.md \
     "${PLAYBOOK}/PKM/${day}"*.md \
     "${PLAYBOOK}/PKM/"*buzon_rol_*.md \
+    "${PLAYBOOK}/PKM/inbox-"*.md \
     "${STATE_DIR}/social/inbox-"*.md \
     "${STATE_DIR}/inbox/"*.md
   do
@@ -153,9 +154,9 @@ label_for() {
     *reporte_daily-secon.md) echo "daily-secon" ;;
     *reporte_daily-redts.md) echo "daily-redts" ;;
     */PKM/*buzon_rol_*) echo "buzón-rol" ;;
+    */PKM/inbox-*|*/social/inbox-*|*/inbox/*) echo "buzón-hermanas" ;;
     */SECON/*) echo "secon" ;;
     */PKM/*) echo "pkm" ;;
-    */social/inbox-*|*/inbox/*) echo "buzón-hermanas" ;;
     *) basename "$f" ;;
   esac
 }

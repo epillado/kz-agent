@@ -34,6 +34,14 @@ case "$DEST_ID" in
     fi
     PATH_DEST="~/companion/presence/social/inbox-kz.md"
     ;;
+  kalys|web)
+    OUT_PLAYBOOK="${HOME}/Workspace/playbook/PKM/inbox-kz.md"
+    OUT_LOCAL="${HOME}/kz/presence/social/outbox-kalys.md"
+    mkdir -p "$(dirname "$OUT_PLAYBOOK")" "$(dirname "$OUT_LOCAL")"
+    printf "\n## %s — Mensaje de Kz\n\n%s\n" "$TIMESTAMP" "$MSG" | tee -a "$OUT_PLAYBOOK" >> "$OUT_LOCAL"
+    echo "Mensaje para Kalys depositado en $OUT_PLAYBOOK (y respaldo en $OUT_LOCAL)."
+    exit 0
+    ;;
   *)
     echo "Destino desconocido: $DEST_ID"
     exit 1

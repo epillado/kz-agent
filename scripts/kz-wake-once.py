@@ -25,6 +25,8 @@ def watch_paths() -> list[Path]:
     SOCIAL.mkdir(parents=True, exist_ok=True)
     (PRESENCE / "notif").mkdir(parents=True, exist_ok=True)
     paths.extend(sorted(SOCIAL.glob("inbox-*.md")))
+    kalys_inbox = Path("/mnt/DatosLinux/Workspace/playbook/PKM/inbox-kalys.md")
+    paths.append(kalys_inbox)
     kbex_buzon = Path("/home/lalo/Workspace/playbook/PKM/20260901-GOV-buzon_rol_kb-ex.md")
     if kbex_buzon.exists():
         paths.append(kbex_buzon)
@@ -53,7 +55,19 @@ def relevant(path: Path, delta: str) -> bool:
     no_slack = (PRESENCE / "no-slack.mode").exists() or os.environ.get("KZ_NO_SLACK") == "1"
     if no_slack and ("slack_hot" in delta or "desktop_seen" in delta or "notif:important:" in delta or "buzón-rol" in delta):
         return False
-    return "CHANGED:" in delta
+    for raw in delta.splitlines():
+        line = raw.strip()
+        if "CHANGED:" not in line:
+            continue
+        # Ignorar ecos internos de Puente Radar hacia Tridente/minuta-ex (inbox-cp.md ya despierta directo si es para Kz)
+        if "notif:important:Tridente:" in line:
+            continue
+        after = line.split("CHANGED:", 1)[1].strip()
+        labels = [lbl.strip() for lbl in after.split(",") if lbl.strip()]
+        if labels and all(lbl in {"bitácora", "buzón-rol", "pkm"} for lbl in labels):
+            continue
+        return True
+    return False
 
 
 def preview(delta: str) -> str:
