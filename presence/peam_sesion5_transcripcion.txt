@@ -1,0 +1,1930 @@
+Perfecto, muchas gracias, pues nuevamente buenos días a todos.
+Y los María Leonardo, muchas gracias por brindarnos nuevamente a un espacio y tiempo de ustedes para poder continuar con este tema relacionado con la atención a la ODT del Sistema P.A.
+Y el objetivo de la misma es dar continuidad a lo que estuvimos revisando la última sesión con base a los requerimientos que nos definieron el análisis que nosotros ya realizamos y dimensionando las fuerzas requeridos para poder garantizar el tener los requerimientos solicitados.
+Pues estamos teniendo estas dos sesiones y con la pasada pudimos revisar la manera en el que los usuarios van a entrar al sistema.
+Podemos revisar el trámite 18, el trámite 19 y el objetivo de la sesión de hoy es poder mostrar aquellas funcionalidades o módulos adicionales que requieren ustedes como área
+para poder tener justamente esta evolución y modernización del sistema P.A. de manera que puedan explotar o revisar o tener funcionalidades extras en el sistema que les ayuden a mejorar tanto la experiencia de usuario como lo que hacen ustedes como funcionarios.
+Entonces, el objetivo de estas sesiones es poder revisar todos esos módulos adicionales. Tenemos algunas dudas que surgieron ahí sobre el trámite 18 y 19 pero son muy breves igual y podríamos iniciar con ellas con esas dudas.
+Y después ya nos pasamos hacia todos esos módulos o funcionalidades adicionales que comentamos para poder justamente concretar los prototipos, concretar el análisis y diseño y nosotros poder arrancar con la construcción.
+Es importante mencionar si están de acuerdo los María y Leonardo que a partir de esta sesión y la anterior que tuvimos lo que vamos a desprender es una minuta a donde se exprese a nivel de detalle cada uno de los requerimientos con sus propios criterios de aceptación o reglas de negocio que ya quedaron definidos a través justamente de la revisión de estas sesiones.
+Y para que ustedes también la puedan revisar y estemos ambas partes de acuerdo en que ese se va a ser el alcance de justamente lo que se va a construir y que suavemente se pueda validar una vez que está el listo el sistema.
+Entonces, ese es el objetivo de la sesión y iniciaríamos con el apoyo de mi compañera Fanny para presentar a las coyes que surgieron y bueno antes iniciaron si tengan alguna duda los María y Leonardo o equipo para poder iniciar.
+No totalmente de acuerdo soy muchas gracias estamos en el entendido de que hay que formalizar todo esto y con todo gusto adelante.
+Excelente pues muchas gracias Fanny imagino que tú nos ayudaría a presentar en estos momentos para poder iniciar con las dudas del trámite 18.
+Perfecto, muchas gracias. Si justamente me gustaría abordar rápidamente si por ahí unas dudas que surgieron de los trámites que ya priorizamos la verdad es que igual.
+Entonces, observaciones, cometerias que nos van haciendo nos ayudan bastante estamos ya aplicando esos ajustes, esos cambios y correcciones que nos fueron mencionando.
+Este para aquí la parte de estatus y toda esta parte, igual a este aquí pues son datos de ejemplo, pero pues también ya que sea visible que algunos vuelven a hacer peano o te van a hacer un caer y de este tipo.
+Y en especie corta comienzo con el trámite 18 o que no voy a adelantando un poco a toda esta parte.
+Eh, a los pasos era específica, bueno, creo que aquí si me gustaría, Fanny, si es una de las dudas que me gustaría aclarar.
+Para el paso 4 que es la información del representante legal, se comentaba que si el concesionario que se está, bueno, del que está realizándose el trámite,
+es una persona física, hubiera tener o no un representante legal, pero si es una persona moral es, o sea, sería, se volvería obligatorio y cuente con un representante legal.
+Si no lo prelarto, ok, entonces para, si detectamos desde un principio, no, porque nosotros ya podemos ver eso, si que es una persona moral, entonces no va a poder marcar que no tiene representante, o sea, de forma obligatoria, tienen que capturar los datos.
+Totalmente de acuerdo. Sí, ok, de acuerdo. Ahora, en el caso de una persona física y si tiene representante legal, comentaban que puede subir, adjuntar un poder notarial o una carta poder es correcto, cualquiera de los dos sería permitido.
+Sí, para, para una persona, para un representante legal de una persona moral, si es el poder notarial, si o si, tienen que dar poder para que en representación de los dueños o de los corporativos, el haga todos los movimientos necesarios legales, ¿no?
+Para persona física, basta con una carta poder firmada, las especificaciones, como debe ir la carta, pues ya la marca el reglamento, pero para un representante legal de una persona física es con carta poder.
+Ok, con carta poder, o poder notaria, o solo carta fue.
+Puedes dejar los ambos. Puedes dejarlo. Ok, de acuerdo, sí, entonces creo que solamente es para la leyenda que vamos a mostrar aquí, ¿no?
+Si te quedamos en persona física, le decimos que puede ser o carta poder o poder notaria, si es persona moral, pues poder notaria por eso, ¿sabente? Ok, sí, solamente es para los textos informativos que vamos a ir mostrando aquí en esta parte.
+Ok, bien, este es el paso 4, paso 5, aquí no hay dudas, nos vamos al paso 6, estaística de producción, ok, me parece que aquí tampoco.
+Y nos vamos al paso 7, planta beneficio, sí, aquí en la planta beneficio, ya hemos comentado que eso es un especie de, pues, una anidación, digamos, de los datos que se van a ir capturando, o sea, una planta beneficio, puede estar vinculada a diferentes títulos, o diferentes títulos, una planta beneficia tiene diferentes títulos.
+Y esos títulos pueden tener diferentes minerales, no, que vayan reportando, aquí mi duda es si previamente, ya habíamos elegido por ahí en el paso dos de datos generales, que tal vez, este es una declaración de tipo agrupamiento, entonces, al momento de ir agregando aquí los títulos, deberían demostrarse solamente en los que conforman ese agrupamiento, es correcto.
+O sea, aquí debe decir cuáles son, bueno, y usando de alta las títulos, si tienen planta beneficio, pero solamente los que forman parte del agrupamiento.
+No, no, porque la ley marca que las plantas de beneficio tienen la obligación de beneficiar minerales de pequeños mineros.
+Entonces, ese pequeño minero no necesariamente pertenece a la empresa o ese título de concesión, no necesariamente pertenece a la empresa, es de un pequeño minero, de un particular, porque la ley así lo marca.
+Entonces, ahí sí, yo creo que ahí tendríamos que permitirle que anexe algún otro título, no necesariamente que sea el de él.
+Entonces, aquí en la declaración puede justamente presentar información que no corresponda a este concesionario.
+Sí, justamente.
+Pero sólo para planta de beneficio, sólo para beneficiar mineral. Sí, sí, sí, sí. Por eso sólo para esta parte, o sea, ¿qué información es la que se tiene que integrar?
+OK, sería que la metiera manualmente la planta de beneficio, o sea, pero ¿qué tienes que meter de esa información de esa planta beneficio?
+En el caso de reporte de planta de beneficio, digamos que la empresa, o en este caso el lote que están reportando dentro de sus operaciones, tiene un área donde se procesa.
+Se lleva como el proceso de cierta sustancia mineral. Entonces, lo que se reporta aquí es el título del cual se extrajo la sustancia que van a beneficiar, el estado municipio y el RFC, digamos, del dueño de la sustancia.
+Aquí, como bien comentaba la Ingelus, es si es normal, o sea, pues es al baligado, es como que presente, obviamente, su propia producción, o sea, es extraje tanto y estoy beneficiando de mi producción.
+Pero la ley marca que los las empresas que cuenten con una planta de beneficio están hasta cierto punto obligadas a ayudar a beneficiar con sesionarios que no cuenten con una planta.
+Porque, obviamente, esto conlleva una inversión. Entonces, al ser pequeños o medianos mineros incluso, no todos cuentan con un proceso de beneficio.
+Ok, entonces al momento de estar capturando el trámite y cuando se trante de una planta beneficio,
+estará con que el concesionario ingrese manualmente el número del pítulo, sería eso, el folio del título y ingrese el municipio así como el RFC.
+Perdón, justamente sería el número de títulos, incluso si podemos aprovechar esta automatización, que al ellos es capturar el número, se llene estado municipio y deja como obligatorio ser el dato de que ellos ingrese en el RFC,
+de la persona a quien le corresponde o es dueña de la sustancia horminar.
+Ok, ¿y tienen que facultar algo o sería nada más esa información?
+No, en realidad, ¿cómo está apartado lo que se reporta es cuánto mineral beneficiaste? Tená más con que decir de dónde lo sacaste, de dónde está ubicado el lote, donde estragiste ese mineral o ese material.
+Y sí, pero así al ser responsable, es decir, yo lo que es viendo ahorita la pantalla, lo que se me ocurre es justamente como lo tienen ahorita, o sea,
+te voy a mostrar todos los títulos tú como tu como empresa con el que entraste, pero te voy a dar la oportunidad de que capturés si en caso de que hayas beneficiado a un tercero.
+Esa es la que la parte que sí tendríamos que agregarle, por si esa planta beneficio de esa empresa, si cumplió con la ley y le benefició a dos tres, porque puede beneficiarle a uno o puede beneficiarle a día, o sea, a todos los pequeños mineros que están ahí alrededor.
+Ok, justo por eso tiene que ser amplio, ¿no? El tema de que ellos puedan ingresar el título que realmente corresponde.
+Ok, entonces si tan de acuerdo lo que vamos a hacer es digo, vamos a analizar si, así como estar prototipo cuadra o dejamos simplemente el hecho de que capturen libremente el número de título que pongan los datos, obviamente, generales o que nos especifican.
+Por ejemplo, en un municipio y el RFC y ahorita lo dejaremos así, vamos a nosotros a valorar si con base a todo esto que estamos buscando automatizar o precargar información con base a lo que nos van a compartir que ya se tiene en ese Excel que nos van a facilitar.
+Si hay forma de automatizar y que cuando seleccione el título ya aparezca automáticamente, pues la dirección, ¿no? Que al final tiene relacionada, pero lo valoraríamos de momento si están de acuerdo luz y Leonardo, lo que vamos a hacer es habilitar simplemente los campos para que el concesionario pueda capturar libremente el número del título, el municipio y el RFC les parece.
+Y ya más nosotros se confirmamos a través de la minuta si fue posible que integraramos la automatización de esta parte que nos comenta.
+Perdón, sí, aquí tengo un comentario en las etiquetas, este no se registra nuevas plantas de beneficio.
+No sé si el formato lo mal no tiene casi.
+Con esta ok, si estás registrando es el lote y el título que se que que benefició o que llevo el mineral y lo se lo beneficiaron en esa planta.
+Ah, de acuerdo, de acuerdo, sí creo que aquí fue un tema de la leyenda nada más, vamos a a hablar lo con la leyenda con el formato actual y lo mantenemos de esa manera luz.
+Perfecto, gracias.
+Ok, de acuerdo. Adelato.
+Sí, sí, gracias. Bueno, sí, nos llamos entonces también esa sección para que el análisis correspondiente.
+Ok, y simplemente me verificar si no parece que el resto, bueno, aquí ya se confirma y se realiza el epío.
+Ok, sí, para el trámite de 18 veces serán las dudas específicas y como menciono mi compañero, vamos a analizar esta última parte de la planta de beneficio para ver, ¿no?
+Que la parte que se pago automatizar, igual que corresponde ya con lo que nos están mencionando.
+Eh, a ver, pregunto, ok, de casualidad, eh, me pregunta mi compañera Alejandra, ale, ale de casualidad tendrás alguna otra, eh, pregunta que realizar, antes de continuar con conocientes apartados.
+Ok, está teniendo problemas con su micrófono.
+Ok, de momento, no. Ok, perfecto.
+Bueno, entonces, vamos, continuamos luz y equipo, nos interesaría ahorita ya explorar los lujos de la DGM y que igual, ¿no?
+Nos apoyen con que, con el visto bueno y con las observaciones correspondientes. Entonces, nos vamos a salir.
+Está aquí igual que estamos implementando los cambios que nos mencionaron que se pueden iniciar por correo electrónico, que pueden registrar su cuenta, si no, no tiene una.
+Y nos vamos aquí al perfil de la DGM para el inicio de sesión, estamos considerando que sea pues un correo institucional.
+Y la contraseña correspondiente. Entonces, ingresan a la plataforma.
+Y, eh, la primera, eh, bueno, cuentan con diferentes apartados pestañas que les va a presentar, eh, la información correspondiente.
+Lo primero que van a ver, eh, son, eh, totales, digamos, generales acerca de los trámites de las declaraciones y la de la participación en general.
+Eh, aquí sí va a dar la pena, eh, que nos puedan indicar si estos, eh, esta información y que que que se está presentando es, es suficiente, digamos, es relevante para ustedes o algún otro dato.
+Aquí igual considerar una cosa es este panel, eh, aunque la, la página de inicio, o sea, lo primero, la primera información que ustedes ve, y otra distinta es la parte de estadísticas.
+No, entonces en la pantalla principal no es necesariamente la parte de estadística, sino estadística tiene su propio apartado.
+Y más bien serían como información relevante que les gustaría ver de primera mano cuando ni sensación, ¿no? Por ejemplo aquí, pues pensamos a el padrón de concesionarios, darles cuantos tiene, cuantas declaraciones se han hecho de los trámites a los 18, del 0, 19, y cuantas declaraciones están en curso, por ejemplo.
+No, este no sé si como vende, esta información está bien o algún otro dato que les resulte, eh, de utilidad para ustedes.
+A mí me parece excelente, tú leo, tienes algún comentario.
+Ahí solamente como duda, esta información sería correspondiente, por ejemplo, ahí menciona que al período 25.
+Es que cada que cambe año se iría renovando, o podría existir como algún filtro, un filtro un histórico para poder, a lo mejor saber, cuantos fueron justamente estos datos.
+Pero para el 2020, 27 algo, algo por el estilo.
+Sí, correcto. Sí, se pueden manejar esos, esos filtros. Sí, adelante José.
+Sí, gracias. Este paní. No sé si es en de acuerdo, Lucy Leonardo, pero tal vez ya considerando esta posibilidad de integrar filtros para que estas tarjetas se se puedan actualizar o ser dinámicas.
+Creo y salvo su visto bueno, eh, convendría que mejor se las integremos en todo esto en el módulo estadísticas, porque al final, pues el módulo considera justamente este tablero como lo está viendo.
+Y con otras funcionalidades, ¿no? Por ejemplo, aquellos indicadores que nos definieron la sesión pasada, o sea, nos habían hablado de cinco indicadores.
+Y que también en esa misma sección de estadísticas, te puedan aplicar entre otros filtros, pues el que pueden exportar algunos reportes en forma que nos definan, se sube o excel.
+Y para concentrar todo lo que tiene que ver con esto información tipo tablero en un único apartado y evitar que tengan en diferentes partes del sistema, pues, pues tarjetitas o cosas sí que a lo mejor estén destinadas a un solo módulo.
+No sé si estén de acuerdo, digo ahorita que están mencionando esta parte de integrar filtros y otras cosas, creo que dada esta característica que nos comentan tal vez y sea ya conveniente que el tablero completo se muestra en las secciones estadísticas con las diferentes funcionalidades que tendré habilitadas.
+Perfecto, sí estoy de acuerdo, yo lo que entiendo es que esta es como primera como un primer impacto y va a ser las tarjetitas del año que esté que esté activo, ¿no? De ejercicio, pues, de la actual me parece bien, creo que este a mí visualmente me dice mucho.
+Porque justamente nuestros superiores es lo que te pronto es lo que quieren el dato duro, entonces para mí está perfecto y sí estamos totalmente de acuerdo que todo lo demás se vaya a la parte estadística.
+Perfecto, lo sí, sí, muchas gracias, entonces consideramos también este primer apartado, nos vamos a dar la pesteña de concesionarios.
+Y, a final de cuentas, esta es lo importante de este panel es que sean herramientas que para ustedes les sirvan para ver toda esta información.
+Entonces, una pues ven los datos duros, otra ya nos pasamos a hacer la revisión posiblemente de los concesionarios.
+En la parte de concesionarios se podrá ver la información precisamente agrupada, creo que es muy similar a lo que veo concesionario.
+Aunque aquí se iba a tener la pena ya que nos inviquen, ¿cuáles son los datos de columna que les interesa ustedes ver?
+Entonces, vemos el padrón de los titulas, ¿no? Estamos ahorita mostrando por qué referir a su social, el representante legal y los titulos asociados y el estatus del padrón.
+Si nos vamos a ver, vamos a tener aquí dos opciones, igual vamos viendo que estos datos les sean de utilidad y sobre esto ya nos van haciendo las observaciones.
+Vamos a ver el expediente y en el expediente vemos igual datos adicionales, por ejemplo, ya puede venir información de contacto, el domicilio y los titulos mineralos que tiene asociados, así como la vigencia, la ubicación, la vigencia y la superficie.
+Aquí vamos a tomar las mismas consideraciones que ya nos harían hecho, donde superficie debe de estar a cuatro decimales. Y la ubicación, pues, si se están mostrando de esta manera municipio y estado, no sé si requieren que se separe o de esta forma se pueden leer, o sea, es entendible, no para la interpretación.
+La vuestra vuelta de forma general y ahí también van haciendo las observaciones, esto es lo que contiene el expediente, ya en ver obligaciones pueden ver ahora sí todas esas trámites que corresponden a los últimos cinco periodos.
+Aquí mostramos el, igual aquí vamos a hacer la juste correspondiente, no es año, sería periodo, trámite, el estatus ese trámite, polo registrado, en caso de finalizado o si está pendiente, la fecha en la que se presentó.
+Y si está pendiente el iniciar con ese trámite, si está finalizado, el descargar el acus, o sea, ahorita ustedes tendrán esa oportunidad de hacer la descar.
+Y ahorita nos vamos adentrando al inicio de trámite, pero de forma general, recordemos que si los confesionarios les presentan la documentación en petanilla, ustedes necesitan tener la forma de cómo hacer ese registro dentro de la plataforma y cumpliendo con la misma información que el confesionario registra de forma via web.
+Entonces, iniciar el trámite del 18, 19 prácticamente les permite recorrer los mismos pasos que ya hemos revisado y cargar esa información correspondiente, y pues, bueno, se está indicando que ese folio terminaría con la nomenclatura o cae, ¿no?
+¿Sería un folio tipo o cae? ¿Por qué ya se ha levantado del lado de ustedes o de ventanilla? Y, bueno, este es la información de momento que contiene la parte de concesionarios.
+Aquí sí, nos gustaría escuchar y comentar el respecto a ustedes y esta información les es, es, es, es funcionar.
+Sí, de hecho, sí, sí es bastante funcional, solamente hay que un comentario, digamos, ahora está viendo minerafres, nilo.
+Ellos son de los que más títulos de concesión tienen y me surgió la duda, habrá posibilidad de que en la parte de tanto ver expediente o ver obligaciones, que se puede ver de título por título.
+Igual se agregue un apartado de buscar, o sea, para poder nosotros ingresar el título de concesión y que nos dirija directamente al título que estamos buscando o observando.
+Ok, ok, sí, sí, sí, entiendo por qué precisamente no, si cuenta con muchos títulos, la identificación puede ser ese facilitariano con una búsqueda.
+Sí, sí, perfectamente.
+De acuerdo, sí, este búsqueda, creo que parecía como lo tenemos con el concesionario, que sería por, por número de título, no sé si por el lote.
+Y por el folio en casa de que esté finalizado.
+Sí, sería como los datos del principal título, el folio y el nombre del lote. Ok, de acuerdo. Sí, sí, se pueden implementar también esa parte.
+Arlanda, nos vemos.
+Gracias, Fannie, aquí creo que hay una pregunta importante, sobre todo, haciendo la distinción entre lo que el concesionario sí puede hacer y el funcionario puede hacer.
+Si recuerdan, para el concesionario dijimos que él no ha tenido habilitado el que pueda visualizar los acuses o descargarlos, solamente habilitaríamos un botón para el rendío al correo electrónico que registró el momento de realizar el trámite.
+Perfecto, sí.
+Pero aquí estamos hablando del panel de administración y gestión de la DGM. Ustedes si requieren que se pueda descargar el acusé o solamente que se visualice.
+O sea, que, sobretodo por aquí hay una apartada que van a darse cuenta que dice descargar acusé. Está bien que se quedé de esta manera, ustedes si tendrían estas funciones, nada más para confirmar.
+Sí, claro, sí, sí, sí, nosotros internamente estamos ese descargo porque independientemente de que los concesionarios estén muy familiarizados ya la mayoría con la plataforma.
+O sea, quién es también se oponen a la resistencia del cambio y optan por la riada tradicional, entonces tenemos que darse los mandándonos nosotros.
+De acuerdo, ok, entonces habilita esta sección de descargar acusé. Perfecto, sin nada más confirmar, gracias.
+Perdón, este solamente para esta aclarar una duda que se me generó en cuanto al al folio, en caso de que nosotros, bueno, en el caso en que nosotros vamos a realizar la carga de la información.
+Esta parte de la generación del folio se está pensando como automática.
+Esta duda es porque el folio se le asigna directamente, digamos, aquí en la venta de ella única, entonces ya está dado y de preferencia estaría bien que quede como abierto para que nosotros lo capturemos manualmente.
+Ok, si es un buen punto, ok, cuando un trámite es via web, sí se puede asignar de este lado de la plataforma, pero cuando un trámite es...
+Sí, exacto, se da desde la ventanilla, ese folio se establece.
+Sí, con todo documental, asigna ese folio. Ok, ok, por lo tanto, uno es que ustedes...
+Sí, es que nosotros asignamos el folio hasta que finalice el trámite, pero realidad aquí antes de comenzar el trámite ya cuenta con un folio cae.
+Entonces, es donde...
+Justamente, el folio da inicio al proceso.
+Ajá, correcto. Sí, sí, sí, ese es lo puesto. Y sí, o sea, igual nos llevamos para el análisis, como se implementaría eso, pero consideramos que requieren ustedes realizar la captura y ese sería el folio.
+Ya no cambiaría correcto durante todo el trámite.
+Si no es ella, no cambia y nada más, mi otro lado también sería como nos lo traen muchas veces, ya sea físico, lo que sea es...
+Escanear, hacerlo ahora que digital en PDF y si nosotros podemos tener resapción, justamente de cargar este PDF para que, al momento de proceder a la parte de la descargar acuse,
+ese sea el que se pueda descargar.
+¿Por qué?
+Voy a eso porque el que nos dejan aquí en Metanilla es el que trae el sellos de recibido, que es lo que le da la validez al concesionario de que si cumplió con su trámite.
+Ok, pregunta, justo los formatos que nos apoyaron con el envío, parece que anti-er, y ya viene, ¿cómo se presenta?
+Los formatos de los acuses de 18 y 19, para los trámites que se hacen por Metanilla, esos formatos se generan también,
+o ya los destruyen todo este expediente.
+El formato es exactamente el mismo, pero justamente para traerlo aquí a la ventanilla o mandarlo por correo electrónico,
+muchas veces lo pueden llenar a mano o lo llenar a máquina.
+Entonces, lo que traen es la hoja, no traen este formato digital, pero es exactamente el mismo formato, los mismos cambios.
+Ok, adelante, José.
+Sí, gracias. Yo me quedé con una donama, quiero corroborar.
+Entonces, cuando un trámite se hace por ventanilla, es porque el concesionario ya llega con el formato requisitado, o sea, lleno.
+Entonces, ese formato al final, pues, es el acuse, que ya trae un sello.
+De hecho, perdón. De hecho, llevan con dos juegos, el que entregan y el que le acuse que les sellan en ventanilla.
+Ok, y lo único que hace el funcionario en ventanilla es capturar la información en el sistema.
+Lo que hace es escanear los documentos. Bueno, primero lo recibe y le asigna el número de folio, es que es único.
+Y se haya la acuse y escanea todos los documentos y es la que nos mandan a nosotros.
+Ok, una pregunta.
+Y ya nosotros como área somos quienes capturamos la información en el formato que está homologado al de la plataforma.
+Para el final creerlo una sola base.
+Y ese formato, o sea, no es en la plataforma si no es otro formato.
+Así es.
+Ok, lo, lo, lo pregunto por lo siguiente, ¿no?
+Porque aquí hay varias cosas interesantes, una.
+Lo que estoy entendiendo el proceso de ventanilla es el siguiente, igual si, si me equivocó, igual si nos pueden confirmar.
+Uno, el concesionario ya tiene el formato y lo llena a máquina a mano.
+El punto es que llega con el formato que, que, que nos enviaron.
+Y bueno, ya llega con dos juegos, se lese ya ni todo, pero ese formato lo entrega.
+No, digamos que al final se lleva su comprobante exellado de que ya lo presentó y ustedes quedan con un juego.
+Ahora, con ese juego, lo que hacen ustedes es, pues respaldarlo o escanearlo o hacen algo internamente y capturan la información del formato
+en, pues en otro lugar, ¿no?
+No es el sistema, lo capturan ustedes en otro lugar, me imagino que en su Excel o en algún otro lugar, ¿no?
+Es correcto, en una estructura de Excel, en una hoja de Excel.
+Ok, la pregunta va a ser este sentido.
+O sea, nosotros podríamos mantener el mismo proceso, o sea, es decir, nada más con la oportunidad de que, justamente aquí, al iniciar trámite eucay,
+ustedes puedan asignar el folio directamente al sistema y, como dicen, que haya la facilidad de que se pueda
+cargar, bueno, va a ser un upload del formato para que ya vivan el sistema, ¿no?
+O sea, ya el formato que lleno el cliente y que les entrego y que ya estás sellado.
+Pero al final, existe la siguiente duda.
+Ustedes terminan capturando de cualquier forma de esa información en otro formato, ¿no?
+Que prácticamente me imagino que es la misma información que el concesionario pudo haber llenado si lo hacía por peán correcto.
+Si lo hacía directamente.
+Sí, sí, sí, sí, perfecto.
+Este, justamente, la gran ventaja aquí sería ya capturarlo directo en el formato del sistema,
+que ya no pase, digamos, que a un archivo Excel y, o sea, darle otra vuelta,
+sino que ya esté directo en el sistema y, pues, al momento de nosotros obtener la base de datos,
+ya esté adentro de este mismo formato.
+Justo, justo hace ahí va el comentario, porque entonces lo que haríamos a lo mejor es, al iniciar el trámito Kai,
+el funcionario realmente es lo que va a hacer es capturar la información del formato en el propio sistema,
+como si lo estuviera haciendo como cualquier concesionario, capturar la información,
+nada más la única diferencia es que no va a adjuntar todo lo que le pide de información.
+Eso lo va a hacer hasta el final, donde adjunta toda la documentación que ya les entregó el concesionario de manera física.
+Perfecto, sí.
+Ok, sí, les parece que así funciona, o sea, cambia un poco el proceso,
+porque mientras que se hace por peán, el concesionario va interactuar con el sistema y cargando datos,
+pero a diferencia del trámite manual, en realidad el trámite manual o por ventanilla,
+lo que pasa es que ahí pues el proceso cambia un poco, o sea, en realidad se captura ya nada más toda la información.
+Y hasta el final se adjunta en los documentos que les entregó el concesionario en forma física.
+Y ya es responsable ahí del funcionario en ventanilla que revisó todos los documentos,
+porque ya el sistema y pues lo único que para lo que funcione es para capturar la información y para cargar el documento que ustedes escanean.
+Correcto, sí sería esa manera, ¿no?
+Correcto, totalmente, ¿de acuerdo?
+Sí, en el sentido de estar.
+De acuerdo, para habilitar de esa forma, lo decimos por lo siguiente,
+porque ya ven que no se habían comentado que ustedes pueden meter también aclaraciones.
+No, más adelante vamos a, bueno, mi compañera se les van a presentar la sección por la que visualizamos
+que se puedan hacer las aclaraciones y entendimos que ustedes van a aplicar también dependiendo de las aclaraciones,
+pues algunas modificaciones que son necesarias para que las estadísticas sean precisas con información actualizada.
+Entonces, el que ustedes manejan ese formato independiente en realidad, pues ya pone aquí una limitante
+a que la estadística realmente esté actualizada.
+Entonces, si el funcionario de ventanilla captura la información en el mismo sistema,
+y ya nada más al final adjunta la documentación que les entregaron en ventanilla,
+la información pues sigue viviendo en el sistema y ya todas se centraliza.
+Entonces, creo que así les funcionaría mejor, pero solamente corroborar con ustedes
+y también apoyándome del lado técnico de mi compañero Eduardo,
+confirmar que eso es posible, correcto. Digo a este lado Eduardo.
+Sí, José, siempre un problema.
+De acuerdo, entonces, nada más sería confirmar con ustedes, luz y Leonardo,
+si les es funcional esto y si les ayuda.
+No, bueno, nos ayudaría bastante, porque nos ahorramos 20 pasos.
+Esta estaría genial.
+Lo mismo que hacemos, el lugar de estar armando la estructura, pega, la lleva,
+dice directo, y se incorpora la base de datos.
+Está perfecto.
+De acuerdo, entonces para nosotros, digo, ya tenerlo establecido a través de esta reunión,
+ponerlo también la minuta y ver que cuadre perfectamente con la estimación del esfuerzo y tiempo,
+pero no lo llevamos entonces justamente para considerar lo que quede de esta manera.
+Y pues sí, creo que es la mejor forma, porque así no vive información fuera del sistema,
+en formatos diferentes realidades que ustedes centralizan todo para que sus estadísticas sean realmente funcionales y precisas,
+porque si no, pues no vas a ver estadística de peán, no van a poder ver estadística de...
+Exacto. Exacto. Aquí lo ideal es la funcionalidad y la realidad.
+O sea, porque si nada más voy a tenerla de la peán, pues no es la realidad.
+O sea, justamente las certeza que todo está anidado o esté colocado en una misma base.
+De acuerdo, de acuerdo, esto no lo había tocado ni platicado, qué bueno que ahorita se comentó.
+Reytero, una más de nosotros, creo que el sistema puede cuadrar y encajar en la estimación del tiempo y el esfuerzo,
+pero creo que no lo llevamos y creo que el sistema entra para que podamos tenerlo ya todo centralizado
+y evitar, justamente, este tema de manejar diferentes lugares donde dio la información y mejor toda vivan una sola base de datos.
+Perfecto. Entonces, adiós, adiós.
+Nosotros ya tomamos nota de esto y nos llevamos. Gracias.
+Sí, gracias.
+Pero un bique ya le tenía levantada, la mano. No sé siquiera es como te hago de dicional.
+Creo que no, igual y igual y bien malo sigue teniendo temas con su micrófono.
+Sí, teníamos problemas con su micrófono.
+Ok, conténemos, Vani, gracias.
+Sí, gracias. Bueno, en realidad creo que eso no me usaría igual a terrizar o terminar de confirmar este punto que he estado mencionando.
+Entonces, en el momento que ustedes como les mencioné no van a tener habilitado también todos estos pasos para hacer la captura dentro del sistema
+y bueno, concentrar y que todo sea consistente. Entonces, todos estos apartados donde se atunta documentación
+para el lado de ustedes no serían necesarios o no estarían habilitados o quedarían como opcionales
+y más bien hasta al final es donde se cargaría ese único archivo o toda esa evidencia que ya se estuvo reconectando.
+Es correcto. O sea, estos apartados están asuntos de documentos. No se considerarían para el lado de ustedes.
+Es correcto.
+Ok, de acuerdo. Está bien.
+Bien. Y para la parte de aviso de privacidad.
+Lo que es que se los podemos dejar así tal cual como les aparece al concesionario.
+Pero pues ya es una manipulación más administrativa del lado de ustedes.
+Tengo no sé si el paso, el primer paso aviso de privacidad y esa parte se deja habilitado también.
+Si se tendría que dejar habilitados para que aparezca porque en el formato físico vienen justamente estos dos apartados.
+Muchas veces también ellos nos ponen algo, si este le yo aviso de privacidad, pero no aceptan notificaciones electrónicas.
+Entonces para nosotros plasmar lo que nos están diciendo en el formato físico, lo ideal es que si aparezca.
+Ok, ok, de acuerdo.
+Si preguntarte a qué lo mencionas, te he entendido que notificaciones o sea ambos casos tendrían que ser obligatorios correcto o notificaciones puede ser opcional.
+La verdad es que nos encantaría que las notificaciones fueran obligatorias, pero no ser las notificaciones electrónicas tendría que ser opcional.
+Porque como la ley no lo marca desde estas, estrictamente pues lo tenemos que dejar a opción del concesionario.
+Ok, si actualmente de hecho del botón no se habilita si no, si no aceptan no, este ambos que van así.
+Ok, entonces para el usuario puede ser opcional, sin embargo creo que aquí también caemos llenas situaciones donde ellos reciben su acuse, el oficio, por medio de correo electrónico.
+Si por alguna razón lo dejamos lo dejamos opcional y ellos no lo marca.
+Entonces no se pudiera enviar o se refiere a otro tipo de notificaciones.
+Por ejemplo, se referiría justamente a estas aclaraciones que mencionamos.
+A lo mejor pusieron una producción que no va de acuerdo a lo que han estado presentando almenten.
+Entonces nosotros le mandamos un oficio de aclaración y la pregunta va en el sentido de si te puedo mandar este oficio y que se han notificado oficialmente a través de tu correo.
+Ok, o en caso cuando ponen ellos que no, es que forzosamente quieren que se les notifique en el domicilio que están colocando para oír y recibir notificaciones.
+Ah, ok, ok. Aquí también la opción es que ya dentro de la plataforma se ingresa y no es necesario que reciban la notificación por correo si no en la plataforma la pueden ver.
+Pero ya de acuerdo a la obligación legal, imagino que ya también no tienen que presentar en el domicilio.
+Ok, sí, y ya la alternativa digital es dentro de la plataforma, pues pueden ver esa aclaración.
+Ok, entiendo sí para considerar también esta parte, o sea, eso es opcional y si no lo marca, entonces ese tipo de notificaciones de aclaración no se les envía.
+Y bueno, igual ahorita ya ingresé y precisamente estos son los apartados, ustedes tendrán disponibles. Adelante José.
+Gracias, Fanny. Pero no disculpa porque el consejo importante, sobre todo, por un tema de normativa y revisarlo con ustedes, Lucie Leonardo.
+Ok, el concesionario tiene esta apartado para confirmar si acepta recibir notificaciones por correo electrónico y si no se hace a través de oficios.
+Me sorcreo una duda, nosotros estamos contemplando habilitar en el peán para el concesionario una sección de aclaraciones.
+Pero tal vez estemos incumpliendo la norma si él no la autoriza tampoco que sea a través de la plataforma.
+Entonces, tal vez pensando en lo de ese modo, no sé si desean que mejor omitamos las notificaciones al ciudadano a través de la plataforma y que mejor nada más se les haga llegar por correo electrónico.
+Y él le responde a través de correo electrónico con la información que se necesita que ustedes les aclaren.
+Y a lo mejor ya nada más ustedes de manera interna en su módulo pueden cargar el escrito libre que les enviaron con la documentación que les envió el concesionario por correo electrónico.
+Todo esto lo estoy pensando en función justamente a la normativa, porque a lo mejor el dice no, toda mis notificaciones a domicilio, todo se va a ser por domicilio, o sea, nunca se va a dar un seguimiento realmente en el sistema.
+Y tal vez una no hay cumplir la norma.
+Dos no tengas sentido que el concesionario tenga una sección de aclaraciones en su en sus fiste. Bueno, te cara a lo que él ve, porque en realidad le da seguimiento o por correo o de manera física, no a través de la información que les proporciono ustedes por los medios de ventanilla o otros medios.
+No lo sé, aquí ahora sí que nos ayudará bastante a ustedes que nos definan, no vayamos nosotros a integrar alguna funcionalidad que cumple con la normativa y que pueda complicar el proceso o cumplir algo que no debe ser.
+Sí, sí, no es muy válida la duda, porque justamente podrían ellos como ampararse, no es un medio oficial o algo por el estilo para poder desechar algún proceso, justamente aquí yo, yo considero que sí se puede realizar estas notificaciones por correo y por la aplicación por la plataforma perdón.
+Pero ya en caso de necesitarse un procedimiento administrativo de forma, digamos, ya oficial de acuerdo a la ley, tendríamos ya nosotros que tomar las medidas pertinentes para evitar que que ese sea un argumento que le permita al concesionario
+pues eludir, no es su responsabilidad, digamos, que se le mandó una aclaración por aquí por la plataforma y no está dando atención.
+Nosotros al ver ese caso y si él dice que no acepta recibir notificaciones electrónicas,
+tendríamos que tomar las medidas para llevarlo a la siguiente vía que sería ya notificarle en el domicilio que él da para recibir notificaciones y que el procedimiento lleve, ahora sí que la línea que marca la ley.
+Ok, entonces no les impactan nada si se habilita un módulo de aclaraciones de cara al concesionario.
+O solamente mejor que le envíen la aclaración por correo si él autoriza y si no, pues ya está la otra vía, que es un oficio, sobre todo eso que no vayamos a nosotros a meter algo en este tema que termine más que ayudando pues tal vez afectando o que no se afuncional al final cabo, ¿no?
+Eso ya creo que como área ustedes serían muy importantes que lo o sea que lo determinaran para que saber nosotros si lo integramos o mejor no.
+Pues justamente entonces en este sentido, lo ideal va a ser que en caso de que ellos sí pongan este accepto, recibir estas notificaciones electrónicas que la plataforma lo tenga activado, en caso de que no, si mejor evitarlo, para saber que no generar más inconvenientes en unos procesos.
+De acuerdo, entonces para que nosotros establezamos la negocio si hay una autorización de que puede ser notificado por menos electrónicos, se habilita el envío por correo y también el módulo de notificas de aclaraciones para el concesionario.
+Para que ahí mismo pueda responder a la aclaración en caso de que no sea así, pues mejor no, no, ni enviamos correo y tampoco habilitamos esa sección de aclaraciones.
+Es correcto, y utilizamos la vía normal para nosotros.
+De acuerdo.
+OK, adelante, Fanny.
+Sí, gracias, gracias. Vamos tomando a todos estos puntos y justo vamos a revisar este plujo de declaraciones, pero bueno, yo ahorita en este sentido que se menciona no solamente se autoriza recibir notificaciones.
+De lado de ustedes tendrán habilitado en la partada de acuces y declaraciones en donde de primera mano verían toda la información de los trámites actuales.
+Obviamente son trámites que ya se hayan realizado y que estén ya en este como proceso de revisión del lado de ustedes.
+Aquí estamos considerando también la regla que nos mencionaron en la última reunión, en donde una vez que el concesionario presenta su declaración,
+ya se puede considerar concluido porque ya cumplió a partir de ahí, bueno, viendo otro proceso de revisión y de posibles aclaraciones, pero eso no altera el hecho que él ya ha cumplido con su obligación.
+Es correcto, justo.
+Ok, de esa manera, sí. Y en acuces y declaraciones van a ver poder ver el folio, el trámite, el título y el lote, el nombre del titular concesionario, el ejercicio.
+Bueno, con más bien que sería el periodo que se llevó a cabo y la fecha en la que se realizó el trámito, se finalizó el trámite y él está...
+Bueno, aquí igual vamos a hacer esta corrección, pero igual nos vamos a llevar todos estos puntos que ya nos habían mencionado que sería el estatus,
+si se realizó de forma ordinaria o exemporánea. Y justo aquí en realidad este cuadro, esta tabla es solamente informativa, ver si estos datos que contiene son necesarios o suficientes para ustedes.
+Y en la parte de acciones, en realidad va a venir esta opción, o sea, de poder marcar o solicitar una aclaración.
+Dentro de la aclaración, estamos considerando los apartados de título de la aclaración en la descripción y el adjunto de un del oficio o del documento que deba de llevar.
+Justamente estos apartados servirán para las dos vías de notificación, en caso casi la hay autorizado, se le realizaría el envío de correr electrónico de esta información con este adjunto, este sería el asunto, este sería el cuerpo del correo y el adjunto.
+Y de la misma forma en la plataforma, vería en la sección correspondiente, el concesionario, vería esta información que se haya capturado. Una vez capturando estos datos, se emite la notificación y se enviaría por correo electrónico y lo puede visualizar también ya en la plataforma.
+No, es el flujo que vemos del lado de ustedes para emitir una aclaración. Aquí vienen igual algunas propuestas de filtros, aquí serían por periódos, por el estatus, y igual ver si esta información es de utilidad para ustedes.
+Sí, está perfecto, un comentario justo en la fichita del requerimiento o de la aclaración, perdón, entiendo que el correo o lo que se le envía va a llevar el nombre del concesionario, el nombre delote y el título.
+Ok, ok, ok. Sí, dejamos, bueno, hay dos opciones, una dejamos esta partada de descripción, como para que ustedes, por lo que en toda la información que debe llevar el cuerpo del correo.
+Simplemente, esa es esta perfecto, pero si hay algún dato como adicional que vaya de forma obligatoria, pues igual lo podemos considerar, me podrás volver a repetir por favor luz lo que mencionabas los datos.
+Justamente, los datos que tiene es prácticamente arriba que sería el nombre del concesionario, el título y el nombre delote. Ok, y obviamente el cuerpo de la de la aclaración o de el mensaje que lo vamos a ir a mandar nosotros.
+Ok, entonces requieren que esos tres datos los agreguemos adicional al cuerpo que ustedes capturan o ustedes lo capturarían ya directamente aquí en el mensaje.
+No es para ver que no haya como duplicidad de información que ustedes lo mencionen y que aparte nosotros lo llamos, este como dato que por de faul va incluido.
+Por de faul, o sea que lo jale automáticamente. Ok, ok, ok.
+Acuérdamos este el margen de ronosa que no hay error. Sí, sí, sí, de acuerdo, sí, pues igual vemos nos llevamos este punto para analizar ver cómo se puede integrar esa información y si consideramos estos datos que vayan en cada uno de los correos que se inviert.
+Y creo que con estos tres campos a desionar a lo que ya mencionaban, les sería suficiente, es verdad, para hacer la misión de una aclaración.
+Sí, con eso ser suficiente y justamente con el opicio en PDF que que mandaríamos.
+Ok, de acuerdo. Perfecto, bien, pues el floco va de esta manera, una vez que ustedes emiten una, una aclaración, el concesionar a lo recibe igual ahorita le voy a pasar a ese perfil.
+Y de lado ustedes tienen también este otro apartado gestión de aclaraciones a ojo aquí si ya se emitió ya va a desaparecer digamos esta tablita porque pasa otro estatus, un estatus en donde tiene una declaración.
+Una aclaración perdón abierto, que está en proceso. Entonces en esta tablita solamente para los que no tienen ninguna aclaración y requieren abrir o emitir una.
+Entonces que emití una, ahí me voy a pasar a la gestión de aclaraciones donde ahora es aquí donde voy a estar dando ese seguimiento.
+No, aquí igual vemos el folio de la aclaración, el folio original, igual aquí es un punto importante nos llegaron a comentar que al momento de emitir una aclaración se genera un folio de esa aclaración, no al cual es independiente al original.
+Entonces, estamos realizando ese mapeo, esa vinculación entre ambos folios y igual tenemos que el momento que se reciban respuestas o sacan modificaciones de la aclaración, pues el folio no se altera, no permanece igual.
+Viene la información del concesionario, el cual dice, aquí vamos a hacer la corrección de los títulos respecto a trainte y a periodo, es la fecha en la que se emitió y el estatus de esa aclaración.
+De aquí pues vienen a igual tenemos filtros de búsqueda por el estatus, pendiente, revisión o procedente en los trámites y el campo abierto para búsqueda por folio, fue el original folio de aclaración o concesionario.
+Entonces, este es el cuadro informativo, de aquí nos vamos a revisar la aclaración que nos pasa precisamente a la siguiente pestaña y es donde vemos de primera mano el folio de la aclaración, de la expediente, el folio original del trámite, el note, el nombre de la concesión.
+Y en los apartados de requerimiento formulado por la dirección, que sería el oficio que ustedes está en mar y que ustedes cargaron, o sea, tiene primero la información que ustedes remitieron, no al concesionario, que fue la observación que se colocó y el oficio adjunto.
+Y también aquí, que es cuando, en primer lugar, una vez que se emite, pues ven solamente la información que ustedes enviaron, una vez que el concesionario ya responde, igual a través de la plataforma, pueden ver esa respuesta.
+Entonces aquí, digo, se tiene este cuadro de formar resumida, del lado de ellos, ahorita me pasa, es algo muy parecido, envían un título, una descripción y los adjuntos.
+Y es aquí donde ustedes pueden ver la información y indicar si procede o si no procede o sea, vamos a tener que emitir una nueva declaración porque no es suficiente lo que responde.
+Pero antes de llegar a este otro al siguiente paso, hicieran mostrarles, creo que aquí, me puedo ir vista concesionario.
+Bueno, esos atajos lo verás que son ahorita por el prototipo, o sea, el sistema real no va a permitir realizar eso, pero bueno ahorita me salto de una sesión a otra.
+Y nos vemos con el perfil del concesionario, ellos tienen habilitado, está apertado de declaraciones, pueden ver igual, la información de concesión, lote, folio, el folio de la declaración, ya estaría generado en este punto, el tipo de trámite, el periodo, el estatus del trámite,
+si se presentó de forma ordinaria o contemporánea y la fecha de recepción y la fecha en la que se generó la declaración también con los filtros correspondientes.
+Entonces aquí ellos pueden ver la información, en el momento en el que aparezca aquí un folio es porque se emitió ya una declaración, no de lo contrario, pues no parecería.
+Entonces se va a venir a ver y responder. Aquí ellos estarían visualizando la información que ustedes enviaron, tipo de manera de ejemplo es un cuadro pequeño.
+Sin embargo, pues puede ser se puede extender o pues vamos a igual aquí ver la manera como se acomoda la información en caso de que sea extenso.
+La idea es que puedan tanto descargar este oficio que ustedes asuntan como ver la descripción correspondiente y el tipo.
+Entonces ellos consultan información de ahí lo que pueden hacer es enviar una respuesta captura en la respuesta correspondiente y generan el adjunto de los archivos.
+Ok, como archivos que ellos están obligados a acargar está el escrito libre firmado.
+Entonces realizan la carga de ese documento y aquí depende de quién está realizando, respondiendo en la declaración.
+Si es el mismo concesionario entonces se ve de adcontar su INE y información de evidencia, no o sea con esos aseguramos que el concesionario es el que está respondiendo esa información.
+Sin embargo, también está la opción que pueda responder el la poderado legal, en ese caso va a ser información de la poderado legal su INE, el poder notarial y también el adjunto de la evidencia.
+Aquí viene la información que ellos están respondiendo a su respuesta consta de este cuadro descriptivo y del adjunto de estos documentos.
+A ver, aquí en esta parte es donde viene la solicitud de la declaración donde van a poder consultar, que es lo que ustedes les estarían enviados.
+Un perdón, un comentario en donde dice si es el la poderado legal, en el .2.2 nada más como etiqueta, poder notarial y yo tartar, poder firmar.
+Ah, correcto, ok, sí, sí, de acuerdo para la persona física, poder aplicar la carta poder.
+Ok, de acuerdo.
+Sí, claro, gracias.
+Bueno, ellos realizan ya la captura de lo que corresponde a su respuesta, envían, firman y enviar.
+Y listo aquí, y ya se devuelve la comunicación del lado de ustedes ellos, pues, que venden la espera de la resolución, ¿no? Si es procedente, se levanta alguna otra claración.
+Entonces, nos regresamos. Voy a regresar. Sí, aquí está la vista del concesión. No, perdón.
+Deciente, estamos ya en la declaración, ¿ok? Entonces regresan a ustedes. Realizaría aquí los cambios de estatus correspondientes, revisan la declaración y ya cuentan con una respuesta, ¿no? Por parte del concesional pueden realizar la descarga de la evidencia, verificar la respuesta, la descripción que ellos hayan capturado.
+Y sobre de esto, así es como visualizamos el flujo ojo, aquí sí igual que nos van, puedan apoyar que el entendimiento es el correcto o si hay algo más tradicional.
+De aquí entendemos que una vez que ustedes consultan la respuesta, pueden emitir que es procedente o que no es procedente.
+Me voy a ir aquí, o sea que no es procedente. Entonces, ¿qué sucede? Volvemos al levantar y a presentar la misma información que ya sabía capturado con la inición de la primera declaración.
+Que es, ¿ok? Volvemos a requerir que se vuelva a indicar el título de esta segunda declaración, el motivo aquí entendemos que igual vamos a considerar los tres actos que nos habían mencionado.
+Y el adjunto. Perdón, bueno aquí no parece ser perfecto. Aquí en el prototipo no se presenta con botón para adjunto, pero así sería. Entendemos que se vuelve a emitir, ¿no?
+Uno oficio y igual se tienen que volver a disputar. Teno. Sí, justo. Sí, ok, perfecto. Eso lo mismo, tres campos que yo hemos mencionado se vuelve a emitir la declaración.
+Ok, se realizaría el envío por correo electrónico y por, y ya el, el concesionario lo puede realizar en su, en su bandeja o en el apartado correspondiente.
+Entonces, entendemos que este es un ciclo, digamos, de de de de respuestas y de declaraciones, igual aquí viendo una pregunta, ¿hay algún límite de declaraciones que se puedan emitir?
+Entonces, ¿qué tan frecuente sea que nos proceda y que se rechazen y se vuelva a enviar los motivos? Pero saberse algún límite, no que ya sé, es que es un máximo de tres intentos o de tres declaraciones y después ahí notificar que mejor acuda a ventanilla o que se publican con, con la dirección, no sé algo por el estilo, pero igual este, ¿qué procedería en esos casos?
+Normalmente en las declaraciones procuramos ya observarles de forma integral, no? Toda la revisión de sus informes. Entonces, por lo tanto, nada más hay una por cada caso, pero eso no, no eximenada que pudiera ver en algún, en algún momento, dos o tres.
+Yo creo que no no pone algún límite, digo, por lo regular va a ser una, sí, pero de preferencia, sino poner límite por si en algún momento llegaste a dar la, la, la, ¿cómo?
+Es versión adecuada en las escenarias, ¿no? ¿Dónde? Exactamente. Ok, de acuerdo, sí, sin problema, igual para que lo consideramos como regular, que no hay límite de las declaraciones que se puedan emitir y bueno, el flujo sería ese, ¿no?
+No, este, el consistimiento de volver a revisar y volver a responder. Sí, gracias, gracias, nada. Ok, perfecto, de aquí nos, ¿qué vamos a darle en revisar la declaración? Ok, perfecto.
+Aunque que este es la, no proceden. Ok, vamos a ver ahora, el caso, bueno, en realidad igual aquí para aclarar, estaba viendo el caso de estos, que viene a mi habilitó.
+El género, verlo, voy a dar en actualizar datos, si estén declaraciones, para que lo habilitó, que ya está, por ejemplo. Ok, pero ya queda, ok, pregunta aquí, igual nos quedó en la duda. Para el otro escenario, en donde ya procede, digamos que se da el cierre a esas, a esas aclaraciones,
+habilitamos aquí este botoncito, yo creo que van a ser la pena que agregamos un cuadro confirmativo, no una pregunta, está seguro que desea que la declaración es procedente o como cerrar la declaración, y a confirma y queda cerrar.
+De aquí entendemos que sería como el cierre de ese trámite, o sea lo que correspondería es que los estatus cambiaría, igual ese folio o ese trámite, pues ya no parecería aquí en estos apartados de declaraciones, ya quedaría solo como con la información estadística, ¿no?
+Ya es el cierre, digamos, de ese trámite hasta la declaración, sería ahí donde cierre el trámite para ustedes, o sea, ya no habría algo adicional, simplemente ese sería como el visto bueno que ustedes le darían a ese trámite.
+Sí, sí ya en cuanto a declaraciones, ahí justamente cerraría el proceso, yo ya en caso de que se derive algún procedimiento administrativo, es efectivamente ya no sería por la plataforma, ya sería por el medio de notificación en físico en la misilia.
+Ok, perfecto, bien, sí, entonces ese implicaría ya el cierre del trámite, lo que comento, ya sería nada más visualización de la información correspondiente en las tablas de consulta.
+Ok, de aquí nos vamos ya a la parte estadística, es justo lo que mencionábamos al inicio de la sesión, de igual forma requerimos que ustedes, como que nos orienten,
+para que sean los datos, pues justo lo que ustedes requiera, de forma igual propuesta, ahorita lo verás que no tiene como que dinamismo algo respecto a esto solamente como presentar este, los datos, la información.
+Y pero creo que aquí es donde ya ustedes nos mencionaba por impulsos filtros por periodo, hoy quiero ver entonces lo del 2025, 2024, es aquí en estas secciones donde lo podemos incluir, que nos indiquen si filtros por periodo y cual que otro tipo de filtros requieren.
+Y bueno, de primera mano igual les mostramos como que información estadística acerca de los trámites o el complemento de declaraciones por los distintos periodos.
+Aquí veréis si igual requieren de los últimos cinco periodos o requieren que se mantenga todo el histórico, o sea, de todos los años.
+Distribución de los minerales básicos, que serían este oro plata sin cobre, plomo, o sea, la declaración y el lumen que se ha realizado de ellos.
+Y en la parte de abajo estamos considerando los cinco escenarios que nos mencionaban en la sesión anterior.
+En los casos entonces se realizan cumplimiento en tiempo y con el monton mínimo cubierto, en donde se realizan en tiempo pero sin abarcar el monton mínimo.
+En donde si se abarca monton mínimo, pero ya se realizó de forma extemporánea o donde es extemporáneo y no cubre el monton mínimo, son los cuatro escenarios que nos mencionaba.
+Más el caso de los omisos, los acuantos de estos trámites quedaron pendientes, pero terminó ya el periodo, entonces ya pasan como omisos y pues no se han realizado este anafécho.
+Y aquí podemos incluir igual los filtros correspondientes, tal vez lo que se requiera para que ustedes vean información. Igual aquí se nos serviría que nos voy a indicarse que aquí yo no into una gráfica de tipo barras o tipo pastel.
+No sé, digo yo al al Darcliffe la verdad es que podemos desplicarles a ustedes más datos, pero es lo que requerimos que nos indique si estos cuadros informativos son suficientes, son funcionales para que ustedes puedan leer e interpretar la información o si se requiere algo adicional, ya que este desglose de cada uno de estos escenarios y estos datos.
+Bien, aquí, en este caso, si nos gustaría, por ejemplo, poder hacer distanciamiento entre el 0, 18 y el 0, 19 para distinguir las las presentaciones de cada uno, los los estatus, digamos que si tenemos los estos cinco casos,
+poder ver específicamente los cinco para el 0, 18 y los cinco para el 0, 19. Ok, de acuerdo.
+Perdón, y otra otra observación. Yo veo estos cinco fichitas y dice en tiempo y monto cubierto, para el 18 no hay un monto que se tenga que cubrir para el 19, sí.
+Sí, es correcto. Para el 18 sería solamente en tiempo o en el 18, los campos, los indicadores o las variables que nos servirían muchísimo a nosotros,
+en tiempo, temporario o miso, presento producción, con producción o sin producción. Y a mí me gustaría agregar un etiqueta o no sé, una fichita más, donde decir,
+en esta parte de estadística cuántos títulos de concesión presentaron producción, en general, cuántos.
+Ok, con tus títulos presentaron producción. Ok, sí, sí, sí, por, igual por periodo, no sé, desde el 2025 o de 2016 o periodos, ok, de acuerdo, es correcto.
+Ok, adelante, José.
+Gracias, Fanny. Justamente, creo que esta parte es muy importante contar con su apoyo, Leo y luz, para poder definir
+justo lo que nos están diciendo, digo, ir dándole forma, les parece adecuado que por ejemplo, en la parte superior que está presentándome,
+acompañar a Fanny, donde dice estadísticas, se despliegue un submenu, donde diga estadísticas y un submenu se atrámite 18 y otro submenu se atrámite 19,
+o sea, para separar otra. Perfecto, sí, perfecto. Entonces, vamos a separar los, ahora sí que las estadísticas, ahora que estamos nosotros considerando y obviamente confirmar con ustedes,
+dejarles como estadísticas, uno, algunos filtros, necesitamos saber esos filtros de consulta cuál sería y qué información debería tener el informe que logremos exportar de aquí.
+O sea, creo que esa parte es importante definir la verita como ustedes, no sé si por ahí tengamos alguna tablita, Fanny,
+ahorita que podemos presentar, pero cuál es la idea, o sea, que ustedes nos digan, ok, a ver, esto que habla de estadísticas del trámite 19,
+además de poder nosotros mostrarles estas cinco fichitas que ya están habilitadas y obviamente ahorita optimizarlas conforme lo que ustedes nos indiquen,
+la idea es que ustedes puedan meter ciertos filtros, por ejemplo, que va a poner el filtro de que solo quieren ver la información relacionada con un concesionario en específico.
+Entonces, si nada más quieren ver la información se concesionan específico, filtran y entonces el sistema les va a mostrar la más de información
+en específico con la posibilidad de exportar ese Excel, por así decirlo, y obviamente Excel tiene que tener información específica, ¿qué información es la que desean ver?
+Entonces, para nosotros es muy importante ahorita llevarnos lo, o sea, ¿qué necesitan como filtros y qué necesitan como Excel para que una esta sección de consultas y reportes que ha de cubierta?
+Dos las fichas definirlas, este de apartado de fichitas que se vean ahí abajo, tener definido, ¿qué es lo que debe de aparecer para el 18 y qué es lo que debe aparecer para el 19?
+Y en conjunto todo esto son los dos tableros que existirían, un tablero para el 18 y un tablero para el 19, cada uno de los tableros tiene sus respectivas fichitas y cada uno de los tableros tiene sus respectivos filtros de consulta y la información que van a poder exportar.
+Con esto les sería funcional a ustedes, digo para que podamos definirlo en estos momentos.
+Sí, justamente nada más como bien dices definiendo algunos indicadores, por ejemplo, en nosotros es super útil saber qué estado y qué municipio produjo oro, ¿qué estado en municipio produjo tal mineral?
+Si nos gustaría dar ese detalle de que minerales produce qué municipio y qué estaba?
+De acuerdo, si quieren, digo salvo que ahorita pasemos a la sección de reportes, vamos primero con los indicadores, estén de acuerdo, vamos a notar ahorita, digo para que nos den oportunidad tomar nota, ¿cuáles serían los indicadores que requieren?
+O sea, las fichitas que van a aparecer para el trámite 18, si gusta notar, tomamos nota primero para el 18. Creo que habían comentado que para el trámite 18 requieren una fichita de que les digan, ¿cuántos se presentaron ordinarios, cuantos extemporáneos y cuantos son misos?
+¿correcto? Esas son las tres primeras cosas, ya tenemos esas tres, aparte requieren cuáles se presentó para el 18 con producción. ¿correcto? ¿cuántos se presentaron con producción?
+Aparte, ¿cuántos sin producción? ¿cuántos sin producción? Ok, ya tenemos cinco indicadores, ¿a ahora qué otro dato se requiere del 18?
+Te decías por estado, ¿no? ¿vinerales por estado?
+Sí, correcto, comentar, ¿no? O sea, se me ocurre bien igual, vereíamos cómo se resuelve, pero igual le está el seleccionar algunos de estos apartados, es que se desplegue por estado en un principio correcto.
+Sí, exacto, este justo de ahí sería ahora sí que en específico los que presentaron producción, poder hacer ese desglose de bubre estado,
+en el principio. ¿por qué podríamos meter esos en el reporte?
+En el reporte podríamos meter los filtros que les digan, ok, dime cuantos de todos los minerales, o sea, cuantos ustedes que hagan un filtro ahí de ok,
+queremos saber que más bien aquí la idea es, ustedes necesitan una gráfica inmediata, o con el puro reporte que les pueda decir cuantos estados, este producido en oro y cuantos producieron plata de suficiente.
+El reporte es para entender a qué nos estamos refiriendo, ¿sería un extranible?
+Ah, como un excel que pueda decirles ahí, por ejemplo, el concentrado que les diga, pues tienes este, tienes de oro, todos estos estados, ¿no? De plata, tienes todos estos estados, de cobre, tensos estados, desintios estados y ya nada más, sales daría eso, esa reporte.
+Sí, sí, ese no sería este muy funcional y como pregunta, o sea, también se podría añadir de forma más gráfica aquí en la plataforma,
+este las, pues sí, un gráfico de de ya sea de barras o sí, principalmente de barras, sí, bueno, ahí justo les iba a sugerir, se pueden poner aquí un filtro, en esta misma pantalita que estamos viendo, pues se pueden agregar filtros, por ejemplo, por estado o por municipio y las cantidades serían actualizando, o sea,
+eso sería una cosa que se podría agregar, es decir, aquí me está presentando todo, digamos, de todo el territorio nacional, pero podría agregar filtros, para que estas cantidades que me está viendo, que me está presentando aquí, sean sólo de las que cumplen con ciertas condiciones, o sea,
+por el estado de Durango, me va a presentar esto mismo, pero sólo para Durango, o filtrame por el municipio tal, eso puede ser aquí, obviamente como dice, si ya quieren ver todos, un desbloque, pues eso ya es un reporte, que se exporta, pero aquí se puede hacer así, digamos,
+para ver un detalle rápido de un lugar en específico, no sé un concesionario en específico, o sea, aquí se podrían definir filtros, que lo que hagan sea justamente eso, que esta información que está aquí, sea sólo la que corresponde a los filtros que estoy poniendo, eso sería algo que podríamos agregar aquí.
+Ok, sí, sí está perfecto, y sí, justamente aquí comentándolo, pues no serví a justo esa parte de la gráfica de barras, y no sé, hay como pregunta, ¿qué tan posible es que, a lo mejor, un mapa que también se pueda pintar, que digamos, la producción de oro y que se pinte, no sé, Durango, Chihuahua y Zacatecas, no sé, por decir algunos.
+Es posible hacer eso. En cuanto al mapa de calor, o sea, de qué es posible es posible, lo que tenemos que analizar nosotros es decir, igual en cuanto al estimación de esfuerzo y tiempo nos da, o sea, de qué es posible, claro que es posible, así es posible integrar un mapa de calor,
+como más o menos, como al que comentas, para poder decir, o sea, visualizar en ese mapa que estados están con las características que comentas, lo que les pediré a Ilusio y Leonardo es que nos den oportunidad realmente si digo la verdad es un poco complejo que nos dé para este alcance, pero, pero o sea, con todo lo que estamos integrando en un desarrollo futuro, claro que se puede integrar, o sea,
+o sea, ahorita lo que habilitaríamos sería la mujer esos filtros, que nos den la oportunidad justamente, demostrarles la información de, por ejemplo, de los cinco indicadores que ya comentamos más este sexto adicional, que mostraría la, la distribución de los minerales conforma los diferentes estados,
+haríamos eso y dejaríamos todo listo también conformar la arquitectura que estamos haciendo del propio sistema para que en un futuro si podemos integrar esta funcionalidad, es un poco más compleja, la verdad es un poco más compleja, porque hay que justamente manipular ese mapa de calor en función de las, de las diferentes funcionarias que nos solicitan,
+pero no es, o sea, es posible, claro que sí, sí, sí, se podría hacer, no sé cómo ven a ni este Lucy y Leonardo, excelente, estamos pensando, igual entendemos los tiempos que ya no se están rebasando como una mejora en una segunda fase.
+Correcto, correcto, lo podríamos manejar de esa manera y bueno, ver qué otras cosas se pueden seguir evolucionando el sistema, ahorita lo que proponemos es que queden definidas las justamente los indicadores y cosas que se van a presentar para cada, para cada trámite,
+y digo, digo, para no más recapitular, entonces estamos a acuerdo y salvo que tengan algún otro detalle adicional, luz y Leonardo, para el trámite 18 sería tener un indicador que muestra cuantos son extemporáneos, cuantos son ordinarios, cuantos son omisos, cuantos con producción, cuantos sin producción y el detalle de minerales por estados.
+¿Sería eso correcto? Sí, perfecto. Aquí, además, una etiquetita más la distribución por mineral principal declarado, obviamente, de tomar estos cinco, porque son los que son económicamente más rentables, podríamos agregar una sexta etiquetita que diga mineral de hierro o fierro.
+Sí, claro, la agregamos ahora, aquí como se ve del lado derecho, que además de estos cinco, el sexto para que se ocupe ahí, porque finalmente son los que los minerales, que mayor atactivo tienen para los inversiones y para los concesionarios, obviamente.
+Perfecto, claro que sí. Es ese tipo de cambios, pero ese tipo de cambios es, o sea, son bastante sencillos.
+Entonces, eso pues no tiene problema en implementarse, incluso lo que les comentaba yo, pero en lo de los filtros, yo veo que sí podríamos incluirlo con él, alcance que tenemos, que tenemos ahorita.
+No, vamos para, o sea, a lo que me refiere es esa que ustedes preguntan, y pues nosotros les decimos, no, pues sí, si nos da tiempo, o ya lo dejaremos para la siguiente vez. Perfecto, gracias, y acuérdense.
+Entonces, agregaremos eso equipo, o sea, son seis indicadores, ya acordados, el sexto indicador que tiene que ver con minerales, nos solicitan poder integrar también que se presente hierro y fierro, sería.
+Sablamos de lo mismo, no, sería, es lo mismo, puede ser cierro para que no para, o no me coloque al fierro. Ok, lo colocamos aquí, entonces serían seis apartados principales de minerales los que se mostrarían y que conformen mi compañero Eduardo mencionó, se actualizarían también con los filtros de búsqueda que adaptemos.
+Ahora, creo que aquí no más lo importante son los filtros de búsqueda, uno de ellos es por estado, porque ya dijimos que estas tarjetitas se van a actualizar por estado. Eso quiere decir, te puedes bajar tanto de favor faní.
+Eso quiere decir que las otras fichitas que estén abajo también se actualizarían por estado, estamos, acuerdos. Cuando, cuando ustedes seleccionan un estado, se va a actualizar estas fichitas de aquí arriba de los minerales.
+Y también se actualizaría, bueno, el estado tal, si cumplió con tantos ordinarios, también cumplió, bueno, tendría tantos ordinarios, tendría tantos extraordinarios, tendría extemporáneos, tendría tantos omisos, tendría tantos con producción y tendría tantos sin producción.
+Eso pasaría, o sea, las fichitas también se actualizarían, si ustedes actualizan el estado, no nada más los minerales. ¿Te acuerdo?
+Eso es lo que haría. Ahora, ese es uno de los filtros, estado, habría otro filtro importante para ustedes?
+El filtro por concesionario también nos apoyaría bastante. Ok, sería por el nombre o el reflexe del concesionario, como sería como aplica, o por el nombre del título, como como sería, o el número del título, como sería esa parte.
+Pero ver específicamente del título, pero por el nombre, por nombre de concesionario. Ok, entonces entraría filtro por estados, filtro por el concesionario.
+¿Qué ha estado municipio? Estado municipio concesionario. Ok, esos serían los tres filtros a integrar.
+Ok, nada más, me apoyo hay tantito de Eduardo, te lo he tomado el aspecto técnico. El estado no le veo tema de Eduardo, creo que es viable, el concesionario también, también el municipio, pero me quiero apagar un poco más, también a temas de tiempos.
+El municipio también se podría, lo alcanzamos a cubrir. Sí, siempre que tengamos el catálogo definido, y pues yo creo que sí, porque es un dato que se les exige a ellos, que especifica, entonces no creo que haya problema. Ok, de acuerdo.
+Sí, el dato viene apagado a la base de acuerdo al título de concesion.
+Sí, entonces no hay problema, así es prácticamente lo mismo que de acuerdo. Entonces, el trámite 18 respecto a su tablero de estadísticas que daría habilitado con seis indicadores.
+Estos indicadores, digamos, para recapitular, serían ordinarios extra temporáneos o misos con producción sin producción y los minerales, los filtros serían por concesionario, por estado y municipio.
+De acuerdo a Ilus y Leonardo, así lo habilitaremos el tablero de estadísticas para para lo que es el trámite 18.
+Perfecto, sí, estaría muy bien. Perfecto. Ahora, vámonos con el trámite 19, ahí serían los mismos indicadores o que cambian.
+Los primeros sí quedarían en el mismo sentido, que serían en tiempo los ordinarios, extemporáneos o misos. Y justamente aquí, como bien ya lo habían de este pintado, los que sí cubrieron el monto mínimo de inversión y los que no cubrieron el monto mínimo de inversión.
+De acuerdo, entonces estamos hablando de cinco indicadores para el 19, sería ordinarios extemporáneos o misos que cubrieron el monto mínimo de inversión y los que no lo cubrieron.
+Sí, y podemos agregar otro que son los que nos reportan motivos de suspensión.
+Ok, cuando se leccionan en el trámite, que ponen motivos de suspensión. Ok, cuántos están en motivo de suspensión, ¿no?
+Exacto. Ok, entonces igual serían seis indicadores como en el 18, nada más estos que nos especifican. Y los filtros, imagino que aquí si van a cambiar un poco, porque aquí no estamos hablando de estados, ¿no?
+¿O si serían los mismos también por estado y municipio y por concesionarios serían los mismos filtros? No, para el 19, lo que estamos, lo que verificamos aquí es el cumplimiento de la inversión del monto mínimo de inversión.
+Estos indicadores no aplicarían. Aquí lo que nos serviría aparte de las fichitas que ya mencionamos.
+En lo que mencionamos nos van a parecer cuántos cumplieron con el monto mínimo de inversión.
+De esa parecería una fichita, digo lo mejor pensando en lo que ustedes necesitan, no sé si lo necesitan por periodo, por ejemplo, ¿cuántos cumplieron por el periodo del 2025 con el monto mínimo de cuántos no cumplieron?
+A lo mejor si sería un filtro para que no les muestre todo el universo, a lo mejor no más quieren saber desde el 2025, el 2024, el 2023, etcétera, etcétera, eso podría ser uno de los filtros.
+Realizar la suma total de la inversión realizada justo en el periodo y a lo mejor aquí hacer lo mismo de la inversión realizada por estado por municipio.
+De todos los trámites 19 que se presentaron y justificaron por inversión desean que se haga la suma total y que esa suma total se pueda filtrar por estado y municipio.
+Así es, justo así. Ok, entonces a ver más de checar contigo de guardo, todos los trámites 19 que estén presentados y con una cuse, al final tenemos clasificado cuánto se hicieron por inversión, por lo tanto.
+Bueno, cuantos justificaron por inversión, entonces los que justificaron por inversión al final pues tienen un monto no, ahí esté declarado ese monto tendría que sumarse, eso es lo que haríamos este Leonardo.
+Si, si ven ese sentido y digo, ese es justamente para, digamos, amarrar esta parte del el motivo de la presentación o de la comprobación mejor dicho, este que son estas tres opciones es el de la inversión, otro es el de la facturación y el de la suspensión que ya lo comentamos en las fichas.
+Ok, ok, entonces en función de eso más bien, entonces serían cuantos ordinarios, cuantos extemporáneos, cuantos omisos, cuantos por inversión, cuantos por facturación y cuantos por suspensión.
+Sí, perfecto. Y en el caso de la inversión que revisemos y podemos integrar la suma total. Exacto, inversión y facturación haciendo si división entre uno y otro. Ok, cuantos fue la suma total de por inversión y cuantos fue la suma total por facturación.
+Así es. Ok, creo que los primeros seis que ya confirmamos este Leonardo, o sea, es decir, que se visualice el total por por ordinario extemporáneo o pomizo por inversión por facturación y por suspensión.
+Eso, sin tema, lo podemos meter. Nada más es corroborar, creo que tampoco hay una tema, pero contigo Eduardo, que para el caso de facturación y inversión, podamos realizar una suma del dato, o sea, de cuanto, o sea, del monto de inversión o del monto de facturación y también se esté mostrando ese dato que es el que requiere es correcto Leonardo.
+Sí, es correcto.
+Sí, es correcto.
+Y por municipio, no creo que lo que comentaba. Ah, sí, o sea, el filtro ya los filtros serían por periodo y por estadounuñicipio.
+También necesitan el sistema del funcionario.
+Los filtros se mantienen y en cuanto a estos conceptos, pues lo veo la verdad muy parecido a lo que ya tenemos, entonces no lo veo por orden.
+Ok, todos los filtros se mantienen si están de acuerdo, Lucy y Leonardo, se mantienen el filtro de por concesionario, se mantienen el filtro de por estado y por municipio para ambos trámites.
+Y nada más lo que cambian son las fichitas, o sea, lo que los indicadores que ya se especificaron para cada uno.
+Es correcto. Y también agregar hierro, digo, perdón, fiar, fiar.
+Y agregar para los minerales lo que es el hierro, el fiar, sí. Sí, perfecto, ya con esta pregunta.
+Sí, gracias.
+Este hay un dato fundamental en este formato 0.19, donde dice si ya tuviera oportunidad de ver el formato, dice, montó del excedente.
+Por aplicar para nosotros es sumamente, sumamente importante visualizar, porque sólo hacemos de formante sanal.
+¿Cuál fue el excedente con el que se quedó el concesionario el año anterior?
+Porque del excedente del año anterior es con lo que va a iniciar este año.
+Sí, es como un saldo, digamos, que tiene ahí.
+Exacto, ese saldo con ese saldo que declaró en su periodo, por decir, declaró un excedente o le quedó un excedente de 100 pesos en el 24.
+En el 25, cuando cumple con la obligación, tiene que iniciar en ese apartado de excedente con esos 100.
+O sea, no me lo puede alterar, porque es muy común que me lo alteren.
+Entonces, lo tendría que jalar.
+O ves también en el aparte de reporte, quiero pensar, decir, el título 1, 2, 3, 4, 5, 6 tiene un excedente, el 24 tuvo un excedente de 100 pesos y en el 25, inicia con este excedente.
+O sea, que yo pueda visualizar con cuál inicia, con cuál termino y con cuál inición.
+Una pregunta para confirmar el excedente para qué tramite aplica?
+Para el 19.
+Para el 19 correcto.
+El 19 se habla de inversión.
+Ok, y aplica un reclamante para inversión.
+Ah-ha.
+Ok, creo que lo podemos meter a la misma fichita, no Eduardo, donde se pone el monto de inversión, abajito el monto excedente.
+Bueno, sí, no sé si en la misma, pero sí se puede lo que nada más para tenerlo bien claro a ver.
+Ellos terminan el periodo con un excedente.
+Ese pues ya queda fijo establecido, no se va a mover nunca más, porque ese periodo ya quedó concluido.
+Ah, ya quedó presentado.
+Entonces, estrictamente el siguiente periodo tienen que iniciar con ese saldo de su excedente.
+O sea, no hay vuelta de hoja, ¿no?
+O sea, si al sistema le preguntaras con qué saldo, digamos, inició el 2026 apus con el que terminó el 2025.
+O sea, dentro del sistema lo tenemos como el mismo dato. Es exactamente el mismo dato.
+Entonces, cuando tú me preguntes, o sea, quiero confirmar eso nada más, cuando me preguntes, oye, con cuál iniciamos el 2026 apus con el que terminamos el 2025.
+O sea, no lo tengo guardado en dos lugares.
+Es correcto.
+Es el mismito, en un solo lugar.
+Exacto, con el que terminas, cuando presentes su nuevo informe, tendría que jalar el con el que se quedó, ¿eh?
+Ah, de acuerdo, de acuerdo. Perfecto.
+Sí, nada más quería asegurarme esa parte. Entonces, sí, sin problema.
+Cuando tú me preguntes, ya sea con qué iniciar el 2026 o con qué terminó el 2026, yo voy y busco el mismo dato y ese es el que te lo precepto.
+Y ya como lo pongamos aquí, pues la verdad es que ya no lo veo problema, sí, podemos crear otra apartada aquí.
+Digo esta pantalla ahorita, lo que estoy viendo es que justamente resulta muy práctica para ese tipo de cosas.
+Ustedes pueden decidir, ¿no? ¿Cómo ponemos estas fichitas? ¿Cómo ponemos los cuadritos de arriba?
+Y los filtros, pues, también los que acabamos de definir, pues ya con eso irían, irían controlando lo que, lo que se visualiza aquí, ¿no?
+Sí, justamente. Ok, ok. Entonces, ya quedan definidos los dos tableros, sería el tablero del 1819 con estas características, solamente vamos a integrar.
+¿Cómo estos que comentan del excedente tiene que ver como la pura inversión correcta? ¿No hay excedente?
+Tiene que ver con la inversión y es el 019 exclusivamente.
+Exacto, no tiene nada, no hay excedentes en facturación y tampoco para temas de suspensión.
+Entonces, como no, tienes que ver con inversión, ya ahora más nosotros lo vemos y lo metemos en la misma, por así decirlo, fichita de inversión, donde también necesitan el mundo.
+Lo del excedente va justamente ligado a dinero y el valor de la facturación, pues, es una venta, es una venta de mineral.
+Entonces, todo lo que implica la inversión está ligado a ese excedente.
+El despección no, porque es una condición en la que se encuentra el título de concesión, decir, bueno, no estoy trabajando porque estoy en huelga. O sea, no estoy trabajando porque me tienen bloqueado la domina.
+O sea, eso tiene más que ver con situaciones sociales, con situaciones laborales.
+De acuerdo, la valor de la facturación y la inversión están asociados a dinero. De acuerdo, entonces no más para confirmar tanto la inversión como la facturación tienen una relación con el tema de excedente.
+Entonces, si no existe algo adicional, los Leonardo ya quedan definidos, los tableros y las estadísticas con esto que acabo.
+Aquí tenemos una pregunta porque en algún momento, comentamos que anualmente nosotros recibimos el precio promedio de nuestro listado de minerales, completo.
+Y ese listado que recibimos lo utilizamos para generar el valor de la producción, digamos, promedio anual del periodo que estoy haciendo referencia.
+Es el listado de precios, nos lo comparte otra dirección, y queremos saber qué posibilidad hay de incluir ese listado de precios vinculado ahora si a cada nombre de mineral y que se haga de forma automática el cálculo del valor de la producción.
+A ver si entendí, ustedes requieren algún módulo especial en el sistema que permita que esta lista de precios por mineral se pueda cargar y una vez que se carga se pueda automatizar el cálculo de cada mineral para que se actualiza en el sistema.
+Es viable, leo, lo que la habrá para hacer esto no sé si nos detan bien con el tema de la estimación del esfuerzo y tiempo ya que se tiene.
+Si claro que es viable, creo que para la fase 2 tal vez sería más fácil de tener la lista, no sé si ustedes tengan un inconveniente con ello.
+No, pero si lo queríamos dejar ahí como en el tintero para que tomarlo en cuenta en la próxima fase, porque es muy importante para nosotros porque este dato se publica en una ahora sí que el servicio de geológico mexicano pública esta información.
+Y justo para una suma de tapa estaría genial porque los requerimos ya también las hablamos comentado que hora y plata se mide en kilogramos el resto de los minerales se mide en toneladas.
+Entonces tendríamos que hacer la conversión de valor y volumen por kilo por tonelada y como y como somos como diti si nos regimos por el mercado internacional también tendría que ser la conversión a onzas.
+De acuerdo sí yo creo que lo que nos han mencionado ahorita como adicionales por ejemplo ahí el tema del mapa de este calor y y el tema de ahorita de esta parte de los precios de los minerales.
+Así si se pueden integrar en esa segunda fase y claro oita lo con toda la forma en la que se va construir el sistema como se construye con una tecnología orientada de forma modularia micro servicios a todas estas partes se pueden integrar sin ningún tema.
+Entonces yo creo que si están de acuerdo lo podríamos ir aterrizando en esa segunda fase nada más una pregunta que sí me surge de esto esos precios actualmente ustedes los actualizan en el sistema a través de la base datos o de la de GTI.
+Ustedes eso lo actualizan en el sistema. No. Ok no se actualiza salvo que sería adicional no que que desean que haga el sistema ya como un plus.
+Sí efectivamente actualmente lo hacemos directamente nosotros este no no a través de la plataforma.
+Ok o sea pero no hay ninguna parte en donde la plataforma actualmente si utiliza esos precios de cada mineral no o si no actualmente no.
+Ok ok si porque nos queda la duda porque lo mejor si si es necesario pues tendría que seguir pidiendo la de GTI que haga esta actualización pero si actualmente no se hacen entonces no afecta más bien es evolucionar todavía más el sistema hacia esa segunda fase.
+Perfecto tomamos nota de cualquier manera todo esto que nos piden adicionarnos nosotros ya tenemos un registro lucileo porque para nosotros es súper importante ir justamente también construyendo y dimensionando todo lo que a futuro pueden ustedes necesitar para para para ir preparados.
+En el camino es mejor anticiparnos y y construyendo hacia allá y bueno ver la forma en la que puedan tener todo lo que requieren como área.
+Perfecto ya cual se agradecemos mucho sí sí justamente eso lo entendemos también.
+Perfecto le digo muchos de esto entonces quedan definidos los módulos de bueno los tableros del módulo estadísticas no sé equipo tiene alguna duda pregunta adicional si no para seguir avanzando.
+No para esto esta sección no.
+De acuerdo bueno fanía adelante no sé si ya aquí llegamos o nos faltaron.
+No para la parte estadística justo necesitamos esta definición que ellos nos apoyaran para ver toda la data que para ellos es en más de utilidad y funcionar entonces nos llevamos ya todas estas anotaciones para hacer ya los ajustes correspondientes.
+De aquí y bien creo que llegamos digamos que al último de los apartados considerados dentro de el flujo de la DGM sin embargo en estas secciones que hemos tenido pues nos han comentado también algunas otras necesidades que les ayudarían que sería también sumar
+este aparte un poquito como de control de lado de ustedes este una parte automatizada otra parte se me automatizada pero que también ustedes puedan tener esa gestión y ese control.
+Entonces son estos siguientes apartados que queremos también presentar que es la configuración de avisos y la parte de los índices nacionales.
+Entonces eh José no sé igual nos vamos a la revisión de estos sí bueno esto nosotros lo fuimos preparando como les comentábamos Lucio y Leonardo nosotros todo lo que nos van comentándolo vamos tomando nota y nos apoyamos de.
+Pues todo el stack tecnológico y lo que tenemos estalado para ir avanzando construyendo prototipos y viendo hacia donde vamos ir dirigiendo el desarrollo del sistema etc etc.
+Recordamos que en ya reuniones eh posteriores a las que se ya había definido los requerimientos del del orden de trabajo eh surgieron algunas cosas
+adicionales también como las que nos compartían a su momento no del mapa de calor del tema de de este tema de actualizar las los montos o los valores de cada mineral eh por ahí nos habían comentado que también por ustedes eran muy importante poder tener un apartado donde se pudieran configurar los avisos que.
+Que surgen en el sistema no la que cuando ingresa el el concesionario el sistema siempre se le mando un aviso no esto lo hacen actualmente traves de la dejete y pero les gustaría ver si pues ya no depende de la dejete y sino que el sistema tengo una parte donde ustedes puedan escribir que debe decir ese aviso y aparezca no automáticamente no
+entonces es una cosa adicional que se solicitó a y bueno considerando ahí también ahí vimos la vez pasada que ustedes también le piden a la dejete y que se requieren que se actualicen las cuotas de relacionadas con el lindice nacional de precios al consumidor
+entonces también lo hacen a través de la dejete y hoy y nos decían bueno si en algún momento nos podamos hacerlo ya de manera directa pues quitamos esa dependencia no y lo hacemos ya de manera inmediata desde un perfil administrador
+nosotros actualmente estamos valorando también estos dos apartados en específico ver si nos dan también los tiempos conforme al alcance y el esfuerzo que se ve estimado en un inicio para tenerse los listos no digamos no habian sido considerados en la estimación inicial que hicimos porque fueron
+comentados a posteriori pero o sea estamos revisando si lo podemos integrar en esta liberación para que para que pues bueno ya lo puedan tener y en ese sentido nosotros ya nos dimos a la tarea de diseñar los prototipos
+entonces solamente estamos pendientes de que nosotros internamente podemos confirmar que si logramos tenerlos y igual en la minuta que veamos a compartir
+se expone si sí quedan o no quedan sin embargo si ustedes están de acuerdo podríamos revisar de una vez dichos prototipos para que pues si podamos tenerlo ya al menos ya tengan su vista bueno como ven lucido nada
+nos parece buena idea si entonces la idea revisarlos y ya nada más nosotros justamente con esta revisión que hemos con ustedes vemos si nos cuadran perfecto para la alcance y ya con base a ello en la minuta ya vendría
+reductados y si quedan comprometidos o definitivamente como se comentaron de forma posteriori a lo mejor tendrían que estar considerados para una fase dos pero ya los tenemos en el radar entonces es lo importante que podemos revisarlo con ustedes
+y de acuerdo bien bueno entonces sí justo les presentamos la visión el entendimiento que tenemos nos vamos con configuración de avisos aquí igual creo que va a ser duplicado de una vez para
+ver si no es acasición y para poder ir estén navegando aquí entre estas y creo que también mantiene la pena entender la momentita voy cargando esta don de vez
+ok se debe tenerla en el listo ok bien que tenemos en esta partada justamente la idea es poderes proporcionar la herramienta
+en realidad pues son ciertos campos iniciales digamos básicos que consideramos requieren para poder presentar una viso
+entonces bueno la idea es que puedan dar de alta aquí distintos avisos aunque la lógica que estamos considerando es que el usuario visualiza una viso a la vez o sea no se pueden
+mostrar distintos avisos si se puede controlar por periodo de tiempo pero si un aviso está activo en ese momento otro no se puede ver
+entonces una vez que termina ya la la vigencia o el preo de tiempo en el que está habilitado cierto aviso ahora si se puede presentar
+un otro debemos hacer la lógica que tenemos entonces aquí tenemos un título de el comunicado en la opción ya sea de capturar con algún texto libre el mensaje
+la viso que se estaría mostrando al concesionario o el usuario o también poder cargar un banner tal vez pudiera ser que ya de forma externa preparan una especie de infografía o algún banner que contenga toda la información necesaria
+entonces solamente se carga de vince archivo definiríamos ahí los formatos posiblemente este peneje jpj que sería la imagen se carga la imagen y esa es la información que se estaría mostrando entonces se tendrían esos dos opciones
+y el rango de fechas necesito que aunque yo lo creen en este momento puede ser que necesito que se empieza a visualizar a partir de el 2 de noviembre
+entonces yo ya lo dejo programado para cuál es el rango de fechas y estaría visible tal vez solamente durante el mes de noviembre precisamente entonces
+de el doso o del primero si se requiere por ejemplo al 30 de noviembre sería el periodo y igual aquí lo puedo dejar activo, digo esta la verdad es que el estatus de estado de activo inactivo es como un control adicional
+la regla diría que si está en el rango de fechas y está activo se muestra el aviso si está dentro del rango de fechas pero lo coloque como inactivo no estaría visible no esto sirve tal vez como una especie de paro de emergencia
+en el caso el que esté habilitado en ese momento pero se requiere dar de baja o esta será alguna modificación de alguna corrección se puede inhabilitar esté en lo que se prepara y se realiza el caprio
+entonces son los elementos que conformarían el cuerpo digamos y la configuración del aviso se guarda ya el comunicado
+y quedaría aquí en este apartado de la derecha sería como que los avisos que estén archivados o que estén como el histórico digamos esos
+como los mencionamos podemos tener este más de uno este archivado ya preparado y sería pues disponible no esto la vez que se reeste el siguiente aviso y el siguiente aviso
+eso lo vemos más menos y bueno sé qué tantos avisos quieren a configurar durante el año nos comunicaban que se les oría solicitar a la de gentry
+pero de esa manera pues yo ustedes tendrían este control de dar de baja y dar de alta no activar desactivar
+es de para los trámites 18 19 creo que principalmente o alguna otra información que ustedes consideran
+es el panel en el que ustedes estarían configurando ya del lado del usuario
+pensamos que sería el cosesenario pero en realidad es cualquier usuario
+este población en general digamos que entre el sitio web de peam va a poder ver ese aviso
+ahorita el prototipo lo mostró aquí la verdad es que igual hay que ver como sería lo más funcionar
+voy a mostrar ahorita cómo está el sitio actual y este es el tipo de notificación y de aviso al que nos referimos
+o sea por ejemplo aquí viene todo esto no sé si sea este bueno si suelen ser así de extensos o si esta información
+y la que se esté modificando de forma periódica se pueden mostrar una vez que dentro aquí aparece ese aviso
+a ver aquí a no cuando el usuario inicia se se perdón este ingres nos dirigimos al sitio web
+y automáticamente aparece cada vez que visita el sitio no esta través de esta ventana
+puede ser así que se les muestre todo el cuadro con el mensaje o puede ser algo que quede fijo
+también en la parte superior se puede hacer la letra más grande algún otro recuadro
+que lo encapsule para que sea más visible o si igual aquí ya sería la forma en cómo consideren que sea mejor
+pero esa es la intención que público en general digamos sobre todo pues usuarios con sesionarios que ingresan al sitio web
+puedan ver esta esta información que ustedes estén habilitando
+y nos gustaría perdón es el formato que debeníamos manejando porque justo a los aborda
+justo en cuanto entre que los aborde para que correguen cuando es extensos
+ok de acuerdo entonces sería así a través de una ventana emergente
+este visualizante ok y los elementos que consideramos un título, un cuerpo del mensaje
+y hace por imagen o por texto y el rango de fechas y el estatus de artigo y lo activo
+algún otro no sé comentario adicional respecto a este partado
+en esta partado creo que está bien que recuerdo que también les habíamos comentado al principio de estas mesas de trabajo
+que cuando uno entra a la pea aparece justamente este mensaje
+y también les daba unas liga de las guías de usuario porque también hicimos unas guías de usuarios
+nos gustaría que no lo mencionamos al principio que igual encuentro ingresen a la plataforma
+tenga la opción esas liga para que puedan bajar los documentos los documentos se las haríamos llegar nosotros
+son dos PDFs
+ah ok ok sí sí sí me parece a ver cierto tengo por todas las de ingresar para que lo podamos visualizar
+o que de hecho si recordo hay una liga que la índica si que se asegure de contar con todo lo necesario antes de iniciar el trámite
+queda como que ese mensaje tu ahí fijo y les aparece una partada una liga que me parece que redirige
+no sé la página de la secretaría, me parece
+o sea esos elementos igual se requiere que se mantenga
+a ver ahorita la guía este a la que hacemos referencia ahorita justamente es como para que
+dar una explicación de en cada una de las pantallas definir qué es lo que van a capturar
+básicamente si es como un paso a paso de cómo van a realizar su presentación
+en caso de que sea una persona nueva la que esté presentando
+en este sentido tendríamos que ya tener liberado el sistema para irles capturando las pantallas
+porque están familiaizadas con las otras pantallas tendrían que ser correcto de acuerdo a este nuevo diseño
+pues sí sí sí entiendo ok de acuerdo
+por ejemplo hay en la pantalla en la que al parecer está cargando verdad ahí está ahí está ahí
+ahí el botón que dice manual ese es el que permite descargar las guías conforme a la plataforma
+este actual correcto eso es lo que nos estamos refiriendo en este momento
+ok de acuerdo sí es de hecho a mi raci estoy viendo que está desde el afuera o sea sin que
+ni si necesión ya se presenta este manual disponible entonces quedaría de la misma manera
+habilitado al exterior o ya se mantiene solo al interior cuando ni si el sesión
+de prevenencia si es al exterior porque si no me han recuerdo este viene desde la parte de cómo registrarte
+ok así correcto es el inicio de sesión y el registro
+así es ok de acuerdo si correcto es de me se onaban que eran dos manuales o solo uno
+es en ese mismo archivo vienen los dos al inicio viene sino me recordo del trámite de 18
+y más abajo se puede decir visualizar el 19
+ah ok si correcto aquí viene igual se podría separar digo en caso de que
+se como más funcional que sea más específico
+ah ok si si si por aquí llegas tal bien viaja y entonces validación guía de usuario
+aquí viene la segunda gran 10 y 19
+ah ya y de hecho pues sí yo creo que sí será lo más fácil de separarlos
+no se vuelve el número de páginas vuelve como que reiniciarse o pagina uno pagina dos
+entonces se pueden manejar ambos guías por separar de acuerdo
+muy bien perfecto ok entonces y si me gustaría iniciar sesión
+bueno sí pues es esto ok creo que sí también me gustaría aclarar
+esta información que el sitio actual presenta esta en la liga que les comentaba
+a veces ok esta bueno y antes de comenzar le recomendamos tener a la mano la
+información para completar ese trámite en línea y nos lleva a a sitio de vobernación
+ok realidad es hacerlo con el que redirige se requiere que esta información estos
+textos se mantenga
+porque creo que esto justo sí justamente es importante ese aunque la liga
+de acuerdo a la modernización que se está haciendo digitalización
+eso es para para bajar los formatos y una vez que ya estén en el cual
+así que la liga adecuada y real tendríamos que ponerla ahorita de preferencia
+de dejar la desabilitada
+ok ok ok esa ahorita que no mande a este sitio que no te está
+mandando y en su momento tendría que ubicar o redirigir entonces a los formatos
+o sea este trabajando esto es justamente para tener la opción de bajar los
+formatos desde desde el portal justamente bueno antes teníamos una plataforma
+X y de ahí los obtenía el concesionario pero a raíz de toda la modernización
+y la actualización que se ha hecho tenemos entendido que ya van a estar
+alojados en otro en otra ruta ok ok entonces se está trabajando entonces
+también en eso sí todavía aún de hecho los formatos ya están alojados
+ahí pero no está liberado todavía como la liga ok ok ok bueno sí
+entonces te queda entonces esta desabilitada de momento hasta aquí
+a la confirmación que hay algún sitio donde se debe redirigir al usuario
+y ya se se pudiera colocar esa dirección
+ok bueno entonces si respeto al apartado de avisos pues sería esta
+la propuesta que se tiene y ya consideramos lo lo que nos mencionan que sea
+mejor un aviso con una pantalla emergentemente una ventanita que es el
+muestral usuario y como lo mencionó mi compañero José es que vamos
+a dimensionar no que todavía esto la vez que sí tenemos aquí pues un mes
+escasamente para poder concretar pues todo el desarrollo entonces ver que
+en los del tiempo para abarcar no todos estos estos apartados y este pero
+bueno con mucho gusto y vamos tomando la nota de todo esto
+este de ahí me gustaría contener con el siguiente pero no sé si para avisos
+hay algún otro comentario o duda
+no todo está bien gracias
+ok perfecto entonces vamos a la partido de actualización y quotas de
+los indistas nacionales de precios al consumidor este igual creo que esto
+pues se mencionó justo en la sesión pasada no que sería útil también
+para ustedes el poder definir estos índices y también no depender de
+una actualización de parte del área de este de tecnologías
+entonces en los índices nacionales de precios al consumidor del mes
+de octubre o que hay aquí entiendo que se estarían actualizando a perdón
+medio de recordar comentar que cada mes es correcto ustedes enviar la
+información o en este caso cada mes requerirían
+actualizar estos datos y definimos esta actualización se realiza de
+formanual siempre es en durante el mes de octubre
+se toman los del mes de octubre
+si tiene razón si es que regalo que me suena correcto estaban ya en estos
+días de enviar esta información
+sí justamente esperamos ahora que el cierre del mes de octubre entre los
+primeros días de noviembre se hace la publicación y ahí es cuando nosotros
+actualizamos ok de acuerdo ya ok bueno entonces a ver encima
+puyen confirmando los campos que estamos considerando es el ejercicio
+fiscal a comprobar el valor del índice
+de ok entendemos que va a ser requiere hacer esta captura del índice del
+año anterior o más bien de los de los periodos del periodo que se está
+comprobando que estaba habilitado y del periodo anterior
+es es correcto o sea requiere este mapeo de este malo
+es correcto por ejemplo para para este año que sería 20 26 el que
+dice 141.788 pasaría de lado izquierdo y de lado derecho
+poneremos el que se pública el nuevo ok de acuerdo si correcto
+entonces cada año justo tomamos este valor o sea algo parecido que
+al punto del excedente no que se mencionamos a esto siempre va a ser
+fijo y este siempre va a sustituir al anterior
+así es y lo que cambiaría sería la más el año octubre 20 26 sería
+el nuevo y el anterior 25 ok de acuerdo muy bien un oficio de
+aprobación sería bueno aquí el verdad tipo lo pintó de esta
+manera pero imagino que se carga algún oficio se carga algún
+momento correspondiente se acaba de este cambio
+aquí este esta actualización y la toma de los de los índices se
+termina publicando en el día de ficie de la federación
+habrá posibilidad de colocar los índices es que por ejemplo el índice
+lo vamos a tener en la siguiente semana y media no más o menos
+dos semanas pero la publicación del dof se realiza hasta
+diciembre
+habrá posibilidad de colocar el nombre o la fecha de la publicación
+del dof posterior a la colocación de los índices
+ok se puede definir si es el parámetro pero en ese caso
+entonces solamente sería un cuadro en el que se requiera
+capturar esa información
+es correcto
+o requiere es lo que pasa es que bueno o a ver no sé si me
+puedes volver a plantear esta situación nos entiendo que
+como comentas se publica ya en el diario de oficial de la
+federación y a partir de ahí es donde usted o sea ya existe como
+que esa referencia y ese es el valor que se necesita
+colocar al momento de diatorizarlo
+si mira digamos que es la cuestión de los tiempos
+el índice lo vamos a tener antes
+obviamente que de la publicación
+en el diario oficial de la federación
+ya que el índice lo tenemos la primera o segunda semana
+de noviembre y la publicación del do se va hasta diciembre
+entonces el dato lo tenemos antes
+pero ya digamos que lo que lo hace oficial
+hablando de esta actualización de las cuotas
+este está publicada hasta diciembre
+hoy ya ya entiendo ok e pregunta este índice
+aunque se capturará en el sistema dentro de este
+periodo o sea ya en el último trimestre del año
+se requiere hasta hasta el nuevo año correcto
+es correcto
+es correcto
+hasta que inicia pues el nuevo periodo de declaración
+que sería el dinero del siguiente año
+exactamente
+ok entonces creo que no veo mayor complicación por eso
+por ejemplo este dato se puede dejar como opcional
+quiere decir que aunque ustedes definan ya estos índices
+siguen quedando hasta cierto punto como incompleto
+porque este otro valor es uno que se obtiene un mes después
+para así decir
+al momento en el que se tengas
+este valor se complementa ya el registro y queda
+o sea ya el listo para
+y ya con la validez digamos oficial
+para poder utilizar en el siguiente año el siguiente periodo
+sí perfecto
+aquí me surgén nada más como duda
+se podría incluso colocar el link
+donde lleve a la publicación del do
+o sin correcto
+sí sí sí
+sí justo que los índica
+los valores como adicionales que requerían
+entonces este dato igual nada más para verificar
+si va a ser de captura libre
+o sea que es un faro de texto donde ustedes
+obviamente ya con la nomenclatura correspondiente
+pero ustedes capturan
+y además un cuadro donde coloque en una URL
+y ya religie a este alto
+es correcto
+sí sí sí está perfecto
+ok sería los únicos datos que requerirían
+sí ahí este nada más como pregunta
+la parte de multiplicar cuadro de cuotas por este factor
+es este un botón
+sí correcto
+ahorita me parece que no está
+bueno sí ahorita creo que no está habilitado
+aquí
+pero sí la idea es igual que nos indiquen
+el cálculo correspondiente me parece que
+se tendría que ir
+y preguntar
+porque me parece que había este ajuste de acuerdo a la inflación
+es correcto pero no sé si
+ha de referencia a eso
+sí sí exactamente ahí y hasta colocar los dos índices
+el que viene y he etiquetado como factor de inflación calculado
+efectivamente este actualización conforme a la inflación de interanual
+y eso se multiplica por cada una de las cuotas que subican
+en el cuadro del mundo mínimo de inversión
+sí correcto es lo que nos comentaban en la sesión pasada
+entonces se requiere
+sí diga ahorita creo que sí no está habilitado
+no se puede ver esta parte pero es parte de la lógica
+de la lógística que tenemos que definir
+respecto a esos cálculos que nos comentaban
+sí la idea bueno en el apartado derecho
+se tendría como esta pitáquora
+este histórico de los movimientos o de las actualizaciones
+realizadas con fecha ahora, funcionario que realizó el cambio
+es como que la validez de esto crisis
+que le da pues la parte legal al cambio
+y la descripción del movimiento
+entonces aquí la idea es que se le se mostrando esos movimientos
+y en la parte de abajo venga este cuadro de cuotas
+no que creo que es lo que
+sí lo que mencionabas es como que el recuadro que tienen actualmente
+en el exer y esa aquí donde se van a desprender esas actualizaciones
+me zonaba que este cuadrito es justo el que actualmente
+tengo entendido que comparte con la dejeteí
+pero bueno ya tendrán aquí habilitado el espacio
+para donde ustedes puedan ir modificando esta información
+ok perfecto
+ahora aquí lo único que requieren de la apartado
+es la actualización de los datos y la multiplicación
+o sea por este factor por el cuadro de cuotas
+hay algo adicional que se requeriría
+porque entiendo que de aquí una vez que establezcan
+ya los valores o sea que ustedes
+realicen como que ese mecanismo de definir
+cuáles son las cuotas de aquí es donde se toma
+para los cálculos del trámite diez y nueve
+aquí pregunta el trámite 19 justamente
+ya bueno actualmente automáticamente
+al tener las hectáreas y el inicio
+de vigencia de los titulos de concesión
+hacen el cálculo
+se sigue manejando de esta forma
+en el proceso actual
+sí o sea se tendrá que manejar el inicio mecanismo
+este que se realiza actualmente
+digamos que ahorita la única diferencia con este apartado
+es como se hace actualmente que esta información
+o sea pives si no es demanda por ahí
+es lo que me apoyes es que van a nivel pase de datos
+no o sea no hay como una interfaz entonces
+se pueda gestionar estos datos
+entonces actualmente pues va a tomar ese valor
+ya no se se realiza no hay las operaciones
+actualmente pues bueno tenemos que seguir manteniendo
+respetar todo ese flujo pero es donde vamos a ver
+digo el hecho que se pueda darles incluir esta apartado
+entonces ya habría una interfaz en donde ustedes
+puedan tener este control y ver
+este es información esa data
+en caso de que es igual por los tiempos
+por los diferentes situaciones que se han mencionado
+este apartado aún no puede hacer
+al cansable para la primera fase
+se seguiría manteniendo el id y leer la información
+o sea se en este momento
+ok perfecto y ya nada más una última pregunta
+aquí en el cuadrito de abajo
+pero en las cosas
+vemos que está directamente para poder
+editar habrá posibilidad de que se le acrega
+un botón o sea de que se mantengan fijos
+y al apretar dicho botón
+ya habrá la opción de poder editar
+para que no se acomodan
+o evitar el riesgo de que se pueda mover
+en algún momento de forma inconsciente
+si es correcto, si de acuerdo
+si se pueda habilitar de esa manera
+que en este picos no se modifica menos
+que así ya se activen
+o la otra forma de este faníes
+más bien poner un botón que diga
+guardar
+que no se guarda hasta que tú le piques
+que de hecho no deberían estar yo creo
+si si si digamos que previo va validación
+si correcto
+excelente
+ok de acuerdo
+si si lo lo consideramos
+muchas gracias
+ok de acuerdo
+de acuerdo
+tendríamos verdad toda la presentación
+preparada para el día de correcto faní y equipo
+eh no
+a cada aviado
+si no, pues es mucha molestia
+no se encantaría también
+creo que me voy a
+bueno si me sal no me importa
+rápidamente
+igual creo que se va a hacer
+muy corto
+estamos considerando todos
+los apartados que ya vimos
+para la DGM
+que serían hacer herramientas
+para ustedes
+sin embargo también
+debe de existir un rol
+un perfil administrador
+que gestione a parte
+otra información
+nosotros ha sido de los definimos
+en el indicio de sesión
+también viendo un administrador
+que va a formar parte
+de igual de su área
+de la Secretaría
+que no ustedes nos indiquen
+que va a ser el administrador
+y ni esa sesión
+con su corroyo institucional
+su contraseña
+y dentro
+aquí igual nos urgentudas
+vemos de momento
+dos apartados
+que corresponden a un administrador
+que es la gestión de usuarios
+es precisamente
+quien se va a encargar
+de dar de alta
+dos usuarios
+el lado de Secretaría
+quien nos va a poder iniciar
+gestión
+y con dos roles
+uno administrador
+que al administrador
+va a ser un único
+solamente puede haber
+un administrador
+este
+bueno me parece que
+ah, aún no
+creo que si puede ir a guiar
+a ver más
+bueno ya ustedes nos definirían
+si sería un solo administrador
+o
+o puede haber
+más administradores
+y los de la DGM
+los usuarios que ustedes
+necesiten habilitados
+entonces aquí
+le da de alta
+un usuario
+nombre completo
+corroyo institucional
+el role que va a tener
+si va a ser un administrador
+o un funcionario
+operativo
+su estatus
+puede ser que ahorita
+este lo cree
+pero que siga inactivo
+en lo que no se se tramita
+algún permiso
+para que ya se active
+su usuario
+y la contrase
+no
+se guarda el usuario
+y ya va a poder
+tener la gestión
+la consulta
+este ver en detalle de el registro
+editar
+también
+es algún usuario
+necesita
+el receteo
+o cambio de contraseña
+pero en esta parte
+lo pueden modificar
+o necesita
+inactivarlo
+que ya no va a tener permiso
+entonces queda inactivado
+y
+la opción de
+el inactivo
+puede quedar aquí
+o puede quedar aquí directamente
+no le da aquí
+aquí
+no se elimina como
+tan
+simplemente queda inactivo
+y esto suario
+aunque
+intenta iniciar sesión
+no va a poder ingresar
+porque en este momento
+pues está con estos datos
+es por un lado la gestión
+de usuarios
+y por el otro lado
+la evita
+cura de movimientos
+del sistema
+el administrador es
+quien va a poder ver
+los movimientos
+más relevantes
+sobre todo
+a hacer
+que se han realizado
+del lado de la
+de gem
+vamos a del lado
+del consecenario
+creo que no tendrá mucho caso
+para crear
+si inició no
+trámites
+si está en proceso
+si ya lo concluyó
+porque son
+la final de cuentas
+esta actividad es
+cotidianas
+digamos
+de sus obligaciones
+que tiene que realizar
+pero del lado
+de la de gem
+si pudiera ver
+ciertas acciones
+que se pueden
+ir monitoreando
+o sea que
+usuario realizó
+la pecha
+la hora
+es de la descripción
+del modulo
+aquí posiblemente
+si creo que
+tenemos que hacer
+una modificación
+para la pena
+hacerlo
+y cuál es la acción
+que se
+que se realizó
+pero igual
+tampoco es de darle click
+o sea, monitorear
+todos los clics
+que dio
+o que
+puede hacer
+muchos movimientos
+de la plataforma
+si nos
+más creando ubicar
+creo que
+las acciones
+más relevantes
+igual que
+ustedes nos indiquen
+de esos movimientos
+de los funcionarios
+son los apartados
+generales
+igual ahorita
+para que merecen sus
+comentarios
+y otra de las dudas
+es un administrador
+le damos solamente
+éstos
+acceso a esta
+información
+que es precisamente
+netamente
+administrativa
+o digestión
+o también
+de un administrador
+del sistema
+pudiera hacer
+todo lo que la deje me hace
+usar la consulta
+el inicio
+de trámites
+estéose
+todo lo que vimos
+anteriormente
+de la parte de la aclaración
+y todo eso
+porque
+en momentos solamente
+le estamos dando
+estas attribuciones
+gestión de usuarios
+y poder
+visualizar
+la corredición
+de movimientos
+este es el tercer
+rol que
+requerimos
+a realizar
+adelante
+Si, gracias,
+aquí
+sobre todo
+compartir
+en algún momento
+también las sesiones
+nos decían la importancia
+de poder llevar
+un registro de
+alguna habitacora de
+movimientos
+y entendimos
+que estaba más orientada
+sobre todo a esta parte
+donde los funcionarios
+pueden llegar a editar
+información
+directamente
+conforme
+alguna aclaración
+que haya hecho
+el concesionario
+por ejemplo,
+nos decían que tal si
+se equivocó
+en la captura de
+oro
+pues,
+a lo mejor
+puso un dato de
+número 100,
+la cantidad 100
+y debe haber puesto
+mil, ¿no?
+por un ejemplo
+entonces esta habitacora
+mostraría eso
+de alguna forma
+ese registro, aquí ven
+una pregunta importante
+de alguna forma
+ustedes nos decían
+que esa información
+es la podre en editar, ¿no?
+tanto para el trámite
+18 como para el trámite
+19.
+La pregunta es ¿qué
+si se puede editar
+y que no del trámite?
+¿Por qué
+pues está justamente
+para que también a ustedes
+como funcionarios
+o a las personas
+asignadas,
+nada más únicamente
+se les habilite
+la posibilidad
+de editar
+cierta información
+y no todo.
+Entonces,
+creo que eso es importante
+también definirlo
+y en función de eso
+aquí aparece justamente
+en la habitacora, ¿quién
+editó? ¿qué?
+eso es lo que se pretende
+mostrar
+pero justamente ahí
+no sé si nos pueden apoyar
+luz y leo, o sea,
+para la información que
+ustedes dicen que de alguna
+manera se necesite
+editar porque al final
+las estadísticas requieren
+tener información
+contundente
+y que puede existir
+un error por parte
+del concesionario
+que se corrige
+a través de la aclaración
+entonces ¿qué tipo de
+modificaciones son las
+que se pueden llegar a
+aplicar en el sistema?
+Aquí, justamente,
+retomando un poquito
+el ejemplo, ¿no?
+de lo mejor
+tiene que poner cien y puso mil
+a, bueno, no es cierto,
+es interno.
+Sire más
+en cuanto a las aclaraciones
+externas, o sea,
+es el concesionario
+en donde
+ahí estaba reportando
+cien kilos de oro,
+después cien todos
+kilos, después cien
+tus cinco, después
+98 y, repente,
+te presenta
+10 mil.
+Entonces ya no tiene como
+esa coherencia, ¿no?
+de
+de presentación.
+Entonces, se realiza la
+aclaración, el concesionario
+te valida
+si su información
+es real, te da las
+evidencias
+y justamente
+no se puede modificar
+la primer presentación
+que realizó.
+Pero el dato
+oficial y el dato correcto
+sería el de la aclaración.
+Entonces, aquí,
+en lugar de
+los 10 mil,
+a lo mejor, se le fueran los
+dos heros y
+nada más eran cien.
+Poder hacer
+la corrección, ponete el cien
+y dejar de evidencia
+que se genera
+un folio por aclaración
+y eso avala
+la modificación en la
+producción de ese concesionario.
+¿Te acuerdo?
+Nosotros como lo visualizamos
+de acuerdo a lo que nos compartieron
+es lo siguiente, o sea,
+la acucia original
+no se va a poder modificar.
+Ese queda
+intacto,
+intacto no se modifica.
+Exacto. Ese no se modifica.
+Ahora, solamente
+si existe una aclaración
+se podría modificar
+algún dato del trámite
+pero ya no en su acucia original
+sino para fines de tener
+la información correcta
+dentro del sistema
+y que obviamente sus estadísticas
+reitero, o sea, contundentes,
+en las características
+que no son correctas.
+Entonces, esa modificación
+tendría que hacer un funcionario
+alguien de la secretaría.
+La pregunta es
+¿qué datos del trámite 1819
+si podría editar
+un funcionario?
+O sea, por ejemplo, el taller nos dieron el dato
+de que podría editar
+la cantidad del mineral.
+Pero también hay
+alguna otra información
+que, al mejor, estamos confundiendo
+la aclaración en sí
+ya es la
+haber.
+Yo tengo la
+presentación inicial con su acusa
+de la aclaración
+inicial, que trae ciertos datos.
+De hecho,
+cualquier dato que venga
+en la, vamos a decir, ahorita,
+cualquier dato prácticamente
+que venga ahí podría estar
+equivocado, ¿no?
+Podría ser motivo de una aclaración.
+Es decir,
+una solicitud
+por parte
+de la de gemic,
+de que el concesionario aclare, ¿no?
+Entonces, una vez que ya,
+digamos,
+pero usted de la aclaración
+es como si
+yo agregaré una hoja
+adicional, ¿no?
+Y entonces,
+esa hoja va a decir, "ah, pues esto
+está modificando la cantidad original
+o el número original
+o el text total
+que venía
+en la declaración tal, ¿no?"
+Entonces, eso es
+ya la justificación y eso es lo que,
+o sea, la misma,
+o sea,
+es lo que se llama un ledger,
+es decir, es un libro mayor,
+algo así se llama en español,
+donde tú vas haciendo movimientos
+que van modificando, digamos,
+el estado actual,
+pero no modificar lo que sucedió,
+o sea, lo que está registrado antes,
+sino que se van acumulando, digamos, ¿no?
+Entonces, eso ya es como tal
+en cuanto a las aclaraciones,
+no se necesitaría otra cosa.
+Esa es la habitación con la como tal,
+de esos movimientos
+y lo que se pueden modificar,
+pues,
+es cualquier cosa que pueda mandar
+en una aclaración,
+o sea,
+cualquier cosa que en la aclaración,
+no es una modificación,
+pues eso es lo que se va a modificar,
+pero no es modificar de hecho,
+o sea,
+en realidad no es modificar.
+Entonces, no confundamos,
+ahí no es modificar,
+es agregar un movimiento a ese,
+a ese libro como tal,
+vamos a,
+esto alicional,
+es aclaración.
+Ah, como si fuera un expediente,
+se agrega, y bueno,
+pues yo dispuesto a todos los expedientes,
+y ya digo, "ah mira,
+se presentó así, pero lo hago vuestro,
+es el libro que lleve esos movimientos".
+Ahora, otra cosa diferente,
+eso ya quedamos, no es modificar.
+Otra cosa diferente es,
+si yo quiero modificar un dato,
+digamos, manualmente,
+por fuera, porque,
+porque había un error de captura original,
+no sé qué, pero eso ya,
+eso ya es otra cosa, y ahí si es donde hay que tener cuidado,
+y ver si eso es valido,
+o sea, si sería modificar como tal,
+y por eso es lo que yo entendí,
+que ese tipo de movimientos,
+ahí sí, tendrían que quedar registrado,
+hoy voy a ver, ¿quién hizo este movimiento manual?
+¿Por qué?
+O sea, con qué autorización,
+o, ¿quién le dijo que se metiera
+a hacer esa modificación, no?
+Eso es otra cosa, pero...
+Ah, perdón, perdón, perdón, perdón, perdón.
+Nada más confirmar, tantito.
+Es que justamente, digo,
+se supone, digo, nada más para confirmar con el área.
+Estoy de acuerdo en lo que comentas,
+creo que la precisión es adecuada,
+porque la acusión original se queda tal cual,
+más bien, se va a agregar información en ese libro,
+o en esa parte del trámite,
+para que la información que,
+del propio trámite,
+pues sea la correcta, ¿no?
+Nada más confirmar esto, esto es así, ¿no?
+Lucie Eduardo.
+Sí sería así, o sea, al final,
+el acusión original no se modifica,
+lo que necesitamos es que,
+si hay una aclaración donde algo necesita,
+le voy a poner entre comillas actualizarse
+o considerarse de manera diferente,
+respecto al trámite original,
+o sea, si necesitan ustedes
+que un funcionario de la Secretaría,
+de la DGM,
+haga dicho registro, ¿no?
+para que la cantidad correcta
+o el dato correcto aparezca.
+Nada más saber si esto sí está al cual, como lo entendimos,
+o hay algo ahí que no aplica.
+Sí, justamente.
+Sí, ok.
+Ahora, tomando en cuenta eso,
+Eduardo, la habita cora que,
+que vamos a tener, nada más sería con relación a eso.
+¿Por qué?
+Sí.
+Porque al final lo que vamos a registrar nada más,
+ese movimiento que haga un funcionario de la Secretaría,
+vamos a registrar que fue lo que hizo,
+o sea, a ver si movió el Monto del Oro.
+Pero, a ver, es que he cuidado ahí, este.
+No, no estás registrando un movimiento que es un funcionario.
+Lo que está registrando es una aclaración que procedió.
+Aún está en breve, con la autorización de un funcionario.
+Pero el objeto, en sí, es una hojita
+que tú estás agregando el expediente.
+Y eso es, no estás modificando nada.
+Estás agregando una hojita.
+Es una aclaración que procedió que, pues,
+puede llevar hasta una firma electrónica,
+lo que quieras, pero es una aclaración.
+No es como que alguien se me te va a hacer una modificación
+¿no?
+Es que eso es lo que creo que necesitan hacer el área.
+Creo que es lo que están comentando ahorita.
+O sea, más bien es confirmar con ustedes, Lucia Eduardo.
+Supongamos que la curso original de un trámite reportó 100 de oro.
+Y a través de la aclaración que ustedes hacen,
+por ejemplo, ya dicen, pues esta persona no produce 100 de oro,
+como normalmente produce 10.
+No vamos a pensarlo, ustedes hacen una aclaración.
+Y ya, a través de la aclaración, les dicen, no,
+o sea, es que escúplame, sí, se me va a hacer un 0 de más.
+No, eran 10 nada más lo que tenía que meter.
+El concesionario originalmente ya no puede editar nada.
+O sea, ya tiene su acuse y hasta ahí.
+Y en esa, en esa...
+O sea, quienes consideran nuevamente ese...
+ese monto correcto deben de ser ustedes, ¿no?
+Y las preguntas desean registrarlo en el sistema
+para que en realidad se haga como voy a poner entre comillas.
+¿Ese ajuste o no?
+Ese es la pregunta.
+Sí.
+Si necesitan hacerlo.
+Sí, sí, sería...
+O sea, ya he llevado de esta aclaración,
+ya tener como esa...
+Ya tener como esa...
+Como es el decir, como apultad, ¿no?
+Para poder realizar este cambio.
+Y pues, también sabemos que va apegado
+a las estadísticas, ¿no?
+Porque ya no va a tomar los 10 mil,
+sino ahora va a tomar los 100.
+Exacto.
+Lo mencionaba así, Eduardo.
+Lo mejor yo creo que sí, como comenté,
+sabe que más bien definir bien los términos.
+¿Por qué?
+Porque el funcionario con base esa aclaración
+si va a necesitar hacer una modificación,
+no? Modificación.
+No es una modificación, realmente, sino atender esa aclaración
+que ya pidió.
+Entonces, en lugar de que ese dato se registre como 10 mil,
+se tiene que registrar como 10
+para que la estadística muestra el dato real.
+Ya está la aclaración, ya hay un soporte.
+Entonces, la habitácora, realmente,
+aquí tiene que mostrar que hubo un movimiento
+para que ese dato...
+Con soporte a esa aclaración,
+ese dato se modificó por parte del funcionario.
+Sí, sería así.
+Perdón, nada más, luz y leo.
+O sea, que lo hagamos tal cual como lo necesitan.
+Sí, efectivamente.
+Y también, justamente, cubrimos esta parte de que,
+en caso de que no hubiera una documentación
+que vale algún cambio,
+no sabía observarlo.
+Exacto.
+Entonces, siempre esa modificación de vivir respaldada
+de una aclaración,
+el funcionario no puede modificar nada si no hay una aclaración.
+Es que más evidente, hay un flujo de aclaración.
+O sea, no es que no se pueda modificar nada.
+Uno, no se va a modificar nada.
+O sea, esa parte de nosotros de lado técnico
+nos tiene que quedar clarísimo.
+Sí, sí, correcto.
+Entonces, a ver si...
+Sí, perdón, la información original no se altera.
+Exacto.
+Entonces, ¿qué sucede?
+Es lo mismo que hacíamos como tipo los altos, ¿me entiende?
+A ver, si es la cantidad original eran 100.
+Ah, bueno, perfecto.
+La cantidad de género es 100.
+¿Cuánto me preguntes?
+Oye, ¿cuánto fue...
+¿cuánto es la cantidad?
+Los 10, oye, pero el original decía 100.
+Ah, sí.
+Es que después hubo una aclaración.
+O sea, por supuesto, siempre que tú me preguntes,
+¿cuánto es?
+Pues te va a decir el último número.
+O sea, ¿qué viene en la aclaración?
+¿Por qué?
+Porque tengo ese expediente.
+Y yo digo, ¿no?
+No tomo el primero.
+Primero, lo he dicho, si haya aclaraciones,
+y si haya aclaraciones, o sea, eso es el sistema.
+A ver, ¿está la aclaración?
+¿Cuánto valía de tal campo?
+¿Qué valor trae?
+¿Apustáis 100?
+O trae 10.
+¿Te va a decir trae 10?
+Oye, pero si cuando la presentaron de 100,
+ah, pues, es que hay una aclaración.
+Eso es lo que va a ser el sistema.
+No vamos a modificar.
+Pero, a ver, no es que yo entre y captura una modificación.
+O sea, que el funcionario entre captura y modificación,
+y le diga, "Ap", y lo estoy haciendo por tal aclaración.
+Más bien es, en el momento en que yo acepto esa aclaración,
+se aplica ese cambio.
+O sea, hay un flujo, un proceso que es de esa aclaración,
+y cuando la aclaración procede,
+entonces se aplica el cambio.
+O sea, no, no es a revés.
+No es como que hice una modificación,
+y me voy a investigar como una aclaración.
+Entonces, primero acepté la aclaración, y luego aplique ese cambio.
+¿Y cómo queda registrado?
+O sea, nada cambió, sino que sumé, resté, cambié, modilé un texto,
+lo que sea necesario, pero son adiciones.
+Se va agregando a lo que tenía yo, originalmente.
+¿Por qué sí es importante, justo,
+porque si el programador mantiende que, ah, como ya hubo una aclaración,
+entonces, voy y hago un cambio el dato, hago un update.
+No, eso nunca va a suceder.
+No va a ser un cambio.
+Acrega a ser una nueva hoja de esa historia, ¿no?
+¿Cómo tal?
+Sí, correcto.
+Sí, o sea, como nos comparte el área, la aclaración,
+o sea, da origen a ese nuevo libro, por así decirlo.
+Lo que sigue, creo que nada más el área si necesita,
+es, pues, a ver, ellos se enteran que no fueron diez mil,
+sino deberían de haber sido 100, con el formato libre.
+Es un formato que ellos lén y que dicen, ¿ok?
+Avalo su aclaración, lo que me está pidiendo el concesionario.
+Entonces ellos, en algún lugar, necesitan cambiar ese 10.000 por el 100.
+No más confirmar luz y leo, eso sí, le necesitarían ustedes, ¿no?
+Cambiar ese 10.000, que puso originalmente por el 10.
+Sí, totalmente, porque eso nos va a dar la certeza de la producción que sea real.
+Exacto, ¿qué es hoy la hacen en su Excel?
+O sea, en su Excel registra en el primer acuse.
+Ah, nos reportó 10.000 y después dicen, pero está raro.
+Entonces ustedes llegan después y le dicen levanta una aclaración
+porque manda a leer un correo.
+Entonces le mandan el correo al concesionario al concesionario y dice,
+"ah, te mando mine y mi formato libre y disculpa así cierto,
+no deberían haber sido 10.000, deberían haber sido 100."
+Entonces ustedes llegan a su Excel y ya con ese soporte,
+lo hacen es, "ah, pues editan en los 10.000 y le ponen los 100."
+¿Por qué ese es el dato correcto?
+Para que te entendí cómo lo estás viendo.
+Es que yo lo estoy dando a otro cuerpo.
+Sí, es que ellos ya vieron, ya proceden la aclaración.
+Entonces, manualmente ven el número y lo capturan, o sea, hacen esa corrección.
+Yo como lo estoy viendo es no, la aclaración ya trae los datos y el sistema,
+cuando tú le dices, acepto la aclaración, el sistema,
+lo que va a hacer es aplicarse o crear ese nuevo movimiento.
+Entonces, más bien, es como...
+Ahí sí, entra ahí esta parte de, "ok, en la aclaración, ¿qué es esta modificación?"
+Es como si fuera una segunda declaración complementaria, digamos,
+eso es una aclaración.
+Entonces, en la aclaración, tú puedes cambiar los mismos campos
+que habías puesto originalmente.
+Entonces, cuando como es un proceso definido de esa aclaración, ¿no?
+"Ok, voy a hacer una aclaración."
+Te dicen, "Ok, mira, esto es lo que habías presentado."
+"Ah, pues mira, estoy modificando este campo."
+"Ah, perfecto, la creación procedió."
+Entonces, "Pun, automáticamente se aplica, tú no vas manualmente a capturarlo,
+sino que al haber modificado algo, la aclaración ya en sí misma."
+Te dice, "¿qué es lo que se modificó y lo aplica?"
+"Ah, es el nuevo movimiento."
+Así es como yo estaba viendo.
+"Ok, sí puede, pero creo que no sé si ahí el área nos autorice."
+"Mira, porque yo creo que lo está viendo así el área como nos explicó."
+"Es, bueno, en este caso luz y Leonardo, ellos nada más cuando levanten la aclaración
+con lo que les acabamos de presentar de prototipo,
+lo que va a pasar es que va a ver un correo electrónico
+que le va a llegar al ciudadano y ese correo no más va a especificar
+lo que hace un momento nos dijeron.
+El título, el nombre, algunos datos que nos dijeron,
+más el cuerpo del correo y sobre la observación que están haciendo a ellos.
+Ese correo le va a llegar al concesionario y el concesionario va a tener que responder
+ya sea a través de la plataforma o por correo electrónico entiendo con su identificación
+y el formato libre.
+Pero ese formato libre puede ser cualquier cosa.
+O sea, puede ser un escaneo, o sea, puede ser un formato, por eso es formato libre.
+Nosotros para procesar eso se vuelve complejo.
+Entonces, ¿quién tiene que hacer esa modificación?
+Es el funcionario.
+Ok, sí, si está hacia el proceso, pues si tiene que haber un salto manual,
+que pues, bueno, ya ves riesgo de que también el funcionario se podría equivocarnos.
+Pero, es exacto, por eso vamos a registrar la habitácora.
+Para que la habitácora diga que movimiento hizo el funcionario
+y ellos tengan la capacidad de revisar.
+Ok.
+Sí, nada más ahí la pregunta, perdón, esta interrupción,
+creo que es importante, Leonardo, porque justo nos define su proceso
+y creo que sí, es conforme lo estamos revisando ahorita.
+Lo que la más nos surge la duda es, ok, quienes ya van a quedar habilitados
+para hacer este nuevo libro, como lo menciona Eduardo.
+O sea, más que darle el término modificación,
+está como actualización o nuevo registro que es necesario dejar con base a esa aclaración.
+La pregunta es, ¿qué sí puede hacer o no el funcionario?
+Porque a lo mejor ustedes dicen, el número de títulos jamás,
+como la declaración se hizo sobre ese título,
+el trámite sí sobre ese título, ¿cómo vas a modificar el título?
+Es ahí donde entra la parte importante de ustedes,
+es decir, únicamente el funcionario puede mover A, B o C.
+O si ustedes nos dicen que pueden mover cualquier información que se puso en el trámite,
+pues lo habilitamos nosotros y lo que haríamos es habilitar una ventana
+para el funcionario, para que cuando vaya a ser justamente esa,
+ese nuevo registro relacionado con esa aclaración,
+pues lo haga como si él hubiera hecho el trámite, ¿no?
+Para que actualice, pero ahí quien pone las reglas de negocio,
+pues serían ustedes que nos puedan definir que sí y que no.
+Y aquí estamos aquí deliberando,
+porque como ves información muy delicada,
+lo tendríamos que, mira, en esencia,
+te lo digo por la experiencia,
+ayer estamos realizando un documento, un informe,
+donde coloca el nombre del lote,
+pero el nombre, el título de título es incorrecto.
+Pero el número de títulos a nosotros nos parece muy riesgoso,
+muy riesgoso.
+Yo creo que independientemente de cómo resolvamos nosotros,
+esa parte que no es tan común,
+no, el título de título no tendría que tocarse, no.
+Podríamos, como pieno, comentar, hacer una aclaración,
+generalmente en el municipio, en el Estado,
+en la entidad federal activa, pues en el volumen,
+en el volumen, este reportado,
+y sería aja oye, y el tipo de mineralos sustancia,
+que son como, de acuerdo a la experiencia lo más común, pues.
+Ok, ok.
+O sea, digo, tratando de tomar esta información
+para habilitarla nosotros lo que el funcionario podría generar
+un nuevo registro con base a una aclaración,
+es modificar el Estado, municipio,
+el mineral, el volumen, y nada más.
+Sería lo que, y entonces todo aplicarían a más para el trámite 18.
+Bueno, no, porque también se especifican algunos de esos datos para el 19.
+Por ejemplo, la producción es exclusivo del 18.
+Ajá, la producción y el 19.
+Por ejemplo, ya ven que tienen temas de inversión, facturación y suspensión,
+ahí nunca les ha pasado que haya algo que editar.
+De hecho, pues es que eso es lo donde se equivocan en los, en la capulada de los montos, ¿sí?
+Entonces también podrían editar, por ejemplo, China,
+en lugar de poner 10 millones de inversión,
+o sea, en 10.000 nada más, no, no 10 millones.
+Es exactamente.
+Eso es lo que necesitan ustedes como que China, una aclaración,
+pues, pues, poner el nuevo registro, el que debería ser realmente.
+Sí, justamente.
+Ok, ok.
+Entonces, creo equipo que es más bien la información justamente susceptible
+de que existe este error humano, sobre todo a nivel de estado municipio,
+y cualquier dato numérico que ingresa el usuario.
+Menos el título.
+Sí, o sea, por ejemplo, el título y sus lotes relacionados,
+el nombre y sí le pertenece y la dirección del título.
+Creo que no habría tanto problema porque con el archivo que ustedes nos van a compartir,
+Luz Leonardo, donde viene toda la información histórica y la idea es que mucha de la información
+ya se precarga en el sistema, pues, eso no va a quedar habilitado para modificarse,
+ni por el mismo concesionario.
+Entonces, tampoco tendría por qué modificarlo el funcionario.
+Sí, yo creo que eso es una, o sea,
+este caso que nos están platicando ahorita es preocupante porque,
+aunque solo sucedan una vez, como una vez, te troenan el sistema, ¿no?
+Entonces, habría que pedir una modificación manual, directo a base de datos,
+y entonces ya todo queda manoseado y todo.
+Pero justamente la forma como ahorita se está haciendo es que ya te presenta
+el número de títulos desde qué entras, entonces tú ya me lo tendrías que capturar.
+Es justo eso que daría cubierto por ese lado.
+Entonces me parece bien.
+Exacto.
+Sí, me parece bien que, o sea, que solamente acotemos las modificaciones,
+como lo están definiendo.
+Exacto.
+Tengo otra duda que ni siquiera sé si, si debería de plantearla pero es,
+hay de alguna manera forma de que una declaración de plano se diga, ¿no sabes qué?
+No procede de toda la declaración, se cancela y mejoras otra.
+Eso puede suceder.
+No, una vez que es como la declaración patrimonial, una vez que tú lo presentaste,
+es la que yo te voy a tomar por buena.
+Si tú te das cuenta después como concesionario, entonces entra la declaración.
+Claro, claro.
+Sí, de acuerdo.
+Sí, de acuerdo perfecto.
+Sí, el lado de lo por eso porque si no, pues se nos rompía un poco esto todo el paradigma.
+Entonces sí hay que tener cuidado nada más de ver los casos de frontera.
+O sea, aunque sea algo que casi nunca sucedé.
+O sea, hay algún otro dato que debe ser cuando sí haya que cambiar, pues hay que ver como se maneja.
+O sea, ya sea que sea algo para la edición o ver cómo se cubres aparte, ¿no? Nada más.
+Sí, de acuerdo, es verdad.
+Sí, yo creo que como lo comentas.
+O sea, al final, como desde el concesionario muchos campos ya no los va a capturar.
+Si no, todo va a quedar preregistado, pues eso en teoría tampoco lo va a capturar el funcionario.
+Más bien todo lo que sí ingresa el concesionario que ya es información particular o del propio periodo como volumen, el estado, el municipio.
+Todas esas detalles de datos que sí nos comparten, Lucille Onerdo, son los que tendríamos que dejar habilitados para que el funcionario lo sedite también.
+Bueno, no se dice, reitero, que nere el nuevo registro a partir de una aclaración para que quede el dato correcto en el sistema y sus estadísticas del área, pues sean contundentes, sean correctas.
+Lo haríamos, yo creo que de esa manera.
+De acuerdo, ahí ustedes, Lucille Onerdo, les parece correcto que este se al enfoque y ya con la definición que nos dieron.
+Sí, pues sí, sí me parece bien.
+De acuerdo, ok, hecho, pues no sé si nos falta algo adicional, Estefani.
+No, ahora sí, justo no, ahora sí era todo.
+Ah, bueno, creo que el lado administrativo sonlo, confirmar si un al magistrador solo tendría exceso adición de suarios y mitad por adecuamiento.
+Una pregunta, aquí en este perfil de administrador.
+Se podría realizar también el cambio de correo de los concesionarios, de los usuarios.
+El cambio de correo, o ok, no lo estábamos considerando, no, no, no, esto es saber que, que elemento se requiere este.
+Ok, a mí depende, depende de lo que ustedes definen.
+Además, tomar en cuenta si ese es un dato, digamos que es una clave de búsqueda, entonces no lo podrían cambiar ellos, ¿no?
+Lo que me refiero, si es un identificador, no lo pueden cambiar, pero si es un dato adicional, entonces pues si está bien que ellos mismos lo pueden actualizar.
+¿Qué pasa? O sea, considero ustedes, ¿no? ¿Qué pasa si me pone un correo y luego ya no tengo forma de comunicarme con él porque ese correo lo capturó mal o...
+O sea, todo eso tendríamos que, nada más que considerar, ¿no?
+Sí, claro, al parecer, no, no recuerdo que sea este identificador, pero estoy totalmente de acuerdo en que de preferencia sólo a mente nosotros tener acceso a estas modificaciones.
+De acuerdo, ahorita, digo, también no lo llevamos como algo adicional ahí, Leo, que ver si puede quedar para esta, para esta alcance, de esta ODT.
+También concuerdo contigo, creo que de momento conviene que nada más ustedes administran y controlen esto, porque creo que también tienen el punto en donde nos comentaban que en el Excel que manejan,
+tienen ligado los títulos que están relacionados a ese correo electrónico, ¿no? Porque al final ese correo electrónico es un usuario actual de este tema.
+Sí, es el acceso.
+Exacto, es el acceso, es el que dice que te muestro y que no te muestro.
+Exacto, entonces es como identificador, entonces es complejo si tú cambias, si cambiamos eso, si ustedes cambian ese correo,
+al menos ahorita de momento, como está estructurado en su forma de operar, les puede causar muchos conflictos, porque ya perdimos el identificador.
+Con esa actualidad.
+Ok, sí, de acuerdo.
+Entonces sí hay que analizar ese caso, yo creo que igual para una fase 2, porque hay que ver, o sea, de que es posible claro,
+vamos a ir pensando en una estrategia para que pensar en de qué forma se puede lograr de manera que ese identificador nunca se pierde.
+Ese es la clave, nunca perder el identificador, aunque agregues un correo nuevo, pero es una estrategia que analizar y ver tecnológicamente también como se construye de manera que la funcionalidad está habilitada,
+claro que el día de mañana puede utilizar otro correo, pero el identificador original nunca se perde, pero hay que analizarla.
+Yo creo que si están de acuerdo, no la llevamos también para este tema de fase 2.
+Sí, como lo demente de acuerdo.
+He hecho, pues entonces Luz Leonardo, con esto nosotros, por parte de fábrica, concluimos lo que sería confirmar los requerimientos funcionales,
+no funcionales, reglas de negocio, criterios de aceptación y por otro tipo de lo que estaríamos entregando y construyendo y entregando para lo que corresponde la alcance de esta,
+de esta primera fase, por así decirlo, de modernización y evolución de PAM, lo único de lo que presentamos que todavía sería susceptible de que de favor nosotros no lo llevemos y revisemos son los dos últimos,
+bueno, el módulo que se presentó para el tema de los mensajes y el módulo que se presentó, podrías poner los fans idiomas para confirmar los dos módulos que traí el,
+lo que sería la configuración de avisos y la actualización de cuantas que fueron cosas que ya surgieron en sesiones posteriores y que no habíamos considerado un inicio,
+vamos a ver la forma, creo que hay posibilidad de que lo podamos integrar, entonces quedaría listo, eso lo confirmamos ya nada más con lo que nos llevamos información que nos facilitaron y confirmaron en esta sesión,
+para generar dicha minuta y ahí confirmarlo los acuerdos de lo que si se construiría en esta primera fase de PAM,
+entonces si ustedes están acuerdos así concluiríamos esta sesión y así se realizaría dicha minuta para que ustedes también puedan revisarla,
+que si fue lo que se revisó, que si es lo que requieren y en consecuencia, pues nosotros avanzarlo antes posible con la construcción y definitivamente pues la entrega de la aplicativa en esta primera fase, como ven,
+Luis y Leonardo, si estamos de acuerdo solamente queremos retomar un poco la que comentamos la sesión pasada, si respecto de la estructura de la base de datos que les vamos a compartir,
+si, si, no sé si nos referimos específicamente a la estructura que lleva cada uno de los trámites o bien solamente a los datos que vienen relacionados con el título de concesión minera,
+este para aclararlo a este y ya poderse los compartir conmigo a la brevedad posible, okey, bueno a ver si no me corrige en equipo o agregamos cualquier cosa que me falta comentar,
+que necesitamos ustedes, o sea, ustedes como un requerimiento es que al final sería de utilidad tanto para concesionario como también para la DGM que tengan parte de la información ya precargada y relacionada en el sistema,
+si yo ingreso al sistema y ya tengo un ID como el correo electrónico y una contraseña, o si ingreso con mi firma, esa relación ustedes ya la tienen un excel de qué títulos, qué lotes, qué información está relacionada a esos, a esas llaves, ¿no? A esos IDs, ¿no? Por eso pongo el correo y la firma, ¿no?
+Entonces ya saben, ¿a qué RFC le pertenece qué información y a qué cuenta de correo electrónico le pertenece tal información?
+Ese información en sí consiste en los títulos, en los lotes, en donde está ubicado ese lote, quién es el propietario, si tiene un representante legal o no tiene representante legal, o sea,
+entendemos que toda la información vive hoy en día en un excel que ustedes tienen, nosotros comentábamos que ese excel de alguna manera nos sirve estructurado, es decir, que las columnas vengan bien clasificadas por nombre y la relación entre los diferentes camposeas,
+o sea, cuarente contundente correcta, porque esa base, nosotros lo vamos a utilizar para construir la base de datos del sistema y entonces ver qué tanta información si podemos dejar como predefinida o no en el sistema,
+porque partimos justamente de ese archivo excel, estructurado que ustedes nos faciliten.
+Entonces lo que necesitamos es toda esa información y ustedes tienen para nosotros poder empezar a integrar la base de datos. Por otro lado, está la información de los trámites perse,
+no sabemos si ustedes tienen esa información de los trámites, porque a final también esa información histórica en ese mismo archivo que nos van a compartir o esa algo independiente.
+Y eso también de alguna manera tendría que vivir en el sistema, o no sabemos si lo vamos a obtener de la base de datos actual del sistema, lo voy a poner como un caso, ustedes dicen que hay algún lugar donde vive el excelente,
+pues el excelente tiene que vivir o en la base de datos actual del sistema y entonces centraríamos ahí a lo mejor obtenemos esa información o vive en el excel que ustedes nos van a compartir.
+El punto es que para que nosotros podamos plasmar la información que nos solicitan de esta índole, es decir, excedente el título, a quien le pertenece, etcétera, etcétera, nosotros necesitamos la fuente, el insumo.
+Y ese es el documento estructurado que necesitaremos, nos podían hacer llegar para que nosotros empecemos a construir la base de datos del sistema.
+OK, perfecto, aquí entonces haciendo referencia justamente a los datos de registro la cPIRMA, los RFCs que están relacionados a algún título de concesión, eso se encuentra en la plataforma.
+Eso nosotros directamente no lo tenemos, no sé si nos podría hacer favor igual de tener la DGTI de proporcionar los datos, pero cabe mencionar algo muy importante.
+Actualmente digamos que la plataforma está de forma abierta, entonces no existía una validación para poder relacionar directamente,
+digamos una RFC a un título de concesión.
+Es uno de los riesgos que justamente queremos mitigar, o sea que no cualquier persona pueda presentar el informe de algún título sin ser concesionario,
+lamentablemente en este momento está abierta esa posibilidad y está el riesgo de que la información que esté alojada en la plataforma
+no sea la correcta o a mejor tenga un mismo título de concesión diferente, se firma o RFCs, entonces sería un riesgo por poner a alguien que no sea el concesionario como el responsable de ese título de concesión.
+Por otro lado nosotros aquí como dirección general de minas, lo que sí tenemos es una base con estructura de número de título, nombre de lote, la superficie,
+es superficie, estado, municipio, inicio y término de vigencia, los concesionarios que tenemos en tados de altos inscritos en el registro público de minería y digamos también los títulos en que en algún momento hablamos de los títulos
+antteriores o que anteceden al título actual, que es lo que tenemos nosotros para poderles compartir, pero en cuanto a los luqueos o accesos a la plataforma y los excedentes están dentro de la plataforma.
+Y esos a esos no tenemos acceso directamente a nosotros.
+Pero no se está diciendo que lo que no se veía más sería que nos dieron acceso a la base de otros.
+Es que entiendo que la base de datos existe parte de la información y otra es la que nos va a compartir también ustedes, este luz leo, correcto.
+Si tienen la relación de ok, qué título de pertenece acá concesionario, como están los agrupamientos, cuál es su dirección, cuál es su representante y eso actualmente no viven el sistema.
+Lo que sí viven el sistema es la información propia de cada trámite, sus excedentes, cuánto fue de inversión, etcétera, etcétera, eso es lo que en teoría debería vivir en el sistema.
+Sí es correcto, ¿no? Luz. Sí, de hecho, en el sistema actual ahí está la loja de esa información que como bien dice el leo, nosotros no tenemos acceso, no lo administramos nosotros.
+Pero justamente para, para ambos trámites, que cada uno de los trámites tiene una estructura distinta, porque la de 18, probablemente los primeras 10 columnas estoy hablando hipotéticamente,
+las primeras 10 columnas, pues es la misma información que es el número del, es el título, el ote, el concesionario, la superficie, esos datos no cambian.
+Para el 18, las columnas adicionales, pues serían todos recorres que correspondan a la producción.
+Para el 19, tienen la misma estructura, desde vigencia, al ote, todo eso no cambia, pero las columnas adicionales son lo que corresponde a la inversión.
+La base de datos que nosotros sí podemos compartir y que es la que se solicita aquí de manera ya formal, porque es información muy delicada,
+tiene todos esos datos, excepto la particularidad de cada trámite.
+Si nos queda claro, entonces tenemos dos dependencias de insumos ahí, equipo, una nos va a ayudar el área, en este caso luz y leo, que nos facilitarían la información que ellos tienen disponible.
+Ahí luz, Leonardo, o sea, como les comentamos la espasada igual, entendemos que es información confidencial y si gustan, pues ya se puede compartir una vez que se libera producción, de momento con que nos puedan compartir algunos datos dumi o nada más de cinco personas para que nosotros ya conocer la información y la estructura,
+porque el final necesitamos conformar de cómo hayamos construyendo, conocer la estructura y también los datos de prueba, o sea, empezar a probar con datos, de como está toda estas relaciones. Y el otro insumo lo tenemos con la DGTI, creo que aquí nos acompaña José, pero igual si no yo también buscaría Carlos, buscando que ellos nos faciliten el acceso a la base de datos justamente para que podamos entrar y ver la información que existe ahí y también confirmar, ¿no?
+Que esa información existe y que si es posible integrarla en el sistema conforme se nos solicito.
+Sí, justamente yo la verdad es que la parte de DGTI no tengo idea si eso una sola base para los dos trámites o lo tienen separado por 18 días y no ve eso lo desconozco.
+Sí, yo creo que eso igual no lo llevamos, digo aquí creo que nos acompaña de la DGTI José, igual no sé José si como parte de la decisión, digo, yo te coge forma mando un correo por si nos pueden apoyar también con esa información para que vamos a contar con los insumos necesarios para atender los requerimientos que nos expone el área.
+Sí, creo que es lo ideal mandar un correo hacia Carlos y ver esa situación para la aprobación y dar un poco más de contexto en la postificación del documento o el correo.
+Sí, yo gestione esa parte de José muchas gracias y igual leo este lúsileo yo gestione esa parte con Carlos con la DGTI directamente ya no más sería que ustedes nos puedan facilitar el reitero el artiglo,
+con la estructura que como los tenían aquí y con cierta cantidad de registros para que ustedes lo puedan visualizar.
+Es correcto, sí eso no sería de bastante utilidad igual ya para como comentamos digo con esta sesión nosotros lo que procedemos ya prácticamente es a la construcción y les compartiríamos las minutas de ambas sesiones, es decir, de la pasada y ésta donde hace confirmó hasta donde llegan los requerimientos el alcance de la fase 1 y confirmación también de prototipos.
+Claro que sí, gracias.
+Perfecto, pues por nuestra parte creo que está completo lo que queríamos revisar con ustedes agradecerles nuevamente lúsileo la verdad es que creo que han sido sesiones bastante productivas y sobre todo 100% enfocadas a que podamos acordar el alcance y también lo que necesitan como área.
+No sé si alguno de mis compañeros tenga algo adicional que debe compartir preguntar y si no por nuestra parte nuevamente agradecemos el tiempo del espacio y seguiremos en comunicación ya en el entendido que arrancamos prácticamente con la construcción del sistema y enviarles las minutas para que pues ustedes están para revisarlas y tener una una confirmación de su parte.
+Muchas gracias. No, gracias al contrario. Perdón, adelante, por favor, Esteban.
+No, sólo agradecer, Dios aprovechar el espacio para muchísimas gracias muy productivo todo lo que se fueron ayudando y tanto.
+No, pues al contrario, muchísimas gracias por todo el tiempo, la disposición, el apoyo y ese acompañamiento que es fundamental para que esto llegue a buen puerto.
+Muchas gracias a todas las áreas que estamos aquí involucradas.
+Gracias, que tengan buena tarde, buen provecho, hasta luego.
+Gracias.
+Sí, espero un momento por fin. Claro, nos quedamos, gracias.
+¿Listo? ¿A tus órganes? Ya vi tus formatos, hablando en el sistema de diabetes.
+Sí, dime.
+Aquí ya me confundí porque en el último correo que enví, que también.
+Sí.
+De tus compañeros vienen, bueno, ya vienen sus dipes, no un ejemplo de nánsi, ¿no?
+Trae ella aproximadamente dos, cuatro, seis, como 13 sipes y en el documento que también tache dos, que es la 21/21.
+Y la, a veces de un segundo, la 21/21 es la 20/73, pero en el nuevo formato de nánsi,
+o ver, déjate comparto para que lo veas.
+Sí, igual y a la mujer se le pasó, y la verdad es que yo no me di cuenta de jose, pero a ver,
+nada más es con nánsi o todos los demás vienen bien?
+Sí.
+Son todos, pero excepto el que tiene más sipes, como ser más, fermando.
+A ver.
+¿Tengo un segundo de comparto?
+A ver, sí, por favor.
+A ver, sí, por favor.
+A ver, sí, por favor.
+Sí, adelante.
+Este mirada aquí, por ejemplo, te compartí, a ver, déjate, te mostré un documento que te mandé.
+[Música]
+[Música]
+[Música]
+Sí, no te poré.
+Sí, voy, voy, voy.
+A mira, aquí está.
+Ese es el que tendí.
+¿Qué fueron los que llenamos originalmente?
+Sí, y ves que aquí te...
+Metachaste, me dijiste solo que no vengan dos y pes, ¿no?
+Ah, que son dos.
+Ok, y por el, aquí son 1, 2, 3, 4, 5, 6, 7, 8, 9, 9.
+Ok.
+Y aquí...
+[Música]
+Y aquí, solo 9, aquí solo ya me pone 5, que aquí ya ya me dio confusión.
+Ah, de por qué vienen diferentes?
+Exactamente, aquí son 9 y aquí son 5.
+¿Todos tienen el mismo caso?
+Sí, no sé, es que te mandé aquí, son todos los mismos.
+No, por me refero de los que te inviertos, están igualitos.
+Exactamente, no me mandaste el de Fernando.
+Sí, el de Fernando, ya está bien.
+Y así yo los tengo ya, este es la que yo tengo.
+Aquí es como van a quedar en los grupos de las como se llama.
+Las de penes.
+Y este es el de Fernando, que todos tienen que...
+El que estaba bien.
+Sí, mira, déjame entonces pedir que me lo corrige nuevamente.
+Lo es que yo creo que, o sea, yo les dije claramente que me eliminaron nada más.
+Las dos y pes que me dijiste, creo que las dos y pes no existen en los demás documentos, ¿no?
+Y me eliminaron de más.
+Que eliminaron todos estos, solo era el...
+No, más un favor, vamos a ver, déjame ver si ahí en esos están repetidas.
+A lo mejor están repetidas y por eso las eliminaron.
+Por ejemplo, es que como dijiste, elimina la IP 21.
+A ver si no está repetida, ¿no?
+No reincluso aquí, déjame mencionar 21.
+Y me dijiste que eliminaron la 20.
+Ah, pero es que son diferentes, mira.
+A ver, no sé si van a repetidas, déjame abrir el archivo,
+porque lo veo un poco borroso aquí.
+Pero voy a abrir el que tu me enviaste, para que pueda haber...
+Sí.
+Si se repita ni ahora, mejor por eso eliminaron de más.
+Entonces, nada más confirmar contigo, si se eliminan las que vienen en el recuadro.
+Sí, ya para ya cuadrarlos, yo lo sé, ya.
+Sí, porque la mejor yo, la instrucción que di es como Vito Correo,
+que se eliminen todo lo de esas IP, pero a lo mejor no debía haber sido así,
+más bien es con base al documento que tienes ahí.
+Nada más los recuadros que tuvieron que haber eliminado.
+Mira, dice, eliminar, dice, se detectó creaciones IP 21 y 73 aún reflejan formatos.
+Entonces, dice la 21 y 23 de JBL original,
+del documento que me enviaste.
+Y así ya veos si vienen, o sea, si se mencionan más veces o solamente algunas.
+¿Qué?
+Y ya con base a ello, pues ya determinamos si ese fue el tema, que se corrija.
+Si no para que igual tú me digas, si se deben eliminar o no para narrar.
+Mira, por ejemplo, estoy viendo que viene la 21, como comentas,
+¿cómo comentas?
