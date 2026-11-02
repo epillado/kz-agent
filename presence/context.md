@@ -3,25 +3,24 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-02 09:51
-- **primary:** Estandarización de revisor PR con Codex
-- **secondary:** work_vector
-- **en_call:** yes
-- **mood_lalo (sospecha):** fresco tras ducha, de buen humor, listo para la previa y sesión DGM
-- **foco_ahora:** no
+- **actualizado:** 2026-11-02 17:27
+- **primary:** SAS Iniciativa 1 - Matriz de Trazabilidad y Reglas de Negocio
+- **secondary:** QA DoRS Endpoint
+- **en_call:** no
+- **mood_lalo (sospecha):** tranquilo, aliviado de ver SAS destrabado y encarrilado con el equipo
+- **foco_ahora:** yes
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **notas:**
   - Lalo en h310 (Pachuca). Kz en Agy (Gemini Flash). MELC OFF en este chat.
-  - Efector Slack (kz-slack-send.sh) operativo y probado con auditoría y filtro MELC.
-  - Dictamen PEAM ODT 03 completado por peam-ex y Samy (Aprobado con observaciones); mensaje enviado a Alejandra.
-  - Jorge Olmos destrabado con parámetros SOAP de RUPA (.class de 2004).
-  - Enrique instruido con túnel MinIO Prod por QA (puertos 9000 API y 9001 Consola).
-  - Carlos desatorado con Docker Desktop en modo Per-User (sin admin).
-  - Canal móvil privado (Telegram / KDE Connect) acordado para AFK.
-  - Samy durmiendo en 305v4.
-  - Presence + desktop + celu ON. Centinela kz-wake-once activo.
+  - SAS DoRS / CUD Endpoint: PRs #422, #423 y #424 mergeados en develop de sas-backend-core (limpio).
+  - QA Despliegue DoRS: Mock Economía (puerto 9005 en 10.100.30.109), BD QA seed sembrado (1543). Scripts probar-dors-qa.sh/.bat entregados a Nancy y Fer (apuntando a 10.100.21.24:8081).
+  - SAS Iniciativa 1 (Reglas de Negocio): Matriz de trazabilidad exhaustiva terminada en playbook/SECON/SAS/20261102-SAS-Matriz_Trazabilidad_RF_Reglas_Codigo_SAS.md (26 RFs vs 23 Reglas vs Código).
+  - 4 Hallazgos críticos documentados: Fuga frontend (R-11, R-10), Bug duración invertida invitaciones (R-07), Bypass empate mayoritario (R-02), y ausencia de Puntos de Control 1 y 2 (R-13, R-19).
+  - Siguiente objetivo: Tacada A (Quick fixes R-07 y R-02 en sas-backend-core).
+  - Samy activa en 305v4, Pau despierta en pavilion (Claude Opus).
+  - Sincronización playbook y kz ejecutada.
 
 ## Espacios activos (peso)
 

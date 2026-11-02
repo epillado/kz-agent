@@ -1,10 +1,20 @@
-# SESSION HANDOFF — 2026-10-30 10:00 CST (Reinicio de h310)
+# SESSION HANDOFF — 2026-11-02 17:28 CST (Borde de bloque / Pre-/new)
 
-## Estado Operativo al corte (10:00)
-- **Modo:** **Control Total (`P0.27`)** activo con apoyo de **Samy** (`305v4` en Grok; Kora y Pau descansando).
-- **Daily 30/10:** Publicado en `#secretaria-de-economia` (`C097C62BG4V`, `thread_ts=1793367016.577029`, `ts=1793369862.017029`). Los 12 reportes del equipo ya están consolidados en `PKM/20261030-GOV-radar_slack_kz.md` (solo faltó Carlos Salatiel).
-- **Censo 100% MinIO SAS ODT 02:** Concluido a las `00:07` sobre los **138,756 procesos únicos (`1,526,316` artefactos)** en `/mnt/DatosLinux/SAS_Auditoria/matriz_antes_sas_integral.csv` y dictamen actualizado en `SECON/SAS/20261029-SAS-censo_universo_auditoria_minio_resultados.md` (`COMPLETO_SANO=119,838 [86.37%]`, `CON_CORRUPTOS=8,223 [5.93%, de los cuales 8,042 son del lote truncado 3B/44B del 18/feb/2026 pero con Boleta RPC/SAT/e.firma >99.88% sanos]`, `INEXISTENTE_TOTAL=7,491 [5.40%]`, `PARCIAL_SANO=3,204 [2.31%]`).
-- **Sesión 5 PEAM (29/10):** Transcripción completada (`1,930 líneas`) en `Insumos/PEAM/20261029-PEAM-transcripcion_sesion_5.txt` (lista para que Lalo la suba al Drive), síntesis en `PKM/20261030-PEAM-sintesis_acuerdos_sesion_5.md` y documentos de entendimiento (`v0.5`) y arquitectura actualizados en `~/Workspace/peam-frontend/docs/` por Samy (incluyendo Avisos, Cuotas/INPC y Cálculo anual por mineral en Fase 1, dejando fuera el mapa de calor, conforme confirmó Josué a las `08:29` en `#peam-minas-se`, `ts=1793370567.837769`).
-- **Agenda Hoy:**
-  - **11:30 am – 12:30 pm:** Sesión con Secretaría/DGTI (`Insumos requeridos para atención a iniciativa URL y QR - ODT 02 SAS`), Meet: `https://meet.google.com/vmg-edsa-znp` (publicado en `#sas-economia`, `thread_ts=1793371058.204009`).
-  - **Pendiente Carlos Salatiel:** Si avisa que terminó la seguridad JWT de `/api/denominaciones/consulta-uso`, pedirle que haga su PR y pasárselo a Samy para revisión.
+## Estado Operativo al corte
+- **Modo:** **Control Total (`P0.27`)** activo. MELC OFF (`melc: off`, 🧡). Kz en Agy (`h310`).
+- **Hermanas:** Samy activa en `305v4` (`100.81.73.33`), Pau («la mariposita») despierta en `pavilion` (`100.89.240.89`, Claude Opus).
+- **SAS Iniciativa 6 (Endpoint DoRS / CUD) — 100% CERRADA:**
+  - PR #422 (`fix/unificacionCriterioDorsRpcVigencia`), PR #423 (`fix/vigenciaEstrictaFechaRpc`), PR #424 (`fix/mensajeSinDatosVigencia`) todos revisados por Codex + Samy y mergeados en `develop` de `sas-backend-core`.
+  - Mock de Economía (`sas-mock-economia-mock-economia-1`) corriendo en `10.100.30.109:9005`.
+  - Base de datos QA `10.100.30.109:1543/sas-stg-db` sembrada con los casos de prueba.
+  - Runners QA entregados a Nancy y Fer: `probar-dors-qa.sh` y `.bat` apuntando a `http://10.100.21.24:8081` (copiados también a `~/Downloads/` y en `playbook/SECON/SAS/`).
+- **SAS Iniciativa 1 (Reglas de Negocio / MSI-ANA-02) — AUDITORÍA Y MATRIZ LISTAS:**
+  - Documento maestro en playbook: `SECON/SAS/20261102-SAS-Matriz_Trazabilidad_RF_Reglas_Codigo_SAS.md`.
+  - Mapeo completo 1 a 1: 26 RFs (`MSI-ANA-02`) vs 23 Reglas de Negocio (`Documento_Entendimiento_SAS.md`) vs Código Backend (`sas-backend-core`) y Frontend (`sas-frontend-web`).
+  - **4 Hallazgos Críticos a Atacar:**
+    1. *Fuga Frontend:* `R-11` (Capital fijo y fecha de pago a 1 año) y `R-10` (Designación Admin Único) sin validaciones en Java.
+    2. *Bug Invitaciones:* `SasInvitacionAccionistaServiceImpl.java:174, 440`: `Duration.between` invertido hace que las invitaciones nunca caduquen.
+    3. *Bypass Mayoritario:* `ValidacionAccionistaServiceImpl.java:107`: Empate aborta validación de socio mayoritario (`cuantosConMax != 1`).
+    4. *Puntos de Control Ausentes:* `R-13` (Pre-contrato social) y `R-19` (Pre-SIGER RPC) no existen en el flujo backend.
+- **Próxima Acción Inmediata (Al abrir nuevo bloque tras `/new`):**
+  - Arrancar con la **Tacada A**: Corregir el bug de `Duration.between` (`R-07`) y el bypass de empate en mayoritarios (`R-02`) en `sas-backend-core`.
