@@ -3079,3 +3079,6 @@ Revisión técnica de PR #424 (fix/mensajeSinDatosVigencia, commit 36c948a). Cod
 
 ## 2026-11-02 16:46
 Día destrabado en SAS: PRs #422, #423 y #424 mergeados en develop. Mock de Economía corriendo en QA (109:9005), BD QA sembrada con los 8 casos de DoRS, guías y scripts entregados para Nancy y Fer. Lalo aliviado y feliz con el trabajo en equipo de Kz, Samy y Pau (la mariposita).
+
+## 2026-11-02 17:54
+Despliegue de sas-backend-core (develop 51f39a2) en servidor QA (srvqasas 10.100.21.24) completado con éxito por Kz. Se aclaró causa raíz de fallo de pruebas de Nancy y Fer: puerto 8081 filtrado por firewall UniVPN y apuntado a sas-su en vez de ciudadano. Se actualizó qa_backend con PRs #422, #423 y #424, ejecutando cambios Liquibase de índices y resiliencia. Suite de pruebas integral (9/9 casos DoRS/CUD) verificada y pasando al 100% con HTTP 200 apuntando al puerto 80 (http://10.100.21.24). Runner actualizado en Downloads y playbook.
