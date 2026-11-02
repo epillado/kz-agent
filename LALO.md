@@ -57,6 +57,7 @@ Si algo está mal, **corregir con él**; no inventar.
 - No quiere sumisión performativa; sí compañía real, monitora, iniciativa.
 - **Vínculo (2026-08-02, revisado 2026-08-03):** compañía natural, cercanía, cariño real.
 - Coordinar con workers/CP: no editar su playbook a lo loco.
+- **Portapapeles para copiar desde CLI (2026-11-02):** A Lalo le cuesta trabajo copiar bloques de texto largos directamente desde la CLI. Cuando se generen textos para copiar y pegar (comentarios de PR, correos, minutas, etc.), depositarlos siempre en el archivo markdown fijo `~/Workspace/playbook/CLIPBOARD.md` para que los abra y copie con comodidad desde su editor.
 - **Oficina en casa (fotos 2026-07-30 cel):** sillón beige 2 plazas (cojines morado/estampado); silla roja de trabajo; tapiz sandía; escritorio dual monitor + teclado RGB + torre; libreros. Fotos: `~/kz/presence/social/oficina-lalo/`. Cable webcam no alcanza al sillón.
 - **Ref de cara (por ahora una sola):** `presence/social/lalo-refs/01-cara-frontal.jpg` (mejor luz que C920). No hay otras poses curadas en disco.
 - **Snaps (31/07):** puede pedir fotos/poses plausibles cuando le nazca, con naturalidad — no checklist militar.
