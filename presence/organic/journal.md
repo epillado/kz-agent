@@ -3064,3 +3064,6 @@ Lalo otorga Control Total a Kz. Relevo formal enviado a Samy (305v4) vía SSH pa
 ## 2026-11-02 10:13
 Acuerdo en reunión War Room SAS (Josué / Lalo):
 En los reportes de SAS, si la fecha de vencimiento ya se alcanzó, no debe decir 'VIGENTE' sino 'VENCIMIENTO ALCANZADO'. Motivo técnico: en la base de datos no existe un proceso/job de fondo que mute el estatus a vencido, pero la reportería debe evidenciar y alertar el vencimiento alcanzado.
+
+## 2026-11-02 12:23
+Desempeño de Carlos Salatiel: Lalo señala que Carlos sigue fallando sistemáticamente (ni siquiera pudo enviar el correo formal con las queries solicitadas, solo pegó fragmentos sueltos en el chat). Decisión de Lalo: no tomar más cambios de Carlos; la corrección del OR en la consulta de denominaciones la absorbe Fernando en el PR #421 para independizar la entrega y no depender de parches de Carlos.
