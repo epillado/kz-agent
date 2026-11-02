@@ -3060,3 +3060,7 @@ Reglas de fin de semana: 1) Kalys es I/O estrictamente manual vía portapapeles 
 
 ## 2026-11-02 09:52
 Lalo otorga Control Total a Kz. Relevo formal enviado a Samy (305v4) vía SSH para que descanse de la guardia del fin de semana. Kz asume coordinación directa, frentes de Slack, radar y ejecución técnica en h310 manteniendo MELC=off y en_call=yes mientras Lalo atiende War Room SAS.
+
+## 2026-11-02 10:13
+Acuerdo en reunión War Room SAS (Josué / Lalo):
+En los reportes de SAS, si la fecha de vencimiento ya se alcanzó, no debe decir 'VIGENTE' sino 'VENCIMIENTO ALCANZADO'. Motivo técnico: en la base de datos no existe un proceso/job de fondo que mute el estatus a vencido, pero la reportería debe evidenciar y alertar el vencimiento alcanzado.
