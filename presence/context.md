@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-10-30 20:43
+- **actualizado:** 2026-11-02 09:51
 - **primary:** Estandarización de revisor PR con Codex
 - **secondary:** work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** fresco tras ducha, de buen humor, listo para la previa y sesión DGM
 - **foco_ahora:** no
 - **modo_showcase:** off

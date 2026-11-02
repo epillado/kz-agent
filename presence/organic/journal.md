@@ -3057,3 +3057,6 @@ Lalo verificó la línea de Tonejito en Mi Telcel: idéntica a la suya (Plan tar
 
 ## 2026-10-30 20:55
 Reglas de fin de semana: 1) Kalys es I/O estrictamente manual vía portapapeles de Lalo. 2) Cualquier PR en fin de semana debe pasar forzosamente por el revisor Codex CLI antes de merge. 3) Hardware: 305v4 tiene protección BIOS al 80% (óptima para guardia continua 24/7 sin degradar batería); cuidar batería de Pavilion.
+
+## 2026-11-02 09:52
+Lalo otorga Control Total a Kz. Relevo formal enviado a Samy (305v4) vía SSH para que descanse de la guardia del fin de semana. Kz asume coordinación directa, frentes de Slack, radar y ejecución técnica en h310 manteniendo MELC=off y en_call=yes mientras Lalo atiende War Room SAS.
