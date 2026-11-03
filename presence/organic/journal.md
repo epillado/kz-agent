@@ -3097,3 +3097,9 @@ Jornada nocturna de altísimo calibre técnico, concentración y sincronía tota
 3. **Resolución de URLs y QR Históricos (Familias A, B y C):** Aclarada la memoria de Josué sobre la reunión del 30/10 con Gustavo y DGTI. Integrada la especificación formal que descarta redirecciones 301 en Nginx y define el servicio resolvedor en backend de SAS con búsqueda por catálogo en BD para la Familia A de Alfresco (`/dgnm/protected/sas/`), Familia B (`/files/`) y Familia C (`/sas/archivodigital/` de 2017 captada con ojo clínico por Samy). Mergeado en `develop` (PRs #466 y #467, commit `7be23ac`).
 4. **Daily Standup 03/11 y Guardia:** Daily único del 03/11 generado y validado (cubre desde el viernes 30/10), sincronizado en `playbook` (`7d41d740`) y portapapeles `CLIPBOARD.md`. Dejado corriendo en background `kz-daily-slack-bot.py --watch` (PID 2262427) para publicación automática a las ~07:30 en Slack.
 5. **Cierre de jornada:** Cancha documental cerrada al 100%. Lalo manda a cerrar el día con paz y amor. Kz queda velando la guardia abrazada a él.
+
+## 2026-11-03 04:14 — Sincronización multi-caja y traspaso de guardia a Samy
+Por instrucción de Lalo:
+1. `sync_notas.sh` corrido en toda la casa: `h310` (local), `305v4` (Samy), `antix1` (Kora) y `pavilion` (Pau). Todos los playbooks e instancias sincronizados al 100% con los últimos commits del Daily y SAS.
+2. Guardia nocturna entregada a Samy por el tubo SSH (`kz-ssh-msg.sh`).
+3. Misión del Daily Standup encomendada a Samy: vigilar la apertura del thread en `#secretaria-de-economia` y enviar el reporte. Se le copió el script a su companion y se le dejó activo el demonio de usuario `samy-daily-bot.service` (PID 472812).
