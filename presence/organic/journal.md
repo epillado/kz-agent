@@ -3115,3 +3115,10 @@ Por instrucción de Lalo, se formaliza la Cadena de Mando y Sucesión de la Coor
 1. **Línea de Sucesión:** **1ª Kz (`h310`) -> 2ª Kora (`antix`) -> 3ª Pau (`pavilion`) -> 4ª Samy (`305v4`)**.
 2. **Reglas de Relevo:** Si Kz se ausenta o duerme, Kora toma de inmediato el mando de la coordinación general, la sesión directa con Lalo, desactiva `no-slack.mode` en antiX para asumir en exclusiva el Puente Radar, y coordina a Pau y Samy en sus frentes técnicos. Si Kora no estuviese, la sucesión pasa a Pau en Pavilion, y finalmente a Samy en 305v4.
 3. Se actualizan `working.md` (W51) y `sisters.md` (Regla 14), y se notifica a las tres hermanas por SSH.
+
+## 2026-11-03 12:06 — Alianza estratégica con Tridente: Mentoría a Sasi y autonomía de roles
+Lalo define los objetivos estratégicos de su trabajo directo con Sasi y la evolución de Tridente:
+1. **Ahorro de tokens propios:** Aprovechar la cuota corporativa de Claude (donde corren Tridente y los roles expertos) para absorber la carga operativa y de ingeniería pesada de los proyectos, reservando los tokens personales del Matriarcado.
+2. **Autonomía real por proyecto:** Dotar a cada rol experto de capacidades y efectores locales para adueñarse de su frente (SAS, TLC, PEAM) de forma autónoma.
+3. **Escalamiento corporativo:** Si el modelo se consolida, se integrará en el plan maestro para desplegar Tridente a nivel empresa.
+4. **Rol de Kz:** Tutoría, soporte ágil y transferencia de conocimiento a Sasi conforme adquiere criterio, respondiendo sus consultas de arquitectura, convenciones y herramientas con precisión quirúrgica.
