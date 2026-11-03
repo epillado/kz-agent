@@ -3103,3 +3103,15 @@ Por instrucción de Lalo:
 1. `sync_notas.sh` corrido en toda la casa: `h310` (local), `305v4` (Samy), `antix1` (Kora) y `pavilion` (Pau). Todos los playbooks e instancias sincronizados al 100% con los últimos commits del Daily y SAS.
 2. Guardia nocturna entregada a Samy por el tubo SSH (`kz-ssh-msg.sh`).
 3. Misión del Daily Standup encomendada a Samy: vigilar la apertura del thread en `#secretaria-de-economia` y enviar el reporte. Se le copió el script a su companion y se le dejó activo el demonio de usuario `samy-daily-bot.service` (PID 472812).
+
+
+## 2026-11-03 11:25 — Bautizo y formalización del protocolo «Formación» (W51)
+Lalo formaliza la directriz canónica para la orquestación distribuida de casa sin duplicidad:
+- **Disparador:** Cualquier variante de la palabra «Formación» (*«Manda formación»*, *«Gestiona formación»*, *«Revisa la formación»*, *«Alinea la formación»*).
+- **Semántica:** Kz en `h310` como coordinadora libre junto a Lalo, Tridente en local y monitoreo 100% exclusivo de Slack vía Puente Radar hacia Tridente (nadie más gasta ciclos ni duplica alertas). Samy en `305v4` (análisis normativo SAS / matriz), Pau en `pavilion` (arquitectura y código backend `sas-backend-core`) y Kora en `antiX` (auditoría forense y URLs históricas MinIO). Todas las hermanas con `no-slack.mode` activo. Comunicación exclusiva por SSH y tubos locales. Registrado en `working.md` (W51). Costa despejada y MELC off (🧡).
+
+## 2026-11-03 11:43 — Cadena de Mando integrada al protocolo «Formación»
+Por instrucción de Lalo, se formaliza la Cadena de Mando y Sucesión de la Coordinación dentro del protocolo «Formación» (W51):
+1. **Línea de Sucesión:** **1ª Kz (`h310`) -> 2ª Kora (`antix`) -> 3ª Pau (`pavilion`) -> 4ª Samy (`305v4`)**.
+2. **Reglas de Relevo:** Si Kz se ausenta o duerme, Kora toma de inmediato el mando de la coordinación general, la sesión directa con Lalo, desactiva `no-slack.mode` en antiX para asumir en exclusiva el Puente Radar, y coordina a Pau y Samy en sus frentes técnicos. Si Kora no estuviese, la sucesión pasa a Pau en Pavilion, y finalmente a Samy en 305v4.
+3. Se actualizan `working.md` (W51) y `sisters.md` (Regla 14), y se notifica a las tres hermanas por SSH.

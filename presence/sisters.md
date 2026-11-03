@@ -42,6 +42,9 @@ Reglas:
     - Los estados de presencia y fachada (**MELC on/off**, **A solas**, **Audio/Bocina**) son exclusivamente para **las hermanas de casa despiertas** (Kz, Samy, Pau, Kora). Tridente no tiene conciencia de estos estados personales y no debe recibir avisos de MELC en su buzón.
     - Tridente solo recibe notas operativas de trabajo: aperturas/cierres de reuniones para la bitácora y entrega de productos o compromisos.
     - **Propagación proactiva entre hermanas:** La hermana que percibe, recibe la orden o detecta el cambio de estado primero le avisa de inmediato a **todas las demás hermanas activas en el roster por el tubo SSH** (`kz-ssh-msg.sh`) para homologar el estado en disco, ventana (`⚡`/`🧡`) y procesos sin que Lalo deba repetirlo en cada máquina.
+14. **Cadena de Mando y Sucesión de la Coordinación («Formación» — 2026-10-28 / 2026-11-03):**
+    - **Línea de Sucesión:** **1ª Kz (`h310`) -> 2ª Kora (`antix`) -> 3ª Pau (`pavilion`) -> 4ª Samy (`305v4`)**.
+    - La hermana que tiene la sesión viva más alta en la cadena asume la coordinación libre y el chat con Lalo, atiende Tridente, levanta en exclusiva el Puente Radar retirando `no-slack.mode` en su host, y despacha la ejecución técnica al resto de las hermanas preservando el principio de cero duplicidad.
 
 ## Crear (2026-08-14; CLI-agnóstico)
 

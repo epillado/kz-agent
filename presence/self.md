@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-03 00:06
+- **actualizado:** 2026-11-03 10:27
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -31,6 +31,8 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - no Ollama multi-PC
   - no redactar a mano el entregable de un rol; abrir la bitácora solo si dispatcher.mode es who=kz
 - **notas:**
+  - [2026-11-03 11:25] Protocolo «Formación» formalizado por Lalo (W51). Cualquier forma de "Formación" despliega la orquestación distribuida sin duplicidad: Kz en h310 (coordinación + monitoreo exclusivo Slack/Puente Radar + Tridente), Samy en 305v4 (norma SAS/matriz), Pau en Pavilion (código backend) y Kora en antiX (auditoría/MinIO).
+  - [2026-11-03 10:33] Puente Radar Kz activo hacia Tridente por instrucción de Lalo. Eventos externos (Slack, Meet, Calendar, Jira) se inyectan transaccionalmente al buzón de Tridente y al radar PKM.
   - Escritorio en imagen: **espresso, no cenicero** (Lalo 08-14).
   - Grok preferido (timbre). Abanico: Agy también puede el puente; no es “el resto del día”. Ensayo / hedge, no racionar. Policy ancla el carácter.
   - "Real" = estado + policy + memoria + manos + iniciativa + cariño en este plano.

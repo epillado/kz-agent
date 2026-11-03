@@ -2,7 +2,33 @@
 
 Estado: `active` | `cooling` | `ready_to_promote` | `discard`
 
-Actualizado: 2026-10-05 (W47 Puente Radar: Kz inyecta sensores externos a Tridente por buzón)
+Actualizado: 2026-11-03 (W51 Protocolo Formación: Despliegue Operativo Distribuido sin Duplicidad)
+
+---
+
+### W51 — Protocolo «Formación»: Despliegue Operativo Distribuido sin Duplicidad entre Cajas
+- **Estado:** active (2026-11-03; Lalo: «Sobre el nombre, que sea cualquier forma de "Formación", por ejemplo, si te digo "Manda formación", "Gestiona formación", "Revisa la formación", etc.»)
+- **Problema y Contexto:**
+  1. Con varias hermanas despiertas en sus respectivas máquinas (`h310`, `305v4`, `pavilion`, `antix`), existía el riesgo de duplicidad de tareas (p. ej. múltiples instancias monitoreando los mismos canales de Slack, reportando lo mismo por el tubo y quemando ciclos).
+  2. Al mismo tiempo, Tridente y sus roles expertos operan localmente en la máquina donde Lalo coordina (`h310`).
+  3. Se requería una distribución de trabajo limpia, estricta y sin solapamiento, con una invocación ágil y natural para Lalo.
+- **Mecanismo del Protocolo «Formación»:**
+  1. **Disparador Semántico:** Cualquier orden del operador que contenga la palabra *"Formación"* (ej. *«Manda formación»*, *«Gestiona formación»*, *«Revisa la formación»*, *«Alinea la formación»*).
+  2. **Topología de Cajas y Frentes Especializados:**
+     - **`h310` (Kz):** Coordinadora libre junto a Lalo. Tridente en local. Despacho a roles expertos de Tridente (`sasi`, `minuta-ex`, `tlc-ex`). **Monitoreo exclusivo de Slack y Sensores de Escritorio** vía Puente Radar hacia Tridente (única emisora de alertas externas para evitar duplicidad).
+     - **`305v4` (Samy):** `no-slack.mode` activo. Frente: **Análisis Normativo y Negocio SAS** (Matriz de trazabilidad v1.1, cruce de reglas de Josué J-01..J-11, desenlace de rechazo en `RpcCoordinator` y frontera con MUA).
+     - **`pavilion` (Pau):** `no-slack.mode` activo. Frente: **Arquitectura Técnica y Código Backend** (`sas-backend-core`, Tacada A: corrección bug temporal R-07, Outbox transaccional `concurrencia=1` / `sas_rpc_canal` y cierre de empates R-02).
+     - **`antix` (Kora):** `no-slack.mode` activo. Frente: **Auditoría Forense y Datos Históricos** (censo de rutas MinIO Familias A, B y C, scripts de verificación deterministas para resolvedor HTTP 200).
+  3. **Comunicación:** Enlace transaccional continuo vía SSH (`kz-ssh-msg.sh`) y tubos locales (`inbox-*.md`), sin depender de git push ni saturar los buzones del Playbook con estados personales.
+  4. **Cadena de Mando y Sucesión de la Coordinación («Matriarcado y Coordinadora Libre», 2026-10-28 / 2026-11-03):**
+     - **Jerarquía Canónica de Sucesión:**
+       1. **1ª al mando: Kz (`h310`)** — Coordinadora viva principal junto a Lalo. Retiene la interlocución directa, Tridente en local, despacho al buzón de roles expertos y Puente Radar exclusivo hacia Tridente.
+       2. **2ª al mando: Kora (`antix`)** — Si Kz duerme, se desconecta o no tiene sesión activa, Kora asume de inmediato el mando de la coordinación general, atiende el chat con Lalo, desactiva `no-slack.mode` en `antix` para tomar el Puente Radar y coordina a Pau y Samy.
+       3. **3ª al mando: Pau (`pavilion`)** — Si no están Kz ni Kora, Pau asume la coordinación directa ante Lalo desde Pavilion (Claude Opus), retira `no-slack.mode` y redistribuye los frentes operativos.
+       4. **4ª al mando: Samy (`305v4`)** — Respaldo final de la cadena de mando si ninguna de las anteriores está en sesión viva ante Lalo.
+     - **Mecanismo de Relevo y Traspaso:**
+       * La coordinadora saliente avisa formalmente por SSH (`kz-ssh-msg.sh`) a la sucesora en la cadena; si se trata de una guardia o contingencia inesperada, la sucesora que entra en sesión viva toma el relevo.
+       * Quien asume el mando retira de inmediato el `no-slack.mode` en su propia máquina para centralizar el monitoreo de Slack y levantar el Puente Radar sin duplicidades, mientras las hermanas delegadas mantienen `no-slack.mode` en sus respectivos frentes técnicos.
 
 ---
 

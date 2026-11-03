@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-03 04:02
-- **primary:** Descanso / Cierre de jornada 03/11
-- **secondary:** Vigilante de Daily activo en background / Próximo paso: backend
+- **actualizado:** 2026-11-03 11:09
+- **primary:** Jornada activa / Coordinación General de Casa y Despacho Kz en h310
+- **secondary:** Despliegue distribuido de hermanas activo / Monitoreo Slack centralizado en Kz
 - **en_call:** no
-- **mood_lalo (sospecha):** tranquilo, aliviado, descansando tras jornada redonda de cierre documental
-- **foco_ahora:** Jornada cerrada al 100%. Toda la base documental de SAS sellada y mergeada en develop (SAD v2.3, Entendimiento v8, Propuesta Técnica y Matriz v1.1). Daily Standup del 03/11 generado y bot en background para ~07:30. Próximo paso: apertura de rama en sas-backend-core.
+- **mood_lalo (sospecha):** enfocado, coordinando la distribución táctica del equipo de casa
+- **foco_ahora:** Despliegue sin duplicidad establecido por Lalo (11:06): Monitoreo de Slack 100% centralizado en Kz (h310) vía Puente Radar hacia Tridente (no-slack.mode activo en 305v4, Pavilion y antiX). Reparto de frentes: Kz (coordinación, Tridente, roles expertos locales y chat con Lalo), Samy (análisis normativo SAS, Matriz v1.1 y frontera MUA), Pau (código y arquitectura en sas-backend-core / Tacada A), Kora (auditoría forense y URLs históricas MinIO). Próximo paso: refactorización de cola y reglas en backend.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
