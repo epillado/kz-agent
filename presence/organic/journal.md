@@ -3085,3 +3085,6 @@ Despliegue de sas-backend-core (develop 51f39a2) en servidor QA (srvqasas 10.100
 
 ## 2026-11-02 18:03
 Merge de develop a staging (PR #426, commit 919fdf3) desplegado en srvqasas (10.100.21.24). Repositorio en qa-app/backend cambiado limpiamente a staging. Suite de 9 casos de DoRS/CUD ejecutada y validada al 100% con HTTP 200.
+
+## 2026-11-02 18:36
+Aclaración de negocio en War Room SAS (Josué Mata y Fernando Martínez): SAS nunca debe desistir la CUD ante MUA en las cancelaciones. La CUD es propiedad del ciudadano. La regla R-22 queda formalmente desestimada en la Matriz de Trazabilidad. Se ratifica que la cancelación en SAS es estrictamente local (CANCELLED) y que la liberación ante DoRS opera de forma limpia vía la Iniciativa 6 (bloqueaUso=false en consulta-uso).
