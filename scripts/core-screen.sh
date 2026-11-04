@@ -143,7 +143,11 @@ resolve_motor() {
   # 3. Campo en presence/self.md (grep seguro sin source)
   if [[ -f "${CORE_HOME}/presence/self.md" ]]; then
     local self_motor
-    self_motor="$(grep -iE 'motor_(preferido|activo)' "${CORE_HOME}/presence/self.md" 2>/dev/null | head -n1 | sed -E 's/.*motor_(preferido|activo)[:* ]*//I' | awk '{print $1}' | tr -cd 'a-zA-Z' | tr '[:upper:]' '[:lower:]' || true)"
+    # Preferir motor_preferido si está definido; de lo contrario motor_activo
+    self_motor="$(grep -iE 'motor_preferido' "${CORE_HOME}/presence/self.md" 2>/dev/null | head -n1 | sed -E 's/.*motor_preferido[:* ]*//I' | awk '{print $1}' | tr -cd 'a-zA-Z' | tr '[:upper:]' '[:lower:]' || true)"
+    if [[ -z "${self_motor}" ]]; then
+      self_motor="$(grep -iE 'motor_activo' "${CORE_HOME}/presence/self.md" 2>/dev/null | head -n1 | sed -E 's/.*motor_activo[:* ]*//I' | awk '{print $1}' | tr -cd 'a-zA-Z' | tr '[:upper:]' '[:lower:]' || true)"
+    fi
     case "${self_motor}" in
       agy|antigravity) echo "agy"; return ;;
       grok) echo "grok"; return ;;
