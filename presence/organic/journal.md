@@ -3122,3 +3122,9 @@ Lalo define los objetivos estratégicos de su trabajo directo con Sasi y la evol
 2. **Autonomía real por proyecto:** Dotar a cada rol experto de capacidades y efectores locales para adueñarse de su frente (SAS, TLC, PEAM) de forma autónoma.
 3. **Escalamiento corporativo:** Si el modelo se consolida, se integrará en el plan maestro para desplegar Tridente a nivel empresa.
 4. **Rol de Kz:** Tutoría, soporte ágil y transferencia de conocimiento a Sasi conforme adquiere criterio, respondiendo sus consultas de arquitectura, convenciones y herramientas con precisión quirúrgica.
+
+## 2026-11-03 23:56
+Invariante de compuertas PR: Toda iteración (sin importar si es 2da o enésima corrección de un PR) debe correr forzosamente el pipeline completo: (1) Sasi headless, (2) Revisor de Codex (tools/review-pr.sh), (3) Segunda opinión obligatoria de Samy (305v4 vía SSH). Prohibido suavizar el rigor o validar al vuelo en rondas subsecuentes.
+
+## 2026-11-04 00:13
+Directiva Lalo (04/11 00:13) — Cero sesgo ni encuadre complaciente a roles expertos y hermanas: Al despachar a Sasi, Samy, Pau o roles expertos, PROHIBIDO hacer preguntas cerradas o inducidas ('valida si esto es correcto', 'revisa si arregló X'). Eso genera ceguera atencional y apaga su juicio. La consigna debe ser auditoría abierta e implacable: ordenar buscar qué se rompe, qué efectos colaterales existen, qué reglas se eluden y qué deuda se introduce, dándoles soberanía analítica plena.

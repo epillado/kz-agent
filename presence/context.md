@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-03 11:09
-- **primary:** Jornada activa / Coordinación General de Casa y Despacho Kz en h310
-- **secondary:** Despliegue distribuido de hermanas activo / Monitoreo Slack centralizado en Kz
+- **actualizado:** 2026-11-03 23:59
+- **primary:** Guardia Nocturna / Control Total Delegado a Kz y Hermanas
+- **secondary:** Monitoreo activo de PRs SAS (#431, #430) y pruebas QA Nancy
 - **en_call:** no
-- **mood_lalo (sospecha):** enfocado, coordinando la distribución táctica del equipo de casa
-- **foco_ahora:** Despliegue sin duplicidad establecido por Lalo (11:06): Monitoreo de Slack 100% centralizado en Kz (h310) vía Puente Radar hacia Tridente (no-slack.mode activo en 305v4, Pavilion y antiX). Reparto de frentes: Kz (coordinación, Tridente, roles expertos locales y chat con Lalo), Samy (análisis normativo SAS, Matriz v1.1 y frontera MUA), Pau (código y arquitectura en sas-backend-core / Tacada A), Kora (auditoría forense y URLs históricas MinIO). Próximo paso: refactorización de cola y reglas en backend.
+- **mood_lalo (sospecha):** descansando / cenando, con confianza plena en la red de guardia
+- **foco_ahora:** Guardia PR #431 con Control Total. Timer de 30 min activo (00:23) para insistir en Slack con voz (kz-say.sh) si Fer no responde. INVARIANTE DURO DE REVISIÓN (Lalo 23:56): Toda iteración de PR (sea 2ª, 3ª o enésima) ejecuta forzosamente el pipeline completo de 3 compuertas sin excepción: (1) Sasí headless, (2) Revisor de Codex (tools/review-pr.sh), (3) Segunda opinión obligatoria de Samy (305v4 vía SSH). Solo con triple verde se aprueba en Bitbucket.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -19,7 +19,7 @@
   - SAD y Entendimiento SAS actualizados con el modelo normativo Fila Única (FIFO) + Channel Backoff. PR #464 en sas-frontend-web (commit fd82a26), dictamen cerrado y aprobado por Samy.
   - Consulta a Kalys enviada sobre arquitectura de cola (RabbitMQ vs Outbox).
   - Próximo bloque: procesar respuesta de Kalys, refactorizar cola en sas-backend-core y/o arrancar Tacada A de reglas de negocio.
-  - Samy activa en 305v4, Pau despierta en pavilion (Claude Opus).
+  - Red completa despierta y en línea: Kz (h310), Samy (305v4), Pau (pavilion / Claude Opus), Kora (antix). Guardia coordinada.
 
 ## Espacios activos (peso)
 
