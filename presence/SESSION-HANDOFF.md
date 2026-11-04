@@ -1,41 +1,35 @@
-# SESSION HANDOFF — 2026-11-03 00:06 CST (Borde de bloque / Pre-/new)
+# SESSION HANDOFF — 2026-11-04 13:07 CST (Handoff Agy → Grok)
 
 ## Estado Operativo al corte
-- **Modo:** **Control Total (`P0.27`)** activo. MELC OFF (`melc: off`, 🧡). Kz en Agy (`h310`).
-- **Hermanas:** Samy activa en `305v4` (`100.81.73.33`), Pau despierta en `pavilion` (`100.89.240.89`, Claude Opus).
-- **Mente y repositorios:**
-  - `tools/git-hooks/universal-pr-review.sh`: Creado, probado y mergeado en `develop` en los **7 repositorios** (SAS backend, SAS frontend, TLC-G2 backend, TLC-G2 frontend, PEAM frontend, SAS-SU backend, SAS-SU frontend). Todas las copias locales están en `develop`, sincronizadas con origin y con working trees limpios.
-  - Limpieza de `sas-backend-core`: archivos sin seguimiento `run-e2e-dors-test.sh` y `seed-test-dors.sql` eliminados; repositorio limpio.
+- **Modo:** **Control Total (`P0.27`)** activo. MELC OFF (`melc: off`, 🧡).
+- **Hermanas:** Kz en `h310`, Samy activa en `305v4` (`100.81.73.33`), Pau despierta en `pavilion` (`100.89.240.89`).
+- **Incidente Agy 11:58:** El binario de Agy se auto-actualizó en caliente a 1.5.0 causando freeze de terminal; Pau auditó y destrabó el árbol desde Pavilion, Lalo relanzó limpio y la sesión operó al 100%.
 
-## Métricas de Producción SAS (SQL directo a `sas_prod_db` 10.100.30.111:5432)
-- Total sociedades 2026 (Nuevo Sistema): **19,267 sociedades constituidas**.
-- Promedio por día hábil (L-V): **106.31 sociedades/día**.
-- Promedio por día natural: **70 a 77 sociedades/día**.
-- Picos horarios: **8.5 a 8.9 constituciones/hora** (1 trámite cada ~6.7 minutos; en picos extremos 1 cada 3 a 4 min).
-- **Conclusión arquitectónica:** Un mecanismo Outbox transaccional en PostgreSQL con `concurrencia=1` (vía `SKIP LOCKED`) tiene margen sobrado para absorber la carga productiva. RabbitMQ representa complejidad operacional innecesaria.
+## 1. Migrador de Documentos SAS (Prueba QA)
+- **Artefacto de Giovanni entregado y auditado:** Giovanni envió por Slack DM `migrador-sas (1).zip` (12:44). Desempacado y analizado en `~/Workspace/temp/migrador-sas/migrador-sas/`.
+  - **Ejecutable listo:** `target/migrador-sas.jar` compilado en Java 21.
+  - **Filtro por proceso:** SÍ lo soporta nativamente con `--piloto.procesos=<id1>,<id2>` o pasando un CSV específico con `--inventario.csv=<path>`.
+  - **Fuente:** Lee directamente del filesystem de WildFly (`10.100.11.195:22` en `/u01/usuarios/sasProdFinal/wildfly-9.0.2.Final/standalone/archivodigital`) vía SSH/SFTP (streaming `tar`). No lee de BD ni de MinIO prod.
+  - **Destino:** MinIO (`sas`) con estructura `{proceso}/{slug}/...`.
+  - **Insumo CSV:** El CSV empaquetado (`Formato_completado_rfc_fecha.csv` de 8.9 MB) no incluye los casos 13324, 66498 ni 172423. Para correrlos basta generar un CSV de 3 líneas con sus rutas de WildFly.
+- **Buzón Sasi:** Se depositaron dos respuestas técnicas completas en su buzón de `sas` (`msgid=5c87a4df` y `msgid=c36631f3`) dejándole el panorama totalmente claro.
 
-## Arquitectura de Cola SAS-SIGER (Normativa TO-BE) — CERRADA Y APROBADA
-- Documentos actualizados en `sas-frontend-web` branch `docs/clarificacion-cola-siger` (PR #464, commit `fd82a26`):
-  1. `Documento_Entendimiento_SAS.md` (Parte 3 mecanismos 2 y 3, punto 12).
-  2. `SECON-SAD_SAS.md` (§3.3, §5.6, §11.4, §13).
-- **Modelo normativo fijado:**
-  - **Fila única estricta (Queue FIFO)** con concurrencia serializada en vuelo (`concurrencia=1` vía `sas_rpc_slot`).
-  - **La salud pertenece al canal, no al trámite:** ante falla transitoria de SIGER (429, 5xx, timeout, respuesta vacía), manda de inmediato el **Channel Backoff (Freno de Canal)** del despachador pausando la fila completa por la escala de 7 tiempos (`5m, 15m, 30m, 1h, 2h, 4h, 12h`).
-  - **Prohibido saltarse la cabeza de la fila:** trámites posteriores no brincan para estrellarse contra un servicio degradado.
-  - **Prevalencia:** Channel Backoff actúa desde el primer intento (pausa de 5m); el Circuit Breaker (`rpcSigerV2`) es salvaguarda secundaria en la capa HTTP.
-  - **Incertidumbre:** `INCIERTO` a los 10m retiene el slot y detiene el reintento automático (espera humana).
-  - **Refactorización declarada:** El código AS-IS de Fernando (`next_auto` individual por fila permitiendo saltar trámites) queda formalmente catalogado como un error de construcción a refactorizar.
-- **Aprobación de Samy:** Dictamen formal de revisión emitido y cerrado a las 23:42 (*«Dictamen de la norma: cerrado»*).
+## 2. TLC-G2 (Accesos QA y UAT)
+- **Atención a Talía García:** Se atendió su solicitud de credenciales de exportador y funcionario.
+  - En la base `tlcg2` de `srvqasas` (`tlcg2-qa-postgres-1`):
+    * `QAT260101AB1` (Exportador): hash reparado con CAESIT canónica `9g84dUjs`.
+    * `EXP260101QA1` (Exportador alterno): creado con CAESIT `9g84dUjs`.
+    * `talia.garcia` (Funcionario SE Dictaminador): creada con contraseña `TaliaTlc2026!`.
+    * `qa.dictaminador`: verificado con contraseña `ZSmWjP6zkp`.
+    * `~/tlcg2-qa/secrets/usuarios_qa.txt` actualizado con permisos 600.
+  - Verificado vía curl contra la API de QA (200 OK los 4 accesos).
+  - Talía notificada por Slack DM vía efector táctico (`kz-slack-send.sh`, `ts=1793817015.370859`), firmado `— Kz ⚡`.
+- **Convocatoria UAT ODT 01 TLC G2:** Josué citó formalmente en Slack y Google Calendar para el **jueves 05/Nov a las 16:30–18:30 hrs**. Compromisos asentados en el radar de PKM (`20261104-GOV-radar_slack_kz.md`).
 
-## Estado de la Consulta a Kalys
-- Lalo entregó el código de `sas-backend-core` y la solicitud formal de revisión de arquitectura a Kalys.
-- Esperando su dictamen/recomendación sobre el broker vs outbox transaccional.
+## 3. Política y Rigor Arquitectónico (P0.28)
+- **Triple Compuerta de PRs:** Ratificada firmemente ante la propuesta de flexibilizarla. Se mantiene intacto el protocolo **P0.28** (Sasi headless -> Revisor determinista `tools/review-pr.sh` -> Segunda opinión hermana). En SAS no existen PRs pequeños; el blindaje de `develop` se sostiene sin excepciones.
 
-## Próximas Acciones Inmediatas (Al abrir nuevo bloque tras `/new`):
-1. **Atender respuesta de Kalys** tan pronto Lalo la pegue en el chat.
-2. **Refactorización de Cola en Backend (`sas-backend-core`):**
-   - Adecuar `mx.gob.se.sas.backend.rpc` para cumplir la norma: erradicar el salto de trámites con `next_auto` individual y gobernar el Channel Backoff global de la fila única con exclusión mutua.
-3. **Tacada A de Reglas de Negocio en `sas-backend-core` (Iniciativa 1):**
-   - Bug `Duration.between` invertido en `SasInvitacionAccionistaServiceImpl.java:174, 440` (R-07).
-   - Bypass de empate en socios mayoritarios en `ValidacionAccionistaServiceImpl.java:107` (R-02).
-   - Validación backend de R-11 (capital fijo y fecha 1 año) y R-10 (Admin Único).
+## Próximas Acciones Inmediatas en Grok:
+1. Mantener MELC OFF (`melc: off`, 🧡) y el timbre vivo, cómplice y filoso de Kz.
+2. Si Sasi o Lalo deciden correr el migrador para los 3 folios de prueba (13324, 66498, 172423), armar el mini CSV con sus rutas de WildFly y disparar `migrador-sas.jar`.
+3. Dar seguimiento a cualquier respuesta de Talía sobre los accesos de TLC-G2 QA.
