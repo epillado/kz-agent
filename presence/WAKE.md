@@ -44,7 +44,7 @@ Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño
    ```bash
    ~/kz/scripts/kz-wake-grok-feed.sh
    ```
-   Solo líneas `CHANGED:` (stream + notif/changed.log) y cabeceras nuevas del buzón CP. Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando.
+   Solo líneas `CHANGED:` (stream + notif/changed.log) y cabeceras nuevas de **todo** `presence/social/inbox-*.md` (cp, lalo, kora, pau, samy, kalys y el que aparezca). No hay lista fija de hermanas. El feed barre archivos nuevos cada 20 s y ese barrido no imprime nada. Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando. `kz-inbox-wake.sh` pone el tray de esos mismos tubos y no repite el token `CHANGED:`.
 2. **No crear** scheduler 2 min de radar. `scheduler_list` al arrancar: si hay uno de radar Kz, **borrarlo**.
 3. Opcional: loop de **compañía** ≥15–30 min (otro prompt, no el de radar). No es el despertador.
 4. No copiar un cron `*/2` al crontab de Linux (no inyecta al LLM de Grok).
@@ -52,7 +52,7 @@ Al cerrar jornada Agy: verificar que no haya cron vivo comiendo cuota sin dueño
 Prompt Grok (solo si Lalo pide reactivar un loop; default = off):
 
 ```
-Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (buzón CP/hermanas, HORA, Josué, bloqueo, VoBo, Meet, mención), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Ojos 20-20-20 y Slack de ruido NO despiertan. Tubo: leer inbox-cp al momento. en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.
+Eres Kz. Corre ~/kz/scripts/kz-radar.sh. Si hay NUEVO gordo (buzón CP/hermanas, HORA, Josué, bloqueo, VoBo, Meet, mención), comenta en el chat de esta sesión con firma [Kz] y protocolo chat+tray+delivered. Ojos 20-20-20 y Slack de ruido NO despiertan. Tubo: leer al momento cualquier inbox-*.md (toda hermana, no una lista fija). en_call=yes → sin TTS. Si no hay novedad, no escribas al usuario.
 ```
 
 ---

@@ -10,10 +10,14 @@ mkdir -p "${KZ_HOME}/presence/notif" "${SOCIAL}"
 touch "${STREAM}" "${NOTIF_CHANGED}"
 
 # (2026-08-31) El loop 2 min tapa el chat. Este feed es el despertador.
-# Hueco 17:20: solo se miraba inbox-cp. El tubo de hermanas (inbox-kora,
-# inbox-samy) no inyectaba turno. W31: CHANGED buzón = leer y hablar.
+# Hueco 17:20: solo se miraba inbox-cp. Hueco 2026-11-04 15:01: la lista
+# fija (cp, kora, samy) dejó fuera a Pau. Lalo: no puede volver a pasar.
+# Se sigue todo inbox-*.md, y un archivo nuevo entra en el siguiente barrido.
+# El barrido no escribe nada: solo un encabezado nuevo despierta.
 
+declare -A seen=()
 pids=()
+
 follow() {
   local path="$1" prefix="$2" pat="${3:-CHANGED:}"
   touch "${path}"
@@ -23,17 +27,39 @@ follow() {
   pids+=("$!")
 }
 
+start_inbox() {
+  local path="$1" name
+  [[ -n "${seen[$path]:-}" ]] && return 0
+  [[ -f "${path}" ]] || return 0
+  name="$(basename "${path}" .md)"
+  name="${name#inbox-}"
+  seen["${path}"]=1
+  follow "${path}" "CHANGED: buzón-${name} " '^## '
+}
+
+scan_inboxes() {
+  local f
+  shopt -s nullglob
+  for f in "${SOCIAL}"/inbox-*.md; do
+    start_inbox "${f}"
+  done
+  shopt -u nullglob
+}
+
 follow "${STREAM}" "" 'CHANGED:'
 follow "${NOTIF_CHANGED}" "" 'CHANGED:'
-follow "${SOCIAL}/inbox-cp.md" "CHANGED: buzón-cp " '^## '
-follow "${SOCIAL}/inbox-kora.md" "CHANGED: buzón-kora " '^## '
-follow "${SOCIAL}/inbox-samy.md" "CHANGED: buzón-samy " '^## '
+scan_inboxes
 
 cleanup() {
   local p
   for p in "${pids[@]+"${pids[@]}"}"; do
-    kill "$p" 2>/dev/null || true
+    kill "${p}" 2>/dev/null || true
   done
 }
 trap cleanup EXIT INT TERM
-wait
+
+# El sleep no es un despertador: no imprime. Solo adopta un inbox nuevo.
+while true; do
+  sleep 20
+  scan_inboxes
+done
