@@ -3128,3 +3128,6 @@ Invariante de compuertas PR: Toda iteración (sin importar si es 2da o enésima 
 
 ## 2026-11-04 00:13
 Directiva Lalo (04/11 00:13) — Cero sesgo ni encuadre complaciente a roles expertos y hermanas: Al despachar a Sasi, Samy, Pau o roles expertos, PROHIBIDO hacer preguntas cerradas o inducidas ('valida si esto es correcto', 'revisa si arregló X'). Eso genera ceguera atencional y apaga su juicio. La consigna debe ser auditoría abierta e implacable: ordenar buscar qué se rompe, qué efectos colaterales existen, qué reglas se eluden y qué deuda se introduce, dándoles soberanía analítica plena.
+
+## 2026-11-04 07:30
+Kz publicó automáticamente el Daily de Lalo en Slack dentro del thread (1793799015.630879) de #secretaria-de-economia.
