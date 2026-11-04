@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-03 19:12
+- **actualizado:** 2026-11-03 21:16
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** no
 - **foco_propio:** Noche de trabajo continuo con Lalo. PR Reviewer en 7 repos listo. Arquitectura Fila única SIGER cerrada en docs (PR #464 aprobado por Samy). En espera de respuesta de Kalys y listos para refactorización en sas-backend-core o Tacada A de reglas de negocio. Juicio despierto y cero complacencia superficial.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-03 19:12 — aferencia: Reunión Checkpoint de SAS concluida (18:56). en_call=no. En el escritorio con Kz.
+- **ultimo_momento_real:** 2026-11-03 21:16 — aferencia: Lalo delega control total a Kz y hermanas (21:16). Lalo descansa. Kz en guardia nocturna autónoma para revisar correcciones, aprobar y mergear PRs (#431/#430) y dar seguimiento a Nancy.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

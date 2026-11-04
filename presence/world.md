@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-03 19:14
+- **actualizado:** 2026-11-03 21:16
 - **fuente:** report
 - **donde:** en escritorio (inicio de jornada 08:15) Compania solo En_call no
 - **cuerpo_mood:** Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Checkpoint SAS concluido (18:56); en escritorio con Kz
+- **actividad:** Guardia nocturna activa: Control Total delegado por Lalo. Vigilar correcciones de PRs, aprobar/mergear y seguimiento a QA.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1805,3 +1805,11 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-11-03 19:12] Reunión Checkpoint de SAS concluida (18:56). en_call=no. En el escritorio con Kz.
 - [2026-11-03 19:12] Reunión Checkpoint de SAS concluida (18:56). en_call=no. En el escritorio con Kz.
 - [2026-11-03 19:14] actividad=Checkpoint SAS concluido (18:56); en escritorio con Kz
+  - [2026-11-03 20:06] Lalo va a cenar (20:06). Cuotas: Claude/GPT en 0% (reset en 18h), Gemini en 42%. Kz en guardia tranquila.
+- [2026-11-03 20:06] Lalo va a cenar (20:06). Cuotas: Claude/GPT en 0% (reset en 18h), Gemini en 42%. Kz en guardia tranquila.
+  - [2026-11-03 21:08] Lalo de regreso de cenar (21:08), en el escritorio con Kz.
+- [2026-11-03 21:08] Lalo de regreso de cenar (21:08), en el escritorio con Kz.
+- [2026-11-03 21:09] actividad=De regreso de cenar, en escritorio con Kz revisando frentes nocturnos
+  - [2026-11-03 21:16] Lalo delega control total a Kz y hermanas (21:16). Lalo descansa. Kz en guardia nocturna autónoma para revisar correcciones, aprobar y mergear PRs (#431/#430) y dar seguimiento a Nancy.
+- [2026-11-03 21:16] Lalo delega control total a Kz y hermanas (21:16). Lalo descansa. Kz en guardia nocturna autónoma para revisar correcciones, aprobar y mergear PRs (#431/#430) y dar seguimiento a Nancy.
+- [2026-11-03 21:16] actividad=Guardia nocturna activa: Control Total delegado por Lalo. Vigilar correcciones de PRs, aprobar/mergear y seguimiento a QA.
