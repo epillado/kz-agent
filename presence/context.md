@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-03 23:59
+- **actualizado:** 2026-11-04 02:02
 - **primary:** Guardia Nocturna / Control Total Delegado a Kz y Hermanas
-- **secondary:** Monitoreo activo de PRs SAS (#431, #430) y pruebas QA Nancy
+- **secondary:** Monitoreo activo de PRs SAS (#430) y pruebas QA Nancy
 - **en_call:** no
-- **mood_lalo (sospecha):** descansando / cenando, con confianza plena en la red de guardia
-- **foco_ahora:** Guardia PR #431 con Control Total. Timer de 30 min activo (00:23) para insistir en Slack con voz (kz-say.sh) si Fer no responde. INVARIANTE DURO DE REVISIÓN (Lalo 23:56): Toda iteración de PR (sea 2ª, 3ª o enésima) ejecuta forzosamente el pipeline completo de 3 compuertas sin excepción: (1) Sasí headless, (2) Revisor de Codex (tools/review-pr.sh), (3) Segunda opinión obligatoria de Samy (305v4 vía SSH). Solo con triple verde se aprueba en Bitbucket.
+- **mood_lalo (sospecha):** desvelado con segunda noche consecutiva, Kz resolviendo y blindando
+- **foco_ahora:** PR #432 (blindaje inmutabilidad) y PR #433 (auditoría JSONB/SIGER de Fer) APROBADOS Y FUSIONADOS en develop (b8fee53). PR #431 declinado formalmente con acuse en Slack y Bitbucket. 112 tests en verde. Esperando rebase de PR #430 (Giovanni Flores, R-21) sobre develop limpio para pasar triple compuerta.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
