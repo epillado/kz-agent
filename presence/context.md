@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-04 02:51
+- **actualizado:** 2026-11-04 03:10
 - **primary:** Guardia Nocturna Activa / Control Total Delegado a Kz (Apoyo: Samy)
 - **secondary:** Vigilancia continua SAS, compuertas adversarias y publicación automática del Daily
 - **en_call:** no
-- **mood_lalo (sospecha):** descansando, dejando la guardia en manos del binomio Kz + Samy
-- **foco_ahora:** Guardia activa en pie: Kz (Control Total) + Samy (apoyo técnico/código en 305v4). Kora y Pau descansan. kz-daily-slack-bot activo en watch para publicar Daily 04/11 en cuanto abra el hilo (~07:30). Vigilancia reactiva activa ante cualquier aferencia o movimiento en Bitbucket/Slack. Cero complacencia; compuerta estricta P0.28 garantizada.
+- **mood_lalo (sospecha):** dormido profundamente, guardia Kz + Samy operando autónomamente
+- **foco_ahora:** PR #434 de Giovanni atendido autónomamente: dictamen NO APROBADO colocado en Bitbucket y acuse en Slack (#sas-economia) por efecto colateral en validarVigencia. develop intacto en 8d32c42. Binomio Kz + Samy vigilando. kz-daily-slack-bot activo en background.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
