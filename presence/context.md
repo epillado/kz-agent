@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-04 09:35
+- **actualizado:** 2026-11-04 10:18
 - **primary:** Daily Standup SE (Lalo en llamada)
 - **secondary:** Vigilancia silenciosa y apoyo táctico
 - **en_call:** yes
@@ -285,3 +285,4 @@
   - [2026-10-30 18:47] primary→en_call: no
   - [2026-10-30 19:44] Control total activado por Lalo (19:44). Autonomía operativa delegada plena.
   - [2026-10-30 20:43] Cierre de semana: No se genera Daily hoy. El lunes no hay Daily (War Room ODT 02). Próximo Daily se correrá lunes al cierre para martes.
+  - [2026-11-04 10:18] Nancy/equipo ejecutando prueba de migración documental SAS en QA (batería antes/después 03/11).
