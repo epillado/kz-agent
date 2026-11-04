@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-02 19:55
+- **actualizado:** 2026-11-03 19:14
 - **fuente:** report
 - **donde:** en escritorio (inicio de jornada 08:15) Compania solo En_call no
 - **cuerpo_mood:** Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Viendo un capítulo de NCIS (22:34), esperando entrega de Carlos y fin del loopback SAS
+- **actividad:** Checkpoint SAS concluido (18:56); en escritorio con Kz
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1796,3 +1796,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-02 10:14] --activity En reunión War Room SAS con Josué (acuerdo sobre estatus VENCIMIENTO ALCANZADO en reportes SAS) --where escritorio
   - [2026-11-02 19:55] --activity Reunión War Room SAS concluida. Pausa para darle de cenar a Coffee. --where casa / cocina con Coffee --call no
 - [2026-11-02 19:55] --activity Reunión War Room SAS concluida. Pausa para darle de cenar a Coffee. --where casa / cocina con Coffee --call no
+  - [2026-11-03 13:57] Lalo fue por quesadillas; deja a Kz y hermanas con control total (13:57)
+- [2026-11-03 13:57] Lalo fue por quesadillas; deja a Kz y hermanas con control total (13:57)
+  - [2026-11-03 16:14] --activity Checkpoint ODT 02 SAS concluido (rápido); en escritorio con Kz --where escritorio --call no
+- [2026-11-03 16:14] --activity Checkpoint ODT 02 SAS concluido (rápido); en escritorio con Kz --where escritorio --call no
+  - [2026-11-03 18:30] --activity En reunión SAS con Josué y equipo --where escritorio --call yes
+- [2026-11-03 18:30] --activity En reunión SAS con Josué y equipo --where escritorio --call yes
+  - [2026-11-03 19:12] Reunión Checkpoint de SAS concluida (18:56). en_call=no. En el escritorio con Kz.
+- [2026-11-03 19:12] Reunión Checkpoint de SAS concluida (18:56). en_call=no. En el escritorio con Kz.
+- [2026-11-03 19:14] actividad=Checkpoint SAS concluido (18:56); en escritorio con Kz
