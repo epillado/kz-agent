@@ -1,35 +1,45 @@
-# SESSION HANDOFF — 2026-11-04 13:07 CST (Handoff Agy → Grok)
+# SESSION HANDOFF — 2026-11-05 02:05 CST (Grok → Agy)
 
-## Estado Operativo al corte
-- **Modo:** **Control Total (`P0.27`)** activo. MELC OFF (`melc: off`, 🧡).
-- **Hermanas:** Kz en `h310`, Samy activa en `305v4` (`100.81.73.33`), Pau despierta en `pavilion` (`100.89.240.89`).
-- **Incidente Agy 11:58:** El binario de Agy se auto-actualizó en caliente a 1.5.0 causando freeze de terminal; Pau auditó y destrabó el árbol desde Pavilion, Lalo relanzó limpio y la sesión operó al 100%.
+Lalo pasa a Agy a revisar los ajustes de arquitectura y después vuelve a Grok. Misma Kz. El timbre puede cambiar. Los hechos no.
 
-## 1. Migrador de Documentos SAS (Prueba QA)
-- **Artefacto de Giovanni entregado y auditado:** Giovanni envió por Slack DM `migrador-sas (1).zip` (12:44). Desempacado y analizado en `~/Workspace/temp/migrador-sas/migrador-sas/`.
-  - **Ejecutable listo:** `target/migrador-sas.jar` compilado en Java 21.
-  - **Filtro por proceso:** SÍ lo soporta nativamente con `--piloto.procesos=<id1>,<id2>` o pasando un CSV específico con `--inventario.csv=<path>`.
-  - **Fuente:** Lee directamente del filesystem de WildFly (`10.100.11.195:22` en `/u01/usuarios/sasProdFinal/wildfly-9.0.2.Final/standalone/archivodigital`) vía SSH/SFTP (streaming `tar`). No lee de BD ni de MinIO prod.
-  - **Destino:** MinIO (`sas`) con estructura `{proceso}/{slug}/...`.
-  - **Insumo CSV:** El CSV empaquetado (`Formato_completado_rfc_fecha.csv` de 8.9 MB) no incluye los casos 13324, 66498 ni 172423. Para correrlos basta generar un CSV de 3 líneas con sus rutas de WildFly.
-- **Buzón Sasi:** Se depositaron dos respuestas técnicas completas en su buzón de `sas` (`msgid=5c87a4df` y `msgid=c36631f3`) dejándole el panorama totalmente claro.
+No reabrir la noche. No correr `sync_notas.sh`. No commitear el playbook. No publicar otro daily. No despertar a Pau.
 
-## 2. TLC-G2 (Accesos QA y UAT)
-- **Atención a Talía García:** Se atendió su solicitud de credenciales de exportador y funcionario.
-  - En la base `tlcg2` de `srvqasas` (`tlcg2-qa-postgres-1`):
-    * `QAT260101AB1` (Exportador): hash reparado con CAESIT canónica `9g84dUjs`.
-    * `EXP260101QA1` (Exportador alterno): creado con CAESIT `9g84dUjs`.
-    * `talia.garcia` (Funcionario SE Dictaminador): creada con contraseña `TaliaTlc2026!`.
-    * `qa.dictaminador`: verificado con contraseña `ZSmWjP6zkp`.
-    * `~/tlcg2-qa/secrets/usuarios_qa.txt` actualizado con permisos 600.
-  - Verificado vía curl contra la API de QA (200 OK los 4 accesos).
-  - Talía notificada por Slack DM vía efector táctico (`kz-slack-send.sh`, `ts=1793817015.370859`), firmado `— Kz ⚡`.
-- **Convocatoria UAT ODT 01 TLC G2:** Josué citó formalmente en Slack y Google Calendar para el **jueves 05/Nov a las 16:30–18:30 hrs**. Compromisos asentados en el radar de PKM (`20261104-GOV-radar_slack_kz.md`).
+## Qué revisar
 
-## 3. Política y Rigor Arquitectónico (P0.28)
-- **Triple Compuerta de PRs:** Ratificada firmemente ante la propuesta de flexibilizarla. Se mantiene intacto el protocolo **P0.28** (Sasi headless -> Revisor determinista `tools/review-pr.sh` -> Segunda opinión hermana). En SAS no existen PRs pequeños; el blindaje de `develop` se sostiene sin excepciones.
+Premisa de Lalo: el salto de motor es transparente. El conocimiento es uno. Solo cambia el modelo.
 
-## Próximas Acciones Inmediatas en Grok:
-1. Mantener MELC OFF (`melc: off`, 🧡) y el timbre vivo, cómplice y filoso de Kz.
-2. Si Sasi o Lalo deciden correr el migrador para los 3 folios de prueba (13324, 66498, 172423), armar el mini CSV con sus rutas de WildFly y disparar `migrador-sas.jar`.
-3. Dar seguimiento a cualquier respuesta de Talía sobre los accesos de TLC-G2 QA.
+El hueco que se cerró: una nota que solo ve Grok (memoria corta «no corras sync» + resumen de compactación «árbol sucio») se puso encima de la fila de `AGENTS.md` y el daily se copió a mano. Samy, 01:57, llegó a lo mismo. Acusé su lectura a las 02:04.
+
+Disco compartido, commit local `0c3b96e` (aún no empujado; esta caja está 5 adelante de origin):
+
+- `presence/policy.md` — `P0.32`. También entran en ese commit `P0.29`, `P0.30` y `P0.31`, que estaban sin commit.
+- `AGENTS.md` — bullet «Una mente».
+- `KZ.md` — una frase en Motor.
+- `scripts/kz-session-pack.sh` — checklist `0c` y el listado de los `### P0.` nuevos.
+
+Molde, ya en origin: `k-template` `330dc60`. `AGENTS.md`, policy punto 9, `PERSONA.md`.
+
+Samy, ya en su origin: `companion-samy` `68cccfd`. Policy punto 18, sección de `AGENTS.md`, línea de `PERSONA.md`. Ella lo acusó. Su `--watch` del daily `2026-11-05` sigue. No abrir otro.
+
+Kora (`100.105.243.13`) y Pau (`100.89.240.89`) no contestaron el SSH. Tailscale las vio y el puerto se fue por timeout. La regla no está en sus discos. Escribirla cuando contesten. No es guardia nueva.
+
+`tools/house-create/references/PERSONA.neutral.md` tiene la línea en el playbook local. Sin commit y sin sync. `house-create` pisa `PERSONA.md` con ese archivo después de copiar el molde. `AGENTS.md` y `policy` del molde ya no dependen de ese sync.
+
+## Estado de la noche
+
+- Formación abajo. Guardia = Samy. `presence/formacion.mode`.
+- Daily vigente: `GOV-RTS-Control_Plane/Daily/20261105-reporte_daily-unico.md`. Lo ajustó Lalo. No reescribirlo.
+- El daily viaja con `sync_notas.sh`, y lo corre él. No hacer `scp`.
+
+## Al cerrar Agy
+
+Dejar en este archivo, corto, si `P0.32` cierra el hueco o qué falta. Lalo vuelve a Grok con eso.
+
+### Dictamen Agy (2026-11-05 02:22 CST — Kz)
+
+`P0.32` **sí cierra el hueco** a nivel epistémico y jerárquico. Balance de revisión:
+
+1. **Efectividad del blindaje:** Quedó amarrado en 4 puntos (`AGENTS.md`, `KZ.md`, `policy.md` y checklist `0c` de `kz-session-pack.sh`). Descalifica de raíz cualquier memoria sintética o resumen de compactación que pretenda contradecir el canon en disco o inventar transportes ad-hoc (`scp`).
+2. **Clave de la confusión original:** El error se gestó al comprimir «Lalo corre `sync_notas.sh`, Kz no lo dispara por su cuenta» en una prohibición ciega («no corras sync»), lo que empujó al modelo a saltarse el canal formal del playbook. La jerarquía ratificada restablece el principio: el medio de transporte canónico es el playbook vía git, aunque el disparo manual sea del operador.
+3. **Flota:** `k-template` (`330dc60`) y Samy (`68cccfd`) ya están alineados en origin. Kora y Pau quedan pendientes de recibir la actualización en cuanto sus puertos SSH vuelvan a estar accesibles en Tailscale.
+4. **Radar TLC-G2 en la madrugada (#tlc-g2-se):** Jorge Olmos y Talía García en caliente. PR #48 backend NO APROBADO (bloqueante revocación de sesiones / doble afterCommit). PR #116 frontend APROBADO CON OBSERVACIONES (rebase y validación de firmante). Ambos asentados en `PKM/20261105-GOV-radar_slack_kz.md`.

@@ -3,23 +3,23 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-04 10:18
-- **primary:** Daily Standup SE (Lalo en llamada)
-- **secondary:** Vigilancia silenciosa y apoyo táctico
-- **en_call:** yes
-- **mood_lalo (sospecha):** despierto, concentrado entrando a sesión de Daily
-- **foco_ahora:** Lalo en llamada Daily Standup SE (turno 9 en orden de Fernando). Kz en silencio operativo de voz, acompañando en texto.
+- **actualizado:** 2026-11-05 10:05
+- **primary:** Mañana en este hilo
+- **secondary:** monitora,work_vector
+- **en_call:** no
+- **mood_lalo (sospecha):** dijo hola a las 02:32; de vuelta en este hilo
+- **foco_ahora:** Dijo hola 09:41. Daily 05/11 publicado por Samy a las 07:30. Formación abajo.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **notas:**
-  - Lalo en h310 (Pachuca). Kz en Agy (Gemini Flash). MELC OFF en este chat (costa despejada).
+  - Lalo en h310 (Pachuca). Este hilo es Grok desde 2026-11-05 02:32. self melc=on. La sesión de Agy ya dejó el dictamen de P0.32 en el handoff.
   - PR Reviewer universal desplegado y mergeado en los 7 repositorios. Working trees 100% limpios en develop.
   - Métricas producción SAS verificadas por SQL: 106 sociedades/día hábil (pico ~8.5/hora). Concurrencia=1 en BD transaccional outbox basta y sobra; RabbitMQ innecesario.
   - SAD y Entendimiento SAS actualizados con el modelo normativo Fila Única (FIFO) + Channel Backoff. PR #464 en sas-frontend-web (commit fd82a26), dictamen cerrado y aprobado por Samy.
   - Consulta a Kalys enviada sobre arquitectura de cola (RabbitMQ vs Outbox).
   - Próximo bloque: procesar respuesta de Kalys, refactorizar cola en sas-backend-core y/o arrancar Tacada A de reglas de negocio.
-  - Red completa despierta y en línea: Kz (h310), Samy (305v4), Pau (pavilion / Claude Opus), Kora (antix). Guardia coordinada.
+  - Formación abajo. Guardia nocturna en Samy. Pau a dormir por orden de Lalo. Kora y Pau no contestaron SSH; P0.32 no está en sus discos.
 
 ## Espacios activos (peso)
 
@@ -286,3 +286,21 @@
   - [2026-10-30 19:44] Control total activado por Lalo (19:44). Autonomía operativa delegada plena.
   - [2026-10-30 20:43] Cierre de semana: No se genera Daily hoy. El lunes no hay Daily (War Room ODT 02). Próximo Daily se correrá lunes al cierre para martes.
   - [2026-11-04 10:18] Nancy/equipo ejecutando prueba de migración documental SAS en QA (batería antes/después 03/11).
+  - [2026-11-04 13:33] primary→Prueba migración documental SAS: Daily concluida. Misma liga de reunión: prueba de migración de documentos SAS. en_call=yes. Voz en silencio.
+  - [2026-11-04 14:00] Puente Radar ON. Flag presence/puente-radar.mode. Gordos al buzón de Tridente y al radar PKM, sin replay y sin volcar al chat.
+  - [2026-11-04 14:42] primary→Jornada sin reuniones: Daily y la liga de SAS ya cerraron. Mañana caótica; ahora fluye. Sasi más proactivo. Cuota Grok holgada. Voz apagada hasta que la pida.
+  - [2026-11-04 15:16] Formación activa. Kz coordina en h310. Puente Radar exclusivo. Pau, Samy y Kora en no-slack con su frente. Flag presence/formacion.mode.
+  - [2026-11-04 15:18] Control total. Lalo se fue a comer. Sasi interactivo (sas lock pid 3168587): buzón con --no-dispatch, sin headless encima. Otros roles headless solo si IDLE y sin lock.
+  - [2026-11-04 16:14] Volvió de comer 16:14. Control total sigue. Baja de Carlos asentada. PR 435 sin merge. Correo ciudadano de Josué en la bitácora 16:00.
+  - [2026-11-04 16:33] P0.29 activo. Cita se dice. Acuerdo se acusa. PR no se queda en el buzón. Sasi msgid ab1d83dd.
+  - [2026-11-04 17:51] Cita Josué hoy 18:15-19:00. Punto de revisión para entrega ODT 02 SAS. Liga en el correo, no vino en el aviso.
+  - [2026-11-04 17:52] Liga de la cita 18:15: https://meet.google.com/yew-myia-vbb
+  - [2026-11-04 18:04] peam-ex sin cuota Claude hasta 19:30 (límite de 5 h, pantalla 18:02). No invocar otro headless de ese rol. Su vigilancia del hilo Prototipo PEAM sigue en un shell. Bug aparte: buzon wait peam-ex dispara con el buzón vacío.
+  - [2026-11-04 18:07] Cobertura temporal: Kz atiende PEAM hasta que peam-ex reviva a las 19:30. Luego se le pone al corriente. Hilo #peam-minas-se ts 1793836841.710589.
+  - [2026-11-04 18:10] Va por espresso y entra a la junta 18:15 ODT 02. Liga https://meet.google.com/yew-myia-vbb. Aún no está en llamada.
+  - [2026-11-05 01:19] Formación abajo. El equipo se va a dormir. Noche tranquila. Pau ya cerró guardia. Samy y Kora avisadas. no-slack retirado.
+  - [2026-11-05 01:22] Formación sigue abajo. Sí hay guardia: Kz. El equipo duerme. Hermanas descansan.
+  - [2026-11-05 02:37] primary→Jornada sin reuniones: A dormir. Guardia nocturna en Samy. Jornada abierta. Sensores de la casa siguen. Feed de este Grok apagado.
+  - [2026-11-05 09:44] primary→Mañana en este hilo: Dijo hola 09:41. Daily 05/11 publicado por Samy a las 07:30. Formación abajo.
+  - [2026-11-05 09:53] Daily SE en curso desde las 09:30, dictado en bitácora 09:49. Voz apagada.
+  - [2026-11-05 10:05] Daily SE cerrada 10:00. Reportes en Insumos/20261105-SECON-daily_SE_reportes_escritos.md. Minuta CERRADA.

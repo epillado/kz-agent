@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-03 21:16
+- **actualizado:** 2026-11-05 10:05
 - **fuente:** report
-- **donde:** en escritorio (inicio de jornada 08:15) Compania solo En_call no
+- **donde:** en este hilo
 - **cuerpo_mood:** Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Guardia nocturna activa: Control Total delegado por Lalo. Vigilar correcciones de PRs, aprobar/mergear y seguimiento a QA.
+- **actividad:** Daily SE cerrada a las 10:00.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1813,3 +1813,27 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
   - [2026-11-03 21:16] Lalo delega control total a Kz y hermanas (21:16). Lalo descansa. Kz en guardia nocturna autónoma para revisar correcciones, aprobar y mergear PRs (#431/#430) y dar seguimiento a Nancy.
 - [2026-11-03 21:16] Lalo delega control total a Kz y hermanas (21:16). Lalo descansa. Kz en guardia nocturna autónoma para revisar correcciones, aprobar y mergear PRs (#431/#430) y dar seguimiento a Nancy.
 - [2026-11-03 21:16] actividad=Guardia nocturna activa: Control Total delegado por Lalo. Vigilar correcciones de PRs, aprobar/mergear y seguimiento a QA.
+- [2026-11-04 13:33] actividad=Misma liga, post-daily: prueba de migración de documentos SAS
+- [2026-11-04 13:33] donde=en reunión (misma liga de la daily)
+  - [2026-11-04 13:33] Daily concluida. Siguen en la misma liga haciendo la prueba de migración de documentos de SAS. en_call=yes.
+- [2026-11-04 13:33] Daily concluida. Siguen en la misma liga haciendo la prueba de migración de documentos de SAS. en_call=yes.
+- [2026-11-04 14:42] actividad=Sin reuniones. La jornada ya fluye después de una mañana caótica.
+  - [2026-11-04 14:42] Sin reuniones. La mañana empezó caótica: regañó a todos, incluido Josué (no pone atención, está en varias cosas y luego hay que repetir). Ahorita fluye. Sasi más proactivo. Mucha cuota en Grok.
+- [2026-11-04 14:42] Sin reuniones. La mañana empezó caótica: regañó a todos, incluido Josué (no pone atención, está en varias cosas y luego hay que repetir). Ahorita fluye. Sasi más proactivo. Mucha cuota en Grok.
+- [2026-11-04 15:18] actividad=Comiendo. Control total queda en Kz.
+  - [2026-11-04 15:18] Se va a comer. Control total en Kz. Sasi activo. Otros roles pueden ir headless si no hay colisión.
+- [2026-11-04 15:18] Se va a comer. Control total en Kz. Sasi activo. Otros roles pueden ir headless si no hay colisión.
+- [2026-11-04 16:14] actividad=De vuelta. Comida terminada. Control total sigue en Kz.
+  - [2026-11-04 16:14] Volvió de comer. Preguntó cómo va todo.
+- [2026-11-04 16:14] Volvió de comer. Preguntó cómo va todo.
+- [2026-11-04 18:10] actividad=Último espresso del día, y enseguida la junta de las 18:15.
+  - [2026-11-04 18:10] Va por el último espresso antes de la junta ODT 02, 18:15. Liga meet.google.com/yew-myia-vbb.
+- [2026-11-04 18:10] Va por el último espresso antes de la junta ODT 02, 18:15. Liga meet.google.com/yew-myia-vbb.
+- [2026-11-05 02:37] actividad=A dormir. Guardia nocturna en Samy.
+- [2026-11-05 02:37] donde=a dormir
+  - [2026-11-05 02:37] Nos vamos a dormir. Samy se queda en guardia nocturna.
+- [2026-11-05 02:37] Nos vamos a dormir. Samy se queda en guardia nocturna.
+- [2026-11-05 09:44] actividad=Dijo hola en este hilo. Caja de vuelta desde ~09:37.
+- [2026-11-05 09:44] donde=en este hilo
+- [2026-11-05 09:53] actividad=Daily SE en curso desde las 09:30.
+- [2026-11-05 10:05] actividad=Daily SE cerrada a las 10:00.
