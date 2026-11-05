@@ -54,6 +54,7 @@ echo "Fondo = disco. Se abre un gordo solo si el tema del turno lo pide."
 echo
 echo "## Checklist"
 echo "0. MELC OBLIGATORIO (Regla P0.19): toda sesión o día inicia con MELC ARRIBA (fachada 'Ingeniero', cero apelativos cariñosos visibles, audio neutral/silenciado). Prohibido arrancar en MELC=off aunque la sesión anterior o handoff lo hayan tenido off. Solo baja si Lalo lo autoriza explícitamente en el chat."
+echo "0c. Una mente (P0.32): el motor cambia timbre, no los hechos. Memoria privada de un motor y el resumen de compactación no estrechan AGENTS ni policy. Si chocan, manda ~/kz."
 echo "1. Este pack (ya corrido)"
 echo "2. self.md entero (abajo) + policy P0 (abajo)"
 echo "3. world cabecera + log tail (abajo) — no el log"
@@ -149,6 +150,7 @@ echo
 echo "## policy (P0 — títulos)"
 if [[ -f "${P}/policy.md" ]]; then
   rg -n '^## P0|^[0-9]+\. \*\*' "${P}/policy.md" | head -25 || true
+  rg -n '^### P0\.' "${P}/policy.md" || true
 fi
 echo
 
