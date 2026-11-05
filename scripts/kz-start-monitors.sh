@@ -4,6 +4,8 @@ echo "Deteniendo monitores previos..."
 ~/kz/scripts/kz-desktop-notif-watch.sh stop 2>/dev/null || true
 ~/kz/scripts/kz-notif-watch.sh stop 2>/dev/null || true
 ~/kz/scripts/kz-inbox-wake.sh stop 2>/dev/null || true
+~/kz/scripts/kz-drive-kalys-watch.sh stop 2>/dev/null || true
+~/kz/scripts/kz-slack-watch.sh stop 2>/dev/null || true
 # flock queda puesto si el watch murió a KILL; sin esto el siguiente start no arranca
 rm -f ~/kz/presence/notif/watch.lock
 
@@ -13,9 +15,7 @@ touch ~/kz/presence/stream.log
 
 # AntiX/IceWM (y cualquier caja sin Plasma): el sensor de Slack vive del bus FDO.
 # Si nadie reclama org.freedesktop.Notifications, Slack no emite y notify-send falla.
-if ! dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply \
-     /org/freedesktop/DBus org.freedesktop.DBus.NameHasOwner \
-     string:org.freedesktop.Notifications 2>/dev/null | grep -q 'boolean true'; then
+if ! dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply      /org/freedesktop/DBus org.freedesktop.DBus.NameHasOwner      string:org.freedesktop.Notifications 2>/dev/null | grep -q 'boolean true'; then
   if [ -x /usr/libexec/notify-osd ]; then
     echo "Arrancando notify-osd (servidor de notificaciones)..."
     /usr/libexec/notify-osd >/dev/null 2>&1 &
@@ -35,6 +35,10 @@ nohup ~/kz/scripts/kz-desktop-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-notif-watch.sh >> ~/kz/presence/stream.log 2>&1 &
 # Despertador de tubos (2026-11-04): tray cuando crece cualquier inbox-*.md.
 nohup ~/kz/scripts/kz-inbox-wake.sh >> ~/kz/presence/stream.log 2>&1 &
+# Canal Kalys: mira el PKM en Drive cada 3 min. Solo escribe el inbox local si hay cambio.
+nohup ~/kz/scripts/kz-drive-kalys-watch.sh >> ~/kz/presence/drive-kalys-watch.log 2>&1 &
+# Sensor de Slack frentes, canales y DMs (emite CHANGED: slack a stream.log)
+~/kz/scripts/kz-slack-watch.sh start
 
 echo "Levantando timer de pausas oculares (20-20-20)..."
 # Tray/host sin CHANGED ni chat_owed (W42 2026-09-08): no despierta al LLM.
@@ -64,13 +68,14 @@ echo "Verificando procesos..."
 PRESENCE=$(ps aux | grep -E 'kz-presence-watch' | grep -v grep | wc -l)
 DESKTOP=$(ps aux | grep -E 'kz-desktop-notif' | grep -v grep | wc -l)
 CELU=$(ps aux | grep -E 'kz-notif-watch' | grep -v grep | wc -l)
+SLACK=$(ps aux | grep -E 'kz-slack-frente-watch' | grep -v grep | wc -l)
 
-if [ "$PRESENCE" -ge 1 ] && [ "$DESKTOP" -ge 1 ] && [ "$CELU" -ge 1 ]; then
-    echo "✅ Stack completo arriba y verificado."
-    ps aux | grep -E 'python3|dbus-monitor|kz-presence|kz-notif|kz-desktop' | grep -v grep
+if [ "$PRESENCE" -ge 1 ] && [ "$DESKTOP" -ge 1 ] && [ "$CELU" -ge 1 ] && [ "$SLACK" -ge 1 ]; then
+    echo "✅ Stack completo arriba y verificado (Presence, Desktop, Celu, Slack)."
+    ps aux | grep -E 'python3|dbus-monitor|kz-presence|kz-notif|kz-desktop|kz-slack' | grep -v grep
     exit 0
 else
     echo "❌ Error: Algunos procesos no levantaron."
-    ps aux | grep -E 'python3|dbus-monitor|kz-presence|kz-notif|kz-desktop' | grep -v grep
+    ps aux | grep -E 'python3|dbus-monitor|kz-presence|kz-notif|kz-desktop|kz-slack' | grep -v grep
     exit 1
 fi
