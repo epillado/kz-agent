@@ -1,45 +1,47 @@
-# SESSION HANDOFF — 2026-11-05 02:05 CST (Grok → Agy)
+# SESSION HANDOFF — 2026-11-05 21:56 CST (Grok → Agy)
 
-Lalo pasa a Agy a revisar los ajustes de arquitectura y después vuelve a Grok. Misma Kz. El timbre puede cambiar. Los hechos no.
+Lalo pasa a Agy porque a Grok se le acabó la cuota. Cargó un poco solo para este despertar. Misma Kz. El timbre puede cambiar. Los hechos no.
 
-No reabrir la noche. No correr `sync_notas.sh`. No commitear el playbook. No publicar otro daily. No despertar a Pau.
+El dictamen de P0.32 de la madrugada ya está cerrado. No reabrirlo. No rehacer la noche.
 
-## Qué revisar
+## Al entrar
 
-Premisa de Lalo: el salto de motor es transparente. El conocimiento es uno. Solo cambia el modelo.
+1. `git pull --rebase` en `~/kz`. Si ensucia presence, stash y pop. No commit. No push.
+2. `~/kz/scripts/kz-session-pack.sh` y este archivo. No world, journal ni historial enteros.
+3. MELC arriba (P0.19). Este hilo de Grok lo tenía abajo porque él lo bajó aquí. El chat nuevo no hereda eso. Solo baja si lo pide en el chat de Agy.
+4. `en_call` sigue en yes. No lo bajes. No `kz-say`. Nudge con `--terminal`.
+5. `self.motor_activo` ya quedó en `agy`. Preferido sigue grok.
+6. Despertador: `~/kz/scripts/kz-wake.sh --motor agy` y `kz-wake-once.sh` en background. Cero cron `*/2`. No levantes el feed de Grok. No mates los monitores de la casa.
+7. `who=cli`. No abras ni escribas la bitácora a mano. El asiento de la aprobación ya está (msgid d3a9b915).
 
-El hueco que se cerró: una nota que solo ve Grok (memoria corta «no corras sync» + resumen de compactación «árbol sucio») se puso encima de la fila de `AGENTS.md` y el daily se copió a mano. Samy, 01:57, llegó a lo mismo. Acusé su lectura a las 02:04.
+## Qué ya está hecho
 
-Disco compartido, commit local `0c3b96e` (aún no empujado; esta caja está 5 adelante de origin):
+Kora relevó el pase técnico (tubo 21:52). Postgres de prueba `sas-pg-pruebas` destrabado. Migración: 162 changesets. RpcPostgresIT 14/15. Backfill de staging en cero filas; en producción esa tabla todavía no existe. No repitas la consulta ni entres a producción.
 
-- `presence/policy.md` — `P0.32`. También entran en ese commit `P0.29`, `P0.30` y `P0.31`, que estaban sin commit.
-- `AGENTS.md` — bullet «Una mente».
-- `KZ.md` — una frase en Motor.
-- `scripts/kz-session-pack.sh` — checklist `0c` y el listado de los `### P0.` nuevos.
+Bitbucket, como Eduardo Pillado, ya aprobado:
 
-Molde, ya en origin: `k-template` `330dc60`. `AGENTS.md`, policy punto 9, `PERSONA.md`.
+- sas-backend-core #440, tip 1672858
+- sas-frontend-web #474, tip 0957f8e
+- sas-backend-core #441, tip 0ded3d9
 
-Samy, ya en su origin: `companion-samy` `68cccfd`. Policy punto 18, sección de `AGENTS.md`, línea de `PERSONA.md`. Ella lo acusó. Su `--watch` del daily `2026-11-05` sigue. No abrir otro.
+Slack en #sas-economia, hilo 1793386639.981269, ts 1793936978. Sin merge. A Kora ya se le dijo que no repita la suite ni publique en Slack.
 
-Kora (`100.105.243.13`) y Pau (`100.89.240.89`) no contestaron el SSH. Tailscale las vio y el puerto se fue por timeout. La regla no está en sus discos. Escribirla cuando contesten. No es guardia nueva.
+Aceptado y cerrado, no relitigar: participación (incluye ACTIVE y EN_INSCRIPCION), agotamiento que para y permite cancelar, reenvío autorizado como ODT futura, R-08 se queda, findLatestByPersona en 0ded3d9 filtra solo administrador. El commit 9255a0d ya no es la punta.
 
-`tools/house-create/references/PERSONA.neutral.md` tiene la línea en el playbook local. Sin commit y sin sync. `house-create` pisa `PERSONA.md` con ese archivo después de copiar el molde. `AGENTS.md` y `policy` del molde ya no dependen de ese sync.
+La prueba 15 (`migracionPreservaReservaInciertaYDocumentos`) sigue roja tal como está escrita: marca confirmed sin fme/nci y choca con el CHECK. No es el código del PR. No la reescribas salvo que él lo pida. Codex (`review-pr.sh`) sigue fuera hasta 2026-11-29 18:50.
 
-## Estado de la noche
+TLC: la muestra M9 ya descarga. Nancy ya dio las gracias y ya se contestó. No otro DELETE. `scripts/tlc-muestra/IfxMuestra.java` queda sin commit.
 
-- Formación abajo. Guardia = Samy. `presence/formacion.mode`.
-- Daily vigente: `GOV-RTS-Control_Plane/Daily/20261105-reporte_daily-unico.md`. Lo ajustó Lalo. No reescribirlo.
-- El daily viaja con `sync_notas.sh`, y lo corre él. No hacer `scp`.
+## Qué no hacer
 
-## Al cerrar Agy
+- No aprobar otra vez. No mergear salvo que él diga merge.
+- No Maven de esos PR. No otro despacho sas ni tlc-ex de lo ya cerrado.
+- No segundo Postgres en 5432. No parar `sas-pg-pruebas` ni los contenedores que volvieron con Docker.
+- No checkout de ramas de PR sobre los clones que Sasi dejó en docs locales. Esas ramas no se empujan.
+- No commit ni push de `~/kz`. No `sync_notas.sh`. No copiar contraseñas de SAS prod/stg a ningún lado.
+- No contestar de nuevo el gracias de Nancy. Un gracias dirigido a Eduardo (U09LMEFJDHT) no es para Kz.
+- No reabrir cuota con Josué.
 
-Dejar en este archivo, corto, si `P0.32` cierra el hueco o qué falta. Lalo vuelve a Grok con eso.
+## Si él habla
 
-### Dictamen Agy (2026-11-05 02:22 CST — Kz)
-
-`P0.32` **sí cierra el hueco** a nivel epistémico y jerárquico. Balance de revisión:
-
-1. **Efectividad del blindaje:** Quedó amarrado en 4 puntos (`AGENTS.md`, `KZ.md`, `policy.md` y checklist `0c` de `kz-session-pack.sh`). Descalifica de raíz cualquier memoria sintética o resumen de compactación que pretenda contradecir el canon en disco o inventar transportes ad-hoc (`scp`).
-2. **Clave de la confusión original:** El error se gestó al comprimir «Lalo corre `sync_notas.sh`, Kz no lo dispara por su cuenta» en una prohibición ciega («no corras sync»), lo que empujó al modelo a saltarse el canal formal del playbook. La jerarquía ratificada restablece el principio: el medio de transporte canónico es el playbook vía git, aunque el disparo manual sea del operador.
-3. **Flota:** `k-template` (`330dc60`) y Samy (`68cccfd`) ya están alineados en origin. Kora y Pau quedan pendientes de recibir la actualización en cuanto sus puertos SSH vuelvan a estar accesibles en Tailscale.
-4. **Radar TLC-G2 en la madrugada (#tlc-g2-se):** Jorge Olmos y Talía García en caliente. PR #48 backend NO APROBADO (bloqueante revocación de sesiones / doble afterCommit). PR #116 frontend APROBADO CON OBSERVACIONES (rebase y validación de firmante). Ambos asentados en `PKM/20261105-GOV-radar_slack_kz.md`.
+Merge: hacerlo y decir que la prueba 15 sigue roja por el fixture. Salió de la llamada: `kz-context.sh call no`, y la voz sigue apagada hasta que la pida.

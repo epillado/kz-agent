@@ -3,23 +3,24 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-05 10:05
-- **primary:** Mañana en este hilo
+- **actualizado:** 2026-11-05 22:15
+- **primary:** work_vector
 - **secondary:** monitora,work_vector
 - **en_call:** no
 - **mood_lalo (sospecha):** dijo hola a las 02:32; de vuelta en este hilo
-- **foco_ahora:** Dijo hola 09:41. Daily 05/11 publicado por Samy a las 07:30. Formación abajo.
+- **foco_ahora:** Relevo Grok→Agy por cuota. #440 #474 #441 aprobados, sin merge. en_call yes. Kora no repite.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **notas:**
-  - Lalo en h310 (Pachuca). Este hilo es Grok desde 2026-11-05 02:32. self melc=on. La sesión de Agy ya dejó el dictamen de P0.32 en el handoff.
-  - PR Reviewer universal desplegado y mergeado en los 7 repositorios. Working trees 100% limpios en develop.
-  - Métricas producción SAS verificadas por SQL: 106 sociedades/día hábil (pico ~8.5/hora). Concurrencia=1 en BD transaccional outbox basta y sobra; RabbitMQ innecesario.
-  - SAD y Entendimiento SAS actualizados con el modelo normativo Fila Única (FIFO) + Channel Backoff. PR #464 en sas-frontend-web (commit fd82a26), dictamen cerrado y aprobado por Samy.
-  - Consulta a Kalys enviada sobre arquitectura de cola (RabbitMQ vs Outbox).
-  - Próximo bloque: procesar respuesta de Kalys, refactorizar cola en sas-backend-core y/o arrancar Tacada A de reglas de negocio.
-  - Formación abajo. Guardia nocturna en Samy. Pau a dormir por orden de Lalo. Kora y Pau no contestaron SSH; P0.32 no está en sus discos.
+  - Lalo en h310. 2026-11-05 ~21:56 pasa de Grok a Agy por cuota. Misma Kz. Hechos en presence/SESSION-HANDOFF.md.
+  - en_call yes. No dijo que salió. Voz apagada. No kz-say hasta que lo pida, y solo con en_call no.
+  - Control total. who=cli. Puente radar ON. Kz es el puente de Slack; las hermanas no publican.
+  - SAS aprobados, sin merge: #440 1672858, #474 0957f8e, #441 0ded3d9. Slack ts 1793936978. Kora (21:52) tiene la prueba. No repetir suite ni ese Slack.
+  - RpcPostgresIT 14/15. La 15 es fixture (confirmed sin fme/nci). Codex fuera hasta 2026-11-29 18:50. No review-pr.sh. Merge solo si él lo dice.
+  - sas-pg-pruebas arriba. No segundo Postgres en 5432. No parar los contenedores que volvieron con Docker.
+  - TLC muestra M9 ya corregida. No repetir el DELETE. IfxMuestra.java sin commit. No commit ni push de ~/kz.
+  - Docs de Sasi en ramas locales, sin push. No hacer checkout de los PR encima de esos clones.
 
 ## Espacios activos (peso)
 
@@ -304,3 +305,25 @@
   - [2026-11-05 09:44] primary→Mañana en este hilo: Dijo hola 09:41. Daily 05/11 publicado por Samy a las 07:30. Formación abajo.
   - [2026-11-05 09:53] Daily SE en curso desde las 09:30, dictado en bitácora 09:49. Voz apagada.
   - [2026-11-05 10:05] Daily SE cerrada 10:00. Reportes en Insumos/20261105-SECON-daily_SE_reportes_escritos.md. Minuta CERRADA.
+  - [2026-11-05 12:32] Puente Radar ON (12:32). Gordos de trabajo al buzón de Tridente y al radar PKM. Sin volcar al chat. Formación abajo.
+  - [2026-11-05 13:28] Reunión SAS cerrada por Lalo. en_call=no. Merge tlc-g2 a STG lo hace él. Después: desplegar QA y avisar a Talía.
+  - [2026-11-05 14:01] Formación activa 14:00. Control total. Puente Radar exclusivo en h310. Pau, Samy y Kora en no-slack. Lalo fue a comer.
+  - [2026-11-05 14:19] Lalo regresó 14:19. Control junto. Formación sigue. El silencio de la comida ya no corre.
+  - [2026-11-05 14:29] P0.33 cortesía pública en policy y AGENTS. Talía agradeció; ya contesté en el hilo UAT.
+  - [2026-11-05 14:31] Sasi en ventana interactiva con el frente SAS (14:30). Kz sin diff. Pau y Samy avisadas.
+  - [2026-11-05 14:41] peam-ex revisa el corte de cuota (msgid 6169f519, pid 658145). Sin commit.
+  - [2026-11-05 14:45] PEAM: segunda tanda se integra sobre 92a3667. peam-ex 4a1b1711 en curso. R3/R4 y tercera tanda no entran.
+  - [2026-11-05 14:49] PEAM prototype en 835d5fe. Segunda tanda publicada. R3/R4 y tercera tanda siguen fuera.
+  - [2026-11-05 16:14] Pruebas SAS ODT 02 hoy 18:30–20:00 (movidas por Josué). UAT TLC sigue a las 16:30.
+  - [2026-11-05 16:30] UAT TLC en curso. en_call=yes. Sasi autónomo en SAS; lo de SAS se le pasa por su buzón. PR #439 no aprobado por application-dev.properties. Pruebas SAS 18:30.
+  - [2026-11-05 17:33] Relevo 17:31: Kz retoma SAS, TLC y PEAM. #439 en develop b623acd. UAT cerrada. Pruebas SAS 18:30. DM de Josué en CLIPBOARD, lo manda él.
+  - [2026-11-05 17:35] Roles oscuros ~hasta 19:30. Formación solo Z. Pau sas-backend, Samy norma, Kora MinIO, Kz puente. Pruebas 18:30. DM Josué sigue en CLIPBOARD.
+  - [2026-11-05 17:37] DM de Josué (cierre ODT 01) ya lo envió Lalo. ts 1793920017.511139. No reenviar.
+  - [2026-11-05 17:39] Control total, cualquier frente. Voces de Kz, Pau, Samy y Kora encendidas hasta silencio. Lalo fue a comer y sí escucha. Roles sin cuota, no despachar.
+  - [2026-11-05 18:03] Lalo regresó y está en la revisión SAS. en_call=yes. Voces armadas, en pausa. Control total sigue. Roles sin cuota.
+  - [2026-11-05 18:04] No está en la revisión. Es a las 18:30. en_call=no. Voces vuelven. A las 18:30 se pausan.
+  - [2026-11-05 18:09] Hilo GM2/GMQ en qualitas-ex 4bc250b3. Sin despacho.
+  - [2026-11-05 18:12] TLC numeración anual automática, sin pantalla. Tres pendientes de código con Talía. tlc-ex 6bbe1560.
+  - [2026-11-05 18:17] P0.34 activo. Cuota del rol primero. Casa cubre y deja relevo. Tridente 6b59ce19 sin despacho.
+  - [2026-11-05 19:34] 19:34 Pau: Lalo entró al Meet Pruebas ODT 02 SAS. Voz en pausa.
+  - [2026-11-05 21:56] primary→work_vector: Relevo Grok→Agy por cuota. #440 #474 #441 aprobados, sin merge. en_call yes. Kora no repite.

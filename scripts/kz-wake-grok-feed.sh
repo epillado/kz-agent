@@ -20,6 +20,11 @@ pids=()
 
 follow() {
   local path="$1" prefix="$2" pat="${3:-CHANGED:}"
+  # stream.log → unified.log. tail -F y tail -f sobre el symlink no ven
+  # los append al destino (sordo a Slack desde el arranque, 2026-11-05).
+  if [[ -L "${path}" ]]; then
+    path="$(readlink -f "${path}")"
+  fi
   touch "${path}"
   stdbuf -oL tail -n 0 -F "${path}" 2>/dev/null \
     | grep --line-buffered -E "${pat}" \

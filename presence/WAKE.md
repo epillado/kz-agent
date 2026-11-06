@@ -34,6 +34,7 @@ Tray + chat_owed no sustituyen el chat. El despertador existe para que Kz escrib
 1. **Monitor persistente único** (monitor, persistent: true) sobre:
    ~/kz/scripts/kz-wake-grok-feed.sh
    Solo líneas CHANGED: (stream.log + notif/changed.log) y cabeceras nuevas de todo presence/social/inbox-*.md. Los eventos de Slack (canales, privados, DMs e hilos) son inyectados directamente por kz-slack-watch.sh al stream.log como CHANGED: slack ...
+   `stream.log` es symlink a `unified.log`. `tail` sobre el enlace no ve los append. El feed resuelve el enlace y sigue el archivo real (2026-11-05: desde el arranque no llegó ni un Slack al monitor).
    Una línea = un wake. Si el runtime lo mata por volumen, reabrir con el mismo comando.
 2. **No crear** schedulers ni loops de bash dentro de la sesión.
 3. **Excepción, el esperador.** `tridente buzon wait tridente` sigue armado en el turno de Grok. El corte del turno no deja cerrar si falta. Sale solo cuando hay correo nuevo. No es un bucle de vigilancia. No lo mates desde el host.

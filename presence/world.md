@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-05 10:05
+- **actualizado:** 2026-11-05 18:04
 - **fuente:** report
 - **donde:** en este hilo
-- **cuerpo_mood:** Cenado rico (omelette con queso Oaxaca), relajado revisando el Daily 30/10
+- **cuerpo_mood:** Regresó de comer.
 - **clima_entorno:** (sin reporte fresco de clima)
-- **actividad:** Daily SE cerrada a las 10:00.
+- **actividad:** Regresó de comer. La revisión de SAS es a las 18:30, todavía no entra. Voces otra vez encendidas. Control total.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1837,3 +1837,26 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-05 09:44] donde=en este hilo
 - [2026-11-05 09:53] actividad=Daily SE en curso desde las 09:30.
 - [2026-11-05 10:05] actividad=Daily SE cerrada a las 10:00.
+- [2026-11-05 12:30] actividad=Sesión de dudas SAS en curso desde las 10:00 (bitácora 10:36, sin fin). Guardia Kz. Formación abajo.
+- [2026-11-05 13:28] actividad=Salió de la reunión de dudas SAS. Va a mergear tlc-g2 a staging; luego pide despliegue QA y aviso a Talía.
+  - [2026-11-05 13:28] Ya salimos de la reunión. Haré el merge a staging de tlc-g2 y te aviso para desplegar en QA y avisarle a Talía.
+- [2026-11-05 13:28] Ya salimos de la reunión. Haré el merge a staging de tlc-g2 y te aviso para desplegar en QA y avisarle a Talía.
+  - [2026-11-05 14:01] Voy por algo de comer, porque no he desayunado.
+- [2026-11-05 14:01] Voy por algo de comer, porque no he desayunado.
+- [2026-11-05 14:01] actividad=Fue a comer. No ha desayunado. Formación activa y control total. Guardia Kz.
+- [2026-11-05 14:01] cuerpo_mood=Sin desayunar; fue a comer.
+  - [2026-11-05 14:19] Ya regresé. Tomo control junto contigo.
+- [2026-11-05 14:19] Ya regresé. Tomo control junto contigo.
+- [2026-11-05 14:19] actividad=Regresó de comer. Control junto con Kz. Formación activa.
+- [2026-11-05 14:19] cuerpo_mood=Regresó de comer.
+- [2026-11-05 16:30] actividad=En la UAT de TLC-G2 (Teams, 16:30–18:30). Sasi autónomo en SAS.
+- [2026-11-05 17:33] actividad=UAT TLC cerrada 17:27. Kz retoma los frentes por cuota. Pruebas SAS 18:30.
+- [2026-11-05 17:39] actividad=Fue a comer. Control total, cualquier frente. Voces de las cuatro encendidas. Si le hablan, escucha.
+  - [2026-11-05 17:39] Toma control total, incluyendo cualquier frente, y activa las voces de todas. Voy a agarrar algo de comer, pero si me hablan, las escucho.
+- [2026-11-05 17:39] Toma control total, incluyendo cualquier frente, y activa las voces de todas. Voy a agarrar algo de comer, pero si me hablan, las escucho.
+  - [2026-11-05 18:03] Regresé. Entro ahora a la sesión de revisión de SAS.
+- [2026-11-05 18:03] Regresé. Entro ahora a la sesión de revisión de SAS.
+- [2026-11-05 18:03] actividad=En la sesión de revisión de SAS (ODT 02, 18:30). Control total sigue. Voces en pausa por la llamada.
+- [2026-11-05 18:04] actividad=Regresó de comer. La revisión de SAS es a las 18:30, todavía no entra. Voces otra vez encendidas. Control total.
+  - [2026-11-05 18:04] Me confundí, la sesión se movió a las 18:30.
+- [2026-11-05 18:04] Me confundí, la sesión se movió a las 18:30.

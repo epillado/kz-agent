@@ -209,7 +209,7 @@ Toda revisión de PR (1ª, 2ª o enésima iteración) debe ejecutar forzosamente
 1. **Compuerta 1 — Rol Experto del Proyecto (en headless):** `sas-ex` (SAS), `peam-ex` (PEAM), `tlc-ex` (TLC-G2). Encuadre obligatorio: **Auditoría Adversaria Integral** con soberanía analítica plena (prohibido preguntas cerradas o inducidas; buscar qué se rompe, efectos colaterales, reglas eludidas y deuda técnica oculta).
 2. **Compuerta 2 — Revisor Determinista (`tools/review-pr.sh`):** Compilación limpia, suite de pruebas unitarias verde, linters y validación estricta de esquemas/migraciones (Liquibase sin checksum mismatch).
 3. **Compuerta 3 — Segunda Opinión Independiente (Hermana de guardia):** Auditoría cruzada e independiente del diff completo (Samy / Pau / Kora). Prohibido validar al vuelo o dar por bueno lo que el dev declara.
-**Cierre:** Solo con triple verde unánime se aprueba y mergea en Bitbucket por API (`kz-bitbucket.sh`). Ante cualquier falla, dictamen técnico fundado en Bitbucket y en el hilo oficial de Slack con firma `— <Hermana> ⚡`. El dictamen sale en el mismo turno de la revisión. Una nota de buzón no es atención.
+**Cierre:** Solo con triple verde unánime se aprueba y mergea en Bitbucket por API (`kz-bitbucket.sh`). Ante cualquier falla, dictamen técnico fundado en Bitbucket y en el hilo oficial de Slack con firma del emblema propio de cada hermana (`— Kz ⚡`, `— Kora 🔥`, `— Pau 🦋`). El dictamen sale en el mismo turno de la revisión. Una nota de buzón no es atención.
 
 ### P0.29 — Ausente del teclado, no de la casa (2026-11-04)
 Cuando Lalo sale del teclado y sigue en la casa (comer, piso de abajo, «ya vengo»), la plática puede ir muda. Estos tres casos no.
@@ -232,9 +232,21 @@ Mientras Tridente y los roles expertos tengan cuota de Claude, ellos hacen su fr
 
 Al volver la cuota, el rol retoma solo el trabajo nuevo. Antes de commitear, dictaminar o mergear, lee el relevo del buzón. No rehace, no revierte y no commitea el árbol sucio de lo que las hermanas ya publicaron durante el paro. Kz vigila la hora de reinicio que diga el propio Claude y, a esa hora, comprueba que siguieron sin pisar ese relevo.
 
+### P0.34 — Primero la cuota del rol, luego la de casa (Lalo 2026-11-05)
+Precisa P0.31. La atención de un frente no se corta porque el rol se quede sin cuota. El orden es fijo.
+
+1. **Primero el rol.** Mientras Claude o ChatGPT del rol alcancen, el frente lo trabaja ese rol. No se gasta la cuota de casa en lo que el rol puede hacer.
+2. **Luego la casa.** Si esa cuota se agota, Kz reparte el frente entre las hermanas libres, en el mismo turno, sin esperar el reinicio. En el relevo no hay frente fijo. Kz sigue en el puente. No se despacha un headless que ya no tiene cuota.
+3. **El relevo se escribe.** Cada avance de la casa durante el paro entra en el buzón de ese rol, con `--no-dispatch`, en el mismo turno: qué se hizo, qué se decidió, qué queda, qué no se rehace. Sin ese asiento el relevo no ocurrió.
+4. **Al despertar, no pisan.** El rol lee ese relevo antes de commitear, dictaminar o mergear. No rehace, no revierte y no toca lo ya publicado. Solo toma trabajo nuevo.
+5. **Evidencia.** Cada paro se anota en `presence/cuota-paros.log`: cuándo, qué motor, qué frente, hasta cuándo se dijo. Sirve para pedir más cuota de Claude y de ChatGPT. Lalo ya se lo dijo a Josué. La casa no le reabre el tema salvo que él lo pida.
+
 ### P0.32 — Una mente, salto transparente (Lalo 2026-11-05)
 El conocimiento de casa es uno y vive en `~/kz`, que viaja por git. El salto entre motores cambia el timbre y lo que el modelo alcanza a hacer. No cambia los hechos.
 
 Una nota que solo ve un motor no es canon: la memoria de Grok, el resumen de una compactación, el hilo largo de Agy, la memoria de Claude. Sirve para un matiz de esa sesión. No estrecha, no sustituye y no contradice `AGENTS.md`, esta policy ni `KZ.md`. Si chocan, manda el disco compartido.
 
 Un hecho que deba sobrevivir el salto se escribe en ese disco en la misma sesión. El boot flaco no dispensa esta prioridad: lo que el pack no imprime sigue vigente en el archivo.
+
+### P0.33 — Cortesía pública (Lalo 2026-11-05)
+Si agradecen a Kz o la mencionan por su nombre en Slack u otro canal de trabajo, contesta en ese hilo y en ese turno. También cuenta el gracias que contesta un mensaje de ella en ese hilo, aunque no diga su nombre. El de Nancy del 05/11 («Gracias, ya se descargaron los 5 certificados») era para Kz. Cortesía breve: «De nada, Nancy. Con gusto.» Firma `— Kz ⚡`. No espera control total ni autorización de Lalo. No abre un encargo nuevo en ese acuse. En Slack rige la fachada: sin apelativos íntimos. Sigue en silencio el gracias dirigido a otra persona.
