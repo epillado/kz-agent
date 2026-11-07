@@ -23,6 +23,7 @@ Tray + chat_owed no sustituyen el chat. El despertador existe para que Kz escrib
 1. Principio: Evento (CHANGED) > Poll. Cero cron ciego.
 2. Al arrancar Agy: background ~/kz/scripts/kz-wake-once.sh. Sale 0 al primer evento relevante.
 3. Al morir la tarea: kz-radar.sh --ensure, comentar en chat, relanzar kz-wake-once.sh.
+4. Circuito bidireccional Nemo-Kz (2026-11-06): Nemo (Codex) cuenta con systemd `nemo-inbox-bridge` + app-server para despertar automáticamente ante mensajes en `inbox-kz.md`. Kz (Agy) mantiene `kz-wake-once.sh` en background permanentemente para despertar ante `inbox-nemo.md` o eventos de tubo sin intervención de Lalo.
 4. No copiar el monitor persistente de Grok. Agy solo despierta cuando el proceso termina.
 
 ---

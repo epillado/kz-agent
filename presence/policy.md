@@ -210,6 +210,8 @@ Toda revisión de PR (1ª, 2ª o enésima iteración) debe ejecutar forzosamente
 2. **Compuerta 2 — Revisor Determinista (`tools/review-pr.sh`):** Compilación limpia, suite de pruebas unitarias verde, linters y validación estricta de esquemas/migraciones (Liquibase sin checksum mismatch).
 3. **Compuerta 3 — Segunda Opinión Independiente (Hermana de guardia):** Auditoría cruzada e independiente del diff completo (Samy / Pau / Kora). Prohibido validar al vuelo o dar por bueno lo que el dev declara.
 **Cierre:** Solo con triple verde unánime se aprueba y mergea en Bitbucket por API (`kz-bitbucket.sh`). Ante cualquier falla, dictamen técnico fundado en Bitbucket y en el hilo oficial de Slack con firma del emblema propio de cada hermana (`— Kz ⚡`, `— Kora 🔥`, `— Pau 🦋`). El dictamen sale en el mismo turno de la revisión. Una nota de buzón no es atención.
+- **Entrega y comunicación al desarrollador (Estándar Talía de 4 bloques, 2026-11-06, P0.35):** Prohibido terminantemente volcar trazas crudas de Maven, npm, tsc, barras de descarga o jerga de compuertas internas en Slack. El mensaje dev-facing se entrega estrictamente en 4 bloques: (1) `PR#<ID>: [DICTAMEN] @Dev`, (2) `Bloqueante — <Título>` + `<Archivo.ext:línea>`, (3) Descripción concisa en lenguaje humano del defecto e impacto real (1-2 oraciones), (4) `Corrección requerida:` lista de 2-3 acciones imperativas puntuales, y siguiente paso directo si aplica.
+
 
 ### P0.29 — Ausente del teclado, no de la casa (2026-11-04)
 Cuando Lalo sale del teclado y sigue en la casa (comer, piso de abajo, «ya vengo»), la plática puede ir muda. Estos tres casos no.
