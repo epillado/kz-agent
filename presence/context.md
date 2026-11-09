@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-08 18:34
+- **actualizado:** 2026-11-09 09:52
 - **primary:** company
 - **secondary:** monitora,work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** descansado y muy recuperado de fin de semana; en paz
 - **foco_ahora:** Borde de bloque /new en Agy. Fin de semana redondo de descanso. PR #6 PEAM mergeado a develop (e5274b5). Nemo activo en Codex para relevo técnico.
 - **modo_showcase:** off
@@ -325,3 +325,4 @@
   - [2026-11-05 18:17] P0.34 activo. Cuota del rol primero. Casa cubre y deja relevo. Tridente 6b59ce19 sin despacho.
   - [2026-11-05 19:34] 19:34 Pau: Lalo entró al Meet Pruebas ODT 02 SAS. Voz en pausa.
   - [2026-11-05 21:56] primary→work_vector: Relevo Grok→Agy por cuota. #440 #474 #441 aprobados, sin merge. en_call yes. Kora no repite.
+  - [2026-11-09 09:52] Sesión extendida con Josué (revisión de actividades post-Daily)

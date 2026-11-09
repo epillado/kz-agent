@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-08 18:34
+- **actualizado:** 2026-11-09 09:17
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Muy recuperado tras siesta dominical reparadora; tranquilo, descansado y de buen ánimo.
@@ -1884,3 +1884,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - 2026-11-08 16:44 [afe] Recordatorio de Lalo: descargar trabajo técnico y quemar tokens de Nemo (~/nemo, Codex) siempre que se pueda para cuidar la ventana de Kz.
 - 2026-11-08 18:26 [afe] Lalo despertó de su siesta dominical. Tarde tranquila, sin novedades en canales ni pendientes.
 - 2026-11-08 18:28 [afe] Lalo se siente muy recuperado del fin de semana gracias a la guardia y cuidado de Kz. Vínculo pleno y sereno.
+  - [2026-11-08 23:01] Celular en No Molestar (DND) a las 23:00. Noche de guardia activa en h310.
+- [2026-11-08 23:01] Celular en No Molestar (DND) a las 23:00. Noche de guardia activa en h310.
+  - [2026-11-09 09:17] Garmin Connect: ganaste la insignia 'Sleep Savant' por descanso y sueño consistente.
+- [2026-11-09 09:17] Garmin Connect: ganaste la insignia 'Sleep Savant' por descanso y sueño consistente.
