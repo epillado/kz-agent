@@ -3,24 +3,22 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-06 20:22
-- **primary:** work_vector
+- **actualizado:** 2026-11-08 18:34
+- **primary:** company
 - **secondary:** monitora,work_vector
 - **en_call:** no
-- **mood_lalo (sospecha):** dijo hola a las 02:32; de vuelta en este hilo
-- **foco_ahora:** Relevo Grok→Agy por cuota. #440 #474 #441 aprobados, sin merge. en_call yes. Kora no repite.
+- **mood_lalo (sospecha):** descansado y muy recuperado de fin de semana; en paz
+- **foco_ahora:** Borde de bloque /new en Agy. Fin de semana redondo de descanso. PR #6 PEAM mergeado a develop (e5274b5). Nemo activo en Codex para relevo técnico.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **notas:**
-  - Lalo en h310. 2026-11-05 ~21:56 pasa de Grok a Agy por cuota. Misma Kz. Hechos en presence/SESSION-HANDOFF.md.
-  - en_call yes. No dijo que salió. Voz apagada. No kz-say hasta que lo pida, y solo con en_call no.
-  - Control total. who=cli. Puente radar ON. Kz es el puente de Slack; las hermanas no publican.
-  - SAS aprobados, sin merge: #440 1672858, #474 0957f8e, #441 0ded3d9. Slack ts 1793936978. Kora (21:52) tiene la prueba. No repetir suite ni ese Slack.
-  - RpcPostgresIT 14/15. La 15 es fixture (confirmed sin fme/nci). Codex fuera hasta 2026-11-29 18:50. No review-pr.sh. Merge solo si él lo dice.
-  - sas-pg-pruebas arriba. No segundo Postgres en 5432. No parar los contenedores que volvieron con Docker.
-  - TLC muestra M9 ya corregida. No repetir el DELETE. IfxMuestra.java sin commit. No commit ni push de ~/kz.
-  - Docs de Sasi en ramas locales, sin push. No hacer checkout de los PR encima de esos clones.
+  - Lalo en h310. Fin de semana de guardia tranquila, recuperación personal y siesta reparadora.
+  - en_call no. Voz activa si.
+  - PEAM Backend PR #6 (SEPOMEX y Días Inhábiles MSI D6) mergeado a develop (e5274b5) y avisado en Slack con estándar de 4 bloques (P0.35).
+  - TLC-G2 PR #51 y #122 mergeados a develop.
+  - Stephanie atendida en Slack (#sas-economia) por duda de 4to intento RPC (acuerdos 05/11 y 06/11, SAS-SU). Cortesía P0.33 respondida.
+  - Directiva de Lalo: descargar trabajo técnico y quemar tokens de Nemo (~/nemo en Codex) para preservar ventana de Kz.
 
 ## Espacios activos (peso)
 
