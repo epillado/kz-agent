@@ -23,9 +23,9 @@
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
 | **SAS (ODT 02)** | `sas` / `kz` | **PR #449 MERGEADO A DEVELOP** | Commit merge `13ceb04`; reglas R-16 y R-21 cerradas | 25/25 unit tests PASS; 407 clases compiladas | Gio y Fer despliegan a QA para pruebas integrales |
-| **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
+| **HM (ODT 04)** | `hm` / `kz` | **REPOS CREADOS Y VERIFICADOS** | `hecho-en-mexico-backend` y `hecho-en-mexico-frontend` listos con develop | SSH access ok; 7 Epics listas en Jira; anunciados a Fer y Gio | Montar scaffolding y ramas de historias Jira |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
-| **PEAM (ODT 03)** | `peam-ex` / `kz` | **PR #24 FRONTEND MERGEADO A DEVELOP** | Commit merge `83ce28c`; buscador/paginación bandeja 018 integrado | vitest 245/245 PASS; tsc/eslint ok; independiente de back | Talía informada de orden: PR #7 primero, luego rebase #8 |
+| **PEAM (ODT 03)** | `peam-ex` / `kz` | **PR #7 (BACK) Y PR #26 (FRONT) MERGEADOS** | Commits `c8ef38e` (back) y `9ff86c0` (front) en develop | Contrato homologado; 249 tests front + 169 back PASS | Jorge actualiza PR #8 sobre develop para merge final |
 | **Quálitas** | `qualitas-ex` / `minuta-ex` | **PAUSADO / EN ESPERA** | Minuta Revisión GM en PKM; reunión movida al miércoles 11/11 | En espera de confirmación cliente | Sesión miércoles |
 | **Daily de Equipo** | `daily-ex` | **VALIDADO Y ARMADO** | `Daily/20261110-reporte_daily-unico.md` | `cp-valida-daily.py` (Exit 0) | Publicación Slack 07:30 |
 
