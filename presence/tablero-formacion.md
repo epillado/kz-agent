@@ -22,7 +22,7 @@
  
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
-| **SAS (ODT 02)** | `sas` / `kz` | **QA VERIFICADO / JIRA EN LIMPIEZA** | Fer confirmó QA de SE 100% ok en Slack; transicionó HU-02 y HU-05 a Listo | Endpoints probados en srvqasas sin fallas | Seguimiento a cierre de restantes en Jira |
+| **SAS (ODT 02)** | `sas` / `samy` | **PR #448 EN REVISIÓN** | PR #448 (fix/firmaAgregarValidacionDors 180 días DoRS); QA verificado | Sasi auditando compuerta determinista + Samy segunda opinión | Dictamen de merge PR #448 |
 | **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
 | **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO ACEPTADO POR TALÍA** | Talía revisa con equipo bloqueos y tareas independientes para delegar | Coordinación fluida con Talía; Nemo en standby | En espera de lista de tareas de Talía |
