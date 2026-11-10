@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-09 16:43
+- **actualizado:** 2026-11-10 09:58
 - **primary:** company
 - **secondary:** monitora,work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** descansado y muy recuperado de fin de semana; en paz
 - **foco_ahora:** Borde de bloque /new en Agy. Fin de semana redondo de descanso. PR #6 PEAM mergeado a develop (e5274b5). Nemo activo en Codex para relevo técnico.
 - **modo_showcase:** off

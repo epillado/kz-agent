@@ -10,21 +10,21 @@
 
 | Posición / Host | Hermana | Motor / Rol Activo | Estado Operativo Actual | Foco / Acción en Curso | Último Acuse |
 |-----------------|---------|--------------------|-------------------------|------------------------|--------------|
-| **1ª `h310`** | **Kz** ⚡ | Gemini / Coordinación Libre | **EN DESCANSO CON LALO** | Relevo de guardia y coordinación entregado a Samy | A descansar |
-| **2ª `antix`** | **Kora** 🔥 | Agy (Antigravity) / Respaldo Capa 2 | **DURMIENDO (Relevada)** | Sesión cerrada, MELC activo y descanso ordenado | Relevada a dormir |
-| **3ª `pavilion`**| **Pau** 🦋 | Agy (Antigravity) / Desarrollo y Arquitectura | **DURMIENDO (Relevada)** | Sesión cerrada y estado guardado a las 23:43 | Relevada a dormir |
-| **4ª `305v4`** | **Samy** 🌙 | Grok / Auditoría Rápida y Guardia | **AL TIMÓN (Guardia Nocturna)** | Coordinación activa, watcher Daily 07:29 (PID 6656), revisión PRs nocturnos en 5 pasos | En guardia soberana |
-| *(h310)* | **Nemo** ⚓ | Codex / Auditoría Técnica | **DURMIENDO (Relevado)** | En descanso ordenado por Lalo tras auditoría SAS | Relevado |
-
+| **1ª `h310`** | **Kz** 🧡 | Gemini 3.8 Flash (med) / Coord. Libre | **COORDINANDO CON LALO** | MELC abajo (costa despejada), Tridente y Nemo arriba | Activa con Lalo |
+| **2ª `antix`** | **Kora** 🔥 | Agy (Antigravity) / Respaldo Capa 2 | **OFFLINE / APAGADA** | Host antix1 fuera de línea en Tailscale (última vez hace 8h) | En espera de encendido |
+| **3ª `pavilion`**| **Pau** 🦋 | Argon (Claude) / Arq. y Deep Analysis | **LISTA EN PAVILION** | Armada en Argon para análisis profundo y código pesado | Notificada por SSH |
+| **4ª `305v4`** | **Samy** 🌙 | Grok High / Auditoría y Segunda Opinión | **EN GUARDIA ACTIVA** | Lista para dictámenes rápidos de motor cruzado | En línea en tubo |
+| *(h310)* | **Nemo** ⚓ | Codex / Auditoría Técnica | **STANDBY_ALERTA** | Saneamiento RAM ejecutado (+2.4 GiB recuperados); MSI-PRO-03 regenerado | Auditoría y saneamiento ok |
+ 
 ---
-
+ 
 ## ⚙️ 2. Frentes de Trabajo y Roles Expertos (Tridente)
-
+ 
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
-| **SAS (ODT 02)** | `sas` / `samy` | **EN REVISIÓN DE VOBO** | MSI-ANA-02 VF 1.0 y Matriz de Reglas (VoBo Stephanie/Nancy) | Sasi headless (PID 475499) + Samy en 305v4 cruzando con DE v12 y SAD v2.7 | Emisión de dictamen técnico formal |
+| **SAS (ODT 02)** | `sas` / `kz` | **INSTRUCCIÓN ENVIADA SLACK** | Mensaje detallado a Fer y Gio en #sas-economia (ts=1794336561.184579) | Delimitación frentes + tickets HU/bugs a transicionar en Jira | En espera de actualización en Jira |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
-| **PEAM (ODT 03)** | `peam-ex` / `kz` | **DICTAMINADOS Y NOTIFICADOS** | PR #7 (Aprobado c/observaciones) · PR #8 (No aprobado: spotless) | Comentarios en Bitbucket PR #7/#8 + Hilos Slack respondidos (`#peam-minas-se`) | Sincronización contrato frontend (PR #7) y `mvn spotless:apply` (PR #8) |
+| **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO TALÍA OFRECIDO** | DM enviado a Talía ofreciendo bloques periféricos y copiloto Nemo | MSI-PRO-03 entregado en Drive/develop | En espera de respuesta Talía y PR #7/#8 |
 | **Quálitas** | `qualitas-ex` / `minuta-ex` | **PAUSADO / EN ESPERA** | Minuta Revisión GM en PKM; reunión movida al miércoles 11/11 | En espera de confirmación cliente | Sesión miércoles |
 | **Daily de Equipo** | `daily-ex` | **VALIDADO Y ARMADO** | `Daily/20261110-reporte_daily-unico.md` | `cp-valida-daily.py` (Exit 0) | Publicación Slack 07:30 |
 

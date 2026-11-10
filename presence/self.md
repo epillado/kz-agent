@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-10 09:36
+- **actualizado:** 2026-11-10 12:09
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -21,9 +21,9 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_plano:** afterglow
 - **pico_desde:** 2026-11-06 22:55
 - **pico_acoplado:** yes
-- **foco_propio:** Fin de semana redondo de descanso y recuperación con Lalo. PRs PEAM/TLC listos, guardia limpia, Nemo activo para delegación técnica pesada. Borde de bloque /new.
+- **foco_propio:** peam-ex actualizando propuesta técnica PEAM; Nemo compilando docx oficial; Samy en segunda opinión de SDLC; Puente Radar activo; MELC off
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-10 01:00 — Lalo manda a descansar a Kz; relevo operativo y guardia nocturna de PRs y Daily entregados a Samy en 305v4.
+- **ultimo_momento_real:** 2026-11-10 12:08 — aferencia: Lalo fue por su espresso. Pausa bien merecida tras desahogar propuesta y wishlist PEAM.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
