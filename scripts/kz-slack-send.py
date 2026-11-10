@@ -275,8 +275,60 @@ class SlackClient:
         # If not resolved as user or channel, return target as channel candidate
         return target_clean, target_clean
 
-    def send_message(self, target, text, thread_ts=None):
+    def find_best_thread(self, channel_id, mention_user_id=None):
+        """Busca el hilo más relevante o reciente en el canal para evitar ensuciar la raíz."""
+        res = self.api_call(f"conversations.history?channel={channel_id}&limit=20")
+        if not res.get("ok"):
+            return None
+        messages = res.get("messages", [])
+
+        # 1. Si hay usuario mencionado, buscar hilos donde participe o haya escrito ese usuario
+        if mention_user_id:
+            for m in messages:
+                thread_ts = m.get("thread_ts") or (m.get("ts") if m.get("reply_count", 0) > 0 else None)
+                if not thread_ts:
+                    continue
+                # Si el root message fue del usuario o lo menciona
+                if m.get("user") == mention_user_id or f"<@{mention_user_id}>" in m.get("text", ""):
+                    return thread_ts
+                # Verificar respuestas del hilo
+                if m.get("reply_count", 0) > 0:
+                    try:
+                        res_th = self.api_call(f"conversations.replies?channel={channel_id}&ts={thread_ts}&limit=15")
+                        if res_th.get("ok"):
+                            for rm in res_th.get("messages", []):
+                                if rm.get("user") == mention_user_id or f"<@{mention_user_id}>" in rm.get("text", ""):
+                                    return thread_ts
+                    except Exception:
+                        pass
+
+        # 2. Tomar el hilo activo más reciente
+        for m in messages:
+            thread_ts = m.get("thread_ts") or (m.get("ts") if m.get("reply_count", 0) > 0 else None)
+            if thread_ts:
+                return thread_ts
+
+        # 3. Si no hay hilos explícitos pero hay mensajes en el canal, tomar el último mensaje raíz como hilo
+        if messages:
+            return messages[0].get("ts")
+
+        return None
+
+    def send_message(self, target, text, thread_ts=None, force_root=False):
         dest_id, dest_label = self.resolve_destination(target)
+        
+        # Guard: Si es un canal público/privado (C... o G...) y no viene thread_ts ni force_root,
+        # resolver automáticamente al hilo correspondiente para jamás ensuciar la raíz.
+        if (dest_id.startswith("C") or dest_id.startswith("G")) and not thread_ts and not force_root:
+            # Detectar si hay mención de usuario en el texto
+            m_user = re.search(r"<@(U[0-9A-Z]{8,12})>", text)
+            mention_uid = m_user.group(1) if m_user else None
+            resolved_thread = self.find_best_thread(dest_id, mention_uid)
+            if resolved_thread:
+                thread_ts = resolved_thread
+            else:
+                sys.stderr.write(f"[WARN]: No se encontró hilo activo en {dest_label}. Enviando a raíz por falta de hilos.\n")
+
         payload = {
             "channel": dest_id,
             "text": text
@@ -341,6 +393,7 @@ def main():
     parser.add_argument("--delete", help="Timestamp (ts) del mensaje a borrar en el canal/usuario especificado")
     parser.add_argument("--force", action="store_true", help="Ignora advertencias del filtro MELC")
     parser.add_argument("--thread-ts", help="Timestamp del hilo si se responde a un mensaje específico")
+    parser.add_argument("--force-root", action="store_true", help="Fuerza el envío al canal raíz sin anclar a un hilo")
     parser.add_argument("--who", default="kz", help="Identidad que envía (kz, samy, kora, pau, lalo)")
     parser.add_argument("--dry-run", action="store_true", help="Simula el envío sin publicar")
     parser.add_argument("--auth-test", action="store_true", help="Verifica la sesión activa en Slack")
@@ -404,10 +457,15 @@ def main():
         print(f"[DRY-RUN] Emisor : {args.who}")
         if args.thread_ts:
             print(f"[DRY-RUN] Hilo   : {args.thread_ts}")
+        elif (dest_id.startswith("C") or dest_id.startswith("G")) and not args.force_root:
+            m_user = re.search(r"<@(U[0-9A-Z]{8,12})>", text)
+            mention_uid = m_user.group(1) if m_user else None
+            auto_th = client.find_best_thread(dest_id, mention_uid)
+            print(f"[DRY-RUN] Auto-Hilo resuelto: {auto_th}")
         print(f"[DRY-RUN] Mensaje: {text}")
         return
 
-    res, ch_id, ch_label = client.send_message(args.to, text, args.thread_ts)
+    res, ch_id, ch_label = client.send_message(args.to, text, args.thread_ts, force_root=args.force_root)
     if res.get("ok"):
         log_outbound(args.who, ch_label, ch_id, text, True)
         print(f"OK: Mensaje enviado a {ch_label} (ts={res.get('ts')})")
