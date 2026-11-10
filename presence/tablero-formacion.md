@@ -22,7 +22,7 @@
  
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
-| **SAS (ODT 02)** | `sas` / `kz` | **PR #448 EN REVERT FINAL** | Fix de firma resuelto; Fernando notificado para revertir application-dev.properties | Sasi validó firma ok; bloqueante dev.properties detectado | Fernando revierte config y merge |
+| **SAS (ODT 02)** | `sas` / `kz` | **PR #448 MERGEADO A DEVELOP** | Commit merge `304b514`; validación DoRS 180 días integrada | BUILD SUCCESS (7.1s); diff 1 archivo limpio | Fer despliega a QA para pruebas Nancy |
 | **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
 | **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO ACEPTADO POR TALÍA** | Talía revisa con equipo bloqueos y tareas independientes para delegar | Coordinación fluida con Talía; Nemo en standby | En espera de lista de tareas de Talía |
