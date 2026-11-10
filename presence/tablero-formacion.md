@@ -23,8 +23,9 @@
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
 | **SAS (ODT 02)** | `sas` / `kz` | **INSTRUCCIÓN ENVIADA SLACK** | Mensaje detallado a Fer y Gio en #sas-economia (ts=1794336561.184579) | Delimitación frentes + tickets HU/bugs a transicionar en Jira | En espera de actualización en Jira |
+| **HM (ODT 04)** | `hm` / `kz` | **ARRANQUE Y GOBIERNO** | Solicitud 2 repos enviada a Enrique en Slack; backlog Jira en curso | `hm` estructurando 7 Epics y doc de trazabilidad | Creación de repos por Enrique y carga de Jira |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
-| **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO TALÍA OFRECIDO** | DM enviado a Talía ofreciendo bloques periféricos y copiloto Nemo | MSI-PRO-03 entregado en Drive/develop | En espera de respuesta Talía y PR #7/#8 |
+| **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO ACEPTADO POR TALÍA** | Talía revisa con equipo bloqueos y tareas independientes para delegar | Coordinación fluida con Talía; Nemo en standby | En espera de lista de tareas de Talía |
 | **Quálitas** | `qualitas-ex` / `minuta-ex` | **PAUSADO / EN ESPERA** | Minuta Revisión GM en PKM; reunión movida al miércoles 11/11 | En espera de confirmación cliente | Sesión miércoles |
 | **Daily de Equipo** | `daily-ex` | **VALIDADO Y ARMADO** | `Daily/20261110-reporte_daily-unico.md` | `cp-valida-daily.py` (Exit 0) | Publicación Slack 07:30 |
 
