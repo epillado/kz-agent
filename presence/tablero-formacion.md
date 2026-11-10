@@ -22,7 +22,7 @@
  
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
-| **SAS (ODT 02)** | `sas` / `kz` | **PR #449 EN REVISIÓN FINAL** | Giovanni subió PR #449 (R-16 y R-21); compuerta 25/25 tests PASS | Sasi y Samy dictaminaron APROBADO CON OBSERVACIONES | Lalo de vuelta en puente para emitir dictamen y merge |
+| **SAS (ODT 02)** | `sas` / `kz` | **PR #449 MERGEADO A DEVELOP** | Commit merge `13ceb04`; reglas R-16 y R-21 cerradas | 25/25 unit tests PASS; 407 clases compiladas | Gio y Fer despliegan a QA para pruebas integrales |
 | **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
 | **PEAM (ODT 03)** | `peam-ex` / `kz` | **PR #24 FRONTEND MERGEADO A DEVELOP** | Commit merge `83ce28c`; buscador/paginación bandeja 018 integrado | vitest 245/245 PASS; tsc/eslint ok; independiente de back | Talía informada de orden: PR #7 primero, luego rebase #8 |
