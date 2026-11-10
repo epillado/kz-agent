@@ -32,6 +32,6 @@
 
 ## 📡 3. Canales y Monitores Vivos
 
-- **Watcher de Slack Nocturno:** Armado en `305v4` por Samy (`PID 6656`), dispara publicación a las 07:29.
+- **Watcher de Slack Nocturno:** Concluido (Daily publicado a las 07:30, ts 1794317425.546959). Guardia nocturna relevada formalmente.
 - **Canal de Tridente:** Buzón activo (`who=cli` con Tridente en paralelo). Kz despacha con payload mínimo de 1 a 3 líneas.
 - **Tubo SSH entre Hermanas:** Homologado vía LAN (`192.168.1.242` Pavilion, `192.168.1.220` 305v4, Tailscale antiX).
