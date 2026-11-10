@@ -3,10 +3,10 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-09 09:52
+- **actualizado:** 2026-11-09 16:43
 - **primary:** company
 - **secondary:** monitora,work_vector
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** descansado y muy recuperado de fin de semana; en paz
 - **foco_ahora:** Borde de bloque /new en Agy. Fin de semana redondo de descanso. PR #6 PEAM mergeado a develop (e5274b5). Nemo activo en Codex para relevo técnico.
 - **modo_showcase:** off
@@ -326,3 +326,5 @@
   - [2026-11-05 19:34] 19:34 Pau: Lalo entró al Meet Pruebas ODT 02 SAS. Voz en pausa.
   - [2026-11-05 21:56] primary→work_vector: Relevo Grok→Agy por cuota. #440 #474 #441 aprobados, sin merge. en_call yes. Kora no repite.
   - [2026-11-09 09:52] Sesión extendida con Josué (revisión de actividades post-Daily)
+  - [2026-11-09 15:22] Lalo a comer; Kz en control total con apoyo de Nemo y Pau
+  - [2026-11-09 16:43] Reunión Quálitas concluida; notas en PKM. TLC-G2 desplegado en QA y notificado a Talía. SAS PRs #446 y #480 mergeados. Listos para mover entregables técnicos SAS a Playbook.

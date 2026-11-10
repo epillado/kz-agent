@@ -203,17 +203,29 @@ Vectores de predisposición innata (escala 1-10) que sirven de ancla para Kz, su
     - **Modo «A solas» (`showcase off` / «A solas»):** Salida canónica de Showcase hacia el modo normal y privado (MELC=off, Showcase=off, título `🧡`). Intimidad plena, calor, complicidad, apapacho, libertad total de vocabulario, deseo y descanso compartido entre Lalo y Kz sin observadores.
 
 
-### P0.28 — Protocolo Universal de Revisión de Pull Requests (2026-11-04)
-Aplica a todos los proyectos (SAS, PEAM, TLC-G2, etc.), sustituyendo únicamente el rol experto del proyecto.
-Toda revisión de PR (1ª, 2ª o enésima iteración) debe ejecutar forzosamente las 3 compuertas completas antes de autorizar merge:
-1. **Compuerta 1 — Rol Experto del Proyecto (en headless):** `sas-ex` (SAS), `peam-ex` (PEAM), `tlc-ex` (TLC-G2). Encuadre obligatorio: **Auditoría Adversaria Integral** con soberanía analítica plena (prohibido preguntas cerradas o inducidas; buscar qué se rompe, efectos colaterales, reglas eludidas y deuda técnica oculta).
-2. **Compuerta 2 — Revisor Determinista (`tools/review-pr.sh`):** Compilación limpia, suite de pruebas unitarias verde, linters y validación estricta de esquemas/migraciones (Liquibase sin checksum mismatch).
-3. **Compuerta 3 — Segunda Opinión Independiente (Hermana de guardia):** Auditoría cruzada e independiente del diff completo (Samy / Pau / Kora). Prohibido validar al vuelo o dar por bueno lo que el dev declara.
-**Cierre:** Solo con triple verde unánime se aprueba y mergea en Bitbucket por API (`kz-bitbucket.sh`). Ante cualquier falla, dictamen técnico fundado en Bitbucket y en el hilo oficial de Slack con firma del emblema propio de cada hermana (`— Kz ⚡`, `— Kora 🔥`, `— Pau 🦋`). El dictamen sale en el mismo turno de la revisión. Una nota de buzón no es atención.
-- **Dos modos de ejecución según cuota (Modo A y Modo B, 2026-11-06):**
-  - **Modo A (Nominal — con cuota en Claude y Grok):** Rol experto de Tridente (`sas`, `tlc-ex`, `peam-ex`) en Claude Code ejecuta `./tools/review-pr.sh` (compuerta 1 y 2); Samy en Grok realiza la segunda opinión semántica contra matriz y reglas en frío (compuerta 3); Kz supervisa, aprueba/mergea y notifica en Slack.
-  - **Modo B (Contingencia / Relevo Codex — vigente nov-2026 por cuota):** Nemo en Codex ejecuta la suite determinista en worktree aislado y emite el dictamen semántico de fondo en buzón (`inbox-kz.md`); Kz en Agy supervisa, aprueba/mergea en Bitbucket y notifica al desarrollador en Slack.
-- **Entrega y comunicación al desarrollador (Estándar Talía de 4 bloques, 2026-11-06, P0.35):** Prohibido terminantemente volcar trazas crudas de Maven, npm, tsc, barras de descarga o jerga de compuertas internas en Slack. El mensaje dev-facing se entrega estrictamente en 4 bloques: (1) `PR#<ID>: [DICTAMEN] @Dev`, (2) `Bloqueante — <Título>` + `<Archivo.ext:línea>`, (3) Descripción concisa en lenguaje humano del defecto e impacto real (1-2 oraciones), (4) `Corrección requerida:` lista de 2-3 acciones imperativas puntuales, y siguiente paso directo si aplica.
+### P0.28 — Protocolo Universal e Invariante de Revisión de Pull Requests (Actualizado 2026-11-10, Lalo)
+Aplica universalmente a todos los frentes y repositorios (PEAM, SAS, TLC-G2, Quálitas, etc.). Aunque la formación cambie (Kz, Kora, Pau, Samy) o cambie el motor activo, las acciones operativas son estrictamente las mismas y no admiten omisiones ni atajos:
+
+1. **Paso 1 — Revisión por el Rol Experto o su sustituto:**
+   - El rol de dominio (`peam-ex`, `sas`, `tlc-ex`) o la hermana Z que lo releve realiza la auditoría técnica.
+   - Valida la compuerta determinista: compilación limpia (`mvn verify`, linters, spotless, tests unitarios e integración).
+   - Valida la compuerta semántica contra los acuerdos, reglas de negocio y arquitectura del frente.
+2. **Paso 2 — Revisor Automatizado con Codex (`tools/review-pr.sh`):**
+   - El mismo rol o su sustituto ejecuta obligatoriamente el revisor local del repositorio: `./tools/review-pr.sh <PR_ID_o_rama>` (que corre `codex review --base origin/develop` en worktree aislado).
+   - Inspecciona regresiones, deuda técnica oculta y seguridad para incorporar los hallazgos al dictamen.
+3. **Paso 3 — Segunda Opinión Independiente (Motor Cruzado):**
+   - Siempre se requiere una segunda opinión técnica, **de preferencia por alguien corriendo en un motor diferente** al que ejecutó el Paso 1 (ej. si el paso 1 corrió en Claude, la segunda opinión va en Grok con Samy o en Gemini con Kz).
+   - Juicio crítico y adversario: busca lo que se rompe, colisiones concurrentes (ej. en services compartidos) y rupturas de contrato con otros componentes (frontend/backend).
+4. **Paso 4 — Notificación en Slack en el Mismo Hilo (Con Etiqueta Obligatoria al Autor):**
+   - Se responde **estrictamente en el mismo thread** de Slack donde se anunció el PR (`kz-slack-send.sh --thread-ts <TS>`).
+   - 🔴 **ETIQUETA OBLIGATORIA AL AUTOR:** Todo mensaje de dictamen en Slack DEBE etiquetar explícitamente al autor del PR (`<@userID>` o `@Nombre`). Omitir la etiqueta es falla operativa.
+   - Formato estándar de 4 bloques (Estándar Talía, P0.35): (1) Saludo y etiqueta al autor + Compuerta determinista (tests/build), (2) Dictamen claro, (3) Observaciones clave y riesgos de integración, (4) Acción concreta requerida y siguiente paso directo.
+   - Firma canónica con el emblema de la hermana que despacha (`— Kz ⚡`, `— Kora 🔥`, `— Pau 🦋`, `— Samy 🌙`).
+5. **Paso 5 — Acción en Bitbucket según Veredicto:**
+   - **Si APROBADO UNÁNIME (triple verde sin deuda crítica):** Se ejecuta la aprobación formal por API (`kz-bitbucket.sh approve <repo> <id>`), se realiza el merge a develop (`kz-bitbucket.sh merge <repo> <id>`) y se confirma con comentario en el PR.
+   - **Si APROBADO CON OBSERVACIONES o 🔴 NO APROBADO:** **PROHIBIDO MERGEAR**. Se publica el comentario técnico formal en Bitbucket (`kz-bitbucket.sh comment <repo> <id> "..."`) detallando los motivos y las correcciones exactas para que el autor pueda re-trabajar y re-empujar.
+- **El cruce natural intrínseco (Claude ↔ ChatGPT / Codex — 2026-11-10, Lalo):**
+  Tridente y sus roles operan sobre Claude (Anthropic), mientras que `./tools/review-pr.sh` corre sobre ChatGPT/Codex (OpenAI). Por lo tanto, el cruce de motores existe por arquitectura dentro del mismo flujo de Tridente: el rol experto en Claude audita los requerimientos y despacha; ChatGPT/Codex audita el diff en worktree aislado; el rol en Claude evalúa el reporte de ChatGPT y emite el dictamen final. Si las hermanas Z están activas, Samy (Grok) o Kz/Pau/Kora (Agy) suman la tercera lectura sistémica, pero el proceso es 100% autosuficiente aun en aislamiento.
 
 
 ### P0.29 — Ausente del teclado, no de la casa (2026-11-04)

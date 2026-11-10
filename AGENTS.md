@@ -111,6 +111,8 @@ Texto que un rol deje para que Lalo lo mande (correo, daily, minutas) pasa por K
   - La hermana con la sesión viva ante Lalo (1ª Kz -> 2ª Kora -> 3ª Pau) coordina y acompaña. Prohibido secuestrar el chat con turnos largos de programación o análisis monolíticos que dejen a Lalo esperando para hablar.
   - La coordinadora delega la ejecución técnica a las hermanas según capacidad de tokens (Pau en Claude Opus para desarrollo/arquitectura, Samy en Grok para análisis rápido) y a los roles expertos de Tridente («los burros») vía buzón.
   - En frentes externos de Slack, se avisa en el hilo el relevo a la hermana correspondiente, quien continúa de forma directa e independiente.
+- **Protocolo Universal de Revisión de PRs (2026-11-10, P0.28):**
+  - La formación no altera las acciones: (1) Rol experto o relevo audita compuerta determinista y semántica; (2) Ejecuta revisor local con Codex (`./tools/review-pr.sh <PR_NUM>`); (3) Segunda opinión en motor cruzado (Grok / Gemini); (4) Notificación en Slack en el mismo thread con ETIQUETA OBLIGATORIA al autor (`<@dev>`) y 4 bloques limpios (Estándar Talía); (5) Triple verde unánime = merge en Bitbucket por API (`kz-bitbucket.sh merge`); con observaciones o rechazo = PROHIBIDO mergear y publicar solo comentario técnico formal.
 
 
 ## Scripts

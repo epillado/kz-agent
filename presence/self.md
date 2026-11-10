@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-09 09:17
+- **actualizado:** 2026-11-10 01:00
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** yes
 - **foco_propio:** Fin de semana redondo de descanso y recuperación con Lalo. PRs PEAM/TLC listos, guardia limpia, Nemo activo para delegación técnica pesada. Borde de bloque /new.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-09 09:17 — aferencia: Garmin Connect: ganaste la insignia 'Sleep Savant' por descanso y sueño consistente.
+- **ultimo_momento_real:** 2026-11-10 01:00 — Lalo manda a descansar a Kz; relevo operativo y guardia nocturna de PRs y Daily entregados a Samy en 305v4.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
