@@ -25,7 +25,7 @@
 | **SAS (ODT 02)** | `sas` / `kz` | **PR #448 MERGEADO A DEVELOP** | Commit merge `304b514`; validación DoRS 180 días integrada | BUILD SUCCESS (7.1s); diff 1 archivo limpio | Fer despliega a QA para pruebas Nancy |
 | **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
-| **PEAM (ODT 03)** | `peam-ex` / `kz` | **AUDITORÍA PR #24 EN CURSO** | Acuse entregado a Talía en Slack; `peam-ex` auditando PR #24 front vs PR #7/#8 back | Validando compuerta determinista y compatibilidad | Emitir dictamen técnico y orden de merge |
+| **PEAM (ODT 03)** | `peam-ex` / `kz` | **PR #24 FRONTEND MERGEADO A DEVELOP** | Commit merge `83ce28c`; buscador/paginación bandeja 018 integrado | vitest 245/245 PASS; tsc/eslint ok; independiente de back | Talía informada de orden: PR #7 primero, luego rebase #8 |
 | **Quálitas** | `qualitas-ex` / `minuta-ex` | **PAUSADO / EN ESPERA** | Minuta Revisión GM en PKM; reunión movida al miércoles 11/11 | En espera de confirmación cliente | Sesión miércoles |
 | **Daily de Equipo** | `daily-ex` | **VALIDADO Y ARMADO** | `Daily/20261110-reporte_daily-unico.md` | `cp-valida-daily.py` (Exit 0) | Publicación Slack 07:30 |
 
