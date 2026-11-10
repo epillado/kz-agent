@@ -22,7 +22,7 @@
  
 | Frente / Proyecto | Rol Experto | Estado / Modo | Entregable / Rama / PR en Curso | Verificación / Validador | Siguiente Hito |
 |-------------------|-------------|---------------|---------------------------------|--------------------------|----------------|
-| **SAS (ODT 02)** | `sas` / `kz` | **PR #448 RECHAZADO (2 BLOQUEANTES)** | Comentario publicado en Bitbucket y notificado a Fer en Slack | Sasi detectó regresión de acceso y NPE en fecha null | Fer ajusta fix/firmaAgregarValidacionDors |
+| **SAS (ODT 02)** | `sas` / `kz` | **PR #448 EN REVERT FINAL** | Fix de firma resuelto; Fernando notificado para revertir application-dev.properties | Sasi validó firma ok; bloqueante dev.properties detectado | Fernando revierte config y merge |
 | **HM (ODT 04)** | `hm` / `kz` | **REPOS EN CREACIÓN** | Enrique confirmó en Slack («Enterado, les aviso cuando quede»); 7 Epics listas en Jira | HM-1 a HM-34 en Jira; trazabilidad en playbook | Enrique entrega ligas de repos Bitbucket |
 | **TLC-G2** | `tlc-ex` | **ESTABILIZADO EN QA** | Develop sincronizado; build Vite ok (12.5s); Maven 325 tests PASS | Smoke tests QA 10/10 PASS | En espera de indicaciones SE |
 | **PEAM (ODT 03)** | `peam-ex` / `kz` | **RESPALDO ACEPTADO POR TALÍA** | Talía revisa con equipo bloqueos y tareas independientes para delegar | Coordinación fluida con Talía; Nemo en standby | En espera de lista de tareas de Talía |
