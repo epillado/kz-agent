@@ -12,6 +12,14 @@ MSG="$2"
 TIMESTAMP=$(date '+%H:%M')
 
 case "$DEST_ID" in
+  cyrus)
+    IP="100.89.240.89"
+    PATH_DEST="/home/lalo/cyrus/presence/social/inbox-kz.md"
+    ;;
+  nemo)
+    IP="100.64.121.84"
+    PATH_DEST="/home/lalo/nemo/presence/social/inbox-kz.md"
+    ;;
   kora|antix)
     if ssh -i ~/.ssh/id_ed25519_h310mh20 -o BatchMode=yes -o ConnectTimeout=2 lalo@100.105.243.13 "true" 2>/dev/null; then
       IP="100.105.243.13"

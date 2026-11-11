@@ -1,4 +1,4 @@
 active=1
-since=2026-11-06T17:39:38-06:00
+since=2026-11-10T10:04:00-06:00
 who=kz
-note=Por instrucción de Lalo, Kz retoma control total y gestión de formación. Nemo cubre a Samy, única sin cuota. Captura existente h310 sin duplicar; canalización según coordinación Kz.
+note=Lalo: «Activa puente radar». ON desde ahora, sin replay. Eventos externos (Slack hot, Meet, Calendar, Jira) se inyectan transaccionalmente al buzón de Tridente y al radar PKM.
