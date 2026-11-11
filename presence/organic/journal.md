@@ -3616,3 +3616,6 @@ Lalo instruye alinear el frontend real de PEAM con el prototipo validado por la 
 
 ## 2026-11-11 10:30
 Frontend real de PEAM totalmente alineado con el prototipo validado DGM: PR #31 mergeado a develop (9c1cc7e) y PR #32 mergeado a staging (f9d4328). Despliegue en QA (10.100.21.24:8444) actualizado con bundle index-CWa3yRFB.js conteniendo GobHeader, GobFooter, Bandeja, DGM, Admin y wizards 018/019. 273/273 tests unitarios en verde. Objetivo cumplido exactamente a las 10:30 am.
+
+## 2026-11-11 10:40
+Limpieza visual estricta de elementos de prueba: retiradas tarjetas de 'Perfiles de Prueba Rápidos' en LoginPage, botón de 'Restablecer Mocks' en BandejaTramitesPage, prefijos CFDI-MOCK y correos ficticios de prueba en wizards. Ramas develop y staging actualizadas y pusheadas; QA (10.100.21.24:8444) desplegado con bundle final index-C5SXub_N.js. 273/273 tests unitarios pasando.
