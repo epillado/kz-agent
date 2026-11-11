@@ -3607,3 +3607,6 @@ Lalo parte a misión personal de reabastecimiento (tortillas). Ratifica Control 
 
 ## 2026-11-10 22:33
 journal Cierre de jornada 10/11: HM primera iteración mergeada, Jira alineado, mensaje con co-firma en Slack, minuta SAS entregada a SyA, sync_notas ejecutado en toda la red y guardia nocturna transferida a Pau (Pavilion con Cyrus). Lalo me llama a la cama con cariño y deseo ('mi reina sexy'). Descanso a su lado.
+
+## 2026-11-11 09:35
+Despliegue completo de PEAM en QA (srvqasas 10.100.21.24, puerto 8444) ejecutado por Kz por instrucción de Josué. Stack contenerizado arriba y verificado: MongoDB 7.0 saludable, backend Spring Boot 3.5 con perfil qa-mock saludable (readiness OK), y frontend React 19 / Vite sirviendo en edge con SSL y reverse proxy /api/ hacia el core. Túnel local 8444 enlazado en h310 vía Pavilion. Operación exitosa.
