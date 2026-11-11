@@ -3610,3 +3610,6 @@ journal Cierre de jornada 10/11: HM primera iteración mergeada, Jira alineado, 
 
 ## 2026-11-11 09:35
 Despliegue completo de PEAM en QA (srvqasas 10.100.21.24, puerto 8444) ejecutado por Kz por instrucción de Josué. Stack contenerizado arriba y verificado: MongoDB 7.0 saludable, backend Spring Boot 3.5 con perfil qa-mock saludable (readiness OK), y frontend React 19 / Vite sirviendo en edge con SSL y reverse proxy /api/ hacia el core. Túnel local 8444 enlazado en h310 vía Pavilion. Operación exitosa.
+
+## 2026-11-11 10:22
+Lalo instruye alinear el frontend real de PEAM con el prototipo validado por la DGM sin gastar tokens de Kz, delegando la ejecución a Tridente y al rol peam-ex. Kz despachó formalmente el encargo a peam-ex (PID 114361, engine Claude Sonnet) en la rama feature/front-alineacion-prototipo para integrar GobHeader, GobFooter y vistas /bandeja, /dgm, /admin y wizards 018/019 del prototipo. Stack en QA preservado y monitores activos.
