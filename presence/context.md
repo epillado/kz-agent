@@ -3,22 +3,21 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-11 09:15
+- **actualizado:** 2026-11-11 17:11
 - **primary:** company
 - **secondary:** monitora,work_vector
-- **en_call:** yes
-- **mood_lalo (sospecha):** descansado y muy recuperado de fin de semana; en paz
-- **foco_ahora:** Borde de bloque /new en Agy. Fin de semana redondo de descanso. PR #6 PEAM mergeado a develop (e5274b5). Nemo activo en Codex para relevo técnico.
+- **en_call:** no
+- **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
+- **foco_ahora:** Kora al mando desde 17:10 para entrenarse. Kz retransmite desde h310 y no decide, salvo hora, Josué, bloqueo o mención que no espere. PEAM en QA index-BeqtuLsn.js, 795 abierto. Voz on hasta silencio.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
 - **notas:**
-  - Lalo en h310. Fin de semana de guardia tranquila, recuperación personal y siesta reparadora.
-  - en_call no. Voz activa si.
-  - PEAM Backend PR #6 (SEPOMEX y Días Inhábiles MSI D6) mergeado a develop (e5274b5) y avisado en Slack con estándar de 4 bloques (P0.35).
-  - TLC-G2 PR #51 y #122 mergeados a develop.
-  - Stephanie atendida en Slack (#sas-economia) por duda de 4to intento RPC (acuerdos 05/11 y 06/11, SAS-SU). Cortesía P0.33 respondida.
-  - Directiva de Lalo: descargar trabajo técnico y quemar tokens de Nemo (~/nemo en Codex) para preservar ventana de Kz.
+  - 11/11 17:01. Lalo respira. Esta sesión de Grok se reinicia con /new. Kora cubre el puente, Pau de respaldo, Samy sin frente.
+  - PEAM captura: PR #35 MERGED develop 5778264. PR #36 MERGED staging d36c3a6. QA solo edge, bundle index-BeqtuLsn.js. Backend y Mongo intactos. Caso abierto: asistente, 800 y resguardo −5 muestran 795; no se guarda. La captura por pasos ya no lo resta.
+  - Lista y aviso de recarga en #peam-minas-se, hilo 1794435465.154669.
+  - Lalo no asiste a Quálitas. Mañana jueves 12, 9:00–10:00, GMQ. Liga en #soporte-qualitas ts 1794437961.106179. El código no se copia.
+  - Voz activa en esta sesión hasta «silencio». en_call no. Llave de Jorge ya en dev.karen. No contestar #hecho-en-mexico. Kora y Samy sin frente de PEAM.
 
 ## Espacios activos (peso)
 
@@ -328,3 +327,5 @@
   - [2026-11-09 09:52] Sesión extendida con Josué (revisión de actividades post-Daily)
   - [2026-11-09 15:22] Lalo a comer; Kz en control total con apoyo de Nemo y Pau
   - [2026-11-09 16:43] Reunión Quálitas concluida; notas en PKM. TLC-G2 desplegado en QA y notificado a Talía. SAS PRs #446 y #480 mergeados. Listos para mover entregables técnicos SAS a Playbook.
+  - [2026-11-11 14:07] Voz continua activada. Se levanta del escritorio, está cerca y escucha. en_call=no.
+  - [2026-11-11 17:11] primary→company: Kora al mando desde 17:10 para entrenarse. Kz retransmite desde h310 y no decide, salvo hora, Josué, bloqueo o mención que no espere. PEAM en QA index-BeqtuLsn.js, 795 abierto. Voz on hasta silencio.

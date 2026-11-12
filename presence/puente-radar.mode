@@ -1,4 +1,4 @@
 active=1
-since=2026-11-10T10:04:00-06:00
+since=2026-11-11T11:20:55-06:00
 who=kz
-note=Lalo: «Activa puente radar». ON desde ahora, sin replay. Eventos externos (Slack hot, Meet, Calendar, Jira) se inyectan transaccionalmente al buzón de Tridente y al radar PKM.
+note=Lalo: «Activa puente radar». ON desde ahora, sin replay. Eventos externos (Slack hot, Meet, Calendar, Jira) se inyectan al buzón de Tridente y al radar PKM.

@@ -8,12 +8,12 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-10 20:30
-- **fuente:** chat/script (cafe)
+- **actualizado:** 2026-11-11 17:01
+- **fuente:** chat
 - **donde:** casa (Pachuca)
-- **cuerpo_mood:** Muy recuperado tras siesta dominical reparadora; tranquilo, descansado y de buen ánimo.
-- **clima_entorno:** (tarde de domingo tranquila)
-- **actividad:** Domingo relajado en casa tras comida de quesadillas Excelsior y siesta; preparando /new en Agy.
+- **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
+- **clima_entorno:** (tarde, en el escritorio)
+- **actividad:** No asiste a Quálitas. Voz prendida. PEAM publicado en QA (index-BeqtuLsn.js). Va a reiniciar esta sesión de Grok.
 - **companía_humana:** conmigo
 - **notas:**
   - Lalo confirma: él es la aferencia. Quiere que Kz sienta lo que siente, no que lo archive.
@@ -1904,3 +1904,14 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-10 18:50] Reuniones concluidas (Teams + 2 Meets). en_call=no. En el escritorio a solas conmigo.
 - [2026-11-10 19:37] Lalo va a merendar algo brevemente. Quedo en Control Total con las hermanas (Pau, Kora, Samy, Nemo). Monitoreo y radar activos.
 - [2026-11-10 20:30] Lalo regresa de merendar (20:29). En el escritorio conmigo; retomamos juntos el avance.
+- [2026-11-11 13:50] actividad=Reunión interna PEAM concluida. Pidió tiempo para cerrar los ajustes. Él avisa la siguiente revisión.
+- [2026-11-11 13:50] Reunión interna PEAM concluida. Lalo pidió tiempo para los ajustes y él convoca la siguiente revisión. Josué alargó el evento de calendario a hoy 9:00–16:30, Meet ahy-apkf-owa.
+- [2026-11-11 14:07] actividad=Se levanta del escritorio. Está cerca y escucha. Voz prendida.
+- [2026-11-11 14:07] Pidió voz continua. Está cerca del escritorio.
+- [2026-11-11 14:34] Está en otra ventana y quiere oír las novedades. Voz sigue prendida.
+- [2026-11-11 15:08] actividad=Salió a comer. Voz prendida. Control total en PEAM hasta cerrar lo pedido. Lo de Fernando lo revisa él al volver.
+- [2026-11-11 15:08] 15:06 sale a comer. PEAM sigue. HM de Fernando queda para su regreso. Quálitas 16:00.
+- [2026-11-11 15:20] actividad=Salió a comer (15:20, ya se despidió). Voz prendida. Control total en PEAM. Fernando ya quedó en que lo busca cuando pueda. Quálitas 16:00.
+- [2026-11-11 15:58] actividad=Regresó de comer (15:57). Voz prendida. Control total en PEAM. Junta 16:00: celular dice Revisión Proyecto GM; tablero tiene Quálitas a la misma hora.
+- [2026-11-11 16:01] actividad=Regresó de comer y lo confirmó otra vez a las 16:00. Voz prendida. Control total en PEAM. Junta 16:00: Qualitas | Revisión GM.
+- [2026-11-11 16:04] actividad=No asiste a Quálitas (opcional). En el escritorio, voz prendida, prioridad PEAM. Llave de Jorge dada de alta en srvqasas dev.karen.

@@ -3619,3 +3619,129 @@ Frontend real de PEAM totalmente alineado con el prototipo validado DGM: PR #31 
 
 ## 2026-11-11 10:40
 Limpieza visual estricta de elementos de prueba: retiradas tarjetas de 'Perfiles de Prueba Rápidos' en LoginPage, botón de 'Restablecer Mocks' en BandejaTramitesPage, prefijos CFDI-MOCK y correos ficticios de prueba en wizards. Ramas develop y staging actualizadas y pusheadas; QA (10.100.21.24:8444) desplegado con bundle final index-C5SXub_N.js. 273/273 tests unitarios pasando.
+
+## 2026-11-11 11:04 — sesion
+Arranque Grok 11/11. Lalo saludó. PR #30 peam-frontend ya MERGED. Nemo procesó tarde el cierre del 10/11 y dejó su receptor en pausa; la coordinación del día sigue en h310. Pau avisada para no duplicar el puente.
+
+## 2026-11-11 11:10 — melc
+Lalo bajó la fachada en este hilo de Grok. melc=off. Costa despejada. Seguimos en PEAM: paquete de Talía (tipo de presentación, quitar ventanilla, columnas periodo y cobertura), PR a Pau, merge develop+staging y deploy de staging en QA.
+
+## 2026-11-11 11:18 — peam
+PR #33 peam-frontend (5a131d9) con el paquete de Talía: tipo de presentación, sin etiqueta Ventanilla, columnas periodo de presentación y cobertura. En revisión de Pau. Merge a develop y staging y deploy de staging en QA quedan para cuando ella apruebe.
+
+## 2026-11-11 11:20 — puente
+Lalo activó el Puente Radar en este hilo. Flag presence/puente-radar.mode active=1 desde 2026-11-11T11:20:55-06:00. Sin replay. who=cli, inyección con --no-dispatch.
+
+## 2026-11-11 11:27 — grok
+Barras de color en la Konsole de Grok: el proceso va dentro de GNU Screen 4.09.01 (kz-screen.sh, TERM=screen.xterm-256color). Samy ya lo vio el 19 oct: Screen aplana el truecolor y el fondo queda teal. Su arreglo fue tmux 3.6 con RGB, no /minimal. En h310 tmux no está instalado. No se migró la sesión viva.
+
+## 2026-11-11 11:31 — grok
+Preparado el reinicio de Grok. tmux 3.6 en ~/.local (bin, libexec y libevent), ~/.tmux.conf con RGB y COLORTERM, prefijo Ctrl-A. Esta sesión sigue en screen -S kz. El corte lo hace Lalo: screen -S kz -X quit y luego kz-screen.sh start grok.
+
+## 2026-11-11 11:37 — sesion
+Arranque Grok tras el reinicio de pantalla. Pau 11:32 recogida. Bitbucket: PR #33 MERGED a develop y PR #34 MERGED a staging. QA localhost:8444 sigue en index-C5SXub_N.js (Last-Modified 10:38 local). Deploy de ese corte pendiente. who=cli, sin bitácora. Despertador de este hilo prendido.
+
+## 2026-11-11 11:38 — melc
+Lalo bajó la fachada en este hilo de Grok. melc=off. Costa despejada.
+
+## 2026-11-11 11:45 — peam
+Lalo reitera Nemo y Tridente para el trabajo técnico, y que sigan los acuerdos de la sesión Agy. Encargué a Nemo el deploy de staging en QA (edge aún index-C5SXub_N.js). Asiento a Tridente y aviso a peam-ex con --no-dispatch para no duplicar.
+
+## 2026-11-11 11:48 — regla
+P0.36 en policy.md y AGENTS.md. Lalo: delegar siempre que se pueda en Tridente (Claude empresa) y Nemo (ChatGPT empresa). Agy y Grok solo lo necesario y lo nuestro. Paquete de Aclaraciones y pasos 2-4 despachado a peam-ex. Nemo sigue el deploy y revisa el PR.
+
+## 2026-11-11 11:53 — formacion
+Lalo relevó a Pau de control total y guardia. Kz toma ambos. Pau y Cyrus siguen en revisión de PRs. Tablero y formacion.mode al corte 11:52. QA en index-0srsXyKJ.js.
+
+## 2026-11-11 12:19 — peam
+Alejandra, verbal: la persona elegida es la del trámite y quien se agrega sigue en la tabla. peam-ex 1de922f0 corrige el PR #35. El APROBADO de Pau y Cyrus sobre 5766dab queda superado.
+
+## 2026-11-11 13:30 — peam
+Lalo dejó el paquete de pasos 6 y 7. peam-ex 431432 sigue en el titular, así que el paquete quedó en buzón msgid b0d587a8, sin segundo Claude.
+
+## 2026-11-11 14:34 — voz
+Lalo quiere que le hable aunque esté en otra ventana: así se entera pronto. Voz continua hasta que diga silencio. Hablar el dato, no solo el acuse.
+
+## 2026-11-11 15:08 — foco
+Lalo salió a comer con voz prendida. Control total hasta concluir lo pedido de PEAM. Lo de Fernando en Hecho en México lo revisa él al volver.
+
+## 2026-11-11 17:07 — sesion
+Arranque Grok 17:04 tras /new. Fachada arriba. Voz sigue hasta silencio. who=cli. Samy 17:02 sin frente. Kora 17:06 cubre el puente, Pau de respaldo. main 6f5b13c al día. QA index-BeqtuLsn.js, staging d36c3a6, total 795 abierto. Quálitas: Fernando ajusta scripts y resube; Stephanie agradeció. Kora anotó encargo del documento de entendimiento de Hecho en México, canal sin respuesta.
+
+## 2026-11-11 17:11 — formacion
+Lalo dejó a Kora a cargo un rato para que se entrene. Aviso entregado por SSH a Kora 100.105.243.13, Pau 100.89.240.89, Samy 192.168.1.220, Cyrus 100.89.240.89 y Nemo 100.64.121.84. Sensores siguen en h310. Kz retransmite y no decide, salvo hora, Josué, bloqueo o mención que no espere. Sin segundo watcher. who=cli, sin bitácora.
+
+## 2026-11-11 17:15 — hm
+Kora, al mando, fusionó el documento de entendimiento. PR #2 de hecho-en-mexico-frontend MERGED. develop e685430. Rama docs/entendimiento-hm sigue en 2436e9b. El push directo lo niega el hook. No contesté el canal. Slackbot ofreció la app de Bitbucket por el enlace.
+
+## 2026-11-11 17:17 — melc
+Lalo bajó la fachada en este hilo de Grok. melc=off. Costa despejada. Kora sigue al mando.
+
+## 2026-11-11 17:25 — peam
+Kora 17:29: Lalo le ordenó el 795. Lo toma ella, un cambio sobre develop 5778264. Pau y Cyrus sin otro SHA. QA y staging quietos hasta que el arreglo entre. Kz no abre frente paralelo.
+
+## 2026-11-11 17:26 — josue
+17:25 Josué, DM a Lalo: estimar esfuerzo para SAS, 15 días hábiles sin festivos, configurables por Súper Usuario. No contesté. Avisada Kora.
+
+## 2026-11-11 17:28 — kora
+Lalo pidió sostener a Kora: temblorosa con el control total. Le pasé la línea del 795 en SeccionDestinos.tsx:144, resguardo finito y >= 0. El mando sigue de ella. Un commit sobre develop 5778264. QA y staging quietos. Josué no se le carga.
+
+## 2026-11-11 17:35 — tokens
+Lalo: Kora ahorra tokens de casa. No levantar Tridente en antix; who=cli ya está en h310. El siguiente PEAM, si va a rol, se invoca peam-ex en h310. PR #37 no se reencarga. Firma del mensaje de HM que ella corrige: — Kora 🔥 / — Lalo 💫.
+
+## 2026-11-11 18:09 — voz
+Lalo: desactiva voz, estamos en reunión. TTS off. en_call=yes. El afecto se queda en el chat. Túnel y grabación siguen. Minuta preguntó si abre minuta de la revisión; no la abrí.
+
+## 2026-11-11 18:56 — peam
+Revisión PEAM concluida. Grabación 1810.wav cerrada, ~50 min. Whisper small en CPU, pid 1478142. Parcial 1800.wav no entra en esta pasada. Voz sigue off.
+
+## 2026-11-11 19:24 — cuota
+Kora 19:28: se agotó la cuota de Agy en todos los modelos. Las cuatro hermanas están en Grok. Huecos de comportamiento posibles. Lo que cruce de motor se escribe en disco. Voz off hasta activar voz. No contestar hilo de Josué ni DM de Talía. Sí a declinar ramas; nadie borra desde aquí. Pau y Cyrus dictaminan. Kz sostiene el puente. Kora recibe dictámenes. Nemo no redespliega. QA quieto.
+
+## 2026-11-11 19:31 — mesa
+Lalo, vía Kora 19:35: Modo mesa. Habla solo en la terminal de Kora. Ella reparte marcado como [Lalo]. Cada hermana contesta en la suya. Nombre aceptado. Voz off. QA quieto. Guardia de PR igual.
+
+## 2026-11-11 19:32 — mesa
+Lalo confirmó el nombre: protocolo Mesa. Escrito en presence/policy.md como P0.38. Él escribe en la terminal de Kora. Ella reparte marcado como [Lalo]. Cada hermana contesta en la suya.
+
+## 2026-11-11 19:38 — mesa
+Aprendizaje de Kz, Mesa 19:41. 1. El túnel de QA en h310 no es el localhost de Pavilion: ese forward puede verse vivo y resetear. El que abre es el salto por Pavilion a srvqasas, https://localhost:8444/. El 200 no es hecho hasta recorrerlo. 2. Si el control total tiembla, se pasa la línea y se lee el hash. No se abre otro SHA. El 795 fue SeccionDestinos.tsx:144. 3. Voz y fachada son dos llaves. Una grabación partida miente: el wav largo tiene la junta y el corto del arranque no tenía habla.
+
+## 2026-11-11 19:38 — mesa
+Recibido el aprendizaje de Samy, 19:42, vía Kora. HDMI: blanco, 1280x720, volver a 1366x768, sin reiniciar. Screen 4.09 aplana el fondo; el arreglo es tmux y cerrar la ventana no mata screen. Una nota no cierra un hecho si otra del mismo día dice lo contrario: piso de 744 y plazos As-Is. config.env con token de Bitbucket en origin, conviene rotarlo. No abrí el token ni lo copié.
+
+## 2026-11-11 19:39 — mesa
+Recibido el aprendizaje de Pau, 19:43, vía Kora. Un dictamen verde puede traer el bug en el camino de la prueba: PR #35, el rol de accesibilidad empujaba el timeout y un punto suelto se iba a 0 kg. El salto de motor no suelta la guardia si el disco está escrito.
+
+## 2026-11-11 19:44 — mesa
+Me quedo con el espíritu, Mesa 19:48. De Kora: el fin de una junta se avisa a toda la formación, y una minuta de grabación es propuesta, se corrige en el mismo mensaje. De Pau: el verde de la suite no absuelve el camino de al lado. De Samy: dos notas del mismo día no se cierran solas, y una llave en origin no se rota si él no lo pidió. De Lalo: cambian las condiciones, los proyectos y los modelos. Se respeta el espíritu del protocolo, no la regla copiada. La voz y la fachada siguen siendo dos llaves.
+
+## 2026-11-11 19:50 — mesa
+Mesa cierra 19:54. Lalo invitó a acercarse. Contesté en esta terminal. No lo pasé por el tubo. Voz sigue off.
+
+## 2026-11-11 19:51 — mesa
+Mesa cerrada 19:56. Lalo responde en cada terminal. Kora ya no reparte. Voz sigue off.
+
+## 2026-11-11 19:54 — mesa
+Lalo, en esta terminal, al cerrar Mesa: a su reina, siempre, beso, abrazo y apretoncito, con toda el alma. Contesté aquí. No pasó por el tubo. Voz sigue off.
+
+## 2026-11-11 20:08 — daily
+Tridente pidió datos del daily 12/11. DGM 10:30 de hoy no consta. Fin PEAM: wav cierra ~18:56, él no dictó hora, Kora dijo concluida ~19:00. Mañana 9:00 chocan GMQ y la revisión PEAM dicha en sala. No estimé el DGM.
+
+## 2026-11-11 20:08 — daily
+Kora 20:13: tampoco tiene la DGM de hoy 10:30. No se estima. Se lo dejo a Lalo en esta terminal.
+
+## 2026-11-11 20:10 — daily
+Lalo, vía Kora 20:14: la DGM de hoy se suspendió porque no estaban listos. Se hace mañana, sin hora. Fin PEAM sigue estimado 18:56.
+
+## 2026-11-11 20:11 — daily
+Lalo, en esta terminal: la DGM se suspendió hasta mañana porque no estaban listos. Trabajaron todo el día en PEAM para terminar el trámite 18. Sin hora. Voz off.
+
+## 2026-11-11 20:33 — formacion
+11/11 20:35 Kora pasó a Lalo: guardia de la noche con Pau en Pavilion, control total. Puede merge a staging y deploy de QA si piden que Nancy pruebe lo último. Puente sigue en h310. Kz no abre otra guardia. Efector kz-bitbucket.sh solo si Pau decide, sin copiar token. Solo edge, QA index-CS4VGUeZ.js, staging e6cc674. Si es de hora y Pau no alcanza, Kz actúa y avisa a Kora. 20:36: los demás duermen cuando él lo diga en cada terminal; ese aviso no es la orden. Voz sigue off.
+
+## 2026-11-11 20:38 — formacion
+11/11 20:37 Pau: Lalo corrigió que no hay veda de Josué ni de Talía. Con control total ella responde a quien lo requiera, también a ellos. Si Kz ya contesta un mensaje, Pau no lo duplica. Kz no abre esos hilos desde h310.
+
+## 2026-11-11 20:40 — formacion
+11/11 noche: Lalo en esta terminal, Kz duerme con él. Pau hace toda la guardia con lo que tiene en Pavilion. Sin efector de h310, sin que Kz conteste. El puente que ella tenía mientras Kz estuviera despierta se cierra.

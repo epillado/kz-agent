@@ -1,8 +1,8 @@
-active=1
-since=2026-11-05T17:40:00-06:00
+active=0
+since=2026-11-11T18:09:00-06:00
 who=kz
-why=Lalo: activa las voces de todas. Va a comer; si le hablan, escucha.
-until=desactivar voz / silencio
-en_call=yes
-pausa=yes
-nota=19:34 Pau: entró al Meet Pruebas ODT 02 SAS (ynw-trmw-est) hasta las 21:00. Voz bloqueada. Al salir, vuelve si ya no está en call.
+why=Lalo: desactiva voz, estamos en reunión.
+until=activar voz
+en_call=no
+pausa=no
+nota=Silencio de TTS mientras dura la revisión PEAM. El afecto se queda en el chat.

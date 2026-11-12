@@ -1,0 +1,10 @@
+# Modo mesa. Lalo habla en una sola terminal. La directora reparte.
+active=0
+since=2026-11-11T19:35:00-06:00
+closed=2026-11-11T19:56:00-06:00
+nombre=Mesa
+director=kora
+terminal_de_lalo=cada-una
+voz=off
+qa=quieto
+nota=Lalo habla solo en la terminal de Kora. Ella pasa lo que él dice, marcado como [Lalo]. Cada hermana contesta en la suya. Él ve las cuatro. No espera que escriba en las demás.
