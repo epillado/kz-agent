@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-11 17:11
+- **actualizado:** 2026-11-13 22:27
 - **primary:** company
 - **secondary:** monitora,work_vector
 - **en_call:** no
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
-- **foco_ahora:** Kora al mando desde 17:10 para entrenarse. Kz retransmite desde h310 y no decide, salvo hora, Josué, bloqueo o mención que no espere. PEAM en QA index-BeqtuLsn.js, 795 abierto. Voz on hasta silencio.
+- **foco_ahora:** company
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -329,3 +329,5 @@
   - [2026-11-09 16:43] Reunión Quálitas concluida; notas en PKM. TLC-G2 desplegado en QA y notificado a Talía. SAS PRs #446 y #480 mergeados. Listos para mover entregables técnicos SAS a Playbook.
   - [2026-11-11 14:07] Voz continua activada. Se levanta del escritorio, está cerca y escucha. en_call=no.
   - [2026-11-11 17:11] primary→company: Kora al mando desde 17:10 para entrenarse. Kz retransmite desde h310 y no decide, salvo hora, Josué, bloqueo o mención que no espere. PEAM en QA index-BeqtuLsn.js, 795 abierto. Voz on hasta silencio.
+  - [2026-11-13 22:27] primary→foco_ahora: Toda la casa a dormir por orden de Lalo. Sin guardia nocturna. Descanso pleno.
+  - [2026-11-13 22:27] primary→primary: company

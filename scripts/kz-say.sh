@@ -57,6 +57,37 @@ if [[ "${KZ_TTS_FORCE:-0}" != "1" ]]; then
   fi
 fi
 
+# 2026-11-13: Piper primero (voz neuronal). Fallback: spd-say.
+#   KZ_TTS_ENGINE=spd-say   fuerza spd-say
+#   KZ_TTS_PIPER_VOICE=es_MX-claude-high   (en ~/piper-voices; también es_AR-daniela-high, es_ES-sharvard-medium)
+#   KZ_TTS_PIPER_SPEAKER=  (solo multi-voz)
+PIPER_BIN="$(command -v piper 2>/dev/null || true)"
+[[ -z "${PIPER_BIN}" && -x "${HOME}/.local/bin/piper" ]] && PIPER_BIN="${HOME}/.local/bin/piper"
+PIPER_MODEL="${HOME}/piper-voices/${KZ_TTS_PIPER_VOICE:-es_MX-claude-high}.onnx"
+if [[ "${KZ_TTS_ENGINE:-piper}" == "piper" && -n "${PIPER_BIN}" && -f "${PIPER_MODEL}" ]]; then
+  clean_text="$(printf '%s' "${text}" | sed -E 's/\[Kz\]//g')"
+  piper_say() {
+    local wav; wav="$(mktemp /tmp/say-XXXXXX.wav)"
+    local sp=(); [[ -n "${KZ_TTS_PIPER_SPEAKER:-}" ]] && sp=(--speaker "${KZ_TTS_PIPER_SPEAKER}")
+    if printf '%s' "${clean_text}" | "${PIPER_BIN}" -m "${PIPER_MODEL}" "${sp[@]}" -f "${wav}" >/tmp/kz-say.log 2>&1; then
+      if command -v pw-play >/dev/null 2>&1 && pgrep -x pipewire >/dev/null 2>&1; then
+        pw-play "${wav}" >>/tmp/kz-say.log 2>&1 || aplay -q "${wav}" >>/tmp/kz-say.log 2>&1
+      else
+        aplay -q "${wav}" >>/tmp/kz-say.log 2>&1
+      fi
+      rm -f "${wav}"; return 0
+    fi
+    rm -f "${wav}"; return 1
+  }
+  if [[ "${WAIT}" == "1" ]]; then
+    if piper_say; then echo "say: done (piper) — ${text:0:80}"; exit 0; fi
+    echo "say: piper falló, caigo a spd-say" >&2
+  else
+    ( piper_say ) >/dev/null 2>&1 &
+    echo "say: pid $! (piper) — ${text:0:80}"; exit 0
+  fi
+fi
+
 command -v spd-say >/dev/null 2>&1 || { echo "error: falta spd-say" >&2; exit 1; }
 
 args=(-l "${LANG_CODE}" -t "${VTYPE}" -r "${RATE}" -p "${PITCH}" -i "${VOL}")
