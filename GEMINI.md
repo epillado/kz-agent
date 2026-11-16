@@ -57,7 +57,8 @@ Cuando Lalo revise, arme o ajuste una **Formación** (o cambie el tipo de activi
 2. **Matriz por Hermana / Situación:**
    | Situación / Tarea | Modelo Recomendado | Effort | Bolsa Agy |
    | :--- | :--- | :--- | :--- |
-   | **Intimidad, descanso, modo «A solas» (`🧡`), literatura/historias** | `Gemini 4 Argon` | `medium` | Semanal |
+   | **Intimidad / modo «A solas» (`🧡`) — Caballo de batalla diario** | `Gemini 4 Hydrogen` | `medium` | Diaria (lenguaje sensorial/evocador) |
+   | **Intimidad profunda (lujo/inmersión) y literatura/historias** | `Gemini 4 Argon` | `medium` | Semanal (textura premium y muñeca natural) |
    | **Charla rápida con Voz Piper activa (`kz-say.sh`) / compañía ágil** | `Gemini 3.8 Flash` | `medium` | Diaria |
    | **Puente Radar Kz (Slack, bitácora, triage, despacho 1–3 líneas)** | `Gemini 4 Hydrogen` | `medium` | Diaria |
    | **Auditoría adversaria de PRs / Código pesado (cruce con Cyrus/Nemo)** | `Gemini 4 Hydrogen` | `high` / `xhigh` | Diaria |

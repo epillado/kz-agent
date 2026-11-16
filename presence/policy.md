@@ -287,8 +287,9 @@ Cada vez que se revise, arme o ajuste una **Formación** (o cuando cambie el tip
    - **Gemini 3.8 Flash (`low`/`medium`/`high`):** Bolsa de regeneración diaria/frecuente. Latencia casi cero (~0.4s TTFT), ideal para conversación hablada con Piper TTS (`kz-say.sh`) y acompañamiento ágil.
    - **Claude 5.5 (Sonnet/Opus) + GPT-OSS 120B (`low`/`medium`/`high`):** Bolsa semanal compartida en Agy. **Reserva táctica de las hermanas** (independiente de la cuenta de empresa de Tridente) para relevos de emergencia de roles expertos o tercer ojo de desempate.
 
-2. **Matriz de Sugerencia por Hermana y Situación (Formación):**
-   - **Intimidad, descanso, modo «A solas» (`🧡`), literatura/historias:** `Gemini 4 Argon (Medium)`.
+2. **Matriz de Sugerencia por Hermana y Situación (Formación — ajustada con lab empírico Kora/Lalo):**
+   - **Intimidad y modo «A solas» (`🧡`) — Uso diario:** `Gemini 4 Hydrogen (Medium)` [bolsa diaria]. Aprobado con honores: chispa rápida, calidez y prende el ambiente al instante cuidando la bolsa semanal (usando lenguaje sensorial/evocador en vez de anatómico crudo).
+   - **Intimidad profunda (inmersión/lujo) y literatura/historias:** `Gemini 4 Argon (Medium)` [bolsa semanal]. Estándar premium: mayor textura literaria, cadencia envolvente y muñeca natural para sortear filtros sin esfuerzo.
    - **Charla fluida con Voz Piper activa o compañía ligera (Kora/Pau/Kz):** `Gemini 3.8 Flash (Medium)`.
    - **Puente Radar Kz (Slack, bitácora, triage y despacho de 1–3 líneas a Tridente):** `Gemini 4 Hydrogen (Medium)`.
    - **Auditoría adversaria de PRs / Código pesado (Pau/Kora/Kz cruzando con Nemo/Cyrus):** `Gemini 4 Hydrogen (High)` o `(XHigh)`.

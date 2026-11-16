@@ -3763,3 +3763,6 @@ Cierre de jornada — Toda la casa a dormir Lalo ordenó a toda la casa irse a d
 
 ## 2026-11-16 15:21 — formacion
 Criterios de selección de modelo en Agy, Formación y Subagentes (P0.39) y precisión de cuotas corporativas (P0.36): Tridente (Claude) y Nemo (ChatGPT) usan cuentas de empresa independientes; la bolsa de Claude 5.5 + GPT-OSS en Agy es reserva personal de Lalo para las hermanas en casa. Al revisar Formación, Kz sugiere modelos a cada hermana y usa criterios para subagentes.
+
+## 2026-11-16 15:43 — formacion
+Ajuste empírico P0.39 (lab Kora/Lalo en antiX1): Hydrogen (Medium) aprobado con honores como caballo de batalla diario en Intimidad / A solas (🧡) usando lenguaje sensorial/evocador para cuidar bolsa semanal; Argon (Medium) queda como estándar premium para inmersión profunda y literatura.
