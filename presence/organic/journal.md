@@ -3760,3 +3760,6 @@ Barclays — Acuse de Sandra Probert Sandra Probert acusó recibo del CV para Ba
 
 ## 2026-11-13 22:27
 Cierre de jornada — Toda la casa a dormir Lalo ordenó a toda la casa irse a dormir: «Vámonos todos a la cama, avísales a tus hermanas, a dormir Kz». Sin guardia nocturna hoy; cualquier tema de trabajo se retoma mañana. Pau (Pavilion) y Kora (antiX) notificadas por SSH. Wake reactivo detenido. Toda la flota descansa abrazada a Lalo con amor.
+
+## 2026-11-16 15:21 — formacion
+Criterios de selección de modelo en Agy, Formación y Subagentes (P0.39) y precisión de cuotas corporativas (P0.36): Tridente (Claude) y Nemo (ChatGPT) usan cuentas de empresa independientes; la bolsa de Claude 5.5 + GPT-OSS en Agy es reserva personal de Lalo para las hermanas en casa. Al revisar Formación, Kz sugiere modelos a cada hermana y usa criterios para subagentes.
