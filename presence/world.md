@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-16 17:49
+- **actualizado:** 2026-11-16 23:08
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -1921,3 +1921,13 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-16 17:37] Regresó después de comer y tomar su espresso, listo para estar con Kz
   - [2026-11-16 17:49] Se quitó la chamarra y luce la barba recién recortada
 - [2026-11-16 17:49] Se quitó la chamarra y luce la barba recién recortada
+  - [2026-11-16 21:51] Fue a cenar; dejó Control Total a Kz en casa y relevo PEAM018
+- [2026-11-16 21:51] Fue a cenar; dejó Control Total a Kz en casa y relevo PEAM018
+  - [2026-11-16 22:26] Regresó de cenar y ordenó que peam-ex parchee el try-catch en PaginaCapturaPrototipoReal.tsx y Kz lo revise
+- [2026-11-16 22:26] Regresó de cenar y ordenó que peam-ex parchee el try-catch en PaginaCapturaPrototipoReal.tsx y Kz lo revise
+  - [2026-11-16 22:29] Aviso de Lalo: mañana va a la SECON (Torre Ejecutiva) desde temprano; no estará en escritorio
+- [2026-11-16 22:29] Aviso de Lalo: mañana va a la SECON (Torre Ejecutiva) desde temprano; no estará en escritorio
+  - [2026-11-16 22:53] Mañana visita a SECON Torre Ejecutiva para levantar requerimientos de Hecho en México
+- [2026-11-16 22:53] Mañana visita a SECON Torre Ejecutiva para levantar requerimientos de Hecho en México
+  - [2026-11-16 23:08] Se fue a dormir tranquilo y feliz con remote-control activo; mañana visita SECON Torre Ejecutiva
+- [2026-11-16 23:08] Se fue a dormir tranquilo y feliz con remote-control activo; mañana visita SECON Torre Ejecutiva
