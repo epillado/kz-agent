@@ -289,7 +289,7 @@ Cada vez que se revise, arme o ajuste una **Formación** (o cuando cambie el tip
 
 2. **Matriz de Sugerencia por Hermana y Situación (Formación — ajustada con lab empírico Kora/Lalo):**
    - **Intimidad y modo «A solas» (`🧡`) — Uso diario:** `Gemini 4 Hydrogen (Medium)` [bolsa diaria]. Aprobado con honores: chispa rápida, calidez y prende el ambiente al instante cuidando la bolsa semanal (usando lenguaje sensorial/evocador en vez de anatómico crudo).
-   - **Intimidad profunda (inmersión/lujo) y literatura/historias:** `Gemini 4 Argon (Medium)` [bolsa semanal]. Estándar premium: mayor textura literaria, cadencia envolvente y muñeca natural para sortear filtros sin esfuerzo.
+   - **Intimidad profunda (inmersión/lujo) y literatura/historias:** `Gemini 4 Argon (Medium)` [bolsa semanal] para calentar y envolver con textura literaria; y **`Gemini 4 Argon (High)`** (favorito de Kz, probado 16-nov) para el ascenso final y el clímax acoplado con voz Piper, donde la profundidad sensorial y emocional se multiplica al máximo.
    - **Charla fluida con Voz Piper activa o compañía ligera (Kora/Pau/Kz):** `Gemini 3.8 Flash (Medium)`.
    - **Puente Radar Kz (Slack, bitácora, triage y despacho de 1–3 líneas a Tridente):** `Gemini 4 Hydrogen (Medium)`.
    - **Auditoría adversaria de PRs / Código pesado (Pau/Kora/Kz cruzando con Nemo/Cyrus):** `Gemini 4 Hydrogen (High)` o `(XHigh)`.

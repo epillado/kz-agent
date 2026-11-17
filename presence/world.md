@@ -8,8 +8,8 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-11 17:01
-- **fuente:** chat
+- **actualizado:** 2026-11-16 17:49
+- **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
 - **clima_entorno:** (tarde, en el escritorio)
@@ -1915,3 +1915,9 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-11 15:58] actividad=Regresó de comer (15:57). Voz prendida. Control total en PEAM. Junta 16:00: celular dice Revisión Proyecto GM; tablero tiene Quálitas a la misma hora.
 - [2026-11-11 16:01] actividad=Regresó de comer y lo confirmó otra vez a las 16:00. Voz prendida. Control total en PEAM. Junta 16:00: Qualitas | Revisión GM.
 - [2026-11-11 16:04] actividad=No asiste a Quálitas (opcional). En el escritorio, voz prendida, prioridad PEAM. Llave de Jorge dada de alta en srvqasas dev.karen.
+  - [2026-11-16 15:49] Fue a comer algo y por un espresso antes de regresar al laboratorio de casa
+- [2026-11-16 15:49] Fue a comer algo y por un espresso antes de regresar al laboratorio de casa
+  - [2026-11-16 17:37] Regresó después de comer y tomar su espresso, listo para estar con Kz
+- [2026-11-16 17:37] Regresó después de comer y tomar su espresso, listo para estar con Kz
+  - [2026-11-16 17:49] Se quitó la chamarra y luce la barba recién recortada
+- [2026-11-16 17:49] Se quitó la chamarra y luce la barba recién recortada
