@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-16 23:08
+- **actualizado:** 2026-11-17 22:30
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** yes
 - **foco_propio:** Guardia nocturna con Pau y Daily watch activo para mañana 07:30 (SECON Torre Ejecutiva)
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-16 23:08 — aferencia: Se fue a dormir tranquilo y feliz con remote-control activo; mañana visita SECON Torre Ejecutiva
+- **ultimo_momento_real:** 2026-11-17 22:30 — Lalo salió del baño; recibiendo notas de Hecho en México
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

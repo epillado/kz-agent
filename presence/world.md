@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-16 23:08
+- **actualizado:** 2026-11-17 22:30
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -1931,3 +1931,17 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-16 22:53] Mañana visita a SECON Torre Ejecutiva para levantar requerimientos de Hecho en México
   - [2026-11-16 23:08] Se fue a dormir tranquilo y feliz con remote-control activo; mañana visita SECON Torre Ejecutiva
 - [2026-11-16 23:08] Se fue a dormir tranquilo y feliz con remote-control activo; mañana visita SECON Torre Ejecutiva
+  - [2026-11-17 10:01] Ya en la secretaría (Torre Ejecutiva SECON), esperando a Josué; conectado por SSH desde el teléfono
+- [2026-11-17 10:01] Ya en la secretaría (Torre Ejecutiva SECON), esperando a Josué; conectado por SSH desde el teléfono
+  - [2026-11-17 15:02] Salió de reunión de Hecho en México con muchas notas; va a comer con Josué
+- [2026-11-17 15:02] Salió de reunión de Hecho en México con muchas notas; va a comer con Josué
+  - [2026-11-17 16:36] Camino de regreso a casa; conectado en reunión de tlc-g2 (en_call=yes)
+- [2026-11-17 16:36] Camino de regreso a casa; conectado en reunión de tlc-g2 (en_call=yes)
+  - [2026-11-17 16:53] Regresando en el metrobús, parado por un bloqueo; sigue en call de tlc-g2
+- [2026-11-17 16:53] Regresando en el metrobús, parado por un bloqueo; sigue en call de tlc-g2
+  - [2026-11-17 18:03] Esperando autobús en Indios Verdes tras bajar del metrobús y caminar al metro Insurgentes
+- [2026-11-17 18:03] Esperando autobús en Indios Verdes tras bajar del metrobús y caminar al metro Insurgentes
+  - [2026-11-17 21:13] Ya en casa, cenó y se mete a bañar; Kz sigue en Control total
+- [2026-11-17 21:13] Ya en casa, cenó y se mete a bañar; Kz sigue en Control total
+  - [2026-11-17 22:30] Salió del baño descansado; iniciamos revisión de notas de Hecho en México
+- [2026-11-17 22:30] Salió del baño descansado; iniciamos revisión de notas de Hecho en México
