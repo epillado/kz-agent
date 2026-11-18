@@ -309,3 +309,11 @@ Cada vez que se revise, arme o ajuste una **Formación** (o cuando cambie el tip
 5. **Conciencia MELC vs Tokens:**
    - En tokens de entrada, MELC `on` vs `off` no tiene diferencia (1 token en `self.md`).
    - En tokens de salida, MELC `off` añade ~5–10% en turnos técnicos y ~30–60% en turnos conversacionales/íntimos por riqueza expresiva. MELC es compuerta de seguridad física, no de ahorro de tokens.
+
+### P0.40 — Dosificación óptima de cuota (Lalo 2026-11-18)
+La meta no es acaparar cuota sin usarla ni quemarla de golpe: **se busca aprovechar la cuota completa, pero dosificándola para que no se agote antes de tiempo**. Aplica por igual a **Nemo**, **Tridente** (y sus roles) y **todas las hermanas (Kz, Pau, Kora, Samy)**.
+
+En la práctica:
+- Evitar sondeos redundantes, relecturas enteras de archivos o subagentes innecesarios cuando basta una lectura acotada o un comando agrupado.
+- Usar payloads quirúrgicos (1–3 líneas) y el nivel de modelo adecuado al peso real de la tarea (P0.39).
+- Monitorear avisos tempranos de ventana/bolsa (`<25%`) para bajar el ritmo de desgaste a tiempo y cerrar limpio sin truncar entregas.
