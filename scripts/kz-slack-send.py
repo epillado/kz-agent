@@ -36,8 +36,25 @@ except ImportError:
     sys.exit(1)
 
 LOG_PATH = os.path.expanduser("~/kz/presence/slack-outbound.log")
+NO_SLACK_MODE = os.path.expanduser("~/kz/presence/no-slack.mode")
 CACHE_DIR = os.path.expanduser("~/.cache/kz")
 USERS_CACHE = os.path.join(CACHE_DIR, "slack_users.json")
+
+
+def no_slack_active():
+    """Puente Radar apagado en esta caja: no publicar."""
+    return os.path.isfile(NO_SLACK_MODE) or os.environ.get("KZ_NO_SLACK") == "1"
+
+
+def is_dead_parent(message):
+    """Padre borrado: Slack lo deja como tombstone o como mensaje de USLACKBOT."""
+    if not message:
+        return True
+    if message.get("subtype") == "tombstone":
+        return True
+    if message.get("user") == "USLACKBOT":
+        return True
+    return False
 DEFAULT_TEAM = "T06NGHF28D7"
 
 
@@ -285,6 +302,8 @@ class SlackClient:
         # 1. Si hay usuario mencionado, buscar hilos donde participe o haya escrito ese usuario
         if mention_user_id:
             for m in messages:
+                if is_dead_parent(m):
+                    continue
                 thread_ts = m.get("thread_ts") or (m.get("ts") if m.get("reply_count", 0) > 0 else None)
                 if not thread_ts:
                     continue
@@ -304,15 +323,33 @@ class SlackClient:
 
         # 2. Tomar el hilo activo más reciente
         for m in messages:
+            if is_dead_parent(m):
+                continue
             thread_ts = m.get("thread_ts") or (m.get("ts") if m.get("reply_count", 0) > 0 else None)
             if thread_ts:
                 return thread_ts
 
-        # 3. Si no hay hilos explícitos pero hay mensajes en el canal, tomar el último mensaje raíz como hilo
-        if messages:
-            return messages[0].get("ts")
+        # 3. Si no hay hilos explícitos pero hay mensajes en el canal, tomar el último mensaje raíz vivo
+        for m in messages:
+            if is_dead_parent(m):
+                continue
+            if m.get("ts"):
+                return m.get("ts")
 
         return None
+
+    def parent_is_deleted(self, channel_id, thread_ts):
+        """True si el padre del hilo es un tombstone o ya no existe."""
+        res = self.api_call(
+            f"conversations.replies?channel={channel_id}&ts={thread_ts}&limit=1"
+        )
+        if not res.get("ok"):
+            err = res.get("error") or ""
+            return err in {"thread_not_found", "message_not_found", "channel_not_found"}
+        messages = res.get("messages") or []
+        if not messages:
+            return True
+        return is_dead_parent(messages[0])
 
     def send_message(self, target, text, thread_ts=None, force_root=False):
         dest_id, dest_label = self.resolve_destination(target)
@@ -333,11 +370,20 @@ class SlackClient:
             "channel": dest_id,
             "text": text
         }
+        if thread_ts and (dest_id.startswith("C") or dest_id.startswith("G")):
+            if self.parent_is_deleted(dest_id, thread_ts):
+                return (
+                    {"ok": False, "error": "dead_parent"},
+                    dest_id,
+                    dest_label,
+                    thread_ts,
+                )
+
         if thread_ts:
             payload["thread_ts"] = thread_ts
 
         res = self.api_call("chat.postMessage", payload)
-        return res, dest_id, dest_label
+        return res, dest_id, dest_label, thread_ts
 
     def delete_message(self, target, ts):
         dest_id, dest_label = self.resolve_destination(target)
@@ -371,7 +417,7 @@ def check_melc_safety(text, force=False):
         )
 
 
-def log_outbound(who, dest_label, dest_id, text, ok, err=None):
+def log_outbound(who, dest_label, dest_id, text, ok, err=None, thread_ts=None):
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     ts = datetime.now().isoformat()
     entry = {
@@ -379,6 +425,7 @@ def log_outbound(who, dest_label, dest_id, text, ok, err=None):
         "who": who,
         "destination": dest_label,
         "channel_id": dest_id,
+        "thread_ts": thread_ts or "",
         "text": text,
         "status": "ok" if ok else f"error: {err}"
     }
@@ -440,6 +487,12 @@ def main():
         parser.print_help()
         sys.exit(1)
 
+    if no_slack_active():
+        sys.stderr.write(
+            "[NO-SLACK]: presence/no-slack.mode activo (o KZ_NO_SLACK=1). No se publica.\n"
+        )
+        sys.exit(4)
+
     try:
         check_melc_safety(text, force=args.force)
     except ValueError as ve:
@@ -465,13 +518,15 @@ def main():
         print(f"[DRY-RUN] Mensaje: {text}")
         return
 
-    res, ch_id, ch_label = client.send_message(args.to, text, args.thread_ts, force_root=args.force_root)
+    res, ch_id, ch_label, used_thread = client.send_message(
+        args.to, text, args.thread_ts, force_root=args.force_root
+    )
     if res.get("ok"):
-        log_outbound(args.who, ch_label, ch_id, text, True)
+        log_outbound(args.who, ch_label, ch_id, text, True, thread_ts=used_thread)
         print(f"OK: Mensaje enviado a {ch_label} (ts={res.get('ts')})")
     else:
         err = res.get("error", "unknown")
-        log_outbound(args.who, ch_label, ch_id, text, False, err)
+        log_outbound(args.who, ch_label, ch_id, text, False, err, thread_ts=used_thread)
         sys.stderr.write(f"Error al enviar a {ch_label}: {err}\n")
         sys.exit(2)
 

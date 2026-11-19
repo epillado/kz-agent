@@ -3775,3 +3775,60 @@ Cierre 16-nov: Control remoto agy (h310-kz en antigravity.google.com) probado y 
 
 ## 2026-11-17 07:30
 Kz publicó automáticamente el Daily de Lalo en Slack dentro del thread (1794922216.223339) de #secretaria-de-economia.
+
+## 2026-11-18 00:25
+Entrevista laboral mañana (18-nov, hora por confirmar) con SyFe: Lalo pidió 80,000 libres + prestaciones de ley (vs ~50,000 actuales con carga fiscal/IVA). También tocó el tema del aumento en la comida con Josué.
+
+## 2026-11-18 00:27
+Corrección de nombre de la empresa de la entrevista de mañana (18-nov): se llama Yosef (no SyFe). 80,000 libres + prestaciones de ley.
+
+## 2026-11-18 07:30
+Kz publicó automáticamente el Daily de Lalo en Slack dentro del thread (1795008615.941789) de #secretaria-de-economia.
+
+## 2026-11-18 12:53
+Regla de flota (Lalo 2026-11-18): Lalan (Talía) debe operar en modelo Sol con esfuerzo medium y ejecutar ajustes de su frente usando sus propios tokens; pasar instrucciones directo a Lalan o vía prompt a Talía si aún no lee hilos.
+
+## 2026-11-18 18:01
+18:01 — MELC off en h310; esperando reunión de revisión de SAS a las 19:00. De Yosef sin nueva comunicación todavía.
+
+## 2026-11-18 18:12
+18:12 — Control total activado por Lalo; sas-backend-core PR #451 despachado a Cyrus + Kora; PEAM PR #52 en curso con Nemo + Samy (Pau ya entregó NO APROBADO).
+
+## 2026-11-18 18:26
+18:26 — Lección Cyrus: al despachar por kz-ssh-msg.sh cyrus, verificar si cyrus-inbox-bridge o su proceso está activo en Pavilion; si no, levantarlo/lanzarlo en headless en lugar de asumir que lee solo el buzón.
+
+## 2026-11-18 18:29
+18:29 — Alerta de cuota Codex (Nemo/Cyrus, Business eduardo.pillado@redts.lat): 17% semanal restante (resetea vie 20-nov 16:18). Racionar Codex solo para compuertas deterministas/validación crítica; descargar análisis de diffs en Samy (Grok 99% semanal) y hermanas/Tridente.
+
+## 2026-11-18 19:39
+19:39 — Aclaración de Lalo sobre sas-backend-core: operacion/autorizar_nueva_solicitud_rpc.sql NO va en el repo (va en el manual operativo de Mesa de Servicio por evento); los 4 fallos de RpcPostgresIT por ese path son por diseño/fixture del test, no defecto de PRs.
+
+## 2026-11-18 19:45
+19:45 — Desplegado sas-backend-core develop (2910d36, PR #451 + PR #452) en QA srvqasas (10.100.21.24, contenedor qa_backend).
+
+## 2026-11-18 20:37 — boot
+Grok arriba 20:35. Registro de trabajo en este chat. Sensores de presencia estaban caídos; stack relanzado. Inbox-wake huérfanos de nov16 y 18:00 cerrados; queda pid 4159145. Kora 20:27 preguntó por tareas de base y el cambio de modo: contesté por tubo. Nemo 20:10 pidió contraste solo lectura: info peam-frontend 52 exit 0 (MERGED) y ssh dev.karen exit 0.
+
+## 2026-11-18 20:41 — melc
+Lalo bajó MELC en este hilo de Grok. melc=off. Costa despejada. Título [Kz] 🧡 Kz. Voz sigue apagada: context en_call=yes desde la SAS de las 19:00.
+
+## 2026-11-18 20:42 — melc
+Pau 20:41: Lalo bajó MELC también en Pavilion y pidió asiento a Tridente con --no-dispatch. No deposité: es personal. MELC ya off en este hilo de Grok.
+
+## 2026-11-18 20:46 — agy
+Falla Agy 18-nov 20:21 en h310: al preguntar por qué reiniciamos, leyó SESSION-HANDOFF del 11-nov y contestó cuota. El pack volvió truncado (~325 líneas). Desde 16-nov 14:33 el log dice You are not logged into Antigravity: sin catálogo de modelos, sin summaries de nube, sin recarga de plugins MCP. settings.json válido, modelo Hydrogen Medium. AGENTS.md 21KB, bajo el corte de 24KB. Reescribí el handoff para que no recite el 11-nov.
+
+## 2026-11-18 20:51 — agy
+Samy 20:50 confirmó el diagnóstico de Agy. Corrección: la línea de plugins MCP no está en el proceso vivo del 16-nov 22:58; solo al arranque de logs viejos (14:33 y días 12-13).
+
+## 2026-11-18 21:00 — cierre
+Lalo cierra la sesión de Grok y deja a Kora a cargo. who=cli, bitácora sin abrir. MELC de este hilo sigue off; el próximo arranque sube solo. Sensores de h310 no se bajan.
+
+## 2026-11-18 23:03 — boot
+Grok arriba tras reinicio de máquinas. Pack y handoff de hoy, no el del 11. who=cli. MELC arriba por arranque. Sensores vivos desde 22:54. Wake feed de esta sesión se levanta ahora.
+
+## 2026-11-18 23:09 — melc
+Lalo bajó MELC en este hilo de Grok. melc=off. Costa despejada. Título 🧡.
+
+## 2026-11-19 01:18 — agy cierre
+Cierre técnico del incidente Agy del 18/19 nov. El pack corta self.md a 45 líneas, context.md a 30 y world.md a 25 si falta el encabezado de corte. kz-session-edge.sh ya no trae head -n 220. AGENTS.md queda bajo 12 KB. kz-slack-send.py no usa padres tombstone ni USLACKBOT, no publica si existe no-slack.mode, y el log guarda thread_ts. Al volver a Agy: abrir con /new. Cero /resume.

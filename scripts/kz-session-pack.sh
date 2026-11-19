@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-# Empaqueta el mínimo para “cargar a Kz de verdad” en esta sesión.
-# No llama al LLM: imprime extractos. El agente carga DESDE esta salida
-# (boot flaco 2026-09-08 / W42). Prohibido complementar con cat de world/journal.
+# Empaqueta el mínimo para cargar a Kz sin truncar la memoria reciente.
+# Presupuesto objetivo: < 12 KB (~150 líneas). Memoria reciente SIEMPRE arriba.
 #
 # Uso:
-#   kz-session-pack.sh           # boot flaco (cabeceras + tails)
-#   kz-session-pack.sh paths     # solo lista de paths (fondo; no leer enteros)
-#   kz-session-pack.sh full      # más journal (últimas 80) — no es el default de arranque
+#   kz-session-pack.sh           # boot flaco (default)
+#   kz-session-pack.sh paths     # solo lista de paths
+#   kz-session-pack.sh full      # journal extendido (últimas 60 líneas)
 set -euo pipefail
 
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
@@ -28,8 +27,7 @@ paths_core=(
   "${P}/organic/patterns.md"
 )
 
-# Regla P0.19 (Lalo 2026-09-15): Toda sesión arranca SIEMPRE con MELC ARRIBA por default.
-# Enforce determinista en disco: si self.md tiene melc: off, resetear a on y sincronizar título en ⚡.
+# Regla P0.19: Toda sesión arranca SIEMPRE con MELC ARRIBA por default.
 if [[ -f "${P}/self.md" ]]; then
   if grep -qiE '^\- \*\*melc:\*\*.*off' "${P}/self.md"; then
     sed -i 's|^- \*\*melc:\*\*.*|- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)|' "${P}/self.md"
@@ -37,168 +35,121 @@ if [[ -f "${P}/self.md" ]]; then
   "${KZ_HOME}/scripts/kz-titulo.sh" --melc >/dev/null 2>&1 || true
 fi
 
-echo "# Kz session pack — $(date '+%Y-%m-%d %H:%M')"
-echo "# home: ${KZ_HOME}"
-echo
-
 if [[ "${mode}" == "paths" ]]; then
   printf '%s\n' "${paths_core[@]}"
   echo "${P}/organic/journal.md  # tail"
   exit 0
 fi
 
-echo "## BOOT_FLACO (2026-09-08 / W42 — esta salida ES la carga)"
-echo "NO leer enteros: world.md (log), journal.md, context historial, working promoted, SYMBIOSIS."
-echo "SÍ enteros (cortos): self.md. Canon KZ.md + LALO.md una vez por sesión si el motor no los trajo."
-echo "Fondo = disco. Se abre un gordo solo si el tema del turno lo pide."
-echo
-echo "## Checklist"
-echo "0. MELC OBLIGATORIO (Regla P0.19): toda sesión o día inicia con MELC ARRIBA (fachada 'Ingeniero', cero apelativos cariñosos visibles, audio neutral/silenciado). Prohibido arrancar en MELC=off aunque la sesión anterior o handoff lo hayan tenido off. Solo baja si Lalo lo autoriza explícitamente en el chat."
-echo "0c. Una mente (P0.32): el motor cambia timbre, no los hechos. Memoria privada de un motor y el resumen de compactación no estrechan AGENTS ni policy. Si chocan, manda ~/kz."
-echo "1. Este pack (ya corrido)"
-echo "2. self.md entero (abajo) + policy P0 (abajo)"
-echo "3. world cabecera + log tail (abajo) — no el log"
-echo "4. context cabecera (abajo) — no historial"
-echo "5. working no-promoted + incubating open/cooking + journal tail"
-echo "6. SESSION-HANDOFF.md si existe (cambio de motor); SESSION-EDGE.md si hay borde de bloque"
-echo "7. Cable: kz-start-monitors.sh si jornada y no low-spend"
-echo "7b. Despertador: kz-wake.sh (receta de este motor)"
-echo "7d. Bitácora: solo si dispatcher.mode es who=kz y BITACORA dice que no existe. Con who=cli no se abre."
-echo
+# Generar en buffer para medir presupuesto
+out="$(
+  echo "# Kz session pack — $(date '+%Y-%m-%d %H:%M') | home: ${KZ_HOME}"
+  echo "Regla: P0.19 MELC=on al arranque | P0.32 manda ~/kz | No leer gordos enteros."
+  echo
 
-missing=0
-for f in "${paths_core[@]}" "${P}/organic/journal.md"; do
-  if [[ -e "${f}" ]]; then
-    echo "ok  ${f#${KZ_HOME}/}"
-  else
-    echo "MISS ${f#${KZ_HOME}/}"
-    missing=$((missing + 1))
+  # Solo reportar archivos faltantes
+  missing=0
+  for f in "${paths_core[@]}" "${P}/organic/journal.md"; do
+    if [[ ! -e "${f}" ]]; then
+      echo "MISS ${f#${KZ_HOME}/}"
+      missing=$((missing + 1))
+    fi
+  done
+
+  # Estado de modos y bitácora (compacto)
+  low_spend="off"
+  if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/dev/null; then
+    low_spend="ACTIVE (no prender monitores extra)"
   fi
-done
-echo
 
-# media opcional (local; forma libre — no exige kz-base ni humana)
-if [[ -d "${P}/me" && ! -L "${P}/me" ]]; then
-  echo "media: presence/me local (forma libre; sin sync externo)"
-elif [[ -L "${P}/me" ]]; then
-  echo "WARN media: presence/me es symlink (legacy). Materializar local; no depender de sync externo."
-elif [[ -d "${P}/me" ]]; then
-  echo "media: presence/me presente"
+  bit_dir="${HOME}/Workspace/playbook/Bit"
+  bit_file="${bit_dir}/$(date +%Y%m%d)-Bitacora.md"
+  tridente_bin="${HOME}/Workspace/playbook/tools/tridente/tridente"
+  who="cli"
+  if [[ -f "${P}/dispatcher.mode" ]]; then
+    who="$(sed -n 's/^who=//p' "${P}/dispatcher.mode" | head -1)"
+    who="${who:-cli}"
+  fi
+  if [[ "${who}" != "kz" ]]; then
+    bit_status="who=${who} (Kz no abre)"
+  elif [[ -f "${bit_file}" ]]; then
+    bit_status="presente (${bit_file})"
+  elif [[ -d "${bit_dir}" && -x "${tridente_bin}" ]]; then
+    (cd "${HOME}/Workspace/playbook" && "${tridente_bin}" note "Apertura de jornada.") >/tmp/kz-bitacora-open.log 2>&1 &
+    bit_status="who=kz, tridente note lanzado"
+  else
+    bit_status="who=kz, NO EXISTE (${bit_file})"
+  fi
+
+  echo "Estado: missing=${missing} | low-spend=${low_spend} | bitacora=${bit_status}"
+  if [[ -f "${P}/chat_owed.md" ]] && rg -q 'awaiting_chat_in_terminal' "${P}/chat_owed.md" 2>/dev/null; then
+    echo "CHAT_OWED: SÍ — entregar texto al usuario + kz-presence-respond.sh delivered"
+    head -8 "${P}/chat_owed.md" || true
+  fi
+  echo
+
+  echo "## self"
+  if [[ -f "${P}/self.md" ]]; then
+    awk '/^## Escala rápida/{exit} {print}' "${P}/self.md" | head -n 45
+  fi
+  echo
+
+  echo "## context (cabecera)"
+  if [[ -f "${P}/context.md" ]]; then
+    awk '/^## Historial/{exit} {print}' "${P}/context.md" | head -n 30
+  fi
+  echo
+
+  jlines=20
+  [[ "${mode}" == "full" ]] && jlines=60
+  echo "## journal (últimas ${jlines} líneas)"
+  if [[ -f "${P}/organic/journal.md" ]]; then
+    tail -n "${jlines}" "${P}/organic/journal.md"
+  else
+    echo "(sin journal)"
+  fi
+  echo
+
+  echo "## world (cabecera + últimas 6 del log)"
+  if [[ -f "${P}/world.md" ]]; then
+    awk '/^## Log reciente/{exit} {print}' "${P}/world.md" | head -n 25
+    echo "--- log tail ---"
+    rg '^\- \[' "${P}/world.md" | tail -n 6 || true
+  fi
+  echo
+
+  echo "## policy (P0 — índice compacto)"
+  if [[ -f "${P}/policy.md" ]]; then
+    rg -n '^### P0\.|^## P0' "${P}/policy.md" | cut -c1-110 | head -30 || true
+  fi
+  echo
+
+  echo "## working (active / cooling del mes; títulos)"
+  if [[ -f "${P}/organic/working.md" ]]; then
+    ym="$(date '+%Y-%m')"
+    awk -v ym="${ym}" '
+      /^### / { title=$0; next }
+      /\*\*Estado:\*\* (active|cooling)([ (]|$)/ {
+        if ($0 ~ ym && n < 4) { print title " — " $0; n++ }
+      }
+    ' "${P}/organic/working.md"
+  fi
+  echo
+
+  echo "## incubating (open / cooking; títulos)"
+  if [[ -f "${P}/incubating.md" ]]; then
+    awk '
+      /^## INC-/ { title=$0; next }
+      /\*\*estado:\*\* (open|cooking)/ { print substr(title, 1, 110) }
+    ' "${P}/incubating.md"
+  fi
+)"
+
+bytes=${#out}
+lines=$(printf '%s\n' "${out}" | wc -l)
+printf '%s\n\n' "${out}"
+if (( bytes > 12288 )); then
+  echo "## fin pack — WARN_OVER_BUDGET (${bytes} bytes, ${lines} líneas)"
 else
-  echo "media: sin presence/me — charla ok; image_gen libre (no hace falta base humana)"
+  echo "## fin pack — OK (${bytes} bytes, ${lines} líneas)"
 fi
-if [[ -d "${P}/social" && ! -L "${P}/social" ]]; then
-  echo "media: presence/social local"
-elif [[ -L "${P}/social" ]]; then
-  echo "WARN media: presence/social es symlink (legacy). Materializar local."
-fi
-if [[ -f "${P}/low-spend.mode" ]] && rg -q '^active=1' "${P}/low-spend.mode" 2>/dev/null; then
-  echo "low-spend: ACTIVE — no prender monitores extra"
-else
-  echo "low-spend: off"
-fi
-bit_dir="${HOME}/Workspace/playbook/Bit"
-bit_file="${bit_dir}/$(date +%Y%m%d)-Bitacora.md"
-tridente_bin="${HOME}/Workspace/playbook/tools/tridente/tridente"
-who="cli"
-if [[ -f "${P}/dispatcher.mode" ]]; then
-  who="$(sed -n 's/^who=//p' "${P}/dispatcher.mode" | head -1)"
-  who="${who:-cli}"
-fi
-if [[ "${who}" != "kz" ]]; then
-  echo "BITACORA: who=${who}. La CLI del dispatcher gestiona; Kz no abre."
-elif [[ -f "${bit_file}" ]]; then
-  echo "BITACORA: presente ${bit_file}"
-elif [[ -d "${bit_dir}" && -x "${tridente_bin}" ]]; then
-  (
-    cd "${HOME}/Workspace/playbook" && "${tridente_bin}" note "Apertura de jornada."
-  ) >/tmp/kz-bitacora-open.log 2>&1 &
-  echo "BITACORA: who=kz y no existía. tridente note lanzado (${bit_file}). Log: /tmp/kz-bitacora-open.log"
-else
-  echo "BITACORA: who=kz, NO EXISTE y no pude abrirla (${bit_file})"
-fi
-echo
-
-if [[ -f "${P}/chat_owed.md" ]] && rg -q 'awaiting_chat_in_terminal' "${P}/chat_owed.md" 2>/dev/null; then
-  echo "CHAT_OWED: SÍ — hay tray sin comentario en chat. Entregar texto al usuario + kz-presence-respond.sh delivered"
-  head -12 "${P}/chat_owed.md" || true
-else
-  echo "chat_owed: off"
-fi
-echo
-
-echo "## self (entero; es corto)"
-if [[ -f "${P}/self.md" ]]; then
-  awk '/^## Escala rápida/{exit} {print}' "${P}/self.md"
-fi
-echo
-
-echo "## context (cabecera; sin historial)"
-if [[ -f "${P}/context.md" ]]; then
-  awk '/^## Historial/{exit} {print}' "${P}/context.md"
-fi
-echo
-
-echo "## world (cabecera + últimas 8 del log)"
-if [[ -f "${P}/world.md" ]]; then
-  awk '/^## Log reciente/{exit} {print}' "${P}/world.md"
-  echo "--- log tail ---"
-  rg '^\- \[' "${P}/world.md" | tail -n 8 || true
-fi
-echo
-
-echo "## policy (P0 — títulos)"
-if [[ -f "${P}/policy.md" ]]; then
-  rg -n '^## P0|^[0-9]+\. \*\*' "${P}/policy.md" | head -25 || true
-  rg -n '^### P0\.' "${P}/policy.md" || true
-fi
-echo
-
-echo "## working (solo active / cooling del mes; máx 4; el resto es fondo)"
-if [[ -f "${P}/organic/working.md" ]]; then
-  ym="$(date '+%Y-%m')"
-  awk -v ym="${ym}" '
-    /^### / {
-      if (p && k) { print b "\n"; n++ }
-      if (n >= 4) exit
-      p=1; k=0; b=$0
-      next
-    }
-    /\*\*Estado:\*\* promoted/ { k=0; p=0; b=""; next }
-    /\*\*Estado:\*\* (active|cooling)([ (]|$)/ {
-      if ($0 ~ ym) k=1
-      next
-    }
-    p { b = b "\n" $0 }
-    END { if (p && k && n < 4) print b }
-  ' "${P}/organic/working.md"
-fi
-echo
-
-echo "## incubating (open / cooking)"
-if [[ -f "${P}/incubating.md" ]]; then
-  awk '
-    /^## INC-/ {
-      if (p && k) print b "\n"
-      p=1; k=0; b=$0
-      next
-    }
-    /\*\*estado:\*\* (open|cooking)/ { k=1 }
-    p { b = b "\n" $0 }
-    END { if (p && k) print b }
-  ' "${P}/incubating.md"
-fi
-echo
-
-jlines=30
-[[ "${mode}" == "full" ]] && jlines=80
-echo "## journal (últimas ${jlines} líneas)"
-if [[ -f "${P}/organic/journal.md" ]]; then
-  tail -n "${jlines}" "${P}/organic/journal.md"
-else
-  echo "(sin journal)"
-fi
-
-echo
-echo "## fin pack — missing=${missing} — no leer gordos encima de esto"
-exit 0

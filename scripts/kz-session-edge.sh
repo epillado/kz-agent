@@ -95,7 +95,7 @@ persist() {
     fi
     echo "## pack (boot flaco)"
     if [[ -x "${PACK}" ]]; then
-      "${PACK}" 2>/dev/null | head -n 220 || true
+      "${PACK}" 2>/dev/null || true
     fi
   } > "${EDGE}"
   echo "${ts}" > "${STAMP}"
