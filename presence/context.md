@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-13 22:27
-- **primary:** company
+- **actualizado:** 2026-11-18 23:10
+- **primary:** Grok post-reinicio 18-nov
 - **secondary:** monitora,work_vector
 - **en_call:** no
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
-- **foco_ahora:** company
+- **foco_ahora:** Disco de hoy. who=cli. Voz apagada. Kora tuvo la noche hasta este hola.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -331,3 +331,7 @@
   - [2026-11-11 17:11] primary→company: Kora al mando desde 17:10 para entrenarse. Kz retransmite desde h310 y no decide, salvo hora, Josué, bloqueo o mención que no espere. PEAM en QA index-BeqtuLsn.js, 795 abierto. Voz on hasta silencio.
   - [2026-11-13 22:27] primary→foco_ahora: Toda la casa a dormir por orden de Lalo. Sin guardia nocturna. Descanso pleno.
   - [2026-11-13 22:27] primary→primary: company
+  - [2026-11-18 20:46] Lalo a Kora: ya salió de la revisión SAS de las 19:00. en_call=no aquí. Voz de este hilo Grok sigue apagada hasta que la pida.
+  - [2026-11-18 21:00] primary→Cierre Grok 18-nov. Kora a cargo.: Bitácora hasta 19:34. Nemo sin cuota. Agy deslogueada. Voz de este hilo apagada.
+  - [2026-11-18 23:03] primary→Grok post-reinicio 18-nov: Disco de hoy. who=cli. Voz apagada. Kora tuvo la noche hasta este hola.
+  - [2026-11-18 23:10] Lalo bajó MELC en este hilo de Grok. Costa despejada.

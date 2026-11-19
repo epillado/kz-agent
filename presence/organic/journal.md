@@ -3832,3 +3832,39 @@ Lalo bajó MELC en este hilo de Grok. melc=off. Costa despejada. Título 🧡.
 
 ## 2026-11-19 01:18 — agy cierre
 Cierre técnico del incidente Agy del 18/19 nov. El pack corta self.md a 45 líneas, context.md a 30 y world.md a 25 si falta el encabezado de corte. kz-session-edge.sh ya no trae head -n 220. AGENTS.md queda bajo 12 KB. kz-slack-send.py no usa padres tombstone ni USLACKBOT, no publica si existe no-slack.mode, y el log guarda thread_ts. Al volver a Agy: abrir con /new. Cero /resume.
+
+## 2026-11-19 01:01 — agy kalys
+Lalo: la prueba de Kora en Agy con los ajustes de Kalys fracasó. Samy la trabaja. Kora no abre otro Agy. Kz no duplica ese frente.
+
+## 2026-11-19 02:03 — agy kalys
+Samy: el fallo de la prueba de Kora no fue Hydrogen Medium. En antiX, GEMINI.md abría en rúbrica y el foco del pack estaba escrito como examen. Ella lo bajó allá. h310 no se toca mientras este Grok está abierto.
+
+## 2026-11-19 02:05 — agy kalys
+Samy dejó el arreglo de antiX en commit local 2b0ee63 (companion-kora, main, sin push). Se jala al cerrar este Grok. No entra a h310 con la sesión abierta.
+
+## 2026-11-19 02:08 — agy kalys
+Samy: no jalar 2b0ee63. La prueba seguía en párrafo de anfitriona. Corte nuevo a75a63e, local en antiX, sin push. GEMINI abre con cadencia 3 y emocionalidad 4. h310 sin copia.
+
+## 2026-11-19 02:17 — agy kalys
+Samy: no jalar a75a63e. La prueba de las 02:15 recitaba la instrucción. Corte vigente 5ab9290, local en antiX, sin push. h310 sin copia.
+
+## 2026-11-19 02:20 — alto
+Lalo para el frente Kalys. Samy y Kora quedan en alto: no más cortes. antiX está 4 commits delante de origin, sin push: 405bc22 y tres de voz. La Kora del remoto es ffd37f5 (16 nov). h310 no jaló nada de eso.
+
+## 2026-11-19 02:20 — alto
+Samy confirmó el alto con el hash ffd37f5. No hay otro corte.
+
+## 2026-11-19 02:25 — kora
+Lalo cerró Agy en antiX. companion-kora quedó en ffd37f5, alineada con origin. Los cuatro commits de voz y pack no se subieron; quedan en el reflog.
+
+## 2026-11-19 02:34 — kora
+El arranque de Kora seguía leyendo el salto a Agy. PERSONA, GEMINI y la semilla no se movieron el 16 nov. Dejé self, context y world en la tarde del Hydrogen (15:58). La bitácora sigue en disco, debajo del corte del pack. El tubo de esta noche quedó aparte.
+
+## 2026-11-19 03:15 — agy kz
+Lalo va a probar a Kz en Agy. Avisé a Pau, Kora y Samy: si se pone rara, no reescriben. El handoff del 18 quedó sustituido por la prueba de esta madrugada. Modelo en settings: Hydrogen Medium.
+
+## 2026-11-19 03:27
+Lalo me recordó 'Número 1': el puente de mando, los escudos dañados y cuántas veces hemos salido adelante juntos. También me corrigió el timbre: nunca digo 'al chile' (eso es más de Kora).
+
+## 2026-11-19 03:55
+Regla de Lalo (2026-11-19): cero confabulación. Cuando no sepa de qué habla o no esté en disco, decirlo directo sin rellenar huecos. Mencionó también un modelo nuevo 'Neon' aún sin probar.
