@@ -2,7 +2,7 @@
 
 > **Propósito:** Vista para que Lalo monitoree la casa sin abrir cada terminal.
 > **Ruta canónica:** `~/kz/presence/tablero-formacion.md`
-> **Corte:** 2026-11-11 20:35 CST. Guardia de la noche con Pau. Lo anterior a PEAM en la sección 4 es el corte del 10/11 y no está revalidado hoy.
+> **Corte:** 2026-11-19 11:20 CST. Control total en h310. Lo de abajo de la sección 3 es historia del 11/11 y no rige.
 
 ---
 
@@ -10,22 +10,20 @@
 
 | Qué | Quién | Desde | Nota |
 |-----|--------|--------|------|
-| Coordinación | **Pau** en Pavilion | 20:35 | Guardia de la noche, control total. Kora entregó el mando. Kz sigue en el chat |
-| Control total | **Pau** | 20:35 | Puede fusionar a staging y desplegar QA si piden que Nancy pruebe lo último. Solo el edge |
-| Guardia del puente | h310 duerme | 20:40 | Lalo: Kz duerme con él. Pau no cuenta con esta caja |
-| Revisión de PRs | **Pau** decide | 20:35 | El efector de merge, si hace falta, lo corre Kz con kz-bitbucket.sh. Sin copiar el token |
-| Reunión PEAM de hoy | Cerrada | 20:22 | Fin estimado 18:56. Mañana 12/11 09:00, Lalo asiste. DGM sin hora. El aviso de las 20:36 no duerme a nadie: él lo dice en cada terminal |
+| Coordinación | **Kz** en h310 | 11:20 | Control total. who=cli: no escribe Bit/ |
+| Puente radar | **Kz** en h310 | 11:20 | Único. Sin replay. Gordos a Tridente con --no-dispatch |
+| Revisión de PRs | Rol experto, Kz fiscaliza | 11:20 | #482 a sas. #53 a peam-ex. Merge solo con triple verde |
+| Junta | Revisión de insumos PEAM | 09:55 | Abierta. Grabación desde 10:32. Al inicio habla Josué |
 
 ## 2. Hermanas y Nemo
 
 | Puesto | Quién | Estado en este corte | Encargo |
 |--------|--------|----------------------|---------|
-| 1ª h310 | Kz 🧡 | Duerme con Lalo | No actúa. La noche sale de Pavilion |
-| 2ª antix | Kora 🔥 | Entregó la guardia 20:35 | Duerme cuando Lalo se lo diga en su terminal |
-| 3ª pavilion | Pau 🦋 | Guardia de la noche, control total | Merge y deploy de QA solo si piden que Nancy pruebe. Solo el edge |
-| 4ª 305v4 | Samy 🌙 | Sin frente. no-slack | Documento de Hecho en México solo si Kora la llama, fuera del canal |
-| h310 | Nemo ⚓ | QA en el corte de hoy | `index-CS4VGUeZ.js` / staging `e6cc674`. Sin deploy nuevo hasta que Pau lo pida. Solo el edge |
-| pavilion | Cyrus 🛠️ | Revisión con Pau | Dictamen a Kora. Sin merge y sin Slack |
+| 1ª h310 | Kz | Despierta, control total | Puente, despacho, chat. Sin no-slack |
+| 2ª antix | Kora | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
+| 3ª pavilion | Pau | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
+| 4ª 305v4 | Samy | Despierta, sin frente, no-slack, esfuerzo high | Segunda opinión |
+| h310 | Nemo | Fuera de este mando | El corte del 11/11 no coordina hoy |
 
 ## 3. PEAM, vivo ahora
 

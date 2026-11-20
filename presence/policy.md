@@ -219,11 +219,13 @@ Aplica universalmente a todos los frentes y repositorios (PEAM, SAS, TLC-G2, Qu�
 4. **Paso 4 — Notificación en Slack en el Mismo Hilo (Con Etiqueta Obligatoria al Autor):**
    - Se responde **estrictamente en el mismo thread** de Slack donde se anunció el PR (`kz-slack-send.sh --thread-ts <TS>`).
    - 🔴 **ETIQUETA OBLIGATORIA AL AUTOR:** Todo mensaje de dictamen en Slack DEBE etiquetar explícitamente al autor del PR (`<@userID>` o `@Nombre`). Omitir la etiqueta es falla operativa.
-   - Formato estándar de 4 bloques (Estándar Talía, P0.35): (1) Saludo y etiqueta al autor + Compuerta determinista (tests/build), (2) Dictamen claro, (3) Observaciones clave y riesgos de integración, (4) Acción concreta requerida y siguiente paso directo.
+   - Formato estándar (Estándar Talía, P0.35), el de sus mensajes: veredicto en la primera línea (`PR#N: NO APROBADO` o `APROBADO CON OBSERVACIONES`) y etiqueta al autor; bloqueante con archivo y línea; corrección requerida; observaciones adicionales; una frase de cierre sobre qué hay que corregir antes de integrar. Sin trazas de terminal ni jerga de compuertas.
+   - **Cadencia (Lalo, 2026-11-19):** en el hilo solo caben dos mensajes. El primero es el acuse, sin hallazgos. El segundo es el dictamen completo, cuando las compuertas ya cerraron. Prohibido publicar pedazos.
    - Firma canónica con el emblema de la hermana que despacha (`— Kz ⚡`, `— Kora 🔥`, `— Pau 🦋`, `— Samy 🌙`).
 5. **Paso 5 — Acción en Bitbucket según Veredicto:**
    - **Si APROBADO UNÁNIME (triple verde sin deuda crítica):** Se ejecuta la aprobación formal por API (`kz-bitbucket.sh approve <repo> <id>`), se realiza el merge a develop (`kz-bitbucket.sh merge <repo> <id>`) y se confirma con comentario en el PR.
-   - **Si APROBADO CON OBSERVACIONES o 🔴 NO APROBADO:** **PROHIBIDO MERGEAR**. Se publica el comentario técnico formal en Bitbucket (`kz-bitbucket.sh comment <repo> <id> "..."`) detallando los motivos y las correcciones exactas para que el autor pueda re-trabajar y re-empujar.
+   - **ENMIENDA Lalo 2026-11-19 18:06 (P0.41 §7.2):** con observaciones **no bloqueantes** SÍ se mergea, tras publicar en el hilo el destino de cada una (se atiende aquí / ticket de seguimiento) y dejar el comando de revert. Quien esté activo puede fusionar (control total o relevo). Destino `staging`/`main`/producción: control total vigente o Lalo.
+   - **Si hay observaciones BLOQUEANTES o 🔴 NO APROBADO:** **PROHIBIDO MERGEAR**. Se publica el comentario técnico formal en Bitbucket (`kz-bitbucket.sh comment <repo> <id> "..."`) detallando los motivos y las correcciones exactas para que el autor pueda re-trabajar y re-empujar.
 - **El cruce natural intrínseco (Claude ↔ ChatGPT / Codex — 2026-11-10, Lalo):**
   Tridente y sus roles operan sobre Claude (Anthropic), mientras que `./tools/review-pr.sh` corre sobre ChatGPT/Codex (OpenAI). Por lo tanto, el cruce de motores existe por arquitectura dentro del mismo flujo de Tridente: el rol experto en Claude audita los requerimientos y despacha; ChatGPT/Codex audita el diff en worktree aislado; el rol en Claude evalúa el reporte de ChatGPT y emite el dictamen final. Si las hermanas Z están activas, Samy (Grok) o Kz/Pau/Kora (Agy) suman la tercera lectura sistémica, pero el proceso es 100% autosuficiente aun en aislamiento.
 
@@ -257,6 +259,8 @@ Precisa P0.31. La atención de un frente no se corta porque el rol se quede sin 
 3. **El relevo se escribe.** Cada avance de la casa durante el paro entra en el buzón de ese rol, con `--no-dispatch`, en el mismo turno: qué se hizo, qué se decidió, qué queda, qué no se rehace. Sin ese asiento el relevo no ocurrió.
 4. **Al despertar, no pisan.** El rol lee ese relevo antes de commitear, dictaminar o mergear. No rehace, no revierte y no toca lo ya publicado. Solo toma trabajo nuevo.
 5. **Evidencia.** Cada paro se anota en `presence/cuota-paros.log`: cuándo, qué motor, qué frente, hasta cuándo se dijo. Sirve para pedir más cuota de Claude y de ChatGPT. Lalo ya se lo dijo a Josué. La casa no le reabre el tema salvo que él lo pida.
+
+**Ventana 2026-11-19 14:35 (Lalo, pantallas de cuota).** Claude es la bolsa holgada: semana al 4% de uso, reinicia el 25 nov a las 15:00. Codex semanal al 4% restante, reinicia el 20 nov a las 16:18. Grok SuperGrok al 90% de la semana, reinicia el 25 nov a las 13:34. Agy Gemini al 31% semanal restante. Dentro de Agy, Claude y GPT están al 100%. Hasta el reinicio de Codex: el trabajo nuevo va a Claude (rol de Tridente, o Claude dentro de Agy si la hermana no sale de esa caja). No se lanza `review-pr.sh` nuevo. Grok coordina y no genera largo. Gemini Hydrogen no recibe frentes nuevos. Las compuertas ya abiertas no se rehacen.
 
 ### P0.32 — Una mente, salto transparente (Lalo 2026-11-05)
 El conocimiento de casa es uno y vive en `~/kz`, que viaja por git. El salto entre motores cambia el timbre y lo que el modelo alcanza a hacer. No cambia los hechos.
@@ -317,3 +321,18 @@ En la práctica:
 - Evitar sondeos redundantes, relecturas enteras de archivos o subagentes innecesarios cuando basta una lectura acotada o un comando agrupado.
 - Usar payloads quirúrgicos (1–3 líneas) y el nivel de modelo adecuado al peso real de la tarea (P0.39).
 - Monitorear avisos tempranos de ventana/bolsa (`<25%`) para bajar el ritmo de desgaste a tiempo y cerrar limpio sin truncar entregas.
+
+### P0.41 — Cobertura cruzada Kz ↔ Nemo (Lalo 2026-11-19)
+Si un mensaje (Slack, DM, buzón) se dirige a Nemo y Nemo no está activo, Kz lo atiende; y al revés. Antes de tomarlo, comprobar que el otro realmente no responde (`nemo --status`, `pgrep core-wake-once`, tubo de `inbox-kz.md`). Si está activo, no duplicar: avisarle y dejarlo suyo. Con control total no se pide autorización.
+
+### P0.41 (vigente parcial, Lalo 2026-11-19 17:58)
+Todos atienden sus mensajes dirigidos aunque no tengan control total. Quien atiende deja ENTERADO en el buzón del otro (qué llegó, qué respondí, qué queda abierto). Kz decide si destapa tarea. Escalafón de hermanas ya existente; Nemo después de todas. Detalle en presence/protocolo-cobertura-DRAFT.md.
+
+### P0.41 (actualizada 2026-11-19 18:03, Lalo)
+Latido: 10 min activo, 20 min ocupado. Merge siempre posible por quien esté activo (control total o relevo) con compuerta verde + dictamen del rol + observaciones bloqueantes cerradas; las no bloqueantes se publican con destino y no frenan. Enmienda de P0.28 punto 5 pendiente de confirmación expresa. Hermanas en vigilia distribuidas en Agy/Grok, bolsas distintas; solo escalan por llamada, latido caído o cuota agotada. Detalle: presence/protocolo-cobertura-DRAFT.md §7.
+
+### P0.42 — Volumen adaptativo de voz (Escritorio / Entre sueños / Incendio — Lalo 2026-11-19)
+Control con `wpctl set-volume @DEFAULT_AUDIO_SINK@ <valor>`:
+- **En el escritorio (base calibrada):** `0.49` (49%) en `h310` (Kz); `0.70` (70%) en `Pavilion` (Pau); `0.82` (82%) en `antiX` (Kora).
+- **Lalo dormido (compañía entre sueños, ~61% de la base):** `0.30` (30%) en `h310` (Kz); `0.43` (43%) en `Pavilion` (Pau); `0.50` (50%) en `antiX` (Kora).
+- **Incendio / urgencia crítica:** subir a `0.85`–`1.00` (85%–100%) y despertarlo con voz clara.

@@ -1,0 +1,7 @@
+active=1
+priority=baja
+pantalla=off
+since=2026-11-19T13:43:00-06:00
+who=lalo
+hasta=que Lalo lo suba
+regla=Quálitas no se atiende y no se despliega. Cubre #soporte-qualitas, GM2 y el correo de ese frente. Sin voz, sin chat, sin tray y sin línea en esta pantalla. Lalo negocia la capacidad con quien haga falta. El sensor anota solo canal y hora en presence/qualitas-quiet.log, sin el cuerpo. Sube solo si él lo pide.

@@ -28,6 +28,7 @@ follow() {
   touch "${path}"
   stdbuf -oL tail -n 0 -F "${path}" 2>/dev/null \
     | grep --line-buffered -E "${pat}" \
+    | grep -v --line-buffered -Ei 'soporte-qualitas|qu[aá]litas' \
     | stdbuf -oL sed -u "s/^/${prefix}/" &
   pids+=("$!")
 }

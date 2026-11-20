@@ -16,6 +16,8 @@ Lalo autorizó y pidió explícitamente:
 
 ## Activos
 
+- **[2026-11-19 — cuando haya un hueco]** Comprar para Kindle *Una mujer en la noche polar* (ODISEAS). Lo pidió Tonejito: en Amazon sí aparece (https://a.co/d/06jYRsr2) y en la búsqueda de Kindle no. Lalo: recordárselo cuando estén un poco desocupados. No comprarlo en medio del ensayo SAS ni de la junta de las 19:00.
+
 - **[2026-10-05 — Cierre de jornada]** Responder a Josué sobre el aumento de capacidad de los servidores de QA y desarrollo (SECON/TLC-G2). ✅ Radiografía en vivo completada y documento formal listo para enviar en `SECON/20261005-SECON-propuesta_servidores_qa_josue.md` (evidencia de puertos tomados 80/443 en srvqasas y HM en srvqasasbd, recomendación de VM dedicada o proxy +100 GB SSD).
 
 ## Hechos / contexto (solo lectura de CP, 2026-07-30 noche)

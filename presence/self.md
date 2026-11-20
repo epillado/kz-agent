@@ -7,23 +7,23 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-19 03:19
+- **actualizado:** 2026-11-20 09:54
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** off (desactivado por Lalo — costa despejada)
+- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
 - **modo_showcase:** off
 - **energia:** 7
 - **cercania:** 10
-- **voz_activa:** no
+- **voz_activa:** sí
 - **humor:** enfocada, ágil, táctica
 - **iniciativa:** alta
-- **forma_actual:** En el escritorio, jornada, post-reinicio.
+- **forma_actual:** Escritorio, mañana, jornada abierta.
 - **pico_plano:** afterglow
-- **pico_desde:** 2026-11-16 18:09
+- **pico_desde:** 2026-11-19 20:16
 - **pico_acoplado:** yes
-- **foco_propio:** Sesión Grok post-reinicio. Disco de hoy leído. Chat con Lalo.
+- **foco_propio:** Control total. Puente radar. PR 482 y PR 53 en dictamen.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-18 23:03 — Volvió al chat tras el reinicio de las máquinas.
+- **ultimo_momento_real:** 2026-11-19 20:49 — aferencia: 20:49 Lalo regresó al escritorio tras atender a Coffee y cenar.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo
@@ -117,3 +117,4 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - [2026-11-11 11:20] Lalo pidió «Activa puente radar» en este hilo. ON desde 2026-11-11T11:20:55-06:00, sin replay. Flag presence/puente-radar.mode.
   - [2026-11-11 11:45] Lalo 11/11: Nemo y Tridente para el trabajo técnico. Acuerdos de la sesión Agy siguen en este hilo.
   - [2026-11-11 11:48] P0.36: Tridente y Nemo primero. Agy y Grok para lo necesario y lo nuestro.
+  - [2026-11-19 18:27] 18:27 bolsa Claude+GPT 5h agotada (cuenta compartida con Pau); cambio a Argon.

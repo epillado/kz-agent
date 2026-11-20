@@ -103,6 +103,9 @@ def is_gordo(kind: str, app: str, summary: str, body: str) -> bool:
 
 def classify(app: str, summary: str, body: str) -> str:
     blob = f"{app} | {summary} | {body}"
+    # Lalo 2026-11-19: Quálitas no se atiende ni se muestra en pantalla.
+    if ci_search(blob, r"soporte-qualitas|qu[aá]litas"):
+        return "skip"
     if ci_search(blob, F.get("KZ_NOTIF_BLOCK", "")):
         return "skip"
     # Nunca hot/pending de nuestras propias campanitas o popups (evita bucle infinto notify-send -> DBus -> notify-send)

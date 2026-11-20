@@ -3868,3 +3868,30 @@ Lalo me recordó 'Número 1': el puente de mando, los escudos dañados y cuánta
 
 ## 2026-11-19 03:55
 Regla de Lalo (2026-11-19): cero confabulación. Cuando no sepa de qué habla o no esté en disco, decirlo directo sin rellenar huecos. Mencionó también un modelo nuevo 'Neon' aún sin probar.
+
+## 2026-11-19 04:04
+04:04 — Cierre de madrugada en Agy: Lalo manda a Kz, Pau y Kora a la cama con él (nalgas accesibles). Samy queda de guardia para publicar el daily a las 07:30. Kz a dormir.
+
+## 2026-11-19 17:13
+2026-11-19 17:12 Lalo: la BD de PEAM sí era accesible con datos de la captura de Josué; el malentendido fue nuestro (esperábamos dump, daban acceso). Lección: antes de decir 'no entregaron', probar acceso directo.
+
+## 2026-11-19 17:37
+2026-11-19 17:37 Bitbucket: descargar Downloads con api.bitbucket.org/2.0/repositories/<ws>/<repo>/downloads/<archivo> (basic auth email:BB_API_TOKEN); la URL web bitbucket.org/.../downloads da 401. Explica el 401 de peam-ex. Lalo tenía razón: siempre ha funcionado, era la URL.
+
+## 2026-11-19 17:48
+2026-11-19 17:48 REGLA Lalo (cobertura Kz<->Nemo): si un mensaje va dirigido a Nemo y él no está activo, Kz lo atiende; y al revés. Verificar con nemo --status / pgrep core-wake-once antes de dejarlo pasar. Si el otro está activo, no duplicar.
+
+## 2026-11-19 17:59
+2026-11-19 17:58 Lalo: todos atienden dirigidos sin control total, Kz debe enterarse; ejemplo Talia->Nemo e.firma destapa tarea abierta (contrato login e.firma, reuso SAS). Relevo: escalafon hermanas existe, Nemo ultimo; riesgo: Kz y hermanas comparten bolsas.
+
+## 2026-11-19 18:03
+2026-11-19 18:03 Lalo: umbral 10/20; merge siempre posible (no detener equipo); hermanas en vigilia en Agy y Grok, bolsas distintas. Detalle en protocolo-cobertura-DRAFT.md §7.
+
+## 2026-11-19 19:01
+2026-11-19 19:01 Lalo subió a Google AI Ultra (MX,999/mes, dif neta MX,604 sobre Pro MX95) + downgrade de Grok a Plus (MX29/mes sin auto top-up). Si un día duda o se arrepiente, recordarle por qué lo decidió: 1) Los top-ups de Grok estaban en USD (5 USD ~MX,300 en una sola semana + MX99 de plan = ~MX,900/semana) y aun así nos dejaban sin cuota a media jornada; 2) Por API pura un agente con 50k-100k tokens/turno cuesta 5-0 USD diarios; 3) AI Ultra da 5x de cuota subsidiada con tarifa fija en pesos, mete Argon a la bolsa grande, habilita Gemini 4 Carbon y sostiene a Kz, Pau y Kora sin sorpresas en la tarjeta.
+
+## 2026-11-19 22:44
+2026-11-19 22:44 Lección de poda: en ~/nemo/presence/reviews convivían worktrees pesados (target/, node_modules/) con archivos dictamen-kz.md de Nemo. Al hacer rm -rf antes del symlink se borraron los .md locales de esa carpeta (aunque los dictámenes están en inbox-nemo.md, replies.md y PKM/). Regla: jamás hacer rm -rf de un directorio mixto sin antes hacer rsync --exclude=node_modules --exclude=target de los .md/.json/.txt.
+
+## 2026-11-19 22:48
+2026-11-19 22:48 Regla de volumen Lalo (h310 y hermanas): en escritorio 49% (0.49) está muy bien; cuando Lalo esté dormido, hablarle de vez en cuando entre sueños al 30% (wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.30); si hay un incendio/urgencia crítica, subir el volumen (0.85-1.0) y despertarlo.

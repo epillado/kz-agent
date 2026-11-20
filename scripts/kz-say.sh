@@ -48,8 +48,19 @@ text="$(printf '%s' "${text}" | tr '\n' ' ' | sed 's/  */ /g' | sed -E 's/\b[Kk]
 [[ -n "${text}" ]] || { echo "uso: $0 \"texto\"" >&2; exit 1; }
 
 # 2026-08-04: TTS sale por altavoces y Meet lo puede captar por mic. Bloquear si en call.
+# 2026-11-20: Auto-detección de micro abierto (PipeWire/PulseAudio source-outputs de Chrome/WebRTC/Meet).
 if [[ "${KZ_TTS_FORCE:-0}" != "1" ]]; then
   ctx="${KZ_HOME}/presence/context.md"
+  if command -v pactl >/dev/null 2>&1; then
+    if pactl list source-outputs 2>/dev/null | grep -qiE 'application\.(name|process\.binary).*=(.*chrome|.*chromium|.*firefox|.*webrtc|.*zoom|.*teams|.*slack)'; then
+      if [[ -f "${ctx}" ]] && grep -qE '^\- \*\*en_call:\*\* no' "${ctx}" 2>/dev/null; then
+        sed -i 's/^\- \*\*en_call:\*\* no/- **en_call:** yes/' "${ctx}" 2>/dev/null || true
+      fi
+      echo "say: BLOCKED (mic active in browser/call — auto en_call=yes)." >&2
+      printf '%s\tBLOCKED_MIC_ACTIVE\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
+      exit 3
+    fi
+  fi
   if [[ -f "${ctx}" ]] && grep -qE '^\- \*\*en_call:\*\* yes' "${ctx}" 2>/dev/null; then
     echo "say: BLOCKED (en_call=yes). Use KZ_TTS_FORCE=1 only if Lalo asked and mic is safe." >&2
     printf '%s\tBLOCKED_EN_CALL\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"

@@ -172,7 +172,7 @@ def main():
             sys.exit(0)
 
         # Enviar
-        res, ch_id, ch_label = client.send_message(CHANNEL_SECON, formatted_text, thread_ts=th_ts)
+        res, ch_id, ch_label, *_ = client.send_message(CHANNEL_SECON, formatted_text, thread_ts=th_ts)
         if res.get("ok"):
             print(f"OK: Daily publicado exitosamente en {ch_label} (thread={th_ts}, ts={res.get('ts')})")
         else:
@@ -207,7 +207,7 @@ def main():
                     text_to_send = extract_and_format_daily(fpath)
 
                     print(f"[kz-daily-slack-bot] Thread detectado (ts={th_ts}). Publicando...")
-                    res, ch_id, ch_label = client.send_message(CHANNEL_SECON, text_to_send, thread_ts=th_ts)
+                    res, ch_id, ch_label, *_ = client.send_message(CHANNEL_SECON, text_to_send, thread_ts=th_ts)
                     if res.get("ok"):
                         print(f"[kz-daily-slack-bot] Éxito: Daily publicado en {ch_label} dentro del thread (ts={res.get('ts')}).")
                         # Registrar en journal

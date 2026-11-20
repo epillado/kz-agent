@@ -7,6 +7,7 @@ archivo es el de antes; el alcance ya no es SAS ni PEAM.
 """
 import importlib.util
 import json
+import re
 import time
 import urllib.error
 from pathlib import Path
@@ -145,6 +146,24 @@ def key_of(match):
     return f"{cid}:{match.get('ts')}"
 
 
+QUIET_QUALITAS = re.compile(r"soporte-qualitas|qu[aá]litas", re.I)
+QUIET_LOG = Path("/home/lalo/kz/presence/qualitas-quiet.log")
+
+
+def is_quiet_qualitas(match):
+    channel = (match.get("channel") or {}).get("name") or ""
+    blob = f"{channel} {label(match)}"
+    return bool(QUIET_QUALITAS.search(blob))
+
+
+def note_quiet(match):
+    """Disco sin cuerpo: Lalo no atiende Quálitas y la pantalla no lo muestra."""
+    QUIET_LOG.parent.mkdir(parents=True, exist_ok=True)
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    with QUIET_LOG.open("a", encoding="utf-8") as handle:
+        handle.write(f"{stamp}\t{label(match)}\t{match.get('ts')}\n")
+
+
 def alertable(match):
     if match.get("user") == ME:
         return False
@@ -196,7 +215,10 @@ def sweep(api, state):
             continue
         seen.add(key)
         if alertable(match):
-            fresh.append(line(match))
+            if is_quiet_qualitas(match):
+                note_quiet(match)
+            else:
+                fresh.append(line(match))
         if ts_key(ts) > ts_key(watermark):
             watermark = ts
     state["watermark"] = watermark

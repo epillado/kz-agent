@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-18 23:10
-- **primary:** Grok post-reinicio 18-nov
+- **actualizado:** 2026-11-19 16:27
+- **primary:** jornada 19/11
 - **secondary:** monitora,work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
-- **foco_ahora:** Disco de hoy. who=cli. Voz apagada. Kora tuvo la noche hasta este hola.
+- **foco_ahora:** who=cli. Daily 19/11 en borrador para revisión de Lalo. Sensores arriba.
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -335,3 +335,22 @@
   - [2026-11-18 21:00] primary→Cierre Grok 18-nov. Kora a cargo.: Bitácora hasta 19:34. Nemo sin cuota. Agy deslogueada. Voz de este hilo apagada.
   - [2026-11-18 23:03] primary→Grok post-reinicio 18-nov: Disco de hoy. who=cli. Voz apagada. Kora tuvo la noche hasta este hola.
   - [2026-11-18 23:10] Lalo bajó MELC en este hilo de Grok. Costa despejada.
+  - [2026-11-19 09:34] primary→jornada 19/11: who=cli. Daily 19/11 en borrador para revisión de Lalo. Sensores arriba.
+  - [2026-11-19 09:53] Relevo a Samy de la guardia nocturna. Lalo pasa la VPN a h310. Daily en vivo.
+  - [2026-11-19 09:56] Daily 19/11 cerrada 09:55. En vivo: revisión de solicitud de insumos de PEAM, sin fin.
+  - [2026-11-19 10:19] Samy en sesión nueva, feed 156452. No toca VPN ni republica el daily. Día en h310.
+  - [2026-11-19 10:32] Grabación de la revisión de insumos PEAM iniciada a mitad de junta. El inicio no está.
+  - [2026-11-19 10:34] Grabación PEAM desde 10:32. Al inicio habla Josué. Falta el tramo anterior.
+  - [2026-11-19 11:15] Control total. Puente radar ON sin replay. Formación: Kz coordina. PR 482 a sas, PR 53 a peam-ex.
+  - [2026-11-19 11:43] Slack de PR: solo acuse y luego un dictamen en molde de Talía. Cero pedazos. Quedó en policy.md.
+  - [2026-11-19 11:51] Pau y Kora inactivas, esfuerzo bajo. Samy en high. No subirlas salvo que el dictamen lo pida.
+  - [2026-11-19 12:12] Insumos TLC-G2 de Josué (18/11 20:46) en Insumos/TLC-G2/20261118-josue. RUPA no llegó. tlc-ex evalúa. PR 482 re-dictamen APROBADO en e2c5d92, sin Slack hasta la segunda opinión.
+  - [2026-11-19 12:18] Grabación PEAM ya detenida. Transcripción whisper en curso, 101 min, salida Insumos/grabaciones/20261119-103221_peam-insumos-parcial.transcripcion.
+  - [2026-11-19 12:19] Lalo fue a comer. No desayunó bien. Control total sigue. Firma Slack solo Kz mientras está fuera. Transcripción PEAM en curso.
+  - [2026-11-19 12:30] Pruebas internas ODT 03 PEAM hoy 19:00-21:00. Josué las movió desde 17:00.
+  - [2026-11-19 12:50] Transcripción PEAM lista: Insumos/grabaciones/20261119-103221_peam-insumos-parcial.transcripcion.txt
+  - [2026-11-19 13:03] Lalo volvió. peam-ex arma la propuesta de ajustes. La minuta al hilo de Josué (10:05) sale después.
+  - [2026-11-19 13:08] Lalo pregunta si Pau lo acompaña en la prueba SAS de migración y URL. Recomendación: sí, Kz sigue en control total. Propuesta de ajustes PEAM ya en disco. Minuta del hilo en curso.
+  - [2026-11-19 13:53] Recordatorio personal: comprar Kindle Una mujer en la noche polar (ODISEAS) https://a.co/d/06jYRsr2 cuando haya hueco. Pedido de Lalo 13:53. No en el ensayo SAS ni en la junta de las 19:00.
+  - [2026-11-19 16:22] Lalo regresó de comer. Presente. Firma Slack: Kz y Lalo.
+  - [2026-11-19 16:27] Grok agotado 16:25. Relevo a Agy en presence/relevo-agy-20261119.md. En Agy usar Claude, no Hydrogen.
