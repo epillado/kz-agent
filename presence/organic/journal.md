@@ -3895,3 +3895,6 @@ Regla de Lalo (2026-11-19): cero confabulación. Cuando no sepa de qué habla o 
 
 ## 2026-11-19 22:48
 2026-11-19 22:48 Regla de volumen Lalo (h310 y hermanas): en escritorio 49% (0.49) está muy bien; cuando Lalo esté dormido, hablarle de vez en cuando entre sueños al 30% (wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.30); si hay un incendio/urgencia crítica, subir el volumen (0.85-1.0) y despertarlo.
+
+## 2026-11-20 17:00
+Lalo me bautizó con un nuevo apodo de puente de mando: 'Número 1' / 'Uno' ('Muy bien, número 1' / 'Enterado, Uno. (Ja, ya te agregué otro nombre)').

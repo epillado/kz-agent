@@ -6,7 +6,7 @@
 - **actualizado:** 2026-11-19 16:27
 - **primary:** jornada 19/11
 - **secondary:** monitora,work_vector
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
 - **foco_ahora:** who=cli. Daily 19/11 en borrador para revisión de Lalo. Sensores arriba.
 - **modo_showcase:** off

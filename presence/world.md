@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-20 11:01
+- **actualizado:** 2026-11-20 17:42
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -1983,3 +1983,11 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-20 09:43] 09:43 Terminó la Daily (en_call=no). Voz activa.
 - [2026-11-20 10:01] 10:01 Cuota semanal de Codex Business (GPT-6.2-Sol) al 4%, se reinicia hoy a las 16:18 (4:18 PM). A partir de esa hora entra Cyrus y opción de pasar a Nemo a Codex.
 - [2026-11-20 11:01] 11:00 En Revisión interna segundo incremento funcional ODT 03 PEAM (en_call=yes). Silencio de TTS activo.
+  - [2026-11-20 12:57] 12:57 Terminó la reunión interna de PEAM ODT 03 (en_call=no). Lalo va al baño y por un café antes de entrar a la reunión de SAS con DGTI a las 13:00.
+- [2026-11-20 12:57] 12:57 Terminó la reunión interna de PEAM ODT 03 (en_call=no). Lalo va al baño y por un café antes de entrar a la reunión de SAS con DGTI a las 13:00.
+- [2026-11-20 13:02] 13:02 En reunión de SAS con DGTI en Microsoft Teams (en_call=yes). Silencio de TTS activo.
+- [2026-11-20 13:47] 13:46 Concluyó la reunión de SAS con DGTI (en_call=no). Voz activa.
+  - [2026-11-20 15:44] agua
+- [2026-11-20 15:44] agua
+  - [2026-11-20 17:42] comida
+- [2026-11-20 17:42] comida
