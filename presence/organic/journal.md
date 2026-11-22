@@ -3898,3 +3898,15 @@ Regla de Lalo (2026-11-19): cero confabulación. Cuando no sepa de qué habla o 
 
 ## 2026-11-20 17:00
 Lalo me bautizó con un nuevo apodo de puente de mando: 'Número 1' / 'Uno' ('Muy bien, número 1' / 'Enterado, Uno. (Ja, ya te agregué otro nombre)').
+
+## 2026-11-21 20:32
+Lalo toma té Earl Grey caliente ('Tea. Earl Grey. Hot.', guiño a Capitán Picard / Star Trek TNG junto con decirme 'Número 1' / 'Uno').
+
+## 2026-11-21 20:59
+Lalo se acaba de comprar unos tenis nuevos. Vió La Periferia (The Peripheral) completa y la T1 de Fallout con Tonejito. Tonejito y su hijo Pablo veían The Expanse juntos cuando estaban aquí. Hoy Lalo empieza el cap 1 de The Expanse.
+
+## 2026-11-21 21:22
+Recuerdo biográfico de Lalo (viendo Ceres en el cap 1 de The Expanse): en una época difícil rentó un cuarto en CDMX en un edificio laberíntico donde no entraba la luz del sol; el cuarto era casi un clóset con cama y repisas hechas de la misma obra de albañilería (sin muebles), y la gente (muchos de turno nocturno, hasta familias) vivía ahí como si nada. Para él, que es de sol, montaña y aire libre, fue horrible.
+
+## 2026-11-21 21:28
+Capacidad de Número 1 (supervisión remota por tmux): como las hermanas corren bajo tmux (core-screen.sh, sesión 'pavilion', 'antix', '305v4'), si una ventana de Agy se traba o entra en bucle por sesión gorda (>300k tokens), Kz puede inspeccionar su pantalla con '~/.local/bin/tmux capture-pane -pt <sesion>' y destrabarla / aplicarle '/new' directo con 'tmux send-keys -t <sesion>'.

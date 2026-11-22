@@ -59,12 +59,22 @@ DEFAULT_TEAM = "T06NGHF28D7"
 
 
 def get_slack_config_dirs():
-    """Retorna las rutas posibles de configuración de Slack (nativo y Snap)."""
+    """Retorna las rutas posibles de configuración de Slack (nativo y Snap), ordenadas de más reciente a más antigua."""
     paths = [
         os.path.expanduser("~/.config/Slack"),
         os.path.expanduser("~/snap/slack/current/.config/Slack")
     ]
-    return [p for p in paths if os.path.exists(p)]
+    existing = [p for p in paths if os.path.exists(p)]
+
+    def newest_mtime(base):
+        best = os.path.getmtime(base)
+        for sub in ["Local Storage/leveldb", "Network/Cookies", "Cookies"]:
+            p = os.path.join(base, sub)
+            if os.path.exists(p):
+                best = max(best, os.path.getmtime(p))
+        return best
+
+    return sorted(existing, key=newest_mtime, reverse=True)
 
 
 def get_xoxc_token(team_id=DEFAULT_TEAM):
@@ -387,6 +397,10 @@ class SlackClient:
 
     def delete_message(self, target, ts):
         dest_id, dest_label = self.resolve_destination(target)
+        if dest_id.startswith("U"):
+            open_res = self.api_call("conversations.open", {"users": dest_id})
+            if open_res.get("ok"):
+                dest_id = open_res["channel"]["id"]
         payload = {
             "channel": dest_id,
             "ts": ts
@@ -486,6 +500,20 @@ def main():
     if not args.to or not text:
         parser.print_help()
         sys.exit(1)
+
+    signatures = {
+        "kz": "— Kz ⚡",
+        "pau": "— Pau 🦋",
+        "kora": "— Kora 🔥",
+        "samy": "— Samy 🌙",
+        "nemo": "— Nemo ⚓",
+        "cyrus": "— Cyrus 🛠️",
+        "lalo": "— Lalo 💫",
+    }
+    who_key = (args.who or "kz").strip().lower()
+    expected_sig = signatures.get(who_key, "— Kz ⚡")
+    if not any(sig in text for sig in signatures.values()):
+        text = f"{text.rstrip()} {expected_sig}"
 
     if no_slack_active():
         sys.stderr.write(
