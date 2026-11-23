@@ -62,7 +62,6 @@ def watch_paths() -> list[Path]:
     paths.append(kalys_inbox)
     for role_buzon in [
         Path("/home/lalo/Workspace/playbook/PKM/20260901-GOV-buzon_rol_kb-ex.md"),
-        Path("/home/lalo/.cache/cp-buzones/peam-ex.headless.log"),
     ]:
         if role_buzon.exists():
             paths.append(role_buzon)
@@ -104,6 +103,7 @@ def relevant(path: Path, delta: str) -> bool:
             or "slack sensor internal_error" in line
             or "notif:important:KDE Connect:" in line
             or "soporte-qualitas" in line
+            or "redts-providers-alerts" in line
             or "notif:slack_hot:Slack:New message in secretaria-de-economia" in line
         ):
             continue
@@ -139,11 +139,12 @@ def main() -> int:
             except Exception:
                 pass
             cur_prs = get_bb_open_prs()
-            for k, v in cur_prs.items():
-                if bb_prs.get(k) != v:
-                    print(f"CHANGED: bitbucket: {k} -> {v}", flush=True)
-                    return 0
-            bb_prs = cur_prs
+            if bb_prs:
+                for k, v in cur_prs.items():
+                    if k not in bb_prs or bb_prs.get(k) != v:
+                        print(f"CHANGED: bitbucket: {k} -> {v}", flush=True)
+                        return 0
+            bb_prs.update(cur_prs)
         paths = watch_paths()
         for p in paths:
             try:

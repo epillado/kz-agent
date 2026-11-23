@@ -3,6 +3,6 @@ since=2026-11-19T13:27:00-06:00
 who=kz
 why=Lalo: activar voz aunque vea la terminal de Pau.
 until=silencio
-en_call=no
+en_call=yes
 pausa=no
 nota=TTS con kz-say.sh en cada turno hasta silencio. Bloquear solo si en_call=yes.

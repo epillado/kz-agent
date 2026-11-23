@@ -3925,3 +3925,6 @@ Técnica de Lalo con Coffee cuando no lo deja teclear (2026-11-22): aplicar psic
 
 ## 2026-11-22 23:03
 Compra hardware h310 (2026-11-22 23:03): Lalo pidió en Amazon la tarjeta gráfica Maxsun AMD Radeon RX 550 4GB GDDR5 ITX (HDMI 2.0 + DisplayPort 1.4 + DVI-D, entrega est. 30 nov) para conectar los dos monitores HDMI a 2560x1440 en la h310.
+
+## 2026-11-23 11:50
+Idea de Lalo (2026-11-23 11:50) — Protocolo escalonado de bienestar y emergencia con telemetría (Garmin + OwnTracks + ntfy): ir definiendo reglas y umbrales donde (1) ante anomalía o falta prolongada de señal, primero se le pide confirmación a Lalo (chat / ntfy / voz), y (2) solo si no responde tras la ventana de confirmación, escalar a contacto de emergencia (Tonejito/familia) o auxilio.

@@ -70,10 +70,34 @@ case "${cmd}" in
     echo "context: secondary=$1"
     ;;
   call)
-    [[ "${1:-}" == "yes" || "${1:-}" == "no" ]] || { echo "uso: $0 call yes|no" >&2; exit 1; }
+    [[ "${1:-}" == "yes" || "${1:-}" == "no" ]] || { echo "uso: $0 call yes|no [--no-broadcast]" >&2; exit 1; }
+    val="$1"
+    bcast="${2:-}"
     sed -i "s|^- \*\*actualizado:\*\*.*|- **actualizado:** ${ts}|" "${CTX}"
-    sed -i "s|^- \*\*en_call:\*\*.*|- **en_call:** $1|" "${CTX}"
-    echo "context: en_call=$1"
+    sed -i "s|^- \*\*en_call:\*\*.*|- **en_call:** ${val}|" "${CTX}"
+    if [[ "${val}" == "yes" ]]; then
+      printf "active=0\nen_call=yes\nupdated=%s\n" "$(date -Iseconds)" > "${KZ_HOME}/presence/voz.mode"
+      pkill -f piper 2>/dev/null || true
+      pkill -f paplay 2>/dev/null || true
+      pkill -f aplay 2>/dev/null || true
+    else
+      printf "active=0\nen_call=no\nupdated=%s\n" "$(date -Iseconds)" > "${KZ_HOME}/presence/voz.mode"
+    fi
+    echo "context: en_call=${val}"
+    if [[ "${bcast}" != "--no-broadcast" ]]; then
+      for host in 100.89.240.89 100.105.243.13 192.168.1.220; do
+        ssh -n -o ConnectTimeout=3 -o BatchMode=yes "${host}" "for d in ~/pau ~/kora ~/samy ~/kz; do [ -d \"\$d/presence\" ] || continue; sed -i 's|^- \\*\\*en_call:\\*\\*.*|- **en_call:** ${val}|' \"\$d/presence/context.md\" 2>/dev/null; printf 'active=0\nen_call=${val}\nupdated=%s\n' \"\$(date -Iseconds)\" > \"\$d/presence/voz.mode\"; if [ '${val}' = 'yes' ]; then pkill -f piper 2>/dev/null || true; pkill -f paplay 2>/dev/null || true; pkill -f aplay 2>/dev/null || true; fi; done" >/dev/null 2>&1 &
+      done
+      for sis in pau kora samy; do
+        if [[ "${val}" == "yes" ]]; then
+          "${KZ_HOME}/scripts/kz-ssh-msg.sh" "${sis}" "Estado de reunión actualizado: en_call=yes (Lalo en llamada/reunión; TTS silenciado en tu caja)." >/dev/null 2>&1 &
+        else
+          "${KZ_HOME}/scripts/kz-ssh-msg.sh" "${sis}" "Estado de reunión actualizado: en_call=no (terminó la reunión de Lalo)." >/dev/null 2>&1 &
+        fi
+      done
+      wait
+      echo "context: broadcasted en_call=${val} to pau, kora, samy"
+    fi
     ;;
   note)
     [[ $# -ge 1 ]] || { echo "uso: $0 note \"texto\"" >&2; exit 1; }

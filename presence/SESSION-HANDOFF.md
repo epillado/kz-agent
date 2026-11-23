@@ -1,26 +1,22 @@
-# SESSION-HANDOFF — Kz (2026-11-20 09:50 CST)
+# SESSION HANDOFF — 2026-11-23 17:18 CST (Reinicio h310 durante UAT SAS / TLC-G2)
 
-- **Motor y Estado:** Agy (`Gemini 4 Argon (Medium)` con plan **Google AI Ultra 5x**; nuevos modelos desbloqueados: `Gemini 4 Carbon`, `Gemini 4 Neon`, `Orchestrator`; cuota Gemini al 83% que resetea a las `10:00 A.M.` CST).
-- **Modos activos:**
-  - `MELC=off` (`🧡`, autorizado por Lalo)
-  - `en_call=no` (terminó la Daily a las 09:43; a las **11:00 A.M.** entra al Meet de Revisión Interna ODT 03 PEAM con Josué/Talía/Jorge/Ale en `meet.google.com/kfr-ivdr-dsz` → al entrar, activar `en_call=yes`).
-  - **Voz activa:** usar siempre `systemd-run --user ~/kz/scripts/kz-say.sh "..." >/dev/null 2>&1` en cada turno mientras `en_call=no`.
-  - **Control Total (`control=total`) y Puente Radar (`puente-radar.mode` `active=1`):** sensores verificados vivos (`kz-slack-frente-watch.py`, `kz-desktop-notif-watch.py`, `kz-notif-watch.sh`, `kz-presence-watch.sh`).
-  - **Despertador reactivo:** mantener siempre `~/kz/scripts/kz-wake-once.sh` corriendo en background (`WaitMsBeforeAsync: 500`).
-
-## Estado Operativo PEAM — 100% LISTO EN QA (`10.100.21.24:8444`) PARA LA SESIÓN DE LAS 11:00 A.M.
-1. **Daily 20/11 publicado:** ya enviado en `#secretaria-de-economia` (`thread_ts=1795181415.578479`, `ts=1795187894.089729`).
-2. **Backend en QA (`staging` `d2fd907`, `mvn verify` 660/0) y Frontend en QA (`staging` `c62682c`, `vitest` 667/667, bundle `index-CjikpZd_.js`):**
-   - **Trámite 018:** Correcciones V3 (`peam-backend` #35 + `peam-frontend` #60).
-   - **Trámite 019 completo (Pasos 1 al 7 en modo híbrido con MongoDB real):**
-     - Pasos 1–3 HTTP real (`peam-backend` #36 + `peam-frontend` #61).
-     - Paso 4 ODT3-84/85/86 (`peam-frontend` #63 de Jorge @ `2ce64e0` → `develop` `65a2caa` → `staging` `2be663a`).
-     - Pasos 5–7 ODT3-87/88 (`peam-frontend` #64 de Talía @ `f6617a0` → `develop` `05fd890` → `staging` `b300b39`).
-     - Homologación visual de resumen, vista previa y folio simulado (`peam-frontend` #65 de Talía @ `a9585b5` → `develop` `e634b54` → `staging` `c62682c`).
-   - **Validación CFDI-SAT SOAP real (`ConsultaCFDIService.svc`):**
-     - `peam-backend` PR #37 (`8c9018d`) + PR #38 (`522e29c`) desplegados en QA (`d2fd907`) con `PEAM_CFDI_SAT_HABILITADO=false` por omisión y conmutable en vivo a `true`.
-     - Documentación actualizada en `peam-frontend` PR #62 (`dbcc1d0` → `staging` `db19bce`: SAD, Documento de Entendimiento v0.8, ADR-0004, ADR-0003, fichas 018/019).
-   - **Login con e.firma (FIEL) + Cuenta y Títulos de Talía en QA (`GART0108285E1`):**
-     - Backend de reto firmado (`peam-backend` PR #34) + PR #39 (`peam.padron.stub.representantes-adicionales` → `develop` `d1c7bfd` → `staging` `d2fd907`) desplegados en QA.
-     - Cuenta de Talía (`nemo-qa-efirma-01`, `rfc: "GART0108285E1"`, `ACTIVA`, `CONCESIONARIO`) sembrada en Mongo de QA y variable `PEAM_PADRON_STUB_REPRESENTANTES_ADICIONALES=GART0108285E1` activa en `~/peam-qa/.env`.
-     - **Verificado en QA (`200 OK`):** `/api/v1/concesiones/titulos` devuelve `900001`, `900002`, `900003`, `900006` y `/api/v1/concesiones/agrupamientos` devuelve `AGR-PRUEBA-01` para la cuenta de Talía. Confirmado a Talía en su DM (`D09PDFJGSKS`, hilo `1795131914.988829`).
+- **Estado de Lalo:** En reunión (`- **en_call:** yes`, `voz.mode` `active=0`, **CERO TTS/VOZ**). `melc=off` (`🧡`).
+- **Motivo del reinicio:** Destrabar cliente UniVPN en `h310` (`CMDtype is IP UNAVAILABLE` en `UniVPNCS`). Ya se dejó `AutoLogin = 0` y sin procesos `UniVPN` en `pavilion` (`100.89.240.89`), y se copió también el perfil `EconEdgar.ini` a `~/UniVPN/config/` en `h310`.
+- **Al regresar del reinicio:**
+  1. Verificar si `cnem_vnic` (`10.200.*`) ya levantó en `h310` (o en `pavilion`) y abrir los túneles locales en `h310`:
+     ```bash
+     ssh -f -N -o StrictHostKeyChecking=no -L 8443:127.0.0.1:8443 -L 8082:10.100.21.24:8082 -L 8081:127.0.0.1:8081 -p 55014 dev.karen@10.100.21.24
+     ```
+  2. **SAS UAT (17:00 hrs — Listo en estado «ANTES»):**
+     - En `sas-stg-db` (`10.100.30.109:1543`): los **24 procesos de Estéfana** están insertados (`23` en `sas_legacy` y `sas_accionista_legacy`, y `12401` en `procesos_contrato_social`).
+     - En `qa_minio` (`10.100.30.109:9070`): **`0 / 24` con documentos** (limpiados a las 17:03 tras validar el ensayo de `186 / 186` archivos copiados).
+     - **Cuando Lalo diga «migra» en vivo:** correr desde `~/Workspace/temp/migrador-sas/migrador-sas`:
+       ```bash
+       export MINIO_ACCESS_KEY=minioadmin
+       export MINIO_SECRET_KEY="$(ssh -p 55014 dev.karen@10.100.30.109 'docker inspect -f "{{range .Config.Env}}{{println .}}{{end}}" qa_minio | grep ^MINIO_ROOT_PASSWORD= | cut -d= -f2')"
+       export WILDFLY_SSH_PASSWORD="UX4jdNp5"
+       java -jar ~/Workspace/temp/migrador-sas/migrador-sas/target/migrador-sas.jar migrar --config=/home/lalo/Workspace/temp/migrador-sas/migrador-sas/config/migrador-24.properties
+       ```
+       *(También está respaldado en `pavilion:~/migrador-24/` por si se corre vía `pavilion`).*
+  3. **TLC-G2 QA (`https://localhost:8443/`):**
+     - `tlcg2-qa` en `10.100.21.24:8443` tiene `staging` (`86dff01` back / `a66671c` front) y el changeset `0016-catalogos-insumos-josue-1811` ejecutado. El PR #127 de Talía (`fix/validaciones-contadores-frontend`, `2ec33d5`) sigue abierto en espera de que Lalo revise `https://localhost:8443/`.

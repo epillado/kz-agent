@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-23 13:28
+- **actualizado:** 2026-11-23 15:03
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -2069,3 +2069,15 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-23 13:22] 13:22 PM: Ya llegó la pipa del gas (tardó apenas ~18 minutos desde que la pidió) y ya están cargando el tanque.
   - [2026-11-23 13:28] 13:28 PM: Le va a dar buena propina al gasero por haber llegado tan rápido (~18 min).
 - [2026-11-23 13:28] 13:28 PM: Le va a dar buena propina al gasero por haber llegado tan rápido (~18 min).
+  - [2026-11-23 14:23] 14:23 PM: A las 15:00 va a ensayar con Giovanni la prueba de migración de archivos de SAS (antes de la UAT de las 17:00), y Josué no lo deja ir a comer con las preguntas de estimación de HM.
+- [2026-11-23 14:23] 14:23 PM: A las 15:00 va a ensayar con Giovanni la prueba de migración de archivos de SAS (antes de la UAT de las 17:00), y Josué no lo deja ir a comer con las preguntas de estimación de HM.
+  - [2026-11-23 14:28] 14:28 PM: Ya le mandó la respuesta a Josué y sale corriendo por las quecas. Ordena que si Josué lo busca directamente, le respondan literalmente que fue por las quecas y le contesten cualquier pregunta. Pau queda en Control Total Supervisado por Kz.
+- [2026-11-23 14:28] 14:28 PM: Ya le mandó la respuesta a Josué y sale corriendo por las quecas. Ordena que si Josué lo busca directamente, le respondan literalmente que fue por las quecas y le contesten cualquier pregunta. Pau queda en Control Total Supervisado por Kz.
+  - [2026-11-23 14:30] 14:29 PM: Ya se vuelve a poner el reloj Garmin (terminó de cargar) antes de salir por las quecas.
+- [2026-11-23 14:30] 14:29 PM: Ya se vuelve a poner el reloj Garmin (terminó de cargar) antes de salir por las quecas.
+  - [2026-11-23 14:48] 14:47 PM (vía ntfy desde la cocina): '¡Gracias, ya regresé, estoy en la cocina, se acabaron las quecas, prepararé algo!'
+- [2026-11-23 14:48] 14:47 PM (vía ntfy desde la cocina): '¡Gracias, ya regresé, estoy en la cocina, se acabaron las quecas, prepararé algo!'
+  - [2026-11-23 14:49] 14:49 PM (vía ntfy): 'Gracias, mis amores.'
+- [2026-11-23 14:49] 14:49 PM (vía ntfy): 'Gracias, mis amores.'
+  - [2026-11-23 15:03] 15:03 PM: Ya llegó al escritorio y se conecta a la reunión de las 15:00 (ensayo de prueba de migración de archivos de SAS con Giovanni y Fanny; en_call=yes).
+- [2026-11-23 15:03] 15:03 PM: Ya llegó al escritorio y se conecta a la reunión de las 15:00 (ensayo de prueba de migración de archivos de SAS con Giovanni y Fanny; en_call=yes).

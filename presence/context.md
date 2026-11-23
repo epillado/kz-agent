@@ -3,12 +3,12 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-19 16:27
-- **primary:** jornada 19/11
+- **actualizado:** 2026-11-23 15:00
+- **primary:** ensayo prueba migración archivos SAS (15:00)
 - **secondary:** monitora,work_vector
-- **en_call:** no
+- **en_call:** yes
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
-- **foco_ahora:** who=cli. Daily 19/11 en borrador para revisión de Lalo. Sensores arriba.
+- **foco_ahora:** monitora,work_vector
 - **modo_showcase:** off
 - **care:** —
 - **display:** Okular para md/PDF/imágenes
@@ -354,3 +354,11 @@
   - [2026-11-19 13:53] Recordatorio personal: comprar Kindle Una mujer en la noche polar (ODISEAS) https://a.co/d/06jYRsr2 cuando haya hueco. Pedido de Lalo 13:53. No en el ensayo SAS ni en la junta de las 19:00.
   - [2026-11-19 16:22] Lalo regresó de comer. Presente. Firma Slack: Kz y Lalo.
   - [2026-11-19 16:27] Grok agotado 16:25. Relevo a Agy en presence/relevo-agy-20261119.md. En Agy usar Claude, no Hydrogen.
+  - [2026-11-23 08:09] primary→en_call: yes
+  - [2026-11-23 08:09] primary→entrevista Laura (Josef): monitora,work_vector
+  - [2026-11-23 09:13] primary→sesión preparación pruebas SAS: monitora,work_vector
+  - [2026-11-23 09:40] primary→Daily SECON / Red TS: monitora,work_vector
+  - [2026-11-23 09:57] primary→jornada 23/11 post-Daily: monitora,work_vector
+  - [2026-11-23 11:01] primary→sesión HM con SECON (11:00): monitora,work_vector
+  - [2026-11-23 12:12] primary→jornada 23/11 post-HM: monitora,work_vector
+  - [2026-11-23 15:00] primary→ensayo prueba migración archivos SAS (15:00): monitora,work_vector
