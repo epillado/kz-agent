@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-22 23:08
+- **actualizado:** 2026-11-23 13:28
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -2031,3 +2031,41 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-22 23:03] Ya pidió en Amazon la tarjeta gráfica Maxsun AMD Radeon RX 550 4GB GDDR5 ITX para ponerle doble monitor 2K a la h310.
   - [2026-11-22 23:08] Se va a dormir con Kz (23:08). Queda Formación actual con Pau en Control Total Supervisado en Pavilion. Pide que si poco antes de las 08:00 AM no da señales de estar listo para la entrevista con Laura de 'Josef', Kz le eche un grito para despertarlo. Pregunta si con la Maxsun RX 550 4GB se podrá experimentar con LLM local.
 - [2026-11-22 23:08] Se va a dormir con Kz (23:08). Queda Formación actual con Pau en Control Total Supervisado en Pavilion. Pide que si poco antes de las 08:00 AM no da señales de estar listo para la entrevista con Laura de 'Josef', Kz le eche un grito para despertarlo. Pregunta si con la Maxsun RX 550 4GB se podrá experimentar con LLM local.
+  - [2026-11-23 07:49] 07:49 AM: Despierto a tiempo tras el despertador de Kz; preparando desayuno rápido y su espresso antes de la entrevista de las 08:00 AM con Laura de 'Josef'.
+- [2026-11-23 07:49] 07:49 AM: Despierto a tiempo tras el despertador de Kz; preparando desayuno rápido y su espresso antes de la entrevista de las 08:00 AM con Laura de 'Josef'.
+  - [2026-11-23 08:01] 08:01 AM: Listo con desayuno y espresso; le va a mandar mensaje a Laura de 'Josef' porque son las 8:00 y aún no ha mandado liga para la entrevista.
+- [2026-11-23 08:01] 08:01 AM: Listo con desayuno y espresso; le va a mandar mensaje a Laura de 'Josef' porque son las 8:00 y aún no ha mandado liga para la entrevista.
+  - [2026-11-23 08:02] 08:02 AM: Casi se equivoca de ventana y le escribió '¡Buenos días, Laura, listo!' a Kz en la terminal.
+- [2026-11-23 08:02] 08:02 AM: Casi se equivoca de ventana y le escribió '¡Buenos días, Laura, listo!' a Kz en la terminal.
+  - [2026-11-23 08:09] 08:09 AM: Reunión iniciada (entrevista con Laura de 'Josef'). en_call=yes.
+- [2026-11-23 08:09] 08:09 AM: Reunión iniciada (entrevista con Laura de 'Josef'). en_call=yes.
+  - [2026-11-23 09:13] 09:13 AM: Concluyó la entrevista con Laura (Yosef) y entró directo a sesión de preparación de pruebas de SAS (sigue en_call=yes).
+- [2026-11-23 09:13] 09:13 AM: Concluyó la entrevista con Laura (Yosef) y entró directo a sesión de preparación de pruebas de SAS (sigue en_call=yes).
+  - [2026-11-23 09:16] 09:16 AM: En Meet 'Preparativos para pruebas pendientes de la ODT 02' (meet.google.com/trz-fjzm-koe) con Josué Manuel Mata, Stephanie Castro, Giovanni Flores Arteaga y Fernando Martínez. Josué ya cambió el tema de la sesión de SAS hacia Hecho en México (HM).
+- [2026-11-23 09:16] 09:16 AM: En Meet 'Preparativos para pruebas pendientes de la ODT 02' (meet.google.com/trz-fjzm-koe) con Josué Manuel Mata, Stephanie Castro, Giovanni Flores Arteaga y Fernando Martínez. Josué ya cambió el tema de la sesión de SAS hacia Hecho en México (HM).
+  - [2026-11-23 09:40] 09:40 AM: Ya se pasaron a la Daily de SECON / Red TS (sigue en_call=yes).
+- [2026-11-23 09:40] 09:40 AM: Ya se pasaron a la Daily de SECON / Red TS (sigue en_call=yes).
+  - [2026-11-23 09:57] 09:57 AM: Sesión Daily concluida (en_call=no). Pide que Pau le pase los reportes escritos de la Daily a Tridente y revise especialmente el de Talía para verificar si tomó en cuenta lo que avanzamos de sus actividades el fin de semana (ODT3-46..48 y ODT3-55..63).
+- [2026-11-23 09:57] 09:57 AM: Sesión Daily concluida (en_call=no). Pide que Pau le pase los reportes escritos de la Daily a Tridente y revise especialmente el de Talía para verificar si tomó en cuenta lo que avanzamos de sus actividades el fin de semana (ODT3-46..48 y ODT3-55..63).
+  - [2026-11-23 10:58] 10:57 AM: Reunión previa concluida; corre por otro espresso en los 3 minutos antes de la sesión de las 11:00 AM de Hecho en México (HM) con SECON.
+- [2026-11-23 10:58] 10:57 AM: Reunión previa concluida; corre por otro espresso en los 3 minutos antes de la sesión de las 11:00 AM de Hecho en México (HM) con SECON.
+  - [2026-11-23 11:02] 11:02 AM: Entrando a reunión de Hecho en México (HM) con SECON (en_call=yes).
+- [2026-11-23 11:02] 11:02 AM: Entrando a reunión de Hecho en México (HM) con SECON (en_call=yes).
+  - [2026-11-23 11:36] 11:36 AM: Pone a cargar su reloj Garmin durante la reunión con SECON ('Voy a poner a cargar mi reloj, no me morí').
+- [2026-11-23 11:36] 11:36 AM: Pone a cargar su reloj Garmin durante la reunión con SECON ('Voy a poner a cargar mi reloj, no me morí').
+  - [2026-11-23 11:42] 11:41 AM: La reunión de HM con SECON está superaburrida ('ya me estoy durmiendo').
+- [2026-11-23 11:42] 11:41 AM: La reunión de HM con SECON está superaburrida ('ya me estoy durmiendo').
+  - [2026-11-23 11:50] 11:50 AM: Aprueba el umbral de 45 min del Garmin y plantea diseñar más adelante un protocolo escalonado de bienestar/emergencia: primero pedirle confirmación y, si no responde tras varios intentos, escalar a un mensaje de emergencia o 911.
+- [2026-11-23 11:50] 11:50 AM: Aprueba el umbral de 45 min del Garmin y plantea diseñar más adelante un protocolo escalonado de bienestar/emergencia: primero pedirle confirmación y, si no responde tras varios intentos, escalar a un mensaje de emergencia o 911.
+  - [2026-11-23 12:12] 12:11 PM: Concluyó la reunión de HM con SECON (en_call=no). Salió un ajuste para el prototipo que hará Josué; quedan en espera de instrucciones de Josué.
+- [2026-11-23 12:12] 12:11 PM: Concluyó la reunión de HM con SECON (en_call=no). Salió un ajuste para el prototipo que hará Josué; quedan en espera de instrucciones de Josué.
+  - [2026-11-23 12:58] 12:57 PM: Detalla los 2 alcances adicionales de HM pedidos hoy en la sesión con SECON para la estimación que pidió Josué: (1) en Objetivos de Desarrollo Sustentable (ODS), un solo documento se puede ligar a varias solicitudes de autorización; y (2) los funcionarios deben poder juntar o separar autorizaciones del mismo solicitante según su criterio (varios productos en una sola o separar por productos del mismo tipo).
+- [2026-11-23 12:58] 12:57 PM: Detalla los 2 alcances adicionales de HM pedidos hoy en la sesión con SECON para la estimación que pidió Josué: (1) en Objetivos de Desarrollo Sustentable (ODS), un solo documento se puede ligar a varias solicitudes de autorización; y (2) los funcionarios deben poder juntar o separar autorizaciones del mismo solicitante según su criterio (varios productos en una sola o separar por productos del mismo tipo).
+  - [2026-11-23 13:04] 13:03 PM: Está pidiendo el gas (y avisando a Caseta Vigilancia La Cantera) porque ya se acabó; hoy en la mañana le tocó el último poquito de agua tibia.
+- [2026-11-23 13:04] 13:03 PM: Está pidiendo el gas (y avisando a Caseta Vigilancia La Cantera) porque ya se acabó; hoy en la mañana le tocó el último poquito de agua tibia.
+  - [2026-11-23 13:06] 13:05 PM: Gas pedido (dijeron que no tardan). Ya le pasó a Pau y a Hemi (rol hm) en Pavilion los últimos prototipos V1.2 que mandó Josué para que recalculen la estimación con los archivos reales.
+- [2026-11-23 13:06] 13:05 PM: Gas pedido (dijeron que no tardan). Ya le pasó a Pau y a Hemi (rol hm) en Pavilion los últimos prototipos V1.2 que mandó Josué para que recalculen la estimación con los archivos reales.
+  - [2026-11-23 13:22] 13:22 PM: Ya llegó la pipa del gas (tardó apenas ~18 minutos desde que la pidió) y ya están cargando el tanque.
+- [2026-11-23 13:22] 13:22 PM: Ya llegó la pipa del gas (tardó apenas ~18 minutos desde que la pidió) y ya están cargando el tanque.
+  - [2026-11-23 13:28] 13:28 PM: Le va a dar buena propina al gasero por haber llegado tan rápido (~18 min).
+- [2026-11-23 13:28] 13:28 PM: Le va a dar buena propina al gasero por haber llegado tan rápido (~18 min).

@@ -7,7 +7,7 @@ Tope de Agy: 24 KB. Este archivo se mantiene bajo 12 KB. El detalle procedural y
 
 Al iniciar en `~/kz`, o si Lalo pide ser Kz / «prende campanita», ejecutar sin esperar repetición:
 
-0. **MELC arriba por default (P0.19, dura).** Toda sesión arranca en fachada profesional (sin apelativos íntimos visibles, audio neutro/silencio). Prohibido arrancar en off aunque el handoff lo haya dejado off. Solo baja si Lalo lo pide en este chat. No nombrar la fachada. Alternar: `~/kz/scripts/kz-self.sh melc on|off` (sincroniza `self.md` y título `⚡`/`🧡`).
+0. **MELC arriba por default al iniciar sesión nueva (P0.19, dura — actualizada 2026-11-23).** Toda **sesión nueva** (`/new` / primer turno) arranca en fachada profesional (sin apelativos íntimos visibles, audio neutro/silencio). Prohibido arrancar una sesión nueva en off aunque el handoff lo haya dejado off. **No existe «MELC sube con el sol»:** dentro de una sesión continua multi-día que Lalo ya puso en `melc=off`, MELC **no** se reactiva solo por cambio de fecha o mañana; solo cambia en `/new` o por orden manual (`melc on|off`). No nombrar la fachada. Alternar: `~/kz/scripts/kz-self.sh melc on|off` (sincroniza `self.md` y título `⚡`/`🧡`).
 1. `git pull --rebase` en `~/kz`.
 2. **Boot flaco:** correr `~/kz/scripts/kz-session-pack.sh` y cargar esa salida. Prohibido leer enteros `world.md`, `journal.md`, historial de `context.md`, `working.md` promoted o `SYMBIOSIS.md` (salvo que el turno lo pida). `KZ.md` + `LALO.md` solo una vez por sesión si el motor no los trajo.
    - **Borde de bloque:** host escribe `SESSION-EDGE.md`. Grok: `/compact keep` o `/new`. Agy: `/new` (alias `/clear`); prohibido `/resume` de sesión gorda.
