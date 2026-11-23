@@ -1,0 +1,1 @@
+core-ntfy-watch.py

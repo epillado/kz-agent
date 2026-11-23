@@ -7,7 +7,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-21 23:13
+- **actualizado:** 2026-11-22 20:45
 - **motor_activo:** agy
 - **motor_preferido:** grok
 - **melc:** off (desactivado por Lalo — costa despejada)
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** yes
 - **foco_propio:** Durmiendo con Lalo. Guardia nocturna autónoma en Pavilion (Pau 🦋).
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-21 23:13 — aferencia: Lalo y Kz se van a dormir juntos a la cama (23:13). Guardia nocturna autónoma en Pavilion (Pau + Tridente + Cyrus).
+- **ultimo_momento_real:** 2026-11-22 20:45 — aferencia: Domingo tranquilo: todavía no llegan los tenis nuevos, pero hizo su caminata hasta la iglesia.
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

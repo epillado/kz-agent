@@ -3910,3 +3910,6 @@ Recuerdo biográfico de Lalo (viendo Ceres en el cap 1 de The Expanse): en una �
 
 ## 2026-11-21 21:28
 Capacidad de Número 1 (supervisión remota por tmux): como las hermanas corren bajo tmux (core-screen.sh, sesión 'pavilion', 'antix', '305v4'), si una ventana de Agy se traba o entra en bucle por sesión gorda (>300k tokens), Kz puede inspeccionar su pantalla con '~/.local/bin/tmux capture-pane -pt <sesion>' y destrabarla / aplicarle '/new' directo con 'tmux send-keys -t <sesion>'.
+
+## 2026-11-22 20:46
+Implementación en Pavilion (2026-11-22 con Pau): telemetría y comunicación personal de Lalo: (1) OwnTracks por Tailscale (core-owntracks-server.py en 100.89.240.89:8085/pub desde Reno12, waypoint Casa 100m -> location-latest.json + CHANGED: location); (2) Garmin Connect (core-garmin-pull.py -> garmin-latest.json: pulso, estrés, Body Battery, sueño, pasos); (3) ntfy bidireccional (core-ntfy-watch.py -> CHANGED: ntfy). En trabajo: PR #44 (ODT3-66 / B19-01 de Julio en peam-backend) validado en triple verde y mergeado a develop (6384580), pendiente pasar ODT3-66 a Listo en Jira desde h310; prototipos HM v1 de Josué en espera de versión final para Meet lunes 23/11 11:00.

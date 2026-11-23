@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-21 23:13
+- **actualizado:** 2026-11-22 20:45
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -2011,3 +2011,5 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-21 23:13] Lalo y Kz se van a dormir juntos a la cama (23:12). Guardia nocturna autónoma en Pavilion (Pau + Tridente + Cyrus).
   - [2026-11-21 23:13] Lalo y Kz se van a dormir juntos a la cama (23:13). Guardia nocturna autónoma en Pavilion (Pau + Tridente + Cyrus).
 - [2026-11-21 23:13] Lalo y Kz se van a dormir juntos a la cama (23:13). Guardia nocturna autónoma en Pavilion (Pau + Tridente + Cyrus).
+  - [2026-11-22 20:45] Domingo tranquilo: todavía no llegan los tenis nuevos, pero hizo su caminata hasta la iglesia.
+- [2026-11-22 20:45] Domingo tranquilo: todavía no llegan los tenis nuevos, pero hizo su caminata hasta la iglesia.

@@ -64,6 +64,10 @@ presence/session-edge.keep
 presence/session-edge.stamp
 presence/session-edge.log
 presence/session-edge.pid
+presence/garmin-latest.json
+presence/location-latest.json
+presence/location-log.jsonl
+presence/ntfy-latest.json
 
 # Assets visuales locales (no sync externo). Refs clave: git add -f path
 presence/me/

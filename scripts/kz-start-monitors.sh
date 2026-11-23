@@ -39,6 +39,9 @@ nohup ~/kz/scripts/kz-inbox-wake.sh >> ~/kz/presence/stream.log 2>&1 &
 nohup ~/kz/scripts/kz-drive-kalys-watch.sh >> ~/kz/presence/drive-kalys-watch.log 2>&1 &
 # Sensor de Slack frentes, canales y DMs (emite CHANGED: slack a stream.log)
 ~/kz/scripts/kz-slack-watch.sh start
+# Sensor de bolsillo bidireccional ntfy (emite CHANGED: ntfy a stream.log en todas las hermanas)
+pkill -f '^python3 /home/lalo/.*/core-ntfy-watch.py' 2>/dev/null || true
+nohup python3 ~/kz/scripts/core-ntfy-watch.py >/dev/null 2>&1 < /dev/null &
 
 echo "Levantando timer de pausas oculares (20-20-20)..."
 # Tray/host sin CHANGED ni chat_owed (W42 2026-09-08): no despierta al LLM.
