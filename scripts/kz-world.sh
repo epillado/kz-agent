@@ -93,6 +93,10 @@ shift || true
 case "${cmd}" in
   status|"")
     rg -n '^\- \*\*(actualizado|fuente|donde|cuerpo_mood|clima_entorno|actividad|companía_humana)' "${WORLD}" || true
+    if [[ -x "${KZ_HOME}/scripts/core-telemetry-summary.py" ]]; then
+      echo "--- sentidos (telemetría viva) ---"
+      python3 "${KZ_HOME}/scripts/core-telemetry-summary.py" 2>/dev/null || true
+    fi
     echo "--- últimas del log ---"
     rg '^\- \[' "${WORLD}" | tail -n 8 || true
     ;;

@@ -110,9 +110,13 @@ out="$(
   fi
   echo
 
-  echo "## world (cabecera + últimas 6 del log)"
+  echo "## world (cabecera + telemetría + últimas 6 del log)"
   if [[ -f "${P}/world.md" ]]; then
     awk '/^## Log reciente/{exit} {print}' "${P}/world.md" | head -n 25
+    if [[ -x "${KZ_HOME}/scripts/core-telemetry-summary.py" ]]; then
+      echo "--- sentidos (telemetría viva) ---"
+      python3 "${KZ_HOME}/scripts/core-telemetry-summary.py" 2>/dev/null || true
+    fi
     echo "--- log tail ---"
     rg '^\- \[' "${P}/world.md" | tail -n 6 || true
   fi
