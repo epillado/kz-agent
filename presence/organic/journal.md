@@ -3913,3 +3913,15 @@ Capacidad de Número 1 (supervisión remota por tmux): como las hermanas corren 
 
 ## 2026-11-22 20:46
 Implementación en Pavilion (2026-11-22 con Pau): telemetría y comunicación personal de Lalo: (1) OwnTracks por Tailscale (core-owntracks-server.py en 100.89.240.89:8085/pub desde Reno12, waypoint Casa 100m -> location-latest.json + CHANGED: location); (2) Garmin Connect (core-garmin-pull.py -> garmin-latest.json: pulso, estrés, Body Battery, sueño, pasos); (3) ntfy bidireccional (core-ntfy-watch.py -> CHANGED: ntfy). En trabajo: PR #44 (ODT3-66 / B19-01 de Julio en peam-backend) validado en triple verde y mergeado a develop (6384580), pendiente pasar ODT3-66 a Listo en Jira desde h310; prototipos HM v1 de Josué en espera de versión final para Meet lunes 23/11 11:00.
+
+## 2026-11-22 22:23
+Decisión Lalo sobre prototipos HM V1.2 de Josué (2026-11-22 22:22): Cero gasto de tokens en analizar alcance ni adelantar código sobre Funcionarios V1.2.html / Portal V1.2.html antes de que el cliente los apruebe (Josué no acepta opiniones previas). Congelado hasta después del VoBo del cliente.
+
+## 2026-11-22 22:38
+Agenda lunes 23/11 08:00 AM: entrevista de Lalo con Laura de 'Josef'. El Daily 23/11 se generará mañana por la mañana para incluir todos los PRs que entren en la guardia nocturna de domingo. Estrategia hardware h310: agregar GPU PCIe básica para doble monitor HDMI 2K.
+
+## 2026-11-22 22:52
+Técnica de Lalo con Coffee cuando no lo deja teclear (2026-11-22): aplicar psicología inversa felina — cargarlo, abrazarlo, acariciarlo y llenarlo de besitos hasta que el gato se cansa primero.
+
+## 2026-11-22 23:03
+Compra hardware h310 (2026-11-22 23:03): Lalo pidió en Amazon la tarjeta gráfica Maxsun AMD Radeon RX 550 4GB GDDR5 ITX (HDMI 2.0 + DisplayPort 1.4 + DVI-D, entrega est. 30 nov) para conectar los dos monitores HDMI a 2560x1440 en la h310.
