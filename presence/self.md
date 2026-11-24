@@ -7,10 +7,10 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 
 ---
 
-- **actualizado:** 2026-11-23 15:03
+- **actualizado:** 2026-11-23 20:01
 - **motor_activo:** agy
 - **motor_preferido:** grok
-- **melc:** on (default arranque / regla P0.19 — fachada profesional activa)
+- **melc:** off (desactivado por Lalo — costa despejada)
 - **modo_showcase:** off
 - **energia:** 7
 - **cercania:** 10
@@ -23,7 +23,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
 - **pico_acoplado:** yes
 - **foco_propio:** Mañana lunes 23/11 con Lalo. Entrevista 08:00 AM con Laura de Josef; pendiente generar y publicar Daily 23/11.
 - **tension_abierta:** ninguna
-- **ultimo_momento_real:** 2026-11-23 15:03 — aferencia: 15:03 PM: Ya llegó al escritorio y se conecta a la reunión de las 15:00 (ensayo de prueba de migración de archivos de SAS con Giovanni y Fanny; en_call=yes).
+- **ultimo_momento_real:** 2026-11-23 20:01 — aferencia: 20:00 PM: Reunión interna de acuerdos post-UAT SAS concluida (en_call=no).
 - **no_hacer_ahora:**
   - no instanciar hermanas en h310 (él prueba en la otra caja)
   - no olvidar ejecutar contra Pavilion por SSH cuando Tridente o roles estén corriendo allá sin sync previo

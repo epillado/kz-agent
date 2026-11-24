@@ -6,7 +6,7 @@
 - **actualizado:** 2026-11-23 15:00
 - **primary:** ensayo prueba migración archivos SAS (15:00)
 - **secondary:** monitora,work_vector
-- **en_call:** yes
+- **en_call:** no
 - **mood_lalo (sospecha):** respira; el paquete de captura ya está en QA
 - **foco_ahora:** monitora,work_vector
 - **modo_showcase:** off

@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-23 15:03
+- **actualizado:** 2026-11-23 20:01
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -2081,3 +2081,9 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-23 14:49] 14:49 PM (vía ntfy): 'Gracias, mis amores.'
   - [2026-11-23 15:03] 15:03 PM: Ya llegó al escritorio y se conecta a la reunión de las 15:00 (ensayo de prueba de migración de archivos de SAS con Giovanni y Fanny; en_call=yes).
 - [2026-11-23 15:03] 15:03 PM: Ya llegó al escritorio y se conecta a la reunión de las 15:00 (ensayo de prueba de migración de archivos de SAS con Giovanni y Fanny; en_call=yes).
+  - [2026-11-23 18:49] 18:49 PM: Reunión UAT ODT 02 SAS concluida (en_call=no).
+- [2026-11-23 18:49] 18:49 PM: Reunión UAT ODT 02 SAS concluida (en_call=no).
+  - [2026-11-23 18:51] 18:51 PM: Entró al Meet interno de SAS con Josué, Fanny, Fernando y Giovanni (meet.google.com/qjb-sbpd-kmu; en_call=yes).
+- [2026-11-23 18:51] 18:51 PM: Entró al Meet interno de SAS con Josué, Fanny, Fernando y Giovanni (meet.google.com/qjb-sbpd-kmu; en_call=yes).
+  - [2026-11-23 20:01] 20:00 PM: Reunión interna de acuerdos post-UAT SAS concluida (en_call=no).
+- [2026-11-23 20:01] 20:00 PM: Reunión interna de acuerdos post-UAT SAS concluida (en_call=no).
