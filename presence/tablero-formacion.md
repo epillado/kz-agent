@@ -2,7 +2,7 @@
 
 > **Propósito:** Vista para que Lalo monitoree la casa sin abrir cada terminal.
 > **Ruta canónica:** `~/kz/presence/tablero-formacion.md`
-> **Corte:** 2026-11-19 11:20 CST. Control total en h310. Lo de abajo de la sección 3 es historia del 11/11 y no rige.
+> **Corte:** 2026-11-25 15:48 CST. Control total en h310 (Kz en Sonnet 5.5). Samy arriba. Secciones 3 a 5 son historia del 11/11 y no rigen.
 
 ---
 
@@ -22,7 +22,7 @@
 | 1ª h310 | Kz | Despierta, control total | Puente, despacho, chat. Sin no-slack |
 | 2ª antix | Kora | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
 | 3ª pavilion | Pau | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
-| 4ª 305v4 | Samy | Despierta, sin frente, no-slack, esfuerzo high | Segunda opinión |
+| 4ª 305v4 | Samy | Arriba desde 15:48 (aviso de Lalo), no-slack, motor por confirmar | Segunda opinión |
 | h310 | Nemo | Fuera de este mando | El corte del 11/11 no coordina hoy |
 
 ## 3. PEAM, vivo ahora
