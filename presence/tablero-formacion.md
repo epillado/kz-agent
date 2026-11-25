@@ -21,7 +21,7 @@
 |--------|--------|----------------------|---------|
 | 1ª h310 | Kz | Despierta, Hydrogen Medium, control total | Puente, triage, despacho 1-3 líneas, fiscalización |
 | 2ª antix | Kora | Despierta, GPT-OSS 120B, no-slack | Segunda opinión puntual / desempate neutral |
-| 3ª pavilion | Pau | Cambiando a GPT-OSS 120B, no-slack | Respaldo en Pavilion si Cyrus ocupa apoyo |
+| 3ª pavilion | Pau | Despierta, GPT-OSS 120B (Medium), no-slack | Respaldo en Pavilion si Cyrus ocupa apoyo |
 | 4ª 305v4 | Samy | Arriba, Grok 4.7, no-slack (305v4 5.5 GiB libre) | Segunda opinión ágil y lectura rápida |
 | h310 | Nemo | Activo (Codex Corp) — sin builds pesados en h310 | Slack/Git/Jira; delegar compuertas pesadas a Cyrus (Pavilion) |
 
