@@ -2,7 +2,7 @@
 
 > **Propósito:** Vista para que Lalo monitoree la casa sin abrir cada terminal.
 > **Ruta canónica:** `~/kz/presence/tablero-formacion.md`
-> **Corte:** 2026-11-25 16:18 CST. Control total en h310 (Kz en Hydrogen Medium). Cuota protegida: trabajo técnico a Cyrus/Nemo/Tridente; RAM h310 protegida mandando compuertas pesadas a Cyrus.
+> **Corte:** 2026-11-25 17:14 CST. Control total en h310 (Kz, Kora y Pau en Hydrogen High; Samy en Grok 4.7). Trabajo pesado delegado a Cyrus/Nemo/Tridente; RAM h310 protegida.
 
 ---
 
@@ -19,9 +19,9 @@
 
 | Puesto | Quién | Estado en este corte | Encargo |
 |--------|--------|----------------------|---------|
-| 1ª h310 | Kz | Despierta, Hydrogen Medium, control total | Puente, triage, despacho 1-3 líneas, fiscalización |
-| 2ª antix | Kora | Despierta, GPT-OSS 120B, no-slack | Segunda opinión puntual / desempate neutral |
-| 3ª pavilion | Pau | Despierta, GPT-OSS 120B (Medium), no-slack | Respaldo en Pavilion si Cyrus ocupa apoyo |
+| 1ª h310 | Kz | Despierta, Hydrogen High, control total | Puente, triage, despacho 1-3 líneas, fiscalización |
+| 2ª antix | Kora | Despierta, Hydrogen High, no-slack | Segunda opinión y auditoría normativa |
+| 3ª pavilion | Pau | Despierta, Hydrogen High, no-slack | Respaldo y verificación en Pavilion con Cyrus |
 | 4ª 305v4 | Samy | Arriba, Grok 4.7, no-slack (305v4 5.5 GiB libre) | Segunda opinión ágil y lectura rápida |
 | h310 | Nemo | Activo (Codex Corp) — sin builds pesados en h310 | Slack/Git/Jira; delegar compuertas pesadas a Cyrus (Pavilion) |
 
