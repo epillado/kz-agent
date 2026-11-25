@@ -2,7 +2,7 @@
 
 > **Propósito:** Vista para que Lalo monitoree la casa sin abrir cada terminal.
 > **Ruta canónica:** `~/kz/presence/tablero-formacion.md`
-> **Corte:** 2026-11-25 15:48 CST. Control total en h310 (Kz en Sonnet 5.5). Samy arriba. Secciones 3 a 5 son historia del 11/11 y no rigen.
+> **Corte:** 2026-11-25 16:18 CST. Control total en h310 (Kz en Hydrogen Medium). Cuota protegida: trabajo técnico a Cyrus/Nemo/Tridente; RAM h310 protegida mandando compuertas pesadas a Cyrus.
 
 ---
 
@@ -19,11 +19,11 @@
 
 | Puesto | Quién | Estado en este corte | Encargo |
 |--------|--------|----------------------|---------|
-| 1ª h310 | Kz | Despierta, control total | Puente, despacho, chat. Sin no-slack |
-| 2ª antix | Kora | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
-| 3ª pavilion | Pau | no-slack, inactiva, esfuerzo bajo | No toma el puente. Sube solo si Kz lo pide |
-| 4ª 305v4 | Samy | Arriba desde 15:48 (aviso de Lalo), no-slack, motor por confirmar | Segunda opinión |
-| h310 | Nemo | Fuera de este mando | El corte del 11/11 no coordina hoy |
+| 1ª h310 | Kz | Despierta, Hydrogen Medium, control total | Puente, triage, despacho 1-3 líneas, fiscalización |
+| 2ª antix | Kora | Despierta, GPT-OSS 120B, no-slack | Segunda opinión puntual / desempate neutral |
+| 3ª pavilion | Pau | Cambiando a GPT-OSS 120B, no-slack | Respaldo en Pavilion si Cyrus ocupa apoyo |
+| 4ª 305v4 | Samy | Arriba, Grok 4.7, no-slack (305v4 5.5 GiB libre) | Segunda opinión ágil y lectura rápida |
+| h310 | Nemo | Activo (Codex Corp) — sin builds pesados en h310 | Slack/Git/Jira; delegar compuertas pesadas a Cyrus (Pavilion) |
 
 ## 3. PEAM, vivo ahora
 
