@@ -18,22 +18,17 @@ LATEST_PATH = PRESENCE_DIR / "location-latest.json"
 LOG_PATH = PRESENCE_DIR / "location-log.jsonl"
 
 SISTER_TARGETS = [
-    ("100.96.238.97", "~/kz/presence"),        # h310 (Kz)
-    ("100.89.240.89", "~/companion/presence"),  # pavilion (Pau)
-    ("100.105.243.13", "~/companion/presence"), # antix (Kora)
-    ("192.168.1.220", "~/companion/presence"),  # 305v4 (Samy)
+    ("h310", "~/kz/presence"),             # h310 (Kz)
+    ("pavilion", "~/companion/presence"),  # pavilion (Pau)
+    ("antix", "~/companion/presence"),     # antix (Kora)
+    ("305v4", "~/companion/presence"),     # 305v4 (Samy)
 ]
 
 
 def fanout_to_sisters(latest_json: str | None, transition_line: str | None) -> None:
-    local_hostname = os.uname().nodename
+    local_hostname = os.uname().nodename.lower()
     for host, remote_dir in SISTER_TARGETS:
-        if (
-            (host == "100.96.238.97" and "h310" in local_hostname)
-            or (host == "100.89.240.89" and "pavilion" in local_hostname)
-            or (host == "100.105.243.13" and "antix" in local_hostname)
-            or (host == "192.168.1.220" and "305v4" in local_hostname)
-        ):
+        if host in local_hostname:
             continue
         try:
             if latest_json:
@@ -42,7 +37,7 @@ def fanout_to_sisters(latest_json: str | None, transition_line: str | None) -> N
                         "ssh",
                         "-o", "BatchMode=yes",
                         "-o", "ConnectTimeout=2",
-                        f"lalo@{host}",
+                        host,
                         f"mkdir -p {remote_dir} && cat > {remote_dir}/location-latest.json",
                     ],
                     stdin=subprocess.PIPE,
@@ -56,7 +51,7 @@ def fanout_to_sisters(latest_json: str | None, transition_line: str | None) -> N
                         "ssh",
                         "-o", "BatchMode=yes",
                         "-o", "ConnectTimeout=2",
-                        f"lalo@{host}",
+                        host,
                         f"mkdir -p {remote_dir} && cat >> {remote_dir}/stream.log",
                     ],
                     stdin=subprocess.PIPE,

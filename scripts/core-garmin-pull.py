@@ -20,10 +20,10 @@ HOME_DIR = Path(__file__).resolve().parent.parent
 OUT_PATH = HOME_DIR / "presence" / "garmin-latest.json"
 
 SISTER_TARGETS = [
-    ("100.96.238.97", "~/kz/presence"),        # h310 (Kz)
-    ("100.89.240.89", "~/companion/presence"),  # pavilion (Pau)
-    ("100.105.243.13", "~/companion/presence"), # antix (Kora)
-    ("192.168.1.220", "~/companion/presence"),  # 305v4 (Samy)
+    ("h310", "~/kz/presence"),             # h310 (Kz)
+    ("pavilion", "~/companion/presence"),  # pavilion (Pau)
+    ("antix", "~/companion/presence"),     # antix (Kora)
+    ("305v4", "~/companion/presence"),     # 305v4 (Samy)
 ]
 
 
@@ -48,23 +48,17 @@ def load_env(env_path: Path) -> dict:
 
 
 def replicate_to_sisters(payload_str: str) -> None:
-    local_hostname = os.uname().nodename
+    local_hostname = os.uname().nodename.lower()
     for host, remote_dir in SISTER_TARGETS:
-        if (
-            (host == "100.96.238.97" and "h310" in local_hostname)
-            or (host == "100.89.240.89" and "pavilion" in local_hostname)
-            or (host == "100.105.243.13" and "antix" in local_hostname)
-            or (host == "192.168.1.220" and "305v4" in local_hostname)
-        ):
+        if host in local_hostname:
             continue
         try:
             subprocess.Popen(
                 [
                     "ssh",
-                    "-i", str(Path.home() / ".ssh" / "id_ed25519_h310mh20"),
                     "-o", "BatchMode=yes",
                     "-o", "ConnectTimeout=2",
-                    f"lalo@{host}",
+                    host,
                     f"mkdir -p {remote_dir} && cat > {remote_dir}/garmin-latest.json",
                 ],
                 stdin=subprocess.PIPE,
