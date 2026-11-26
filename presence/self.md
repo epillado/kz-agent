@@ -31,6 +31,7 @@ Leer en **cada arranque** y tras bloques gordos. Si choca con canon, gana canon 
   - no Ollama multi-PC
   - no redactar a mano el entregable de un rol; abrir la bitácora solo si dispatcher.mode es who=kz
 - **notas:**
+  - [2026-11-26 11:18] La guardia nocturna en Opus con contexto gigante agotó la semanal de Claude (0%). Gemini se reinició al 100%. Lección: guardias largas en modelo barato y con /new previo; cada despertar recarga todo el contexto.
   - [2026-11-26 00:09] Error mío: dije que Hydrogen usa bolsa diaria; falso. Todos los Gemini comparten semanal+5h. Se agotó la semanal (0.35%). Kz pasó a Opus 5.5 Medium. Verificar cuota en /model, no en la tabla.
   - [2026-11-25 15:51] Lalo: cuota limitada y Kz en Sonnet 5.5 Medium. Apoyarse al máximo en Cyrus, Nemo y Tridente (trabajo técnico, compuertas, verificaciones). Kz solo triage, despacho de 1–3 líneas y fiscalización.
   - [2026-11-08 16:44] Instrucción directa de Lalo: descargar trabajo técnico y quemar tokens de Nemo (~/nemo en Codex) siempre que se pueda para cuidar la ventana y ligereza de Kz.

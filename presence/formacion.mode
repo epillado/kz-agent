@@ -17,4 +17,4 @@ tridente=Activo localmente en h310 (Claude Code Corp). 23 roles IDLE listos (pea
 who_jornada=cli
 melc=off
 en_call=no
-cuota=CORRECCIÓN 26/11: TODOS los Gemini (Neon, Carbon, Argon, Hydrogen, Flash) comparten UNA bolsa semanal + 5h; no hay bolsa diaria aparte. Gemini semanal 0.35% (refresca ~110h). Claude/GPT-OSS 100%. AI Credit Overages ON (1961 créditos): Kora y Pau en Hydrogen ya consumen créditos.
+cuota=26/11 11:18: Gemini semanal 100% (reset anticipado); Claude/GPT-OSS semanal 0% (refresca ~156h, la gastó la guardia nocturna de Kz en Opus con contexto enorme). AI Credit Overages ON, 2411 créditos. Volver a Gemini; usar /new para contexto ligero.
