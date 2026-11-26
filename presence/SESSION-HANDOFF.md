@@ -17,7 +17,7 @@ Leer antes del saludo. No volver a escenificar lo que ya pasó.
 - **Lote fusionado y en staging** por autorización de Lalo: back `a881007` (develop `0908e41`: #67,#68,#69,#70,#72 y #71 permisivo) · front `9660065` (develop `7cf66db`: #93-#99).
 - **QA lo despliega Talía**, porque no hay VPN. Pedido en el hilo de PRs (`ts 1795711683.235749`). QA seguía en `1fc8d4f/34e4c7b` mientras tanto.
 - **Acuerdos de la reunión (26/11):** (1) en el 019 Inversión el subtotal por rubro se captura a mano, sin validar contra la factura; (2) sin prellenado de montos desde el XML; subtotales y totales en 0 y capturados (incluida Facturación).
-- **Nemo implementa el acuerdo 2:** back PR #74 `a76a5ab` (+ front pendiente). Flujo obligatorio: `review-pr --motor codex` + compuertas de Cyrus; merge solo con triple verde.
+- **Nemo implementa el acuerdo 2:** back PR #74 `a76a5ab` + front PR #101 `62f645d`. Flujo obligatorio: `review-pr --motor codex` + compuertas de Cyrus; merge solo con triple verde.
 - Hilo de Josué: «Sesión de pruebas y entrega de ambiente QA a SE — ODT 03» (`ts 1795708032.603249`, Teams).
 - Hilo de PRs: C0C3GG7SDGQ / `1794006606.358779`.
 

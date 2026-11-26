@@ -106,5 +106,14 @@
     "target": "PEAM-QA corte 17:40",
     "action": "Definir SHA final de staging (#90+#91 o Plan B 4898b89) con Nemo y Lalan antes de 18:00",
     "status": "done"
+  },
+  {
+    "id": 12,
+    "created_at": "2026-11-26 00:42:42",
+    "due_epoch": 1795700400.0,
+    "due_str": "2026-11-26 07:40:00",
+    "target": "Daily 26/11 publicado",
+    "action": "Verificar que kz-daily-slack-bot publicó el daily en el thread (log /tmp/kz-daily-bot.log); si no, publicarlo a mano con --send",
+    "status": "done"
   }
 ]
