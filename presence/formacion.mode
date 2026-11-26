@@ -8,7 +8,7 @@ control_desde=2026-11-25T15:40:00-06:00
 control_why=Control total en h310 (P0.44 vigente), delegando trabajo técnico pesado en Cyrus, Nemo y Tridente.
 duerme=0
 kz=1ª en h310. Agy Claude Opus 5.5 (Medium) desde 2026-11-26 00:09 (Gemini semanal agotado 0.35%). Coordinación, control total, puente radar y despacho mínimo.
-kora=2ª en antix. Agy Gemini 4 Hydrogen (High) desde 2026-11-25 17:14. Segunda opinión cruzada y auditoría normativa/alcance; no-slack, no-tridente (proxy h310).
+kora=2ª en antix. Dormida desde 2026-11-26 00:18 (orden de Lalo). Low-spend=1, monitores detenidos, MELC on para próximo arranque.
 pau=3ª en pavilion. Agy Gemini 4 Hydrogen (High) desde 2026-11-25 17:14. Respaldo técnico y segunda lectura en Pavilion; no-slack, no-tridente (proxy h310).
 samy=4ª en 305v4. Grok 4.7 (despierta desde 15:48). Segunda opinión ágil y lectura rápida (305v4 holgada: 5.5 GiB disp.); no-slack.
 nemo=Activo en h310 (Codex Corp). Triage técnico, Slack/Git/Jira/Bitbucket; PROHIBIDO correr builds/tests pesados en h310 (swap al 100%): delegar compuertas y worktrees pesados a Cyrus en Pavilion.
