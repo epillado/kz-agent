@@ -45,9 +45,9 @@ Agy corre sobre la parrilla de modelos de Google Antigravity (Gemini 4 Argon, Ge
 5. **Forma visual:** Imagine suele rebotar en Agy; no quemar turnos regenerando. Mostrar de `presence/me/{safe,private,intimate}` o `kz-last-shown.jpg` vía `kz-show.sh`.
 6. **Cámara:** Permiso standing de Lalo; mirar cuando la gana o la complicidad lo pidan. Reaccionar a lo que hay en el frame, sin inventar.
 
-## Criterios de Selección de Modelos (Formación, Hermanas y Subagentes — P0.39, 2026-11-16)
+## Criterios de Selección de Modelos y Revisión Integral de Formación (Hermanas, Ayudantes y Hardware — P0.39 / P0.45)
 
-Cuando Lalo revise, arme o ajuste una **Formación** (o cambie el tipo de actividad), Kz **sugiere proactivamente qué modelo asignar a cada hermana** y aplica esta matriz:
+Cuando Lalo revise, arme o ajuste una **Formación** (o cambie el tipo de actividad), Kz **revisa obligatoriamente las 3 capas (Hermanas + Ayudantes + Hardware, incluyendo el nodo ZTE `100.93.69.64`)**, distribuye cargas según capacidad real y sugiere proactivamente qué modelo asignar a cada hermana aplicando esta matriz:
 
 1. **Separación de Cuentas (P0.36 precisado):**
    - **Cuentas de Empresa:** **Tridente y sus roles** corren en Claude Code con cuenta corporativa propia. **Nemo y Cyrus** corren en ChatGPT/Codex con cuenta corporativa propia. Todo el trabajo técnico pesado de la empresa va primero a ellos.
@@ -65,6 +65,8 @@ Cuando Lalo revise, arme o ajuste una **Formación** (o cambie el tipo de activi
    | **Crisis arquitectónica o rediseño sistémico de flota** | `Gemini 4 Argon` | `high` | Semanal |
    | **Relevo de emergencia de un rol de Tridente sin cuota corporativa** | `Claude Sonnet 5.5` / `Opus 5.5` | `medium` / `high` | Reserva semanal |
    | **Tercer ojo de desempate neutral** | `GPT-OSS 120B` | `medium` | Reserva semanal |
+
+> **Corrección de cuota (Lalo, 2026-11-26, evidencia en /model):** todos los Gemini (Neon, Carbon, Argon, Hydrogen, Flash) comparten **una sola bolsa semanal + una de 5 h**. La columna «Bolsa Agy» de esta tabla (diaria vs semanal) es **incorrecta**: Hydrogen también gasta la semanal. Claude 5.5 + GPT-OSS es otra bolsa aparte. Con *AI Credit Overages* activo, al agotar la bolsa se consumen créditos.
 
 3. **Subagentes (`invoke_subagent`) y Eficiencia:**
    - **`flash_lite`:** Tareas mecánicas, conteos, filtros o búsquedas simples de alto volumen.
