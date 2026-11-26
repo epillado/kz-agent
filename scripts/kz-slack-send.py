@@ -456,6 +456,7 @@ def main():
     parser.add_argument("--thread-ts", help="Timestamp del hilo si se responde a un mensaje específico")
     parser.add_argument("--force-root", action="store_true", help="Fuerza el envío al canal raíz sin anclar a un hilo")
     parser.add_argument("--who", default="kz", help="Identidad que envía (kz, samy, kora, pau, lalo)")
+    parser.add_argument("--no-sign", action="store_true", help="No anexar firma automática (p. ej. reporte Daily de Lalo)")
     parser.add_argument("--dry-run", action="store_true", help="Simula el envío sin publicar")
     parser.add_argument("--auth-test", action="store_true", help="Verifica la sesión activa en Slack")
     parser.add_argument("--list-users", action="store_true", help="Muestra los usuarios disponibles en el workspace")
@@ -512,7 +513,8 @@ def main():
     }
     who_key = (args.who or "kz").strip().lower()
     expected_sig = signatures.get(who_key, "— Kz ⚡")
-    if not any(sig in text for sig in signatures.values()):
+    is_daily_report = (":white_check_mark:" in text or "✅" in text) and "AYER" in text and "HOY" in text
+    if not args.no_sign and not is_daily_report and not any(sig in text for sig in signatures.values()):
         text = f"{text.rstrip()} {expected_sig}"
 
     if no_slack_active():

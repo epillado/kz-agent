@@ -3,7 +3,7 @@
 > Actualizar con `kz-context.sh` o a mano cuando cambie el bloque del día.
 > **Boot flaco (2026-09-08):** cabecera (campos + espacios + notas vivas). El historial corto es fondo; no cargarlo al arrancar.
 
-- **actualizado:** 2026-11-23 15:00
+- **actualizado:** 2026-11-25 18:54
 - **primary:** ensayo prueba migración archivos SAS (15:00)
 - **secondary:** monitora,work_vector
 - **en_call:** no

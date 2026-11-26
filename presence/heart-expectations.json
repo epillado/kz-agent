@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "created_at": "2026-11-25 10:28:04",
+    "due_epoch": 1795625400.0,
+    "due_str": "2026-11-25 10:50:00",
+    "target": "Talía/Lalan (peam-qa)",
+    "action": "Revisar si Talía ya superó su falla de Internet y conectó a Lalan para desplegar peam-qa (3cb4e95/ebe86cd) o preguntar estatus",
+    "status": "done",
+    "fired_at": "2026-11-25 10:50:11"
+  },
+  {
+    "id": 2,
+    "created_at": "2026-11-25 10:28:04",
+    "due_epoch": 1795629000.0,
+    "due_str": "2026-11-25 11:50:00",
+    "target": "Hecho en México V1.5 (12:00 Teams)",
+    "action": "Preparar en corto para Lalo los puntos clave del prototipo V1.5 de Hecho en México 10 min antes de la sesión de las 12:00 con el área usuaria",
+    "status": "done",
+    "fired_at": "2026-11-25 11:50:04"
+  },
+  {
+    "id": 3,
+    "created_at": "2026-11-25 10:28:04",
+    "due_epoch": 1795640400.0,
+    "due_str": "2026-11-25 15:00:00",
+    "target": "PEAM-QA Plan B (17:30 Meet)",
+    "action": "Si Talía/Lalan no han completado el despliegue en peam-qa a las 15:00, activar Plan B con Lalo antes de las pruebas internas de las 17:30",
+    "status": "done"
+  },
+  {
+    "id": 4,
+    "created_at": "2026-11-25 10:52:59",
+    "due_epoch": 1795628100.0,
+    "due_str": "2026-11-25 11:35:00",
+    "target": "Talía/Lalan (peam-qa)",
+    "action": "Verificar antes de la reunión HM de las 12:00 si Talía ya recuperó Internet y conectó a Lalan para el despliegue de peam-qa",
+    "status": "done",
+    "fired_at": "2026-11-25 11:35:14"
+  },
+  {
+    "id": 5,
+    "created_at": "2026-11-25 11:35:34",
+    "due_epoch": 1795634100.0,
+    "due_str": "2026-11-25 13:15:00",
+    "target": "Talía/Lalan (peam-qa post-HM)",
+    "action": "Revisar al terminar la reunión de Hecho en México si Talía respondió sobre su conexión y el despliegue de peam-qa",
+    "status": "done",
+    "fired_at": "2026-11-25 13:15:11"
+  },
+  {
+    "id": 6,
+    "created_at": "2026-11-25 13:16:32",
+    "due_epoch": 1795636592.5,
+    "due_str": "2026-11-25 13:56:32",
+    "target": "Nemo/Lalan (peam-qa fed9e40/a6deb3a + SMTP)",
+    "action": "Confirmar cierre SMTP y segundo despliegue ODT3-133",
+    "status": "done",
+    "fired_at": "2026-11-25 13:58:29"
+  },
+  {
+    "id": 7,
+    "created_at": "2026-11-25 13:58:59",
+    "due_epoch": 1795638539.0,
+    "due_str": "2026-11-25 14:28:59",
+    "target": "Nemo/Lalan (peam-qa ODT3-133 + ODT3-55..63 + SMTP)",
+    "action": "Confirmar despliegue en peam-qa de los nuevos SHAs de staging con ODT3-133 y ODT3-55..63 más prueba SMTP",
+    "status": "done",
+    "fired_at": "2026-11-25 14:29:09"
+  },
+  {
+    "id": 8,
+    "created_at": "2026-11-25 14:41:23",
+    "due_epoch": 1795652663.7,
+    "due_str": "2026-11-25 18:24:23",
+    "target": "SAS (Revisión y pruebas con DGTI ODT 02 SAS 18:30)",
+    "action": "Avisar a Lalo 5 minutos antes de la reunión 18:30-19:30 Revisión y pruebas con DGTI ODT 02 SAS convocada por Josué",
+    "status": "done",
+    "fired_at": "2026-11-25 18:24:32"
+  },
+  {
+    "id": 9,
+    "created_at": "2026-11-25 15:00:25",
+    "due_epoch": 1795644025.9,
+    "due_str": "2026-11-25 16:00:25",
+    "target": "PEAM-QA (d432a69 / 19296a4 + SMTP antes de las 18:00)",
+    "action": "Confirmar que Lalan actualizó peam-qa a d432a69/19296a4 y cerró prueba SMTP antes de la reunión de las 18:00",
+    "status": "done",
+    "fired_at": "2026-11-25 16:00:39"
+  },
+  {
+    "id": 10,
+    "created_at": "2026-11-25 16:01:19",
+    "due_epoch": 1795649479.1,
+    "due_str": "2026-11-25 17:31:19",
+    "target": "PEAM-QA (PR seguimiento 019 y redeploy Lalan antes de 18:00)",
+    "action": "Confirmar que el PR de seguimiento de Talía esté en staging y desplegado por Lalan en peam-qa antes de las pruebas de Ale de las 18:00",
+    "status": "done",
+    "fired_at": "2026-11-25 17:31:27"
+  },
+  {
+    "id": 11,
+    "created_at": "2026-11-25 17:31:58",
+    "due_epoch": 1795650000.0,
+    "due_str": "2026-11-25 17:40:00",
+    "target": "PEAM-QA corte 17:40",
+    "action": "Definir SHA final de staging (#90+#91 o Plan B 4898b89) con Nemo y Lalan antes de 18:00",
+    "status": "done"
+  }
+]

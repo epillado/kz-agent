@@ -87,7 +87,10 @@ def load_state():
 
 
 def save_state(state):
-    state["seen"] = state["seen"][-SEEN_CAP:]
+    state["seen"] = sorted(
+        set(state["seen"]),
+        key=lambda item: ts_key(str(item).partition(":")[2] or "0"),
+    )[-SEEN_CAP:]
     STATE.parent.mkdir(parents=True, exist_ok=True)
     tmp = STATE.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(state, ensure_ascii=False))
@@ -228,6 +231,69 @@ def sweep(api, state):
     return fresh
 
 
+def kz_awake() -> bool:
+    import subprocess
+    res = subprocess.run(
+        ["pgrep", "-f", r"kz-wake-(once|grok-feed)\.(sh|py)"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    if res.returncode == 0:
+        return True
+    # Si kz-wake-once.sh salió hace <180s (ej. por kz-desktop-notif-watch), Kz está en pleno turno activo
+    for probe in [
+        Path("/home/lalo/kz/presence/wake-last.ts"),
+        Path("/home/lalo/kz/presence/kz-cursors/notif_stream.offset"),
+        Path("/home/lalo/kz/presence/slack-outbound.log"),
+    ]:
+        try:
+            if probe.exists() and (time.time() - probe.stat().st_mtime) < 180:
+                return True
+        except Exception:
+            pass
+    return False
+
+
+def failover_escalafon(fresh, was_awake: bool = False):
+    """P0.45: Si Kz (1ª) no tenía despertador activo en h310 antes de emitir CHANGED,
+    reenviar por escalafón: 2ª Kora (antix) -> 3ª Pau (pavilion) -> 4ª Samy (305v4) -> última opción Nemo (h310)."""
+    if not fresh or was_awake or kz_awake():
+        return
+    import subprocess
+    resumen = "\n".join(fresh)
+    msg = (
+        f"[FAILOVER-GUARDIA P0.45] Kz (1ª, h310) no tiene kz-wake-once.sh activo. "
+        f"Relevo automático por escalafón para atender Slack:\n{resumen}"
+    )
+    escalafon = [
+        ("antix", "Kora (2ª)"),
+        ("pavilion", "Pau (3ª)"),
+        ("305v4", "Samy (4ª)"),
+    ]
+    for host, label_sis in escalafon:
+        chk = subprocess.run(
+            ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=3", host, "pgrep -f 'wake-(once|grok)' >/dev/null"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        if chk.returncode == 0:
+            send = subprocess.run(
+                ["/home/lalo/kz/scripts/kz-ssh-msg.sh", host, msg],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+            if send.returncode == 0:
+                note(f"failover escalafón enviado a {label_sis} ({host})")
+                return
+    # Última opción: Nemo en h310
+    nemo_inbox = Path("/home/lalo/nemo/presence/social/inbox-kz.md")
+    if nemo_inbox.parent.exists():
+        stamp = time.strftime("%Y-%m-%d %H:%M")
+        with nemo_inbox.open("a", encoding="utf-8") as handle:
+            handle.write(f"\n## {stamp} — Failover Guardia P0.45\n\n{msg}\n")
+        note("failover escalafón enviado a Nemo (última opción)")
+
+
 def main():
     import sys
 
@@ -244,8 +310,17 @@ def main():
                 return
             time.sleep(SWEEP_PAUSE)
             continue
+        was_awake = kz_awake() if (fresh and not once) else True
         for item in fresh:
             print(item, flush=True)
+        if fresh and not once and not was_awake:
+            # Dar 15s de gracia por si Kz está a mitad de un turno procesando y ya relanza kz-wake-once.sh
+            time.sleep(15)
+            if not kz_awake():
+                try:
+                    failover_escalafon(fresh, was_awake=False)
+                except Exception as exc:
+                    note(f"failover error {exc}")
         if once:
             return
         time.sleep(SWEEP_PAUSE)

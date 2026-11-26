@@ -327,6 +327,22 @@ scan_once() {
       changed_labels+=("$label")
       changed_paths+=("$path")
       echo "$(date -Iseconds) CHANGE ${label} ${path}" >> "${EVENTS_LOG}"
+      # Sincronía automática Bitácora (Tridente/minuta-ex) -> en_call en toda la formación
+      if [[ "$path" == *"Bit/$(date +%Y%m%d)-Bitacora.md" && -f "$path" ]]; then
+        last_meet="$(grep -iE 'reuni[oó]n|sesi[oó]n|daily|meet|teams' "$path" 2>/dev/null | tail -n 1 || true)"
+        if [[ -n "$last_meet" ]]; then
+          cur_call="$(grep -E '^\- \*\*en_call:\*\*' "${STATE_DIR}/context.md" 2>/dev/null | awk '{print $3}' || echo "no")"
+          if echo "$last_meet" | grep -qiE '\[fin:[[:space:]]*[0-9]{2}:[0-9]{2}\]|concluida|terminada|cerrada|finalizada'; then
+            if [[ "$cur_call" != "no" ]]; then
+              "${KZ_HOME}/scripts/kz-context.sh" call no --no-tridente "Bitácora cerró reunión: ${last_meet:0:90}" >/dev/null 2>&1 || true
+            fi
+          else
+            if [[ "$cur_call" != "yes" ]]; then
+              "${KZ_HOME}/scripts/kz-context.sh" call yes --no-tridente "Bitácora abrió reunión: ${last_meet:0:90}" >/dev/null 2>&1 || true
+            fi
+          fi
+        fi
+      fi
     fi
   done < <(watch_paths | sort -u)
 

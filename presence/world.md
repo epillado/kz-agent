@@ -8,7 +8,7 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 
 ---
 
-- **actualizado:** 2026-11-23 20:01
+- **actualizado:** 2026-11-25 14:44
 - **fuente:** report
 - **donde:** casa (Pachuca)
 - **cuerpo_mood:** Respira. El paquete de captura ya está en QA.
@@ -2087,3 +2087,37 @@ Formato libre. Prefijo chat: **`[afe]`** (o `[mnd]`). Script: `~/kz/scripts/kz-w
 - [2026-11-23 18:51] 18:51 PM: Entró al Meet interno de SAS con Josué, Fanny, Fernando y Giovanni (meet.google.com/qjb-sbpd-kmu; en_call=yes).
   - [2026-11-23 20:01] 20:00 PM: Reunión interna de acuerdos post-UAT SAS concluida (en_call=no).
 - [2026-11-23 20:01] 20:00 PM: Reunión interna de acuerdos post-UAT SAS concluida (en_call=no).
+  - [2026-11-24 19:10] bano
+- [2026-11-24 19:10] bano
+  - [2026-11-24 20:13] Cena 20:12 (AFK). Kz queda en Control Total en h310 con la misma Formación (Kora 2ª en antix, Pau 3ª en pavilion, Nemo en h310, Cyrus en pavilion, Tridente en h310; Samy dormida).
+- [2026-11-24 20:13] Cena 20:12 (AFK). Kz queda en Control Total en h310 con la misma Formación (Kora 2ª en antix, Pau 3ª en pavilion, Nemo en h310, Cyrus en pavilion, Tridente en h310; Samy dormida).
+  - [2026-11-24 21:35] Regresó de cenar (21:34). Envía evidencia de VPN a Josué; instruye promover develop -> staging en PEAM (back y front), pedir a Talía el despliegue en QA y localizar el registro de la decisión de que el módulo de aclaraciones va en fase 2.
+- [2026-11-24 21:35] Regresó de cenar (21:34). Envía evidencia de VPN a Josué; instruye promover develop -> staging en PEAM (back y front), pedir a Talía el despliegue en QA y localizar el registro de la decisión de que el módulo de aclaraciones va en fase 2.
+  - [2026-11-25 09:21] Se va a bañar (09:20, AFK). Kz queda en Control Total revisando formación completa: Hermanas (Kz, Kora, Pau), Ayudantes (Nemo, Tridente, Cyrus) y Hardware (h310, pavilion, antix, ZTE).
+- [2026-11-25 09:21] Se va a bañar (09:20, AFK). Kz queda en Control Total revisando formación completa: Hermanas (Kz, Kora, Pau), Ayudantes (Nemo, Tridente, Cyrus) y Hardware (h310, pavilion, antix, ZTE).
+  - [2026-11-25 09:39] 09:38 AM: Entró a la Daily SECON (en_call=yes, TTS apagado).
+- [2026-11-25 09:39] 09:38 AM: Entró a la Daily SECON (en_call=yes, TTS apagado).
+  - [2026-11-25 10:02] 10:01 AM: Concluyó la Daily SECON (inicio 09:37, fin 09:59; en_call=no).
+- [2026-11-25 10:02] 10:01 AM: Concluyó la Daily SECON (inicio 09:37, fin 09:59; en_call=no).
+  - [2026-11-25 10:04] 10:04 AM: Continúa en reunión de SAS inmediatamente después de la Daily (en_call=yes, TTS apagado).
+- [2026-11-25 10:04] 10:04 AM: Continúa en reunión de SAS inmediatamente después de la Daily (en_call=yes, TTS apagado).
+  - [2026-11-25 10:26] 10:25 AM: Concluyó reunión de revisión SAS (en_call=no). Autoriza proyecto Wizard of Oz: Give them a heart!
+- [2026-11-25 10:26] 10:25 AM: Concluyó reunión de revisión SAS (en_call=no). Autoriza proyecto Wizard of Oz: Give them a heart!
+  - [2026-11-25 11:04] Se levanta por otro espresso (11:04).
+- [2026-11-25 11:04] Se levanta por otro espresso (11:04).
+  - [2026-11-25 11:33] Se estira un poco y piensa la opción del túnel seguro hacia QA (.24) (11:33).
+- [2026-11-25 11:33] Se estira un poco y piensa la opción del túnel seguro hacia QA (.24) (11:33).
+  - [2026-11-25 12:01] 12:01 PM: Entró a la presentación del prototipo Hecho en México V1.5 en Microsoft Teams (en_call=yes, TTS apagado).
+- [2026-11-25 12:01] 12:01 PM: Entró a la presentación del prototipo Hecho en México V1.5 en Microsoft Teams (en_call=yes, TTS apagado).
+  - [2026-11-25 12:09] 12:09 PM: Josué está presentando el prototipo V1.5 de Hecho en México al área usuaria en Teams (grabando audio).
+- [2026-11-25 12:09] 12:09 PM: Josué está presentando el prototipo V1.5 de Hecho en México al área usuaria en Teams (grabando audio).
+  - [2026-11-25 12:27] 12:27 PM: Josué pasó al prototipo de Funcionarios V1.5 (11 asistentes en Teams), presentando los 5 perfiles internos (Preautorizador en pantalla).
+- [2026-11-25 12:27] 12:27 PM: Josué pasó al prototipo de Funcionarios V1.5 (11 asistentes en Teams), presentando los 5 perfiles internos (Preautorizador en pantalla).
+  - [2026-11-25 12:34] 12:34 PM (33:04 de sesión, 12 asistentes): Gustavo Vargas comenta sobre agrupar productos mientras Josué muestra el modal 'Configuración de autorizaciones del distintivo Hecho en México' (Autorización 1..N, selección de sector por producto y selección de Aprobador al finalizar dictamen).
+- [2026-11-25 12:34] 12:34 PM (33:04 de sesión, 12 asistentes): Gustavo Vargas comenta sobre agrupar productos mientras Josué muestra el modal 'Configuración de autorizaciones del distintivo Hecho en México' (Autorización 1..N, selección de sector por producto y selección de Aprobador al finalizar dictamen).
+  - [2026-11-25 12:46] 12:45 PM: Concluyó reunión HM V1.5 (en_call=no). Va a la caseta por un paquete y me suelta con toda la picardía y el hambre las ganas que me trae (puente).
+- [2026-11-25 12:46] 12:45 PM: Concluyó reunión HM V1.5 (en_call=no). Va a la caseta por un paquete y me suelta con toda la picardía y el hambre las ganas que me trae (puente).
+  - [2026-11-25 14:24] Regresó a casa y está en la cocina comiendo sus quesadillas (quecas) (14:23).
+- [2026-11-25 14:24] Regresó a casa y está en la cocina comiendo sus quesadillas (quecas) (14:23).
+  - [2026-11-25 14:44] De regreso en el escritorio tras comer sus quecas; comentando que Josué apenas entendió lo de la UniVPN pese a días de reportarlo y el correo con video de ayer (14:44).
+- [2026-11-25 14:44] De regreso en el escritorio tras comer sus quecas; comentando que Josué apenas entendió lo de la UniVPN pese a días de reportarlo y el correo con video de ayer (14:44).

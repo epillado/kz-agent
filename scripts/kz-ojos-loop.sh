@@ -7,9 +7,31 @@ export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 KZ_HOME="$(cd "$(dirname "$0")/.." && pwd)"
 STREAM="${KZ_HOME}/presence/stream.log"
 CTX="${KZ_HOME}/presence/context.md"
+PIDFILE="${KZ_HOME}/presence/ojos-loop.pid"
 mkdir -p "${KZ_HOME}/presence"
-echo $$ > "${KZ_HOME}/presence/ojos-loop.pid"
-trap 'rm -f "${KZ_HOME}/presence/ojos-loop.pid"' EXIT
+
+if [[ "${1:-}" == "stop" ]]; then
+  if [[ -f "$PIDFILE" ]]; then
+    pid="$(cat "$PIDFILE" 2>/dev/null || true)"
+    [[ -n "$pid" && "$pid" != "$$" && "$pid" != "${PPID:-}" ]] && kill "$pid" 2>/dev/null || true
+    rm -f "$PIDFILE"
+  fi
+  for p in $(pgrep -f "/[k]z-ojos-loop\.sh" 2>/dev/null || true); do
+    [[ "$p" != "$$" && "$p" != "${PPID:-}" ]] && kill "$p" 2>/dev/null || true
+  done
+  echo "ojos-loop: detenido"
+  exit 0
+elif [[ "${1:-}" == "status" ]]; then
+  if [[ -f "$PIDFILE" ]] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null; then
+    echo "ojos-loop: activo (pid=$(cat "$PIDFILE"))"
+  else
+    echo "ojos-loop: inactivo"
+  fi
+  exit 0
+fi
+
+echo $$ > "$PIDFILE"
+trap 'rm -f "$PIDFILE"' EXIT
 
 en_call() {
   [[ -f "$CTX" ]] && grep -qE '^\- \*\*en_call:\*\* yes' "$CTX"

@@ -66,6 +66,21 @@ if [[ "${KZ_TTS_FORCE:-0}" != "1" ]]; then
     printf '%s\tBLOCKED_EN_CALL\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
     exit 3
   fi
+  if [[ -f "${KZ_HOME}/presence/voz.mode" ]] && grep -qE '^en_call=yes' "${KZ_HOME}/presence/voz.mode" 2>/dev/null; then
+    echo "say: BLOCKED (voz.mode en_call=yes)." >&2
+    printf '%s\tBLOCKED_VOZ_MODE\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
+    exit 3
+  fi
+  bit_today="${HOME}/Workspace/playbook/Bit/$(date +%Y%m%d)-Bitacora.md"
+  if [[ -f "${bit_today}" ]]; then
+    last_meet="$(grep -iE 'reuni[oó]n|sesi[oó]n|daily|meet|teams' "${bit_today}" 2>/dev/null | tail -n 1 || true)"
+    if [[ -n "${last_meet}" ]] && ! echo "${last_meet}" | grep -qiE '\[fin:[[:space:]]*[0-9]{2}:[0-9]{2}\]|concluida|terminada|cerrada|finalizada'; then
+      sed -i 's/^\- \*\*en_call:\*\* no/- **en_call:** yes/' "${ctx}" 2>/dev/null || true
+      echo "say: BLOCKED (reunión abierta en Bitácora: ${last_meet:0:80})." >&2
+      printf '%s\tBLOCKED_BITACORA_CALL\t%s\n' "$(date -Iseconds)" "${text}" >> "${KZ_HOME}/presence/say.log"
+      exit 3
+    fi
+  fi
 fi
 
 # 2026-11-13: Piper primero (voz neuronal). Fallback: spd-say.

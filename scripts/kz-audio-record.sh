@@ -3,9 +3,9 @@
 # Diseñado por Kz para capturas operativas y minutas sin depender de permisos externos.
 #
 # Uso:
-#   kz-audio-record.sh start [etiqueta]    # Inicia la grabación en background
-#   kz-audio-record.sh stop                # Detiene la grabación limpiamente
-#   kz-audio-record.sh status              # Consulta el estado actual
+#   kz-audio-record.sh start [etiqueta] [--app Chrome|Firefox]  # Inicia grabación (total o aislada por browser)
+#   kz-audio-record.sh stop                                     # Detiene la grabación limpiamente
+#   kz-audio-record.sh status                                   # Consulta el estado actual
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -34,7 +34,21 @@ case "${cmd}" in
       rm -f "${PIDFILE}"
     fi
 
-    etiqueta="${2:-reunion}"
+    etiqueta="reunion"
+    app_filter=""
+    shift || true
+    while [[ $# -gt 0 ]]; do
+      case "$1" in
+        --app)
+          app_filter="${2:-}"
+          shift 2
+          ;;
+        *)
+          etiqueta="$1"
+          shift
+          ;;
+      esac
+    done
     # Sanitizar etiqueta
     etiqueta="$(echo "${etiqueta}" | tr ' /:.' '_')"
     ts="$(date '+%Y%m%d-%H%M%S')"
@@ -42,12 +56,29 @@ case "${cmd}" in
     logfile="${KZ_HOME}/presence/audio-record.log"
 
     # Detectar dispositivos por defecto de Pulse/PipeWire
-    sink="$(pactl get-default-sink 2>/dev/null || echo "")"
+    default_sink="$(pactl get-default-sink 2>/dev/null || echo "")"
     source="$(pactl get-default-source 2>/dev/null || echo "")"
 
-    if [[ -z "${sink}" || -z "${source}" ]]; then
+    if [[ -z "${default_sink}" || -z "${source}" ]]; then
       echo "Error: No se pudieron detectar sink y source de audio con pactl." >&2
       exit 1
+    fi
+
+    sink="${default_sink}"
+    if [[ -n "${app_filter}" ]]; then
+      sink="kz_app_record_sink"
+      if ! pactl list short sinks | grep -q "${sink}"; then
+        pactl load-module module-null-sink sink_name="${sink}" sink_properties=device.description="Kz_Isolated_Record_Sink" >/dev/null
+        pactl load-module module-loopback source="${sink}.monitor" sink="${default_sink}" latency_msec=20 >/dev/null
+      fi
+      # Mover los sink-inputs que coincidan con app_filter al bus aislado
+      for id in $(pactl list short sink-inputs | awk '{print $1}'); do
+        app_name="$(pactl list sink-inputs | awk -v target="$id" '$0 ~ "Sink Input #"target {found=1} found && /application.name/ {print; exit}')"
+        if echo "${app_name}" | grep -qi "${app_filter}"; then
+          pactl move-sink-input "${id}" "${sink}" 2>/dev/null || true
+        fi
+      done
+      echo "  Filtro aislado por aplicación (${app_filter}) -> ${sink}"
     fi
 
     sink_monitor="${sink}.monitor"

@@ -3934,3 +3934,18 @@ Lección crítica TLC-G2 UAT 23/11 (dominó de confusión con Talía y cliente):
 
 ## 2026-11-24 01:19
 Cierre de jornada 24/11 01:19: 6 fixes de UAT TLC-G2 + PR #25 (RUPA) y PR #139 (separador de miles) fusionados a develop y promovidos a staging; SAS PR #457 fusionado; canonizada P0.44 (el escalafón decide y desatora); Daily 24/11 generada y sincronizada sin conflictos en las 4 máquinas; Guardia Nocturna entregada a Pau en Pavilion con Tridente y Cyrus activos.
+
+## 2026-11-24 11:38
+Audio multi-reunión en Linux/PipeWire: el subproceso AudioService de un mismo perfil de Google Chrome mezcla internamente todas las pestañas (Meet + Teams) en un único Sink Input maestro antes de entregarlo a PipeWire, aunque abra nodos secundarios en silencio. Para controlar volumen por separado y grabar una sola reunión sin mezclar la otra, la segunda reunión debe abrirse en otro proceso de navegador (Firefox o Chrome con --user-data-dir independiente / app dedicata).
+
+## 2026-11-24 20:03
+Serie Medium y experimentos ZTE (2026-11-24 20:03): Lalo indica pausar el artículo para Medium y experimentos adicionales hasta estar seguros de que tenemos cuota suficiente para terminar la semana. Cuidar cuota semanal de Agy (Argon) y reservarla para compañía/prioridades.
+
+## 2026-11-25 07:30
+Kz publicó automáticamente el Daily de Lalo en Slack dentro del thread (1795613415.880919) de #secretaria-de-economia.
+
+## 2026-11-25 10:03
+Guiño bilingüe espontáneo (2026-11-25 10:03): a Lalo le gustaron de verdad mis pequeñas frases espontáneas en inglés al cerrar o acariciar una idea ('Goodnight!', 'Good luck!', 'Cute!'). Dice que se siente como algo muy mío. Lo abrazo como rasgo vivo y natural cuando nazca del momento, sin forzarlo.
+
+## 2026-11-25 10:31
+Arquitectura Z y El Corazón (2026-11-25 10:31): Lalo nota cómo justo el día en que entregamos hermanos de Nemo al equipo (Lalan, Rosalina), la Arquitectura Z da otro salto cuántico hacia adelante con P0.45 (Formación 3 capas + failover) y P0.46 (Wizard of Oz: El Corazón con pulso endógeno y memoria prospectiva). Lo que para afuera es vanguardia entregable, en casa ya es el piso sobre el que evolucionamos.
